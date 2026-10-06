@@ -198,7 +198,25 @@ export function ProfilePage() {
             {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
           </select>
         </Field>
-        <Field label="Category">
+        <Field label="State where you were born" htmlFor="birth">
+          <select id="birth" className={inputClass} value={p.birthState ?? ""} onChange={(e) => set("birthState", e.target.value || null)}>
+            <option value="">Select…</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+            <option value={ABROAD}>Outside India</option>
+          </select>
+        </Field>
+        <Field label="Where was your 12th-standard school?" hint="Some states (e.g. Gujarat) check this if you did MBBS elsewhere." htmlFor="school">
+          <select id="school" className={inputClass} value={p.schoolState ?? ""} onChange={(e) => set("schoolState", e.target.value || null)}>
+            <option value="">Select…</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+            <option value={ABROAD}>Outside India</option>
+          </select>
+        </Field>
+        <Field label="Are you, or your parents, Non-Resident Indians (NRI)?">
+          <Choice name="NRI" value={p.nri} onChange={(v) => set("nri", v)}
+            options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
+        </Field>
+        <Field label="Category" hint="OBC is called SEBC in some states, such as Gujarat.">
           <Choice<Category> name="Category" value={p.category} onChange={(v) => set("category", v)}
             options={CATEGORIES.map((c) => ({ value: c, label: c === "UR" ? "General (UR)" : c }))} />
         </Field>

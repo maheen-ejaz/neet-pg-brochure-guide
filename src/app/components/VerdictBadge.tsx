@@ -5,6 +5,7 @@ const styles: Record<Verdict["status"], string> = {
   restricted: "bg-warn-tint text-warn",
   ineligible: "bg-bad-tint text-bad",
   incomplete: "bg-canvas text-soft border border-line",
+  notCovered: "bg-canvas text-soft border border-line",
 };
 
 const short: Record<Verdict["status"], string> = {
@@ -12,6 +13,7 @@ const short: Record<Verdict["status"], string> = {
   restricted: "Partly eligible",
   ineligible: "Not eligible",
   incomplete: "Needs details",
+  notCovered: "Not covered yet",
 };
 
 export function VerdictBadge({ verdict }: { verdict: Verdict }) {
@@ -27,6 +29,7 @@ export const verdictPanel: Record<Verdict["status"], string> = {
   restricted: "border-warn/30 bg-warn-tint",
   ineligible: "border-bad/30 bg-bad-tint",
   incomplete: "border-line bg-surface",
+  notCovered: "border-line bg-surface",
 };
 
 export const verdictText: Record<Verdict["status"], string> = {
@@ -34,4 +37,5 @@ export const verdictText: Record<Verdict["status"], string> = {
   restricted: "text-warn",
   ineligible: "text-bad",
   incomplete: "text-ink",
+  notCovered: "text-ink",
 };

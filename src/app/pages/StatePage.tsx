@@ -4,7 +4,7 @@ import { findState } from "../../data/states";
 import { adviseDeposit, checkEligibility, documentsFor, type Verdict } from "../../engine/eligibility";
 import type { Profile } from "../../engine/profile";
 import type { Brochure } from "../../schema/stateBrochure";
-import { Cite, DraftBanner, RuleCard, Section, inr, inrShort } from "../components/ui";
+import { Cite, DraftBanner, RuleCard, Section, SourceDocsContext, inr, inrShort } from "../components/ui";
 import { verdictPanel, verdictText } from "../components/VerdictBadge";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
@@ -19,7 +19,7 @@ const NAV = [
   ["reservation", "Reservation"],
   ["resignation", "Resignation"],
   ["bond", "Service bond"],
-  ["colleges", "Colleges"],
+  ["colleges", "Colleges / centres"],
   ["help", "Help desk"],
   ["gaps", "Not in brochure"],
 ] as const;
@@ -33,6 +33,7 @@ export function StatePage() {
   const verdict = profile ? checkEligibility(profile, b) : null;
 
   return (
+    <SourceDocsContext.Provider value={b.source.documents}>
     <div className="space-y-6">
       {b.status === "draft" && <DraftBanner />}
       <header>
@@ -74,6 +75,7 @@ export function StatePage() {
       <ReservationSection b={b} verdict={verdict} />
       <ResignationSection b={b} verdict={verdict} />
       <BondSection b={b} />
+      {b.helpCentres.length > 0 && <HelpCentresSection b={b} />}
       <CollegesSection b={b} profile={profile} />
       <HelpSection b={b} />
       <Section id="gaps" kicker="Be aware" title="Not covered in this brochure">
@@ -86,14 +88,32 @@ export function StatePage() {
             </div>
           ))}
         </div>
-        <h3 className="mt-6 mb-2 font-semibold">Annexures in the brochure</h3>
-        <ul className="space-y-1 text-sm">
-          {b.annexures.map((a) => (
-            <li key={a.id}><strong>{a.title}</strong>: {a.description}<Cite pages={a.sourcePages} /></li>
-          ))}
-        </ul>
+        {b.annexures.length > 0 && (
+          <>
+            <h3 className="mt-6 mb-2 font-semibold">Forms and annexures</h3>
+            <ul className="space-y-1 text-sm">
+              {b.annexures.map((a) => (
+                <li key={a.id}><strong>{a.title}</strong>: {a.description}<Cite pages={a.sourcePages} /></li>
+              ))}
+            </ul>
+          </>
+        )}
+        {b.source.documents.length > 0 && (
+          <>
+            <h3 className="mt-6 mb-2 font-semibold">Official documents this guide is built from</h3>
+            <ul className="space-y-1 text-sm">
+              {b.source.documents.map((d) => (
+                <li key={d.title}>
+                  {d.url ? <a href={d.url} target="_blank" rel="noreferrer" className="font-medium text-brand-strong hover:underline">{d.title} ↗</a> : <span className="font-medium text-ink">{d.title}</span>}
+                  {d.issued && <span className="text-soft"> · {d.issued}</span>}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </Section>
     </div>
+    </SourceDocsContext.Provider>
   );
 }
 
@@ -124,7 +144,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
   const icon = (r: (typeof applied)[number]) => {
     const e = r.rule.effect;
     if (e.type === "ineligible") return ["✕", "text-bad"];
-    if (e.type === "restrictSectors" || e.type === "excludeCourses") return ["!", "text-warn"];
+    if (e.type === "restrictSectors" || e.type === "excludeCourses" || e.type === "restrictQuotas" || e.type === "notCovered") return ["!", "text-warn"];
     if (e.type === "note" && e.tone === "positive") return ["✓", "text-good"];
     if (e.type === "note" && e.tone === "warning") return ["!", "text-warn"];
     return ["i", "text-brand"];
@@ -138,9 +158,13 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
         </p>
         {verdict.status !== "ineligible" && verdict.status !== "incomplete" && (
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
-            <Fact label="College sectors open">
-              {verdict.sectors.map((s) => s[0].toUpperCase() + s.slice(1)).join(" + ")}
-            </Fact>
+            {verdict.quotas ? (
+              <Fact label="Seat quotas open">{verdict.quotas.join(" / ")} only</Fact>
+            ) : (
+              <Fact label="College sectors open">
+                {verdict.sectors.map((s) => s[0].toUpperCase() + s.slice(1)).join(" + ")}
+              </Fact>
+            )}
             <Fact label="You'll be counted as">{verdict.effectiveCategory ?? "—"}{profile.pwd ? " + PwD" : ""}</Fact>
             <Fact label="Not open to you">{verdict.excludedCourses.length ? `${verdict.excludedCourses.join(", ")} (state quota)` : "Nothing excluded"}</Fact>
           </div>
@@ -369,39 +393,51 @@ function DocumentsSection({ entryKey, b, profile }: { entryKey: string; b: Broch
 
 function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) {
   const { policy, conversion } = b.reservation;
-  const bars = [...policy.vertical, { category: "UR (open)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }];
+  const bars = policy
+    ? [...policy.vertical, { category: "UR (open)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }]
+    : [];
   return (
     <Section id="reservation" kicker="Reservation" title="How seats are reserved">
-      <p className="text-sm">Applies to: <strong>{policy.appliesTo}</strong><Cite pages={policy.sourcePages} /></p>
       {verdict?.effectiveCategory && (
-        <p className="mt-2 text-sm">You are counted as <strong>{verdict.effectiveCategory}</strong> in this state.</p>
+        <p className="mb-2 text-sm">You are counted as <strong>{verdict.effectiveCategory}</strong> in this state.</p>
       )}
-      <div className="mt-4 flex h-10 overflow-hidden rounded-xl" role="img" aria-label={bars.map((v) => `${v.category} ${v.percent}%`).join(", ")}>
-        {bars.map((v, i) => {
-          const mine = verdict?.effectiveCategory && v.category.startsWith(verdict.effectiveCategory);
-          return (
-            <div key={v.category} style={{ width: `${v.percent}%`, opacity: verdict?.effectiveCategory && !mine ? 0.45 : 1 }}
-              className={`flex items-center justify-center text-[11px] font-semibold text-white ${["bg-brand-strong", "bg-brand", "bg-[#14b8a6]", "bg-[#5eead4] !text-ink", "bg-[#94a3b8]"][i % 5]}`}>
-              {v.percent >= 5 ? `${v.category} ${v.percent}%` : ""}
-            </div>
-          );
-        })}
-      </div>
-      <p className="mt-2 text-xs text-soft">Vertical reservation. Horizontal: {policy.horizontal.map((h) => `${h.category} ${h.percent}%`).join(", ")} within each category.</p>
+      {policy ? (
+        <>
+          <p className="text-sm">Applies to: <strong>{policy.appliesTo}</strong><Cite pages={policy.sourcePages} /></p>
+          <div className="mt-4 flex h-10 overflow-hidden rounded-xl" role="img" aria-label={bars.map((v) => `${v.category} ${v.percent}%`).join(", ")}>
+            {bars.map((v, i) => {
+              const mine = verdict?.effectiveCategory && v.category.startsWith(verdict.effectiveCategory);
+              return (
+                <div key={v.category} style={{ width: `${v.percent}%`, opacity: verdict?.effectiveCategory && !mine ? 0.45 : 1 }}
+                  className={`flex items-center justify-center text-[11px] font-semibold text-white ${["bg-brand-strong", "bg-brand", "bg-[#14b8a6]", "bg-[#5eead4] !text-ink", "bg-[#94a3b8]"][i % 5]}`}>
+                  {v.percent >= 5 ? `${v.category} ${v.percent}%` : ""}
+                </div>
+              );
+            })}
+          </div>
+          <p className="mt-2 text-xs text-soft">Vertical reservation. Horizontal: {policy.horizontal.map((h) => `${h.category} ${h.percent}%`).join(", ") || "none stated"}.</p>
+        </>
+      ) : (
+        <p className="rounded-xl border border-dashed border-line p-3 text-sm">
+          This year's documents don't state the reservation percentages. Check the official website before choice filling.
+        </p>
+      )}
       <div className="mt-5 grid gap-4 md:grid-cols-2">
-        <div>
-          <h3 className="font-semibold">Unfilled seat conversion<Cite pages={conversion.sourcePages} /></h3>
-          <p className="mt-1 text-sm text-soft">{conversion.when}</p>
-          <ol className="mt-3 grid grid-cols-1 gap-1.5 text-sm">
-            {conversion.steps.map((s, i) => (
-              <li key={i} className="flex items-center gap-2 rounded-lg bg-canvas px-3 py-1.5">
-                <span className="w-5 text-xs text-soft">{i + 1}</span>
-                <span className="font-medium text-ink">{s.from}</span><span aria-hidden className="text-brand">→</span><span>{s.to}</span>
-              </li>
-            ))}
-          </ol>
-        </div>
-        <div className="space-y-3">
+        {conversion && (
+          <div>
+            <h3 className="font-semibold">Unfilled seat conversion<Cite pages={conversion.sourcePages} /></h3>
+            <p className="mt-1 text-sm text-soft">{conversion.when}</p>
+            <ol className="mt-3 grid grid-cols-1 gap-1.5 text-sm">
+              {conversion.steps.map((s, i) => (
+                <li key={i} className="flex items-center gap-2 rounded-lg bg-canvas px-3 py-1.5">
+                  <span className="w-5 text-xs text-soft">{i + 1}</span>
+                  <span className="font-medium text-ink">{s.from}</span><span aria-hidden className="text-brand">→</span><span>{s.to}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        )}
+        <div className={`space-y-3 ${conversion ? "" : "md:col-span-2 md:grid md:grid-cols-2 md:gap-3 md:space-y-0"}`}>
           {b.reservation.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
         </div>
       </div>
@@ -414,7 +450,11 @@ function ResignationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
   const ladder = b.resignation.ladder.filter((l) => l.sector === "all" || sectors.includes(l.sector));
   return (
     <Section id="resignation" kicker="Exit costs" title="What resigning a seat costs you">
-      <p className="mb-4 text-sm text-soft">The later you leave, the more you lose.{verdict ? " Showing the stages for the colleges open to you." : ""}</p>
+      {ladder.length === 0 ? (
+        <p className="mb-4 rounded-xl border border-dashed border-line p-3 text-sm">This year's documents don't set out resignation penalties. Check the official website before you resign a seat.</p>
+      ) : (
+        <p className="mb-4 text-sm text-soft">The later you leave, the more you lose.{verdict ? " Showing the stages for the colleges open to you." : ""}</p>
+      )}
       <ol className="space-y-2">
         {ladder.map((l, i) => {
           const lost = l.securityDeposit === "forfeited";
@@ -462,7 +502,7 @@ function BondSection({ b }: { b: Brochure }) {
           <p className="mt-3 text-sm"><strong>Where you'd serve:</strong> {bond.placeOfService}</p>
         </>
       ) : (
-        <p className="text-sm">This brochure doesn't mention a service bond.</p>
+        <p className="rounded-xl border border-dashed border-line p-3 text-sm">These documents don't describe a service bond. Check the official website for this year's bond rules.</p>
       )}
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {b.serviceBond.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
@@ -480,8 +520,10 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
     .map((n) => ({ n, colleges: (dental ? n.privateDental : n.privateMedical).filter((c) => c.toLowerCase().includes(needle) || n.centre.toLowerCase().includes(needle)) }))
     .filter((r) => r.colleges.length > 0);
   const total = b.nodalCentres.reduce((s, n) => s + (dental ? n.privateDental : n.privateMedical).length, 0);
+  if (b.nodalCentres.length === 0 && b.disabilityCentres.length === 0) return null;
   return (
-    <Section id="colleges" kicker="Where to report" title={`Private ${dental ? "dental" : "medical"} colleges & their admission centres`}>
+    <Section id={b.helpCentres.length ? "pwd-centres" : "colleges"} kicker={b.nodalCentres.length ? "Where to report" : "PwD candidates"} title={b.nodalCentres.length ? `Private ${dental ? "dental" : "medical"} colleges & their admission centres` : "Disability medical boards"}>
+      {b.nodalCentres.length > 0 && <>
       <p className="mb-3 text-sm text-soft">
         If you're allotted a private college, you take admission at its nodal centre. {total} colleges are listed.
         {!profile?.courseType && " Showing medical colleges. Set MDS in your profile to see dental colleges."}
@@ -498,10 +540,11 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
         ))}
         {rows.length === 0 && <p className="text-sm text-soft">No matches.</p>}
       </div>
+      </>}
       {b.disabilityCentres.length > 0 && (
-        <div className="mt-6">
+        <div className={b.nodalCentres.length ? "mt-6" : ""}>
           <button type="button" onClick={() => setShowPwd(!showPwd)} className="text-sm font-semibold text-brand-strong hover:underline" aria-expanded={showPwd || !!profile?.pwd}>
-            {showPwd || profile?.pwd ? "▾" : "▸"} Designated disability certificate centres ({b.disabilityCentres.length})
+            {showPwd || profile?.pwd ? "▾" : "▸"} Designated disability certification centres ({b.disabilityCentres.length})
           </button>
           {(showPwd || profile?.pwd) && (
             <div className="mt-3 overflow-x-auto">
@@ -519,6 +562,28 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
           )}
         </div>
       )}
+    </Section>
+  );
+}
+
+function HelpCentresSection({ b }: { b: Brochure }) {
+  const [q, setQ] = useState("");
+  const needle = q.trim().toLowerCase();
+  const rows = b.helpCentres.filter((c) => (c.name + " " + c.address).toLowerCase().includes(needle));
+  return (
+    <Section id="colleges" kicker="Where to go" title="Help centres for document verification">
+      <p className="mb-3 text-sm text-soft">Book an appointment while printing your registration slip, then visit with originals and one self-attested photocopy set.</p>
+      <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a city…" aria-label="Search help centres"
+        className="mb-4 w-full rounded-xl border border-line bg-surface px-3 py-2.5 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+      <ul className="grid gap-3 sm:grid-cols-2">
+        {rows.map((c) => (
+          <li key={c.id} className="rounded-xl border border-line p-4">
+            <p className="font-semibold text-ink">{c.name}<Cite pages={c.sourcePages} /></p>
+            <p className="mt-0.5 text-sm">{c.address}</p>
+          </li>
+        ))}
+        {rows.length === 0 && <li className="text-sm text-soft">No matches.</li>}
+      </ul>
     </Section>
   );
 }

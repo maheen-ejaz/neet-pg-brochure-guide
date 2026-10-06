@@ -21,6 +21,9 @@ export interface Facts {
   currentlyInPG: boolean | null;
   nationality: Profile["nationality"];
   internshipCompletion: string | null;
+  schooledInState: boolean | null;
+  bornInState: boolean | null;
+  isNri: boolean | null;
 }
 
 export function deriveFacts(profile: Profile, brochure: Brochure): Facts {
@@ -43,6 +46,9 @@ export function deriveFacts(profile: Profile, brochure: Brochure): Facts {
     currentlyInPG: profile.currentlyInPG,
     nationality: profile.nationality,
     internshipCompletion: profile.internshipCompletion,
+    schooledInState: profile.schoolState ? profile.schoolState === state : null,
+    bornInState: profile.birthState ? profile.birthState === state : null,
+    isNri: profile.nri,
   };
 }
 
@@ -88,9 +94,11 @@ export interface Reason {
 }
 
 export interface Verdict {
-  status: "eligible" | "restricted" | "ineligible" | "incomplete";
+  status: "eligible" | "restricted" | "ineligible" | "incomplete" | "notCovered";
   headline: string;
   sectors: Sector[];
+  /** Seat quotas the candidate is limited to, or null when no quota restriction applies. */
+  quotas: string[] | null;
   excludedCourses: string[];
   effectiveCategory: Category | null;
   reasons: Reason[];
@@ -104,6 +112,8 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
   const excludedCourses = new Set<string>();
   let effectiveCategory = facts.category;
   let ineligible = false;
+  let notCovered = false;
+  let quotas: string[] | null = null;
   let blockingUnknown = false;
   const reasons: Reason[] = [];
   const missing = new Set<string>();
@@ -135,6 +145,14 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
       case "excludeCourses":
         rule.effect.courses.forEach((c) => excludedCourses.add(c));
         break;
+      case "restrictQuotas": {
+        const allowed = rule.effect.quotas;
+        quotas = quotas ? quotas.filter((q) => allowed.includes(q)) : [...allowed];
+        break;
+      }
+      case "notCovered":
+        notCovered = true;
+        break;
       case "treatAsCategory":
         effectiveCategory = rule.effect.category;
         break;
@@ -152,12 +170,18 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
   if (ineligible) {
     status = "ineligible";
     headline = "Not eligible for this counselling";
-  } else if (sectors.length === 0) {
+  } else if (notCovered) {
+    status = "notCovered";
+    headline = "This year's documents don't cover your course yet";
+  } else if (sectors.length === 0 || quotas?.length === 0) {
     status = "ineligible";
     headline = "No college sector is open to you";
   } else if (blockingUnknown || !facts.courseType || !facts.mbbsLocation) {
     status = "incomplete";
     headline = "Add a few details to see your verdict";
+  } else if (quotas) {
+    status = "restricted";
+    headline = `Eligible for ${quotas.join(" / ")} quota seats only`;
   } else if (sectors.length === 1) {
     status = "restricted";
     headline = sectors[0] === "private" ? "Eligible for private colleges only" : "Eligible for government colleges only";
@@ -169,7 +193,8 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
   return {
     status,
     headline,
-    sectors: status === "ineligible" ? [] : sectors,
+    sectors: status === "ineligible" || status === "notCovered" ? [] : sectors,
+    quotas: status === "ineligible" || status === "notCovered" ? null : quotas,
     excludedCourses: [...excludedCourses],
     effectiveCategory,
     reasons,

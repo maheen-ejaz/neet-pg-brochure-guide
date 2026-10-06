@@ -1,4 +1,8 @@
-import type { ReactNode } from "react";
+import { createContext, useContext, type ReactNode } from "react";
+import { locatePage, type SourceDocument } from "../../schema/stateBrochure";
+
+/** Source documents of the brochure being shown, so citations can name the document. */
+export const SourceDocsContext = createContext<SourceDocument[]>([]);
 
 export const inr = (n: number) =>
   "₹" + n.toLocaleString("en-IN", { maximumFractionDigits: 0 });
@@ -7,15 +11,30 @@ export const inr = (n: number) =>
 export const inrShort = (n: number) =>
   n >= 100000 ? `₹${(n / 100000).toLocaleString("en-IN", { maximumFractionDigits: 2 })} lakh` : inr(n);
 
+/** "Brochure p. 4", or for multi-document sources "Eligibility criteria p. 1 · Help centres p. 1". */
+export function citationLabel(pages: number[], documents: SourceDocument[]) {
+  if (documents.length === 0) {
+    return `Brochure ${pages.length === 1 ? `p. ${pages[0]}` : `pp. ${pages.join(", ")}`}`;
+  }
+  const byDoc = new Map<string, number[]>();
+  for (const p of pages) {
+    const hit = locatePage(documents, p);
+    const key = hit?.doc.title ?? "Source";
+    byDoc.set(key, [...(byDoc.get(key) ?? []), hit?.localPage ?? p]);
+  }
+  return [...byDoc.entries()].map(([t, ps]) => `${t} ${ps.length === 1 ? "p." : "pp."} ${ps.join(", ")}`).join(" · ");
+}
+
 export function Cite({ pages }: { pages: number[] }) {
+  const documents = useContext(SourceDocsContext);
   if (pages.length === 0) return null;
-  const label = pages.length === 1 ? `p. ${pages[0]}` : `pp. ${pages.join(", ")}`;
+  const label = citationLabel(pages, documents);
   return (
     <span
-      className="ml-1.5 inline-flex shrink-0 items-center rounded-full border border-line bg-surface px-2 py-0.5 align-middle text-[11px] font-medium whitespace-nowrap text-soft"
-      title={`Official brochure, ${label}`}
+      className="ml-1.5 inline rounded-full border border-line bg-surface px-2 py-0.5 align-middle text-[11px] font-medium text-soft [box-decoration-break:clone]"
+      title={`Official source: ${label}`}
     >
-      Brochure {label}
+      {label}
     </span>
   );
 }

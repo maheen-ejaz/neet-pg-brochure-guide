@@ -22,6 +22,20 @@ pdftoppm -r 110 -jpeg -jpegopt quality=80 brochures/$SLUG/$YEAR/source.pdf broch
 
 `brochures/` is gitignored (official copies stay local). The review page serves these page images.
 
+### States that publish many documents instead of one brochure
+
+Some states (e.g. Gujarat) publish a set of notices on a website instead of a single brochure.
+1. From the admissions website, take **only this year's counselling documents**, plus any older
+   document the current notices explicitly link as in force. Skip archives, previous years' rules, FAQs,
+   fee/seat lists and cutoffs from earlier years, refund lists and NBE notices.
+2. If key rules exist only as website text, snapshot the page to PDF (headless Chrome `--print-to-pdf`).
+3. Keep the originals in `brochures/$SLUG/$YEAR/docs/`, merge them in a fixed order with
+   `pdfunite … source.pdf`, and record each one in `source.documents` (`title`, `url`, `issued`,
+   `startPage`, `pageCount`). Citations use merged-file page numbers, and the UI shows them as
+   "<document> p. N". `npm run validate` checks that the ranges tile the merged PDF.
+4. Anything this year's documents don't state (reservation %, bond, resignation penalties…) goes in
+   `gaps`. Don't fill it in from older documents.
+
 ## 2. Read every page
 
 - If `pdftotext` returns real text, use it, but still view pages that contain tables or flow charts.
@@ -45,6 +59,9 @@ Rules:
   with `after`/`onOrBefore`). Use `condition: null` for anything that can't be expressed (shown as
   "check yourself"). Put the home-state institutions that are treated differently (like AMU/BHU/AIIMS
   in UP) in `eligibility.listedHomeInstitutions.names`. Those graduates get `mbbsLocation = "home_listed"`.
+  Other available facts: `schooledInState`, `bornInState` and `isNri`. Effects: `restrictQuotas` (e.g. NRI-only)
+  and `notCovered` (course not part of this year's notice). Optional sections: `helpCentres`;
+  `reservation.policy`/`conversion` can be `null` when not stated.
   If a rule needs a fact the engine lacks, use `condition: null` and tell the user. Don't invent facts.
 - **Interpretations**: if you apply a rule beyond its literal text (e.g. treating FMGs as "outside the
   state"), say so in `note`.

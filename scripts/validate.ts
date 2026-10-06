@@ -23,6 +23,16 @@ for (const file of files) {
     const expected = `${doc.meta.stateSlug}-${doc.meta.year}.json`;
     if (file !== expected) errors.push(`file should be named ${expected}`);
 
+    // Merged-source documents must tile the merged PDF exactly, in order.
+    let next = 1;
+    for (const d of doc.source.documents) {
+      if (d.startPage !== next) errors.push(`source.documents "${d.title}" starts at ${d.startPage}, expected ${next}`);
+      next = d.startPage + d.pageCount;
+    }
+    if (doc.source.documents.length > 0 && next - 1 !== doc.source.pageCount) {
+      errors.push(`source.documents cover ${next - 1} pages but pageCount is ${doc.source.pageCount}`);
+    }
+
     const items = collectSourcedItems(doc);
     const seen = new Set<string>();
     for (const { path: p, item } of items) {

@@ -34,6 +34,9 @@ export const FACTS = [
   "inService",
   "currentlyInPG",
   "nationality",
+  "schooledInState",
+  "bornInState",
+  "isNri",
 ] as const;
 export const Fact = z.enum(FACTS);
 
@@ -67,6 +70,10 @@ export const Effect = z.discriminatedUnion("type", [
   z.object({ type: z.literal("excludeCourses"), courses: z.array(z.string()).min(1) }),
   /** Candidate is counted under this category for this state. */
   z.object({ type: z.literal("treatAsCategory"), category: Category }),
+  /** Candidate may only be considered under these seat quotas (e.g. NRI). */
+  z.object({ type: z.literal("restrictQuotas"), quotas: z.array(z.string()).min(1) }),
+  /** The documents don't cover this candidate's course (e.g. MDS not yet notified). */
+  z.object({ type: z.literal("notCovered") }),
   /** Informational: shown to matching candidates. */
   z.object({ type: z.literal("note"), tone: z.enum(["positive", "info", "warning"]) }),
 ]);
@@ -107,6 +114,22 @@ export const BrochureSchema = z.object({
     pageCount: z.number().int().positive(),
     scanned: z.boolean(),
     languages: z.array(z.string()),
+    /**
+     * When the source is several official documents merged into source.pdf, each document's
+     * page range in the merged file. Citations stay merged-file page numbers; the UI shows
+     * them as "<document> p. N".
+     */
+    documents: z
+      .array(
+        z.object({
+          title: z.string(),
+          url: z.string().url().optional(),
+          issued: z.string().optional(),
+          startPage: z.number().int().positive(),
+          pageCount: z.number().int().positive(),
+        }),
+      )
+      .default([]),
   }),
   process: z.array(
     z.object({ ...sourced, title: z.string(), description: z.string(), link: z.string().url().optional() }),
@@ -123,12 +146,12 @@ export const BrochureSchema = z.object({
       appliesTo: z.string(),
       vertical: z.array(z.object({ category: z.string(), percent: z.number() })),
       horizontal: z.array(z.object({ category: z.string(), percent: z.number() })),
-    }),
+    }).nullable(),
     conversion: z.object({
       ...sourced,
       when: z.string(),
       steps: z.array(z.object({ from: z.string(), to: z.string() })),
-    }),
+    }).nullable(),
     rules: z.array(RuleItem),
   }),
   fees: z.object({
@@ -194,6 +217,9 @@ export const BrochureSchema = z.object({
     websites: z.array(z.string()),
     instructions: z.array(z.string()),
   }),
+  helpCentres: z
+    .array(z.object({ ...sourced, name: z.string(), address: z.string() }))
+    .default([]),
   nodalCentres: z.array(
     z.object({
       ...sourced,
@@ -250,4 +276,12 @@ export function collectSourcedItems(doc: unknown, path: string[] = []): { path: 
     }
   }
   return out;
+}
+
+export type SourceDocument = Brochure["source"]["documents"][number];
+
+/** Which merged-file document a page belongs to, and its page number within that document. */
+export function locatePage(documents: SourceDocument[], page: number) {
+  const doc = documents.find((d) => page >= d.startPage && page < d.startPage + d.pageCount);
+  return doc ? { doc, localPage: page - doc.startPage + 1 } : null;
 }

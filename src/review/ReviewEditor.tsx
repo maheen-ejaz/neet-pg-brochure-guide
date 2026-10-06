@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { collectSourcedItems, type Brochure, type SourcedItem } from "../schema/stateBrochure";
+import { collectSourcedItems, locatePage, type Brochure, type SourcedItem } from "../schema/stateBrochure";
 import { loadFile, pageUrl, saveFile } from "./api";
 
 type Item = SourcedItem & Record<string, unknown>;
@@ -32,6 +32,7 @@ const SECTION_LABELS: Record<string, string> = {
   resignation: "Resignation",
   serviceBond: "Service bond",
   helpdesk: "Help desk",
+  helpCentres: "Help centres",
   nodalCentres: "Nodal centres",
   disabilityCentres: "Disability centres",
   annexures: "Annexures",
@@ -216,6 +217,10 @@ export default function ReviewEditor() {
               className="w-14 rounded border border-line px-1" />
             <span className="text-soft">/ {doc.source.pageCount}</span>
             <button type="button" onClick={() => setPage((p) => Math.min(doc.source.pageCount, p + 1))} className="rounded border border-line px-2">›</button>
+            {(() => {
+              const hit = locatePage(doc.source.documents, page);
+              return hit ? <span className="truncate text-xs text-soft" title={hit.doc.title}>{hit.doc.title} · p. {hit.localPage}</span> : null;
+            })()}
             {selected && selected.item.sourcePages.length > 0 && (
               <span className="ml-auto flex gap-1 text-xs">
                 Cited:

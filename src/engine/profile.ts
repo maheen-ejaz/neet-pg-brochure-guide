@@ -9,6 +9,11 @@ export interface Profile {
   /** Name of a listed home-state institution (e.g. AMU) if applicable, else null. */
   mbbsInstitution: string | null;
   domicileState: string | null;
+  /** State where the candidate's 12th-standard school is located. */
+  schoolState: string | null;
+  birthState: string | null;
+  /** Candidate or their parents are Non-Resident Indians. */
+  nri: boolean | null;
   category: Category | null;
   pwd: boolean | null;
   /** State whose government health service employs the candidate, if any. */
@@ -25,6 +30,9 @@ export const EMPTY_PROFILE: Profile = {
   mbbsState: null,
   mbbsInstitution: null,
   domicileState: null,
+  schoolState: null,
+  birthState: null,
+  nri: null,
   category: null,
   pwd: null,
   inServiceState: null,
@@ -68,6 +76,9 @@ export const PROFILE_FIELD_LABELS: Record<string, string> = {
   inService: "whether you're an in-service doctor",
   currentlyInPG: "whether you're already in a PG course",
   nationality: "your nationality",
+  schooledInState: "where you did 12th standard",
+  bornInState: "your state of birth",
+  isNri: "whether you or your parents are NRI",
   internshipCompletion: "your internship completion date",
 };
 
