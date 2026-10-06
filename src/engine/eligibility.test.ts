@@ -18,6 +18,8 @@ const base: Profile = {
   category: "UR",
   pwd: false,
   inServiceState: NOT_IN_SERVICE,
+  inServiceListed: null,
+  priorAdmissionState: NOT_IN_SERVICE,
   internshipCompletion: "2026-03-31",
   currentlyInPG: false,
   nationality: "indian",
@@ -61,9 +63,19 @@ describe("UP 2026 eligibility", () => {
     expect(check({ currentlyInPG: true }).status).toBe("ineligible");
   });
 
-  it("non in-service candidates cannot take state quota DNB", () => {
+  it("only candidates meeting UP's PMHS criteria can take state quota DNB", () => {
     expect(check({}).excludedCourses).toEqual(["DNB"]);
-    expect(check({ inServiceState: "Uttar Pradesh" }).excludedCourses).toEqual([]);
+    expect(check({ inServiceState: "Uttar Pradesh", inServiceListed: true }).excludedCourses).toEqual([]);
+    // Employed in UP but not on the PMHS list is not in-service for this brochure.
+    expect(check({ inServiceState: "Uttar Pradesh", inServiceListed: false }).excludedCourses).toEqual(["DNB"]);
+    // Employed in UP but criteria unanswered: we ask instead of guessing.
+    expect(check({ inServiceState: "Uttar Pradesh", inServiceListed: null }).status).toBe("incomplete");
+  });
+
+  it("PMHS weightage note applies to MD/MS/Diploma only, not MDS", () => {
+    const ids = (p: Partial<Profile>) => check(p).reasons.filter((r) => r.match === "applies").map((r) => r.rule.id);
+    expect(ids({ inServiceState: "Uttar Pradesh", inServiceListed: true })).toContain("elig-pmhs-weightage");
+    expect(ids({ inServiceState: "Uttar Pradesh", inServiceListed: true, courseType: "dental", internshipCompletion: "2026-03-31" })).not.toContain("elig-pmhs-weightage");
   });
 
   it("reserved category from another state is treated as UR", () => {
@@ -111,6 +123,8 @@ describe("UP 2026 documents", () => {
     const ids = (p: Partial<Profile>) => documentsFor({ ...base, ...p }, up).map((d) => d.doc.id);
     expect(ids({})).not.toContain("doc-reservation");
     expect(ids({ category: "EWS" })).toEqual(expect.arrayContaining(["doc-reservation", "doc-ews-format"]));
+    // Other-state reserved candidates are treated as UR, so no UP category certificate is asked for.
+    expect(ids({ category: "OBC", domicileState: "Bihar" })).not.toContain("doc-reservation");
     expect(ids({ pwd: true })).toContain("doc-pwd");
     expect(ids({ mbbsState: ABROAD })).toContain("doc-fmg");
   });

@@ -66,9 +66,45 @@ Rules:
 - **Interpretations**: if you apply a rule beyond its literal text (e.g. treating FMGs as "outside the
   state"), say so in `note`.
 - **Security deposits**: one entry per tier, with `allows` listing every `{sector, collegeType}` it unlocks.
-- **Dates**: only real scheduled dates go in `importantDates`. Example dates inside rules don't count.
+- **Dates**: `importantDates` holds real scheduled dates *and* fixed deadlines stated as rules (internship
+  cut-offs, certificate "issued on or after" dates). Illustrative example dates inside rules don't count.
 - **gaps**: list what candidates would expect but the brochure doesn't contain (schedule, seat matrix,
   cutoffs, tuition, college list…).
+
+## 3b. Accuracy rules (lessons from the UP/Gujarat 2026 verification)
+
+These mistakes were all found by independent checks. Avoid them on the first pass:
+
+1. **Scope every rule exactly.** Record who a rule covers: course type, quota, seat type and college
+   sector. ✗ The PMHS weightage note was shown to MDS candidates, though it applies to MD/MS/Diploma only.
+   ✗ "5% PwD reservation" left out "Government State Quota seats only".
+2. **Map defined groups to their definition, not a proxy.** "PMHS / in-service" means *on the official
+   list or sponsored with an NOC* (`inService` needs `inServiceListed`), not "employed in the state".
+   "Admitted under these rules" means a prior admission through *this* state's counselling
+   (`priorAdmissionInState`), not "currently in any PG seat".
+3. **Keep the source's modality.** Keep "may" as "may", "will" as "will", and "not permitted" as
+   "not permitted". ✗ "Not permitted to vacate" was softened to "not normally allowed". ✗ "Will face
+   legal action" became "may".
+4. **Capture fall-through and escalation clauses.** For example: "if you resign after this window, the
+   next stage's penalties apply". These are often a single sentence and easy to miss.
+5. **Capture every criterion in a definition or format.** That includes guardian rules in NRI
+   definitions, asset limits and caste exclusions in EWS formats, and "father alive" conditions.
+   Don't compress a list of criteria into "meets the criteria".
+6. **Admission-stage obligations are documents.** Bonds to sign, affidavits, UDID cards and NOCs all go
+   in `documents` with the right `appliesWhen`.
+7. **Gate documents on the effective situation.** If a rule re-categorises a candidate (e.g. other-state
+   reserved → UR), don't ask them for the reserved-category certificate.
+8. **Read operational constraints against dates.** Help-centre hours, Saturday half-days, Sunday and
+   holiday closures, and "prior appointment compulsory" belong next to the dates they affect.
+9. **Cite the exact page.** Don't cite a page because it's in the same document; open it and check. ✗
+   Several citations pointed to a neighbouring page. Facts often sit in footers, screenshots and
+   form fields (e.g. contact numbers in footers, declarations in form screenshots).
+10. **Quote verbatim when the source is ambiguous** (e.g. run-on table cells) rather than imposing a
+   reading.
+11. **Nothing from general knowledge or out-of-scope documents** in candidate-facing text. Put
+   suggestions to verify in `note`, labelled as such.
+12. **Don't add a facility name that isn't in the source** (✗ "(DGME)"), and record aliases when two
+    documents name the same place differently.
 
 ## 4. Check
 
@@ -77,11 +113,19 @@ npm run validate   # schema, unique ids, page ranges
 npm test           # engine tests must still pass
 ```
 
+Then run an **independent verification**. This is mandatory before handing over. Launch a fresh
+read-only subagent, which hasn't seen your extraction reasoning, with the prompt in
+`references/verify-prompt.md`. It checks every item against the page images and lists omissions and
+interpretations. Fix what it finds, add a regression test for any eligibility-logic error, and re-run
+it until it reports no errors of major severity or above. Any new *kind* of mistake goes into the
+list in 3b.
+
 If the state needs engine behaviour that doesn't exist yet (a new fact or effect), stop and propose
 the schema/engine change with tests instead of forcing the data to fit.
 
 ## 5. Hand over
 
-Tell the user the item count, anything you were unsure about (list the ids), any interpretations, and
+Tell the user the item count, the verification result, anything you were unsure about (list the ids),
+any interpretations, and
 to review at `http://localhost:5173/review/<slug>-<year>`. Publishing happens only from the review page
 once every item is verified.

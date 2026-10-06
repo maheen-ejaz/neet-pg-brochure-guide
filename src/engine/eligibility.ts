@@ -24,6 +24,7 @@ export interface Facts {
   schooledInState: boolean | null;
   bornInState: boolean | null;
   isNri: boolean | null;
+  priorAdmissionInState: boolean | null;
 }
 
 export function deriveFacts(profile: Profile, brochure: Brochure): Facts {
@@ -41,14 +42,21 @@ export function deriveFacts(profile: Profile, brochure: Brochure): Facts {
     category: profile.category,
     isDomicile: profile.domicileState ? profile.domicileState === state : null,
     pwd: profile.pwd,
-    // Not employed anywhere is a definite "no"; only an unanswered field is unknown.
-    inService: profile.inServiceState === null ? null : profile.inServiceState === state,
+    // In service = employed by this state's health service AND meeting its in-service criteria.
+    // Not employed here is a definite "no"; employed here but criteria unanswered is unknown.
+    inService:
+      profile.inServiceState === null
+        ? null
+        : profile.inServiceState !== state
+          ? false
+          : profile.inServiceListed,
     currentlyInPG: profile.currentlyInPG,
     nationality: profile.nationality,
     internshipCompletion: profile.internshipCompletion,
     schooledInState: profile.schoolState ? profile.schoolState === state : null,
     bornInState: profile.birthState ? profile.birthState === state : null,
     isNri: profile.nri,
+    priorAdmissionInState: profile.priorAdmissionState === null ? null : profile.priorAdmissionState === state,
   };
 }
 

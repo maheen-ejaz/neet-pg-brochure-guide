@@ -37,6 +37,7 @@ export const FACTS = [
   "schooledInState",
   "bornInState",
   "isNri",
+  "priorAdmissionInState",
 ] as const;
 export const Fact = z.enum(FACTS);
 

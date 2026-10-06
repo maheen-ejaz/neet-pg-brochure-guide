@@ -18,6 +18,8 @@ const base: Profile = {
   category: "UR",
   pwd: false,
   inServiceState: NOT_IN_SERVICE,
+  inServiceListed: null,
+  priorAdmissionState: NOT_IN_SERVICE,
   internshipCompletion: "2026-06-30",
   currentlyInPG: false,
   nationality: "indian",
@@ -77,8 +79,21 @@ describe("Gujarat 2026 eligibility", () => {
     expect(adviseDeposit(v, gj).recommended).toBeNull();
   });
 
-  it("already admitted to PG is ineligible", () => {
-    expect(check({ currentlyInPG: true }).status).toBe("ineligible");
+  it("Rule 4(4): only a prior admission through Gujarat counselling bars you", () => {
+    expect(check({ priorAdmissionState: "Gujarat" }).status).toBe("ineligible");
+    // Currently in a PG seat from another state's counselling isn't covered by Rule 4(4).
+    expect(check({ currentlyInPG: true, priorAdmissionState: "Maharashtra" }).status).toBe("eligible");
+  });
+
+  it("in-service needs Gujarat's criteria (NOC), not just employment", () => {
+    const applies = (p: Partial<Profile>) => check(p).reasons.filter((r) => r.match === "applies").map((r) => r.rule.id);
+    expect(applies({ inServiceState: "Gujarat", inServiceListed: true })).toContain("elig-in-service");
+    expect(applies({ inServiceState: "Gujarat", inServiceListed: false })).not.toContain("elig-in-service");
+  });
+
+  it("PwD candidates get UDID and affidavit documents", () => {
+    const ids = documentsFor({ ...base, pwd: true }, gj).map((d) => d.doc.id);
+    expect(ids).toEqual(expect.arrayContaining(["doc-pwd", "doc-udid", "doc-pwbd-affidavits"]));
   });
 
   it("everyone eligible pays the single ₹25,000 deposit", () => {

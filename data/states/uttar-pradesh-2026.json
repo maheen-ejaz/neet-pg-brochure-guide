@@ -2,14 +2,18 @@
   "meta": {
     "id": "meta",
     "sourcePages": [
-      1
+      1,
+      3,
+      6,
+      15,
+      16
     ],
     "verified": false,
     "state": "Uttar Pradesh",
     "stateSlug": "uttar-pradesh",
     "year": 2026,
     "title": "UP NEET PG-2026 Counselling (MD/MS/Diploma/DNB/MDS)",
-    "authority": "Directorate of Medical Education and Training (DGME), Uttar Pradesh, Lucknow",
+    "authority": "Directorate of Medical Education and Training, Uttar Pradesh, Lucknow",
     "officialWebsites": [
       "https://upneet.gov.in",
       "https://www.dgme.up.gov.in"
@@ -46,7 +50,7 @@
       ],
       "verified": false,
       "title": "Register online",
-      "description": "Register on upneet.gov.in using your NEET-PG roll number and the same email ID you used on the NBE portal. Your name, parents' names and date of birth are pulled from NBE and cannot be changed. You add domicile, category, sub-category, in-service status and where you did MBBS.",
+      "description": "Register on upneet.gov.in using your NEET-PG roll number and the same email ID you used on the NBE portal. Your name, parents' names and date of birth are pulled from NBE and cannot be changed. You add domicile, category, sub-category, in-service status and where you did MBBS. Fill the form yourself, not through any agent or third party.",
       "link": "https://upneet.gov.in"
     },
     {
@@ -128,7 +132,7 @@
         4
       ],
       "verified": false,
-      "label": "Central institutions in Uttar Pradesh whose graduates are not eligible for Government State Quota seats",
+      "label": "Institutions named in the brochure whose graduates can't take Government State Quota seats",
       "names": [
         "Aligarh Muslim University (AMU), Aligarh",
         "Banaras Hindu University (BHU), Varanasi",
@@ -142,7 +146,7 @@
         4
       ],
       "verified": false,
-      "label": "In-service (PMHS) doctor listed by the Director General Health Services, Uttar Pradesh"
+      "label": "On the list of in-service (PMHS) candidates provided by the Director General Health Services, Uttar Pradesh"
     },
     "rules": [
       {
@@ -280,8 +284,8 @@
           4
         ],
         "verified": false,
-        "title": "Already admitted to a PG course",
-        "explanation": "If you took admission through an earlier NEET-PG/NEET-MDS, you cannot take part until you complete and pass that course.",
+        "title": "Currently admitted through an earlier NEET-PG/MDS",
+        "explanation": "If you're presently admitted to a course on the basis of an earlier NEET-PG or NEET-MDS, you can't take part until you complete and pass that course.",
         "condition": {
           "fact": "currentlyInPG",
           "in": [
@@ -300,11 +304,21 @@
         ],
         "verified": false,
         "title": "In-service (PMHS) weightage",
-        "explanation": "NEET-qualified in-service PMHS doctors on the DG Health Services list get weightage in the MD/MS/Diploma merit list as per norms.",
+        "explanation": "NEET-qualified in-service PMHS doctors on the DG Health Services list get weightage in the MD/MS/Diploma merit list. DNB and MDS merit uses All-India NEET rank, with no weightage.",
         "condition": {
-          "fact": "inService",
-          "in": [
-            true
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "inService",
+              "in": [
+                true
+              ]
+            }
           ]
         },
         "effect": {
@@ -369,7 +383,7 @@
         ],
         "verified": false,
         "title": "Foreign nationals",
-        "explanation": "Foreign nationals must meet NBE Information Bulletin 2026 point 4.11: an NMC-recognised primary qualification, MHA security clearance where required, and NMC temporary registration for the PG course duration.",
+        "explanation": "Foreign nationals must meet NBE Information Bulletin 2026 point 4.11: an NMC-recognised primary qualification and MHA security clearance where required. The NMC may grant temporary registration for the PG course, but only if you're registered in your own country and have an NOC from that country's medical council to do PG in India.",
         "condition": {
           "fact": "nationality",
           "in": [
@@ -411,7 +425,8 @@
         "effect": {
           "type": "treatAsCategory",
           "category": "UR"
-        }
+        },
+        "note": "Interpretation: the brochure says \"reserved category candidates of other states\" without defining it. We use domicile."
       },
       {
         "id": "elig-pwd-certificate",
@@ -421,7 +436,7 @@
         ],
         "verified": false,
         "title": "PwD certificate from a designated centre",
-        "explanation": "To claim the 5% PwD reservation you need a disability certificate (21 benchmark disabilities, RPwD Act 2016, NMC norms) from one of the designated centres in Annexure-2. Certificates from any other hospital or board are not accepted.",
+        "explanation": "The 5% PwD reservation applies to Government State Quota seats in government medical institutions. To claim it, get a disability certificate (21 benchmark disabilities, RPwD Act 2016, NMC norms) from one of the designated centres in Annexure-2. Certificates from any other hospital or board are not accepted.",
         "condition": {
           "fact": "pwd",
           "in": [
@@ -633,6 +648,16 @@
       }
     ],
     "rules": [
+      {
+        "id": "fees-deposit-go",
+        "sourcePages": [
+          8
+        ],
+        "verified": false,
+        "title": "Deposit eligibility is set by a government order",
+        "detail": "Check which deposit tier you are eligible for under Govt. Order No. I/1405837/2026 dated 23/07/2026.",
+        "severity": "warning"
+      },
       {
         "id": "fees-own-account",
         "sourcePages": [
@@ -941,12 +966,24 @@
       "name": "Category certificate (SC/ST/OBC/EWS) in UP format",
       "stage": "admission",
       "appliesWhen": {
-        "fact": "category",
-        "in": [
-          "OBC",
-          "SC",
-          "ST",
-          "EWS"
+        "all": [
+          {
+            "fact": "category",
+            "in": [
+              "OBC",
+              "SC",
+              "ST",
+              "EWS"
+            ]
+          },
+          {
+            "not": {
+              "fact": "isDomicile",
+              "in": [
+                false
+              ]
+            }
+          }
         ]
       },
       "detail": "Issued by a competent UP authority. EWS and OBC certificates must be issued on or after 1 April 2026."
@@ -965,7 +1002,8 @@
           "EWS"
         ]
       },
-      "detail": "Family income under ₹8 lakh, with no listed assets. Issued by the DM, ADM, City Magistrate, SDM or Tehsildar."
+      "detail": "Family's total annual income below ₹8 lakh in the stated financial year. The family must not own any of: 5 acres or more of agricultural land; a flat of 1,000 sq ft or more; a residential plot of 100 sq yd or more in a notified municipality; or 200 sq yd or more outside one. You must be a permanent resident and not belong to a caste notified as SC, ST or OBC. Valid for the financial year stated on it. Issued by the DM, ADM, City Magistrate, Pargana Magistrate (SDM) or Tehsildar.",
+      "note": "Translated from Hindi"
     },
     {
       "id": "doc-pwd",
@@ -998,6 +1036,19 @@
         ]
       },
       "note": "Derived from the FMG eligibility criteria. The admission document list does not name it separately."
+    },
+    {
+      "id": "doc-service-bond",
+      "sourcePages": [
+        15,
+        24,
+        25
+      ],
+      "verified": false,
+      "name": "Signed service bond agreement (Annexure-4) for government college admissions",
+      "stage": "admission",
+      "appliesWhen": null,
+      "detail": "Only if you take admission in a government medical or dental college. You bear the stamp duty."
     },
     {
       "id": "doc-originals",
@@ -1039,7 +1090,7 @@
       ],
       "verified": false,
       "title": "Originals are mandatory",
-      "detail": "If you fail to produce originals, or if any concealment or falsification is found, you lose your candidature and may face legal action.",
+      "detail": "If you fail to produce originals, or if concealment or falsification is found at admission or later during the course, you lose your candidature and will face legal action.",
       "severity": "critical"
     }
   ],
@@ -1064,6 +1115,18 @@
         "title": "Must be updated on the portal",
         "detail": "The college or nodal centre updates your resignation on the NIC portal within the scheduled time. Only portal-updated resignations count.",
         "severity": "warning"
+      },
+      {
+        "id": "resign-late-next-tier",
+        "sourcePages": [
+          13,
+          14
+        ],
+        "verified": false,
+        "title": "Miss a deadline and the next tier's penalty applies",
+        "detail": "Each resignation window closes 2 days before the next round's choice filling. If you resign after it closes, the next stage's rules apply. For example, a Round 1 admittee who resigns late loses the full security deposit.",
+        "severity": "critical",
+        "note": "Translated from Hindi"
       },
       {
         "id": "resign-debarment",
@@ -1092,10 +1155,11 @@
       {
         "id": "resign-r2",
         "sourcePages": [
+          13,
           14
         ],
         "verified": false,
-        "stage": "After Round 2",
+        "stage": "After Round 2 (or a Round 1 admittee who missed the Round 1 deadline)",
         "window": "Up to 2 days before Round 3 choice filling starts",
         "sector": "all",
         "securityDeposit": "forfeited",
@@ -1112,7 +1176,7 @@
         "sector": "government",
         "securityDeposit": "forfeited",
         "fees": "All fees paid are forfeited.",
-        "otherConsequence": "Vacating seats is not normally allowed after Round 3."
+        "otherConsequence": "No candidate is permitted to vacate a seat after Round 3. These penalties apply if you still resign."
       },
       {
         "id": "resign-r3-private",
@@ -1125,7 +1189,7 @@
         "sector": "private",
         "securityDeposit": "forfeited",
         "fees": "50% of the tuition fee paid is forfeited.",
-        "otherConsequence": "Vacating seats is not normally allowed after Round 3."
+        "otherConsequence": "No candidate is permitted to vacate a seat after Round 3. These penalties apply if you still resign."
       },
       {
         "id": "resign-stray",
@@ -1163,18 +1227,18 @@
           "amountInr": 2000000
         }
       ],
-      "placeOfService": "As required, outside metros: Senior Resident or contractual lecturer in a government medical college, or contractual specialist at a district hospital or community health centre under the Medical Health & Family Welfare department."
+      "placeOfService": "Service must be in Uttar Pradesh, as far as possible / as required outside metros: as a Senior Resident or contractual lecturer in a government medical college, or as a contractual specialist at a district hospital or community health centre run under the Medical & Health Department.",
+      "note": "Translated from Hindi"
     },
     "rules": [
       {
         "id": "bond-certificates-held",
         "sourcePages": [
-          24,
           25
         ],
         "verified": false,
-        "title": "Certificates are held until the bond is served",
-        "detail": "Your PG certificates stay with the institution until you complete 2 years of service or pay the bond amount. The government has a first lien on them.",
+        "title": "Your certificates are held until the bond is served",
+        "detail": "All certificates you submitted at admission, including your MBBS/BDS certificates, and your PG certificates stay with the institution until you complete 2 years of service or pay the bond amount. The government has a first lien on all of them.",
         "severity": "warning"
       },
       {
@@ -1195,6 +1259,17 @@
         "verified": false,
         "title": "Late payment attracts interest",
         "detail": "If you don't pay the bond amount in time, interest applies and it can be recovered as arrears of land revenue. You also bear the stamp duty on the bond.",
+        "severity": "warning"
+      },
+      {
+        "id": "bond-stipend",
+        "sourcePages": [
+          24,
+          25
+        ],
+        "verified": false,
+        "title": "Short service means repaying stipend",
+        "detail": "If you're granted stipend and serve fewer than 24 months, a proportionate amount is treated as stipend. You must pay the balance back to the government on top of the security amount.",
         "severity": "warning"
       }
     ]
@@ -1516,7 +1591,7 @@
       "verified": false,
       "name": "SMS Medical College",
       "location": "Jaipur, Rajasthan",
-      "remarks": "All disabilities except neurology (genetic testing) and ENT (speech & language disability testing); orthopaedics/PMR goniometer, plumb line, hand dynamometer, laser"
+      "remarks": "As printed: \"All disabilities as mentioned in disability certificate except 1. Neurology – Genetic Testing 2. ENT – Speech & language Disability Testing Orthopaedics/PMR – Goniometer Adult, Plumb Line, Hand Dynamometer, Laser\""
     },
     {
       "id": "dis-9",
@@ -2102,7 +2177,35 @@
       "description": "Agreement bond for 2 years of government service after PG (₹40 lakh for a degree, ₹20 lakh for a diploma or MDS)."
     }
   ],
-  "importantDates": [],
+  "importantDates": [
+    {
+      "id": "date-cert-ews-obc",
+      "sourcePages": [
+        6
+      ],
+      "verified": false,
+      "label": "EWS and OBC certificates must be issued on or after",
+      "date": "2026-04-01"
+    },
+    {
+      "id": "date-internship-mds",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "label": "Internship completion deadline (MDS)",
+      "date": "2026-05-31"
+    },
+    {
+      "id": "date-internship-clinical",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "label": "Internship completion deadline (MD/MS/Diploma/DNB)",
+      "date": "2026-09-30"
+    }
+  ],
   "gaps": [
     {
       "id": "gap-schedule",
@@ -2140,6 +2243,15 @@
       "verified": false,
       "title": "List of government colleges and seats",
       "detail": "Only private colleges (via nodal centres) are listed. Government colleges and their PG seats aren't."
+    },
+    {
+      "id": "gap-refund-eligibility",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "title": "Who gets the deposit back",
+      "detail": "The brochure says security money is refunded to \"eligible candidates\" after all rounds, but doesn't define who is eligible beyond the resignation rules."
     }
   ]
 }

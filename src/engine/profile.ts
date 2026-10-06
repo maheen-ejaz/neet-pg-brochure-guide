@@ -18,6 +18,16 @@ export interface Profile {
   pwd: boolean | null;
   /** State whose government health service employs the candidate, if any. */
   inServiceState: string | null;
+  /**
+   * Whether the candidate meets that state's own in-service criteria (e.g. UP: on the DGHS
+   * PMHS list; Gujarat: NOC from a state competent authority). Employment alone isn't enough.
+   */
+  inServiceListed: boolean | null;
+  /**
+   * State whose PG counselling previously admitted the candidate to a seat whose course period
+   * isn't over yet, or NONE. Some states bar such candidates (e.g. Gujarat Rule 4(4)).
+   */
+  priorAdmissionState: string | null;
   internshipCompletion: string | null;
   currentlyInPG: boolean | null;
   nationality: "indian" | "oci" | "foreign" | null;
@@ -36,6 +46,8 @@ export const EMPTY_PROFILE: Profile = {
   category: null,
   pwd: null,
   inServiceState: null,
+  inServiceListed: null,
+  priorAdmissionState: null,
   internshipCompletion: null,
   currentlyInPG: null,
   nationality: null,
@@ -73,7 +85,8 @@ export const PROFILE_FIELD_LABELS: Record<string, string> = {
   category: "your category",
   isDomicile: "your domicile state",
   pwd: "whether you have a benchmark disability",
-  inService: "whether you're an in-service doctor",
+  inService: "whether you meet the state's in-service criteria",
+  priorAdmissionInState: "whether this state's counselling admitted you to a PG seat before",
   currentlyInPG: "whether you're already in a PG course",
   nationality: "your nationality",
   schooledInState: "where you did 12th standard",
@@ -82,5 +95,6 @@ export const PROFILE_FIELD_LABELS: Record<string, string> = {
   internshipCompletion: "your internship completion date",
 };
 
-/** inServiceState value meaning "not an in-service doctor anywhere". */
-export const NOT_IN_SERVICE = "none";
+/** inServiceState / priorAdmissionState value meaning "no" (not in service / never admitted). */
+export const NONE = "none";
+export const NOT_IN_SERVICE = NONE;

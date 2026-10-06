@@ -5,6 +5,7 @@ import {
   ABROAD,
   EMPTY_PROFILE,
   INDIAN_STATES,
+  NONE,
   NOT_IN_SERVICE,
   SPECIALITIES,
   type Profile,
@@ -74,6 +75,13 @@ export function ProfilePage() {
       .flatMap((s) => s.brochure.eligibility.listedHomeInstitutions.names);
     return [...new Set(names)];
   }, [p.mbbsState]);
+
+  // The chosen state's own in-service criteria (e.g. UP: DGHS PMHS list), when we have that state.
+  const inServiceCriteria = useMemo(
+    () =>
+      states.find((s) => s.brochure.meta.state === p.inServiceState)?.brochure.eligibility.inServiceLabel.label ?? null,
+    [p.inServiceState],
+  );
 
   const toggleSpeciality = (s: string) =>
     set(
@@ -188,6 +196,13 @@ export function ProfilePage() {
           <Choice name="Currently in PG" value={p.currentlyInPG} onChange={(v) => set("currentlyInPG", v)}
             options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
         </Field>
+        <Field label="Has a state's PG counselling admitted you before, to a course whose duration isn't over yet?" hint="Count it even if you left that seat. Some states (e.g. Gujarat) bar you from their counselling until that period ends." htmlFor="prior">
+          <select id="prior" className={inputClass} value={p.priorAdmissionState ?? ""} onChange={(e) => set("priorAdmissionState", e.target.value || null)}>
+            <option value="">Select…</option>
+            <option value={NONE}>No</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, through {s} counselling</option>)}
+          </select>
+        </Field>
       </div>
 
       <div className="space-y-6 rounded-2xl border border-line bg-surface p-5 sm:p-6">
@@ -225,12 +240,22 @@ export function ProfilePage() {
             options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
         </Field>
         <Field label="Are you an in-service doctor in a state government health service?" hint="For example, UP's PMHS cadre." htmlFor="inservice">
-          <select id="inservice" className={inputClass} value={p.inServiceState ?? ""} onChange={(e) => set("inServiceState", e.target.value || null)}>
+          <select id="inservice" className={inputClass} value={p.inServiceState ?? ""}
+            onChange={(e) => setP((prev) => ({ ...prev, inServiceState: e.target.value || null, inServiceListed: null }))}>
             <option value="">Select…</option>
             <option value={NOT_IN_SERVICE}>No</option>
             {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
           </select>
         </Field>
+        {p.inServiceState && p.inServiceState !== NOT_IN_SERVICE && (
+          <Field
+            label={`Do you meet ${p.inServiceState}'s in-service criteria?`}
+            hint={inServiceCriteria ? `${p.inServiceState} requires: ${inServiceCriteria}.` : "Being employed isn't always enough: states usually require you to be on an official list or sponsored with an NOC."}
+          >
+            <Choice name="In-service criteria" value={p.inServiceListed} onChange={(v) => set("inServiceListed", v)}
+              options={[{ value: true, label: "Yes" }, { value: false, label: "No / not sure" }]} />
+          </Field>
+        )}
         <Field label="Nationality">
           <Choice name="Nationality" value={p.nationality} onChange={(v) => set("nationality", v)}
             options={[
