@@ -31,7 +31,7 @@ export function Cite({ pages }: { pages: number[] }) {
   const label = citationLabel(pages, documents);
   return (
     <span
-      className="ml-1.5 inline rounded-full border border-line bg-surface px-2 py-0.5 align-middle text-[11px] font-medium text-soft [box-decoration-break:clone]"
+      className={`ml-1.5 inline rounded-[5px] bg-canvas px-1.5 py-0.5 align-middle text-[11px] font-medium text-soft [box-decoration-break:clone] ${label.length <= 28 ? "whitespace-nowrap" : ""}`}
       title={`Official source: ${label}`}
     >
       {label}
@@ -53,23 +53,23 @@ export function Section({
   action?: ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-20 rounded-2xl border border-line bg-surface p-5 sm:p-6">
-      <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+    <section id={id} className="card scroll-mt-28">
+      <div className="flex flex-wrap items-end justify-between gap-2 border-b border-line px-5 py-4 sm:px-6">
         <div>
-          {kicker && <p className="text-xs font-semibold tracking-wide text-brand uppercase">{kicker}</p>}
-          <h2 className="text-xl font-semibold sm:text-2xl">{title}</h2>
+          {kicker && <p className="text-xs text-soft">{kicker}</p>}
+          <h2 className="text-lg sm:text-xl">{title}</h2>
         </div>
         {action}
       </div>
-      {children}
+      <div className="p-5 sm:p-6">{children}</div>
     </section>
   );
 }
 
-const severityStyles = {
-  info: "border-line bg-surface",
-  warning: "border-warn/30 bg-warn-tint/50",
-  critical: "border-bad/30 bg-bad-tint/50",
+const severityDot = {
+  info: "",
+  warning: "bg-warn-tint text-warn",
+  critical: "bg-bad-tint text-bad",
 } as const;
 
 const severityLabel = { info: null, warning: "Watch out", critical: "Critical" } as const;
@@ -88,16 +88,14 @@ export function RuleCard({
   pages: number[];
 }) {
   return (
-    <div className={`rounded-xl border p-4 ${severityStyles[severity]}`}>
-      <div className="mb-1 flex flex-wrap items-center gap-2">
-        {tag && <span className="rounded-full bg-brand-tint px-2 py-0.5 text-[11px] font-semibold text-brand-strong">{tag}</span>}
-        {severityLabel[severity] && (
-          <span className={`text-[11px] font-semibold uppercase ${severity === "critical" ? "text-bad" : "text-warn"}`}>
-            {severityLabel[severity]}
-          </span>
-        )}
-      </div>
-      <h3 className="text-base font-semibold">{title}</h3>
+    <div className="rounded-lg border border-line bg-surface p-4">
+      {(tag || severityLabel[severity]) && (
+        <div className="mb-2 flex flex-wrap items-center gap-1.5">
+          {severityLabel[severity] && <StatusChip className={severityDot[severity]}>{severityLabel[severity]}</StatusChip>}
+          {tag && <span className="rounded-[5px] bg-canvas px-1.5 py-0.5 text-[11px] font-medium text-soft">{tag}</span>}
+        </div>
+      )}
+      <h3 className="text-[15px] tracking-tight">{title}</h3>
       <p className="mt-1 text-sm">
         {detail}
         <Cite pages={pages} />
@@ -106,9 +104,19 @@ export function RuleCard({
   );
 }
 
+/** Small status chip with a leading dot (Attio-style). Colour comes from the caller. */
+export function StatusChip({ className, children }: { className: string; children: ReactNode }) {
+  return (
+    <span className={`inline-flex w-fit items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-semibold ${className}`}>
+      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-current" />
+      {children}
+    </span>
+  );
+}
+
 export function DraftBanner() {
   return (
-    <div className="no-print rounded-xl border border-warn/40 bg-warn-tint px-4 py-2 text-sm text-warn">
+    <div className="no-print rounded-lg border border-warn/30 bg-warn-tint px-4 py-2 text-sm text-warn">
       <strong>Draft preview:</strong> this state hasn't been reviewed yet and is only visible on your local dev server.
     </div>
   );

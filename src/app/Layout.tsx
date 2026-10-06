@@ -2,18 +2,17 @@ import { Link, NavLink, Outlet, ScrollRestoration } from "react-router-dom";
 import { comparisonEnabled } from "../data/states";
 
 const navClass = ({ isActive }: { isActive: boolean }) =>
-  `rounded-full px-3 py-1.5 text-sm font-medium transition ${isActive ? "bg-white/20 text-white" : "text-white/80 hover:text-white"}`;
+  `rounded-lg px-2.5 py-1.5 text-sm transition-colors ${isActive ? "bg-brand-tint text-brand-strong" : "text-soft hover:text-ink"}`;
 
 export function Layout() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-20 bg-brand-strong">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
-          <Link to="/" className="flex items-center gap-2.5">
-            <span className="text-lg font-bold tracking-tight text-white" style={{ fontFamily: "var(--font-heading)" }}>GooCampus</span>
-            <span className="hidden border-l border-white/30 pl-2.5 text-sm font-semibold text-white sm:inline">
-              NEET PG Counselling Guide
-            </span>
+      <header className="sticky top-0 z-20 border-b border-line bg-surface/90 backdrop-blur">
+        <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-2.5">
+          <Link to="/" className="flex items-center gap-2">
+            <span aria-hidden className="panel-accent grid h-6 w-6 place-items-center rounded-md text-xs font-semibold">G</span>
+            <span className="font-heading text-base font-semibold tracking-tight text-ink">GooCampus</span>
+            <span className="hidden text-sm text-soft sm:inline">NEET PG Guide</span>
           </Link>
           <nav className="flex items-center gap-1">
             <NavLink to="/" end className={navClass}>States</NavLink>
@@ -23,10 +22,10 @@ export function Layout() {
           </nav>
         </div>
       </header>
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6 sm:py-10">
+      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:py-12">
         <Outlet />
       </main>
-      <footer className="border-t border-line bg-surface">
+      <footer className="border-t border-line bg-canvas">
         <div className="mx-auto max-w-5xl px-4 py-6 text-xs text-soft">
           <p>
             This guide summarises official state counselling brochures to help you understand them. It is not

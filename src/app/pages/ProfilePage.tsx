@@ -47,8 +47,8 @@ function Choice<T extends string | boolean>({
             role="radio"
             aria-checked={active}
             onClick={() => onChange(o.value)}
-            className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
-              active ? "border-brand bg-brand text-white" : "border-line bg-surface text-body hover:border-brand"
+            className={`rounded-lg border px-3.5 py-2 text-sm transition-colors ${
+              active ? "border-brand/60 bg-brand-tint text-brand-strong" : "border-line-strong bg-surface text-body hover:border-soft"
             }`}
           >
             {o.label}
@@ -60,7 +60,7 @@ function Choice<T extends string | boolean>({
 }
 
 const inputClass =
-  "w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/20";
+  "w-full rounded-lg border border-line-strong bg-surface px-3 py-2 text-sm text-ink outline-none focus:border-brand focus:ring-2 focus:ring-brand/20";
 
 export function ProfilePage() {
   const { profile: saved, save } = useProfile();
@@ -102,14 +102,14 @@ export function ProfilePage() {
   return (
     <form onSubmit={submit} className="mx-auto max-w-2xl space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Your profile</h1>
+        <h1 className="text-3xl sm:text-4xl">Your profile</h1>
         <p className="mt-1 text-soft">
           Used to personalise every state's guide. It stays in this browser and is never sent anywhere. Skip anything
           you're unsure about and we'll tell you what's missing.
         </p>
       </div>
 
-      <div className="space-y-6 rounded-2xl border border-line bg-surface p-5 sm:p-6">
+      <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
         <h2 className="text-lg font-semibold">Exam & course</h2>
         <Field label="Which course are you applying for?">
           <Choice
@@ -135,7 +135,7 @@ export function ProfilePage() {
           />
         </Field>
         <Field label="Preferred specialities" hint={`Pick up to ${MAX_SPECIALITIES}. ${p.specialities.length}/${MAX_SPECIALITIES} selected.`}>
-          <div className="flex max-h-56 flex-wrap gap-2 overflow-y-auto rounded-xl border border-line p-3">
+          <div className="flex max-h-56 flex-wrap gap-2 overflow-y-auto rounded-lg border border-line p-3">
             {SPECIALITIES.map((s) => {
               const active = p.specialities.includes(s);
               return (
@@ -144,8 +144,8 @@ export function ProfilePage() {
                   type="button"
                   aria-pressed={active}
                   onClick={() => toggleSpeciality(s)}
-                  className={`rounded-full border px-3 py-1 text-xs font-medium ${
-                    active ? "border-brand bg-brand-tint text-brand-strong" : "border-line text-body hover:border-brand"
+                  className={`rounded-md border px-2.5 py-1 text-xs ${
+                    active ? "border-brand/60 bg-brand-tint text-brand-strong" : "border-line text-body hover:border-soft"
                   }`}
                 >
                   {s}
@@ -156,7 +156,7 @@ export function ProfilePage() {
         </Field>
       </div>
 
-      <div className="space-y-6 rounded-2xl border border-line bg-surface p-5 sm:p-6">
+      <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
         <h2 className="text-lg font-semibold">Your MBBS / BDS</h2>
         <Field label="Where did you complete MBBS/BDS?" hint="Most state brochures decide eligibility on this." htmlFor="mbbs">
           <select
@@ -205,7 +205,7 @@ export function ProfilePage() {
         </Field>
       </div>
 
-      <div className="space-y-6 rounded-2xl border border-line bg-surface p-5 sm:p-6">
+      <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
         <h2 className="text-lg font-semibold">About you</h2>
         <Field label="Domicile state" htmlFor="dom">
           <select id="dom" className={inputClass} value={p.domicileState ?? ""} onChange={(e) => set("domicileState", e.target.value || null)}>
@@ -266,7 +266,7 @@ export function ProfilePage() {
         </Field>
       </div>
 
-      <div className="sticky bottom-0 -mx-4 flex flex-wrap items-center justify-between gap-3 border-t border-line bg-canvas/95 px-4 py-3 backdrop-blur">
+      <div className="sticky bottom-0 -mx-4 flex flex-wrap items-center justify-between gap-3 border-t border-line bg-surface/90 px-4 py-3 backdrop-blur">
         <button
           type="button"
           onClick={() => { save(null); setP(EMPTY_PROFILE); }}
@@ -274,7 +274,7 @@ export function ProfilePage() {
         >
           Clear profile
         </button>
-        <button type="submit" className="rounded-full bg-brand px-6 py-2.5 font-semibold text-white shadow-sm hover:bg-brand-strong">
+        <button type="submit" className="btn-primary">
           Save & see my results
         </button>
       </div>

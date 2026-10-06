@@ -282,7 +282,7 @@ export function collectSourcedItems(doc: unknown, path: string[] = []): { path: 
 export type SourceDocument = Brochure["source"]["documents"][number];
 
 /** Which merged-file document a page belongs to, and its page number within that document. */
-export function locatePage(documents: SourceDocument[], page: number) {
-  const doc = documents.find((d) => page >= d.startPage && page < d.startPage + d.pageCount);
+export function locatePage(documents: SourceDocument[] | undefined, page: number) {
+  const doc = (documents ?? []).find((d) => page >= d.startPage && page < d.startPage + d.pageCount);
   return doc ? { doc, localPage: page - doc.startPage + 1 } : null;
 }

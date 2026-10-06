@@ -144,23 +144,23 @@ export default function ReviewEditor() {
       <header className="flex flex-wrap items-center gap-3 border-b border-line bg-surface px-4 py-2">
         <Link to="/review" className="text-sm text-brand-strong hover:underline">← Review</Link>
         <h1 className="text-lg font-semibold">{doc.meta.state} {doc.meta.year}</h1>
-        <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${doc.status === "published" ? "bg-good-tint text-good" : "bg-warn-tint text-warn"}`}>{doc.status}</span>
+        <span className={`rounded-md px-2 py-0.5 text-xs font-semibold ${doc.status === "published" ? "bg-good-tint text-good" : "bg-warn-tint text-warn"}`}>{doc.status}</span>
         <span className="text-sm text-soft">{verifiedCount}/{items.length} verified</span>
         <div className="ml-auto flex items-center gap-2">
           {status && (
             <span className={`max-w-md truncate text-xs ${status.kind === "ok" ? "text-good" : "text-bad"}`} title={status.text}>{status.text}</span>
           )}
-          <Link to={`/state/${file}`} target="_blank" className="rounded-full border border-line px-3 py-1.5 text-sm hover:border-brand">Preview ↗</Link>
+          <Link to={`/state/${file}`} target="_blank" className="btn-secondary !py-1.5 !text-[13px]">Preview ↗</Link>
           <button type="button" onClick={() => void save()} disabled={!dirty}
-            className="rounded-full border border-brand px-3 py-1.5 text-sm font-semibold text-brand-strong disabled:opacity-40">
+            className="btn-secondary !py-1.5 !text-[13px] disabled:opacity-40">
             {dirty ? "Save (⌘S)" : "Saved"}
           </button>
           {doc.status === "published" ? (
-            <button type="button" onClick={() => setPublished(false)} className="rounded-full bg-warn px-3 py-1.5 text-sm font-semibold text-white">Unpublish</button>
+            <button type="button" onClick={() => setPublished(false)} className="rounded-lg bg-warn-tint px-3 py-1.5 text-[13px] font-semibold text-warn">Unpublish</button>
           ) : (
             <button type="button" onClick={() => setPublished(true)} disabled={!allVerified}
               title={allVerified ? "Publish to the student site" : `${items.length - verifiedCount} items still unverified`}
-              className="rounded-full bg-brand px-3 py-1.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40">
+              className="btn-primary !py-1.5 !text-[13px] disabled:cursor-not-allowed disabled:opacity-40">
               Publish
             </button>
           )}
@@ -182,7 +182,7 @@ export default function ReviewEditor() {
           <div className="flex min-w-0 flex-1 flex-col">
             <div className="flex items-center gap-2 border-b border-line bg-surface px-3 py-2 text-xs">
               <label className="flex items-center gap-1"><input type="checkbox" checked={showUnverifiedOnly} onChange={(e) => setShowUnverifiedOnly(e.target.checked)} /> Unverified only</label>
-              <button type="button" onClick={verifySection} className="ml-auto rounded-full border border-line px-2 py-0.5 hover:border-brand">Verify whole section</button>
+              <button type="button" onClick={verifySection} className="ml-auto rounded-md border border-line-strong px-2 py-0.5 hover:border-soft">Verify whole section</button>
             </div>
             <div className="flex min-h-0 flex-1">
               <ul className="w-48 shrink-0 overflow-y-auto border-r border-line text-sm">
@@ -208,7 +208,7 @@ export default function ReviewEditor() {
         </div>
 
         {/* Right: brochure page */}
-        <div className="flex min-h-[50vh] flex-1 flex-col border-l border-line bg-[#2b2b2b]">
+        <div className="flex min-h-[50vh] flex-1 flex-col border-l border-line bg-canvas">
           <div className="flex items-center gap-2 bg-surface px-3 py-2 text-sm">
             <button type="button" onClick={() => setPage((p) => Math.max(1, p - 1))} className="rounded border border-line px-2">‹</button>
             <span>Page</span>
@@ -225,7 +225,7 @@ export default function ReviewEditor() {
               <span className="ml-auto flex gap-1 text-xs">
                 Cited:
                 {selected.item.sourcePages.map((p) => (
-                  <button key={p} type="button" onClick={() => setPage(p)} className={`rounded px-1.5 ${p === page ? "bg-brand text-white" : "bg-brand-tint text-brand-strong"}`}>{p}</button>
+                  <button key={p} type="button" onClick={() => setPage(p)} className={`rounded px-1.5 ${p === page ? "panel-accent" : "bg-brand-tint text-brand-strong"}`}>{p}</button>
                 ))}
               </span>
             )}
@@ -257,11 +257,11 @@ function ItemEditor({
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-2">
         <code className="rounded bg-canvas px-1.5 py-0.5 text-xs">{item.id}</code>
-        <label className={`ml-auto flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold ${item.verified ? "bg-good-tint text-good" : "bg-canvas"}`}>
+        <label className={`ml-auto flex items-center gap-1.5 rounded-lg px-3 py-1 text-sm font-semibold ${item.verified ? "bg-good-tint text-good" : "bg-canvas"}`}>
           <input type="checkbox" checked={item.verified} onChange={(e) => onChange((it) => { it.verified = e.target.checked; })} />
           Verified
         </label>
-        <button type="button" onClick={onVerifyNext} className="rounded-full bg-brand px-3 py-1 text-sm font-semibold text-white hover:bg-brand-strong">Verify & next</button>
+        <button type="button" onClick={onVerifyNext} className="btn-primary !py-1 !text-[13px]">Verify & next</button>
       </div>
 
       <label className="block text-xs font-semibold text-soft">

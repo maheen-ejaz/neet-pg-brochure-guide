@@ -9,25 +9,25 @@ export function HomePage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-3xl bg-brand-strong px-6 py-10 text-white sm:px-10 sm:py-14">
-        <p className="text-sm font-semibold tracking-wide text-white/70 uppercase">NEET PG 2026 · State quota counselling</p>
-        <h1 className="mt-2 max-w-2xl text-3xl font-bold text-balance text-white sm:text-5xl">
+      <section className="flex flex-col items-center px-2 py-6 text-center sm:py-12">
+        <p className="rounded-lg border border-line px-3 py-1 text-[13px] text-body">NEET PG 2026 · State quota counselling</p>
+        <h1 className="mt-5 max-w-3xl text-4xl leading-[1.05] tracking-[-0.03em] sm:text-6xl">
           Your state counselling brochure, explained for you.
         </h1>
-        <p className="mt-4 max-w-xl text-white/85">
+        <p className="mt-5 max-w-xl text-lg text-soft">
           Tell us about yourself once. For each state we'll show whether you're eligible and why, the deposit you'll need,
           every step in order, your document checklist and what resigning a seat would cost you. Every fact
           links to the brochure page it comes from.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3">
+        <div className="mt-7 flex flex-wrap justify-center gap-2">
           <Link
             to="/profile"
-            className="rounded-full bg-white px-5 py-2.5 font-semibold text-brand-strong shadow-sm transition hover:bg-brand-tint"
+            className="btn-primary"
           >
             {profile ? "Edit my profile" : "Start with my profile"}
           </Link>
           {states[0] && (
-            <Link to={`/state/${states[0].key}`} className="rounded-full border border-white/40 px-5 py-2.5 font-semibold text-white hover:bg-white/10">
+            <Link to={`/state/${states[0].key}`} className="btn-secondary">
               Browse a brochure
             </Link>
           )}
@@ -43,12 +43,12 @@ export function HomePage() {
             </p>
           </div>
           {comparisonEnabled && (
-            <Link to="/compare" className="text-sm font-semibold text-brand-strong hover:underline">Compare states →</Link>
+            <Link to="/compare" className="text-sm text-brand-strong hover:underline">Compare states →</Link>
           )}
         </div>
 
         {states.length === 0 ? (
-          <p className="rounded-2xl border border-dashed border-line bg-surface p-8 text-center text-soft">
+          <p className="rounded-lg border border-dashed border-line bg-surface p-8 text-center text-soft">
             No state brochures have been published yet. Check back soon.
           </p>
         ) : (
@@ -59,7 +59,7 @@ export function HomePage() {
                 <li key={key}>
                   <Link
                     to={`/state/${key}`}
-                    className="flex h-full flex-col rounded-2xl border border-line bg-surface p-5 transition hover:border-brand hover:shadow-sm"
+                    className="flex h-full flex-col rounded-lg border border-line bg-surface p-5 transition-colors hover:border-line-strong hover:bg-canvas/60"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div>
@@ -67,13 +67,13 @@ export function HomePage() {
                         <p className="text-sm text-soft">NEET PG {brochure.meta.year}</p>
                       </div>
                       {brochure.status === "draft" && (
-                        <span className="rounded-full bg-warn-tint px-2 py-0.5 text-[11px] font-semibold text-warn">Draft</span>
+                        <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">Draft</span>
                       )}
                     </div>
                     <p className="mt-3 flex-1 text-sm">{brochure.meta.coursesCovered.join(" · ")}</p>
                     <div className="mt-4 flex items-center justify-between">
                       {verdict ? <VerdictBadge verdict={verdict} /> : <span className="text-xs text-soft">No profile yet</span>}
-                      <span className="text-sm font-semibold text-brand-strong">Open guide →</span>
+                      <span className="text-sm text-brand-strong">Open guide →</span>
                     </div>
                   </Link>
                 </li>

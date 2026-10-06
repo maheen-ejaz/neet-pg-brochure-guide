@@ -17,7 +17,7 @@ export default function ReviewIndex() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <Link to="/" className="text-sm text-brand-strong hover:underline">← Student site</Link>
-      <h1 className="mt-2 text-3xl font-bold">Brochure review</h1>
+      <h1 className="mt-2 text-3xl">Brochure review</h1>
       <p className="mt-1 text-soft">
         Local only. Check every extracted item against the brochure page, fix it, tick it, then publish. Only published
         states appear in the production build.
@@ -29,16 +29,16 @@ export default function ReviewIndex() {
           const done = items.filter((i) => i.item.verified).length;
           return (
             <li key={file}>
-              <Link to={`/review/${file}`} className="block rounded-2xl border border-line bg-surface p-5 hover:border-brand">
+              <Link to={`/review/${file}`} className="block rounded-xl border border-line bg-surface p-5 hover:border-line-strong">
                 <div className="flex items-center justify-between gap-2">
                   <h2 className="text-lg font-semibold">{doc.meta.state} {doc.meta.year}</h2>
-                  <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${doc.status === "published" ? "bg-good-tint text-good" : "bg-warn-tint text-warn"}`}>
+                  <span className={`rounded-md px-2 py-0.5 text-xs font-semibold ${doc.status === "published" ? "bg-good-tint text-good" : "bg-warn-tint text-warn"}`}>
                     {doc.status}
                   </span>
                 </div>
                 <p className="mt-1 text-sm text-soft">{done}/{items.length} items verified</p>
                 <div className="mt-2 h-2 overflow-hidden rounded-full bg-canvas">
-                  <div className="h-full bg-brand" style={{ width: `${(done / items.length) * 100}%` }} />
+                  <div className="panel-accent h-full" style={{ width: `${(done / items.length) * 100}%` }} />
                 </div>
               </Link>
             </li>

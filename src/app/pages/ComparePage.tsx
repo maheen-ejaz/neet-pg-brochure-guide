@@ -16,10 +16,10 @@ export function ComparePage() {
 
   if (!comparisonEnabled) {
     return (
-      <div className="rounded-2xl border border-line bg-surface p-10 text-center">
+      <div className="rounded-xl border border-line bg-surface p-10 text-center">
         <h1 className="text-2xl font-semibold">Comparison is coming soon</h1>
         <p className="mt-2 text-soft">Side-by-side comparison opens once at least two state brochures are published.</p>
-        <Link to="/" className="mt-4 inline-block font-semibold text-brand-strong hover:underline">Back to states</Link>
+        <Link to="/" className="btn-secondary mt-4">Back to states</Link>
       </div>
     );
   }
@@ -67,25 +67,25 @@ export function ComparePage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Compare states</h1>
+        <h1 className="text-3xl sm:text-4xl">Compare states</h1>
         <p className="text-soft">Pick up to {MAX} states.</p>
       </div>
       <div className="flex flex-wrap gap-2">
         {published.map((s) => (
           <button key={s.key} type="button" onClick={() => toggle(s.key)} aria-pressed={picked.includes(s.key)}
-            className={`rounded-full border px-4 py-1.5 text-sm font-medium ${picked.includes(s.key) ? "border-brand bg-brand text-white" : "border-line bg-surface"}`}>
+            className={`rounded-lg border px-3 py-1.5 text-sm ${picked.includes(s.key) ? "border-brand/60 bg-brand-tint text-brand-strong" : "border-line-strong bg-surface hover:border-soft"}`}>
             {s.brochure.meta.state} {s.brochure.meta.year}
           </button>
         ))}
       </div>
-      <div className="overflow-x-auto rounded-2xl border border-line bg-surface">
+      <div className="overflow-x-auto rounded-xl border border-line bg-surface">
         <table className="w-full min-w-[640px] text-left text-sm">
           <thead>
             <tr className="bg-canvas">
               <th className="w-48 p-3" />
               {chosen.map((s) => (
                 <th key={s.key} className="p-3">
-                  <Link to={`/state/${s.key}`} className="text-base font-semibold text-brand-strong hover:underline">{s.brochure.meta.state}</Link>
+                  <Link to={`/state/${s.key}`} className="text-base font-semibold text-ink hover:underline">{s.brochure.meta.state}</Link>
                 </th>
               ))}
             </tr>
