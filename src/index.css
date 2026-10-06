@@ -33,7 +33,7 @@
   --ink: #18181b;
   --body: #3f3f46;
   --soft: #71717a;
-  --faint: #a1a1aa;
+  --faint: #85858d;
   --line: #e7e7ea;
   --line-strong: #d6d6db;
   /* accent: navy → blue */
@@ -66,11 +66,11 @@
     --line: #27272a;
     --line-strong: #3f3f46;
     --navy-a: #1c3f86;
-    --navy-b: #5b8ff5;
+    --navy-b: #3a6fd6;
     --brand: #6b9bff;
     --brand-strong: #8fb3ff;
     --brand-tint: #121c33;
-    --grad-hover: linear-gradient(135deg, #234a9b, #6c9bf7);
+    --grad-hover: linear-gradient(135deg, #234a9b, #4a7ee0);
     --good: #4ade80;
     --good-tint: #0f2418;
     --warn: #fbbf24;
