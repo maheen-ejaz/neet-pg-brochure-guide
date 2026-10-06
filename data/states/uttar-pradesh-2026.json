@@ -50,7 +50,7 @@
       ],
       "verified": false,
       "title": "Register online",
-      "description": "Register on upneet.gov.in using your NEET-PG roll number and the same email ID you used on the NBE portal. Your name, parents' names and date of birth are pulled from NBE and cannot be changed. You add domicile, category, sub-category, in-service status and where you did MBBS. Fill the form yourself, not through any agent or third party.",
+      "description": "Registration is online only, on upneet.gov.in, using your NEET-PG roll number and the same email ID you used on the NBE portal. Your name, parents' names and date of birth are pulled from NBE and can't be changed. You add domicile, category, sub-category, in-service status and where you did MBBS. Fill the form yourself, not through any agent or third party.",
       "link": "https://upneet.gov.in"
     },
     {
@@ -276,7 +276,7 @@
             "private"
           ]
         },
-        "note": "Foreign medical graduates are treated as 'outside Uttar Pradesh' here. This is an interpretation: the brochure does not name FMGs in this rule."
+        "note": "\"Outside of Uttar Pradesh\" (p4) literally includes MBBS done abroad, so FMGs are covered by this rule."
       },
       {
         "id": "elig-already-in-pg",
@@ -294,7 +294,8 @@
         },
         "effect": {
           "type": "ineligible"
-        }
+        },
+        "note": "The profile question asks exactly this: presently admitted through an earlier year's NEET-PG/MDS. This year's seats and INI-CET seats don't count."
       },
       {
         "id": "elig-pmhs-weightage",
@@ -304,7 +305,7 @@
         ],
         "verified": false,
         "title": "In-service (PMHS) weightage",
-        "explanation": "NEET-qualified in-service PMHS doctors on the DG Health Services list get weightage in the MD/MS/Diploma merit list. DNB and MDS merit uses All-India NEET rank, with no weightage.",
+        "explanation": "NEET-qualified in-service PMHS doctors on the DG Health Services list get weightage in the MD/MS/Diploma merit list (not DNB). DNB and MDS merit uses All-India NEET rank, with no weightage.",
         "condition": {
           "all": [
             {
@@ -323,7 +324,7 @@
         },
         "effect": {
           "type": "note",
-          "tone": "positive"
+          "tone": "info"
         }
       },
       {
@@ -585,7 +586,7 @@
       ],
       "verified": false,
       "amountInr": 3000,
-      "covers": "Rounds 1, 2 and 3. The stray vacancy round needs a fresh registration and another ₹3,000.",
+      "covers": "Rounds 1, 2 and 3. The stray vacancy round needs a fresh registration and another ₹3,000. No chargeback of the registration fee is entertained.",
       "refundable": false
     },
     "securityDeposits": [
@@ -997,12 +998,24 @@
       "name": "EWS income & asset certificate (Annexure-3 format)",
       "stage": "admission",
       "appliesWhen": {
-        "fact": "category",
-        "in": [
-          "EWS"
+        "all": [
+          {
+            "fact": "category",
+            "in": [
+              "EWS"
+            ]
+          },
+          {
+            "not": {
+              "fact": "isDomicile",
+              "in": [
+                false
+              ]
+            }
+          }
         ]
       },
-      "detail": "Family's total annual income below ₹8 lakh in the stated financial year. The family must not own any of: 5 acres or more of agricultural land; a flat of 1,000 sq ft or more; a residential plot of 100 sq yd or more in a notified municipality; or 200 sq yd or more outside one. You must be a permanent resident and not belong to a caste notified as SC, ST or OBC. Valid for the financial year stated on it. Issued by the DM, ADM, City Magistrate, Pargana Magistrate (SDM) or Tehsildar.",
+      "detail": "Family's total annual income below ₹8 lakh in the stated financial year. The family must not own any of: 5 acres or more of agricultural land; a flat of 1,000 sq ft or more; a residential plot of 100 sq yd or more in a notified municipality; or 200 sq yd or more outside one. You must be a permanent resident and not belong to a caste notified as SC, ST or OBC. Valid for the financial year stated on it. Uses the Prapatra-1 format (office memo dated 14 March 2019) with your attested passport-size photo and full address (village, post office, police station, tehsil, district, state, PIN). Issued by the District Magistrate, Additional District Magistrate, City Magistrate, Pargana Magistrate or Tehsildar.",
       "note": "Translated from Hindi"
     },
     {
@@ -1035,7 +1048,7 @@
           "abroad"
         ]
       },
-      "note": "Derived from the FMG eligibility criteria. The admission document list does not name it separately."
+      "note": "Inferred from the FMG eligibility criteria (p5). The admission list (p12) has only the registration certificate (item 8)."
     },
     {
       "id": "doc-service-bond",
@@ -1048,7 +1061,7 @@
       "name": "Signed service bond agreement (Annexure-4) for government college admissions",
       "stage": "admission",
       "appliesWhen": null,
-      "detail": "Only if you take admission in a government medical or dental college. You bear the stamp duty."
+      "detail": "Only if you take admission in a government medical or dental college. You bear the stamp duty. The bond form asks for your Aadhaar number, mobile, email, and permanent and temporary addresses."
     },
     {
       "id": "doc-originals",
@@ -1234,6 +1247,7 @@
       {
         "id": "bond-certificates-held",
         "sourcePages": [
+          24,
           25
         ],
         "verified": false,
@@ -1268,8 +1282,20 @@
           25
         ],
         "verified": false,
-        "title": "Short service means repaying stipend",
-        "detail": "If you're granted stipend and serve fewer than 24 months, a proportionate amount is treated as stipend. You must pay the balance back to the government on top of the security amount.",
+        "title": "Stipend repayment for employed candidates on study leave",
+        "detail": "If you're employed and the government grants you stipend for 24 months to study, but you work for less than 24 months during the course, the proportionate amount is treated as stipend. You must pay the balance back on top of the security amount.",
+        "severity": "warning",
+        "note": "The source clause is partly blank-filled and garbled. This is the best reading."
+      },
+      {
+        "id": "bond-payment",
+        "sourcePages": [
+          24,
+          25
+        ],
+        "verified": false,
+        "title": "If you don't serve, pay immediately",
+        "detail": "If you don't serve 2 years, you must pay the bond amount immediately into the specified Government Treasury. During the 2 years of service you are paid a stipend. The bond is governed by the Laws of India.",
         "severity": "warning"
       }
     ]
@@ -1336,9 +1362,10 @@
       "https://upneet.gov.in"
     ],
     "instructions": [
-      "Email only the official address, and include your name, registration no., roll no., All India Rank, contact no. and email ID.",
+      "Email only the official address, with your name, registration no., roll no., All India Rank, contact no. and email ID. Emails without these may not be answered.",
       "Queries already answered in the information bulletin will not be answered.",
-      "Court cases about counselling fall under Lucknow jurisdiction only."
+      "Court cases about counselling fall under Lucknow jurisdiction only.",
+      "Check dgme.up.gov.in and upneet.gov.in for the latest updates."
     ]
   },
   "nodalCentres": [
@@ -1591,7 +1618,7 @@
       "verified": false,
       "name": "SMS Medical College",
       "location": "Jaipur, Rajasthan",
-      "remarks": "As printed: \"All disabilities as mentioned in disability certificate except 1. Neurology – Genetic Testing 2. ENT – Speech & language Disability Testing Orthopaedics/PMR – Goniometer Adult, Plumb Line, Hand Dynamometer, Laser\""
+      "remarks": "As printed: \"All disabilities as mentioned in disability certificate except 1. Neurology – Genetic Testing 2. ENT – Speech & language Disability Testing Orthopaedics/PMR- Gonitometer Adult. Plumb Line, Hand Dynomometer, Laser\""
     },
     {
       "id": "dis-9",
@@ -1651,7 +1678,7 @@
       "verified": false,
       "name": "Atal Bihari Vajpayee Institute of Medical Sciences & RML Hospital (ABVIMS & RMLH)",
       "location": "New Delhi",
-      "remarks": "All disabilities except ENT; for visual disability, candidates who use LVAs may bring their own"
+      "remarks": "As printed: \"All disabilities as mentioned in disability certificate except ENT for visual disability: Candidates who use LVAs may bring their own LVAs which can be checked.\""
     },
     {
       "id": "dis-15",

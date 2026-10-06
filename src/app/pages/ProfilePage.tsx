@@ -192,7 +192,7 @@ export function ProfilePage() {
             onChange={(e) => set("internshipCompletion", e.target.value || null)}
           />
         </Field>
-        <Field label="Are you currently admitted to a PG course?">
+        <Field label="Are you presently admitted to a PG course on the basis of an earlier year's NEET-PG or NEET-MDS?" hint="Don't count a seat from this year's counselling, or one won through another exam such as INI-CET.">
           <Choice name="Currently in PG" value={p.currentlyInPG} onChange={(v) => set("currentlyInPG", v)}
             options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
         </Field>

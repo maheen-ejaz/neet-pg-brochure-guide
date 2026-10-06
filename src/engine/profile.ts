@@ -29,6 +29,7 @@ export interface Profile {
    */
   priorAdmissionState: string | null;
   internshipCompletion: string | null;
+  /** Presently admitted to a PG course on the basis of an EARLIER year's NEET-PG/NEET-MDS. */
   currentlyInPG: boolean | null;
   nationality: "indian" | "oci" | "foreign" | null;
   specialities: string[];
@@ -87,7 +88,7 @@ export const PROFILE_FIELD_LABELS: Record<string, string> = {
   pwd: "whether you have a benchmark disability",
   inService: "whether you meet the state's in-service criteria",
   priorAdmissionInState: "whether this state's counselling admitted you to a PG seat before",
-  currentlyInPG: "whether you're already in a PG course",
+  currentlyInPG: "whether you're admitted to a PG course through an earlier NEET-PG/MDS",
   nationality: "your nationality",
   schooledInState: "where you did 12th standard",
   bornInState: "your state of birth",

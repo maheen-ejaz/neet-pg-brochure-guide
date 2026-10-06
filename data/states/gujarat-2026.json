@@ -122,11 +122,12 @@
       "id": "process-pin",
       "sourcePages": [
         4,
-        5
+        5,
+        7
       ],
       "verified": false,
       "title": "Buy a PIN online",
-      "description": "Buy the registration PIN on medadmgujarat.org for ₹28,000: ₹3,000 non-refundable registration fee plus a ₹25,000 refundable security deposit.",
+      "description": "Buy the registration PIN on medadmgujarat.org for ₹28,000: ₹3,000 non-refundable registration fee plus a ₹25,000 refundable security deposit. The E-PIN is sent to your mobile by SMS. If your number is registered with DND, you may not receive it.",
       "link": "https://www.medadmgujarat.org"
     },
     {
@@ -140,7 +141,7 @@
       ],
       "verified": false,
       "title": "Register and upload documents",
-      "description": "Enter the PIN serial number, 14-digit PIN, email, mobile and NEET roll number. Fill in your details, set an alphanumeric password of 6–12 characters, and confirm with the OTP sent to your mobile. Then upload documents as PDF, JPG or PNG. By submitting, you declare your details are true, agree to pay the fees fixed by the Fee Regulatory Committee, and accept that ragging is punishable. After you click Confirm, you can only change details at the help centre."
+      "description": "Enter the PIN serial number, 14-digit PIN, email, mobile and NEET roll number. Fill in your details, set an alphanumeric password of 6–12 characters, and confirm with the OTP sent to your mobile. Then upload documents as PDF, JPG or PNG. By submitting, you declare your details are true, agree to pay the fees fixed by the Fee Regulatory Committee, accept that ragging is punishable and that the committee's decision is final, and acknowledge that hiding or distorting information makes your admission liable to cancellation. After you click Confirm, you can only change details at the help centre."
     },
     {
       "id": "process-appointment",
@@ -310,8 +311,8 @@
           21
         ],
         "verified": false,
-        "title": "MBBS outside Gujarat, with Gujarat roots",
-        "explanation": "If you did MBBS outside Gujarat or abroad, you're eligible if you passed 12th (B or AB group) from a school located in Gujarat, under the Gujarat Board, CBSE, CISCE, IB/Cambridge or NIOS, and were born in Gujarat or are domiciled there.",
+        "title": "MBBS outside Gujarat (or not under a Gujarat law), with Gujarat roots",
+        "explanation": "If you did MBBS outside Gujarat, abroad, or at an institution not established under a Gujarat law, you're eligible if you passed 12th (B or AB group) from a school located in Gujarat, under the Gujarat Board, CBSE, CISCE, IB/Cambridge or NIOS, and were born in Gujarat or are domiciled there.",
         "condition": {
           "all": [
             {
@@ -362,8 +363,8 @@
           21
         ],
         "verified": false,
-        "title": "MBBS outside Gujarat without Gujarat schooling and birth/domicile",
-        "explanation": "Candidates who did MBBS outside Gujarat don't meet the eligibility criteria unless they did 12th in Gujarat and were born in or are domiciled in Gujarat.",
+        "title": "MBBS outside Gujarat (or not under a Gujarat law), without Gujarat schooling and birth/domicile",
+        "explanation": "Candidates who did MBBS outside Gujarat, abroad, or at an institution not established under a Gujarat law don't meet the eligibility criteria unless they did 12th in Gujarat and were born in or are domiciled in Gujarat.",
         "condition": {
           "all": [
             {
@@ -423,7 +424,7 @@
         ],
         "verified": false,
         "title": "NRI quota is still open to you",
-        "explanation": "You don't meet the Government and Management quota criteria, but the NRI quota criteria don't depend on where you studied. You must be an NRI yourself, or your parents must be NRIs. A legal guardian counts only if your parents are absent; while your father is alive, no one else is ordinarily accepted as guardian. Your internship must be completed by 30/09/2026.",
+        "explanation": "You don't meet the Government and Management quota criteria, but the NRI quota criteria (p26) don't appear to depend on where you studied. Confirm with ACPPGMEC. You must be an NRI yourself, or your parents must be NRIs. A legal guardian counts only if your parents are absent; while your father is alive, no one else is ordinarily accepted as guardian. Your internship must be completed by 30/09/2026.",
         "condition": {
           "all": [
             {
@@ -483,12 +484,13 @@
         "sourcePages": [
           4,
           24,
+          25,
           26,
           27
         ],
         "verified": false,
         "title": "NRI quota applicants",
-        "explanation": "For NRI seats, you must be an NRI, or your parents must be. A legal guardian counts only if your parents are absent, and while your father is alive no one else is ordinarily accepted as guardian. Pay a ₹25,000 non-refundable processing fee by demand draft. Verification happens only at the ACPPGMEC office, GMERS Medical College, Gandhinagar. Hostel admission isn't guaranteed, and hostel fees are set by the college.",
+        "explanation": "NRI follows the Income Tax Act / FEMA definition: a person resident outside India who is an Indian citizen or a Person of Indian Origin. Anyone who stayed in India for more than 182 days in the preceding financial year generally counts as resident. Citizens of Pakistan and Bangladesh can't be PIOs. You must be an NRI, or your parents must be; a legal guardian counts only if your parents are absent, and while your father is alive no one else is ordinarily accepted as guardian. Pay a ₹25,000 non-refundable processing fee by demand draft. Verification happens only at the ACPPGMEC office, GMERS Medical College, Gandhinagar. Hostel admission isn't guaranteed, hostel fees are set by the college, and other fees are the same as for all students.",
         "condition": {
           "fact": "isNri",
           "in": [
@@ -503,7 +505,9 @@
       {
         "id": "elig-citizenship",
         "sourcePages": [
-          22
+          22,
+          25,
+          26
         ],
         "verified": false,
         "title": "Proof of Indian citizenship",
@@ -528,7 +532,7 @@
         ],
         "verified": false,
         "title": "Admitted through Gujarat counselling before",
-        "explanation": "Under Rule 4(4), a candidate who secured admission under Gujarat's PG admission rules in any year can't be admitted again until that course's duration would have been completed. This applies even if you left the seat. The registration form asks \"Previously Admitted?\".",
+        "explanation": "Under Rule 4(4), a candidate who secured admission under Gujarat's PG admission rules in any year can't be admitted again until that course's duration would have been completed. The registration form asks \"Previously Admitted?\".",
         "condition": {
           "fact": "priorAdmissionInState",
           "in": [
@@ -538,7 +542,7 @@
         "effect": {
           "type": "ineligible"
         },
-        "note": "Rule 4(4) is from the PG Rules 2018-19. The current website notice (p2) quotes it as in force."
+        "note": "Rule 4(4) is from the PG Rules 2018-19. The current website notice (p2) quotes it as in force. Whether a seat you left (or never joined) counts as \"secured admission\" isn't stated; the profile question counts left seats to be safe."
       },
       {
         "id": "elig-in-service",
@@ -549,7 +553,7 @@
         ],
         "verified": false,
         "title": "In-service doctors: 10% of seats in 10 subjects",
-        "explanation": "10% of Government quota PG seats in Government and GMERS medical colleges (and CPS courses in Government hospitals) are for Gujarat in-service doctors, in Paediatrics, TB & Chest, Obstetrics & Gynaecology, Preventive & Community Medicine, Orthopaedics, General Surgery, General Medicine, Anaesthesiology, Radiology and Pathology. You need an NOC from a Gujarat competent authority.",
+        "explanation": "10% of Government quota MD/MS seats (not Diploma) in Government and GMERS medical colleges, plus CPS courses in Government hospitals, are for Gujarat in-service doctors. The subjects are Paediatrics, TB & Chest, Obstetrics & Gynaecology, Preventive & Community Medicine, Orthopaedics, General Surgery, General Medicine, Anaesthesiology, Radiology and Pathology. You need an NOC from a Gujarat competent authority.",
         "condition": {
           "fact": "inService",
           "in": [
@@ -594,11 +598,12 @@
           49,
           57,
           58,
+          69,
           76
         ],
         "verified": false,
         "title": "PwD: assessment by the ACPUGMEC medical board",
-        "explanation": "PwD applicants must be examined by an ACPUGMEC medical board at one of the listed civil hospitals. Certificates from any other authority or hospital aren't accepted. Under the NMC 2026 guidelines, you need a benchmark disability of at least 40%, a valid UDID card, and notarised affidavits: a self-certified functional-abilities affidavit (Schedule-I), plus Appendix-G, which is mandatory for all PwBD applicants. The certificate is an \"Eligibility Certificate\" that assesses functional competence, not just disability. Final eligibility is decided only after physical verification and functional assessment.",
+        "explanation": "PwD applicants must be examined by an ACPUGMEC medical board at one of the listed civil hospitals. Certificates from any other authority or hospital aren't accepted. Under the NMC 2026 guidelines, you need a benchmark disability of at least 40%, a valid UDID card, and notarised Schedule-I affidavits: Appendix-A and Appendix-G for everyone, plus the appendix for your disability type. The certificate is an \"Eligibility Certificate\" that assesses functional competence, not just disability. Final eligibility is decided only after physical verification and functional assessment.",
         "condition": {
           "fact": "pwd",
           "in": [
@@ -637,7 +642,7 @@
         ],
         "verified": false,
         "title": "MBBS/FMGE aggregate is verified",
-        "explanation": "If your MBBS or FMGE aggregate was used to break a NEET-PG 2026 rank tie, it is checked against your originals at admission. If what you entered was wrong, your NEET-PG 2026 candidature is cancelled.",
+        "explanation": "Your MBBS or FMGE aggregate, as entered in your NEET-PG 2026 form, is verified against your originals at admission. If it was used to break a rank tie and turns out to be wrong, your NEET-PG 2026 candidature is cancelled.",
         "condition": null,
         "effect": {
           "type": "note",
@@ -689,7 +694,7 @@
         ],
         "verified": false,
         "title": "10% in-service seats",
-        "detail": "10% of Government quota seats in 10 MD/MS subjects at Government and GMERS colleges are reserved for Gujarat in-service doctors.",
+        "detail": "10% of Government quota seats in 10 MD/MS subjects at Government and GMERS colleges, and CPS courses in Government hospitals, are reserved for Gujarat in-service doctors.",
         "severity": "info"
       },
       {
@@ -697,23 +702,44 @@
         "sourcePages": [
           15,
           32,
+          33,
           34
         ],
         "verified": false,
         "title": "PwD certificate only from ACPUGMEC boards",
-        "detail": "PwD seats need a certificate from an ACPUGMEC medical board. If the board finds you unfit, you can appeal to the medical appeal board at B. J. Medical College, Ahmedabad. Appeals about eye-related disabilities go to a board chaired by the Director, M. & J. Institute of Ophthalmology, Ahmedabad.",
+        "detail": "PwD seats need a certificate from an ACPUGMEC medical board. If the board finds you unfit, you can appeal to the medical appeal board, chaired by the Dean of B. J. Medical College, Ahmedabad, with two experts who weren't on the first board. Appeals about eye-related disabilities go to a board chaired by the Director, M. & J. Institute of Ophthalmology, Ahmedabad.",
         "severity": "warning"
       },
       {
         "id": "res-pwd-subjects",
         "sourcePages": [
           50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
           63
         ],
         "verified": false,
         "title": "Your disability may limit which subjects you can take",
-        "detail": "Under the NMC 2026 guidelines, eligibility is assessed per speciality: Eligible, Eligible with reasonable accommodation, or Ineligible. For example, for surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Emergency Medicine, PMR and others), an upper-limb disability is \"generally not suitable\".",
+        "detail": "Under the NMC 2026 guidelines, eligibility is assessed per speciality: Eligible, Eligible with reasonable accommodation, or Ineligible. For surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Emergency Medicine, PMR and others), several disabilities are \"generally not suitable\" or \"not suitable\": upper-limb disability, speech and language disability, and multiple disabilities. Visual impairment must correct to below 40%. Hearing impairment may be suitable with aids or implants. Check the tables for your speciality.",
         "severity": "warning"
+      },
+      {
+        "id": "res-pwd-safeguards",
+        "sourcePages": [
+          49,
+          58,
+          64,
+          65
+        ],
+        "verified": false,
+        "title": "PwD assessment safeguards",
+        "detail": "A correctable defect in your UDID card alone isn't grounds for denial. You need an established diagnosis and a stable condition. If you're found ineligible, you must be given a written, reasoned order, and you can appeal.",
+        "severity": "info"
       }
     ]
   },
@@ -770,7 +796,7 @@
         ],
         "verified": false,
         "title": "NRI fees are in US$ and non-refundable",
-        "detail": "NRI candidates and parents sign a notarised undertaking to pay the college's NRI fee in US$ for the entire course. It isn't negotiable or refundable except as the admission rules allow, and extra fees apply each term if the course runs longer than normal.",
+        "detail": "The NRI student and their parent or legal guardian sign a notarised undertaking to pay the college's NRI fee in US$ for the entire course. It isn't negotiable or refundable except as the admission rules allow, and extra fees apply each term if the course runs longer than normal. If dues aren't cleared, the student may not be sent up for exams.",
         "severity": "critical"
       },
       {
@@ -935,7 +961,7 @@
         22
       ],
       "verified": false,
-      "name": "Non-creamy layer certificate (Parishishta 4)",
+      "name": "Non-creamy layer certificate (Parishishta 4) from a Gujarat competent authority",
       "stage": "registration",
       "appliesWhen": {
         "fact": "category",
@@ -998,6 +1024,8 @@
       "id": "doc-pwbd-affidavits",
       "sourcePages": [
         58,
+        68,
+        69,
         70,
         76
       ],
@@ -1010,7 +1038,7 @@
           true
         ]
       },
-      "detail": "A self-certified functional-abilities affidavit (Schedule-I format) and the Appendix-G affidavit, which is mandatory for all PwBD applicants."
+      "detail": "All PwBD applicants submit notarised Appendix-A (general self-certification) and Appendix-G. Depending on your disability, you also submit one of Appendix-B (hearing), C/D (locomotor), E or F (visual)."
     },
     {
       "id": "doc-passport",
@@ -1146,6 +1174,46 @@
       "appliesWhen": null
     },
     {
+      "id": "doc-adm-nri-cert",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "NRI certificate (original, at admission)",
+      "stage": "admission",
+      "appliesWhen": {
+        "fact": "isNri",
+        "in": [
+          true
+        ]
+      }
+    },
+    {
+      "id": "doc-adm-pwd-copy",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Photocopy of your disability certificate (at admission)",
+      "stage": "admission",
+      "appliesWhen": {
+        "fact": "pwd",
+        "in": [
+          true
+        ]
+      }
+    },
+    {
+      "id": "doc-adm-other",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Any other relevant certificate",
+      "stage": "admission",
+      "appliesWhen": null
+    },
+    {
       "id": "doc-authority-letter",
       "sourcePages": [
         31
@@ -1197,7 +1265,7 @@
       ],
       "verified": false,
       "title": "NRI applications need notarised copies",
-      "detail": "NRI applications aren't considered without notarised copies of the certificates. Report any change to your documents or marks promptly to the ACPPGMEC office. False or incorrect information means cancellation, expulsion and possible criminal action.",
+      "detail": "NRI applications aren't considered without notarised copies of the certificates. Report any change to your documents or marks promptly to the ACPPGMEC office. If any discrepancy is found, the admission is liable to be cancelled, the candidate could be expelled, and criminal action would be initiated. The Chairman, ACPPGMEC can change these guidelines, and his interpretation is final.",
       "severity": "critical"
     }
   ],
@@ -1617,16 +1685,14 @@
       "sourcePages": [],
       "verified": false,
       "title": "Reservation percentages",
-      "detail": "This year's documents name the categories (SC, ST, SEBC, EWS, PwD, in-service) but not the percentages."
+      "detail": "This year's documents name the reservation categories (SC, ST, SEBC, EWS, PwD) but don't give their percentages. The in-service quota (10% in 10 MD/MS subjects) is stated."
     },
     {
       "id": "gap-resignation",
-      "sourcePages": [
-        2
-      ],
+      "sourcePages": [],
       "verified": false,
       "title": "Resignation and deposit forfeiture",
-      "detail": "This year's documents don't say when the ₹25,000 deposit is forfeited or what resigning a seat costs. The website's refund notices list deposits as both \"refunded\" and \"not refunded\", so forfeiture does happen."
+      "detail": "This year's documents don't say when the ₹25,000 deposit is forfeited or what resigning a seat costs."
     },
     {
       "id": "gap-bond",

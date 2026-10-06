@@ -81,7 +81,11 @@ These mistakes were all found by independent checks. Avoid them on the first pas
 2. **Map defined groups to their definition, not a proxy.** "PMHS / in-service" means *on the official
    list or sponsored with an NOC* (`inService` needs `inServiceListed`), not "employed in the state".
    "Admitted under these rules" means a prior admission through *this* state's counselling
-   (`priorAdmissionInState`), not "currently in any PG seat".
+   (`priorAdmissionInState`), not "currently in any PG seat". UP's "admitted on the basis of an
+   *earlier* NEET-PG/MDS" excludes this year's seats and other exams (INI-CET).
+   **The profile question must ask the defined group word for word, including its time scope and
+   its route** (which exam, which year, which counselling). If no existing question matches, add or
+   relabel one rather than reusing a near-match. This mistake recurred after the first fix round.
 3. **Keep the source's modality.** Keep "may" as "may", "will" as "will", and "not permitted" as
    "not permitted". ✗ "Not permitted to vacate" was softened to "not normally allowed". ✗ "Will face
    legal action" became "may".
@@ -105,7 +109,11 @@ These mistakes were all found by independent checks. Avoid them on the first pas
    suggestions to verify in `note`, labelled as such.
 12. **Don't add a facility name that isn't in the source** (✗ "(DGME)"), and record aliases when two
     documents name the same place differently.
-
+13. **Check reviewer suggestions against the source before applying them.** ✗ A checker suggested "the refund
+    lists show forfeiture happens". Applied unchecked, it turned out to be a misreading: the lists track
+    payment success, and they're from last year. Every fix needs its own quote and page.
+14. **Keep hedges in the candidate-facing text, not only in `note`.** If a rule is an inference, the
+    explanation itself should say "appears to" or "confirm with <authority>".
 ## 4. Check
 
 ```bash
