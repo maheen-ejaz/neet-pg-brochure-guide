@@ -213,7 +213,7 @@
       "names": [
         "AIIMS Rajkot"
       ],
-      "note": "Interpretation: route 1 needs MBBS from a university established under a Government of Gujarat law (p21). AIIMS Rajkot is a central institution, so its graduates fall under route 2. Also check whether deemed universities in Gujarat (e.g. Sumandeep Vidyapeeth) belong here; that suggestion comes from general knowledge, not these documents."
+      "note": "Interpretation: route 1 needs MBBS from a university established under a Government of Gujarat law (p21). The 2026 documents don't name AIIMS Rajkot; treating it as a central (non-Gujarat-law) institution comes from general knowledge. Also check whether deemed universities in Gujarat (e.g. Sumandeep Vidyapeeth) belong here, which also comes from general knowledge. Confirm both with ACPPGMEC."
     },
     "inServiceLabel": {
       "id": "eligibility-in-service-label",
@@ -553,7 +553,7 @@
         ],
         "verified": false,
         "title": "In-service doctors: 10% of seats in 10 subjects",
-        "explanation": "10% of Government quota MD/MS seats (not Diploma) in Government and GMERS medical colleges, plus CPS courses in Government hospitals, are for Gujarat in-service doctors. The subjects are Paediatrics, TB & Chest, Obstetrics & Gynaecology, Preventive & Community Medicine, Orthopaedics, General Surgery, General Medicine, Anaesthesiology, Radiology and Pathology. You need an NOC from a Gujarat competent authority.",
+        "explanation": "10% of Government quota seats in MD/MS subjects (Diploma isn't mentioned) in Government and GMERS medical colleges, plus CPS courses in Government hospitals, are for Gujarat in-service doctors. The subjects are Paediatrics, TB & Chest, Obstetrics & Gynaecology, Preventive & Community Medicine, Orthopaedics, General Surgery, General Medicine, Anaesthesiology, Radiology and Pathology. You need an NOC from a Gujarat competent authority.",
         "condition": {
           "fact": "inService",
           "in": [
@@ -1027,6 +1027,8 @@
         68,
         69,
         70,
+        74,
+        75,
         76
       ],
       "verified": false,
@@ -1038,7 +1040,7 @@
           true
         ]
       },
-      "detail": "All PwBD applicants submit notarised Appendix-A (general self-certification) and Appendix-G. Depending on your disability, you also submit one of Appendix-B (hearing), C/D (locomotor), E or F (visual)."
+      "detail": "All PwBD applicants submit notarised Appendix-A (general self-certification) and Appendix-G. Depending on your disability, you also submit one of Appendix-B (hearing), C/D (locomotor), E (mental illness, speech disorders, specific learning disorder or autism) or F (visual). Other disabilities, such as blood disorders, need Appendix-A only (plus G)."
     },
     {
       "id": "doc-passport",
