@@ -8,3 +8,4 @@ brochures/
 *.pdf
 test-results/
 playwright-report/
+*.tsbuildinfo

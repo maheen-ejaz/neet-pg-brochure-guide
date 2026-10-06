@@ -1,0 +1,550 @@
+import { useMemo, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { findState } from "../../data/states";
+import { adviseDeposit, checkEligibility, documentsFor, type Verdict } from "../../engine/eligibility";
+import type { Profile } from "../../engine/profile";
+import type { Brochure } from "../../schema/stateBrochure";
+import { Cite, DraftBanner, RuleCard, Section, inr, inrShort } from "../components/ui";
+import { verdictPanel, verdictText } from "../components/VerdictBadge";
+import { useProfile } from "../useProfile";
+import { NotFound } from "./NotFound";
+
+const NAV = [
+  ["verdict", "Eligibility"],
+  ["money", "Fees & deposit"],
+  ["steps", "Steps"],
+  ["choices", "Choice filling"],
+  ["rounds", "Rounds"],
+  ["documents", "Documents"],
+  ["reservation", "Reservation"],
+  ["resignation", "Resignation"],
+  ["bond", "Service bond"],
+  ["colleges", "Colleges"],
+  ["help", "Help desk"],
+  ["gaps", "Not in brochure"],
+] as const;
+
+export function StatePage() {
+  const { key } = useParams();
+  const entry = findState(key);
+  const { profile } = useProfile();
+  if (!entry) return <NotFound />;
+  const { brochure: b } = entry;
+  const verdict = profile ? checkEligibility(profile, b) : null;
+
+  return (
+    <div className="space-y-6">
+      {b.status === "draft" && <DraftBanner />}
+      <header>
+        <Link to="/" className="text-sm font-medium text-brand-strong hover:underline">← All states</Link>
+        <h1 className="mt-2 text-3xl font-bold sm:text-4xl">{b.meta.state} NEET PG {b.meta.year}</h1>
+        <p className="mt-1 text-soft">
+          {b.meta.authority}
+          <Cite pages={b.meta.sourcePages} />
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {b.meta.officialWebsites.map((w) => (
+            <a key={w} href={w} target="_blank" rel="noreferrer" className="rounded-full border border-line bg-surface px-3 py-1 text-sm font-medium text-brand-strong hover:border-brand">
+              {w.replace(/^https?:\/\/(www\.)?/, "")} ↗
+            </a>
+          ))}
+        </div>
+      </header>
+
+      <nav aria-label="Sections" className="no-print sticky top-[52px] z-10 -mx-4 overflow-x-auto border-y border-line bg-canvas/95 px-4 py-2 backdrop-blur">
+        <ul className="flex gap-1.5 whitespace-nowrap">
+          {NAV.map(([id, label]) => (
+            <li key={id}>
+              <a href={`#${id}`} className="rounded-full px-3 py-1 text-sm text-body hover:bg-brand-tint hover:text-brand-strong">{label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <VerdictSection b={b} verdict={verdict} profile={profile} />
+      <MoneySection b={b} verdict={verdict} />
+      <StepsSection b={b} />
+      <Section id="choices" kicker="Before you lock" title="Choice filling rules">
+        <div className="grid gap-3 sm:grid-cols-2">
+          {b.choiceFilling.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+        </div>
+      </Section>
+      <RoundsSection b={b} />
+      <DocumentsSection entryKey={entry.key} b={b} profile={profile} />
+      <ReservationSection b={b} verdict={verdict} />
+      <ResignationSection b={b} verdict={verdict} />
+      <BondSection b={b} />
+      <CollegesSection b={b} profile={profile} />
+      <HelpSection b={b} />
+      <Section id="gaps" kicker="Be aware" title="Not covered in this brochure">
+        <p className="mb-4 text-sm text-soft">These are published separately, so check the official website for them.</p>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {b.gaps.map((g) => (
+            <div key={g.id} className="rounded-xl border border-dashed border-line p-4">
+              <h3 className="font-semibold">{g.title}</h3>
+              <p className="mt-1 text-sm">{g.detail}<Cite pages={g.sourcePages} /></p>
+            </div>
+          ))}
+        </div>
+        <h3 className="mt-6 mb-2 font-semibold">Annexures in the brochure</h3>
+        <ul className="space-y-1 text-sm">
+          {b.annexures.map((a) => (
+            <li key={a.id}><strong>{a.title}</strong>: {a.description}<Cite pages={a.sourcePages} /></li>
+          ))}
+        </ul>
+      </Section>
+    </div>
+  );
+}
+
+function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict | null; profile: Profile | null }) {
+  if (!verdict || !profile) {
+    return (
+      <Section id="verdict" kicker="Eligibility" title="Who can apply">
+        <div className="mb-4 rounded-xl border border-brand/30 bg-brand-tint p-4">
+          <p className="font-semibold text-brand-strong">Want a personal verdict?</p>
+          <p className="mt-1 text-sm">Add your profile and we'll check every rule below against it.</p>
+          <Link to="/profile" className="mt-3 inline-block rounded-full bg-brand px-4 py-2 text-sm font-semibold text-white hover:bg-brand-strong">Add my profile</Link>
+        </div>
+        <ul className="space-y-3">
+          {b.eligibility.rules.map((r) => (
+            <li key={r.id} className="rounded-xl border border-line p-4">
+              <h3 className="font-semibold">{r.title}</h3>
+              <p className="mt-1 text-sm">{r.explanation}<Cite pages={r.sourcePages} /></p>
+            </li>
+          ))}
+        </ul>
+      </Section>
+    );
+  }
+
+  const applied = verdict.reasons.filter((r) => r.match === "applies");
+  const maybe = verdict.reasons.filter((r) => r.match === "maybe");
+  const manual = verdict.reasons.filter((r) => r.match === "manual");
+  const icon = (r: (typeof applied)[number]) => {
+    const e = r.rule.effect;
+    if (e.type === "ineligible") return ["✕", "text-bad"];
+    if (e.type === "restrictSectors" || e.type === "excludeCourses") return ["!", "text-warn"];
+    if (e.type === "note" && e.tone === "positive") return ["✓", "text-good"];
+    if (e.type === "note" && e.tone === "warning") return ["!", "text-warn"];
+    return ["i", "text-brand"];
+  };
+
+  return (
+    <Section id="verdict" kicker="Your eligibility" title="Can you apply?" action={<Link to="/profile" className="text-sm font-semibold text-brand-strong hover:underline">Edit profile</Link>}>
+      <div className={`rounded-2xl border p-5 ${verdictPanel[verdict.status]}`}>
+        <p className={`text-2xl font-bold sm:text-3xl ${verdictText[verdict.status]}`} style={{ fontFamily: "var(--font-heading)" }}>
+          {verdict.headline}
+        </p>
+        {verdict.status !== "ineligible" && verdict.status !== "incomplete" && (
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <Fact label="College sectors open">
+              {verdict.sectors.map((s) => s[0].toUpperCase() + s.slice(1)).join(" + ")}
+            </Fact>
+            <Fact label="You'll be counted as">{verdict.effectiveCategory ?? "—"}{profile.pwd ? " + PwD" : ""}</Fact>
+            <Fact label="Not open to you">{verdict.excludedCourses.length ? `${verdict.excludedCourses.join(", ")} (state quota)` : "Nothing excluded"}</Fact>
+          </div>
+        )}
+        {verdict.missingInfo.length > 0 && (
+          <p className="mt-4 text-sm">
+            <strong>To complete this check, add:</strong> {verdict.missingInfo.join(", ")}.{" "}
+            <Link to="/profile" className="font-semibold text-brand-strong underline">Update profile</Link>
+          </p>
+        )}
+      </div>
+
+      {applied.length > 0 && (
+        <>
+          <h3 className="mt-6 mb-3 font-semibold">Why: the rules that apply to you</h3>
+          <ul className="space-y-3">
+            {applied.map((r) => {
+              const [glyph, color] = icon(r);
+              return (
+                <li key={r.rule.id} className="flex gap-3 rounded-xl border border-line p-4">
+                  <span aria-hidden className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-canvas text-sm font-bold ${color}`}>{glyph}</span>
+                  <div>
+                    <p className="font-semibold text-ink">{r.rule.title}</p>
+                    <p className="mt-0.5 text-sm">{r.rule.explanation}<Cite pages={r.rule.sourcePages} /></p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      )}
+      {maybe.length > 0 && (
+        <>
+          <h3 className="mt-6 mb-3 font-semibold">Might apply: we need more details</h3>
+          <ul className="space-y-2">
+            {maybe.map((r) => (
+              <li key={r.rule.id} className="rounded-xl border border-dashed border-line p-3 text-sm">
+                <strong>{r.rule.title}:</strong> {r.rule.explanation}<Cite pages={r.rule.sourcePages} />
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {manual.length > 0 && (
+        <>
+          <h3 className="mt-6 mb-3 font-semibold">Check these yourself</h3>
+          <ul className="space-y-2">
+            {manual.map((r) => (
+              <li key={r.rule.id} className="flex gap-2 text-sm">
+                <span aria-hidden className="text-brand">☐</span>
+                <span><strong>{r.rule.title}:</strong> {r.rule.explanation}<Cite pages={r.rule.sourcePages} /></span>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {profile.specialities.length > 0 && (
+        <p className="mt-6 rounded-xl bg-canvas p-3 text-sm">
+          <strong>Your specialities:</strong> {profile.specialities.join(", ")}. This brochure has no seat matrix or cutoffs, so we
+          can't yet show your chances by speciality.
+        </p>
+      )}
+    </Section>
+  );
+}
+
+function Fact({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className="rounded-xl bg-surface/80 p-3">
+      <p className="text-xs font-medium text-soft">{label}</p>
+      <p className="mt-0.5 font-semibold text-ink">{children}</p>
+    </div>
+  );
+}
+
+function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) {
+  const advice = verdict ? adviseDeposit(verdict, b) : null;
+  const reg = b.fees.registration;
+  const total = advice?.recommended ? reg.amountInr + advice.recommended.amountInr : null;
+  return (
+    <Section id="money" kicker="Your money" title="Fees & security deposit">
+      <div className="grid gap-4 md:grid-cols-[1fr_1.4fr]">
+        <div className="rounded-2xl bg-brand-strong p-5 text-white">
+          <p className="text-sm text-white/75">{advice?.recommended ? "You'll need to pay upfront" : "Registration fee"}</p>
+          <p className="mt-1 text-4xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>{inr(total ?? reg.amountInr)}</p>
+          <ul className="mt-4 space-y-2 text-sm">
+            <li className="flex justify-between gap-2 border-t border-white/20 pt-2">
+              <span>Registration ({reg.refundable ? "refundable" : "non-refundable"})</span>
+              <strong>{inr(reg.amountInr)}</strong>
+            </li>
+            {advice?.recommended && (
+              <li className="flex justify-between gap-2 border-t border-white/20 pt-2">
+                <span>Security deposit: {advice.recommended.label.toLowerCase()}</span>
+                <strong>{inr(advice.recommended.amountInr)}</strong>
+              </li>
+            )}
+          </ul>
+          <p className="mt-3 text-xs text-white/75">{reg.covers}</p>
+          {!verdict && <p className="mt-3 text-xs text-white/90">Add your profile to see which deposit applies to you.</p>}
+        </div>
+        <div>
+          <p className="mb-2 text-sm font-semibold text-ink">Deposit tiers: your deposit decides which colleges you can choose<Cite pages={b.fees.securityDeposits.flatMap((d) => d.sourcePages).filter((v, i, a) => a.indexOf(v) === i)} /></p>
+          <ul className="space-y-2">
+            {[...b.fees.securityDeposits].sort((x, y) => x.amountInr - y.amountInr).map((t) => {
+              const rec = advice?.recommended?.id === t.id;
+              const alt = advice?.alternatives.find((a) => a.tier.id === t.id);
+              const irrelevant = !!advice?.recommended && !rec && !alt;
+              return (
+                <li key={t.id} className={`flex items-center justify-between gap-3 rounded-xl border p-3 ${rec ? "border-brand bg-brand-tint" : "border-line"} ${irrelevant ? "opacity-50" : ""}`}>
+                  <div>
+                    <p className="font-semibold text-ink">{t.label}</p>
+                    <p className="text-xs text-soft">
+                      {rec ? "Recommended for you: covers every college open to you" : alt ? `Cheaper option: ${alt.covers.join(" ")} colleges only` : irrelevant ? "Doesn't cover the colleges open to you" : " "}
+                    </p>
+                  </div>
+                  <span className={`text-lg font-bold ${rec ? "text-brand-strong" : "text-ink"}`}>{inrShort(t.amountInr)}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+      <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        {b.fees.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+      </div>
+    </Section>
+  );
+}
+
+function StepsSection({ b }: { b: Brochure }) {
+  return (
+    <Section id="steps" kicker="Process" title="Step by step">
+      <ol className="relative space-y-4 border-l-2 border-brand/30 pl-6">
+        {b.process.map((s, i) => (
+          <li key={s.id} className="relative">
+            <span className="absolute -left-[37px] flex h-7 w-7 items-center justify-center rounded-full bg-brand text-sm font-bold text-white">{i + 1}</span>
+            <h3 className="font-semibold">{s.title}</h3>
+            <p className="mt-0.5 text-sm">{s.description}<Cite pages={s.sourcePages} /></p>
+            {s.link && <a href={s.link} target="_blank" rel="noreferrer" className="text-sm font-medium text-brand-strong hover:underline">{s.link.replace(/^https?:\/\//, "")} ↗</a>}
+          </li>
+        ))}
+      </ol>
+      <div className="mt-6 rounded-xl border border-line bg-canvas p-4">
+        <h3 className="font-semibold">Important dates</h3>
+        {b.importantDates.length === 0 ? (
+          <p className="mt-1 text-sm">This brochure doesn't publish dates. Check the schedule notice on {b.meta.officialWebsites[0]?.replace(/^https?:\/\//, "")}.</p>
+        ) : (
+          <ul className="mt-2 space-y-1 text-sm">
+            {b.importantDates.map((d) => (
+              <li key={d.id}><strong>{d.label}:</strong> {d.date}{d.endDate ? ` – ${d.endDate}` : ""}<Cite pages={d.sourcePages} /></li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </Section>
+  );
+}
+
+function RoundsSection({ b }: { b: Brochure }) {
+  const groups = useMemo(() => {
+    const m = new Map<string, Brochure["rounds"]>();
+    for (const r of b.rounds) m.set(r.tag ?? "General", [...(m.get(r.tag ?? "General") ?? []), r]);
+    return [...m.entries()];
+  }, [b.rounds]);
+  return (
+    <Section id="rounds" kicker="Rounds" title="What happens in each round">
+      <div className="grid gap-4 lg:grid-cols-4 sm:grid-cols-2">
+        {groups.map(([tag, rules]) => (
+          <div key={tag} className="rounded-2xl border border-line bg-canvas p-3">
+            <h3 className="mb-2 px-1 text-sm font-bold tracking-wide text-brand-strong uppercase">{tag}</h3>
+            <div className="space-y-2">
+              {rules.map((r) => <RuleCard key={r.id} title={r.title} detail={r.detail} severity={r.severity} pages={r.sourcePages} />)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </Section>
+  );
+}
+
+function DocumentsSection({ entryKey, b, profile }: { entryKey: string; b: Brochure; profile: Profile | null }) {
+  const storeKey = `neetpg-guide:docs:${entryKey}`;
+  const [done, setDone] = useState<string[]>(() => {
+    try { return JSON.parse(localStorage.getItem(storeKey) ?? "[]"); } catch { return []; }
+  });
+  const toggle = (id: string) => {
+    const next = done.includes(id) ? done.filter((d) => d !== id) : [...done, id];
+    setDone(next);
+    try { localStorage.setItem(storeKey, JSON.stringify(next)); } catch { /* memory only */ }
+  };
+  const docs = profile ? documentsFor(profile, b) : b.documents.map((doc) => ({ doc, certain: doc.appliesWhen === null }));
+  const count = docs.filter((d) => done.includes(d.doc.id)).length;
+
+  return (
+    <Section
+      id="documents"
+      kicker="Checklist"
+      title="Documents to carry"
+      action={<button type="button" onClick={() => window.print()} className="no-print rounded-full border border-line px-3 py-1.5 text-sm font-medium hover:border-brand">Print checklist</button>}
+    >
+      <p className="mb-3 text-sm text-soft">
+        {profile ? "Filtered to your profile." : "Showing every document. Add your profile to filter it."} Bring originals and one self-attested photocopy set. {count}/{docs.length} ready.
+      </p>
+      <div className="mb-4 h-2 overflow-hidden rounded-full bg-canvas"><div className="h-full bg-brand transition-all" style={{ width: `${docs.length ? (count / docs.length) * 100 : 0}%` }} /></div>
+      <ul className="space-y-2">
+        {docs.map(({ doc, certain }) => (
+          <li key={doc.id}>
+            <label className="flex cursor-pointer gap-3 rounded-xl border border-line p-3 hover:border-brand">
+              <input type="checkbox" checked={done.includes(doc.id)} onChange={() => toggle(doc.id)} className="mt-1 h-4 w-4 accent-[var(--brand)]" />
+              <span className="text-sm">
+                <span className={`font-medium text-ink ${done.includes(doc.id) ? "line-through opacity-60" : ""}`}>{doc.name}</span>
+                {!certain && <span className="ml-2 rounded-full bg-warn-tint px-2 py-0.5 text-[11px] font-semibold text-warn">If applicable</span>}
+                <Cite pages={doc.sourcePages} />
+                {doc.detail && <span className="block text-soft">{doc.detail}</span>}
+              </span>
+            </label>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        {b.admission.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+      </div>
+    </Section>
+  );
+}
+
+function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) {
+  const { policy, conversion } = b.reservation;
+  const bars = [...policy.vertical, { category: "UR (open)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }];
+  return (
+    <Section id="reservation" kicker="Reservation" title="How seats are reserved">
+      <p className="text-sm">Applies to: <strong>{policy.appliesTo}</strong><Cite pages={policy.sourcePages} /></p>
+      {verdict?.effectiveCategory && (
+        <p className="mt-2 text-sm">You are counted as <strong>{verdict.effectiveCategory}</strong> in this state.</p>
+      )}
+      <div className="mt-4 flex h-10 overflow-hidden rounded-xl" role="img" aria-label={bars.map((v) => `${v.category} ${v.percent}%`).join(", ")}>
+        {bars.map((v, i) => {
+          const mine = verdict?.effectiveCategory && v.category.startsWith(verdict.effectiveCategory);
+          return (
+            <div key={v.category} style={{ width: `${v.percent}%`, opacity: verdict?.effectiveCategory && !mine ? 0.45 : 1 }}
+              className={`flex items-center justify-center text-[11px] font-semibold text-white ${["bg-brand-strong", "bg-brand", "bg-[#14b8a6]", "bg-[#5eead4] !text-ink", "bg-[#94a3b8]"][i % 5]}`}>
+              {v.percent >= 5 ? `${v.category} ${v.percent}%` : ""}
+            </div>
+          );
+        })}
+      </div>
+      <p className="mt-2 text-xs text-soft">Vertical reservation. Horizontal: {policy.horizontal.map((h) => `${h.category} ${h.percent}%`).join(", ")} within each category.</p>
+      <div className="mt-5 grid gap-4 md:grid-cols-2">
+        <div>
+          <h3 className="font-semibold">Unfilled seat conversion<Cite pages={conversion.sourcePages} /></h3>
+          <p className="mt-1 text-sm text-soft">{conversion.when}</p>
+          <ol className="mt-3 grid grid-cols-1 gap-1.5 text-sm">
+            {conversion.steps.map((s, i) => (
+              <li key={i} className="flex items-center gap-2 rounded-lg bg-canvas px-3 py-1.5">
+                <span className="w-5 text-xs text-soft">{i + 1}</span>
+                <span className="font-medium text-ink">{s.from}</span><span aria-hidden className="text-brand">→</span><span>{s.to}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div className="space-y-3">
+          {b.reservation.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+        </div>
+      </div>
+    </Section>
+  );
+}
+
+function ResignationSection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) {
+  const sectors = verdict?.sectors.length ? verdict.sectors : ["government", "private"];
+  const ladder = b.resignation.ladder.filter((l) => l.sector === "all" || sectors.includes(l.sector));
+  return (
+    <Section id="resignation" kicker="Exit costs" title="What resigning a seat costs you">
+      <p className="mb-4 text-sm text-soft">The later you leave, the more you lose.{verdict ? " Showing the stages for the colleges open to you." : ""}</p>
+      <ol className="space-y-2">
+        {ladder.map((l, i) => {
+          const lost = l.securityDeposit === "forfeited";
+          return (
+            <li key={l.id} className={`grid gap-2 rounded-xl border p-4 sm:grid-cols-[2rem_1fr_9rem] sm:items-center ${lost ? "border-bad/25 bg-bad-tint/40" : "border-good/25 bg-good-tint/50"}`}>
+              <span className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold text-white ${lost ? "bg-bad" : "bg-good"}`}>{i + 1}</span>
+              <div>
+                <p className="font-semibold text-ink">{l.stage}</p>
+                <p className="text-xs text-soft">{l.window}</p>
+                <p className="mt-1 text-sm">{l.fees}{l.otherConsequence ? ` ${l.otherConsequence}` : ""}<Cite pages={l.sourcePages} /></p>
+              </div>
+              <span className={`justify-self-start rounded-full px-3 py-1 text-xs font-bold sm:justify-self-end ${lost ? "bg-bad text-white" : "bg-good text-white"}`}>
+                Deposit {l.securityDeposit}
+              </span>
+            </li>
+          );
+        })}
+      </ol>
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        {b.resignation.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+      </div>
+    </Section>
+  );
+}
+
+function BondSection({ b }: { b: Brochure }) {
+  const bond = b.serviceBond.bond;
+  return (
+    <Section id="bond" kicker="After PG" title="Service bond">
+      {bond ? (
+        <>
+          <p className="text-sm">Applies to: <strong>{bond.appliesTo}</strong><Cite pages={bond.sourcePages} /></p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <div className="rounded-xl bg-brand-strong p-4 text-white">
+              <p className="text-xs text-white/75">Service period</p>
+              <p className="text-3xl font-bold" style={{ fontFamily: "var(--font-heading)" }}>{bond.durationYears} years</p>
+            </div>
+            {bond.amounts.map((a) => (
+              <div key={a.course} className="rounded-xl border border-line p-4">
+                <p className="text-xs text-soft">Penalty if you don't serve: {a.course}</p>
+                <p className="text-3xl font-bold text-ink" style={{ fontFamily: "var(--font-heading)" }}>{inrShort(a.amountInr)}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-sm"><strong>Where you'd serve:</strong> {bond.placeOfService}</p>
+        </>
+      ) : (
+        <p className="text-sm">This brochure doesn't mention a service bond.</p>
+      )}
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        {b.serviceBond.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+      </div>
+    </Section>
+  );
+}
+
+function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null }) {
+  const [q, setQ] = useState("");
+  const [showPwd, setShowPwd] = useState(false);
+  const dental = profile?.courseType === "dental";
+  const needle = q.trim().toLowerCase();
+  const rows = b.nodalCentres
+    .map((n) => ({ n, colleges: (dental ? n.privateDental : n.privateMedical).filter((c) => c.toLowerCase().includes(needle) || n.centre.toLowerCase().includes(needle)) }))
+    .filter((r) => r.colleges.length > 0);
+  const total = b.nodalCentres.reduce((s, n) => s + (dental ? n.privateDental : n.privateMedical).length, 0);
+  return (
+    <Section id="colleges" kicker="Where to report" title={`Private ${dental ? "dental" : "medical"} colleges & their admission centres`}>
+      <p className="mb-3 text-sm text-soft">
+        If you're allotted a private college, you take admission at its nodal centre. {total} colleges are listed.
+        {!profile?.courseType && " Showing medical colleges. Set MDS in your profile to see dental colleges."}
+      </p>
+      <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a college or city…" aria-label="Search colleges"
+        className="mb-4 w-full rounded-xl border border-line bg-surface px-3 py-2.5 outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+      <div className="grid gap-3 sm:grid-cols-2">
+        {rows.map(({ n, colleges }) => (
+          <div key={n.id} className="rounded-xl border border-line p-4">
+            <p className="text-xs font-semibold text-brand-strong uppercase">Nodal centre</p>
+            <h3 className="font-semibold">{n.centre}<Cite pages={n.sourcePages} /></h3>
+            <ul className="mt-2 list-disc space-y-0.5 pl-5 text-sm">{colleges.map((c) => <li key={c}>{c}</li>)}</ul>
+          </div>
+        ))}
+        {rows.length === 0 && <p className="text-sm text-soft">No matches.</p>}
+      </div>
+      {b.disabilityCentres.length > 0 && (
+        <div className="mt-6">
+          <button type="button" onClick={() => setShowPwd(!showPwd)} className="text-sm font-semibold text-brand-strong hover:underline" aria-expanded={showPwd || !!profile?.pwd}>
+            {showPwd || profile?.pwd ? "▾" : "▸"} Designated disability certificate centres ({b.disabilityCentres.length})
+          </button>
+          {(showPwd || profile?.pwd) && (
+            <div className="mt-3 overflow-x-auto">
+              <table className="w-full min-w-[520px] text-left text-sm">
+                <thead className="text-xs text-soft"><tr><th className="py-1 pr-3">Centre</th><th className="pr-3">Location</th><th>Remarks</th></tr></thead>
+                <tbody>
+                  {b.disabilityCentres.map((d) => (
+                    <tr key={d.id} className="border-t border-line align-top">
+                      <td className="py-1.5 pr-3 font-medium text-ink">{d.name}</td><td className="pr-3">{d.location}</td><td>{d.remarks}<Cite pages={d.sourcePages} /></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+    </Section>
+  );
+}
+
+function HelpSection({ b }: { b: Brochure }) {
+  const h = b.helpdesk;
+  return (
+    <Section id="help" kicker="Contact" title="Help desk">
+      <p className="text-sm">Hours: <strong>{h.hours}</strong><Cite pages={h.sourcePages} /></p>
+      <div className="mt-4 grid gap-3 sm:grid-cols-3">
+        {h.phones.map((p) => (
+          <div key={p.label} className="rounded-xl border border-line p-4">
+            <p className="font-semibold text-ink">{p.label}</p>
+            <ul className="mt-1 space-y-0.5 text-sm">{p.numbers.map((n) => <li key={n}><a className="text-brand-strong hover:underline" href={`tel:+91${n}`}>{n}</a></li>)}</ul>
+          </div>
+        ))}
+      </div>
+      <div className="mt-3 grid gap-3 sm:grid-cols-3">
+        {h.emails.map((e) => (
+          <div key={e.label} className="rounded-xl bg-canvas p-3 text-sm">
+            <p className="font-semibold text-ink">{e.label} email</p>
+            {e.addresses.map((a) => <a key={a} href={`mailto:${a}`} className="block break-all text-brand-strong hover:underline">{a}</a>)}
+          </div>
+        ))}
+      </div>
+      <ul className="mt-4 list-disc space-y-1 pl-5 text-sm">{h.instructions.map((i) => <li key={i}>{i}</li>)}</ul>
+    </Section>
+  );
+}

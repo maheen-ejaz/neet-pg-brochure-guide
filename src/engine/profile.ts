@@ -1,0 +1,75 @@
+import type { Category } from "../schema/stateBrochure";
+
+/** A candidate's inputs. Stored only in the browser. Unknown answers are null. */
+export interface Profile {
+  air: number | null;
+  courseType: "clinical" | "dental" | null;
+  /** Indian state/UT where MBBS/BDS was done, or "abroad". */
+  mbbsState: string | null;
+  /** Name of a listed home-state institution (e.g. AMU) if applicable, else null. */
+  mbbsInstitution: string | null;
+  domicileState: string | null;
+  category: Category | null;
+  pwd: boolean | null;
+  /** State whose government health service employs the candidate, if any. */
+  inServiceState: string | null;
+  internshipCompletion: string | null;
+  currentlyInPG: boolean | null;
+  nationality: "indian" | "oci" | "foreign" | null;
+  specialities: string[];
+}
+
+export const EMPTY_PROFILE: Profile = {
+  air: null,
+  courseType: null,
+  mbbsState: null,
+  mbbsInstitution: null,
+  domicileState: null,
+  category: null,
+  pwd: null,
+  inServiceState: null,
+  internshipCompletion: null,
+  currentlyInPG: null,
+  nationality: null,
+  specialities: [],
+};
+
+export const ABROAD = "abroad";
+
+export const INDIAN_STATES = [
+  "Andaman and Nicobar Islands", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh",
+  "Chhattisgarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi", "Goa", "Gujarat", "Haryana",
+  "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Ladakh", "Lakshadweep",
+  "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha", "Puducherry",
+  "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand",
+  "West Bengal",
+];
+
+export const SPECIALITIES = [
+  "Anaesthesiology", "Anatomy", "Biochemistry", "Community Medicine", "Dermatology, Venereology & Leprosy",
+  "Emergency Medicine", "ENT (Otorhinolaryngology)", "Family Medicine", "Forensic Medicine", "General Medicine",
+  "General Surgery", "Geriatrics", "Hospital Administration", "Immunohaematology & Blood Transfusion",
+  "Microbiology", "Nuclear Medicine", "Obstetrics & Gynaecology", "Ophthalmology", "Orthopaedics", "Paediatrics",
+  "Palliative Medicine", "Pathology", "Pharmacology", "Physical Medicine & Rehabilitation", "Physiology",
+  "Psychiatry", "Radiation Oncology", "Radiodiagnosis", "Respiratory Medicine", "Sports Medicine",
+  "Tropical Medicine",
+  // MDS
+  "Conservative Dentistry & Endodontics", "Oral & Maxillofacial Surgery", "Oral Medicine & Radiology",
+  "Oral Pathology", "Orthodontics", "Paediatric Dentistry", "Periodontology", "Prosthodontics",
+  "Public Health Dentistry",
+];
+
+export const PROFILE_FIELD_LABELS: Record<string, string> = {
+  courseType: "the course you're applying for",
+  mbbsLocation: "where you did MBBS/BDS",
+  category: "your category",
+  isDomicile: "your domicile state",
+  pwd: "whether you have a benchmark disability",
+  inService: "whether you're an in-service doctor",
+  currentlyInPG: "whether you're already in a PG course",
+  nationality: "your nationality",
+  internshipCompletion: "your internship completion date",
+};
+
+/** inServiceState value meaning "not an in-service doctor anywhere". */
+export const NOT_IN_SERVICE = "none";

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-tint: var(--brand-tint);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-soft: var(--soft);
+  --color-surface: var(--surface);
+  --color-canvas: var(--canvas);
+  --color-line: var(--line);
+  --color-good: var(--good);
+  --color-good-tint: var(--good-tint);
+  --color-warn: var(--warn);
+  --color-warn-tint: var(--warn-tint);
+  --color-bad: var(--bad);
+  --color-bad-tint: var(--bad-tint);
+}
+
+/* GooCampus tools palette (teal). */
+:root {
+  --brand: #0d9488;
+  --brand-strong: #0f766e;
+  --brand-tint: #e6fbf7;
+  --ink: #0e0c09;
+  --body: #3a3833;
+  --soft: #6b6862;
+  --surface: #ffffff;
+  --canvas: #f6f7f5;
+  --line: #e4e4df;
+  --good: #047857;
+  --good-tint: #d1fae5;
+  --warn: #b45309;
+  --warn-tint: #fef3c7;
+  --bad: #b91c1c;
+  --bad-tint: #fee2e2;
+  color-scheme: light;
+}
+
+@layer base {
+  body {
+    background: var(--canvas);
+    color: var(--body);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .text-balance { text-wrap: balance; }
+}
+
+@media print {
+  header, footer, .no-print { display: none !important; }
+  body { background: white; }
+  .print-only { display: block !important; }
+}

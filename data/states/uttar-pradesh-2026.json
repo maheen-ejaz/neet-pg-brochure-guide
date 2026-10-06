@@ -1,0 +1,2145 @@
+{
+  "meta": {
+    "id": "meta",
+    "sourcePages": [
+      1
+    ],
+    "verified": false,
+    "state": "Uttar Pradesh",
+    "stateSlug": "uttar-pradesh",
+    "year": 2026,
+    "title": "UP NEET PG-2026 Counselling (MD/MS/Diploma/DNB/MDS)",
+    "authority": "Directorate of Medical Education and Training (DGME), Uttar Pradesh, Lucknow",
+    "officialWebsites": [
+      "https://upneet.gov.in",
+      "https://www.dgme.up.gov.in"
+    ],
+    "coursesCovered": [
+      "MD",
+      "MS",
+      "PG Diploma",
+      "DNB",
+      "MDS"
+    ],
+    "governmentOrders": [
+      "Govt. Order No. I/1405837/2026 dated 23/07/2026 (reservation, security fee eligibility, resignation, PMHS weightage)",
+      "Govt. Order No. 950/71-2-82/2017 dated 07/03/2018 (service bond)",
+      "Govt. Order No. I/676928/2024 dated 26/06/2024 (debarment)"
+    ]
+  },
+  "status": "draft",
+  "source": {
+    "dir": "brochures/uttar-pradesh/2026",
+    "pageCount": 25,
+    "scanned": true,
+    "languages": [
+      "English",
+      "Hindi"
+    ]
+  },
+  "process": [
+    {
+      "id": "process-registration",
+      "sourcePages": [
+        3,
+        7
+      ],
+      "verified": false,
+      "title": "Register online",
+      "description": "Register on upneet.gov.in using your NEET-PG roll number and the same email ID you used on the NBE portal. Your name, parents' names and date of birth are pulled from NBE and cannot be changed. You add domicile, category, sub-category, in-service status and where you did MBBS.",
+      "link": "https://upneet.gov.in"
+    },
+    {
+      "id": "process-registration-fee",
+      "sourcePages": [
+        3,
+        7
+      ],
+      "verified": false,
+      "title": "Pay the registration fee",
+      "description": "Pay ₹3,000 once. It covers rounds 1, 2 and 3 and is non-refundable."
+    },
+    {
+      "id": "process-security-deposit",
+      "sourcePages": [
+        3,
+        8
+      ],
+      "verified": false,
+      "title": "Pay the security deposit",
+      "description": "Pay the deposit tier that matches the colleges you want to choose (₹30,000 / ₹1,00,000 / ₹2,00,000). Without it you cannot fill choices."
+    },
+    {
+      "id": "process-merit-list",
+      "sourcePages": [
+        3,
+        9
+      ],
+      "verified": false,
+      "title": "Merit list is declared",
+      "description": "MD/MS/Diploma merit includes in-service (PMHS) weightage. DNB and MDS merit uses All-India NEET rank."
+    },
+    {
+      "id": "process-choice-filling",
+      "sourcePages": [
+        3,
+        9
+      ],
+      "verified": false,
+      "title": "Fill and lock choices",
+      "description": "Fill as many college + course choices as you want, then lock them. Unlocked choices are not considered for allotment."
+    },
+    {
+      "id": "process-result",
+      "sourcePages": [
+        3,
+        9,
+        10
+      ],
+      "verified": false,
+      "title": "Seat allotment result",
+      "description": "Seats are allotted on merit and your locked choices. Results appear on upneet.gov.in."
+    },
+    {
+      "id": "process-allotment-letter",
+      "sourcePages": [
+        3,
+        10
+      ],
+      "verified": false,
+      "title": "Download allotment letter",
+      "description": "Download your allotment letter before reporting to the allotted college or nodal centre."
+    },
+    {
+      "id": "process-admission",
+      "sourcePages": [
+        3,
+        12
+      ],
+      "verified": false,
+      "title": "Take admission",
+      "description": "Report with original documents and pay fees at the allotted government college or the designated nodal centre (for private colleges) by the due date."
+    }
+  ],
+  "eligibility": {
+    "listedHomeInstitutions": {
+      "id": "eligibility-listed-institutions",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "label": "Central institutions in Uttar Pradesh whose graduates are not eligible for Government State Quota seats",
+      "names": [
+        "Aligarh Muslim University (AMU), Aligarh",
+        "Banaras Hindu University (BHU), Varanasi",
+        "AIIMS Raebareli",
+        "AIIMS Gorakhpur"
+      ]
+    },
+    "inServiceLabel": {
+      "id": "eligibility-in-service-label",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "label": "In-service (PMHS) doctor listed by the Director General Health Services, Uttar Pradesh"
+    },
+    "rules": [
+      {
+        "id": "elig-qualified",
+        "sourcePages": [
+          4
+        ],
+        "verified": false,
+        "title": "Qualified NEET-PG / NEET-MDS 2026",
+        "explanation": "You must have qualified NEET-PG 2026 (for MD/MS/Diploma/DNB) or NEET-MDS 2026 (for MDS).",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      {
+        "id": "elig-internship-clinical",
+        "sourcePages": [
+          4
+        ],
+        "verified": false,
+        "title": "Internship deadline (MD/MS/Diploma/DNB)",
+        "explanation": "Your one-year compulsory rotatory internship must be completed on or before 30 September 2026.",
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "internshipCompletion",
+              "after": "2026-09-30"
+            }
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      {
+        "id": "elig-internship-dental",
+        "sourcePages": [
+          4
+        ],
+        "verified": false,
+        "title": "Internship deadline (MDS)",
+        "explanation": "Your one-year compulsory rotatory internship must be completed on or before 31 May 2026.",
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "dental"
+              ]
+            },
+            {
+              "fact": "internshipCompletion",
+              "after": "2026-05-31"
+            }
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      {
+        "id": "elig-home-graduate",
+        "sourcePages": [
+          4
+        ],
+        "verified": false,
+        "title": "MBBS/BDS from a UP college",
+        "explanation": "Graduates of UP government or private medical/dental colleges are eligible for Government State Quota seats and private college seats.",
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "home"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "elig-listed-institutions",
+        "sourcePages": [
+          4
+        ],
+        "verified": false,
+        "title": "MBBS/BDS from AMU, BHU, AIIMS Raebareli or AIIMS Gorakhpur",
+        "explanation": "Graduates of these institutions are not eligible for Government State Quota seats. They can only apply to private medical and dental colleges.",
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "home_listed"
+          ]
+        },
+        "effect": {
+          "type": "restrictSectors",
+          "sectors": [
+            "private"
+          ]
+        }
+      },
+      {
+        "id": "elig-outside-state",
+        "sourcePages": [
+          4
+        ],
+        "verified": false,
+        "title": "MBBS/BDS from outside Uttar Pradesh",
+        "explanation": "Candidates who passed MBBS/BDS outside Uttar Pradesh can only apply to private medical and dental colleges.",
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "other_state",
+            "abroad"
+          ]
+        },
+        "effect": {
+          "type": "restrictSectors",
+          "sectors": [
+            "private"
+          ]
+        },
+        "note": "Foreign medical graduates are treated as 'outside Uttar Pradesh' here. This is an interpretation: the brochure does not name FMGs in this rule."
+      },
+      {
+        "id": "elig-already-in-pg",
+        "sourcePages": [
+          4
+        ],
+        "verified": false,
+        "title": "Already admitted to a PG course",
+        "explanation": "If you took admission through an earlier NEET-PG/NEET-MDS, you cannot take part until you complete and pass that course.",
+        "condition": {
+          "fact": "currentlyInPG",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      {
+        "id": "elig-pmhs-weightage",
+        "sourcePages": [
+          4,
+          9
+        ],
+        "verified": false,
+        "title": "In-service (PMHS) weightage",
+        "explanation": "NEET-qualified in-service PMHS doctors on the DG Health Services list get weightage in the MD/MS/Diploma merit list as per norms.",
+        "condition": {
+          "fact": "inService",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "positive"
+        }
+      },
+      {
+        "id": "elig-dnb-in-service-only",
+        "sourcePages": [
+          5
+        ],
+        "verified": false,
+        "title": "State quota DNB seats are for in-service only",
+        "explanation": "Only in-service (PMHS) candidates are eligible for state quota DNB seats.",
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "inService",
+              "in": [
+                false
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "excludeCourses",
+          "courses": [
+            "DNB"
+          ]
+        }
+      },
+      {
+        "id": "elig-fmg",
+        "sourcePages": [
+          5
+        ],
+        "verified": false,
+        "title": "Foreign medical graduates",
+        "explanation": "FMGs must meet NBE Information Bulletin 2026 point 4.10: qualified the FMGE screening test, registered with NMC/MCI or a State Medical Council, and internship completed by 30 September 2026.",
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "abroad"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      {
+        "id": "elig-foreign-national",
+        "sourcePages": [
+          5
+        ],
+        "verified": false,
+        "title": "Foreign nationals",
+        "explanation": "Foreign nationals must meet NBE Information Bulletin 2026 point 4.11: an NMC-recognised primary qualification, MHA security clearance where required, and NMC temporary registration for the PG course duration.",
+        "condition": {
+          "fact": "nationality",
+          "in": [
+            "foreign"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-other-state-reserved",
+        "sourcePages": [
+          6
+        ],
+        "verified": false,
+        "title": "Reserved category from another state",
+        "explanation": "Reserved category candidates from other states are treated as Unreserved (UR) in UP NEET PG/MDS counselling.",
+        "condition": {
+          "all": [
+            {
+              "fact": "isDomicile",
+              "in": [
+                false
+              ]
+            },
+            {
+              "fact": "category",
+              "in": [
+                "OBC",
+                "SC",
+                "ST",
+                "EWS"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "treatAsCategory",
+          "category": "UR"
+        }
+      },
+      {
+        "id": "elig-pwd-certificate",
+        "sourcePages": [
+          6,
+          19
+        ],
+        "verified": false,
+        "title": "PwD certificate from a designated centre",
+        "explanation": "To claim the 5% PwD reservation you need a disability certificate (21 benchmark disabilities, RPwD Act 2016, NMC norms) from one of the designated centres in Annexure-2. Certificates from any other hospital or board are not accepted.",
+        "condition": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      }
+    ]
+  },
+  "reservation": {
+    "policy": {
+      "id": "reservation-policy",
+      "sourcePages": [
+        6
+      ],
+      "verified": false,
+      "appliesTo": "Government State Quota seats",
+      "vertical": [
+        {
+          "category": "SC",
+          "percent": 21
+        },
+        {
+          "category": "ST",
+          "percent": 2
+        },
+        {
+          "category": "OBC",
+          "percent": 27
+        },
+        {
+          "category": "EWS",
+          "percent": 10
+        }
+      ],
+      "horizontal": [
+        {
+          "category": "PwD",
+          "percent": 5
+        }
+      ]
+    },
+    "conversion": {
+      "id": "reservation-conversion",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "verified": false,
+      "when": "During the 3rd round of state quota counselling, and only after candidates of the original category are exhausted.",
+      "steps": [
+        {
+          "from": "ST (PwD)",
+          "to": "ST"
+        },
+        {
+          "from": "SC (PwD)",
+          "to": "SC"
+        },
+        {
+          "from": "UR (PwD)",
+          "to": "UR"
+        },
+        {
+          "from": "OBC (PwD)",
+          "to": "OBC"
+        },
+        {
+          "from": "EWS (PwD)",
+          "to": "EWS"
+        },
+        {
+          "from": "ST",
+          "to": "SC"
+        },
+        {
+          "from": "SC",
+          "to": "UR"
+        },
+        {
+          "from": "OBC",
+          "to": "UR"
+        },
+        {
+          "from": "EWS",
+          "to": "UR"
+        },
+        {
+          "from": "Minority",
+          "to": "UR"
+        }
+      ]
+    },
+    "rules": [
+      {
+        "id": "reservation-category-list",
+        "sourcePages": [
+          6
+        ],
+        "verified": false,
+        "title": "Category lists",
+        "detail": "SC/ST/OBC lists are as notified by the Government of Uttar Pradesh at the time of counselling.",
+        "severity": "info"
+      },
+      {
+        "id": "reservation-up-format",
+        "sourcePages": [
+          6
+        ],
+        "verified": false,
+        "title": "UP-format certificates only",
+        "detail": "Reservation certificates are valid only in the format prescribed by the Government of Uttar Pradesh and issued by a competent UP authority.",
+        "severity": "warning"
+      },
+      {
+        "id": "reservation-cert-date",
+        "sourcePages": [
+          6
+        ],
+        "verified": false,
+        "title": "Fresh EWS and OBC certificates",
+        "detail": "EWS and OBC certificates are valid only if issued on or after 1 April 2026.",
+        "severity": "critical"
+      },
+      {
+        "id": "reservation-pwd-centres",
+        "sourcePages": [
+          6
+        ],
+        "verified": false,
+        "title": "PwD certificates from designated centres only",
+        "detail": "PwD certificates from any other hospital or board are not accepted. See the list of designated disability centres.",
+        "severity": "critical"
+      }
+    ]
+  },
+  "fees": {
+    "registration": {
+      "id": "fees-registration",
+      "sourcePages": [
+        7
+      ],
+      "verified": false,
+      "amountInr": 3000,
+      "covers": "Rounds 1, 2 and 3. The stray vacancy round needs a fresh registration and another ₹3,000.",
+      "refundable": false
+    },
+    "securityDeposits": [
+      {
+        "id": "deposit-govt",
+        "sourcePages": [
+          8
+        ],
+        "verified": false,
+        "amountInr": 30000,
+        "label": "Government colleges only",
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "medical"
+          },
+          {
+            "sector": "government",
+            "collegeType": "dental"
+          }
+        ]
+      },
+      {
+        "id": "deposit-private-medical",
+        "sourcePages": [
+          8
+        ],
+        "verified": false,
+        "amountInr": 200000,
+        "label": "Government + private medical colleges",
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "medical"
+          },
+          {
+            "sector": "private",
+            "collegeType": "medical"
+          }
+        ]
+      },
+      {
+        "id": "deposit-private-dental",
+        "sourcePages": [
+          8
+        ],
+        "verified": false,
+        "amountInr": 100000,
+        "label": "Government + private dental colleges",
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "dental"
+          },
+          {
+            "sector": "private",
+            "collegeType": "dental"
+          }
+        ]
+      }
+    ],
+    "rules": [
+      {
+        "id": "fees-own-account",
+        "sourcePages": [
+          8
+        ],
+        "verified": false,
+        "title": "Pay from your own or a family account",
+        "detail": "Use your own or a family member's bank account for the security fee. Any refund goes back to the same account.",
+        "severity": "warning"
+      },
+      {
+        "id": "fees-deposit-required",
+        "sourcePages": [
+          8
+        ],
+        "verified": false,
+        "title": "No deposit, no choice filling",
+        "detail": "If you don't pay the security fee you cannot fill choices.",
+        "severity": "critical"
+      },
+      {
+        "id": "fees-refund-timing",
+        "sourcePages": [
+          12
+        ],
+        "verified": false,
+        "title": "Refunds come after all rounds",
+        "detail": "Security money refunds for eligible candidates start only after all counselling rounds are complete.",
+        "severity": "info"
+      },
+      {
+        "id": "fees-tuition-private",
+        "sourcePages": [
+          12
+        ],
+        "verified": false,
+        "title": "Private college tuition at admission",
+        "detail": "At admission to a private college, you pay the government-fixed tuition fee. Minority institutions charge the tuition fee prescribed by the college.",
+        "severity": "info"
+      },
+      {
+        "id": "fees-receipts",
+        "sourcePages": [
+          8
+        ],
+        "verified": false,
+        "title": "Keep your receipts",
+        "detail": "Download your registration form, registration fee slip and security money receipt after paying.",
+        "severity": "info"
+      }
+    ]
+  },
+  "choiceFilling": [
+    {
+      "id": "choice-login",
+      "sourcePages": [
+        9
+      ],
+      "verified": false,
+      "title": "Log in with your roll number",
+      "detail": "Fill choices on upneet.gov.in with your NEET roll number and the password you created at registration. Don't share the password.",
+      "severity": "info"
+    },
+    {
+      "id": "choice-unlimited",
+      "sourcePages": [
+        9
+      ],
+      "verified": false,
+      "title": "No limit on choices",
+      "detail": "You can fill as many choices as you want and change them until you lock.",
+      "severity": "info"
+    },
+    {
+      "id": "choice-lock-compulsory",
+      "sourcePages": [
+        9
+      ],
+      "verified": false,
+      "title": "Locking is compulsory",
+      "detail": "If you don't lock your choices within the scheduled time, you will not be considered for allotment.",
+      "severity": "critical"
+    },
+    {
+      "id": "choice-locked-final",
+      "sourcePages": [
+        9
+      ],
+      "verified": false,
+      "title": "Locked means final",
+      "detail": "Once locked, choices cannot be altered.",
+      "severity": "warning"
+    },
+    {
+      "id": "choice-research-private",
+      "sourcePages": [
+        9
+      ],
+      "verified": false,
+      "title": "Research private colleges first",
+      "detail": "Get detailed information about any private college before adding it to your choices.",
+      "severity": "info"
+    },
+    {
+      "id": "choice-merit-basis",
+      "sourcePages": [
+        9
+      ],
+      "verified": false,
+      "title": "How merit is calculated",
+      "detail": "MD/MS/Diploma merit includes in-service (PMHS) weightage. DNB and MDS merit is based on All-India NEET rank.",
+      "severity": "info"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-1-free-exit",
+      "sourcePages": [
+        10
+      ],
+      "verified": false,
+      "title": "Free exit if you don't join",
+      "detail": "If you are allotted a seat in Round 1 and do not take admission, you can exit with no penalty.",
+      "tag": "Round 1",
+      "severity": "info"
+    },
+    {
+      "id": "round-upgrade",
+      "sourcePages": [
+        10
+      ],
+      "verified": false,
+      "title": "Upgrade up to Round 3",
+      "detail": "If you took admission after Round 1, you can still participate for an upgrade up to Round 3.",
+      "tag": "Rounds 2–3",
+      "severity": "info"
+    },
+    {
+      "id": "round-same-seat",
+      "sourcePages": [
+        10
+      ],
+      "verified": false,
+      "title": "Don't re-list your current seat",
+      "detail": "When trying to upgrade, don't fill the seat you already hold. If you are allotted the same seat again, your previous allotment is cancelled.",
+      "tag": "Rounds 2–3",
+      "severity": "warning"
+    },
+    {
+      "id": "round-must-join-upgrade",
+      "sourcePages": [
+        10
+      ],
+      "verified": false,
+      "title": "Join your upgraded seat",
+      "detail": "If you are upgraded and don't take admission in the new seat, the new allotment is cancelled.",
+      "tag": "Rounds 2–3",
+      "severity": "critical"
+    },
+    {
+      "id": "round-3-conversion",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "verified": false,
+      "title": "Category seat conversion",
+      "detail": "Unfilled reserved seats are converted in Round 3, as per the conversion order.",
+      "tag": "Round 3",
+      "severity": "info"
+    },
+    {
+      "id": "stray-not-joined",
+      "sourcePages": [
+        11
+      ],
+      "verified": false,
+      "title": "Stray round: who is excluded",
+      "detail": "Candidates allotted a seat in UP counselling who did not join or who resigned cannot take part in the stray vacancy round.",
+      "tag": "Stray round",
+      "severity": "warning"
+    },
+    {
+      "id": "stray-other-admission",
+      "sourcePages": [
+        11
+      ],
+      "verified": false,
+      "title": "Stray round: already admitted elsewhere",
+      "detail": "Anyone admitted to a PG course anywhere in India through AIQ or another state's quota cannot take part in the UP stray vacancy round.",
+      "tag": "Stray round",
+      "severity": "warning"
+    },
+    {
+      "id": "stray-fresh-registration",
+      "sourcePages": [
+        11
+      ],
+      "verified": false,
+      "title": "Stray round: register again",
+      "detail": "Fresh registration with ₹3,000 is mandatory. Only these candidates are on the stray vacancy merit list.",
+      "tag": "Stray round",
+      "severity": "critical"
+    },
+    {
+      "id": "stray-must-join",
+      "sourcePages": [
+        11
+      ],
+      "verified": false,
+      "title": "Stray round: you must join",
+      "detail": "If you are allotted a seat in the stray round and don't report and join, you lose your security deposit and are debarred from UP NEET PG/MDS counselling 2027.",
+      "tag": "Stray round",
+      "severity": "critical"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-allotment-letter",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "Allotment letter",
+      "stage": "admission",
+      "appliesWhen": null
+    },
+    {
+      "id": "doc-admit-card",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "NEET PG-2026 / NEET MDS-2026 admit card",
+      "stage": "admission",
+      "appliesWhen": null
+    },
+    {
+      "id": "doc-score-card",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "NEET PG-2026 / NEET MDS-2026 score card or rank letter",
+      "stage": "admission",
+      "appliesWhen": null
+    },
+    {
+      "id": "doc-high-school",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "High school marksheet or certificate",
+      "stage": "admission",
+      "appliesWhen": null,
+      "detail": "Proof of date of birth."
+    },
+    {
+      "id": "doc-professional-marksheets",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "Marksheets of all MBBS/BDS professional exams",
+      "stage": "admission",
+      "appliesWhen": null
+    },
+    {
+      "id": "doc-degree",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "MBBS/BDS pass certificate or degree",
+      "stage": "admission",
+      "appliesWhen": null
+    },
+    {
+      "id": "doc-internship",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "Compulsory rotatory internship completion certificate",
+      "stage": "admission",
+      "appliesWhen": null
+    },
+    {
+      "id": "doc-registration",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "Permanent or provisional registration certificate (State Medical Council / MCI / DCI)",
+      "stage": "admission",
+      "appliesWhen": null
+    },
+    {
+      "id": "doc-reservation",
+      "sourcePages": [
+        6,
+        12
+      ],
+      "verified": false,
+      "name": "Category certificate (SC/ST/OBC/EWS) in UP format",
+      "stage": "admission",
+      "appliesWhen": {
+        "fact": "category",
+        "in": [
+          "OBC",
+          "SC",
+          "ST",
+          "EWS"
+        ]
+      },
+      "detail": "Issued by a competent UP authority. EWS and OBC certificates must be issued on or after 1 April 2026."
+    },
+    {
+      "id": "doc-ews-format",
+      "sourcePages": [
+        23
+      ],
+      "verified": false,
+      "name": "EWS income & asset certificate (Annexure-3 format)",
+      "stage": "admission",
+      "appliesWhen": {
+        "fact": "category",
+        "in": [
+          "EWS"
+        ]
+      },
+      "detail": "Family income under ₹8 lakh, with no listed assets. Issued by the DM, ADM, City Magistrate, SDM or Tehsildar."
+    },
+    {
+      "id": "doc-pwd",
+      "sourcePages": [
+        6,
+        12
+      ],
+      "verified": false,
+      "name": "Disability certificate from a designated centre (Annexure-2)",
+      "stage": "admission",
+      "appliesWhen": {
+        "fact": "pwd",
+        "in": [
+          true
+        ]
+      }
+    },
+    {
+      "id": "doc-fmg",
+      "sourcePages": [
+        5
+      ],
+      "verified": false,
+      "name": "FMGE pass certificate and NMC/State Medical Council registration",
+      "stage": "admission",
+      "appliesWhen": {
+        "fact": "mbbsLocation",
+        "in": [
+          "abroad"
+        ]
+      },
+      "note": "Derived from the FMG eligibility criteria. The admission document list does not name it separately."
+    },
+    {
+      "id": "doc-originals",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "One set of self-attested photocopies of everything",
+      "stage": "admission",
+      "appliesWhen": null,
+      "detail": "Bring originals plus one self-attested photocopy set."
+    }
+  ],
+  "admission": [
+    {
+      "id": "admission-where",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "title": "Where to take admission",
+      "detail": "Complete admission and pay fees at the allotted government college, or at the nodal centre named in your allotment letter for private colleges.",
+      "severity": "info"
+    },
+    {
+      "id": "admission-deadline",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "title": "Miss the deadline, lose the seat",
+      "detail": "If you don't take admission by the due date, you forfeit the seat.",
+      "severity": "critical"
+    },
+    {
+      "id": "admission-originals",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "title": "Originals are mandatory",
+      "detail": "If you fail to produce originals, or if any concealment or falsification is found, you lose your candidature and may face legal action.",
+      "severity": "critical"
+    }
+  ],
+  "resignation": {
+    "rules": [
+      {
+        "id": "resign-in-person",
+        "sourcePages": [
+          13
+        ],
+        "verified": false,
+        "title": "Resign in person only",
+        "detail": "Only admitted candidates can resign, in person, at the college or nodal centre where they took admission. Resignations sent any other way are not valid.",
+        "severity": "critical"
+      },
+      {
+        "id": "resign-portal",
+        "sourcePages": [
+          13
+        ],
+        "verified": false,
+        "title": "Must be updated on the portal",
+        "detail": "The college or nodal centre updates your resignation on the NIC portal within the scheduled time. Only portal-updated resignations count.",
+        "severity": "warning"
+      },
+      {
+        "id": "resign-debarment",
+        "sourcePages": [
+          15
+        ],
+        "verified": false,
+        "title": "Debarment for leaving government seats",
+        "detail": "If you leave a government medical or dental college seat after the final round and before completing the course, you are debarred from the next academic session's admission process.",
+        "severity": "critical"
+      }
+    ],
+    "ladder": [
+      {
+        "id": "resign-r1",
+        "sourcePages": [
+          13
+        ],
+        "verified": false,
+        "stage": "Admitted in Round 1",
+        "window": "Up to 2 days before Round 2 choice filling starts (e.g. by 11:00 AM on 22 July if choice filling opens 11:00 AM on 24 July)",
+        "sector": "all",
+        "securityDeposit": "refunded",
+        "fees": "Free exit. Government colleges refund all fees except the admission fee. Private colleges refund tuition paid."
+      },
+      {
+        "id": "resign-r2",
+        "sourcePages": [
+          14
+        ],
+        "verified": false,
+        "stage": "After Round 2",
+        "window": "Up to 2 days before Round 3 choice filling starts",
+        "sector": "all",
+        "securityDeposit": "forfeited",
+        "fees": "Government colleges refund all fees except the admission fee. Private colleges refund tuition paid."
+      },
+      {
+        "id": "resign-r3-govt",
+        "sourcePages": [
+          14
+        ],
+        "verified": false,
+        "stage": "After Round 3 — government college",
+        "window": "Up to 2 days before stray round choice filling starts",
+        "sector": "government",
+        "securityDeposit": "forfeited",
+        "fees": "All fees paid are forfeited.",
+        "otherConsequence": "Vacating seats is not normally allowed after Round 3."
+      },
+      {
+        "id": "resign-r3-private",
+        "sourcePages": [
+          14
+        ],
+        "verified": false,
+        "stage": "After Round 3 — private college",
+        "window": "Up to 2 days before stray round choice filling starts",
+        "sector": "private",
+        "securityDeposit": "forfeited",
+        "fees": "50% of the tuition fee paid is forfeited.",
+        "otherConsequence": "Vacating seats is not normally allowed after Round 3."
+      },
+      {
+        "id": "resign-stray",
+        "sourcePages": [
+          14
+        ],
+        "verified": false,
+        "stage": "After the stray round, or before finishing the course",
+        "window": "Any time after the stray vacancy round",
+        "sector": "all",
+        "securityDeposit": "forfeited",
+        "fees": "All fees paid are forfeited.",
+        "otherConsequence": "If your deposit was already refunded you must pay it back, by demand draft in favour of the DG, Medical Education & Training, UP, Lucknow."
+      }
+    ]
+  },
+  "serviceBond": {
+    "bond": {
+      "id": "bond-pg",
+      "sourcePages": [
+        15,
+        24,
+        25
+      ],
+      "verified": false,
+      "appliesTo": "Candidates admitted to government medical or dental colleges",
+      "durationYears": 2,
+      "amounts": [
+        {
+          "course": "PG Degree (MD/MS)",
+          "amountInr": 4000000
+        },
+        {
+          "course": "PG Diploma / MDS",
+          "amountInr": 2000000
+        }
+      ],
+      "placeOfService": "As required, outside metros: Senior Resident or contractual lecturer in a government medical college, or contractual specialist at a district hospital or community health centre under the Medical Health & Family Welfare department."
+    },
+    "rules": [
+      {
+        "id": "bond-certificates-held",
+        "sourcePages": [
+          24,
+          25
+        ],
+        "verified": false,
+        "title": "Certificates are held until the bond is served",
+        "detail": "Your PG certificates stay with the institution until you complete 2 years of service or pay the bond amount. The government has a first lien on them.",
+        "severity": "warning"
+      },
+      {
+        "id": "bond-release",
+        "sourcePages": [
+          24
+        ],
+        "verified": false,
+        "title": "Bond is released if no posting comes",
+        "detail": "If the government does not offer you a posting within 3 months of finishing the course, the bond is released.",
+        "severity": "info"
+      },
+      {
+        "id": "bond-interest",
+        "sourcePages": [
+          25
+        ],
+        "verified": false,
+        "title": "Late payment attracts interest",
+        "detail": "If you don't pay the bond amount in time, interest applies and it can be recovered as arrears of land revenue. You also bear the stamp duty on the bond.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "helpdesk": {
+    "id": "helpdesk",
+    "sourcePages": [
+      16
+    ],
+    "verified": false,
+    "phones": [
+      {
+        "label": "Counselling helpline",
+        "numbers": [
+          "8189011696",
+          "8189011697",
+          "8189011698",
+          "8189011699",
+          "8189011700"
+        ]
+      },
+      {
+        "label": "SBI banking helpline",
+        "numbers": [
+          "7007322364",
+          "9919443034"
+        ]
+      },
+      {
+        "label": "ICICI banking helpline",
+        "numbers": [
+          "9712942974",
+          "8853002213",
+          "9935012172",
+          "9454850549"
+        ]
+      }
+    ],
+    "emails": [
+      {
+        "label": "Counselling",
+        "addresses": [
+          "upneetcounseling2026@gmail.com"
+        ]
+      },
+      {
+        "label": "SBI",
+        "addresses": [
+          "sbi.06144@sbi.co.in"
+        ]
+      },
+      {
+        "label": "ICICI",
+        "addresses": [
+          "shweta.vaish@icici.bank.in",
+          "abhinay.patel@icici.bank.in",
+          "avikal.srivastava@icici.bank.in"
+        ]
+      }
+    ],
+    "hours": "11:00 AM to 5:00 PM (office hours)",
+    "websites": [
+      "https://www.dgme.up.gov.in",
+      "https://upneet.gov.in"
+    ],
+    "instructions": [
+      "Email only the official address, and include your name, registration no., roll no., All India Rank, contact no. and email ID.",
+      "Queries already answered in the information bulletin will not be answered.",
+      "Court cases about counselling fall under Lucknow jurisdiction only."
+    ]
+  },
+  "nodalCentres": [
+    {
+      "id": "nodal-kgmu",
+      "sourcePages": [
+        17
+      ],
+      "verified": false,
+      "centre": "King George's Medical University, Lucknow",
+      "privateMedical": [
+        "Era's Lucknow Medical College, Lucknow",
+        "Career Medical College, Lucknow",
+        "TS Mishra Medical College, Lucknow",
+        "Integral Institute of Medical Sciences, Lucknow",
+        "Prasad Medical College, Lucknow"
+      ],
+      "privateDental": [
+        "Saraswati Dental College, Lucknow",
+        "Sardar Patel Post Graduate Institute of Dental Sciences, Lucknow",
+        "Career Institute of Dental Sciences and Hospital, Lucknow"
+      ]
+    },
+    {
+      "id": "nodal-llrm",
+      "sourcePages": [
+        17
+      ],
+      "verified": false,
+      "centre": "L.L.R.M. Medical College, Meerut",
+      "privateMedical": [
+        "Muzaffarnagar Medical College, Muzaffarnagar",
+        "Subharti Medical College, Meerut",
+        "Saraswati Institute of Medical Sciences, Hapur",
+        "Rama Medical College Hospital & Research Centre, Hapur",
+        "National Capital Region Institute of Medical Sciences, Meerut"
+      ],
+      "privateDental": [
+        "Subharti Dental College, Meerut",
+        "Kalka Dental College, Meerut",
+        "Kothiwal Dental College, Moradabad"
+      ]
+    },
+    {
+      "id": "nodal-gsvm",
+      "sourcePages": [
+        17
+      ],
+      "verified": false,
+      "centre": "GSVM Medical College, Kanpur",
+      "privateMedical": [
+        "Rama Medical College Hospital and Research Center, Kanpur",
+        "Naraina Medical College & Research Centre, Kanpur",
+        "Saraswati Medical College, Unnao"
+      ],
+      "privateDental": [
+        "Rama Dental College, Kanpur"
+      ]
+    },
+    {
+      "id": "nodal-sn-agra",
+      "sourcePages": [
+        17
+      ],
+      "verified": false,
+      "centre": "S.N. Medical College, Agra",
+      "privateMedical": [
+        "F.H. Medical College, Agra",
+        "K.D. Medical College, Mathura",
+        "Krishna Mohan Medical College, Mathura",
+        "SKS Hospital Medical College & Research Center, Mathura"
+      ],
+      "privateDental": [
+        "K.D. Dental College, Mathura"
+      ]
+    },
+    {
+      "id": "nodal-rmlims",
+      "sourcePages": [
+        17
+      ],
+      "verified": false,
+      "centre": "Dr. Ram Manohar Lohia Institute of Medical Sciences, Lucknow",
+      "privateMedical": [
+        "Hind Institute of Medical Sciences, Barabanki",
+        "Hind Institute of Medical Sciences, Sitapur",
+        "Mayo Institute of Medical Sciences, Barabanki"
+      ],
+      "privateDental": [
+        "Chandra Dental College, Barabanki",
+        "B.B.D. College of Dental Sciences, Lucknow"
+      ]
+    },
+    {
+      "id": "nodal-brd",
+      "sourcePages": [
+        18
+      ],
+      "verified": false,
+      "centre": "BRD Medical College, Gorakhpur",
+      "privateMedical": [],
+      "privateDental": [
+        "Dental College, Azamgarh"
+      ]
+    },
+    {
+      "id": "nodal-mln",
+      "sourcePages": [
+        18
+      ],
+      "verified": false,
+      "centre": "M.L.N. Medical College, Prayagraj",
+      "privateMedical": [
+        "Heritage Institute of Medical Sciences, Varanasi",
+        "United Institute of Medical Sciences, Prayagraj"
+      ],
+      "privateDental": []
+    },
+    {
+      "id": "nodal-gims",
+      "sourcePages": [
+        18
+      ],
+      "verified": false,
+      "centre": "Government Institute of Medical Sciences, Greater Noida",
+      "privateMedical": [
+        "G.S. Medical College, Hapur",
+        "School of Medical Sciences, Sharda University, Greater Noida",
+        "Noida International Institute of Medical Sciences, Greater Noida"
+      ],
+      "privateDental": [
+        "ITS Dental College, Greater Noida",
+        "School of Dental (Sharda University), Greater Noida",
+        "Shri Banke Bihari Dental College, Ghaziabad",
+        "DJ College Modinagar, Ghaziabad",
+        "IDST Modinagar, Ghaziabad",
+        "ITS Dental College, Muradnagar, Ghaziabad",
+        "Indraprastha Dental College, Ghaziabad"
+      ]
+    },
+    {
+      "id": "nodal-tmmc",
+      "sourcePages": [
+        18
+      ],
+      "verified": false,
+      "centre": "Teerthankar Mahaveer Medical College & Research Center, Moradabad",
+      "privateMedical": [
+        "Teerthankar Mahaveer Medical College & Research Center, Moradabad",
+        "Venkateshwara Institute of Medical Sciences, Amroha"
+      ],
+      "privateDental": [
+        "Teerthankar Mahaveer Dental College, Moradabad"
+      ]
+    },
+    {
+      "id": "nodal-biu",
+      "sourcePages": [
+        18
+      ],
+      "verified": false,
+      "centre": "Bareilly International University, Bareilly",
+      "privateMedical": [
+        "Rohilkhand Medical College, Bareilly",
+        "Shri Ramamurthy Medical College, Bareilly",
+        "Rajshree Medical, Bareilly",
+        "Varunarjun Medical College, Shahjahanpur"
+      ],
+      "privateDental": [
+        "Institute of Dental Sciences, Bareilly"
+      ]
+    }
+  ],
+  "disabilityCentres": [
+    {
+      "id": "dis-1",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "VMMC & Safdarjang Hospital",
+      "location": "New Delhi",
+      "remarks": "All disabilities except visual; intellectual & behavioural disabilities"
+    },
+    {
+      "id": "dis-2",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "All India Institute of Physical Medicine and Rehabilitation (AIIPMR)",
+      "location": "Mumbai",
+      "remarks": "Locomotor disability only"
+    },
+    {
+      "id": "dis-3",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Institute of Post Graduate Medical Education & Research (IPGMER)",
+      "location": "Kolkata",
+      "remarks": "All disabilities"
+    },
+    {
+      "id": "dis-4",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Madras Medical College (MMC)",
+      "location": "Chennai",
+      "remarks": "All disabilities"
+    },
+    {
+      "id": "dis-5",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Grant Government Medical College, J.J. Hospital Compound",
+      "location": "Mumbai, Maharashtra",
+      "remarks": "All disabilities"
+    },
+    {
+      "id": "dis-6",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Goa Medical College",
+      "location": "Goa",
+      "remarks": "All disabilities except speech disability"
+    },
+    {
+      "id": "dis-7",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Government Medical College, Thiruvananthapuram",
+      "location": "Thiruvananthapuram, Kerala",
+      "remarks": "All disabilities; ophthalmology at Regional Institute of Ophthalmology"
+    },
+    {
+      "id": "dis-8",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "SMS Medical College",
+      "location": "Jaipur, Rajasthan",
+      "remarks": "All disabilities except neurology (genetic testing) and ENT (speech & language disability testing); orthopaedics/PMR goniometer, plumb line, hand dynamometer, laser"
+    },
+    {
+      "id": "dis-9",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Govt. Medical College and Hospital, Sector 32",
+      "location": "Chandigarh",
+      "remarks": "All disabilities as mentioned in disability certificate"
+    },
+    {
+      "id": "dis-10",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Govt. Medical College, Agartala, State Disability Board",
+      "location": "Agartala, Tripura",
+      "remarks": "All disabilities as mentioned in disability certificate"
+    },
+    {
+      "id": "dis-11",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Institute of Medical Sciences, Banaras Hindu University",
+      "location": "Varanasi, Uttar Pradesh",
+      "remarks": "All disabilities except intellectual disability"
+    },
+    {
+      "id": "dis-12",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "Ali Yavar Jung National Institute of Speech and Hearing Disabilities, Bandra",
+      "location": "Mumbai, Maharashtra",
+      "remarks": "Hearing disabilities only"
+    },
+    {
+      "id": "dis-13",
+      "sourcePages": [
+        19
+      ],
+      "verified": false,
+      "name": "AIIMS Nagpur",
+      "location": "Nagpur, Maharashtra",
+      "remarks": "All disabilities as mentioned in disability certificate"
+    },
+    {
+      "id": "dis-14",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Atal Bihari Vajpayee Institute of Medical Sciences & RML Hospital (ABVIMS & RMLH)",
+      "location": "New Delhi",
+      "remarks": "All disabilities except ENT; for visual disability, candidates who use LVAs may bring their own"
+    },
+    {
+      "id": "dis-15",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Lady Hardinge Medical College & Associated Hospitals (LHMC)",
+      "location": "New Delhi",
+      "remarks": "All disabilities as mentioned in disability certificate"
+    },
+    {
+      "id": "dis-16",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "All India Institute of Speech and Hearing (AIISH)",
+      "location": "Mysuru, Karnataka",
+      "remarks": "Speech & hearing disabilities only"
+    },
+    {
+      "id": "dis-17",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Uttar Pradesh University of Medical Sciences, Saifai, Etawah",
+      "location": "Uttar Pradesh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-18",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "King George Medical University, Lucknow",
+      "location": "Uttar Pradesh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-19",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Civil Hospital, Ahmedabad",
+      "location": "Gujarat",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-20",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "New Civil Hospital, Surat",
+      "location": "Gujarat",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-21",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "PDU Hospital, Rajkot",
+      "location": "Gujarat",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-22",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Assam Medical College, Dibrugarh",
+      "location": "Assam",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-23",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Gauhati Medical College, Guwahati",
+      "location": "Assam",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-24",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Silchar Medical College, Silchar",
+      "location": "Assam",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-25",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Madurai Medical College & Govt. Rajaji Hospital, Madurai",
+      "location": "Tamil Nadu",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-26",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Coimbatore Medical College Hospital",
+      "location": "Tamil Nadu",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-27",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Thanjavur Medical College",
+      "location": "Tamil Nadu",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-28",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Zoram Medical College & Hospital, Falkawn",
+      "location": "Mizoram",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-29",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Dr Sushila Tiwari Memorial Government Hospital (Government Medical College, Haldwani)",
+      "location": "Uttarakhand",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-30",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Indira Gandhi Medical College & Hospital, Shimla",
+      "location": "Himachal Pradesh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-31",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Dr. Rajendra Prasad Govt. Medical College & Hospital, Kangra at Tanda",
+      "location": "Himachal Pradesh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-32",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "name": "Government Doon Medical College, Dehradun",
+      "location": "Uttarakhand",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-33",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Pt. BD Sharma Post Graduate Institute of Medical Sciences, Rohtak",
+      "location": "Haryana",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-34",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "AIIMS Bilaspur",
+      "location": "Himachal Pradesh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-35",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "All India Institute of Medical Sciences, Raipur",
+      "location": "Chhattisgarh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-36",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Pt. Jawahar Lal Nehru Memorial Medical College, Raipur",
+      "location": "Chhattisgarh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-37",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Chhattisgarh Institute of Medical Sciences, Bilaspur",
+      "location": "Chhattisgarh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-38",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Late Shri Baliram Kashyap Memorial Medical College, Jagdalpur",
+      "location": "Chhattisgarh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-39",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Bangalore Medical College and Research Institute (BMCRI), Bengaluru",
+      "location": "Karnataka",
+      "remarks": "State capital centre"
+    },
+    {
+      "id": "dis-40",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Mysore Medical College and Research Institute (MMCRI), Mysuru",
+      "location": "Karnataka",
+      "remarks": "Regional centre (South zone)"
+    },
+    {
+      "id": "dis-41",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Karnataka Institute of Medical Sciences (KIMS), Hubballi",
+      "location": "Karnataka",
+      "remarks": "Regional centre (Central zone)"
+    },
+    {
+      "id": "dis-42",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Belagavi Institute of Medical Sciences (BIMS), Belagavi",
+      "location": "Karnataka",
+      "remarks": "Regional centre (West zone)"
+    },
+    {
+      "id": "dis-43",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Gulbarga Institute of Medical Sciences (GIMS), Kalaburagi",
+      "location": "Karnataka",
+      "remarks": "Regional centre (North-East zone)"
+    },
+    {
+      "id": "dis-44",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Rajendra Institute of Medical Sciences (RIMS), Ranchi",
+      "location": "Jharkhand",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-45",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Mahatma Gandhi Memorial Medical College, Jamshedpur",
+      "location": "Jharkhand",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-46",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "SSG Hospital, Vadodara",
+      "location": "Gujarat",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-47",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "G.G. Hospital, Jamnagar",
+      "location": "Gujarat",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-48",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "Sir T. Hospital, Bhavnagar",
+      "location": "Gujarat",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-49",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "PMCH, Patna",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-50",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "NMCH, Patna",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-51",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "IGIMS, Patna",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-52",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "DMCH, Darbhanga",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-53",
+      "sourcePages": [
+        21
+      ],
+      "verified": false,
+      "name": "JLNMCH, Bhagalpur",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-54",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "ANMMCH, Gaya Ji",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-55",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "SKMCH, Muzaffarpur",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-56",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "GMC, Bettiah",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-57",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "BMIMS, Pawapuri, Nalanda",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-58",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "JKTMC&H, Madhepura",
+      "location": "Bihar",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-59",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "Andhra Medical College / King George Hospital, Visakhapatnam",
+      "location": "Andhra Pradesh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-60",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "Guntur Medical College / Govt. General Hospital, Guntur",
+      "location": "Andhra Pradesh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-61",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "Kurnool Medical College / Govt. General Hospital, Kurnool",
+      "location": "Andhra Pradesh",
+      "remarks": "—"
+    },
+    {
+      "id": "dis-62",
+      "sourcePages": [
+        22
+      ],
+      "verified": false,
+      "name": "RIMS, Imphal",
+      "location": "Manipur",
+      "remarks": "—"
+    }
+  ],
+  "annexures": [
+    {
+      "id": "annex-1",
+      "sourcePages": [
+        17,
+        18
+      ],
+      "verified": false,
+      "title": "Annexure-1: Nodal centres for private college admission",
+      "description": "Which government college acts as the admission centre for each private medical and dental college."
+    },
+    {
+      "id": "annex-2",
+      "sourcePages": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "verified": false,
+      "title": "Annexure-2: Disability certification centres",
+      "description": "62 centres whose PwD certificates (NMC norms) are accepted."
+    },
+    {
+      "id": "annex-3",
+      "sourcePages": [
+        23
+      ],
+      "verified": false,
+      "title": "Annexure-3: EWS certificate format",
+      "description": "UP Government income & asset certificate format (in Hindi) for EWS candidates."
+    },
+    {
+      "id": "annex-4",
+      "sourcePages": [
+        24,
+        25
+      ],
+      "verified": false,
+      "title": "Annexure-4: Service bond",
+      "description": "Agreement bond for 2 years of government service after PG (₹40 lakh for a degree, ₹20 lakh for a diploma or MDS)."
+    }
+  ],
+  "importantDates": [],
+  "gaps": [
+    {
+      "id": "gap-schedule",
+      "sourcePages": [],
+      "verified": false,
+      "title": "Counselling schedule",
+      "detail": "The brochure has no dates for registration, choice filling, results or reporting. Check upneet.gov.in for the schedule notice."
+    },
+    {
+      "id": "gap-seat-matrix",
+      "sourcePages": [],
+      "verified": false,
+      "title": "Seat matrix by speciality",
+      "detail": "The number of seats per college and speciality isn't in the brochure. It's published separately."
+    },
+    {
+      "id": "gap-cutoffs",
+      "sourcePages": [],
+      "verified": false,
+      "title": "Cutoff ranks",
+      "detail": "Previous-year closing ranks aren't in the brochure, so we can't predict college or speciality chances from your rank yet."
+    },
+    {
+      "id": "gap-tuition",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "title": "College tuition fees",
+      "detail": "The brochure says private colleges charge the government-fixed tuition fee but doesn't list the amounts."
+    },
+    {
+      "id": "gap-govt-college-list",
+      "sourcePages": [],
+      "verified": false,
+      "title": "List of government colleges and seats",
+      "detail": "Only private colleges (via nodal centres) are listed. Government colleges and their PG seats aren't."
+    }
+  ]
+}
