@@ -22,7 +22,8 @@ guide per state:
 | Ingestion | Claude Code extracts documents into JSON (no AI or API key in the app). A human reviews every item in the local review page. Publishing is gated on all items being verified. |
 | Scope v1 | Brochure-only. AIR and preferred specialities are collected but don't drive college prediction (no seat matrix or cutoffs ingested). |
 | Audience | Public, GooCampus-branded, no login. The profile lives only in the browser (`localStorage`). |
-| Infra | Everything local for now. Netlify deploy and any hosted storage are deferred (static `dist/` + `public/_redirects` are ready). |
+| Infra | Local-first. Temporary public preview on Netlify at https://neetpg.goocampusglobal.com (project `goocampus-neetpg`, GooCampus Team, Pro). No hosted storage. |
+| Public preview | Owner chose (2026-10-07) to show the draft UP and Gujarat data publicly, labelled "Draft" with a check-the-official-website notice, and noindexed. Built with `npm run build:preview`. |
 | Language | English UI. Hindi and Gujarati sources are translated during extraction, with a `note`. |
 | Sources per state | **Only the current counselling year's documents**, plus older ones the current notices explicitly link as in force. Anything only in older documents becomes a `gap`. |
 | Verification | Every extraction gets an independent blind check (`.claude/skills/extract-brochure/references/verify-prompt.md`), repeated until there are no major-or-worse findings. New mistake types go into the skill's "Accuracy rules". |
@@ -35,7 +36,10 @@ guide per state:
 | Uttar Pradesh 2026 | `data/states/uttar-pradesh-2026.json` | 173 | Draft, 0 verified by a human. Passed 3 independent verification rounds (0 critical/major remaining). |
 | Gujarat 2026-27 | `data/states/gujarat-2026.json` | 114 | Draft, 0 verified by a human. Built from 12 current-year documents merged into one 81-page source. Passed 3 verification rounds. |
 
-Neither state is published yet, so a production build currently contains no states.
+Neither state is published yet. `npm run build` contains no states; the public preview (`build:preview`) shows both as drafts.
+
+Deploy the preview from a clean `main`: `npm run build:preview && netlify deploy --prod --dir dist --site fb03fe2b-69e5-497f-a789-fcfe1e8167e7`.
+First deploy: `6ac5f6e5567267092e0daaac` from commit `0597da2`.
 
 Source documents (gitignored, local only):
 - `brochures/uttar-pradesh/2026/`: scanned 25-page PDF + page images.
@@ -57,7 +61,8 @@ These interpretations are flagged in the data (`note` fields) and need confirmin
 
 1. Product owner reviews and publishes both states at `http://localhost:5173/review` (Verify & next, ⌘S, Publish).
 2. Add more states with the `extract-brochure` skill (current-year documents only, then independent verification).
-3. Later: seat matrix / cutoff ingestion for rank-based predictions; Netlify deployment; Hindi UI.
+3. Once states are published, switch the preview to `npm run build` (netlify.toml) and drop the noindex header.
+4. Later: seat matrix / cutoff ingestion for rank-based predictions; Hindi UI.
 
 ## Design: Attio Mono
 
