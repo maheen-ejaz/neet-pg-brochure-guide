@@ -35,6 +35,7 @@ export const FACTS = [
   "currentlyInPG",
   "nationality",
   "schooledInState",
+  "studied10YearsInState",
   "bornInState",
   "isNri",
   "priorAdmissionInState",
@@ -192,7 +193,8 @@ export const BrochureSchema = z.object({
         stage: z.string(),
         window: z.string(),
         sector: z.enum(["government", "private", "all"]),
-        securityDeposit: z.enum(["refunded", "forfeited"]),
+        /** Omitted when the state has no security deposit (e.g. Karnataka charges penalties instead). */
+        securityDeposit: z.enum(["refunded", "forfeited"]).optional(),
         fees: z.string(),
         otherConsequence: z.string().optional(),
       }),

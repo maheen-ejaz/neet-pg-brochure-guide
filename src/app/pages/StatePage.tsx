@@ -11,7 +11,7 @@ import { NotFound } from "./NotFound";
 
 const NAV = [
   ["verdict", "Eligibility"],
-  ["money", "Fees & deposit"],
+  ["money", "Fees"],
   ["steps", "Steps"],
   ["choices", "Choice filling"],
   ["rounds", "Rounds"],
@@ -249,9 +249,10 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
   const advice = verdict ? adviseDeposit(verdict, b) : null;
   const reg = b.fees.registration;
   const total = advice?.recommended ? reg.amountInr + advice.recommended.amountInr : null;
+  const hasDeposits = b.fees.securityDeposits.length > 0;
   return (
-    <Section id="money" kicker="Your money" title="Fees & security deposit">
-      <div className="grid gap-4 md:grid-cols-[1fr_1.4fr]">
+    <Section id="money" kicker="Your money" title={hasDeposits ? "Fees & security deposit" : "Fees"}>
+      <div className={`grid gap-4 ${hasDeposits ? "md:grid-cols-[1fr_1.4fr]" : "md:grid-cols-2"}`}>
         <div className="panel-accent rounded-lg p-5">
           <p className="text-sm opacity-80">{advice?.recommended ? "You'll need to pay upfront" : "Registration fee"}</p>
           <p className="font-heading mt-1 text-4xl font-semibold tracking-tight tabular-nums">{inr(total ?? reg.amountInr)}</p>
@@ -268,9 +269,9 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
             )}
           </ul>
           <p className="mt-3 text-xs opacity-80">{reg.covers}</p>
-          {!verdict && <p className="mt-3 text-xs opacity-90">Add your profile to see which deposit applies to you.</p>}
+          {!verdict && hasDeposits && <p className="mt-3 text-xs opacity-90">Add your profile to see which deposit applies to you.</p>}
         </div>
-        <div>
+        {hasDeposits && <div>
           <p className="mb-2 text-sm font-semibold text-ink">Deposit tiers: your deposit decides which colleges you can choose<Cite pages={b.fees.securityDeposits.flatMap((d) => d.sourcePages).filter((v, i, a) => a.indexOf(v) === i)} /></p>
           <ul className="space-y-2">
             {[...b.fees.securityDeposits].sort((x, y) => x.amountInr - y.amountInr).map((t) => {
@@ -290,7 +291,7 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
               );
             })}
           </ul>
-        </div>
+        </div>}
       </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         {b.fees.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
@@ -471,7 +472,7 @@ function ResignationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
                 <p className="text-xs text-soft"><Marked text={l.window} /></p>
                 <Prose text={l.fees + (l.otherConsequence ? ` ${l.otherConsequence}` : "")} pages={l.sourcePages} className="mt-1" />
               </div>
-              <span className="justify-self-start sm:justify-self-end"><StatusChip className={lost ? "bg-bad-tint text-bad" : "bg-good-tint text-good"}>Deposit {l.securityDeposit}</StatusChip></span>
+              {l.securityDeposit && <span className="justify-self-start sm:justify-self-end"><StatusChip className={lost ? "bg-bad-tint text-bad" : "bg-good-tint text-good"}>Deposit {l.securityDeposit}</StatusChip></span>}
             </li>
           );
         })}
@@ -600,7 +601,7 @@ function HelpSection({ b }: { b: Brochure }) {
         {h.phones.map((p) => (
           <div key={p.label} className="rounded-lg border border-line p-4">
             <p className="font-semibold text-ink">{p.label}</p>
-            <ul className="mt-1 space-y-0.5 text-sm">{p.numbers.map((n) => <li key={n}><a className="text-brand-strong hover:underline" href={`tel:+91${n}`}>{n}</a></li>)}</ul>
+            <ul className="mt-1 space-y-0.5 text-sm">{p.numbers.map((n) => <li key={n}><a className="text-brand-strong hover:underline" href={`tel:+91${n.replace(/^0/, "")}`}>{n}</a></li>)}</ul>
           </div>
         ))}
       </div>

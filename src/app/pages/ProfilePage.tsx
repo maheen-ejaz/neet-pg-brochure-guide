@@ -227,11 +227,22 @@ export function ProfilePage() {
             <option value={ABROAD}>Outside India</option>
           </select>
         </Field>
+        <Field
+          label="Did you study at least 10 academic years (1st to 12th standard) in one state, and pass your 10th or 12th exam there?"
+          hint="Count a class you took more than one year to pass as one year. Karnataka requires this for Government and GMP seats; if your parent was in the All India Service (Karnataka cadre) and posted outside the state, the years outside count too."
+          htmlFor="tenyear"
+        >
+          <select id="tenyear" className={inputClass} value={p.tenYearStudyState ?? ""} onChange={(e) => set("tenYearStudyState", e.target.value || null)}>
+            <option value="">Select…</option>
+            <option value={NONE}>No, not 10 years in any one state</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
+          </select>
+        </Field>
         <Field label="Are you, or your parents, Non-Resident Indians (NRI)?">
           <Choice name="NRI" value={p.nri} onChange={(v) => set("nri", v)}
             options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
         </Field>
-        <Field label="Category" hint="OBC is called SEBC in some states, such as Gujarat.">
+        <Field label="Category" hint="OBC is called SEBC in Gujarat, and covers Category-1, 2A, 2B, 3A and 3B in Karnataka.">
           <Choice<Category> name="Category" value={p.category} onChange={(v) => set("category", v)}
             options={CATEGORIES.map((c) => ({ value: c, label: c === "UR" ? "General (UR)" : c }))} />
         </Field>

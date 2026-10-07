@@ -35,6 +35,7 @@ guide per state:
 |---|---|---|---|
 | Uttar Pradesh 2026 | `data/states/uttar-pradesh-2026.json` | 173 | Draft, 0 verified by a human. Passed 3 independent verification rounds (0 critical/major remaining). |
 | Gujarat 2026-27 | `data/states/gujarat-2026.json` | 114 | Draft, 0 verified by a human. Built from 12 current-year documents merged into one 81-page source. Passed 3 verification rounds. |
+| Karnataka 2026-27 | `data/states/karnataka-2026.json` | 187 | Draft, 0 verified by a human. KEA PGET 2026 Information Bulletin (68 pages, 14-08-2026), live for MDS; PG Medical takes effect after MCC's announcement. |
 
 Neither state is published yet. `npm run build` contains no states; the public preview (`build:preview`) shows both as drafts.
 
@@ -44,8 +45,10 @@ First deploy: `6ac5f6e5567267092e0daaac` from commit `0597da2`.
 Source documents (gitignored, local only):
 - `brochures/uttar-pradesh/2026/`: scanned 25-page PDF + page images.
 - `brochures/gujarat/2026/`: `docs/` originals, merged `source.pdf`, page images. Gujarat source URLs are in the JSON's `source.documents`.
+- `brochures/karnataka/2026/`: `source.pdf` (the owner's "Karnataka - PGET 2026.pdf") + page images.
 
-Tests: 36 passing (`src/engine/eligibility.test.ts` for UP, `src/engine/gujarat.test.ts`).
+Tests: 56 passing (`src/engine/eligibility.test.ts` for UP, `gujarat.test.ts`, `karnataka.test.ts`, `src/app/text.test.ts`).
+Profile has a Karnataka-driven question: 10 years of school (1st–12th) in one state (`tenYearStudyState`).
 
 ## Open decisions for the product owner
 
@@ -56,6 +59,13 @@ These interpretations are flagged in the data (`note` fields) and need confirmin
 2. **Gujarat:** NRI quota assumed open regardless of where MBBS was done (`elig-outside-nri`).
 3. **UP:** foreign medical graduates treated as "MBBS outside UP", so private colleges only (`elig-outside-state`).
 4. **UP:** "reserved category of other states" read as non-UP domicile (`elig-other-state-reserved`).
+5. **Karnataka:** "Karnataka candidate" (for SC/ST/OBC and PwD reservation) read as Karnataka domicile
+   (`elig-reservation-karnataka-only`, `elig-pwd-outside`); clause b/c schooling is the alternative reading.
+6. **Karnataka:** foreign graduates shown OPN and NRI seats only (`elig-abroad`). 8.1(c) says Government seats need
+   MBBS/BDS from India, but the clause c table row only says "outside Karnataka", which could open Government and
+   GMP seats to foreign graduates with 10 years of Karnataka schooling.
+7. **Karnataka:** the PG-admission affidavit (Annexure 7) is garbled about how far back "surrendered a seat" reaches
+   (`elig-affidavit`).
 
 ## Next steps (in rough priority)
 

@@ -13,6 +13,7 @@ const base: Profile = {
   mbbsInstitution: null,
   domicileState: "Uttar Pradesh",
   schoolState: "Uttar Pradesh",
+  tenYearStudyState: null,
   birthState: "Uttar Pradesh",
   nri: false,
   category: "UR",

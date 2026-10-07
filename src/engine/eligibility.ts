@@ -22,6 +22,7 @@ export interface Facts {
   nationality: Profile["nationality"];
   internshipCompletion: string | null;
   schooledInState: boolean | null;
+  studied10YearsInState: boolean | null;
   bornInState: boolean | null;
   isNri: boolean | null;
   priorAdmissionInState: boolean | null;
@@ -54,6 +55,7 @@ export function deriveFacts(profile: Profile, brochure: Brochure): Facts {
     nationality: profile.nationality,
     internshipCompletion: profile.internshipCompletion,
     schooledInState: profile.schoolState ? profile.schoolState === state : null,
+    studied10YearsInState: profile.tenYearStudyState ? profile.tenYearStudyState === state : null,
     bornInState: profile.birthState ? profile.birthState === state : null,
     isNri: profile.nri,
     priorAdmissionInState: profile.priorAdmissionState === null ? null : profile.priorAdmissionState === state,

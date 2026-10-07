@@ -114,6 +114,16 @@ These mistakes were all found by independent checks. Avoid them on the first pas
     payment success, and they're from last year. Every fix needs its own quote and page.
 14. **Keep hedges in the candidate-facing text, not only in `note`.** If a rule is an inference, the
     explanation itself should say "appears to" or "confirm with <authority>".
+15. **Encode the exceptions with the requirement** (Karnataka 2026). When a document relaxes a requirement
+    for named groups (e.g. clauses d–g count study outside the state toward the 10-year rule), a rule that
+    restricts everyone failing the requirement is too strict. Mention the exception in the restricting rule,
+    and point the profile question at it where possible.
+16. **Check every version of a definition** (Karnataka 2026). Prose and tables can define the same clause
+    differently (8.1(c) "located in India" vs the clause table's "outside Karnataka"; GMH in the prose vs the
+    allotment table). Encode the reading each seat type actually references and note the conflict.
+17. **Read annexure tables and NBE notices for numbers** (Karnataka 2026). Qualifying cut-offs (percentile and
+    score per category) sat only in an annexure image and were missed on the first pass.
+
 ## 4. Check
 
 ```bash

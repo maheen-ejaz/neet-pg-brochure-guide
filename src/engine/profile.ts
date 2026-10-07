@@ -11,6 +11,12 @@ export interface Profile {
   domicileState: string | null;
   /** State where the candidate's 12th-standard school is located. */
   schoolState: string | null;
+  /**
+   * State where the candidate studied at least 10 academic years between 1st and 12th standard,
+   * passing their 10th or 12th exam there, or NONE (e.g. Karnataka's clause b/c). At most one
+   * state can qualify, since 1st–12th is 12 years.
+   */
+  tenYearStudyState: string | null;
   birthState: string | null;
   /** Candidate or their parents are Non-Resident Indians. */
   nri: boolean | null;
@@ -42,6 +48,7 @@ export const EMPTY_PROFILE: Profile = {
   mbbsInstitution: null,
   domicileState: null,
   schoolState: null,
+  tenYearStudyState: null,
   birthState: null,
   nri: null,
   category: null,
@@ -91,6 +98,7 @@ export const PROFILE_FIELD_LABELS: Record<string, string> = {
   currentlyInPG: "whether you're admitted to a PG course through an earlier NEET-PG/MDS",
   nationality: "your nationality",
   schooledInState: "where you did 12th standard",
+  studied10YearsInState: "where you studied 10 years of school (1st–12th standard)",
   bornInState: "your state of birth",
   isNri: "whether you or your parents are NRI",
   internshipCompletion: "your internship completion date",
