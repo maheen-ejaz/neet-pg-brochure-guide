@@ -73,6 +73,10 @@ Rules:
   cut-offs, certificate "issued on or after" dates). Illustrative example dates inside rules don't count.
 - **gaps**: list what candidates would expect but the brochure doesn't contain (schedule, seat matrix,
   cutoffs, tuition, college list…).
+- **Seat types** (drives the "All seats | Government | Management & NRI" switch): set `meta.seatTerms` to the
+  state's own names, and give an item `seats` (government / management / nri) **only** when the source limits
+  it to those seat types, citing the page. Untagged items show in every view, so when unsure leave it untagged.
+  Never tag by college sector alone where private colleges also hold government-quota seats (e.g. Gujarat).
 
 ## 3b. Accuracy rules (lessons from the UP/Gujarat 2026 verification)
 

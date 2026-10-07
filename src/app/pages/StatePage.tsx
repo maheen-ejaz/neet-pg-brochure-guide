@@ -6,6 +6,7 @@ import type { Profile } from "../../engine/profile";
 import type { Brochure } from "../../schema/stateBrochure";
 import { Cite, DraftBanner, Marked, Prose, RuleCard, Section, SourceDocsContext, StatusChip, inr, inrShort } from "../components/ui";
 import { VerdictBadge } from "../components/VerdictBadge";
+import { SeatChip, SeatViewBanner, SeatViewContext, SeatViewSwitch, seatOrder, useSeatView, useStoredSeatView } from "../seats";
 import { formatDate } from "../text";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
@@ -29,12 +30,14 @@ export function StatePage() {
   const { key } = useParams();
   const entry = findState(key);
   const { profile } = useProfile();
+  const [seatView, setSeatView] = useStoredSeatView(profile?.nri);
   if (!entry) return <NotFound />;
   const { brochure: b } = entry;
   const verdict = profile ? checkEligibility(profile, b) : null;
 
   return (
     <SourceDocsContext.Provider value={b.source.documents}>
+    <SeatViewContext.Provider value={seatView}>
     <div className="space-y-6">
       {b.status === "draft" && <DraftBanner />}
       <header>
@@ -51,7 +54,13 @@ export function StatePage() {
             </a>
           ))}
         </div>
+        <div className="mt-5 space-y-2">
+          <SeatViewSwitch view={seatView} onChange={setSeatView} terms={b.meta.seatTerms} />
+          <SeatViewBanner view={seatView} terms={b.meta.seatTerms} />
+        </div>
       </header>
+
+      {seatView === "mgmtNri" && <SeatSummary b={b} />}
 
       <nav aria-label="Sections" className="no-print sticky top-[53px] z-10 -mx-4 overflow-x-auto border-b border-line bg-surface/90 px-4 py-2 backdrop-blur">
         <ul className="flex gap-1 whitespace-nowrap">
@@ -68,7 +77,7 @@ export function StatePage() {
       <StepsSection b={b} />
       <Section id="choices" kicker="Before you lock" title="Choice filling rules">
         <div className="grid gap-3 sm:grid-cols-2">
-          {b.choiceFilling.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+          <SeatList items={b.choiceFilling} />
         </div>
       </Section>
       <RoundsSection b={b} />
@@ -82,9 +91,10 @@ export function StatePage() {
       <Section id="gaps" kicker="Be aware" title="Not covered in this brochure">
         <p className="mb-4 text-sm text-soft">These are published separately, so check the official website for them.</p>
         <div className="grid gap-3 sm:grid-cols-2">
-          {b.gaps.map((g) => (
+          {seatOrder(seatView, b.gaps).map((g) => (
             <div key={g.id} className="rounded-lg border border-dashed border-line-strong p-4">
-              <h3 className="font-semibold">{g.title}</h3>
+              <SeatChip seats={g.seats} />
+              <h3 className={`font-semibold ${g.seats ? "mt-1.5" : ""}`}>{g.title}</h3>
               <Prose text={g.detail} pages={g.sourcePages} className="mt-1" />
             </div>
           ))}
@@ -93,8 +103,8 @@ export function StatePage() {
           <>
             <h3 className="mt-6 mb-2 font-semibold">Forms and annexures</h3>
             <ul className="space-y-1 text-sm">
-              {b.annexures.map((a) => (
-                <li key={a.id}><strong>{a.title}</strong>: <Marked text={a.description} /><Cite pages={a.sourcePages} /></li>
+              {seatOrder(seatView, b.annexures).map((a) => (
+                <li key={a.id}><strong>{a.title}</strong>: <Marked text={a.description} /> <SeatChip seats={a.seats} /><Cite pages={a.sourcePages} /></li>
               ))}
             </ul>
           </>
@@ -114,11 +124,61 @@ export function StatePage() {
         )}
       </Section>
     </div>
+    </SeatViewContext.Provider>
     </SourceDocsContext.Provider>
   );
 }
 
+/** Management & NRI view: everything in this brochure specific to those seats, with links to it. */
+function SeatSummary({ b }: { b: Brochure }) {
+  const { order } = useSeatView();
+  type Row = { id: string; title: string; seats?: Brochure["eligibility"]["rules"][number]["seats"]; pages: number[] };
+  const groups: [string, string, Row[]][] = [
+    ["verdict", "Eligibility", b.eligibility.rules.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))],
+    ["money", "Fees", b.fees.rules.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))],
+    ["steps", "Steps", b.process.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))],
+    ["choices", "Choice filling", b.choiceFilling.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))],
+    ["rounds", "Rounds", b.rounds.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))],
+    ["documents", "Documents", [...b.documents.map((d) => ({ id: d.id, title: d.name, seats: d.seats, pages: d.sourcePages })), ...b.admission.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))]],
+    ["reservation", "Reservation", b.reservation.rules.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))],
+    ["resignation", "Resignation", [...b.resignation.ladder.map((l) => ({ id: l.id, title: l.stage, seats: l.seats, pages: l.sourcePages })), ...b.resignation.rules.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))]],
+    ["bond", "Service bond", b.serviceBond.rules.map((r) => ({ id: r.id, title: r.title, seats: r.seats, pages: r.sourcePages }))],
+  ];
+  const specific = groups
+    .map(([id, label, rows]) => [id, label, order(rows).filter((r) => r.seats)] as const)
+    .filter(([, , rows]) => rows.length > 0);
+  const count = specific.reduce((n, [, , rows]) => n + rows.length, 0);
+  return (
+    <section className="card p-5 sm:p-6" aria-labelledby="seat-summary">
+      <p className="text-xs text-soft">Management & NRI at a glance</p>
+      <h2 id="seat-summary" className="text-lg sm:text-xl">
+        {count === 0 ? "Nothing in this brochure is specific to these seats" : count === 1 ? "1 thing in this brochure is specific to these seats" : `${count} things in this brochure are specific to these seats`}
+      </h2>
+      {count === 0 ? (
+        <p className="mt-2 text-sm">Everything below applies to all applicants. Check the official website for separate management or NRI notices.</p>
+      ) : (
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
+          {specific.map(([id, label, rows]) => (
+            <div key={id}>
+              <a href={`#${id}`} className="text-xs font-semibold tracking-wide text-soft uppercase hover:text-ink">{label} ↓</a>
+              <ul className="mt-1.5 space-y-1.5 text-sm">
+                {rows.map((r) => (
+                  <li key={r.id} className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                    <span className="font-medium text-ink">{r.title}</span>
+                    <SeatChip seats={r.seats} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+}
+
 function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict | null; profile: Profile | null }) {
+  const { show, order } = useSeatView();
   if (!verdict || !profile) {
     return (
       <Section id="verdict" kicker="Eligibility" title="Who can apply">
@@ -128,9 +188,10 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
           <Link to="/profile" className="btn-primary mt-3">Add my profile</Link>
         </div>
         <ul className="space-y-3">
-          {b.eligibility.rules.map((r) => (
+          {order(b.eligibility.rules).map((r) => (
             <li key={r.id} className="rounded-lg border border-line p-4">
-              <h3 className="font-semibold">{r.title}</h3>
+              <SeatChip seats={r.seats} />
+              <h3 className={`font-semibold ${r.seats ? "mt-1.5" : ""}`}>{r.title}</h3>
               <Prose text={r.explanation} pages={r.sourcePages} className="mt-1" />
             </li>
           ))}
@@ -139,9 +200,10 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
     );
   }
 
-  const applied = verdict.reasons.filter((r) => r.match === "applies");
-  const maybe = verdict.reasons.filter((r) => r.match === "maybe");
-  const manual = verdict.reasons.filter((r) => r.match === "manual");
+  const reasons = verdict.reasons.filter((r) => show(r.rule));
+  const applied = reasons.filter((r) => r.match === "applies");
+  const maybe = reasons.filter((r) => r.match === "maybe");
+  const manual = reasons.filter((r) => r.match === "manual");
   const icon = (r: (typeof applied)[number]) => {
     const e = r.rule.effect;
     if (e.type === "ineligible") return ["✕", "text-bad"];
@@ -189,7 +251,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
                 <li key={r.rule.id} className="flex gap-3 p-4">
                   <span aria-hidden className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-canvas text-xs font-semibold ${color}`}>{glyph}</span>
                   <div>
-                    <p className="font-semibold text-ink">{r.rule.title}</p>
+                    <p className="font-semibold text-ink">{r.rule.title} <SeatChip seats={r.rule.seats} /></p>
                     <Prose text={r.rule.explanation} pages={r.rule.sourcePages} className="mt-0.5" />
                   </div>
                 </li>
@@ -204,7 +266,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
           <ul className="space-y-2">
             {maybe.map((r) => (
               <li key={r.rule.id} className="rounded-lg border border-dashed border-line-strong p-3 text-sm">
-                <p className="font-semibold text-ink">{r.rule.title}</p>
+                <p className="font-semibold text-ink">{r.rule.title} <SeatChip seats={r.rule.seats} /></p>
                 <Prose text={r.rule.explanation} pages={r.rule.sourcePages} className="mt-0.5" />
               </li>
             ))}
@@ -219,7 +281,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
               <li key={r.rule.id} className="flex gap-2 text-sm">
                 <span aria-hidden className="text-soft">☐</span>
                 <div>
-                  <p className="font-semibold text-ink">{r.rule.title}</p>
+                  <p className="font-semibold text-ink">{r.rule.title} <SeatChip seats={r.rule.seats} /></p>
                   <Prose text={r.rule.explanation} pages={r.rule.sourcePages} className="mt-0.5" />
                 </div>
               </li>
@@ -247,6 +309,7 @@ function Fact({ label, children }: { label: string; children: React.ReactNode })
 }
 
 function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) {
+  const { order } = useSeatView();
   const advice = verdict ? adviseDeposit(verdict, b) : null;
   const reg = b.fees.registration;
   const total = advice?.recommended ? reg.amountInr + advice.recommended.amountInr : null;
@@ -275,14 +338,14 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
         {hasDeposits && <div>
           <p className="mb-2 text-sm font-semibold text-ink">Deposit tiers: your deposit decides which colleges you can choose<Cite pages={b.fees.securityDeposits.flatMap((d) => d.sourcePages).filter((v, i, a) => a.indexOf(v) === i)} /></p>
           <ul className="space-y-2">
-            {[...b.fees.securityDeposits].sort((x, y) => x.amountInr - y.amountInr).map((t) => {
+            {order([...b.fees.securityDeposits].sort((x, y) => x.amountInr - y.amountInr)).map((t) => {
               const rec = advice?.recommended?.id === t.id;
               const alt = advice?.alternatives.find((a) => a.tier.id === t.id);
               const irrelevant = !!advice?.recommended && !rec && !alt;
               return (
                 <li key={t.id} className={`flex items-center justify-between gap-3 rounded-lg border p-3 ${rec ? "border-brand/50 bg-brand-tint" : "border-line"} ${irrelevant ? "opacity-50" : ""}`}>
                   <div>
-                    <p className="font-semibold text-ink">{t.label}</p>
+                    <p className="font-semibold text-ink">{t.label} <SeatChip seats={t.seats} /></p>
                     <p className="text-xs text-soft">
                       {rec ? "Recommended for you: covers every college open to you" : alt ? `Cheaper option: ${alt.covers.join(" ")} colleges only` : irrelevant ? "Doesn't cover the colleges open to you" : " "}
                     </p>
@@ -295,20 +358,23 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
         </div>}
       </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
-        {b.fees.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+        <SeatList items={b.fees.rules} />
       </div>
     </Section>
   );
 }
 
 function StepsSection({ b }: { b: Brochure }) {
+  const { order } = useSeatView();
+  const steps = order(b.process);
+  const dates = order(b.importantDates);
   return (
     <Section id="steps" kicker="Process" title="Step by step">
       <ol className="relative space-y-4 border-l border-line-strong pl-6">
-        {b.process.map((s, i) => (
+        {steps.map((s, i) => (
           <li key={s.id} className="relative">
             <span className="absolute -left-[37px] flex h-6 w-6 items-center justify-center rounded-md border border-line-strong bg-surface text-xs font-semibold text-soft tabular-nums">{i + 1}</span>
-            <h3 className="font-semibold">{s.title}</h3>
+            <h3 className="font-semibold">{s.title} <SeatChip seats={s.seats} /></h3>
             <Prose text={s.description} pages={s.sourcePages} className="mt-0.5" />
             {s.link && <a href={s.link} target="_blank" rel="noreferrer" className="text-sm text-brand-strong hover:underline">{s.link.replace(/^https?:\/\//, "")} ↗</a>}
           </li>
@@ -316,12 +382,12 @@ function StepsSection({ b }: { b: Brochure }) {
       </ol>
       <div className="mt-6 rounded-lg border border-line bg-canvas p-4">
         <h3 className="font-semibold">Important dates</h3>
-        {b.importantDates.length === 0 ? (
+        {dates.length === 0 ? (
           <p className="mt-1 text-sm">This brochure doesn't publish dates. Check the schedule notice on {b.meta.officialWebsites[0]?.replace(/^https?:\/\//, "")}.</p>
         ) : (
           <ul className="mt-2 space-y-1 text-sm">
-            {b.importantDates.map((d) => (
-              <li key={d.id}><strong>{d.label}:</strong> <Marked text={formatDate(d.date)} />{d.endDate && <> – <Marked text={formatDate(d.endDate)} /></>}<Cite pages={d.sourcePages} /></li>
+            {dates.map((d) => (
+              <li key={d.id}><SeatChip seats={d.seats} /> <strong>{d.label}:</strong> <Marked text={formatDate(d.date)} />{d.endDate && <> – <Marked text={formatDate(d.endDate)} /></>}<Cite pages={d.sourcePages} /></li>
             ))}
           </ul>
         )}
@@ -331,11 +397,13 @@ function StepsSection({ b }: { b: Brochure }) {
 }
 
 function RoundsSection({ b }: { b: Brochure }) {
+  const { order } = useSeatView();
+  const rounds = order(b.rounds);
   const groups = useMemo(() => {
     const m = new Map<string, Brochure["rounds"]>();
-    for (const r of b.rounds) m.set(r.tag ?? "General", [...(m.get(r.tag ?? "General") ?? []), r]);
+    for (const r of rounds) m.set(r.tag ?? "General", [...(m.get(r.tag ?? "General") ?? []), r]);
     return [...m.entries()];
-  }, [b.rounds]);
+  }, [rounds]);
   return (
     <Section id="rounds" kicker="Rounds" title="What happens in each round">
       <div className="grid gap-4 lg:grid-cols-4 sm:grid-cols-2">
@@ -343,7 +411,7 @@ function RoundsSection({ b }: { b: Brochure }) {
           <div key={tag} className="rounded-lg border border-line bg-canvas p-3">
             <h3 className="mb-2 px-1 text-xs font-semibold tracking-wide text-soft uppercase">{tag}</h3>
             <div className="space-y-2">
-              {rules.map((r) => <RuleCard key={r.id} title={r.title} detail={r.detail} severity={r.severity} pages={r.sourcePages} />)}
+              {rules.map((r) => <RuleCard key={r.id} title={r.title} detail={r.detail} severity={r.severity} seats={r.seats} pages={r.sourcePages} />)}
             </div>
           </div>
         ))}
@@ -362,7 +430,9 @@ function DocumentsSection({ entryKey, b, profile }: { entryKey: string; b: Broch
     setDone(next);
     try { localStorage.setItem(storeKey, JSON.stringify(next)); } catch { /* memory only */ }
   };
-  const docs = profile ? documentsFor(profile, b) : b.documents.map((doc) => ({ doc, certain: doc.appliesWhen === null }));
+  const { show, order } = useSeatView();
+  const allDocs = profile ? documentsFor(profile, b) : b.documents.map((doc) => ({ doc, certain: doc.appliesWhen === null }));
+  const docs = [...allDocs.filter((d) => show(d.doc) && d.doc.seats), ...allDocs.filter((d) => show(d.doc) && !d.doc.seats)];
   const count = docs.filter((d) => done.includes(d.doc.id)).length;
 
   return (
@@ -384,6 +454,7 @@ function DocumentsSection({ entryKey, b, profile }: { entryKey: string; b: Broch
               <span className="text-sm">
                 <span className={`font-medium text-ink ${done.includes(doc.id) ? "line-through opacity-60" : ""}`}>{doc.name}</span>
                 {!certain && <span className="ml-2 rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">If applicable</span>}
+                {doc.seats && <span className="ml-2"><SeatChip seats={doc.seats} /></span>}
                 <Cite pages={doc.sourcePages} />
                 {doc.detail && <span className="block text-soft"><Marked text={doc.detail} /></span>}
               </span>
@@ -392,14 +463,17 @@ function DocumentsSection({ entryKey, b, profile }: { entryKey: string; b: Broch
         ))}
       </ul>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        {b.admission.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+        {order(b.admission).map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
       </div>
     </Section>
   );
 }
 
 function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) {
-  const { policy, conversion } = b.reservation;
+  const { show, order } = useSeatView();
+  const policy = b.reservation.policy && show(b.reservation.policy) ? b.reservation.policy : null;
+  const conversion = b.reservation.conversion && show(b.reservation.conversion) ? b.reservation.conversion : null;
+  const policyHidden = !!b.reservation.policy && !policy;
   const bars = policy
     ? [...policy.vertical, { category: "UR (open)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }]
     : [];
@@ -408,9 +482,13 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
       {verdict?.effectiveCategory && (
         <p className="mb-2 text-sm">You are counted as <strong>{verdict.effectiveCategory}</strong> in this state.</p>
       )}
-      {policy ? (
+      {policyHidden ? (
+        <p className="rounded-lg border border-dashed border-line p-3 text-sm">
+          The reservation percentages apply only to {b.reservation.policy?.seats ? <SeatChip seats={b.reservation.policy.seats} /> : "certain seats"}. Switch to All seats to see them.
+        </p>
+      ) : policy ? (
         <>
-          <p className="text-sm">Applies to: <strong><Marked text={policy.appliesTo} /></strong><Cite pages={policy.sourcePages} /></p>
+          <p className="text-sm">Applies to: <strong><Marked text={policy.appliesTo} /></strong> <SeatChip seats={policy.seats} /><Cite pages={policy.sourcePages} /></p>
           <div className="mt-4 flex h-10 overflow-hidden rounded-lg" role="img" aria-label={bars.map((v) => `${v.category} ${v.percent}%`).join(", ")}>
             {bars.map((v, i) => {
               const mine = verdict?.effectiveCategory && v.category.startsWith(verdict.effectiveCategory);
@@ -445,7 +523,7 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
           </div>
         )}
         <div className={`space-y-3 ${conversion ? "" : "md:col-span-2 md:grid md:grid-cols-2 md:gap-3 md:space-y-0"}`}>
-          {b.reservation.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+          {order(b.reservation.rules).map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
         </div>
       </div>
     </Section>
@@ -454,7 +532,8 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
 
 function ResignationSection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) {
   const sectors = verdict?.sectors.length ? verdict.sectors : ["government", "private"];
-  const ladder = b.resignation.ladder.filter((l) => l.sector === "all" || sectors.includes(l.sector));
+  const { show, order } = useSeatView();
+  const ladder = b.resignation.ladder.filter((l) => (l.sector === "all" || sectors.includes(l.sector)) && show(l));
   return (
     <Section id="resignation" kicker="Exit costs" title="What resigning a seat costs you">
       {ladder.length === 0 ? (
@@ -469,7 +548,7 @@ function ResignationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
             <li key={l.id} className="grid gap-2 rounded-lg border border-line p-4 sm:grid-cols-[2rem_1fr_9rem] sm:items-center">
               <span className="flex h-6 w-6 items-center justify-center rounded-md border border-line-strong bg-surface text-xs font-semibold text-soft tabular-nums">{i + 1}</span>
               <div>
-                <p className="font-semibold text-ink">{l.stage}</p>
+                <p className="font-semibold text-ink">{l.stage} <SeatChip seats={l.seats} /></p>
                 <p className="text-xs text-soft"><Marked text={l.window} /></p>
                 <Prose text={l.fees + (l.otherConsequence ? ` ${l.otherConsequence}` : "")} pages={l.sourcePages} className="mt-1" />
               </div>
@@ -479,19 +558,25 @@ function ResignationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
         })}
       </ol>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        {b.resignation.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+        {order(b.resignation.rules).map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
       </div>
     </Section>
   );
 }
 
 function BondSection({ b }: { b: Brochure }) {
-  const bond = b.serviceBond.bond;
+  const { show, order } = useSeatView();
+  const bond = b.serviceBond.bond && show(b.serviceBond.bond) ? b.serviceBond.bond : null;
+  const bondHidden = !!b.serviceBond.bond && !bond;
   return (
     <Section id="bond" kicker="After PG" title="Service bond">
-      {bond ? (
+      {bondHidden ? (
+        <p className="rounded-lg border border-dashed border-line p-3 text-sm">
+          The service bond in this brochure applies to <SeatChip seats={b.serviceBond.bond?.seats} /> Switch to All seats to see it.
+        </p>
+      ) : bond ? (
         <>
-          <p className="text-sm">Applies to: <strong><Marked text={bond.appliesTo} /></strong><Cite pages={bond.sourcePages} /></p>
+          <p className="text-sm">Applies to: <strong><Marked text={bond.appliesTo} /></strong> <SeatChip seats={bond.seats} /><Cite pages={bond.sourcePages} /></p>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <div className="panel-accent rounded-lg p-4">
               <p className="text-xs opacity-80">Service period</p>
@@ -510,7 +595,7 @@ function BondSection({ b }: { b: Brochure }) {
         <p className="rounded-lg border border-dashed border-line p-3 text-sm">These documents don't describe a service bond. Check the official website for this year's bond rules.</p>
       )}
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        {b.serviceBond.rules.map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
+        {order(b.serviceBond.rules).map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
       </div>
     </Section>
   );
@@ -521,7 +606,9 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
   const [showPwd, setShowPwd] = useState(false);
   const dental = profile?.courseType === "dental";
   const needle = q.trim().toLowerCase();
+  const { show } = useSeatView();
   const rows = b.nodalCentres
+    .filter(show)
     .map((n) => ({ n, colleges: (dental ? n.privateDental : n.privateMedical).filter((c) => c.toLowerCase().includes(needle) || n.centre.toLowerCase().includes(needle)) }))
     .filter((r) => r.colleges.length > 0);
   const total = b.nodalCentres.reduce((s, n) => s + (dental ? n.privateDental : n.privateMedical).length, 0);
@@ -556,7 +643,7 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
               <table className="w-full min-w-[520px] text-left text-sm">
                 <thead className="text-xs text-soft"><tr><th className="py-1 pr-3">Centre</th><th className="pr-3">Location</th><th>Remarks</th></tr></thead>
                 <tbody>
-                  {b.disabilityCentres.map((d) => (
+                  {b.disabilityCentres.filter(show).map((d) => (
                     <tr key={d.id} className="border-t border-line align-top">
                       <td className="py-1.5 pr-3 font-medium text-ink">{d.name}</td><td className="pr-3">{d.location}</td><td>{d.remarks}<Cite pages={d.sourcePages} /></td>
                     </tr>
@@ -574,7 +661,8 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
 function HelpCentresSection({ b }: { b: Brochure }) {
   const [q, setQ] = useState("");
   const needle = q.trim().toLowerCase();
-  const rows = b.helpCentres.filter((c) => (c.name + " " + c.address).toLowerCase().includes(needle));
+  const { show } = useSeatView();
+  const rows = b.helpCentres.filter((c) => show(c) && (c.name + " " + c.address).toLowerCase().includes(needle));
   return (
     <Section id="colleges" kicker="Where to go" title="Help centres for document verification">
       <p className="mb-3 text-sm text-soft">Book an appointment while printing your registration slip, then visit with originals and one self-attested photocopy set.</p>
@@ -583,7 +671,7 @@ function HelpCentresSection({ b }: { b: Brochure }) {
       <ul className="grid gap-3 sm:grid-cols-2">
         {rows.map((c) => (
           <li key={c.id} className="rounded-lg border border-line p-4">
-            <p className="font-semibold text-ink">{c.name}<Cite pages={c.sourcePages} /></p>
+            <p className="font-semibold text-ink">{c.name} <SeatChip seats={c.seats} /><Cite pages={c.sourcePages} /></p>
             <p className="mt-0.5 text-sm">{c.address}</p>
           </li>
         ))}
@@ -617,4 +705,10 @@ function HelpSection({ b }: { b: Brochure }) {
       <ul className="mt-4 list-disc space-y-1 pl-5 text-sm">{h.instructions.map((i) => <li key={i}><Marked text={i} /></li>)}</ul>
     </Section>
   );
+}
+
+/** Rule cards for a list, filtered and ordered for the current seat view. */
+function SeatList({ items }: { items: Brochure["choiceFilling"] }) {
+  const { order } = useSeatView();
+  return <>{order(items).map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}</>;
 }

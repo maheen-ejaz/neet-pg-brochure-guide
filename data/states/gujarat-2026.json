@@ -2,6 +2,7 @@
   "meta": {
     "id": "meta",
     "sourcePages": [
+      1,
       3,
       4,
       33
@@ -24,7 +25,12 @@
       "GR No. MCG/1004/650/J dated 10-01-2022 (10% in-service seats)",
       "Letter No. HFWD/0133/07/2024 / Resolution No. HFWD/MSM/e-file/7/2024/2648/J dated 09-07-2024 (PwD medical boards)",
       "NMC No. E-8365532/2026-PGMEB dated 16-09-2026 (PwBD assessment guidelines)"
-    ]
+    ],
+    "seatTerms": {
+      "government": "Government quota (GQ)",
+      "management": "Management quota (MQ)",
+      "nri": "NRI quota (NQ)"
+    }
   },
   "status": "draft",
   "source": {
@@ -163,6 +169,21 @@
       "verified": false,
       "title": "Verify documents at the help centre",
       "description": "Bring the printed registration details signed by you and a parent or guardian, all originals and one self-attested photocopy set. The officer stamps your registration slip. Without it you can't continue in the admission process."
+    },
+    {
+      "id": "process-nri-verification",
+      "sourcePages": [
+        4,
+        15,
+        24
+      ],
+      "verified": false,
+      "seats": [
+        "nri"
+      ],
+      "title": "NRI applicants: verify at the ACPPGMEC office",
+      "description": "For NRI candidates, document verification and submission is done only at the office of ACPPGMEC, GMERS Medical College, Gandhinagar, where you also hand in the ₹25,000 processing-fee demand draft. The NRI instructions also mention booking a help-centre appointment, so confirm the arrangement with ACPPGMEC.",
+      "note": "p4 and p15: verification 'only at Office of ACPPGMEC, GMERS Medical College, Gandhinagar'; p24 item 3 says the same, but item 4 on the same page asks for a prior appointment 'at Help Center'."
     },
     {
       "id": "process-merit",
@@ -355,7 +376,11 @@
           "type": "note",
           "tone": "positive"
         },
-        "note": "Interpretation: route 2 literally covers universities established under a Government of India law. We apply it to all MBBS done outside Gujarat or abroad, matching the portal's \"Outside Gujarat Within India / Out of India\" options (p14). The 12th board and B/AB-group requirement is in the text, not checked by the app."
+        "note": "Interpretation: route 2 literally covers universities established under a Government of India law. We apply it to all MBBS done outside Gujarat or abroad, matching the portal's \"Outside Gujarat Within India / Out of India\" options (p14). The 12th board and B/AB-group requirement is in the text, not checked by the app.",
+        "seats": [
+          "government",
+          "management"
+        ]
       },
       {
         "id": "elig-outside-no-route",
@@ -413,7 +438,11 @@
         },
         "effect": {
           "type": "ineligible"
-        }
+        },
+        "seats": [
+          "government",
+          "management"
+        ]
       },
       {
         "id": "elig-outside-nri",
@@ -477,7 +506,10 @@
             "NRI"
           ]
         },
-        "note": "NRI route inferred from the NRI eligibility list (p26) and the 12th/domicile documents marked \"(Eligible for GQ and MQ)\". Confirm with ACPPGMEC."
+        "note": "NRI route inferred from the NRI eligibility list (p26) and the 12th/domicile documents marked \"(Eligible for GQ and MQ)\". Confirm with ACPPGMEC.",
+        "seats": [
+          "nri"
+        ]
       },
       {
         "id": "elig-nri",
@@ -500,7 +532,10 @@
         "effect": {
           "type": "note",
           "tone": "info"
-        }
+        },
+        "seats": [
+          "nri"
+        ]
       },
       {
         "id": "elig-citizenship",
@@ -563,7 +598,10 @@
         "effect": {
           "type": "note",
           "tone": "positive"
-        }
+        },
+        "seats": [
+          "government"
+        ]
       },
       {
         "id": "elig-reserved-certificates",
@@ -695,7 +733,10 @@
         "verified": false,
         "title": "10% in-service seats",
         "detail": "10% of Government quota seats in 10 MD/MS subjects at Government and GMERS colleges, and CPS courses in Government hospitals, are reserved for Gujarat in-service doctors.",
-        "severity": "info"
+        "severity": "info",
+        "seats": [
+          "government"
+        ]
       },
       {
         "id": "res-pwd",
@@ -787,7 +828,10 @@
         "verified": false,
         "title": "NRI processing fee",
         "detail": "NRI applicants also pay a ₹25,000 non-refundable processing fee by demand draft in favour of “ACPUGMEC”, payable at Gandhinagar, at the ACPPGMEC office.",
-        "severity": "critical"
+        "severity": "critical",
+        "seats": [
+          "nri"
+        ]
       },
       {
         "id": "fees-nri-undertaking",
@@ -797,7 +841,10 @@
         "verified": false,
         "title": "NRI fees are in US$ and non-refundable",
         "detail": "The NRI student and their parent or legal guardian sign a notarised undertaking to pay the college's NRI fee in US$ for the entire course. It isn't negotiable or refundable except as the admission rules allow, and extra fees apply each term if the course runs longer than normal. If dues aren't cleared, the student may not be sent up for exams.",
-        "severity": "critical"
+        "severity": "critical",
+        "seats": [
+          "nri"
+        ]
       },
       {
         "id": "fees-pin-loss",
@@ -860,7 +907,10 @@
       "verified": false,
       "title": "How NRI seats are ranked",
       "detail": "NRI seats are allotted on inter-se merit by NEET-PG All India Overall Rank among the candidates who applied for NRI seats.",
-      "severity": "info"
+      "severity": "info",
+      "seats": [
+        "nri"
+      ]
     }
   ],
   "rounds": [
@@ -1074,7 +1124,11 @@
           "abroad"
         ]
       },
-      "detail": "For candidates who did MBBS outside Gujarat."
+      "detail": "For candidates who did MBBS outside Gujarat.",
+      "seats": [
+        "government",
+        "management"
+      ]
     },
     {
       "id": "doc-domicile",
@@ -1103,7 +1157,11 @@
         ]
       },
       "detail": "For candidates who did MBBS outside Gujarat and were born outside Gujarat.",
-      "note": "Follows the registration list (p22), which includes MBBS abroad. The admission-stage list (p20) says \"outside Gujarat but within India\"."
+      "note": "Follows the registration list (p22), which includes MBBS abroad. The admission-stage list (p20) says \"outside Gujarat but within India\".",
+      "seats": [
+        "government",
+        "management"
+      ]
     },
     {
       "id": "doc-fmge",
@@ -1153,7 +1211,10 @@
           true
         ]
       },
-      "detail": "₹25,000 demand draft, printout of the online application, all MBBS marksheets, NEET-PG marksheet, school leaving certificate and 12th marksheet. Notarised colour copies of: passport (all pages, including blank ones) of you or your NRI parent; visa, residence permit or OCI/PIO card; NRI certificate from the Indian Embassy, High Commission or Consulate; Indian and foreign address proof; fee undertaking on ₹300 stamp paper (notarised); proof of origin. Also a record of days stayed in India in FY 01-04-2025–31-03-2026. Documents not in English must be translated by a competent authority."
+      "detail": "₹25,000 demand draft, printout of the online application, all MBBS marksheets, NEET-PG marksheet, school leaving certificate and 12th marksheet. Notarised colour copies of: passport (all pages, including blank ones) of you or your NRI parent; visa, residence permit or OCI/PIO card; NRI certificate from the Indian Embassy, High Commission or Consulate; Indian and foreign address proof; fee undertaking on ₹300 stamp paper (notarised); proof of origin. Also a record of days stayed in India in FY 01-04-2025–31-03-2026. Documents not in English must be translated by a competent authority.",
+      "seats": [
+        "nri"
+      ]
     },
     {
       "id": "doc-allotment",
@@ -1188,7 +1249,10 @@
         "in": [
           true
         ]
-      }
+      },
+      "seats": [
+        "nri"
+      ]
     },
     {
       "id": "doc-adm-pwd-copy",
@@ -1268,7 +1332,10 @@
       "verified": false,
       "title": "NRI applications need notarised copies",
       "detail": "NRI applications aren't considered without notarised copies of the certificates. Report any change to your documents or marks promptly to the ACPPGMEC office. If any discrepancy is found, the admission is liable to be cancelled, the candidate could be expelled, and criminal action would be initiated. The Chairman, ACPPGMEC can change these guidelines, and his interpretation is final.",
-      "severity": "critical"
+      "severity": "critical",
+      "seats": [
+        "nri"
+      ]
     }
   ],
   "resignation": {
@@ -1591,7 +1658,10 @@
       ],
       "verified": false,
       "title": "NRI checklist and fee undertaking",
-      "description": "Document checklist, stay-in-India record and notarised fee undertaking format."
+      "description": "Document checklist, stay-in-India record and notarised fee undertaking format.",
+      "seats": [
+        "nri"
+      ]
     },
     {
       "id": "annex-pwd-proforma",

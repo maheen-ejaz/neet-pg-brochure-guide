@@ -4,6 +4,7 @@
     "sourcePages": [
       1,
       3,
+      4,
       6,
       8,
       9,
@@ -32,7 +33,12 @@
       "Govt. Order No. I/1405837/2026 dated 23-07-2026 (reservation, security fee eligibility, resignation, PMHS weightage)",
       "Govt. Order No. 950/71-2-82/2017 dated 07-03-2018 (service bond)",
       "Govt. Order No. I/676928/2024 dated 26-06-2024 (debarment)"
-    ]
+    ],
+    "seatTerms": {
+      "government": "Government colleges (State Quota)",
+      "management": "Private colleges",
+      "nri": null
+    }
   },
   "status": "draft",
   "source": {
@@ -450,7 +456,10 @@
         "effect": {
           "type": "note",
           "tone": "warning"
-        }
+        },
+        "seats": [
+          "government"
+        ]
       }
     ]
   },
@@ -485,6 +494,9 @@
           "category": "PwD",
           "percent": 5
         }
+      ],
+      "seats": [
+        "government"
       ]
     },
     "conversion": {
@@ -577,7 +589,10 @@
         "verified": false,
         "title": "PwD certificates from designated centres only",
         "detail": "PwD certificates from any other hospital or board are not accepted. See the list of designated disability centres.",
-        "severity": "critical"
+        "severity": "critical",
+        "seats": [
+          "government"
+        ]
       }
     ]
   },
@@ -610,6 +625,9 @@
             "sector": "government",
             "collegeType": "dental"
           }
+        ],
+        "seats": [
+          "government"
         ]
       },
       {
@@ -700,7 +718,10 @@
         "verified": false,
         "title": "Private college tuition at admission",
         "detail": "At admission to a private college, you pay the government-fixed tuition fee. Minority institutions charge the tuition fee prescribed by the college.",
-        "severity": "info"
+        "severity": "info",
+        "seats": [
+          "management"
+        ]
       },
       {
         "id": "fees-receipts",
@@ -763,7 +784,10 @@
       "verified": false,
       "title": "Research private colleges first",
       "detail": "Get detailed information about any private college before adding it to your choices.",
-      "severity": "info"
+      "severity": "info",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "choice-merit-basis",
@@ -1061,10 +1085,10 @@
         25
       ],
       "verified": false,
-      "name": "Signed service bond agreement (Annexure-4) for government college admissions",
+      "name": "Signed service bond agreement (Annexure-4)",
       "stage": "admission",
       "appliesWhen": null,
-      "detail": "Only if you take admission in a government medical or dental college. You bear the stamp duty. The bond form asks for your Aadhaar number, mobile, email, and permanent and temporary addresses."
+      "detail": "Required if you take admission in a government medical or dental college. The brochure also says everyone admitted to PG courses signs a bond, so confirm with DGME if you're joining a private college. You bear the stamp duty. The bond form asks for your Aadhaar number, mobile, email, and permanent and temporary addresses."
     },
     {
       "id": "doc-originals",
@@ -1152,7 +1176,10 @@
         "verified": false,
         "title": "Debarment for leaving government seats",
         "detail": "If you leave a government medical or dental college seat after the final round and before completing the course, you are debarred from the next academic session's admission process.",
-        "severity": "critical"
+        "severity": "critical",
+        "seats": [
+          "government"
+        ]
       }
     ],
     "ladder": [
@@ -1192,7 +1219,10 @@
         "sector": "government",
         "securityDeposit": "forfeited",
         "fees": "All fees paid are forfeited.",
-        "otherConsequence": "No candidate is permitted to vacate a seat after Round 3. These penalties apply if you still resign."
+        "otherConsequence": "No candidate is permitted to vacate a seat after Round 3. These penalties apply if you still resign.",
+        "seats": [
+          "government"
+        ]
       },
       {
         "id": "resign-r3-private",
@@ -1205,7 +1235,10 @@
         "sector": "private",
         "securityDeposit": "forfeited",
         "fees": "50% of the tuition fee paid is forfeited.",
-        "otherConsequence": "No candidate is permitted to vacate a seat after Round 3. These penalties apply if you still resign."
+        "otherConsequence": "No candidate is permitted to vacate a seat after Round 3. These penalties apply if you still resign.",
+        "seats": [
+          "management"
+        ]
       },
       {
         "id": "resign-stray",
@@ -1231,7 +1264,7 @@
         25
       ],
       "verified": false,
-      "appliesTo": "Candidates admitted to government medical or dental colleges",
+      "appliesTo": "Candidates in government medical or dental colleges must serve it; the brochure also says everyone admitted to PG courses signs a bond, so private-college candidates should confirm with DGME",
       "durationYears": 2,
       "amounts": [
         {
@@ -1244,7 +1277,7 @@
         }
       ],
       "placeOfService": "Service must be in Uttar Pradesh, as far as possible / as required outside metros: as a Senior Resident or contractual lecturer in a government medical college, or as a contractual specialist at a district hospital or community health centre run under the Medical & Health Department.",
-      "note": "Translated from Hindi"
+      "note": "Translated from Hindi p15 bullet 1: 'Candidates taking admission in Government Medical or Dental colleges are required to mandatorily serve the bond'; bullet 2: 'candidates taking admission in postgraduate courses are required to sign a bond agreement for compulsory service' (no sector). Left untagged so private-college applicants see it."
     },
     "rules": [
       {
@@ -1390,6 +1423,9 @@
         "Saraswati Dental College, Lucknow",
         "Sardar Patel Post Graduate Institute of Dental Sciences, Lucknow",
         "Career Institute of Dental Sciences and Hospital, Lucknow"
+      ],
+      "seats": [
+        "management"
       ]
     },
     {
@@ -1410,6 +1446,9 @@
         "Subharti Dental College, Meerut",
         "Kalka Dental College, Meerut",
         "Kothiwal Dental College, Moradabad"
+      ],
+      "seats": [
+        "management"
       ]
     },
     {
@@ -1426,6 +1465,9 @@
       ],
       "privateDental": [
         "Rama Dental College, Kanpur"
+      ],
+      "seats": [
+        "management"
       ]
     },
     {
@@ -1443,6 +1485,9 @@
       ],
       "privateDental": [
         "K.D. Dental College, Mathura"
+      ],
+      "seats": [
+        "management"
       ]
     },
     {
@@ -1460,6 +1505,9 @@
       "privateDental": [
         "Chandra Dental College, Barabanki",
         "B.B.D. College of Dental Sciences, Lucknow"
+      ],
+      "seats": [
+        "management"
       ]
     },
     {
@@ -1472,6 +1520,9 @@
       "privateMedical": [],
       "privateDental": [
         "Dental College, Azamgarh"
+      ],
+      "seats": [
+        "management"
       ]
     },
     {
@@ -1485,7 +1536,10 @@
         "Heritage Institute of Medical Sciences, Varanasi",
         "United Institute of Medical Sciences, Prayagraj"
       ],
-      "privateDental": []
+      "privateDental": [],
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "nodal-gims",
@@ -1507,6 +1561,9 @@
         "IDST Modinagar, Ghaziabad",
         "ITS Dental College, Muradnagar, Ghaziabad",
         "Indraprastha Dental College, Ghaziabad"
+      ],
+      "seats": [
+        "management"
       ]
     },
     {
@@ -1522,6 +1579,9 @@
       ],
       "privateDental": [
         "Teerthankar Mahaveer Dental College, Moradabad"
+      ],
+      "seats": [
+        "management"
       ]
     },
     {
@@ -1539,6 +1599,9 @@
       ],
       "privateDental": [
         "Institute of Dental Sciences, Bareilly"
+      ],
+      "seats": [
+        "management"
       ]
     }
   ],
@@ -2173,7 +2236,10 @@
       ],
       "verified": false,
       "title": "Annexure-1: Nodal centres for private college admission",
-      "description": "Which government college acts as the admission centre for each private medical and dental college."
+      "description": "Which government college acts as the admission centre for each private medical and dental college.",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "annex-2",
@@ -2264,15 +2330,21 @@
         12
       ],
       "verified": false,
-      "title": "College tuition fees",
-      "detail": "The brochure says private colleges charge the government-fixed tuition fee but doesn't list the amounts."
+      "title": "Private college tuition fees",
+      "detail": "The brochure says private colleges charge the government-fixed tuition fee but doesn't list the amounts.",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "gap-govt-college-list",
       "sourcePages": [],
       "verified": false,
       "title": "List of government colleges and seats",
-      "detail": "Only private colleges (via nodal centres) are listed. Government colleges and their PG seats aren't."
+      "detail": "Only private colleges (via nodal centres) are listed. Government colleges and their PG seats aren't.",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "gap-refund-eligibility",

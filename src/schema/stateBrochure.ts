@@ -6,11 +6,17 @@ import { z } from "zod";
  * the brochure pages it came from, and a verified flag set by a human reviewer.
  */
 
+/** Seat types an item can be limited to. Most items apply to all and carry no tag. */
+export const SEAT_TYPES = ["government", "management", "nri"] as const;
+export const SeatType = z.enum(SEAT_TYPES);
+
 export const sourced = {
   id: z.string().min(1),
   sourcePages: z.array(z.number().int().positive()),
   verified: z.boolean(),
   note: z.string().optional(),
+  /** Only when the source limits this item to these seat types. Omitted = applies to every seat type. */
+  seats: z.array(SeatType).min(1).optional(),
 };
 
 export const SECTORS = ["government", "private"] as const;
@@ -108,6 +114,10 @@ export const BrochureSchema = z.object({
     officialWebsites: z.array(z.string().url()),
     coursesCovered: z.array(z.string()),
     governmentOrders: z.array(z.string()),
+    /** The state's own names for the three seat types (e.g. Gujarat: "Management quota (MQ)"). */
+    seatTerms: z
+      .object({ government: z.string(), management: z.string(), nri: z.string().nullable() })
+      .optional(),
   }),
   status: z.enum(["draft", "published"]),
   source: z.object({
@@ -248,12 +258,14 @@ export type Effect = z.infer<typeof Effect>;
 export type Sector = z.infer<typeof Sector>;
 export type CollegeType = z.infer<typeof CollegeType>;
 export type Category = z.infer<typeof Category>;
+export type SeatType = z.infer<typeof SeatType>;
 
 export interface SourcedItem {
   id: string;
   sourcePages: number[];
   verified: boolean;
   note?: string;
+  seats?: SeatType[];
 }
 
 /** True for any object carrying the sourced-item contract. */

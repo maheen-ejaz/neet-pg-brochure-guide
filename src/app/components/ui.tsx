@@ -1,5 +1,7 @@
 import { createContext, useContext, type ReactNode } from "react";
 import { locatePage, type SourceDocument } from "../../schema/stateBrochure";
+import { SeatChip } from "../seats";
+import type { SeatType } from "../../schema/stateBrochure";
 import { markMetrics, splitSentences } from "../text";
 
 /** Source documents of the brochure being shown, so citations can name the document. */
@@ -107,18 +109,21 @@ export function RuleCard({
   detail,
   severity = "info",
   tag,
+  seats,
   pages,
 }: {
   title: string;
   detail: string;
   severity?: "info" | "warning" | "critical";
   tag?: string;
+  seats?: SeatType[];
   pages: number[];
 }) {
   return (
     <div className="rounded-lg border border-line bg-surface p-4">
-      {(tag || severityLabel[severity]) && (
+      {(tag || seats || severityLabel[severity]) && (
         <div className="mb-2 flex flex-wrap items-center gap-1.5">
+          <SeatChip seats={seats} />
           {severityLabel[severity] && <StatusChip className={severityDot[severity]}>{severityLabel[severity]}</StatusChip>}
           {tag && <span className="rounded-[5px] bg-canvas px-1.5 py-0.5 text-[11px] font-medium text-soft">{tag}</span>}
         </div>

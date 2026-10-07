@@ -6,6 +6,7 @@
       3,
       7,
       9,
+      14,
       21,
       42,
       68
@@ -32,7 +33,12 @@
       "GO DPAR 20 SBC 82 dated 28-12-1983 (caste certificates of married women)",
       "NMC letter N-P018(20)/5/2023-PGMEB dated 24-07-2023 (all rounds online, Annexure-20)"
     ],
-    "note": "Cover and section 3(b): information about PG Medical comes into effect only after MCC's announcement. The PDF's internal title is 'PGET MDS 2026 e-brochure', dated 14-08-2026."
+    "note": "Cover and section 3(b): information about PG Medical comes into effect only after MCC's announcement. The PDF's internal title is 'PGET MDS 2026 e-brochure', dated 14-08-2026.",
+    "seatTerms": {
+      "government": "Government seats (G), including the Government share in private colleges",
+      "management": "Private (GMP, OPN, minority) and Others (Q) seats",
+      "nri": "NRI seats (N)"
+    }
   },
   "status": "draft",
   "source": {
@@ -507,7 +513,10 @@
           "type": "note",
           "tone": "warning"
         },
-        "note": "The profile asks whether you or your parents are NRIs. Karnataka also accepts NRI wards sponsored by other relatives, which the profile doesn't capture."
+        "note": "The profile asks whether you or your parents are NRIs. Karnataka also accepts NRI wards sponsored by other relatives, which the profile doesn't capture.",
+        "seats": [
+          "nri"
+        ]
       },
       {
         "id": "elig-nri",
@@ -529,7 +538,10 @@
         "effect": {
           "type": "note",
           "tone": "info"
-        }
+        },
+        "seats": [
+          "nri"
+        ]
       },
       {
         "id": "elig-foreign",
@@ -773,7 +785,10 @@
         "effect": {
           "type": "note",
           "tone": "info"
-        }
+        },
+        "seats": [
+          "management"
+        ]
       },
       {
         "id": "elig-linguistic-minority",
@@ -788,7 +803,10 @@
         "effect": {
           "type": "note",
           "tone": "info"
-        }
+        },
+        "seats": [
+          "management"
+        ]
       },
       {
         "id": "elig-st-johns",
@@ -804,7 +822,10 @@
         "effect": {
           "type": "note",
           "tone": "info"
-        }
+        },
+        "seats": [
+          "management"
+        ]
       },
       {
         "id": "elig-affidavit",
@@ -860,7 +881,10 @@
         "verified": false,
         "title": "Private seats: GMP and OPN",
         "detail": "In KPCF colleges, 42% of seats are private quota: half are GMP seats (GMPH in Hyderabad-Karnataka colleges) and half are OPN seats, filled on NEET-PG All India merit and open only to Indian citizens. In KRLMPCA and AMPCK colleges, 55% are private quota: 66% go to religious or linguistic minority candidates and the other 34% are split equally between GMP and OPN. In private universities, 40% are private quota.",
-        "severity": "info"
+        "severity": "info",
+        "seats": [
+          "management"
+        ]
       },
       {
         "id": "res-nri-q",
@@ -870,7 +894,11 @@
         "verified": false,
         "title": "NRI and Others (Q) seats",
         "detail": "NRI seats are 15% of seats in KPCF, KRLMPCA, AMPCK and private university colleges. Others (Q) seats are 10% in KPCF, KRLMPCA and AMPCK colleges and 5% in private universities.",
-        "severity": "info"
+        "severity": "info",
+        "seats": [
+          "management",
+          "nri"
+        ]
       },
       {
         "id": "res-karnataka-only",
@@ -1041,7 +1069,10 @@
         "verified": false,
         "title": "NRI sponsor payments",
         "detail": "If an NRI sponsor pays your fees, follow the separate instructions on the KEA website for payment by an NRI sponsor.",
-        "severity": "info"
+        "severity": "info",
+        "seats": [
+          "nri"
+        ]
       },
       {
         "id": "fees-bank-guarantee",
@@ -1051,7 +1082,11 @@
         "verified": false,
         "title": "NRI and Others (Q) seats: bank guarantee",
         "detail": "Students on NRI and Others (Q) seats must give the college a bank guarantee for the balance course period, at admission or within the time the college allows. Otherwise the admission is cancelled or classes are suspended until it's provided.",
-        "severity": "critical"
+        "severity": "critical",
+        "seats": [
+          "management",
+          "nri"
+        ]
       }
     ]
   },
@@ -1754,7 +1789,10 @@
           true
         ]
       },
-      "detail": "The sponsor must have stayed abroad for more than 182 days in the last financial year; the Consulate status certificate is valid for six months. Also bring a family tree signed by a Tahsildar (notary-signed or a relationship affidavit isn't accepted), a Consulate certificate issued within the last 6 months naming you and the sponsor (notary-signed isn't accepted), and copies of the sponsor's bank passbook, passport and visa. An e-copy may be accepted for verification if you submit the original at admission."
+      "detail": "The sponsor must have stayed abroad for more than 182 days in the last financial year; the Consulate status certificate is valid for six months. Also bring a family tree signed by a Tahsildar (notary-signed or a relationship affidavit isn't accepted), a Consulate certificate issued within the last 6 months naming you and the sponsor (notary-signed isn't accepted), and copies of the sponsor's bank passbook, passport and visa. An e-copy may be accepted for verification if you submit the original at admission.",
+      "seats": [
+        "nri"
+      ]
     },
     {
       "id": "doc-clause-z",
@@ -1800,7 +1838,10 @@
       "name": "Religious minority certificate from the Tahsildar (Annexure 12), if you claim it",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "Karnataka minority candidates also need the 10-year study certificate."
+      "detail": "Karnataka minority candidates also need the 10-year study certificate.",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "doc-linguistic-minority",
@@ -1813,7 +1854,10 @@
       "name": "Linguistic minority certificate (Annexure 9 or 10), if you claim it",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "Countersigned by the BEO (1st to 10th) or Deputy Director, PU (11th and 12th), with the 10-year study certificate."
+      "detail": "Countersigned by the BEO (1st to 10th) or Deputy Director, PU (11th and 12th), with the 10-year study certificate.",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "doc-st-johns",
@@ -1827,7 +1871,10 @@
       "name": "St. John's category certificates (Annexures 13 to 16), if you apply under them",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "The baptism certificate must be in English, or come with an English transcript attested by the Bishop."
+      "detail": "The baptism certificate must be in English, or come with an English transcript attested by the Bishop.",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "doc-special-clause",
@@ -2139,7 +2186,10 @@
         }
       ],
       "placeOfService": "Any location in Karnataka decided by the Government of Karnataka, if the Government wants you to serve",
-      "note": "The bond text covers PG medical courses. The bulletin doesn't say whether MDS Government seats carry one."
+      "note": "The bond text covers PG medical courses. The bulletin doesn't say whether MDS Government seats carry one.",
+      "seats": [
+        "government"
+      ]
     },
     "rules": [
       {
@@ -2163,7 +2213,10 @@
         "verified": false,
         "title": "Two sureties and originals held",
         "detail": "The three-year undertaking needs two sureties with self-attested PAN and Aadhaar copies, and you and they are jointly and severally bound to pay the ₹50 lakh / ₹25 lakh penalty. Your original documents stay with the institution and are returned only after you pay any penalty.",
-        "severity": "warning"
+        "severity": "warning",
+        "seats": [
+          "government"
+        ]
       },
       {
         "id": "bond-in-service",
@@ -2336,7 +2389,10 @@
       ],
       "verified": false,
       "title": "Annexure 9",
-      "description": "Linguistic minority certificate (1st to 10th, countersigned by BEO)"
+      "description": "Linguistic minority certificate (1st to 10th, countersigned by BEO)",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "annex-10",
@@ -2346,7 +2402,10 @@
       ],
       "verified": false,
       "title": "Annexure 10",
-      "description": "Linguistic minority certificate (PUC / 11th–12th, countersigned by Deputy Director PU)"
+      "description": "Linguistic minority certificate (PUC / 11th–12th, countersigned by Deputy Director PU)",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "annex-11",
@@ -2366,7 +2425,10 @@
       ],
       "verified": false,
       "title": "Annexure 12",
-      "description": "Religious minority certificate (Tahsildar)"
+      "description": "Religious minority certificate (Tahsildar)",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "annex-13",
@@ -2376,7 +2438,10 @@
       ],
       "verified": false,
       "title": "Annexure 13",
-      "description": "St. John's PG Category 1 certificate (Superior General / Provincial)"
+      "description": "St. John's PG Category 1 certificate (Superior General / Provincial)",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "annex-14",
@@ -2386,7 +2451,10 @@
       ],
       "verified": false,
       "title": "Annexure 14",
-      "description": "St. John's rural service certificate for Categories 1 and 2"
+      "description": "St. John's rural service certificate for Categories 1 and 2",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "annex-15",
@@ -2396,7 +2464,10 @@
       ],
       "verified": false,
       "title": "Annexure 15",
-      "description": "St. John's Category 3: baptism certificate"
+      "description": "St. John's Category 3: baptism certificate",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "annex-16",
@@ -2406,7 +2477,10 @@
       ],
       "verified": false,
       "title": "Annexure 16",
-      "description": "St. John's Category 3: Roman Catholic eligibility certificate from the Bishop"
+      "description": "St. John's Category 3: Roman Catholic eligibility certificate from the Bishop",
+      "seats": [
+        "management"
+      ]
     },
     {
       "id": "annex-17",
@@ -2416,7 +2490,10 @@
       ],
       "verified": false,
       "title": "Annexure 17",
-      "description": "NRI Ward Certificate"
+      "description": "NRI Ward Certificate",
+      "seats": [
+        "nri"
+      ]
     },
     {
       "id": "annex-17a",
@@ -2426,7 +2503,10 @@
       ],
       "verified": false,
       "title": "Annexure 17(A)",
-      "description": "Certification of NRI/OCI status of sponsor (Indian Consulate, valid six months)"
+      "description": "Certification of NRI/OCI status of sponsor (Indian Consulate, valid six months)",
+      "seats": [
+        "nri"
+      ]
     },
     {
       "id": "annex-18",

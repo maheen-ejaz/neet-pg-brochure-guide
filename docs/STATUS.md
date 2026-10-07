@@ -74,6 +74,15 @@ These interpretations are flagged in the data (`note` fields) and need confirmin
 3. Once states are published, switch the preview to `npm run build` (netlify.toml) and drop the noindex header.
 4. Later: seat matrix / cutoff ingestion for rank-based predictions; Hindi UI.
 
+## Seat-type views
+
+Each state page has a switch: **All seats | Government | Management & NRI** (`src/app/seats.tsx`). Items carry an
+optional `seats` tag only where the source limits them; untagged items show in every view. The Management & NRI
+view hides government-only items, puts management/NRI items first and adds an "at a glance" summary. NRI-only items
+are labelled "NRI only". The choice is remembered in the browser; NRI profiles start on Management & NRI.
+Mappings: UP government colleges / private colleges (no NRI quota); Gujarat GQ / MQ / NQ; Karnataka G / P + Q / N.
+Tags were proposed per state, checked against quotes, then blind-verified (0 wrong tags remaining).
+
 ## Design: Attio Mono
 
 - App tokens live in `src/index.css` (Tailwind v4 `@theme inline`; light + dark via `prefers-color-scheme`).
