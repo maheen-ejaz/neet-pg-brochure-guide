@@ -1,0 +1,15 @@
+# Temporary public preview at neetpg.goocampusglobal.com (GooCampus Team, project goocampus-neetpg).
+# It includes draft states (labelled "Draft"), so it is kept out of search engines.
+# When states are published and drafts are no longer shown, switch the command to
+# `npm run build` and remove the noindex header.
+[build]
+  command = "npm run build:preview"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

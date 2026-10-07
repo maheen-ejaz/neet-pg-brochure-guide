@@ -142,7 +142,11 @@ export function StatusChip({ className, children }: { className: string; childre
 export function DraftBanner() {
   return (
     <div className="no-print rounded-lg border border-warn/30 bg-warn-tint px-4 py-2 text-sm text-warn">
-      <strong>Draft preview:</strong> this state hasn't been reviewed yet and is only visible on your local dev server.
+      {import.meta.env.DEV ? (
+        <><strong>Draft preview:</strong> this state hasn't been reviewed yet and is only visible on your local dev server.</>
+      ) : (
+        <><strong>Draft:</strong> this guide is built from the official documents but hasn't been checked by our team yet. Confirm every detail on the official website before you act on it.</>
+      )}
     </div>
   );
 }

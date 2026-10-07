@@ -13,6 +13,7 @@ Current status, decisions already made, open questions and next steps: `docs/STA
 - `npm run typecheck`
 - `npm run check`: typecheck + tests + validate (run before merging)
 - `npm run build`: validate, typecheck, static build to `dist/` (published states only)
+- `npm run build:preview`: same, but includes draft states (used by the temporary public preview)
 
 ## Architecture
 
@@ -31,7 +32,8 @@ Current status, decisions already made, open questions and next steps: `docs/STA
 
 ## Invariants
 
-- Production builds must contain no draft data and no review code (`grep -r __review dist` is empty).
+- Production builds must contain no review code (`grep -r __review dist` is empty). `npm run build` contains no
+  draft data; the only exception is the temporary preview (`build:preview`), which labels drafts and is noindexed.
 - A file can only be `published` when every sourced item is `verified` (`npm run validate` enforces it).
 - Candidate profiles stay in the browser (`localStorage`); nothing about candidates is stored or sent.
 - Every candidate-facing fact cites brochure pages. Don't show unsourced claims.
@@ -39,4 +41,5 @@ Current status, decisions already made, open questions and next steps: `docs/STA
 - Every extraction is independently verified (blind subagent, verify-prompt.md) before hand-over.
 - Keep the Attio Mono look: neutrals first, status colours only with a word, the gradient only on the
   primary action and the one key figure per view; text pairs ≥4.5:1 in both themes.
-- Release: none yet. Netlify deployment is deferred (static `dist/`, `public/_redirects` for SPA routes).
+- Release: temporary preview at https://neetpg.goocampusglobal.com (Netlify project `goocampus-neetpg`,
+  GooCampus Team). Deploy from a clean `main`: `netlify deploy --prod --build` (uses `netlify.toml`).

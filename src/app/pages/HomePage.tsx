@@ -47,6 +47,13 @@ export function HomePage() {
           )}
         </div>
 
+        {!import.meta.env.DEV && states.some((s) => s.brochure.status === "draft") && (
+          <p className="mb-4 rounded-lg border border-warn/30 bg-warn-tint px-4 py-2 text-sm text-warn">
+            <strong>Preview:</strong> guides marked "Draft" haven't been checked by our team yet. Confirm every detail on the
+            state's official website before you act on it.
+          </p>
+        )}
+
         {states.length === 0 ? (
           <p className="rounded-lg border border-dashed border-line bg-surface p-8 text-center text-soft">
             No state brochures have been published yet. Check back soon.

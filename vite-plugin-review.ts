@@ -102,13 +102,23 @@ const RESOLVED_STATES_ID = "\0" + STATES_ID;
 /**
  * Provides `virtual:brochures`: every data/states/*.json on the dev server, but only
  * status "published" files in a production build, so unreviewed drafts never ship.
+ * Exception: `INCLUDE_DRAFTS=1` (the `build:preview` script) keeps drafts for a labelled,
+ * non-indexed public preview, as the product owner decided on 2026-10-07.
  */
 export function brochuresPlugin(): Plugin {
   let isBuild = false;
+  const includeDrafts = process.env.INCLUDE_DRAFTS === "1";
   return {
     name: "brochure-data",
     configResolved(config) {
       isBuild = config.command === "build";
+      if (isBuild && includeDrafts) {
+        config.logger.warn("\n⚠ INCLUDE_DRAFTS=1: this build contains unreviewed draft states (public preview only).\n");
+      }
+    },
+    // A build with drafts must stay out of search engines (netlify.toml also sends X-Robots-Tag).
+    transformIndexHtml() {
+      if (isBuild && includeDrafts) return [{ tag: "meta", attrs: { name: "robots", content: "noindex, nofollow" }, injectTo: "head" }];
     },
     resolveId(id) {
       if (id === STATES_ID) return RESOLVED_STATES_ID;
@@ -121,7 +131,7 @@ export function brochuresPlugin(): Plugin {
           this.addWatchFile(path.join(DATA_DIR, f));
           return { key: f.replace(/\.json$/, ""), raw: JSON.parse(readFileSync(path.join(DATA_DIR, f), "utf8")) };
         })
-        .filter((e) => !isBuild || e.raw.status === "published");
+        .filter((e) => !isBuild || includeDrafts || e.raw.status === "published");
       return `export default ${JSON.stringify(entries)};`;
     },
   };
