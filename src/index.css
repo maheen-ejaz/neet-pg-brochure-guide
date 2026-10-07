@@ -52,6 +52,9 @@
   --bad: #b91c1c;
   --bad-tint: #fef2f2;
   --shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  /* highlighter marker on key figures */
+  --mark: #fde047;
+  --on-mark: #18181b;
   color-scheme: light;
 }
 
@@ -78,6 +81,8 @@
     --bad: #f87171;
     --bad-tint: #2a1213;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --mark: #6b5a12;
+    --on-mark: #fefce8;
     color-scheme: dark;
   }
 }
@@ -152,6 +157,40 @@
   .panel-accent {
     background: var(--grad);
     color: var(--on-grad);
+  }
+
+  /*
+   * Highlighter on key figures (money, %, durations, dates): a marker stroke over the
+   * lower part of the line, slightly ragged at the ends, so the figure pops when scanning.
+   */
+  .hl {
+    color: var(--on-mark);
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    padding: 0 0.2em;
+    margin: 0 -0.05em;
+    border-radius: 0.35em 0.15em 0.4em 0.2em;
+    background: linear-gradient(104deg, transparent 0.2em, var(--mark) 0.35em, var(--mark) calc(100% - 0.35em), transparent calc(100% - 0.2em))
+      0 70% / 100% 72% no-repeat;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  /* Scannable bullet list for multi-sentence brochure text. */
+  .bullets > li {
+    position: relative;
+    padding-left: 1rem;
+  }
+  .bullets > li::before {
+    content: "";
+    position: absolute;
+    left: 0.15rem;
+    top: 0.6em;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 9999px;
+    background: var(--line-strong);
   }
 
   .card {

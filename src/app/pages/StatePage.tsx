@@ -4,7 +4,7 @@ import { findState } from "../../data/states";
 import { adviseDeposit, checkEligibility, documentsFor, type Verdict } from "../../engine/eligibility";
 import type { Profile } from "../../engine/profile";
 import type { Brochure } from "../../schema/stateBrochure";
-import { Cite, DraftBanner, RuleCard, Section, SourceDocsContext, StatusChip, inr, inrShort } from "../components/ui";
+import { Cite, DraftBanner, Marked, Prose, RuleCard, Section, SourceDocsContext, StatusChip, inr, inrShort } from "../components/ui";
 import { VerdictBadge } from "../components/VerdictBadge";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
@@ -84,7 +84,7 @@ export function StatePage() {
           {b.gaps.map((g) => (
             <div key={g.id} className="rounded-lg border border-dashed border-line-strong p-4">
               <h3 className="font-semibold">{g.title}</h3>
-              <p className="mt-1 text-sm">{g.detail}<Cite pages={g.sourcePages} /></p>
+              <Prose text={g.detail} pages={g.sourcePages} className="mt-1" />
             </div>
           ))}
         </div>
@@ -93,7 +93,7 @@ export function StatePage() {
             <h3 className="mt-6 mb-2 font-semibold">Forms and annexures</h3>
             <ul className="space-y-1 text-sm">
               {b.annexures.map((a) => (
-                <li key={a.id}><strong>{a.title}</strong>: {a.description}<Cite pages={a.sourcePages} /></li>
+                <li key={a.id}><strong>{a.title}</strong>: <Marked text={a.description} /><Cite pages={a.sourcePages} /></li>
               ))}
             </ul>
           </>
@@ -130,7 +130,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
           {b.eligibility.rules.map((r) => (
             <li key={r.id} className="rounded-lg border border-line p-4">
               <h3 className="font-semibold">{r.title}</h3>
-              <p className="mt-1 text-sm">{r.explanation}<Cite pages={r.sourcePages} /></p>
+              <Prose text={r.explanation} pages={r.sourcePages} className="mt-1" />
             </li>
           ))}
         </ul>
@@ -189,7 +189,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
                   <span aria-hidden className={`mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-md bg-canvas text-xs font-semibold ${color}`}>{glyph}</span>
                   <div>
                     <p className="font-semibold text-ink">{r.rule.title}</p>
-                    <p className="mt-0.5 text-sm">{r.rule.explanation}<Cite pages={r.rule.sourcePages} /></p>
+                    <Prose text={r.rule.explanation} pages={r.rule.sourcePages} className="mt-0.5" />
                   </div>
                 </li>
               );
@@ -203,7 +203,8 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
           <ul className="space-y-2">
             {maybe.map((r) => (
               <li key={r.rule.id} className="rounded-lg border border-dashed border-line-strong p-3 text-sm">
-                <strong>{r.rule.title}:</strong> {r.rule.explanation}<Cite pages={r.rule.sourcePages} />
+                <p className="font-semibold text-ink">{r.rule.title}</p>
+                <Prose text={r.rule.explanation} pages={r.rule.sourcePages} className="mt-0.5" />
               </li>
             ))}
           </ul>
@@ -216,7 +217,10 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
             {manual.map((r) => (
               <li key={r.rule.id} className="flex gap-2 text-sm">
                 <span aria-hidden className="text-soft">☐</span>
-                <span><strong>{r.rule.title}:</strong> {r.rule.explanation}<Cite pages={r.rule.sourcePages} /></span>
+                <div>
+                  <p className="font-semibold text-ink">{r.rule.title}</p>
+                  <Prose text={r.rule.explanation} pages={r.rule.sourcePages} className="mt-0.5" />
+                </div>
               </li>
             ))}
           </ul>
@@ -303,7 +307,7 @@ function StepsSection({ b }: { b: Brochure }) {
           <li key={s.id} className="relative">
             <span className="absolute -left-[37px] flex h-6 w-6 items-center justify-center rounded-md border border-line-strong bg-surface text-xs font-semibold text-soft tabular-nums">{i + 1}</span>
             <h3 className="font-semibold">{s.title}</h3>
-            <p className="mt-0.5 text-sm">{s.description}<Cite pages={s.sourcePages} /></p>
+            <Prose text={s.description} pages={s.sourcePages} className="mt-0.5" />
             {s.link && <a href={s.link} target="_blank" rel="noreferrer" className="text-sm text-brand-strong hover:underline">{s.link.replace(/^https?:\/\//, "")} ↗</a>}
           </li>
         ))}
@@ -315,7 +319,7 @@ function StepsSection({ b }: { b: Brochure }) {
         ) : (
           <ul className="mt-2 space-y-1 text-sm">
             {b.importantDates.map((d) => (
-              <li key={d.id}><strong>{d.label}:</strong> {d.date}{d.endDate ? ` – ${d.endDate}` : ""}<Cite pages={d.sourcePages} /></li>
+              <li key={d.id}><strong>{d.label}:</strong> <Marked text={d.date} />{d.endDate && <> – <Marked text={d.endDate} /></>}<Cite pages={d.sourcePages} /></li>
             ))}
           </ul>
         )}
@@ -379,7 +383,7 @@ function DocumentsSection({ entryKey, b, profile }: { entryKey: string; b: Broch
                 <span className={`font-medium text-ink ${done.includes(doc.id) ? "line-through opacity-60" : ""}`}>{doc.name}</span>
                 {!certain && <span className="ml-2 rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">If applicable</span>}
                 <Cite pages={doc.sourcePages} />
-                {doc.detail && <span className="block text-soft">{doc.detail}</span>}
+                {doc.detail && <span className="block text-soft"><Marked text={doc.detail} /></span>}
               </span>
             </label>
           </li>
@@ -404,7 +408,7 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
       )}
       {policy ? (
         <>
-          <p className="text-sm">Applies to: <strong>{policy.appliesTo}</strong><Cite pages={policy.sourcePages} /></p>
+          <p className="text-sm">Applies to: <strong><Marked text={policy.appliesTo} /></strong><Cite pages={policy.sourcePages} /></p>
           <div className="mt-4 flex h-10 overflow-hidden rounded-lg" role="img" aria-label={bars.map((v) => `${v.category} ${v.percent}%`).join(", ")}>
             {bars.map((v, i) => {
               const mine = verdict?.effectiveCategory && v.category.startsWith(verdict.effectiveCategory);
@@ -427,7 +431,7 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
         {conversion && (
           <div>
             <h3 className="font-semibold">Unfilled seat conversion<Cite pages={conversion.sourcePages} /></h3>
-            <p className="mt-1 text-sm text-soft">{conversion.when}</p>
+            <Prose text={conversion.when} className="mt-1 text-soft" />
             <ol className="mt-3 grid grid-cols-1 gap-1.5 text-sm">
               {conversion.steps.map((s, i) => (
                 <li key={i} className="flex items-center gap-2 rounded-lg bg-canvas px-3 py-1.5">
@@ -464,8 +468,8 @@ function ResignationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
               <span className="flex h-6 w-6 items-center justify-center rounded-md border border-line-strong bg-surface text-xs font-semibold text-soft tabular-nums">{i + 1}</span>
               <div>
                 <p className="font-semibold text-ink">{l.stage}</p>
-                <p className="text-xs text-soft">{l.window}</p>
-                <p className="mt-1 text-sm">{l.fees}{l.otherConsequence ? ` ${l.otherConsequence}` : ""}<Cite pages={l.sourcePages} /></p>
+                <p className="text-xs text-soft"><Marked text={l.window} /></p>
+                <Prose text={l.fees + (l.otherConsequence ? ` ${l.otherConsequence}` : "")} pages={l.sourcePages} className="mt-1" />
               </div>
               <span className="justify-self-start sm:justify-self-end"><StatusChip className={lost ? "bg-bad-tint text-bad" : "bg-good-tint text-good"}>Deposit {l.securityDeposit}</StatusChip></span>
             </li>
@@ -485,7 +489,7 @@ function BondSection({ b }: { b: Brochure }) {
     <Section id="bond" kicker="After PG" title="Service bond">
       {bond ? (
         <>
-          <p className="text-sm">Applies to: <strong>{bond.appliesTo}</strong><Cite pages={bond.sourcePages} /></p>
+          <p className="text-sm">Applies to: <strong><Marked text={bond.appliesTo} /></strong><Cite pages={bond.sourcePages} /></p>
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <div className="panel-accent rounded-lg p-4">
               <p className="text-xs opacity-80">Service period</p>
@@ -498,7 +502,7 @@ function BondSection({ b }: { b: Brochure }) {
               </div>
             ))}
           </div>
-          <p className="mt-3 text-sm"><strong>Where you'd serve:</strong> {bond.placeOfService}</p>
+          <p className="mt-3 text-sm"><strong>Where you'd serve:</strong> <Marked text={bond.placeOfService} /></p>
         </>
       ) : (
         <p className="rounded-lg border border-dashed border-line p-3 text-sm">These documents don't describe a service bond. Check the official website for this year's bond rules.</p>
@@ -591,7 +595,7 @@ function HelpSection({ b }: { b: Brochure }) {
   const h = b.helpdesk;
   return (
     <Section id="help" kicker="Contact" title="Help desk">
-      <p className="text-sm">Hours: <strong>{h.hours}</strong><Cite pages={h.sourcePages} /></p>
+      <p className="text-sm">Hours: <strong><Marked text={h.hours} /></strong><Cite pages={h.sourcePages} /></p>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {h.phones.map((p) => (
           <div key={p.label} className="rounded-lg border border-line p-4">
@@ -608,7 +612,7 @@ function HelpSection({ b }: { b: Brochure }) {
           </div>
         ))}
       </div>
-      <ul className="mt-4 list-disc space-y-1 pl-5 text-sm">{h.instructions.map((i) => <li key={i}>{i}</li>)}</ul>
+      <ul className="mt-4 list-disc space-y-1 pl-5 text-sm">{h.instructions.map((i) => <li key={i}><Marked text={i} /></li>)}</ul>
     </Section>
   );
 }

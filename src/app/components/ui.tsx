@@ -1,5 +1,6 @@
 import { createContext, useContext, type ReactNode } from "react";
 import { locatePage, type SourceDocument } from "../../schema/stateBrochure";
+import { markMetrics, splitSentences } from "../text";
 
 /** Source documents of the brochure being shown, so citations can name the document. */
 export const SourceDocsContext = createContext<SourceDocument[]>([]);
@@ -36,6 +37,33 @@ export function Cite({ pages }: { pages: number[] }) {
     >
       {label}
     </span>
+  );
+}
+
+/** Text with its key figures (money, %, durations, dates) marked like a highlighter. */
+export function Marked({ text }: { text: string }) {
+  return (
+    <>
+      {markMetrics(text).map((p, i) => (p.mark ? <mark key={i} className="hl">{p.text}</mark> : p.text))}
+    </>
+  );
+}
+
+/**
+ * Brochure prose made scannable: one sentence stays a line, several become bullets.
+ * Key figures are highlighted and the citation follows the last line.
+ */
+export function Prose({ text, pages = [], className = "" }: { text: string; pages?: number[]; className?: string }) {
+  const sentences = splitSentences(text);
+  if (sentences.length < 2) {
+    return <p className={`text-sm ${className}`}><Marked text={text} /><Cite pages={pages} /></p>;
+  }
+  return (
+    <ul className={`bullets space-y-1 text-sm ${className}`}>
+      {sentences.map((s, i) => (
+        <li key={i}><Marked text={s} />{i === sentences.length - 1 && <Cite pages={pages} />}</li>
+      ))}
+    </ul>
   );
 }
 
@@ -96,10 +124,7 @@ export function RuleCard({
         </div>
       )}
       <h3 className="text-[15px] tracking-tight">{title}</h3>
-      <p className="mt-1 text-sm">
-        {detail}
-        <Cite pages={pages} />
-      </p>
+      <Prose text={detail} pages={pages} className="mt-1" />
     </div>
   );
 }

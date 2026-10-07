@@ -64,6 +64,8 @@ These interpretations are flagged in the data (`note` fields) and need confirmin
 - App tokens live in `src/index.css` (Tailwind v4 `@theme inline`; light + dark via `prefers-color-scheme`).
 - Component classes: `.btn-primary` (gradient), `.btn-secondary` (outline), `.panel-accent` (the one key figure),
   `.card`, `StatusChip` in `src/app/components/ui.tsx`.
+- Scannable text: `Prose` (ui.tsx) turns multi-sentence brochure text into bullets, and `Marked` puts a
+  highlighter (`.hl`, `--mark` token) on money, %, durations and dates. Matching rules live in `src/app/text.ts`.
 - Reusable design system: https://claude.ai/artifact/4uGY27ni6AQ7Z9Q3BLi39Y, with a local copy at `~/Downloads/Attio Mono/`
   (`tokens.css`, `tokens.json`, README, component previews). Every text pair is checked for WCAG contrast in both themes.
 
