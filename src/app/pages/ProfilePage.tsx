@@ -11,6 +11,7 @@ import {
   type Profile,
 } from "../../engine/profile";
 import { CATEGORIES, type Category } from "../../schema/stateBrochure";
+import { formatDate, parseDate } from "../text";
 import { useProfile } from "../useProfile";
 
 const MAX_SPECIALITIES = 5;
@@ -56,6 +57,31 @@ function Choice<T extends string | boolean>({
         );
       })}
     </div>
+  );
+}
+
+/** Date typed as DD-MM-YYYY (the app's only date format); stored as ISO for the engine. */
+function DateInput({ id, value, onChange }: { id: string; value: string | null; onChange: (iso: string | null) => void }) {
+  const [text, setText] = useState(value ? formatDate(value) : "");
+  const invalid = text.trim() !== "" && parseDate(text) === null;
+  return (
+    <>
+      <input
+        id={id}
+        type="text"
+        inputMode="numeric"
+        placeholder="DD-MM-YYYY"
+        maxLength={10}
+        aria-invalid={invalid}
+        className={inputClass}
+        value={text}
+        onChange={(e) => {
+          setText(e.target.value);
+          onChange(parseDate(e.target.value));
+        }}
+      />
+      {invalid && <p className="mt-1 text-xs text-bad">Enter a real date as DD-MM-YYYY, e.g. 30-06-2026.</p>}
+    </>
   );
 }
 
@@ -183,14 +209,8 @@ export function ProfilePage() {
             </select>
           </Field>
         )}
-        <Field label="Internship completion date" hint="The date your one-year compulsory rotatory internship ends or ended." htmlFor="intern">
-          <input
-            id="intern"
-            type="date"
-            className={inputClass}
-            value={p.internshipCompletion ?? ""}
-            onChange={(e) => set("internshipCompletion", e.target.value || null)}
-          />
+        <Field label="Internship completion date (DD-MM-YYYY)" hint="The date your one-year compulsory rotatory internship ends or ended." htmlFor="intern">
+          <DateInput id="intern" value={p.internshipCompletion} onChange={(v) => set("internshipCompletion", v)} />
         </Field>
         <Field label="Are you presently admitted to a PG course on the basis of an earlier year's NEET-PG or NEET-MDS?" hint="Don't count a seat from this year's counselling, or one won through another exam such as INI-CET.">
           <Choice name="Currently in PG" value={p.currentlyInPG} onChange={(v) => set("currentlyInPG", v)}

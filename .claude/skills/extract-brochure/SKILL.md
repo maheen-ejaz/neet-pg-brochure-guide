@@ -54,6 +54,9 @@ Rules:
   numbers, so **use PDF page numbers**, which match `pages/p-NN.jpg`). Only `gaps` may have no page.
 - Ids are unique, kebab-case and stable (`elig-…`, `round-…`, `doc-…`, `resign-…`).
 - Write for candidates: short, plain sentences, amounts in ₹ with Indian grouping.
+- **Dates in text are always DD-MM-YYYY** (30-09-2026), whatever the source uses (30/09/2026, 30 September 2026,
+  30-Sep-2026). Add the year when the source gives it nearby. `importantDates` and conditions stay ISO (YYYY-MM-DD);
+  the app shows them as DD-MM-YYYY. `src/app/dates.test.ts` fails on any other format.
 - **Eligibility rules**: encode a `condition` over the engine facts (`courseType`, `mbbsLocation`,
   `category`, `isDomicile`, `pwd`, `inService`, `currentlyInPG`, `nationality`, `internshipCompletion`
   with `after`/`onOrBefore`). Use `condition: null` for anything that can't be expressed (shown as

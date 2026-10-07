@@ -230,7 +230,7 @@
           7
         ],
         "verified": false,
-        "title": "MDS: internship by 31 May 2026",
+        "title": "MDS: internship by 31-05-2026",
         "explanation": "For NEET-MDS 2026, the NBEMS cut-off date for completing your internship is 31-05-2026.",
         "condition": {
           "all": [
@@ -293,7 +293,7 @@
         ],
         "verified": false,
         "title": "MBBS/BDS in Karnataka with 10 years of school in Karnataka (clause b)",
-        "explanation": "You fit clause b: as on 31 March 2026 you studied at least 10 academic years (1st to 12th standard) in government or government-recognised institutions in Karnataka, passed SSLC/10th or 2nd PUC/12th there, and passed MBBS/BDS in Karnataka. A class you took more than one year to pass counts as one year. You're eligible for Government, GMP, OPN and Others (Q) seats, and minority seats if you qualify.",
+        "explanation": "You fit clause b: as on 31-03-2026 you studied at least 10 academic years (1st to 12th standard) in government or government-recognised institutions in Karnataka, passed SSLC/10th or 2nd PUC/12th there, and passed MBBS/BDS in Karnataka. A class you took more than one year to pass counts as one year. You're eligible for Government, GMP, OPN and Others (Q) seats, and minority seats if you qualify.",
         "condition": {
           "all": [
             {
@@ -1449,7 +1449,7 @@
       "name": "NEET-PG 2026 / NEET-MDS 2026 admit card and score card",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "NEET-MDS scorecards can be downloaded from natboard.edu.in for only 6 months from 10 June 2026."
+      "detail": "NEET-MDS scorecards can be downloaded from natboard.edu.in for only 6 months from 10-06-2026."
     },
     {
       "id": "doc-10th",

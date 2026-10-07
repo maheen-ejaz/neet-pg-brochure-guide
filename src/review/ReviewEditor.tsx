@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { collectSourcedItems, locatePage, type Brochure, type SourcedItem } from "../schema/stateBrochure";
+import { formatDate, parseDate } from "../app/text";
 import { loadFile, pageUrl, saveFile } from "./api";
 
 type Item = SourcedItem & Record<string, unknown>;
@@ -299,6 +300,14 @@ function FieldEditor({ name, value, onChange }: { name: string; value: unknown; 
   const cls = "mt-1 block w-full rounded-lg border border-line px-2 py-1.5 text-sm font-normal text-ink";
   const label = <span className="text-xs font-semibold text-soft">{name}</span>;
 
+  if (typeof value === "string" && (name === "date" || name === "endDate")) {
+    // Stored as ISO for the engine; shown and typed as DD-MM-YYYY like everywhere else.
+    return (
+      <label className="block">{label} <span className="text-xs text-soft">(DD-MM-YYYY)</span>
+        <input defaultValue={formatDate(value)} onBlur={(e) => { const iso = parseDate(e.target.value); if (iso) onChange(iso); else e.target.value = formatDate(value); }} className={cls} />
+      </label>
+    );
+  }
   if (typeof value === "string") {
     return (
       <label className="block">{label}

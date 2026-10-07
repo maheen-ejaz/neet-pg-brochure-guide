@@ -37,6 +37,8 @@ Current status, decisions already made, open questions and next steps: `docs/STA
 - A file can only be `published` when every sourced item is `verified` (`npm run validate` enforces it).
 - Candidate profiles stay in the browser (`localStorage`); nothing about candidates is stored or sent.
 - Every candidate-facing fact cites brochure pages. Don't show unsourced claims.
+- Every date the app shows is DD-MM-YYYY: data text is written that way (`src/app/dates.test.ts` enforces it), ISO
+  fields go through `formatDate`, and date inputs take DD-MM-YYYY (`parseDate`).
 - Use only the current counselling year's documents for a state; older-only rules become `gaps`.
 - Every extraction is independently verified (blind subagent, verify-prompt.md) before hand-over.
 - Keep the Attio Mono look: neutrals first, status colours only with a word, the gradient only on the

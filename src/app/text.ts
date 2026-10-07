@@ -54,3 +54,19 @@ export function markMetrics(text: string): Piece[] {
   if (last < text.length) out.push({ text: text.slice(last), mark: false });
   return out;
 }
+
+/** "2026-09-30" → "30-09-2026". Every date the app shows is DD-MM-YYYY. */
+export function formatDate(iso: string): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  return m ? `${m[3]}-${m[2]}-${m[1]}` : iso;
+}
+
+/** "30-09-2026" (or 30/09/2026, 30.09.2026) → "2026-09-30", or null if it isn't a real date. */
+export function parseDate(text: string): string | null {
+  const m = /^\s*(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})\s*$/.exec(text);
+  if (!m) return null;
+  const [d, mo, y] = [Number(m[1]), Number(m[2]), Number(m[3])];
+  const date = new Date(Date.UTC(y, mo - 1, d));
+  if (date.getUTCFullYear() !== y || date.getUTCMonth() !== mo - 1 || date.getUTCDate() !== d) return null;
+  return `${y}-${String(mo).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+}

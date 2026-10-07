@@ -6,6 +6,7 @@ import type { Profile } from "../../engine/profile";
 import type { Brochure } from "../../schema/stateBrochure";
 import { Cite, DraftBanner, Marked, Prose, RuleCard, Section, SourceDocsContext, StatusChip, inr, inrShort } from "../components/ui";
 import { VerdictBadge } from "../components/VerdictBadge";
+import { formatDate } from "../text";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
 
@@ -320,7 +321,7 @@ function StepsSection({ b }: { b: Brochure }) {
         ) : (
           <ul className="mt-2 space-y-1 text-sm">
             {b.importantDates.map((d) => (
-              <li key={d.id}><strong>{d.label}:</strong> <Marked text={d.date} />{d.endDate && <> – <Marked text={d.endDate} /></>}<Cite pages={d.sourcePages} /></li>
+              <li key={d.id}><strong>{d.label}:</strong> <Marked text={formatDate(d.date)} />{d.endDate && <> – <Marked text={formatDate(d.endDate)} /></>}<Cite pages={d.sourcePages} /></li>
             ))}
           </ul>
         )}
