@@ -9,3 +9,4 @@ brochures/
 test-results/
 playwright-report/
 *.tsbuildinfo
+.netlify/
