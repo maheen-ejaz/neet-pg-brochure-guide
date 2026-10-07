@@ -3,6 +3,8 @@
 Local-first GooCampus web app that turns state NEET PG counselling brochures into reviewed,
 structured data and shows candidates personalised, cited guidance.
 
+Current status, decisions already made, open questions and next steps: `docs/STATUS.md`.
+
 ## Commands
 
 - `npm run dev`: student site at http://localhost:5173, review tool at `/review` (dev only)
@@ -23,7 +25,9 @@ structured data and shows candidates personalised, cited guidance.
 - `vite-plugin-review.ts`: `reviewPlugin` (dev-only file API for the review page) and
   `brochuresPlugin` (`virtual:brochures`: all files in dev, only `status: "published"` in builds).
 - `.claude/skills/extract-brochure/SKILL.md`: procedure for extracting a new brochure (done by Claude Code;
-  the app has no AI/API key).
+  the app has no AI/API key), with its accuracy rules and the independent-verification prompt in
+  `references/verify-prompt.md`.
+- `src/index.css`: "Attio Mono" design tokens (monochrome + navy→blue gradient accent, light/dark).
 
 ## Invariants
 
@@ -31,4 +35,8 @@ structured data and shows candidates personalised, cited guidance.
 - A file can only be `published` when every sourced item is `verified` (`npm run validate` enforces it).
 - Candidate profiles stay in the browser (`localStorage`); nothing about candidates is stored or sent.
 - Every candidate-facing fact cites brochure pages. Don't show unsourced claims.
+- Use only the current counselling year's documents for a state; older-only rules become `gaps`.
+- Every extraction is independently verified (blind subagent, verify-prompt.md) before hand-over.
+- Keep the Attio Mono look: neutrals first, status colours only with a word, the gradient only on the
+  primary action and the one key figure per view; text pairs ≥4.5:1 in both themes.
 - Release: none yet. Netlify deployment is deferred (static `dist/`, `public/_redirects` for SPA routes).
