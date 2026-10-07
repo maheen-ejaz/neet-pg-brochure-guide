@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
+import { schedules } from "../../data/schedules";
 import { comparisonEnabled, states } from "../../data/states";
+import { minutesNow, nextDeadline, todayIso } from "../schedule";
+import { formatDate } from "../text";
 import { checkEligibility } from "../../engine/eligibility";
 import { useProfile } from "../useProfile";
 import { VerdictBadge } from "../components/VerdictBadge";
@@ -33,6 +36,27 @@ export function HomePage() {
           )}
         </div>
       </section>
+
+      {schedules.map(({ key, schedule }) => {
+        const next = nextDeadline(schedule, todayIso(), minutesNow());
+        return (
+          <section key={key}>
+            <Link to={`/mcc/${key}`} className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-line bg-surface p-5 hover:border-line-strong hover:bg-canvas/60">
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h2 className="text-lg font-semibold">{schedule.meta.shortTitle}</h2>
+                  {schedule.meta.tentative && <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">Tentative</span>}
+                  {schedule.status === "draft" && <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">Draft</span>}
+                </div>
+                <p className="mt-1 text-sm text-soft">
+                  {next ? <>Next: {next.label}, <strong className="text-ink">{formatDate(next.date)}{next.time ? `, ${next.time}` : ""}</strong></> : "This schedule is over."}
+                </p>
+              </div>
+              <span className="text-sm text-brand-strong">See all rounds →</span>
+            </Link>
+          </section>
+        );
+      })}
 
       <section>
         <div className="mb-4 flex items-end justify-between gap-2">

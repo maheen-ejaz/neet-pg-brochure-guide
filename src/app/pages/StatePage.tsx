@@ -411,7 +411,7 @@ function RoundsSection({ b }: { b: Brochure }) {
           <div key={tag} className="rounded-lg border border-line bg-canvas p-3">
             <h3 className="mb-2 px-1 text-xs font-semibold tracking-wide text-soft uppercase">{tag}</h3>
             <div className="space-y-2">
-              {rules.map((r) => <RuleCard key={r.id} title={r.title} detail={r.detail} severity={r.severity} seats={r.seats} pages={r.sourcePages} />)}
+              {rules.map((r) => <RuleCard key={r.id} title={r.title} detail={r.detail} severity={r.severity} seats={r.seats} schedule={r.schedule} pages={r.sourcePages} />)}
             </div>
           </div>
         ))}

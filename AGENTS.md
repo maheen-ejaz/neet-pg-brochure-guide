@@ -21,6 +21,9 @@ Current status, decisions already made, open questions and next steps: `docs/STA
 - `data/states/<slug>-<year>.json`: one file per brochure (committed). Every fact is a sourced item
   with `sourcePages` and `verified`.
 - `brochures/<slug>/<year>/`: source PDF + page renders. **Gitignored**, local only.
+- `data/national/<name>-<year>.json`: national schedules (e.g. MCC's All India Quota timetable), schema
+  `src/schema/nationalSchedule.ts`, same review/publish gate; shown at `/mcc/<file>`. State rules can link to MCC
+  rounds via `schedule` (validated by `npm run validate`).
 - `src/engine/`: pure eligibility/deposit/document logic. Profile → facts → rules → verdict.
 - `src/app/`: student UI. `src/review/`: review UI, loaded only when `import.meta.env.DEV`.
 - `vite-plugin-review.ts`: `reviewPlugin` (dev-only file API for the review page) and

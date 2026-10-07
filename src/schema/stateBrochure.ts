@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ROUND_IDS, STAGE_KEYS } from "./schedule-keys.ts";
 
 /**
  * Canonical shape of one state's NEET PG counselling brochure (one file per state-year
@@ -56,7 +57,7 @@ export type Condition =
   | { fact: "internshipCompletion"; after: string }
   | { fact: "internshipCompletion"; onOrBefore: string };
 
-const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "expected YYYY-MM-DD");
+export const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "expected YYYY-MM-DD");
 
 export const Condition: z.ZodType<Condition> = z.lazy(() =>
   z.union([
@@ -95,12 +96,20 @@ export const EligibilityRule = z.object({
   effect: Effect,
 });
 
+/** Links a state rule to the national (MCC) schedule dates it depends on, e.g. AIQ Round 2 reporting. */
+export const ScheduleRef = z.object({
+  key: z.string(),
+  round: z.enum(ROUND_IDS),
+  stages: z.array(z.enum(STAGE_KEYS)).min(1),
+});
+
 export const RuleItem = z.object({
   ...sourced,
   title: z.string(),
   detail: z.string(),
   tag: z.string().optional(),
   severity: z.enum(["info", "warning", "critical"]).default("info"),
+  schedule: z.array(ScheduleRef).min(1).optional(),
 });
 
 export const BrochureSchema = z.object({
@@ -259,6 +268,7 @@ export type Sector = z.infer<typeof Sector>;
 export type CollegeType = z.infer<typeof CollegeType>;
 export type Category = z.infer<typeof Category>;
 export type SeatType = z.infer<typeof SeatType>;
+export type ScheduleRef = z.infer<typeof ScheduleRef>;
 
 export interface SourcedItem {
   id: string;

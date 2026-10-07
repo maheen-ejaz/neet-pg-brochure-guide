@@ -1,7 +1,8 @@
 import { createContext, useContext, type ReactNode } from "react";
 import { locatePage, type SourceDocument } from "../../schema/stateBrochure";
 import { SeatChip } from "../seats";
-import type { SeatType } from "../../schema/stateBrochure";
+import type { ScheduleRef, SeatType } from "../../schema/stateBrochure";
+import { ScheduleRefs } from "./ScheduleRefs";
 import { markMetrics, splitSentences } from "../text";
 
 /** Source documents of the brochure being shown, so citations can name the document. */
@@ -110,6 +111,7 @@ export function RuleCard({
   severity = "info",
   tag,
   seats,
+  schedule,
   pages,
 }: {
   title: string;
@@ -117,6 +119,7 @@ export function RuleCard({
   severity?: "info" | "warning" | "critical";
   tag?: string;
   seats?: SeatType[];
+  schedule?: ScheduleRef[];
   pages: number[];
 }) {
   return (
@@ -130,6 +133,7 @@ export function RuleCard({
       )}
       <h3 className="text-[15px] tracking-tight">{title}</h3>
       <Prose text={detail} pages={pages} className="mt-1" />
+      <ScheduleRefs refs={schedule} />
     </div>
   );
 }

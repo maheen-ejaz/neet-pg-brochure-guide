@@ -1313,7 +1313,17 @@
       "title": "Exited AIQ Round 2? You can join Round 2",
       "detail": "If you were allotted a seat in All India Quota or Deemed University Round 2, didn't join and exited with the forfeiture clause, you can take part in Karnataka's Round 2 after depositing originals at KEA.",
       "severity": "info",
-      "tag": "Round 2"
+      "tag": "Round 2",
+      "schedule": [
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-2",
+          "stages": [
+            "result",
+            "reporting"
+          ]
+        }
+      ]
     },
     {
       "id": "round2-not-eligible",
@@ -1394,7 +1404,30 @@
       "title": "Who can take part in the mop-up",
       "detail": "Candidates with no seat after KEA Round 2, and those who joined a KEA-allotted college. Not eligible: those who didn't exercise a choice in Round 1, didn't pay or didn't report, and anyone who joined a college through All India (including deemed university) counselling or any other board.",
       "severity": "warning",
-      "tag": "Round 3 (Mop-up)"
+      "tag": "Round 3 (Mop-up)",
+      "schedule": [
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-1",
+          "stages": [
+            "reporting"
+          ]
+        },
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-2",
+          "stages": [
+            "reporting"
+          ]
+        },
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-3",
+          "stages": [
+            "reporting"
+          ]
+        }
+      ]
     },
     {
       "id": "round3-fresh-options",
@@ -1438,7 +1471,37 @@
       "title": "Stray vacancy round eligibility",
       "detail": "Only candidates who haven't been allotted any PG Medical/Dental seat by KEA in any round can take part. Those who reported to a college after MCC, deemed university or any other allotment in the three rounds, and those allotted a seat in MCC's stray vacancy round, aren't eligible.",
       "severity": "warning",
-      "tag": "Stray vacancy"
+      "tag": "Stray vacancy",
+      "schedule": [
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-1",
+          "stages": [
+            "reporting"
+          ]
+        },
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-2",
+          "stages": [
+            "reporting"
+          ]
+        },
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-3",
+          "stages": [
+            "reporting"
+          ]
+        },
+        {
+          "key": "mcc-pg-2026",
+          "round": "stray",
+          "stages": [
+            "result"
+          ]
+        }
+      ]
     },
     {
       "id": "round3-criminal",

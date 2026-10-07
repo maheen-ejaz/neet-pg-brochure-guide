@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { collectSourcedItems, type Brochure } from "../schema/stateBrochure";
-import { listFiles, loadFile } from "./api";
+import { collectSourcedItems } from "../schema/stateBrochure";
+import { docTitle, listFiles, loadFile, type Kind, type ReviewDoc } from "./api";
 
 export default function ReviewIndex() {
-  const [docs, setDocs] = useState<{ file: string; doc: Brochure }[] | null>(null);
+  const [docs, setDocs] = useState<{ file: string; kind: Kind; doc: ReviewDoc }[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    listFiles()
-      .then((files) => Promise.all(files.map(async (file) => ({ file, doc: await loadFile(file) }))))
+    Promise.all((["states", "national"] as const).map(async (kind) => (await listFiles(kind)).map((file) => ({ file, kind }))))
+      .then((lists) => Promise.all(lists.flat().map(async ({ file, kind }) => ({ file, kind, doc: await loadFile(file, kind) }))))
       .then(setDocs)
       .catch((e) => setError(String(e)));
   }, []);
@@ -24,14 +24,14 @@ export default function ReviewIndex() {
       </p>
       {error && <p className="mt-4 rounded-lg bg-bad-tint p-3 text-bad">{error}</p>}
       <ul className="mt-6 space-y-3">
-        {docs?.map(({ file, doc }) => {
+        {docs?.map(({ file, kind, doc }) => {
           const items = collectSourcedItems(doc);
           const done = items.filter((i) => i.item.verified).length;
           return (
             <li key={file}>
-              <Link to={`/review/${file}`} className="block rounded-xl border border-line bg-surface p-5 hover:border-line-strong">
+              <Link to={kind === "states" ? `/review/${file}` : `/review/national/${file}`} className="block rounded-xl border border-line bg-surface p-5 hover:border-line-strong">
                 <div className="flex items-center justify-between gap-2">
-                  <h2 className="text-lg font-semibold">{doc.meta.state} {doc.meta.year}</h2>
+                  <h2 className="text-lg font-semibold">{docTitle(doc)}</h2>
                   <span className={`rounded-md px-2 py-0.5 text-xs font-semibold ${doc.status === "published" ? "bg-good-tint text-good" : "bg-warn-tint text-warn"}`}>
                     {doc.status}
                   </span>

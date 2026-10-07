@@ -1,0 +1,405 @@
+{
+  "meta": {
+    "id": "meta",
+    "sourcePages": [
+      1,
+      4
+    ],
+    "verified": false,
+    "title": "Tentative schedule for online counselling (allotment process) for NEET 50% AIQ and 100% Deemed/Central Universities/AFMS (registration only) for PG courses, academic year 2026",
+    "shortTitle": "All India Quota counselling (MCC) 2026",
+    "authority": "Medical Counselling Committee (MCC), Directorate General of Health Services (DGHS)",
+    "scope": [
+      "50% All India Quota (AIQ) seats",
+      "100% seats in Deemed and Central Universities",
+      "AFMS: registration only"
+    ],
+    "courses": [
+      "clinical"
+    ],
+    "tentative": true,
+    "documentDate": "2026-10-07",
+    "documentDateLabel": "Generated from eOffice",
+    "reference": "File No. U-12021/09/2026-MEC (Computer No. 8427229)",
+    "officialWebsites": [
+      "https://mcc.nic.in"
+    ],
+    "note": "officialWebsites: mcc.nic.in isn't printed on this schedule; it's the MCC site named in the Karnataka bulletin (p11) for MCC updates. The PDF's own metadata says it was created on 30-09-2026; the page footer says generated 07-10-2026, 01:03 pm."
+  },
+  "status": "draft",
+  "source": {
+    "dir": "brochures/mcc/2026",
+    "pageCount": 4,
+    "scanned": false,
+    "languages": [
+      "English"
+    ],
+    "documents": []
+  },
+  "rounds": [
+    {
+      "id": "round-1",
+      "sourcePages": [
+        1
+      ],
+      "verified": false,
+      "round": "round-1",
+      "name": "Round 1",
+      "stages": [
+        {
+          "key": "seatMatrix",
+          "label": "Seat matrix verification by colleges",
+          "start": "2026-10-10",
+          "end": "2026-10-12"
+        },
+        {
+          "key": "registration",
+          "label": "Registration",
+          "start": "2026-10-12",
+          "end": "2026-10-21",
+          "endTime": "12:00 noon"
+        },
+        {
+          "key": "payment",
+          "label": "Payment closes",
+          "start": "2026-10-21",
+          "endTime": "3:00 PM"
+        },
+        {
+          "key": "choiceFilling",
+          "label": "Choice filling",
+          "start": "2026-10-13",
+          "end": "2026-10-22",
+          "endTime": "10:00 AM"
+        },
+        {
+          "key": "choiceLocking",
+          "label": "Choice locking",
+          "start": "2026-10-21",
+          "end": "2026-10-22",
+          "startTime": "4:00 PM",
+          "endTime": "10:00 AM"
+        },
+        {
+          "key": "processing",
+          "label": "Seat allotment processing",
+          "start": "2026-10-22",
+          "end": "2026-10-23"
+        },
+        {
+          "key": "result",
+          "label": "Result",
+          "start": "2026-10-24"
+        },
+        {
+          "key": "reporting",
+          "label": "Reporting / joining",
+          "start": "2026-10-26",
+          "end": "2026-11-02"
+        },
+        {
+          "key": "dataVerification",
+          "label": "Joined-candidate data verified by colleges and shared with MCC",
+          "start": "2026-11-03"
+        }
+      ]
+    },
+    {
+      "id": "round-2",
+      "sourcePages": [
+        2
+      ],
+      "verified": false,
+      "round": "round-2",
+      "name": "Round 2",
+      "stages": [
+        {
+          "key": "seatMatrix",
+          "label": "Seat matrix verification by colleges",
+          "start": "2026-11-06",
+          "end": "2026-11-07",
+          "endTime": "1:00 PM"
+        },
+        {
+          "key": "registration",
+          "label": "Registration",
+          "start": "2026-11-06",
+          "end": "2026-11-11",
+          "endTime": "12:00 noon"
+        },
+        {
+          "key": "payment",
+          "label": "Payment closes",
+          "start": "2026-11-11",
+          "endTime": "3:00 PM"
+        },
+        {
+          "key": "choiceFilling",
+          "label": "Choice filling",
+          "start": "2026-11-07",
+          "end": "2026-11-12",
+          "endTime": "10:00 AM"
+        },
+        {
+          "key": "choiceLocking",
+          "label": "Choice locking",
+          "start": "2026-11-11",
+          "end": "2026-11-12",
+          "startTime": "4:00 PM",
+          "endTime": "10:00 AM"
+        },
+        {
+          "key": "processing",
+          "label": "Seat allotment processing",
+          "start": "2026-11-12",
+          "end": "2026-11-13"
+        },
+        {
+          "key": "result",
+          "label": "Result",
+          "start": "2026-11-14"
+        },
+        {
+          "key": "reporting",
+          "label": "Reporting / joining",
+          "start": "2026-11-16",
+          "end": "2026-11-23"
+        },
+        {
+          "key": "dataVerification",
+          "label": "Joined-candidate data verified by colleges and shared with MCC",
+          "start": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "round-3",
+      "sourcePages": [
+        3
+      ],
+      "verified": false,
+      "round": "round-3",
+      "name": "Round 3",
+      "stages": [
+        {
+          "key": "seatMatrix",
+          "label": "Seat matrix verification by colleges",
+          "start": "2026-11-25",
+          "end": "2026-11-26"
+        },
+        {
+          "key": "registration",
+          "label": "Registration",
+          "start": "2026-11-26",
+          "end": "2026-12-01",
+          "endTime": "12:00 noon"
+        },
+        {
+          "key": "payment",
+          "label": "Payment closes",
+          "start": "2026-12-01",
+          "endTime": "3:00 PM"
+        },
+        {
+          "key": "choiceFilling",
+          "label": "Choice filling",
+          "start": "2026-11-27",
+          "end": "2026-12-02",
+          "endTime": "10:00 AM"
+        },
+        {
+          "key": "choiceLocking",
+          "label": "Choice locking",
+          "start": "2026-12-01",
+          "end": "2026-12-02",
+          "startTime": "4:00 PM",
+          "endTime": "10:00 AM"
+        },
+        {
+          "key": "processing",
+          "label": "Seat allotment processing",
+          "start": "2026-12-02",
+          "end": "2026-12-03"
+        },
+        {
+          "key": "result",
+          "label": "Result",
+          "start": "2026-12-04"
+        },
+        {
+          "key": "reporting",
+          "label": "Reporting",
+          "start": "2026-12-05",
+          "end": "2026-12-12"
+        },
+        {
+          "key": "dataVerification",
+          "label": "Joined-candidate data verified by colleges and shared with MCC",
+          "start": "2026-12-14"
+        }
+      ]
+    },
+    {
+      "id": "round-stray",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "round": "stray",
+      "name": "Online stray vacancy round",
+      "stages": [
+        {
+          "key": "seatMatrix",
+          "label": "Seat matrix verification by colleges",
+          "start": "2026-12-15"
+        },
+        {
+          "key": "registration",
+          "label": "Registration",
+          "start": "2026-12-16",
+          "end": "2026-12-21",
+          "endTime": "12:00 noon"
+        },
+        {
+          "key": "payment",
+          "label": "Payment closes",
+          "start": "2026-12-21",
+          "endTime": "3:00 PM"
+        },
+        {
+          "key": "choiceFilling",
+          "label": "Choice filling",
+          "start": "2026-12-16",
+          "end": "2026-12-21",
+          "endTime": "11:55 PM"
+        },
+        {
+          "key": "choiceLocking",
+          "label": "Choice locking",
+          "start": "2026-12-21",
+          "end": "2026-12-21",
+          "startTime": "4:00 PM",
+          "endTime": "11:55 PM"
+        },
+        {
+          "key": "processing",
+          "label": "Seat allotment processing",
+          "start": "2026-12-22",
+          "end": "2026-12-23"
+        },
+        {
+          "key": "result",
+          "label": "Result",
+          "start": "2026-12-24"
+        },
+        {
+          "key": "reporting",
+          "label": "Reporting",
+          "start": "2026-12-24",
+          "end": "2026-12-31"
+        }
+      ]
+    }
+  ],
+  "milestones": [
+    {
+      "id": "ms-session",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "label": "PG academic session 2026 begins",
+      "date": "2026-11-20"
+    }
+  ],
+  "notes": [
+    {
+      "id": "note-tentative",
+      "sourcePages": [
+        1
+      ],
+      "verified": false,
+      "title": "These dates are tentative",
+      "detail": "MCC calls this a tentative schedule, so the dates can change. Check MCC's website for the final dates before each round."
+    },
+    {
+      "id": "note-server-time",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "verified": false,
+      "title": "All times are MCC server time",
+      "detail": "Registration closes at 12:00 noon, but payment stays open until 3:00 PM the same day. In Rounds 1 to 3, choice locking opens at 4:00 PM the day before choice filling ends."
+    },
+    {
+      "id": "note-round2-seat-matrix",
+      "sourcePages": [
+        2
+      ],
+      "verified": false,
+      "title": "Round 2 seat matrix closes at 1:00 PM",
+      "detail": "Colleges verify the Round 2 seat matrix on 06-11-2026 and up to 1:00 PM on 07-11-2026."
+    },
+    {
+      "id": "note-stray-time",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "title": "Stray round: choices until 11:55 PM",
+      "detail": "In the stray vacancy round, choice filling and locking run until 11:55 PM on 21-12-2026, not 10:00 AM as in Rounds 1 to 3. The result and reporting both start on 24-12-2026."
+    },
+    {
+      "id": "note-session-start",
+      "sourcePages": [
+        2,
+        4
+      ],
+      "verified": false,
+      "title": "The session starts during Round 2 reporting",
+      "detail": "The PG academic session begins on 20-11-2026, while Round 2 reporting runs until 23-11-2026. By these dates, Round 3 and stray-round candidates join after classes have begun."
+    },
+    {
+      "id": "note-weekends",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "title": "Weekends and holidays are working days",
+      "detail": "Participating colleges are advised to treat all Saturdays, Sundays and gazetted holidays as working days, to keep to the schedule."
+    }
+  ],
+  "gaps": [
+    {
+      "id": "gap-mds",
+      "sourcePages": [],
+      "verified": false,
+      "title": "MDS",
+      "detail": "This schedule doesn't mention MDS."
+    },
+    {
+      "id": "gap-rules",
+      "sourcePages": [],
+      "verified": false,
+      "title": "Eligibility, fees and round rules",
+      "detail": "Eligibility, registration fees, security deposits, upgrade and exit rules aren't in this schedule."
+    },
+    {
+      "id": "gap-seats",
+      "sourcePages": [],
+      "verified": false,
+      "title": "Seat matrix",
+      "detail": "The number of seats in each round isn't in this schedule."
+    },
+    {
+      "id": "gap-state",
+      "sourcePages": [],
+      "verified": false,
+      "title": "State quota counselling",
+      "detail": "State-quota rounds run separately, on each state's own schedule."
+    }
+  ]
+}

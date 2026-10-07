@@ -7,6 +7,7 @@ import { HomePage } from "./app/pages/HomePage";
 import { ProfilePage } from "./app/pages/ProfilePage";
 import { StatePage } from "./app/pages/StatePage";
 import { ComparePage } from "./app/pages/ComparePage";
+import { SchedulePage } from "./app/pages/SchedulePage";
 import { NotFound } from "./app/pages/NotFound";
 
 const children: RouteObject[] = [
@@ -14,6 +15,7 @@ const children: RouteObject[] = [
   { path: "profile", element: <ProfilePage /> },
   { path: "state/:key", element: <StatePage /> },
   { path: "compare", element: <ComparePage /> },
+  { path: "mcc/:key", element: <SchedulePage /> },
 ];
 
 const reviewRoutes: RouteObject[] = [];
@@ -25,6 +27,7 @@ if (import.meta.env.DEV) {
   reviewRoutes.push(
     { path: "/review", element: <Suspense><ReviewIndex /></Suspense> },
     { path: "/review/:file", element: <Suspense><ReviewEditor /></Suspense> },
+    { path: "/review/national/:file", element: <Suspense><ReviewEditor kind="national" /></Suspense> },
   );
 }
 children.push({ path: "*", element: <NotFound /> });

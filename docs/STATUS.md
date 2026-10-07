@@ -37,6 +37,8 @@ guide per state:
 | Gujarat 2026-27 | `data/states/gujarat-2026.json` | 114 | Draft, 0 verified by a human. Built from 12 current-year documents merged into one 81-page source. Passed 3 verification rounds. |
 | Karnataka 2026-27 | `data/states/karnataka-2026.json` | 187 | Draft, 0 verified by a human. KEA PGET 2026 Information Bulletin (68 pages, 14-08-2026), live for MDS; PG Medical takes effect after MCC's announcement. |
 
+| MCC All India Quota 2026 | `data/national/mcc-pg-2026.json` | 16 | Draft, 0 verified by a human. Tentative MCC schedule (4 pages, generated 07-10-2026): NEET-PG 50% AIQ + 100% deemed/central universities, AFMS registration only. Passed 1 independent check (all 35 stages confirmed). Review at `/review/national/mcc-pg-2026`. |
+
 Neither state is published yet. `npm run build` contains no states; the public preview (`build:preview`) shows both as drafts.
 
 Deploy the preview from a clean `main`: `npm run build:preview && netlify deploy --prod --dir dist --site fb03fe2b-69e5-497f-a789-fcfe1e8167e7`.
@@ -73,6 +75,14 @@ These interpretations are flagged in the data (`note` fields) and need confirmin
 2. Add more states with the `extract-brochure` skill (current-year documents only, then independent verification).
 3. Once states are published, switch the preview to `npm run build` (netlify.toml) and drop the noindex header.
 4. Later: seat matrix / cutoff ingestion for rank-based predictions; Hindi UI.
+
+## MCC timeline
+
+`/mcc/mcc-pg-2026` shows the four AIQ rounds (DD-MM-YYYY, MCC server time), the next deadline (time-aware) and
+done/open/upcoming status per stage, with a "Tentative" label and the document date. Home page card + "MCC dates"
+nav link. Four state rules link to MCC dates (Karnataka `round2-aiq`, `round3-eligibility`, `round-stray`; UP
+`stray-other-admission`); MDS profiles see a warning because the schedule doesn't mention MDS. When MCC revises the
+schedule, replace `brochures/mcc/2026/source.pdf`, update the JSON and re-verify.
 
 ## Seat-type views
 

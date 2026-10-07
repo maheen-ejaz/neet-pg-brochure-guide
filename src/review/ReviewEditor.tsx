@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { collectSourcedItems, locatePage, type Brochure, type SourcedItem } from "../schema/stateBrochure";
+import { collectSourcedItems, locatePage, type SourcedItem } from "../schema/stateBrochure";
 import { formatDate, parseDate } from "../app/text";
-import { loadFile, pageUrl, saveFile } from "./api";
+import { docTitle, loadFile, pageUrl, saveFile, type Kind, type ReviewDoc } from "./api";
 
 type Item = SourcedItem & Record<string, unknown>;
 
@@ -13,7 +13,7 @@ function getAt(root: unknown, path: string[]): unknown {
 }
 
 /** Returns a deep copy of doc with fn applied to the item at path. */
-function updateAt(doc: Brochure, path: string[], fn: (item: Item) => void): Brochure {
+function updateAt<D extends ReviewDoc>(doc: D, path: string[], fn: (item: Item) => void): D {
   const copy = structuredClone(doc);
   fn((path.length ? getAt(copy, path) : copy) as Item);
   return copy;
@@ -38,6 +38,8 @@ const SECTION_LABELS: Record<string, string> = {
   disabilityCentres: "Disability centres",
   annexures: "Annexures",
   importantDates: "Dates",
+  milestones: "Milestones",
+  notes: "Notes",
   gaps: "Gaps",
 };
 
@@ -49,9 +51,9 @@ function itemTitle(item: Item) {
   return item.id;
 }
 
-export default function ReviewEditor() {
+export default function ReviewEditor({ kind = "states" }: { kind?: Kind }) {
   const { file = "" } = useParams();
-  const [doc, setDoc] = useState<Brochure | null>(null);
+  const [doc, setDoc] = useState<ReviewDoc | null>(null);
   const [dirty, setDirty] = useState(false);
   const [status, setStatus] = useState<{ kind: "ok" | "error"; text: string } | null>(null);
   const [section, setSection] = useState<string>("meta");
@@ -60,8 +62,8 @@ export default function ReviewEditor() {
   const [showUnverifiedOnly, setShowUnverifiedOnly] = useState(false);
 
   useEffect(() => {
-    loadFile(file).then(setDoc).catch((e) => setStatus({ kind: "error", text: String(e) }));
-  }, [file]);
+    loadFile(file, kind).then(setDoc).catch((e) => setStatus({ kind: "error", text: String(e) }));
+  }, [file, kind]);
 
   const items = useMemo(() => (doc ? collectSourcedItems(doc) : []), [doc]);
   const sections = useMemo(() => {
@@ -90,14 +92,14 @@ export default function ReviewEditor() {
     setStatus(null);
   }, []);
 
-  const save = async (next?: Brochure) => {
+  const save = async (next?: ReviewDoc) => {
     const target = next ?? doc;
     if (!target) return;
-    const res = await saveFile(file, target);
+    const res = await saveFile(file, target, kind);
     if (res.ok) {
       setDirty(false);
       if (next) setDoc(next);
-      setStatus({ kind: "ok", text: "Saved to data/states/" + file + ".json" });
+      setStatus({ kind: "ok", text: `Saved to data/${kind}/${file}.json` });
     } else setStatus({ kind: "error", text: res.error });
   };
 
@@ -144,14 +146,14 @@ export default function ReviewEditor() {
     <div className="flex h-screen flex-col bg-canvas">
       <header className="flex flex-wrap items-center gap-3 border-b border-line bg-surface px-4 py-2">
         <Link to="/review" className="text-sm text-brand-strong hover:underline">← Review</Link>
-        <h1 className="text-lg font-semibold">{doc.meta.state} {doc.meta.year}</h1>
+        <h1 className="text-lg font-semibold">{docTitle(doc)}</h1>
         <span className={`rounded-md px-2 py-0.5 text-xs font-semibold ${doc.status === "published" ? "bg-good-tint text-good" : "bg-warn-tint text-warn"}`}>{doc.status}</span>
         <span className="text-sm text-soft">{verifiedCount}/{items.length} verified</span>
         <div className="ml-auto flex items-center gap-2">
           {status && (
             <span className={`max-w-md truncate text-xs ${status.kind === "ok" ? "text-good" : "text-bad"}`} title={status.text}>{status.text}</span>
           )}
-          <Link to={`/state/${file}`} target="_blank" className="btn-secondary !py-1.5 !text-[13px]">Preview ↗</Link>
+          <Link to={kind === "states" ? `/state/${file}` : `/mcc/${file}`} target="_blank" className="btn-secondary !py-1.5 !text-[13px]">Preview ↗</Link>
           <button type="button" onClick={() => void save()} disabled={!dirty}
             className="btn-secondary !py-1.5 !text-[13px] disabled:opacity-40">
             {dirty ? "Save (⌘S)" : "Saved"}

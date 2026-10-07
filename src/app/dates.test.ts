@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { formatDate, parseDate } from "./text";
 
 /** Every date shown in the app is DD-MM-YYYY. Machine fields (engine/ISO) are exempt. */
-const MACHINE_KEYS = new Set(["id", "date", "endDate", "after", "onOrBefore", "url", "dir", "link"]);
+const MACHINE_KEYS = new Set(["id", "date", "endDate", "start", "end", "documentDate", "after", "onOrBefore", "url", "dir", "link"]);
 const MONTHS = "Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?";
 const BAD_DATES = [
   /(?<![\d/.-])\d{1,2}[/.]\d{1,2}[/.]\d{4}(?![\d/-])/, // 30/09/2026, 30.09.2026
@@ -23,9 +23,16 @@ function strings(o: unknown, at: string, out: { at: string; text: string }[]) {
 }
 
 describe("dates are DD-MM-YYYY", () => {
-  const dir = path.join(process.cwd(), "data", "states");
-  for (const file of readdirSync(dir).filter((f) => f.endsWith(".json"))) {
-    it(file, () => {
+  const files = ["states", "national"].flatMap((d) => {
+    const dir = path.join(process.cwd(), "data", d);
+    try {
+      return readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => ({ dir, file: f, label: `${d}/${f}` }));
+    } catch {
+      return [];
+    }
+  });
+  for (const { dir, file, label } of files) {
+    it(label, () => {
       const offenders = strings(JSON.parse(readFileSync(path.join(dir, file), "utf8")), "", [])
         .filter(({ text }) => BAD_DATES.some((re) => re.test(text)))
         .map(({ at, text }) => `${at}: ${text}`);

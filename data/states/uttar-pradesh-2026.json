@@ -877,7 +877,30 @@
       "title": "Stray round: already admitted elsewhere",
       "detail": "Anyone admitted to a PG course anywhere in India through AIQ or another state's quota cannot take part in the UP stray vacancy round.",
       "tag": "Stray round",
-      "severity": "warning"
+      "severity": "warning",
+      "schedule": [
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-1",
+          "stages": [
+            "reporting"
+          ]
+        },
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-2",
+          "stages": [
+            "reporting"
+          ]
+        },
+        {
+          "key": "mcc-pg-2026",
+          "round": "round-3",
+          "stages": [
+            "reporting"
+          ]
+        }
+      ]
     },
     {
       "id": "stray-fresh-registration",
