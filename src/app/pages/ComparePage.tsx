@@ -82,9 +82,9 @@ export function ComparePage() {
         <table className="w-full min-w-[640px] text-left text-sm">
           <thead>
             <tr className="bg-canvas">
-              <th className="w-48 p-3" />
+              <th scope="col" className="w-48 p-3"><span className="sr-only">What's compared</span></th>
               {chosen.map((s) => (
-                <th key={s.key} className="p-3">
+                <th key={s.key} scope="col" className="p-3">
                   <Link to={`/state/${s.key}`} className="text-base font-semibold text-ink hover:underline">{s.brochure.meta.state}</Link>
                 </th>
               ))}
