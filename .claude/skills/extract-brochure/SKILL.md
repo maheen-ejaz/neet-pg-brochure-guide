@@ -20,7 +20,7 @@ pdftotext -layout brochures/$SLUG/$YEAR/source.pdf - | head -c 2000   # empty =>
 pdftoppm -r 110 -jpeg -jpegopt quality=80 brochures/$SLUG/$YEAR/source.pdf brochures/$SLUG/$YEAR/pages/p
 ```
 
-`brochures/` is gitignored (official copies stay local). The review page serves these page images.
+Commit `brochures/` with the data file: the source PDF and page images are what every citation points to. The review page serves these page images.
 
 ### States that publish many documents instead of one brochure
 

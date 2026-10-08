@@ -1,11 +1,10 @@
-node_modules/
+node_modules
 dist/
 .DS_Store
 *.local
 .env*
-# Source brochures and page renders stay local (large, official copies)
-brochures/
-*.pdf
+# Loose PDFs dropped in the repo root (sources live under brochures/)
+/*.pdf
 test-results/
 playwright-report/
 *.tsbuildinfo
