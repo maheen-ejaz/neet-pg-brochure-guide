@@ -1,4 +1,4 @@
-import { createContext, useContext, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import { locatePage, type SourceDocument } from "../../schema/stateBrochure";
 import { SeatChip } from "../seats";
 import type { ScheduleRef, SeatType } from "../../schema/stateBrochure";
@@ -56,17 +56,28 @@ export function Marked({ text }: { text: string }) {
  * Brochure prose made scannable: one sentence stays a line, several become bullets.
  * Key figures are highlighted and the citation follows the last line.
  */
-export function Prose({ text, pages = [], className = "" }: { text: string; pages?: number[]; className?: string }) {
+export function Prose({ text, pages = [], className = "", clamp }: { text: string; pages?: number[]; className?: string; clamp?: number }) {
   const sentences = splitSentences(text);
+  const [expanded, setExpanded] = useState(false);
   if (sentences.length < 2) {
     return <p className={`text-sm ${className}`}><Marked text={text} /><Cite pages={pages} /></p>;
   }
+  const hidden = clamp && !expanded ? Math.max(0, sentences.length - clamp) : 0;
+  // Clamp only when it hides at least two sentences; hiding one isn't worth a click.
+  const shown = hidden >= 2 ? sentences.slice(0, clamp) : sentences;
   return (
-    <ul className={`bullets space-y-1 text-sm ${className}`}>
-      {sentences.map((s, i) => (
-        <li key={i}><Marked text={s} />{i === sentences.length - 1 && <Cite pages={pages} />}</li>
-      ))}
-    </ul>
+    <div className={className}>
+      <ul className="bullets space-y-1 text-sm">
+        {shown.map((s, i) => (
+          <li key={i}><Marked text={s} />{i === sentences.length - 1 && <Cite pages={pages} />}</li>
+        ))}
+      </ul>
+      {hidden >= 2 && (
+        <button type="button" onClick={() => setExpanded(true)} className="link mt-1 pl-4 text-sm">
+          Show {hidden} more
+        </button>
+      )}
+    </div>
   );
 }
 
@@ -76,23 +87,49 @@ export function Section({
   kicker,
   children,
   action,
+  collapsible = false,
+  summary,
 }: {
   id?: string;
   title: string;
   kicker?: string;
   children: ReactNode;
   action?: ReactNode;
+  /** Reference sections start closed; they open on click or when the menu links to them. */
+  collapsible?: boolean;
+  /** One line shown under the title while a collapsible section is closed. */
+  summary?: ReactNode;
 }) {
+  const [open, setOpen] = useState(!collapsible);
+  // Following a menu link (#id) to a closed section opens it.
+  useEffect(() => {
+    if (!collapsible || !id) return;
+    const check = () => window.location.hash === `#${id}` && setOpen(true);
+    check();
+    window.addEventListener("hashchange", check);
+    return () => window.removeEventListener("hashchange", check);
+  }, [collapsible, id]);
+  const bodyId = id ? `${id}-body` : undefined;
   return (
     <section id={id} className="card scroll-mt-28">
-      <div className="flex flex-wrap items-end justify-between gap-2 border-b border-line px-5 py-4 sm:px-6">
-        <div>
+      <div className={`flex flex-wrap items-end justify-between gap-2 px-5 py-4 sm:px-6 ${open ? "border-b border-line" : ""}`}>
+        <div className="min-w-0">
           {kicker && <p className="text-xs text-soft">{kicker}</p>}
-          <h2 className="text-lg sm:text-xl">{title}</h2>
+          {collapsible ? (
+            <h2 className="text-lg sm:text-xl">
+              <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls={bodyId} className="flex items-center gap-2 text-left">
+                <span aria-hidden className={`inline-block text-sm text-soft transition-transform ${open ? "rotate-90" : ""}`}>▸</span>
+                {title}
+              </button>
+            </h2>
+          ) : (
+            <h2 className="text-lg sm:text-xl">{title}</h2>
+          )}
+          {collapsible && !open && summary && <p className="mt-1 pl-6 text-sm text-soft">{summary}</p>}
         </div>
-        {action}
+        {open && action}
       </div>
-      <div className="p-5 sm:p-6">{children}</div>
+      {open && <div id={bodyId} className="p-5 sm:p-6">{children}</div>}
     </section>
   );
 }
@@ -132,7 +169,8 @@ export function RuleCard({
         </div>
       )}
       <h3 className="text-[15px] tracking-tight">{title}</h3>
-      <Prose text={detail} pages={pages} className="mt-1" />
+      {/* Warnings and critical rules always show in full; plain information can be shortened. */}
+      <Prose text={detail} pages={pages} className="mt-1" clamp={severity === "info" ? 2 : undefined} />
       <ScheduleRefs refs={schedule} />
     </div>
   );

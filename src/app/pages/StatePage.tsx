@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { findState } from "../../data/states";
 import { adviseDeposit, checkEligibility, documentsFor, type Verdict } from "../../engine/eligibility";
@@ -8,6 +8,7 @@ import { Cite, DraftBanner, Marked, Prose, RuleCard, Section, SourceDocsContext,
 import { VerdictBadge } from "../components/VerdictBadge";
 import { SeatChip, SeatViewBanner, SeatViewContext, SeatViewSwitch, seatOrder, useSeatView, useStoredSeatView } from "../seats";
 import { ImportantDates } from "../components/ImportantDates";
+import { SummaryCard } from "../components/SummaryCard";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
 
@@ -26,10 +27,44 @@ const NAV = [
   ["gaps", "Not in brochure"],
 ] as const;
 
+/** The section currently under the sticky menu: the last one whose top has scrolled past it. */
+function useActiveSection(ids: string[]) {
+  const [active, setActive] = useState<string | null>(null);
+  useEffect(() => {
+    let frame = 0;
+    let jumpedAt = 0;
+    const update = () => {
+      frame = 0;
+      // Right after a menu click, follow the link: sections near the page end can't scroll to the top.
+      const target = window.location.hash.slice(1);
+      if (Date.now() - jumpedAt < 1000 && ids.includes(target)) return setActive(target);
+      const line = 130; // just below the sticky header and section menu
+      let current: string | null = null;
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= line) current = id;
+      }
+      setActive(current);
+    };
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    const onHash = () => { jumpedAt = Date.now(); onScroll(); };
+    window.addEventListener("hashchange", onHash);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("hashchange", onHash);
+      if (frame) cancelAnimationFrame(frame);
+    };
+  }, [ids.join()]); // eslint-disable-line react-hooks/exhaustive-deps
+  return active;
+}
+
 export function StatePage() {
   const { key } = useParams();
   const entry = findState(key);
   const { profile } = useProfile();
+  const activeSection = useActiveSection(NAV.map(([id]) => id));
   const [seatView, setSeatView] = useStoredSeatView(profile?.nriLink === "self" || profile?.nriLink === "parent" || profile?.nriLink === "guardian");
   if (!entry) return <NotFound />;
   const { brochure: b } = entry;
@@ -60,13 +95,20 @@ export function StatePage() {
         </div>
       </header>
 
+      <SummaryCard b={b} verdict={verdict} profile={profile} />
       {seatView === "mgmtNri" && <SeatSummary b={b} />}
 
       <nav aria-label="Sections" className="no-print sticky top-[53px] z-10 -mx-4 overflow-x-auto border-b border-line bg-surface/90 px-4 py-2 backdrop-blur">
         <ul className="flex gap-1 whitespace-nowrap">
           {NAV.map(([id, label]) => (
             <li key={id}>
-              <a href={`#${id}`} className="rounded-md px-2.5 py-1 text-[13px] text-soft hover:bg-canvas hover:text-ink">{label}</a>
+              <a
+                href={`#${id}`}
+                aria-current={activeSection === id ? "true" : undefined}
+                className={`inline-block rounded-md px-2.5 py-1.5 text-[13px] ${activeSection === id ? "bg-brand-tint font-semibold text-brand-strong" : "text-soft hover:bg-canvas hover:text-ink"}`}
+              >
+                {label}
+              </a>
             </li>
           ))}
         </ul>
@@ -88,7 +130,7 @@ export function StatePage() {
       {b.helpCentres.length > 0 && <HelpCentresSection b={b} />}
       <CollegesSection b={b} profile={profile} />
       <HelpSection b={b} />
-      <Section id="gaps" kicker="Be aware" title="Not covered in this brochure">
+      <Section id="gaps" kicker="Be aware" title="Not covered in this brochure" collapsible summary={`${b.gaps.length} things to check on the official website, plus forms and source documents`}>
         <p className="mb-4 text-sm text-soft">These are published separately, so check the official website for them.</p>
         <div className="grid gap-3 sm:grid-cols-2">
           {seatOrder(seatView, b.gaps).map((g) => (
@@ -192,7 +234,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
             <li key={r.id} className="rounded-lg border border-line p-4">
               <SeatChip seats={r.seats} />
               <h3 className={`font-semibold ${r.seats ? "mt-1.5" : ""}`}>{r.title}</h3>
-              <Prose text={r.explanation} pages={r.sourcePages} className="mt-1" />
+              <Prose text={r.explanation} pages={r.sourcePages} className="mt-1" clamp={2} />
             </li>
           ))}
         </ul>
@@ -282,7 +324,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
                 <span aria-hidden className="text-soft">☐</span>
                 <div>
                   <p className="font-semibold text-ink">{r.rule.title} <SeatChip seats={r.rule.seats} /></p>
-                  <Prose text={r.rule.explanation} pages={r.rule.sourcePages} className="mt-0.5" />
+                  <Prose text={r.rule.explanation} pages={r.rule.sourcePages} className="mt-0.5" clamp={2} />
                 </div>
               </li>
             ))}
@@ -402,17 +444,32 @@ function RoundsSection({ b }: { b: Brochure }) {
   }, [rounds]);
   return (
     <Section id="rounds" kicker="Rounds" title="What happens in each round">
-      <div className="grid gap-4 lg:grid-cols-4 sm:grid-cols-2">
-        {groups.map(([tag, rules]) => (
-          <div key={tag} className="rounded-lg border border-line bg-canvas p-3">
-            <h3 className="mb-2 px-1 text-xs font-semibold tracking-wide text-soft uppercase">{tag}</h3>
-            <div className="space-y-2">
-              {rules.map((r) => <RuleCard key={r.id} title={r.title} detail={r.detail} severity={r.severity} seats={r.seats} schedule={r.schedule} pages={r.sourcePages} />)}
-            </div>
-          </div>
-        ))}
+      <div className="space-y-3">
+        {groups.map(([tag, rules], i) => <RoundGroup key={tag} tag={tag} rules={rules} defaultOpen={i < 2} />)}
       </div>
     </Section>
+  );
+}
+
+/** One round's rules, folded under a heading that says how many rules and how many are critical. */
+function RoundGroup({ tag, rules, defaultOpen }: { tag: string; rules: Brochure["rounds"]; defaultOpen: boolean }) {
+  const [open, setOpen] = useState(defaultOpen);
+  const critical = rules.filter((r) => r.severity === "critical").length;
+  const id = `round-${tag.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+  return (
+    <div className="rounded-lg border border-line">
+      <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls={id} className="flex w-full items-center gap-2 px-4 py-3 text-left">
+        <span aria-hidden className={`text-sm text-soft transition-transform ${open ? "rotate-90" : ""}`}>▸</span>
+        <span className="font-semibold text-ink">{tag}</span>
+        <span className="text-sm text-soft">{rules.length} {rules.length === 1 ? "rule" : "rules"}</span>
+        {critical > 0 && <StatusChip className="bg-bad-tint text-bad">{critical} critical</StatusChip>}
+      </button>
+      {open && (
+        <div id={id} className="grid gap-3 border-t border-line bg-canvas p-3 sm:grid-cols-2">
+          {rules.map((r) => <RuleCard key={r.id} title={r.title} detail={r.detail} severity={r.severity} seats={r.seats} schedule={r.schedule} pages={r.sourcePages} />)}
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -482,7 +539,7 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
     ? [...policy.vertical, { category: "UR (open)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }]
     : [];
   return (
-    <Section id="reservation" kicker="Reservation" title="How seats are reserved">
+    <Section id="reservation" kicker="Reservation" title="How seats are reserved" collapsible summary={verdict?.effectiveCategory ? `You're counted as ${verdict.effectiveCategory}. Category shares, certificates and seat conversion.` : "Category shares, certificates and seat conversion."}>
       {verdict?.effectiveCategory && (
         <p className="mb-2 text-sm">You are counted as <strong>{verdict.effectiveCategory}</strong> in this state.</p>
       )}
@@ -624,7 +681,7 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
   const total = b.nodalCentres.reduce((s, n) => s + (dental ? n.privateDental : n.privateMedical).length, 0);
   if (b.nodalCentres.length === 0 && b.disabilityCentres.length === 0) return null;
   return (
-    <Section id={b.helpCentres.length ? "pwd-centres" : "colleges"} kicker={b.nodalCentres.length ? "Where to report" : "PwD candidates"} title={b.nodalCentres.length ? `Private ${dental ? "dental" : "medical"} colleges & their admission centres` : "Disability medical boards"}>
+    <Section collapsible summary={b.nodalCentres.length ? "Which centre to report to for each private college" : "Where PwD candidates get certified"} id={b.helpCentres.length ? "pwd-centres" : "colleges"} kicker={b.nodalCentres.length ? "Where to report" : "PwD candidates"} title={b.nodalCentres.length ? `Private ${dental ? "dental" : "medical"} colleges & their admission centres` : "Disability medical boards"}>
       {b.nodalCentres.length > 0 && <>
       <p className="mb-3 text-sm text-soft">
         If you're allotted a private college, you take admission at its nodal centre. {total} colleges are listed.
@@ -674,7 +731,7 @@ function HelpCentresSection({ b }: { b: Brochure }) {
   const { show } = useSeatView();
   const rows = b.helpCentres.filter((c) => show(c) && (c.name + " " + c.address).toLowerCase().includes(needle));
   return (
-    <Section id="colleges" kicker="Where to go" title="Help centres for document verification">
+    <Section id="colleges" kicker="Where to go" title="Help centres for document verification" collapsible summary={`${b.helpCentres.length} centres; search by city`}>
       <p className="mb-3 text-sm text-soft">Book an appointment while printing your registration slip, then visit with originals and one self-attested photocopy set.</p>
       <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a city…" aria-label="Search help centres"
         className="mb-4 w-full rounded-lg border border-line-strong bg-surface px-3 py-2 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
@@ -694,7 +751,7 @@ function HelpCentresSection({ b }: { b: Brochure }) {
 function HelpSection({ b }: { b: Brochure }) {
   const h = b.helpdesk;
   return (
-    <Section id="help" kicker="Contact" title="Help desk">
+    <Section id="help" kicker="Contact" title="Help desk" collapsible summary={[h.phones[0]?.numbers[0], h.emails[0]?.addresses[0]].filter(Boolean).join(" · ")}>
       <p className="text-sm">Hours: <strong><Marked text={h.hours} /></strong><Cite pages={h.sourcePages} /></p>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {h.phones.map((p) => (
