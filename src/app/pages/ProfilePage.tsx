@@ -12,6 +12,7 @@ import {
 } from "../../engine/profile";
 import { CATEGORIES, type Category } from "../../schema/stateBrochure";
 import { formatDate, formatDateNumeric, parseDate } from "../text";
+import { radioProps } from "../components/radio";
 import { useProfile } from "../useProfile";
 
 const MAX_SPECIALITIES = 5;
@@ -39,7 +40,7 @@ function Choice<T extends string | boolean>({
 }) {
   return (
     <div role="radiogroup" aria-label={name} className="flex flex-wrap gap-2">
-      {options.map((o) => {
+      {options.map((o, i) => {
         const active = value === o.value;
         return (
           <button
@@ -47,6 +48,7 @@ function Choice<T extends string | boolean>({
             type="button"
             role="radio"
             aria-checked={active}
+            {...radioProps(options.map((x) => x.value), value, i, onChange)}
             onClick={() => onChange(o.value)}
             className={`rounded-lg border px-3.5 py-2 text-sm transition-colors ${
               active ? "border-brand/60 bg-brand-tint text-brand-strong" : "border-line-strong bg-surface text-body hover:border-soft"
@@ -323,7 +325,7 @@ export function ProfilePage() {
         <button
           type="button"
           onClick={() => { save(null); setP(EMPTY_PROFILE); }}
-          className="text-sm font-medium text-soft hover:text-bad"
+          className="link text-sm font-medium !text-soft hover:!text-bad"
         >
           Clear profile
         </button>

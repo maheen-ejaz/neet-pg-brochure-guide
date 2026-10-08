@@ -40,7 +40,7 @@ export function ScheduleRefs({ refs }: { refs?: ScheduleRef[] }) {
             )),
           )}
         </ul>
-        <Link to={`/mcc/${entry.key}`} className="mt-1 inline-block text-brand-strong hover:underline">Full MCC timeline →</Link>
+        <Link to={`/mcc/${entry.key}`} className="mt-1 inline-block link">Full MCC timeline →</Link>
       </div>
     </SourceDocsContext.Provider>
   );

@@ -69,7 +69,7 @@ export function HomePage() {
             </p>
           </div>
           {comparisonEnabled && (
-            <Link to="/compare" className="text-sm text-brand-strong hover:underline">Compare states →</Link>
+            <Link to="/compare" className="text-sm link">Compare states →</Link>
           )}
         </div>
 

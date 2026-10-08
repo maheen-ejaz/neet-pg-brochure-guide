@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, type ReactNode } from "react";
 import type { Brochure, SeatType } from "../schema/stateBrochure";
+import { radioProps } from "./components/radio";
 
 /**
  * Seat-type view of a state guide. Items carry an optional `seats` tag only when the source
@@ -97,7 +98,7 @@ export function SeatViewSwitch({
   return (
     <div className="no-print">
       <div role="radiogroup" aria-label="Seat type" className="inline-flex flex-wrap gap-1 rounded-lg border border-line bg-canvas p-1">
-        {options.map((o) => {
+        {options.map((o, i) => {
           const active = view === o.value;
           return (
             <button
@@ -105,6 +106,7 @@ export function SeatViewSwitch({
               type="button"
               role="radio"
               aria-checked={active}
+              {...radioProps(options.map((x) => x.value), view, i, onChange)}
               title={o.hint}
               onClick={() => onChange(o.value)}
               className={`rounded-md px-3 py-1.5 text-sm transition-colors ${

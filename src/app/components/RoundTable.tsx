@@ -42,7 +42,7 @@ function Row({ st, today, short, college }: { st: ScheduleStage; today: string; 
   const done = status === "done";
   const now = status === "now" && !college;
   return (
-    <li className={`grid gap-1.5 px-3 py-2.5 sm:items-center sm:gap-3 ${COLS} ${now ? "bg-good-tint/60" : ""} ${college ? "bg-canvas/60 text-soft" : ""} ${done ? "opacity-60" : ""}`}>
+    <li className={`grid gap-1.5 px-3 py-2.5 sm:items-center sm:gap-3 ${COLS} ${now ? "bg-good-tint/60" : ""} ${college ? "bg-canvas/60 text-soft" : ""} ${done ? "[&_*]:!text-soft" : ""}`}>
       <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
         <span aria-hidden className={`w-3 text-center text-xs ${now ? "text-good" : "text-soft"}`}>{done ? "✓" : now ? "●" : ""}</span>
         <span className={college ? "text-sm" : "font-medium text-ink"}>{st.label}</span>
@@ -87,7 +87,7 @@ export function RoundTable({ round, today }: { round: ScheduleRound; today: stri
               <span key={st.key}>{i > 0 && " · "}{st.label.replace(/ by colleges.*$| verified by colleges.*$/i, "")} {st.end && st.end !== st.start ? `${formatDateShort(st.start)} - ${formatDateShort(st.end)}` : formatDateShort(st.start)}</span>
             ))}{" "}</>
           )}
-          <button type="button" onClick={() => setShowCollege(!showCollege)} className="font-medium text-brand-strong hover:underline" aria-expanded={showCollege}>
+          <button type="button" onClick={() => setShowCollege(!showCollege)} className="font-medium link" aria-expanded={showCollege}>
             {showCollege ? "Hide college steps" : "Show"}
           </button>
           <span className="ml-2">Source<Cite pages={round.sourcePages} /></span>

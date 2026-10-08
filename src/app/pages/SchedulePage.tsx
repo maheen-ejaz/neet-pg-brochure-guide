@@ -23,7 +23,7 @@ export function SchedulePage() {
       <div className="space-y-6">
         {s.status === "draft" && <DraftBanner />}
         <header>
-          <p className="text-sm text-soft"><Link to="/" className="text-brand-strong hover:underline">All states</Link> / All India Quota</p>
+          <p className="text-sm text-soft"><Link to="/" className="link">All states</Link> / All India Quota</p>
           <h1 className="mt-3 text-3xl sm:text-[40px]">{s.meta.shortTitle}</h1>
           <p className="mt-1 text-soft">
             {s.meta.authority}

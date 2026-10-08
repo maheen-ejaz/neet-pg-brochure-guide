@@ -41,7 +41,7 @@ export function StatePage() {
     <div className="space-y-6">
       {b.status === "draft" && <DraftBanner />}
       <header>
-        <p className="text-sm text-soft"><Link to="/" className="text-brand-strong hover:underline">All states</Link> / {b.meta.state}</p>
+        <p className="text-sm text-soft"><Link to="/" className="link">All states</Link> / {b.meta.state}</p>
         <h1 className="mt-3 text-3xl sm:text-[40px]">{b.meta.state} <span className="text-faint">NEET PG {b.meta.year}</span></h1>
         <p className="mt-1 text-soft">
           {b.meta.authority}
@@ -115,7 +115,7 @@ export function StatePage() {
             <ul className="space-y-1 text-sm">
               {b.source.documents.map((d) => (
                 <li key={d.title}>
-                  {d.url ? <a href={d.url} target="_blank" rel="noreferrer" className="font-medium text-brand-strong hover:underline">{d.title} ↗</a> : <span className="font-medium text-ink">{d.title}</span>}
+                  {d.url ? <a href={d.url} target="_blank" rel="noreferrer" className="font-medium link">{d.title} ↗</a> : <span className="font-medium text-ink">{d.title}</span>}
                   {d.issued && <span className="text-soft"> · {d.issued}</span>}
                 </li>
               ))}
@@ -236,7 +236,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
         {verdict.missingInfo.length > 0 && (
           <p className="border-t border-line bg-canvas p-4 text-sm">
             <strong>To complete this check, add:</strong> {verdict.missingInfo.join(", ")}.{" "}
-            <Link to="/profile" className="text-brand-strong underline">Update profile</Link>
+            <Link to="/profile" className="link">Update profile</Link>
           </p>
         )}
       </div>
@@ -343,10 +343,10 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
               const alt = advice?.alternatives.find((a) => a.tier.id === t.id);
               const irrelevant = !!advice?.recommended && !rec && !alt;
               return (
-                <li key={t.id} className={`flex items-center justify-between gap-3 rounded-lg border p-3 ${rec ? "border-brand/50 bg-brand-tint" : "border-line"} ${irrelevant ? "opacity-50" : ""}`}>
+                <li key={t.id} className={`flex items-center justify-between gap-3 rounded-lg border p-3 ${rec ? "border-brand/50 bg-brand-tint" : "border-line"} ${irrelevant ? "bg-canvas [&_*]:!text-soft" : ""}`}>
                   <div>
                     <p className="font-semibold text-ink">{t.label} <SeatChip seats={t.seats} /></p>
-                    <p className="text-xs text-soft">
+                    <p className={`text-xs ${rec ? "text-body" : "text-soft"}`}>
                       {rec ? "Recommended for you: covers every college open to you" : alt ? `Cheaper option: ${alt.covers.join(" ")} colleges only` : irrelevant ? "Doesn't cover the colleges open to you" : " "}
                     </p>
                   </div>
@@ -376,7 +376,7 @@ function StepsSection({ b }: { b: Brochure }) {
             <span className="absolute -left-[37px] flex h-6 w-6 items-center justify-center rounded-md border border-line-strong bg-surface text-xs font-semibold text-soft tabular-nums">{i + 1}</span>
             <h3 className="font-semibold">{s.title} <SeatChip seats={s.seats} /></h3>
             <Prose text={s.description} pages={s.sourcePages} className="mt-0.5" />
-            {s.link && <a href={s.link} target="_blank" rel="noreferrer" className="text-sm text-brand-strong hover:underline">{s.link.replace(/^https?:\/\//, "")} ↗</a>}
+            {s.link && <a href={s.link} target="_blank" rel="noreferrer" className="text-sm link">{s.link.replace(/^https?:\/\//, "")} ↗</a>}
           </li>
         ))}
       </ol>
@@ -451,9 +451,9 @@ function DocumentsSection({ entryKey, b, profile, verdict }: { entryKey: string;
         {docs.map(({ doc, certain }) => (
           <li key={doc.id}>
             <label className="flex cursor-pointer gap-3 rounded-lg border border-line p-3 hover:border-line-strong">
-              <input type="checkbox" checked={done.includes(doc.id)} onChange={() => toggle(doc.id)} className="mt-1 h-4 w-4 accent-[var(--brand)]" />
+              <input type="checkbox" checked={done.includes(doc.id)} onChange={() => toggle(doc.id)} className="h-6 w-6 shrink-0 accent-[var(--brand)]" />
               <span className="text-sm">
-                <span className={`font-medium text-ink ${done.includes(doc.id) ? "line-through opacity-60" : ""}`}>{doc.name}</span>
+                <span className={`font-medium text-ink ${done.includes(doc.id) ? "!text-soft line-through" : ""}`}>{doc.name}</span>
                 {!certain && <span className="ml-2 rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">If applicable</span>}
                 {doc.seats && <span className="ml-2"><SeatChip seats={doc.seats} /></span>}
                 <Cite pages={doc.sourcePages} />
@@ -469,6 +469,9 @@ function DocumentsSection({ entryKey, b, profile, verdict }: { entryKey: string;
     </Section>
   );
 }
+
+/** Reservation bar segments: navy → blue → neutral, distinct in both themes. */
+const BAR_COLOURS = ["var(--navy-a)", "var(--brand-strong)", "var(--brand)", "var(--line-strong)", "var(--soft)"];
 
 function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) {
   const { show, order } = useSeatView();
@@ -490,17 +493,23 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
       ) : policy ? (
         <>
           <p className="text-sm">Applies to: <strong><Marked text={policy.appliesTo} /></strong> <SeatChip seats={policy.seats} /><Cite pages={policy.sourcePages} /></p>
-          <div className="mt-4 flex h-10 overflow-hidden rounded-lg" role="img" aria-label={bars.map((v) => `${v.category} ${v.percent}%`).join(", ")}>
+          {/* The bar is decorative; the legend below carries the numbers in readable text. */}
+          <div className="mt-4 flex h-3 overflow-hidden rounded-full" role="img" aria-label={bars.map((v) => `${v.category} ${v.percent}%`).join(", ")}>
+            {bars.map((v, i) => (
+              <div key={v.category} style={{ width: `${v.percent}%`, background: BAR_COLOURS[i % BAR_COLOURS.length] }} />
+            ))}
+          </div>
+          <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
             {bars.map((v, i) => {
-              const mine = verdict?.effectiveCategory && v.category.startsWith(verdict.effectiveCategory);
+              const mine = !!verdict?.effectiveCategory && v.category.startsWith(verdict.effectiveCategory);
               return (
-                <div key={v.category} style={{ width: `${v.percent}%`, opacity: verdict?.effectiveCategory && !mine ? 0.7 : 1 }}
-                  className={`flex items-center justify-center text-[11px] font-semibold ${["bg-[var(--navy-a)] text-white", "bg-brand text-white", "bg-brand/60 text-white", "bg-brand/30 text-ink", "bg-line-strong text-ink"][i % 5]}`}>
-                  {v.percent >= 5 ? `${v.category} ${v.percent}%` : ""}
-                </div>
+                <li key={v.category} className={`flex items-center gap-1.5 ${mine ? "font-semibold text-ink" : ""}`}>
+                  <span aria-hidden className="h-2.5 w-2.5 shrink-0 rounded-sm" style={{ background: BAR_COLOURS[i % BAR_COLOURS.length] }} />
+                  {v.category} <span className="tabular-nums">{v.percent}%</span>{mine && <span className="text-xs text-soft">(you)</span>}
+                </li>
               );
             })}
-          </div>
+          </ul>
           <p className="mt-2 text-xs text-soft">Vertical reservation. Horizontal: {policy.horizontal.map((h) => `${h.category} ${h.percent}%`).join(", ") || "none stated"}.</p>
         </>
       ) : (
@@ -636,7 +645,7 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
       </>}
       {b.disabilityCentres.length > 0 && (
         <div className={b.nodalCentres.length ? "mt-6" : ""}>
-          <button type="button" onClick={() => setShowPwd(!showPwd)} className="text-sm text-brand-strong hover:underline" aria-expanded={showPwd || !!profile?.pwd}>
+          <button type="button" onClick={() => setShowPwd(!showPwd)} className="text-sm link" aria-expanded={showPwd || !!profile?.pwd}>
             {showPwd || profile?.pwd ? "▾" : "▸"} Designated disability certification centres ({b.disabilityCentres.length})
           </button>
           {(showPwd || profile?.pwd) && (
@@ -691,7 +700,7 @@ function HelpSection({ b }: { b: Brochure }) {
         {h.phones.map((p) => (
           <div key={p.label} className="rounded-lg border border-line p-4">
             <p className="font-semibold text-ink">{p.label}</p>
-            <ul className="mt-1 space-y-0.5 text-sm">{p.numbers.map((n) => <li key={n}><a className="text-brand-strong hover:underline" href={`tel:+91${n.replace(/^0/, "")}`}>{n}</a></li>)}</ul>
+            <ul className="mt-1 space-y-0.5 text-sm">{p.numbers.map((n) => <li key={n}><a className="link" href={`tel:+91${n.replace(/^0/, "")}`}>{n}</a></li>)}</ul>
           </div>
         ))}
       </div>
@@ -699,7 +708,7 @@ function HelpSection({ b }: { b: Brochure }) {
         {h.emails.map((e) => (
           <div key={e.label} className="rounded-lg bg-canvas p-3 text-sm">
             <p className="font-semibold text-ink">{e.label} email</p>
-            {e.addresses.map((a) => <a key={a} href={`mailto:${a}`} className="block break-all text-brand-strong hover:underline">{a}</a>)}
+            {e.addresses.map((a) => <a key={a} href={`mailto:${a}`} className="block break-all link">{a}</a>)}
           </div>
         ))}
       </div>

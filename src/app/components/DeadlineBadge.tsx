@@ -20,7 +20,8 @@ export function DeadlineBadge({ date, time, kind = "deadline" }: { date: string;
   const b = badgeFor(date, time, kind, now);
   if (!b) return null;
   return (
-    <span className={`urgency urgency-${b.level}`} role="status">
+    // Not a live region: re-announcing the countdown every 30 seconds would drown out a screen reader.
+    <span className={`urgency urgency-${b.level}`}>
       {b.level === 0 && <span aria-hidden className="urgency-dot h-1.5 w-1.5 rounded-full bg-current" />}
       {b.label}
       {b.countdown && (
