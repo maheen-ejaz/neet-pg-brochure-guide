@@ -325,7 +325,7 @@ export function ProfilePage() {
         <details className="rounded-xl border border-line bg-surface">
           <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-ink sm:px-6">Optional: AIR and preferred specialities</summary>
           <div className="space-y-6 px-5 pb-5 sm:px-6">
-            <p className="text-sm text-soft">Not used for your verdict yet. Brochures don't include cutoffs or seat lists by speciality.</p>
+            <p className="text-sm text-soft">Not used for your eligibility check yet. Brochures don't include cutoffs or seat lists by speciality.</p>
         <Field label="All India Rank (AIR)" hint="Saved for rank-based features. Brochures don't include cutoffs yet." htmlFor="air">
           <input
             id="air"

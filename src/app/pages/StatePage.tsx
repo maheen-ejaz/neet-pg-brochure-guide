@@ -225,7 +225,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
     return (
       <Section id="verdict" kicker="Eligibility" title="Who can apply">
         <div className="mb-4 rounded-lg border border-line bg-canvas p-4">
-          <p className="font-semibold text-ink">Want a personal verdict?</p>
+          <p className="font-semibold text-ink">Want to check your own eligibility?</p>
           <p className="mt-1 text-sm">Add your profile and we'll check every rule below against it.</p>
           <Link to="/profile" className="btn-primary mt-3">Add my profile</Link>
         </div>

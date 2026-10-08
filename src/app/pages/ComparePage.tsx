@@ -30,7 +30,7 @@ export function ComparePage() {
 
   const rows: { label: string; cell: (b: Brochure) => ReactNode }[] = [
     {
-      label: "Your verdict",
+      label: "Your eligibility",
       cell: (b) => (profile ? <VerdictBadge verdict={checkEligibility(profile, b)} /> : <Link to="/profile" className="link">Add profile</Link>),
     },
     {

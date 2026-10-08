@@ -80,7 +80,7 @@ export function HomePage() {
           <div>
             <h2 className="text-2xl font-semibold">States</h2>
             <p className="text-sm text-soft">
-              {profile ? "Your quick verdict for each state, based on your profile." : "Add your profile to see a verdict for each state."}
+              {profile ? "Your eligibility for each state, based on your profile." : "Add your profile to check your eligibility for each state."}
             </p>
             {profile && (
               <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[15px]">

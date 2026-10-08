@@ -195,7 +195,7 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
     headline = "No college sector is open to you";
   } else if (blockingUnknown || !facts.courseType || !facts.mbbsLocation) {
     status = "incomplete";
-    headline = "Add a few details to see your verdict";
+    headline = "Add a few details to check your eligibility";
   } else if (quotas) {
     status = "restricted";
     headline = `Eligible for ${quotas.join(" / ")} quota seats only`;

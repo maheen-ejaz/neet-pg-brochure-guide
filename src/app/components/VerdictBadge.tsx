@@ -71,7 +71,7 @@ export function VerdictBand({ verdict }: { verdict: Verdict | null }) {
   if (!verdict) {
     return (
       <div className="border-b border-line bg-canvas px-5 py-3 text-sm text-soft">
-        Add your profile to see your verdict
+        Add your profile to check your eligibility
       </div>
     );
   }
