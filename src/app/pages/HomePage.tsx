@@ -10,9 +10,16 @@ import { VerdictBand } from "../components/VerdictBadge";
 
 const listFormat = new Intl.ListFormat("en", { style: "long", type: "conjunction" });
 
+/** Card order: states the candidate can use first, then ones that need details, ruled-out states last. */
+const verdictOrder: Record<Verdict["status"], number> = { eligible: 0, restricted: 1, incomplete: 2, notCovered: 3, ineligible: 4 };
+
 export function HomePage() {
   const { profile } = useProfile();
-  const rows = states.map((s) => ({ ...s, verdict: profile ? checkEligibility(profile, s.brochure) : null }));
+  const rows = states
+    .map((s) => ({ ...s, verdict: profile ? checkEligibility(profile, s.brochure) : null }))
+    .sort((a, b) =>
+      (a.verdict && b.verdict ? verdictOrder[a.verdict.status] - verdictOrder[b.verdict.status] : 0) ||
+      a.brochure.meta.state.localeCompare(b.brochure.meta.state));
   const namesWith = (status: Verdict["status"]) =>
     rows.filter((r) => r.verdict?.status === status).map((r) => r.brochure.meta.state);
   const eligibleIn = namesWith("eligible");
