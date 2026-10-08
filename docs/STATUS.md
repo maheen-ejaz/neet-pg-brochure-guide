@@ -1,6 +1,6 @@
 # Project status and handoff
 
-Last updated: 2026-10-07. Read this first in a new session, together with `AGENTS.md`.
+Last updated: 2026-10-08. Read this first in a new session, together with `AGENTS.md`.
 
 ## What this is
 
@@ -33,24 +33,39 @@ guide per state:
 
 | State | File | Items | Status |
 |---|---|---|---|
-| Uttar Pradesh 2026 | `data/states/uttar-pradesh-2026.json` | 173 | Draft, 0 verified by a human. Passed 3 independent verification rounds (0 critical/major remaining). |
-| Gujarat 2026-27 | `data/states/gujarat-2026.json` | 114 | Draft, 0 verified by a human. Built from 12 current-year documents merged into one 81-page source. Passed 3 verification rounds. |
-| Karnataka 2026-27 | `data/states/karnataka-2026.json` | 187 | Draft, 0 verified by a human. KEA PGET 2026 Information Bulletin (68 pages, 14-08-2026), live for MDS; PG Medical takes effect after MCC's announcement. |
+| Uttar Pradesh 2026 | `data/states/uttar-pradesh-2026.json` | 173 | Draft, 0 verified by a human. Passed 3 independent verification rounds + the Codex audit. |
+| Gujarat 2026-27 | `data/states/gujarat-2026.json` | 119 | Draft, 0 verified by a human. Built from 12 current-year documents merged into one 81-page source. Passed 3 verification rounds + the Codex audit. |
+| Karnataka 2026-27 | `data/states/karnataka-2026.json` | 190 | Draft, 0 verified by a human. KEA PGET 2026 Information Bulletin (68 pages, 14-08-2026), live for MDS; PG Medical takes effect after MCC's announcement. Passed 3 verification rounds + the Codex audit. |
+| MCC All India Quota 2026 | `data/national/mcc-pg-2026.json` | 17 | Draft, 0 verified by a human. Tentative MCC schedule (4 pages, generated 07-10-2026): NEET-PG 50% AIQ + 100% deemed/central universities, AFMS registration only. Passed 1 independent check (all 35 stages confirmed). Review at `/review/national/mcc-pg-2026`. |
 
-| MCC All India Quota 2026 | `data/national/mcc-pg-2026.json` | 16 | Draft, 0 verified by a human. Tentative MCC schedule (4 pages, generated 07-10-2026): NEET-PG 50% AIQ + 100% deemed/central universities, AFMS registration only. Passed 1 independent check (all 35 stages confirmed). Review at `/review/national/mcc-pg-2026`. |
-
-Neither state is published yet. `npm run build` contains no states; the public preview (`build:preview`) shows both as drafts.
+Nothing is published yet. `npm run build` contains no states; the public preview (`build:preview`) shows all three
+states and the MCC timeline as drafts.
 
 Deploy the preview from a clean `main`: `npm run build:preview && netlify deploy --prod --dir dist --site fb03fe2b-69e5-497f-a789-fcfe1e8167e7`.
-First deploy: `6ac5f6e5567267092e0daaac` from commit `0597da2`.
+Deploys: `6ac5f6e5567267092e0daaac` (0597da2, first), `6ac610cc33ebd82b413cc4dd` (9f8fa69, + Karnataka),
+`6ac61273d294c43882eb2ea3` (4639518, DD-MM-YYYY), **`6ac6faa756c7dc88da40997e` (9458efe, Codex fixes) = currently live**.
+
+## Where we left off (08-10-2026)
+
+- **Live site (neetpg.goocampusglobal.com) is at 9458efe.** `main` is ahead (cdf7337) with three local-only updates
+  the owner hasn't asked to deploy yet: "21st October 2026" dates + urgency badges (722bf4b), cleaner Opens/Closes
+  date tables (96facdd), and the simplicity/accessibility pass (11beeb8…cdf7337). Deploy only when the owner asks.
+- The owner works one change at a time and wants every change verified (sources, tests, browser, accessibility)
+  before being told it's done; localhost first, live site on request.
+- Codex verification package: `~/Downloads/neetpg-codex-verification/` (+ `.zip`); its findings and our
+  per-finding response: `~/Downloads/neetpg-verification-findings/` (`claude-response.md`). The package's data
+  copies predate the 08-10 changes; refresh them before another audit.
 
 Source documents (gitignored, local only):
 - `brochures/uttar-pradesh/2026/`: scanned 25-page PDF + page images.
 - `brochures/gujarat/2026/`: `docs/` originals, merged `source.pdf`, page images. Gujarat source URLs are in the JSON's `source.documents`.
 - `brochures/karnataka/2026/`: `source.pdf` (the owner's "Karnataka - PGET 2026.pdf") + page images.
+- `brochures/mcc/2026/`: `source.pdf` (the owner's "MCC Counselling Schedule.pdf") + page images.
 
-Tests: 56 passing (`src/engine/eligibility.test.ts` for UP, `gujarat.test.ts`, `karnataka.test.ts`, `src/app/text.test.ts`).
-Profile has a Karnataka-driven question: 10 years of school (1st–12th) in one state (`tenYearStudyState`).
+Tests: 84 passing (`npm run check`): engine tests per state, dates/format guard, highlight rules, seat views, MCC
+schedule helpers, deadline badges. Accessibility: axe-core WCAG 2.1 AA reports 0 violations on every page.
+Profile questions added for states: 10 years of school in one state (`tenYearStudyState`), who is the NRI
+(`nriLink`), parent-service home-state route (`parentRouteState`).
 
 ## Open decisions for the product owner
 
@@ -71,10 +86,13 @@ These interpretations are flagged in the data (`note` fields) and need confirmin
 
 ## Next steps (in rough priority)
 
-1. Product owner reviews and publishes both states at `http://localhost:5173/review` (Verify & next, ⌘S, Publish).
+1. Product owner reviews and publishes the states and the MCC file at `http://localhost:5173/review`
+   (Verify & next, ⌘S, Publish). New since the first review: Karnataka `eligibility.quotaTerms` and Gujarat's split
+   Important-dates labels.
 2. Add more states with the `extract-brochure` skill (current-year documents only, then independent verification).
-3. Once states are published, switch the preview to `npm run build` (netlify.toml) and drop the noindex header.
-4. Later: seat matrix / cutoff ingestion for rank-based predictions; Hindi UI.
+3. Add each state's current management/NRI fee notices (the Management & NRI view is thin on fees).
+4. Once content is published, switch the preview to `npm run build` (netlify.toml) and drop the noindex header.
+5. Later: seat matrix / cutoff ingestion for rank-based predictions; Hindi UI.
 
 ## External audit (Codex, 07-10-2026)
 
