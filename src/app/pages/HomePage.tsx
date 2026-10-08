@@ -6,7 +6,7 @@ import { DeadlineBadge } from "../components/DeadlineBadge";
 import { formatDate } from "../text";
 import { checkEligibility } from "../../engine/eligibility";
 import { useProfile } from "../useProfile";
-import { VerdictBadge } from "../components/VerdictBadge";
+import { VerdictBand } from "../components/VerdictBadge";
 
 export function HomePage() {
   const { profile } = useProfile();
@@ -89,24 +89,25 @@ export function HomePage() {
             {states.map(({ key, brochure }) => {
               const verdict = profile ? checkEligibility(profile, brochure) : null;
               return (
-                <li key={key}>
+                // Subgrid rows keep the state names aligned across a row whatever the band's height.
+                <li key={key} className="row-span-2 grid grid-rows-subgrid gap-0">
                   <Link
                     to={`/state/${key}`}
-                    className="flex h-full flex-col rounded-lg border border-line bg-surface p-5 transition-colors hover:border-line-strong hover:bg-canvas/60"
+                    className="row-span-2 grid grid-rows-subgrid gap-0 overflow-hidden rounded-lg border border-line bg-surface transition-colors hover:border-line-strong"
                   >
-                    <div className="flex items-start justify-between gap-2">
-                      <div>
-                        <h3 className="text-lg font-semibold">{brochure.meta.state}</h3>
-                        <p className="text-sm text-soft">NEET PG {brochure.meta.year}</p>
+                    <VerdictBand verdict={verdict} />
+                    <div className="flex flex-1 flex-col p-5 transition-colors hover:bg-canvas/60">
+                      <div className="flex items-start justify-between gap-2">
+                        <div>
+                          <h3 className="text-lg font-semibold">{brochure.meta.state}</h3>
+                          <p className="text-sm text-soft">NEET PG {brochure.meta.year}</p>
+                        </div>
+                        {brochure.status === "draft" && (
+                          <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-xs font-semibold text-warn">Draft</span>
+                        )}
                       </div>
-                      {brochure.status === "draft" && (
-                        <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-xs font-semibold text-warn">Draft</span>
-                      )}
-                    </div>
-                    <p className="mt-3 flex-1 text-sm">{brochure.meta.coursesCovered.join(" · ")}</p>
-                    <div className="mt-4 flex items-center justify-between">
-                      {verdict ? <VerdictBadge verdict={verdict} /> : <span className="text-xs text-soft">No profile yet</span>}
-                      <span className="text-sm text-brand-strong">Open guide →</span>
+                      <p className="mt-3 flex-1 text-sm">{brochure.meta.coursesCovered.join(" · ")}</p>
+                      <span className="mt-4 self-end text-sm text-brand-strong">Open guide →</span>
                     </div>
                   </Link>
                 </li>
