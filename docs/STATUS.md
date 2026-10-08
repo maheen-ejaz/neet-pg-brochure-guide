@@ -1,6 +1,7 @@
 # Project status and handoff
 
 Last updated: 2026-10-08. Read this first in a new session, together with `AGENTS.md`.
+New to the project? Start with [`HANDOVER.md`](HANDOVER.md) (how to run, maintain, extend and rebuild it).
 
 ## What this is
 
@@ -47,16 +48,15 @@ Deploys: `6ac5f6e5567267092e0daaac` (0597da2, first), `6ac610cc33ebd82b413cc4dd`
 
 ## Where we left off (08-10-2026)
 
-- **Live site (neetpg.goocampusglobal.com) is at 9458efe.** `main` is ahead (cdf7337) with three local-only updates
-  the owner hasn't asked to deploy yet: "21st October 2026" dates + urgency badges (722bf4b), cleaner Opens/Closes
-  date tables (96facdd), and the simplicity/accessibility pass (11beeb8…cdf7337). Deploy only when the owner asks.
+- **Live site (neetpg.goocampusglobal.com) was last recorded at 9458efe.** `main` has moved on since (dates and urgency
+  badges, Opens/Closes tables, the simplicity/accessibility pass, verdict bands on state cards). Check Netlify's
+  published deploy before the next release. Deploy only when the owner asks.
 - The owner works one change at a time and wants every change verified (sources, tests, browser, accessibility)
   before being told it's done; localhost first, live site on request.
-- Codex verification package: `~/Downloads/neetpg-codex-verification/` (+ `.zip`); its findings and our
-  per-finding response: `~/Downloads/neetpg-verification-findings/` (`claude-response.md`). The package's data
-  copies predate the 08-10 changes; refresh them before another audit.
+- The Codex verification package and the per-finding response (`claude-response.md`) were kept outside the repo and
+  are no longer available. Their outcome is applied in the data and code (see "External audit" below).
 
-Source documents (gitignored, local only):
+Source documents (committed under `brochures/`):
 - `brochures/uttar-pradesh/2026/`: scanned 25-page PDF + page images.
 - `brochures/gujarat/2026/`: `docs/` originals, merged `source.pdf`, page images. Gujarat source URLs are in the JSON's `source.documents`.
 - `brochures/karnataka/2026/`: `source.pdf` (the owner's "Karnataka - PGET 2026.pdf") + page images.
@@ -97,8 +97,7 @@ These interpretations are flagged in the data (`note` fields) and need confirmin
 ## External audit (Codex, 07-10-2026)
 
 Codex audited all four data files (81 findings: 4 critical, 57 major, 20 minor). Each finding was re-checked
-against the source pages before applying; decisions and reasons are in
-`~/Downloads/neetpg-verification-findings/claude-response.md`. Code changes it led to:
+against the source pages before applying (the per-finding decision file is no longer available). Code changes it led to:
 - "Course not covered" now wins over "not eligible" (MDS in Gujarat), and the document list warns about it.
 - Profile asks **who is the NRI** (`nriLink`: no one / you / parent / legal guardian when parents are absent /
   sponsoring relative) instead of yes/no; states map it to their own definitions (Gujarat p26, Karnataka p19).
@@ -140,17 +139,18 @@ Tags were proposed per state, checked against quotes, then blind-verified (0 wro
   `.card`, `StatusChip` in `src/app/components/ui.tsx`.
 - Scannable text: `Prose` (ui.tsx) turns multi-sentence brochure text into bullets, and `Marked` puts a
   highlighter (`.hl`, `--mark` token) on money, %, durations and dates. Matching rules live in `src/app/text.ts`.
-- Reusable design system: https://claude.ai/artifact/4uGY27ni6AQ7Z9Q3BLi39Y, with a local copy at `~/Downloads/Attio Mono/`
+- Reusable design system: https://claude.ai/artifact/4uGY27ni6AQ7Z9Q3BLi39Y, with a copy in `docs/design-system/`
   (`tokens.css`, `tokens.json`, README, component previews). Every text pair is checked for WCAG contrast in both themes.
 
 ## Gotchas
 
 - **Dev server in Claude Code:** background commands stop after at most 2 hours. For long review sessions,
   the owner should run `npm run dev` in their own terminal.
-- **Browser checks:** the Playwright MCP browser isn't installed. Use the Playwright library from
-  `~/Developer/goocampus-tools/node_modules/playwright` with
-  `executablePath` = the `chrome-headless-shell` under `~/Library/Caches/ms-playwright/chromium_headless_shell-1246/`.
+- **Browser checks:** Playwright isn't a dependency of this repo. Install it (`npx playwright install chromium`) or point
+  an existing Playwright install at a Chrome headless shell. `docs/images/shots.mjs` shows the pattern used for
+  the README screenshots.
 - **Review tool** normalises files through the schema on load (older files lack newer optional fields). Saving
   writes the normalised JSON, which is expected.
 - Saving JSON from the review page deliberately doesn't hot-reload, so refresh the student preview to see changes.
-- The repo has **no git remote**; all work exists only on this Mac.
+- Repo: https://github.com/maheen-ejaz/neet-pg-brochure-guide (public, MIT; `brochures/` excluded from the licence).
+- Previous owner's Claude Code memory notes are in `docs/claude-memory/`.

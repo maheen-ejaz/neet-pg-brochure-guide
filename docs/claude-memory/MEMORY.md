@@ -1,0 +1,4 @@
+- [Verify every extraction](brochure-extraction-verification.md) — blind subagent check + fold mistakes into skill lessons
+- [Current-year documents only](current-year-documents-only.md) — ignore archives/older rules; record them as gaps
+- [Attio Mono design system](quiet-mono-design-system.md) — user loves this Attio-style palette; reuse in other projects
+- [Working style](working-style.md) — verify before notifying; one change at a time; localhost first, deploy only on request; mockups before building

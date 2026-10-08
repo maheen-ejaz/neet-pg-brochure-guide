@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8"><title>StatusChip · Attio Mono</title>
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap">
+<style>
+  body { margin: 0; background: var(--surface); font-family: var(--font-sans); }
+  .row { display: flex; flex-wrap: wrap; gap: var(--space-2); padding: var(--space-6); }
+  .chip { display: inline-flex; align-items: center; gap: 6px; border-radius: 6px; padding: 2px 8px; font: 600 12px/18px var(--font-sans); }
+  .chip::before { content: ""; width: 6px; height: 6px; border-radius: var(--radius-full); background: currentColor; }
+  .good { color: var(--good); background: var(--good-tint); }
+  .warn { color: var(--warn); background: var(--warn-tint); }
+  .bad { color: var(--bad); background: var(--bad-tint); }
+  .neutral { color: var(--muted); background: var(--canvas); }
+</style>
+<div class="row">
+  <span class="chip good">Eligible</span>
+  <span class="chip warn">Watch out</span>
+  <span class="chip bad">Critical</span>
+  <span class="chip neutral">Needs details</span>
+</div>
+<script></script>

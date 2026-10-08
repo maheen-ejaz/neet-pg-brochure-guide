@@ -1,0 +1,40 @@
+<!doctype html><meta charset="utf-8"><title>Attio Mono</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Inter+Tight:wght@600&display=swap">
+<style>
+  html, body { margin: 0; background: var(--surface); }
+  .cover { position: relative; width: 960px; height: 320px; overflow: hidden; background: var(--surface); }
+  .art { position: absolute; left: 480px; top: 0; width: 480px; height: 320px; }
+  .ink { fill: var(--ink); }
+  .from { fill: var(--accent-from); }
+  .to { fill: var(--accent-to); }
+  .relief { fill: var(--line-strong); }
+  .rule { stroke: var(--line); stroke-width: 1; }
+  .r { rx: var(--radius-lg); ry: var(--radius-lg); }
+  .text { position: absolute; left: 48px; bottom: 32px; max-width: 440px; }
+  .name { margin: 0; font: 600 120px/0.95 var(--font-display); letter-spacing: -0.03em; color: var(--ink); }
+  .tag { margin: 16px 0 0; font: 500 14px/20px var(--font-sans); color: var(--muted); }
+</style>
+<div class="cover">
+  <svg class="art" viewBox="0 0 480 320" aria-hidden="true">
+    <!--
+      blocks: ink slab 224×320 (bleeds top, right, bottom); accent-from 160×160; accent-to 96×96; line-strong relief 64×192
+      arrangement: one tall slab with satellites, stepping down-left toward the name
+      pattern: four hairline rules in `line` at a 64px pitch (space-8 × 2) crossing the blocks; chosen because the system separates with borders, not shadows
+      scales: gaps space-6 (24px) and space-8 (32px); radius-lg (12px) on satellites, slab square where it bleeds
+    -->
+    <rect class="relief r" x="0" y="96" width="64" height="192"/>
+    <rect class="from r" x="88" y="32" width="160" height="160"/>
+    <rect class="to r" x="152" y="216" width="96" height="96"/>
+    <rect class="ink" x="256" y="0" width="224" height="320"/>
+    <line class="rule" x1="0" y1="64" x2="480" y2="64"/>
+    <line class="rule" x1="0" y1="128" x2="480" y2="128"/>
+    <line class="rule" x1="0" y1="192" x2="480" y2="192"/>
+    <line class="rule" x1="0" y1="256" x2="480" y2="256"/>
+  </svg>
+  <div class="text">
+    <h1 class="name">Attio<br>Mono</h1>
+    <p class="tag">Neutrals do the work. Colour only when it means something.</p>
+  </div>
+</div>
+<script></script>

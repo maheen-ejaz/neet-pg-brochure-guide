@@ -10,7 +10,7 @@ import { BrochureSchema } from "./src/schema/stateBrochure.ts";
  * Local-only review API. Registered with `apply: "serve"`, so it never exists in a
  * production build. Lets the /review page read and save data/states/*.json (state brochures)
  * and data/national/*.json (national schedules, e.g. MCC), and view source page images from the
- * gitignored brochures/ folder.
+ * brochures/ folder.
  */
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data", "states");

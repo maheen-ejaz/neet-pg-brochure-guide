@@ -132,7 +132,7 @@ export const BrochureSchema = z.object({
   }),
   status: z.enum(["draft", "published"]),
   source: z.object({
-    /** Folder (relative to repo root) holding source.pdf and pages/p-NN.jpg. Local only. */
+    /** Folder (relative to repo root) holding source.pdf and pages/p-NN.jpg (committed with the data). */
     dir: z.string(),
     pageCount: z.number().int().positive(),
     scanned: z.boolean(),
