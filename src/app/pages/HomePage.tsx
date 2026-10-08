@@ -4,12 +4,20 @@ import { comparisonEnabled, states } from "../../data/states";
 import { minutesNow, nextDeadline, todayIso } from "../schedule";
 import { DeadlineBadge } from "../components/DeadlineBadge";
 import { formatDate } from "../text";
-import { checkEligibility } from "../../engine/eligibility";
+import { checkEligibility, type Verdict } from "../../engine/eligibility";
 import { useProfile } from "../useProfile";
 import { VerdictBand } from "../components/VerdictBadge";
 
+const listFormat = new Intl.ListFormat("en", { style: "long", type: "conjunction" });
+
 export function HomePage() {
   const { profile } = useProfile();
+  const rows = states.map((s) => ({ ...s, verdict: profile ? checkEligibility(profile, s.brochure) : null }));
+  const namesWith = (status: Verdict["status"]) =>
+    rows.filter((r) => r.verdict?.status === status).map((r) => r.brochure.meta.state);
+  const eligibleIn = namesWith("eligible");
+  const partlyIn = namesWith("restricted");
+  const needDetails = namesWith("incomplete");
 
   return (
     <div className="space-y-8">
@@ -67,6 +75,22 @@ export function HomePage() {
             <p className="text-sm text-soft">
               {profile ? "Your quick verdict for each state, based on your profile." : "Add your profile to see a verdict for each state."}
             </p>
+            {profile && (
+              <p className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-[15px]">
+                {eligibleIn.length > 0 && (
+                  <span><strong className="text-good">Eligible</strong> in {listFormat.format(eligibleIn)}</span>
+                )}
+                {partlyIn.length > 0 && (
+                  <span><strong className="text-warn">Partly eligible</strong> in {listFormat.format(partlyIn)}</span>
+                )}
+                {eligibleIn.length === 0 && partlyIn.length === 0 && needDetails.length === 0 && (
+                  <span><strong className="text-bad">Not eligible</strong> in any state covered so far</span>
+                )}
+                {needDetails.length > 0 && (
+                  <span className="text-soft">{listFormat.format(needDetails)} {needDetails.length === 1 ? "needs" : "need"} a few more details</span>
+                )}
+              </p>
+            )}
           </div>
           {comparisonEnabled && (
             <Link to="/compare" className="text-sm link">Compare states →</Link>
@@ -86,8 +110,7 @@ export function HomePage() {
           </p>
         ) : (
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {states.map(({ key, brochure }) => {
-              const verdict = profile ? checkEligibility(profile, brochure) : null;
+            {rows.map(({ key, brochure, verdict }) => {
               return (
                 // Subgrid rows keep the state names aligned across a row whatever the band's height.
                 <li key={key} className="row-span-2 grid grid-rows-subgrid gap-0">
