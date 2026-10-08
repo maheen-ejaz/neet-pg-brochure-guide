@@ -1755,9 +1755,10 @@
         4
       ],
       "verified": false,
-      "label": "Buy PIN online (until 3:00 PM)",
+      "label": "Buy PIN online",
       "date": "2026-10-01",
-      "endDate": "2026-10-08"
+      "endDate": "2026-10-08",
+      "endTime": "3:00 PM"
     },
     {
       "id": "date-registration",
@@ -1765,9 +1766,10 @@
         4
       ],
       "verified": false,
-      "label": "Online registration & document upload (until 5:00 PM)",
+      "label": "Online registration & document upload",
       "date": "2026-10-01",
-      "endDate": "2026-10-08"
+      "endDate": "2026-10-08",
+      "endTime": "5:00 PM"
     },
     {
       "id": "date-verification",
@@ -1775,10 +1777,11 @@
         4
       ],
       "verified": false,
-      "label": "Document verification at help centre, by prior appointment only (10 AM–4 PM; Sat 3rd October 2026 10 AM–12 noon; closed Sun 4th October 2026)",
+      "label": "Document verification at help centre",
       "date": "2026-10-03",
       "endDate": "2026-10-09",
-      "endTime": "4:00 PM"
+      "endTime": "4:00 PM",
+      "detail": "By prior appointment only. Open 10 AM–4 PM; Saturday 3rd October 2026 10 AM–12 noon; closed Sunday 4th October 2026."
     }
   ],
   "gaps": [

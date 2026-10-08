@@ -2504,7 +2504,7 @@
         6
       ],
       "verified": false,
-      "label": "EWS and OBC certificates must be issued on or after",
+      "label": "EWS and OBC certificates: issued on or after",
       "date": "2026-04-01"
     },
     {

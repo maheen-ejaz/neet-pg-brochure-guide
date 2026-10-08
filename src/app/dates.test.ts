@@ -57,3 +57,12 @@ describe("dates read like '21st October 2026'", () => {
     expect(parseDate("30-09")).toBeNull();
   });
 });
+
+describe("short dates for tables", () => {
+  it("drops the year only when every date shares it", async () => {
+    const { formatDateShort, sharedYear } = await import("./text");
+    expect(formatDateShort("2026-10-21")).toBe("21st October");
+    expect(sharedYear(["2026-10-12", "2026-12-31", undefined])).toBe("2026");
+    expect(sharedYear(["2025-04-01", "2026-03-31"])).toBeNull();
+  });
+});

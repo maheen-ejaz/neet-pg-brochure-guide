@@ -264,6 +264,8 @@ export const BrochureSchema = z.object({
       endDate: isoDate.optional(),
       /** Closing time on the last day, as printed (e.g. "4:00 PM"); drives the HH:MM countdown. */
       endTime: z.string().optional(),
+      /** Small print under the label: appointments, opening hours, closures. */
+      detail: z.string().optional(),
     }),
   ),
   gaps: z.array(z.object({ ...sourced, title: z.string(), detail: z.string() })),

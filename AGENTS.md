@@ -43,6 +43,9 @@ Current status, decisions already made, open questions and next steps: `docs/STA
 - Every date the app shows reads "21st October 2026", ranges "21st October 2026 - 22nd October 2026": data text is
   written that way (`src/app/dates.test.ts` enforces it), ISO fields go through `formatDate`/`formatRange`, and date
   inputs are typed DD-MM-YYYY (`parseDate`, `formatDateNumeric`).
+- Dates in tables and lists (MCC rounds, Important dates) use one aligned Step | Opens | Closes grid
+  (`RoundTable`, `ImportantDates`), drop the year when every date in the block shares it (shown once in the header),
+  put closing times under the date, and fold college/MCC-only steps behind "Show".
 - Dates in Important-dates lists and MCC candidate steps get urgency badges (`src/app/deadline.ts`, IST): 3/2/1 Days
   Remaining, then "Last Day Today" with an HH:MM countdown to the printed time (or 11:59 PM IST).
 - Use only the current counselling year's documents for a state; older-only rules become `gaps`.

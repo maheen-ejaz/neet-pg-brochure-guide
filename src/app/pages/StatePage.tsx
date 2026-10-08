@@ -7,9 +7,7 @@ import type { Brochure } from "../../schema/stateBrochure";
 import { Cite, DraftBanner, Marked, Prose, RuleCard, Section, SourceDocsContext, StatusChip, inr, inrShort } from "../components/ui";
 import { VerdictBadge } from "../components/VerdictBadge";
 import { SeatChip, SeatViewBanner, SeatViewContext, SeatViewSwitch, seatOrder, useSeatView, useStoredSeatView } from "../seats";
-import { DeadlineBadge } from "../components/DeadlineBadge";
-import { kindFromLabel, timeFromLabel } from "../deadline";
-import { formatRange } from "../text";
+import { ImportantDates } from "../components/ImportantDates";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
 
@@ -382,19 +380,12 @@ function StepsSection({ b }: { b: Brochure }) {
           </li>
         ))}
       </ol>
-      <div className="mt-6 rounded-lg border border-line bg-canvas p-4">
-        <h3 className="font-semibold">Important dates</h3>
+      <div className="mt-6">
+        <h3 className="mb-2 font-semibold">Important dates</h3>
         {dates.length === 0 ? (
-          <p className="mt-1 text-sm">This brochure doesn't publish dates. Check the schedule notice on {b.meta.officialWebsites[0]?.replace(/^https?:\/\//, "")}.</p>
+          <p className="text-sm">This brochure doesn't publish dates. Check the schedule notice on {b.meta.officialWebsites[0]?.replace(/^https?:\/\//, "")}.</p>
         ) : (
-          <ul className="mt-2 space-y-1 text-sm">
-            {dates.map((d) => (
-              <li key={d.id} className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                <span><SeatChip seats={d.seats} /> <strong>{d.label}:</strong> <Marked text={formatRange(d.date, d.endDate)} /><Cite pages={d.sourcePages} /></span>
-                <DeadlineBadge date={d.endDate ?? d.date} time={d.endTime ?? timeFromLabel(d.label)} kind={kindFromLabel(d.label)} />
-              </li>
-            ))}
-          </ul>
+          <ImportantDates dates={dates} />
         )}
       </div>
     </Section>

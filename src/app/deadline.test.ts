@@ -46,3 +46,10 @@ describe("deadline badges", () => {
     expect(daysBetween("2026-12-31", "2027-01-01")).toBe(1);
   });
 });
+
+describe("date kinds", () => {
+  it("'issued on or after' starts something, so it's an event", () => {
+    expect(kindFromLabel("EWS and OBC certificates: issued on or after")).toBe("event");
+    expect(kindFromLabel("Internship completion deadline (MDS)")).toBe("deadline");
+  });
+});

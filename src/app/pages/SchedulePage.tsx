@@ -1,17 +1,12 @@
 import { Link, useParams } from "react-router-dom";
 import { findSchedule } from "../../data/schedules";
 import { Cite, DraftBanner, Prose, RuleCard, Section, SourceDocsContext, StatusChip } from "../components/ui";
-import { CANDIDATE_STAGES, minutesNow, nextDeadline, scheduleDocs, stageStatus, stageWhen, todayIso, type StageStatus } from "../schedule";
+import { minutesNow, nextDeadline, scheduleDocs, todayIso } from "../schedule";
 import { DeadlineBadge } from "../components/DeadlineBadge";
+import { RoundTable } from "../components/RoundTable";
 import { formatDate } from "../text";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
-
-const STATUS: Record<StageStatus, { label: string; cls: string }> = {
-  done: { label: "Done", cls: "bg-canvas text-soft" },
-  now: { label: "Open now", cls: "bg-good-tint text-good" },
-  upcoming: { label: "Upcoming", cls: "bg-brand-tint text-brand-strong" },
-};
 
 export function SchedulePage() {
   const { key } = useParams();
@@ -73,28 +68,7 @@ export function SchedulePage() {
 
         {s.rounds.map((r) => (
           <Section key={r.id} id={r.round} kicker="All India Quota" title={r.name}>
-            <ol className="divide-y divide-line overflow-hidden rounded-lg border border-line">
-              {r.stages.map((st) => {
-                const forCandidates = CANDIDATE_STAGES.includes(st.key);
-                const status = stageStatus(st, today);
-                return (
-                  <li key={st.key} className={`grid gap-1 p-3 sm:grid-cols-[1fr_1.3fr_auto] sm:items-center sm:gap-3 ${forCandidates ? "" : "bg-canvas/60"}`}>
-                    <span className={forCandidates ? "font-medium text-ink" : "text-sm text-soft"}>
-                      {st.label}
-                      {!forCandidates && <span className="ml-1.5 text-xs">(colleges/MCC)</span>}
-                    </span>
-                    <span className={`text-sm tabular-nums ${forCandidates ? "text-body" : "text-soft"}`}>{stageWhen(st)}</span>
-                    {forCandidates ? (
-                      <span className="flex flex-wrap items-center gap-1.5 sm:justify-end">
-                        <DeadlineBadge date={st.end ?? st.start} time={st.endTime} kind={st.key === "result" ? "event" : "deadline"} />
-                        <StatusChip className={STATUS[status].cls}>{STATUS[status].label}</StatusChip>
-                      </span>
-                    ) : <span />}
-                  </li>
-                );
-              })}
-            </ol>
-            <p className="mt-2 text-xs text-soft">Source<Cite pages={r.sourcePages} /></p>
+            <RoundTable round={r} today={today} />
           </Section>
         ))}
 

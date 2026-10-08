@@ -70,6 +70,18 @@ export function formatDate(iso: string): string {
   return m ? `${ordinal(Number(m[3]))} ${MONTH_NAMES[Number(m[2]) - 1]} ${m[1]}` : iso;
 }
 
+/** "2026-10-21" → "21st October": for tables and lists whose heading already shows the year. */
+export function formatDateShort(iso: string): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  return m ? `${ordinal(Number(m[3]))} ${MONTH_NAMES[Number(m[2]) - 1]}` : iso;
+}
+
+/** The one year shared by all these ISO dates, or null if they span years (then show full dates). */
+export function sharedYear(isos: (string | undefined)[]): string | null {
+  const years = new Set(isos.filter((d): d is string => !!d).map((d) => d.slice(0, 4)));
+  return years.size === 1 ? [...years][0] : null;
+}
+
 /** "21st October 2026 - 22nd October 2026" (or one date when start and end match). */
 export const formatRange = (start: string, end?: string) =>
   end && end !== start ? `${formatDate(start)} - ${formatDate(end)}` : formatDate(start);

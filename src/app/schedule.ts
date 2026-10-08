@@ -1,6 +1,6 @@
 import type { Schedule, ScheduleRound, ScheduleStage } from "../schema/nationalSchedule";
 import type { StageKey } from "../schema/schedule-keys";
-import { formatDate } from "./text";
+import { formatDate, formatDateShort } from "./text";
 
 /** Citations on schedule content read "MCC schedule p. N". */
 export const scheduleDocs = (s: Schedule) => [{ title: "MCC schedule", startPage: 1, pageCount: s.source.pageCount }];
@@ -9,10 +9,11 @@ export const scheduleDocs = (s: Schedule) => [{ title: "MCC schedule", startPage
 export const CANDIDATE_STAGES: StageKey[] = ["registration", "payment", "choiceFilling", "choiceLocking", "result", "reporting"];
 
 /** "12-10-2026 – 21-10-2026, until 12:00 noon"; same day with both times: "21-12-2026, 4:00 PM – 11:55 PM". */
-export function stageWhen(s: ScheduleStage): string {
-  if ((!s.end || s.end === s.start) && s.startTime && s.endTime) return `${formatDate(s.start)}, ${s.startTime} - ${s.endTime}`;
-  const start = formatDate(s.start) + (s.startTime && s.end && s.end !== s.start ? ` (from ${s.startTime})` : "");
-  const end = s.end && s.end !== s.start ? ` - ${formatDate(s.end)}` : "";
+export function stageWhen(s: ScheduleStage, short = false): string {
+  const fmt = short ? formatDateShort : formatDate;
+  if ((!s.end || s.end === s.start) && s.startTime && s.endTime) return `${fmt(s.start)}, ${s.startTime} - ${s.endTime}`;
+  const start = fmt(s.start) + (s.startTime && s.end && s.end !== s.start ? ` (from ${s.startTime})` : "");
+  const end = s.end && s.end !== s.start ? ` - ${fmt(s.end)}` : "";
   const time = s.endTime ? `, until ${s.endTime}` : s.startTime && (!s.end || s.end === s.start) ? `, from ${s.startTime}` : "";
   return start + end + time;
 }
