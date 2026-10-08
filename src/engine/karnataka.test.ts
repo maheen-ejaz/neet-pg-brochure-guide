@@ -15,7 +15,8 @@ const base: Profile = {
   schoolState: "Karnataka",
   tenYearStudyState: "Karnataka",
   birthState: "Karnataka",
-  nri: false,
+  nriLink: "none",
+  parentRouteState: "none",
   category: "UR",
   pwd: false,
   inServiceState: NOT_IN_SERVICE,
@@ -50,9 +51,23 @@ describe("Karnataka 2026 eligibility", () => {
     expect(check({ mbbsState: "Kerala", tenYearStudyState: NONE }).quotas).toEqual(["OPN", "NRI", "Others (Q)"]);
   });
 
+  it("a parent-service route (clauses d–g) lifts the clause a/y limits and explains the route", () => {
+    const route = { mbbsState: "Kerala", tenYearStudyState: NONE, parentRouteState: "Karnataka" };
+    // Clauses d–g open Government seats; GMP needs clause b/c (only clause d tops up the 10 years).
+    expect(check(route).quotas).toEqual(["Government", "OPN", "NRI", "Others (Q)"]);
+    expect(ids(route)).toContain("elig-parent-route");
+    expect(ids(route)).not.toContain("elig-clause-y");
+    expect(check({ mbbsState: "Kerala", tenYearStudyState: NONE, parentRouteState: null }).status).toBe("incomplete");
+  });
+
+  it("Gujarat-style guardian or Karnataka ward sponsor counts for Karnataka NRI seats", () => {
+    expect(ids({ nriLink: "relative" })).toContain("elig-nri");
+    expect(ids({ nriLink: "relative" })).not.toContain("elig-not-nri");
+  });
+
   it("non-NRIs are warned that NRI seats need an NRI sponsor, not excluded", () => {
     expect(ids({ mbbsState: "Kerala", tenYearStudyState: NONE })).toContain("elig-not-nri");
-    expect(ids({ mbbsState: "Kerala", tenYearStudyState: NONE, nri: true })).not.toContain("elig-not-nri");
+    expect(ids({ mbbsState: "Kerala", tenYearStudyState: NONE, nriLink: "parent" })).not.toContain("elig-not-nri");
   });
 
   it("foreign graduates appear limited to OPN and NRI, with or without Karnataka schooling", () => {
@@ -61,8 +76,8 @@ describe("Karnataka 2026 eligibility", () => {
   });
 
   it("OCI and foreign nationals are limited to NRI seats", () => {
-    expect(check({ nationality: "oci", nri: true }).quotas).toEqual(["NRI"]);
-    expect(check({ nationality: "foreign", nri: true }).quotas).toEqual(["NRI"]);
+    expect(check({ nationality: "oci", nriLink: "parent" }).quotas).toEqual(["NRI"]);
+    expect(check({ nationality: "foreign", nriLink: "parent" }).quotas).toEqual(["NRI"]);
   });
 
   it("unknown 10-year schooling leaves the verdict incomplete", () => {

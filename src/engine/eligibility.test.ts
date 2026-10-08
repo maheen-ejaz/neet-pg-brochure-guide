@@ -15,7 +15,8 @@ const base: Profile = {
   schoolState: "Uttar Pradesh",
   tenYearStudyState: null,
   birthState: "Uttar Pradesh",
-  nri: false,
+  nriLink: "none",
+  parentRouteState: "none",
   category: "UR",
   pwd: false,
   inServiceState: NOT_IN_SERVICE,
@@ -127,6 +128,12 @@ describe("UP 2026 documents", () => {
     // Other-state reserved candidates are treated as UR, so no UP category certificate is asked for.
     expect(ids({ category: "OBC", domicileState: "Bihar" })).not.toContain("doc-reservation");
     expect(ids({ pwd: true })).toContain("doc-pwd");
-    expect(ids({ mbbsState: ABROAD })).toContain("doc-fmg");
+    // p12's admission list has no FMGE certificate (Codex UP-011); FMGE is an eligibility rule instead.
+    expect(ids({ mbbsState: ABROAD })).not.toContain("doc-fmg");
+    const rules = (p: Partial<Profile>) => check(p).reasons.filter((r) => r.match === "applies").map((r) => r.rule.id);
+    expect(rules({ mbbsState: ABROAD, nationality: "indian" })).toContain("elig-fmg");
+    // 4.10 covers Indian/OCI medical graduates only: not foreign nationals, not MDS (Codex UP-003).
+    expect(rules({ mbbsState: ABROAD, nationality: "foreign" })).not.toContain("elig-fmg");
+    expect(rules({ mbbsState: ABROAD, courseType: "dental" })).not.toContain("elig-fmg");
   });
 });

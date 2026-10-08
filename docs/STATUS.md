@@ -76,6 +76,17 @@ These interpretations are flagged in the data (`note` fields) and need confirmin
 3. Once states are published, switch the preview to `npm run build` (netlify.toml) and drop the noindex header.
 4. Later: seat matrix / cutoff ingestion for rank-based predictions; Hindi UI.
 
+## External audit (Codex, 07-10-2026)
+
+Codex audited all four data files (81 findings: 4 critical, 57 major, 20 minor). Each finding was re-checked
+against the source pages before applying; decisions and reasons are in
+`~/Downloads/neetpg-verification-findings/claude-response.md`. Code changes it led to:
+- "Course not covered" now wins over "not eligible" (MDS in Gujarat), and the document list warns about it.
+- Profile asks **who is the NRI** (`nriLink`: no one / you / parent / legal guardian when parents are absent /
+  sponsoring relative) instead of yes/no; states map it to their own definitions (Gujarat p26, Karnataka p19).
+- Profile asks whether a **parent's service gives a home-state route** (`parentRouteState`, Karnataka clauses d–g).
+- MCC: "today/now" use IST (server time); same-day stage times shown; the MDS note is always visible.
+
 ## MCC timeline
 
 `/mcc/mcc-pg-2026` shows the four AIQ rounds (DD-MM-YYYY, MCC server time), the next deadline (time-aware) and

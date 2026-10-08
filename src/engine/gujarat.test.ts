@@ -15,7 +15,8 @@ const base: Profile = {
   schoolState: "Gujarat",
   tenYearStudyState: null,
   birthState: "Gujarat",
-  nri: false,
+  nriLink: "none",
+  parentRouteState: "none",
   category: "UR",
   pwd: false,
   inServiceState: NOT_IN_SERVICE,
@@ -55,13 +56,13 @@ describe("Gujarat 2026 eligibility", () => {
   });
 
   it("NRI without the Gujarat route is limited to NRI quota", () => {
-    const v = check({ ...outside, schoolState: "Karnataka", nri: true });
+    const v = check({ ...outside, schoolState: "Karnataka", nriLink: "parent" });
     expect(v.status).toBe("restricted");
     expect(v.quotas).toEqual(["NRI"]);
   });
 
   it("NRI who also meets the Gujarat route has no quota restriction", () => {
-    expect(check({ nri: true }).quotas).toBeNull();
+    expect(check({ nriLink: "parent" }).quotas).toBeNull();
   });
 
   it("missing school state makes an outside-Gujarat candidate incomplete, not eligible", () => {
@@ -108,6 +109,16 @@ describe("Gujarat 2026 eligibility", () => {
     expect(ids({ ...outside })).not.toContain("doc-domicile");
     expect(ids({ ...outside, birthState: "Delhi" })).toContain("doc-domicile");
     expect(ids({ category: "OBC" })).toEqual(expect.arrayContaining(["doc-caste", "doc-ncl"]));
-    expect(ids({ nri: true })).toContain("doc-nri");
+    expect(ids({ nriLink: "parent" })).toContain("doc-nri");
+  });
+
+  it("an NRI legal guardian counts when parents are absent; another relative doesn't", () => {
+    const outsideNoRoute = { mbbsState: "Karnataka", schoolState: "Karnataka", birthState: "Karnataka", domicileState: "Karnataka" };
+    expect(check({ ...outsideNoRoute, nriLink: "guardian" }).status).not.toBe("ineligible");
+    expect(check({ ...outsideNoRoute, nriLink: "relative" }).status).toBe("ineligible");
+  });
+
+  it("MDS candidates get 'not covered', never 'ineligible'", () => {
+    expect(check({ courseType: "dental", mbbsState: "Karnataka", schoolState: "Karnataka", birthState: "Karnataka", domicileState: "Karnataka" }).status).toBe("notCovered");
   });
 });

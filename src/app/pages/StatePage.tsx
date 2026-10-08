@@ -30,7 +30,7 @@ export function StatePage() {
   const { key } = useParams();
   const entry = findState(key);
   const { profile } = useProfile();
-  const [seatView, setSeatView] = useStoredSeatView(profile?.nri);
+  const [seatView, setSeatView] = useStoredSeatView(profile?.nriLink === "self" || profile?.nriLink === "parent" || profile?.nriLink === "guardian");
   if (!entry) return <NotFound />;
   const { brochure: b } = entry;
   const verdict = profile ? checkEligibility(profile, b) : null;
@@ -81,7 +81,7 @@ export function StatePage() {
         </div>
       </Section>
       <RoundsSection b={b} />
-      <DocumentsSection entryKey={entry.key} b={b} profile={profile} />
+      <DocumentsSection entryKey={entry.key} b={b} profile={profile} verdict={verdict} />
       <ReservationSection b={b} verdict={verdict} />
       <ResignationSection b={b} verdict={verdict} />
       <BondSection b={b} />
@@ -420,7 +420,7 @@ function RoundsSection({ b }: { b: Brochure }) {
   );
 }
 
-function DocumentsSection({ entryKey, b, profile }: { entryKey: string; b: Brochure; profile: Profile | null }) {
+function DocumentsSection({ entryKey, b, profile, verdict }: { entryKey: string; b: Brochure; profile: Profile | null; verdict: Verdict | null }) {
   const storeKey = `neetpg-guide:docs:${entryKey}`;
   const [done, setDone] = useState<string[]>(() => {
     try { return JSON.parse(localStorage.getItem(storeKey) ?? "[]"); } catch { return []; }
@@ -442,6 +442,11 @@ function DocumentsSection({ entryKey, b, profile }: { entryKey: string; b: Broch
       title="Documents to carry"
       action={<button type="button" onClick={() => window.print()} className="no-print btn-secondary !py-1.5 !text-[13px]">Print checklist</button>}
     >
+      {verdict?.status === "notCovered" && (
+        <p className="mb-3 rounded-lg border border-warn/30 bg-warn-tint px-3 py-2 text-sm text-warn">
+          <strong>Not for your course yet:</strong> this checklist is for {b.meta.coursesCovered.join(", ")}. This year's documents don't cover your course.
+        </p>
+      )}
       <p className="mb-3 text-sm text-soft">
         {profile ? "Filtered to your profile." : "Showing every document. Add your profile to filter it."} Bring originals and one self-attested photocopy set. {count}/{docs.length} ready.
       </p>

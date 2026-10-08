@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { findSchedule } from "../../data/schedules";
 import type { ScheduleRef } from "../../schema/stateBrochure";
 import { scheduleDocs, stageWhen } from "../schedule";
-import { useProfile } from "../useProfile";
 import { Cite, SourceDocsContext } from "./ui";
 
 /**
@@ -10,7 +9,6 @@ import { Cite, SourceDocsContext } from "./ui";
  * Renders nothing when that schedule isn't in this build (e.g. a draft in a production build).
  */
 export function ScheduleRefs({ refs }: { refs?: ScheduleRef[] }) {
-  const { profile } = useProfile();
   if (!refs?.length) return null;
   const rows = refs.flatMap((ref) => {
     const entry = findSchedule(ref.key);
@@ -25,11 +23,9 @@ export function ScheduleRefs({ refs }: { refs?: ScheduleRef[] }) {
     <SourceDocsContext.Provider value={scheduleDocs(entry.schedule)}>
       <div className="mt-3 rounded-md border border-line bg-canvas px-3 py-2 text-[13px]">
         <p className="font-semibold text-ink">
-          MCC All India Quota dates{entry.schedule.meta.tentative ? " (tentative)" : ""}, NEET-PG
+          MCC All India Quota dates{entry.schedule.meta.tentative ? " (tentative)" : ""}
         </p>
-        {profile?.courseType && !entry.schedule.meta.courses.includes(profile.courseType) && (
-          <p className="text-warn">This MCC schedule doesn't mention MDS, so these may not be your dates.</p>
-        )}
+        <p className="text-soft">For NEET-PG. This MCC schedule doesn't mention MDS, so MDS candidates shouldn't rely on these dates.</p>
         <ul className="mt-1 space-y-0.5">
           {rows.map(({ round, stages }) => (
             <li key={round.id}>

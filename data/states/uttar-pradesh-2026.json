@@ -59,7 +59,7 @@
       ],
       "verified": false,
       "title": "Register online",
-      "description": "Registration is online only, on upneet.gov.in, using your NEET-PG roll number and the same email ID you used on the NBE portal. Your name, parents' names and date of birth are pulled from NBE and can't be changed. You add domicile, category, sub-category, in-service status and where you did MBBS. Fill the form yourself, not through any agent or third party.",
+      "description": "Registration is online only, on upneet.gov.in. Log in with your NEET roll number and the same email ID you used on the NBE portal. Your name, parents' names and date of birth come from NBE and can't be changed. You add your domicile, category, sub-category, in-service (PMHS) status, where you passed MBBS, and your address. Fill the form yourself, not through any agent or third party.",
       "link": "https://upneet.gov.in"
     },
     {
@@ -267,11 +267,12 @@
       {
         "id": "elig-outside-state",
         "sourcePages": [
-          4
+          4,
+          5
         ],
         "verified": false,
         "title": "MBBS/BDS from outside Uttar Pradesh",
-        "explanation": "Candidates who passed MBBS/BDS outside Uttar Pradesh can only apply to private medical and dental colleges.",
+        "explanation": "Candidates who passed MBBS/BDS outside Uttar Pradesh can only apply to private medical and dental colleges. The brochure doesn't say whether this covers degrees from abroad, so FMGs should confirm with DGME UP.",
         "condition": {
           "fact": "mbbsLocation",
           "in": [
@@ -376,9 +377,26 @@
         "title": "Foreign medical graduates",
         "explanation": "FMGs must meet NBE Information Bulletin 2026 point 4.10: qualified the FMGE screening test, registered with NMC/MCI or a State Medical Council, and internship completed by 30-09-2026.",
         "condition": {
-          "fact": "mbbsLocation",
-          "in": [
-            "abroad"
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "abroad"
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian",
+                "oci"
+              ]
+            }
           ]
         },
         "effect": {
@@ -393,7 +411,7 @@
         ],
         "verified": false,
         "title": "Foreign nationals",
-        "explanation": "Foreign nationals must meet NBE Information Bulletin 2026 point 4.11: an NMC-recognised primary qualification and MHA security clearance where required. The NMC may grant temporary registration for the PG course, but only if you're registered in your own country and have an NOC from that country's medical council to do PG in India.",
+        "explanation": "Foreign nationals must meet NBE Information Bulletin 2026 point 4.11. Your basic medical qualification (equivalent to MBBS) must be recognised by the NMC. If you need MHA security clearance, get it before applying for NEET-PG and submit it with your application. The NMC may grant temporary registration for the course, limited to the college you join, on payment of a fee. For this you must be registered in the country where you got your basic qualification and have an NOC from its medical council to do PG in India. These rules are written for NEET-PG; MDS candidates should confirm with DGME UP.",
         "condition": {
           "fact": "nationality",
           "in": [
@@ -412,7 +430,7 @@
         ],
         "verified": false,
         "title": "Reserved category from another state",
-        "explanation": "Reserved category candidates from other states are treated as Unreserved (UR) in UP NEET PG/MDS counselling.",
+        "explanation": "Reserved category candidates from other states are treated as Unreserved (UR) in UP NEET PG/MDS counselling. The brochure doesn't define \"other states\"; we go by domicile, so confirm with DGME UP if your domicile and certificate state differ.",
         "condition": {
           "all": [
             {
@@ -899,6 +917,13 @@
           "stages": [
             "reporting"
           ]
+        },
+        {
+          "key": "mcc-pg-2026",
+          "round": "stray",
+          "stages": [
+            "reporting"
+          ]
         }
       ]
     },
@@ -1082,23 +1107,10 @@
         "in": [
           true
         ]
-      }
-    },
-    {
-      "id": "doc-fmg",
-      "sourcePages": [
-        5
-      ],
-      "verified": false,
-      "name": "FMGE pass certificate and NMC/State Medical Council registration",
-      "stage": "admission",
-      "appliesWhen": {
-        "fact": "mbbsLocation",
-        "in": [
-          "abroad"
-        ]
       },
-      "note": "Inferred from the FMG eligibility criteria (p5). The admission list (p12) has only the registration certificate (item 8)."
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "doc-service-bond",
@@ -1311,7 +1323,7 @@
         ],
         "verified": false,
         "title": "Your certificates are held until the bond is served",
-        "detail": "All certificates you submitted at admission, including your MBBS/BDS certificates, and your PG certificates stay with the institution until you complete 2 years of service or pay the bond amount. The government has a first lien on all of them.",
+        "detail": "Your course certificates stay with the institution until you complete 2 years of government service or pay the bond amount. The government also has a first lien on the certificates you submitted at admission, and the institution may keep them until the lien is cleared.",
         "severity": "warning"
       },
       {
@@ -1342,7 +1354,7 @@
         ],
         "verified": false,
         "title": "Stipend repayment for employed candidates on study leave",
-        "detail": "If you're employed and the government grants you stipend for 24 months to study, but you work for less than 24 months during the course, the proportionate amount is treated as stipend. You must pay the balance back on top of the security amount.",
+        "detail": "If you're employed and the government grants you stipend for 24 months to study, but you work less than 24 months during the course, the proportionate amount is treated as stipend. You then pay back the balance stipend to the government, on top of the security amount. The bond form leaves the amounts blank, so confirm with DGME UP whether this applies to you.",
         "severity": "warning",
         "note": "The source clause is partly blank-filled and garbled. This is the best reading."
       },
@@ -1637,7 +1649,10 @@
       "verified": false,
       "name": "VMMC & Safdarjang Hospital",
       "location": "New Delhi",
-      "remarks": "All disabilities except visual; intellectual & behavioural disabilities"
+      "remarks": "All disabilities except visual; intellectual & behavioural disabilities",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-2",
@@ -1647,7 +1662,10 @@
       "verified": false,
       "name": "All India Institute of Physical Medicine and Rehabilitation (AIIPMR)",
       "location": "Mumbai",
-      "remarks": "Locomotor disability only"
+      "remarks": "Locomotor disability only",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-3",
@@ -1657,7 +1675,10 @@
       "verified": false,
       "name": "Institute of Post Graduate Medical Education & Research (IPGMER)",
       "location": "Kolkata",
-      "remarks": "All disabilities"
+      "remarks": "All disabilities",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-4",
@@ -1667,7 +1688,10 @@
       "verified": false,
       "name": "Madras Medical College (MMC)",
       "location": "Chennai",
-      "remarks": "All disabilities"
+      "remarks": "All disabilities",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-5",
@@ -1677,7 +1701,10 @@
       "verified": false,
       "name": "Grant Government Medical College, J.J. Hospital Compound",
       "location": "Mumbai, Maharashtra",
-      "remarks": "All disabilities"
+      "remarks": "All disabilities",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-6",
@@ -1687,7 +1714,10 @@
       "verified": false,
       "name": "Goa Medical College",
       "location": "Goa",
-      "remarks": "All disabilities except speech disability"
+      "remarks": "All disabilities except speech disability",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-7",
@@ -1697,7 +1727,10 @@
       "verified": false,
       "name": "Government Medical College, Thiruvananthapuram",
       "location": "Thiruvananthapuram, Kerala",
-      "remarks": "All disabilities; ophthalmology at Regional Institute of Ophthalmology"
+      "remarks": "All disabilities; ophthalmology at Regional Institute of Ophthalmology",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-8",
@@ -1707,7 +1740,10 @@
       "verified": false,
       "name": "SMS Medical College",
       "location": "Jaipur, Rajasthan",
-      "remarks": "As printed: \"All disabilities as mentioned in disability certificate except 1. Neurology – Genetic Testing 2. ENT – Speech & language Disability Testing Orthopaedics/PMR- Gonitometer Adult. Plumb Line, Hand Dynomometer, Laser\""
+      "remarks": "As printed: \"All disabilities as mentioned in disability certificate except 1. Neurology – Genetic Testing 2. ENT – Speech & language Disability Testing Orthopaedics/PMR- Gonitometer Adult. Plumb Line, Hand Dynomometer, Laser\"",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-9",
@@ -1717,7 +1753,10 @@
       "verified": false,
       "name": "Govt. Medical College and Hospital, Sector 32",
       "location": "Chandigarh",
-      "remarks": "All disabilities as mentioned in disability certificate"
+      "remarks": "All disabilities as mentioned in disability certificate",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-10",
@@ -1727,7 +1766,10 @@
       "verified": false,
       "name": "Govt. Medical College, Agartala, State Disability Board",
       "location": "Agartala, Tripura",
-      "remarks": "All disabilities as mentioned in disability certificate"
+      "remarks": "All disabilities as mentioned in disability certificate",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-11",
@@ -1737,7 +1779,10 @@
       "verified": false,
       "name": "Institute of Medical Sciences, Banaras Hindu University",
       "location": "Varanasi, Uttar Pradesh",
-      "remarks": "All disabilities except intellectual disability"
+      "remarks": "All disabilities except intellectual disability",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-12",
@@ -1747,7 +1792,10 @@
       "verified": false,
       "name": "Ali Yavar Jung National Institute of Speech and Hearing Disabilities, Bandra",
       "location": "Mumbai, Maharashtra",
-      "remarks": "Hearing disabilities only"
+      "remarks": "Hearing disabilities only",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-13",
@@ -1757,7 +1805,10 @@
       "verified": false,
       "name": "AIIMS Nagpur",
       "location": "Nagpur, Maharashtra",
-      "remarks": "All disabilities as mentioned in disability certificate"
+      "remarks": "All disabilities as mentioned in disability certificate",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-14",
@@ -1767,7 +1818,10 @@
       "verified": false,
       "name": "Atal Bihari Vajpayee Institute of Medical Sciences & RML Hospital (ABVIMS & RMLH)",
       "location": "New Delhi",
-      "remarks": "As printed: \"All disabilities as mentioned in disability certificate except ENT for visual disability: Candidates who use LVAs may bring their own LVAs which can be checked.\""
+      "remarks": "As printed: \"All disabilities as mentioned in disability certificate except ENT for visual disability: Candidates who use LVAs may bring their own LVAs which can be checked.\"",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-15",
@@ -1777,7 +1831,10 @@
       "verified": false,
       "name": "Lady Hardinge Medical College & Associated Hospitals (LHMC)",
       "location": "New Delhi",
-      "remarks": "All disabilities as mentioned in disability certificate"
+      "remarks": "All disabilities as mentioned in disability certificate",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-16",
@@ -1787,7 +1844,10 @@
       "verified": false,
       "name": "All India Institute of Speech and Hearing (AIISH)",
       "location": "Mysuru, Karnataka",
-      "remarks": "Speech & hearing disabilities only"
+      "remarks": "Speech & hearing disabilities only",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-17",
@@ -1797,7 +1857,10 @@
       "verified": false,
       "name": "Uttar Pradesh University of Medical Sciences, Saifai, Etawah",
       "location": "Uttar Pradesh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-18",
@@ -1807,7 +1870,10 @@
       "verified": false,
       "name": "King George Medical University, Lucknow",
       "location": "Uttar Pradesh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-19",
@@ -1817,7 +1883,10 @@
       "verified": false,
       "name": "Civil Hospital, Ahmedabad",
       "location": "Gujarat",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-20",
@@ -1827,7 +1896,10 @@
       "verified": false,
       "name": "New Civil Hospital, Surat",
       "location": "Gujarat",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-21",
@@ -1837,7 +1909,10 @@
       "verified": false,
       "name": "PDU Hospital, Rajkot",
       "location": "Gujarat",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-22",
@@ -1847,7 +1922,10 @@
       "verified": false,
       "name": "Assam Medical College, Dibrugarh",
       "location": "Assam",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-23",
@@ -1857,7 +1935,10 @@
       "verified": false,
       "name": "Gauhati Medical College, Guwahati",
       "location": "Assam",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-24",
@@ -1867,7 +1948,10 @@
       "verified": false,
       "name": "Silchar Medical College, Silchar",
       "location": "Assam",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-25",
@@ -1877,7 +1961,10 @@
       "verified": false,
       "name": "Madurai Medical College & Govt. Rajaji Hospital, Madurai",
       "location": "Tamil Nadu",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-26",
@@ -1887,7 +1974,10 @@
       "verified": false,
       "name": "Coimbatore Medical College Hospital",
       "location": "Tamil Nadu",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-27",
@@ -1897,7 +1987,10 @@
       "verified": false,
       "name": "Thanjavur Medical College",
       "location": "Tamil Nadu",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-28",
@@ -1907,7 +2000,10 @@
       "verified": false,
       "name": "Zoram Medical College & Hospital, Falkawn",
       "location": "Mizoram",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-29",
@@ -1917,7 +2013,10 @@
       "verified": false,
       "name": "Dr Sushila Tiwari Memorial Government Hospital (Government Medical College, Haldwani)",
       "location": "Uttarakhand",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-30",
@@ -1927,7 +2026,10 @@
       "verified": false,
       "name": "Indira Gandhi Medical College & Hospital, Shimla",
       "location": "Himachal Pradesh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-31",
@@ -1937,7 +2039,10 @@
       "verified": false,
       "name": "Dr. Rajendra Prasad Govt. Medical College & Hospital, Kangra at Tanda",
       "location": "Himachal Pradesh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-32",
@@ -1947,7 +2052,10 @@
       "verified": false,
       "name": "Government Doon Medical College, Dehradun",
       "location": "Uttarakhand",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-33",
@@ -1957,7 +2065,10 @@
       "verified": false,
       "name": "Pt. BD Sharma Post Graduate Institute of Medical Sciences, Rohtak",
       "location": "Haryana",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-34",
@@ -1967,7 +2078,10 @@
       "verified": false,
       "name": "AIIMS Bilaspur",
       "location": "Himachal Pradesh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-35",
@@ -1977,7 +2091,10 @@
       "verified": false,
       "name": "All India Institute of Medical Sciences, Raipur",
       "location": "Chhattisgarh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-36",
@@ -1987,7 +2104,10 @@
       "verified": false,
       "name": "Pt. Jawahar Lal Nehru Memorial Medical College, Raipur",
       "location": "Chhattisgarh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-37",
@@ -1997,7 +2117,10 @@
       "verified": false,
       "name": "Chhattisgarh Institute of Medical Sciences, Bilaspur",
       "location": "Chhattisgarh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-38",
@@ -2007,7 +2130,10 @@
       "verified": false,
       "name": "Late Shri Baliram Kashyap Memorial Medical College, Jagdalpur",
       "location": "Chhattisgarh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-39",
@@ -2017,7 +2143,10 @@
       "verified": false,
       "name": "Bangalore Medical College and Research Institute (BMCRI), Bengaluru",
       "location": "Karnataka",
-      "remarks": "State capital centre"
+      "remarks": "State capital centre",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-40",
@@ -2027,7 +2156,10 @@
       "verified": false,
       "name": "Mysore Medical College and Research Institute (MMCRI), Mysuru",
       "location": "Karnataka",
-      "remarks": "Regional centre (South zone)"
+      "remarks": "Regional centre (South zone)",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-41",
@@ -2037,7 +2169,10 @@
       "verified": false,
       "name": "Karnataka Institute of Medical Sciences (KIMS), Hubballi",
       "location": "Karnataka",
-      "remarks": "Regional centre (Central zone)"
+      "remarks": "Regional centre (Central zone)",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-42",
@@ -2047,7 +2182,10 @@
       "verified": false,
       "name": "Belagavi Institute of Medical Sciences (BIMS), Belagavi",
       "location": "Karnataka",
-      "remarks": "Regional centre (West zone)"
+      "remarks": "Regional centre (West zone)",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-43",
@@ -2057,7 +2195,10 @@
       "verified": false,
       "name": "Gulbarga Institute of Medical Sciences (GIMS), Kalaburagi",
       "location": "Karnataka",
-      "remarks": "Regional centre (North-East zone)"
+      "remarks": "Regional centre (North-East zone)",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-44",
@@ -2067,7 +2208,10 @@
       "verified": false,
       "name": "Rajendra Institute of Medical Sciences (RIMS), Ranchi",
       "location": "Jharkhand",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-45",
@@ -2077,7 +2221,10 @@
       "verified": false,
       "name": "Mahatma Gandhi Memorial Medical College, Jamshedpur",
       "location": "Jharkhand",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-46",
@@ -2087,7 +2234,10 @@
       "verified": false,
       "name": "SSG Hospital, Vadodara",
       "location": "Gujarat",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-47",
@@ -2097,7 +2247,10 @@
       "verified": false,
       "name": "G.G. Hospital, Jamnagar",
       "location": "Gujarat",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-48",
@@ -2107,7 +2260,10 @@
       "verified": false,
       "name": "Sir T. Hospital, Bhavnagar",
       "location": "Gujarat",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-49",
@@ -2117,7 +2273,10 @@
       "verified": false,
       "name": "PMCH, Patna",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-50",
@@ -2127,7 +2286,10 @@
       "verified": false,
       "name": "NMCH, Patna",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-51",
@@ -2137,7 +2299,10 @@
       "verified": false,
       "name": "IGIMS, Patna",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-52",
@@ -2147,7 +2312,10 @@
       "verified": false,
       "name": "DMCH, Darbhanga",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-53",
@@ -2157,7 +2325,10 @@
       "verified": false,
       "name": "JLNMCH, Bhagalpur",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-54",
@@ -2167,7 +2338,10 @@
       "verified": false,
       "name": "ANMMCH, Gaya Ji",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-55",
@@ -2177,7 +2351,10 @@
       "verified": false,
       "name": "SKMCH, Muzaffarpur",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-56",
@@ -2187,7 +2364,10 @@
       "verified": false,
       "name": "GMC, Bettiah",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-57",
@@ -2197,7 +2377,10 @@
       "verified": false,
       "name": "BMIMS, Pawapuri, Nalanda",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-58",
@@ -2207,7 +2390,10 @@
       "verified": false,
       "name": "JKTMC&H, Madhepura",
       "location": "Bihar",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-59",
@@ -2217,7 +2403,10 @@
       "verified": false,
       "name": "Andhra Medical College / King George Hospital, Visakhapatnam",
       "location": "Andhra Pradesh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-60",
@@ -2227,7 +2416,10 @@
       "verified": false,
       "name": "Guntur Medical College / Govt. General Hospital, Guntur",
       "location": "Andhra Pradesh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-61",
@@ -2237,7 +2429,10 @@
       "verified": false,
       "name": "Kurnool Medical College / Govt. General Hospital, Kurnool",
       "location": "Andhra Pradesh",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "dis-62",
@@ -2247,7 +2442,10 @@
       "verified": false,
       "name": "RIMS, Imphal",
       "location": "Manipur",
-      "remarks": "—"
+      "remarks": "—",
+      "seats": [
+        "government"
+      ]
     }
   ],
   "annexures": [
@@ -2274,7 +2472,10 @@
       ],
       "verified": false,
       "title": "Annexure-2: Disability certification centres",
-      "description": "62 centres whose PwD certificates (NMC norms) are accepted."
+      "description": "62 centres whose PwD certificates (NMC norms) are accepted.",
+      "seats": [
+        "government"
+      ]
     },
     {
       "id": "annex-3",
@@ -2354,7 +2555,7 @@
       ],
       "verified": false,
       "title": "Private college tuition fees",
-      "detail": "The brochure says private colleges charge the government-fixed tuition fee but doesn't list the amounts.",
+      "detail": "The brochure says private colleges charge the government-fixed tuition fee (minority colleges charge their own prescribed fee) but doesn't list the amounts.",
       "seats": [
         "management"
       ]
@@ -2377,6 +2578,18 @@
       "verified": false,
       "title": "Who gets the deposit back",
       "detail": "The brochure says security money is refunded to \"eligible candidates\" after all rounds, but doesn't define who is eligible beyond the resignation rules."
+    },
+    {
+      "id": "gap-government-fees",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "title": "Government college fees",
+      "detail": "You pay fees at the government college at admission, but the brochure doesn't give the amounts. Check with your allotted college.",
+      "seats": [
+        "government"
+      ]
     }
   ]
 }

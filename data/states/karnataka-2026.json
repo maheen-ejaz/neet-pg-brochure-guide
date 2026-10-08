@@ -67,6 +67,7 @@
     {
       "id": "process-register",
       "sourcePages": [
+        5,
         12
       ],
       "verified": false,
@@ -112,7 +113,7 @@
       ],
       "verified": false,
       "title": "Get your documents verified at KEA",
-      "description": "Clause a and clause y candidates don't need to attend, unless they claim NRI Ward or religious minority reservation. Everyone else books a slot on the KEA website and attends in person at KEA, 18th Cross, Sampige Road, Malleshwaram, Bengaluru, with originals and two sets of photocopies. You get a documents verification slip, which you need to enter options."
+      "description": "Clause a and clause y candidates don't need to attend, unless they claim NRI Ward or religious minority reservation. Everyone else books a slot on the KEA website and attends in person at KEA, 18th Cross, Sampige Road, Malleshwaram, Bengaluru, with originals and two sets of photocopies. You get a documents verification slip, which you need to enter options. KEA has published these steps for PG Dental (NEET MDS); confirm the PG Medical arrangements with KEA."
     },
     {
       "id": "process-options",
@@ -392,6 +393,12 @@
               "in": [
                 "indian"
               ]
+            },
+            {
+              "fact": "parentServiceRoute",
+              "in": [
+                false
+              ]
             }
           ]
         },
@@ -434,6 +441,12 @@
               "fact": "nationality",
               "in": [
                 "indian"
+              ]
+            },
+            {
+              "fact": "parentServiceRoute",
+              "in": [
+                false
               ]
             }
           ]
@@ -492,13 +505,13 @@
         ],
         "verified": false,
         "title": "NRI seats are for NRIs and their children or wards",
-        "explanation": "NRI seats are for NRIs, children or wards of NRIs, PIOs, OCIs and foreign nationals. You told us neither you nor your parents are NRIs, so NRI seats are open to you only if a relative abroad sponsors you as an 'NRI ward' (relationship as per the Supreme Court order in W.P.(c) No. 689/2017). Wards need the NRI Ward Certificate and sponsor documents. Confirm with KEA.",
+        "explanation": "NRI seats are for NRIs, children or wards of NRIs, PIOs, OCIs and foreign nationals. You told us no one is an NRI for your application, so NRI seats aren't open to you unless an NRI relative sponsors you as a ward (relationship as per the Supreme Court order in W.P.(c) No. 689/2017). Confirm with KEA.",
         "condition": {
           "all": [
             {
-              "fact": "isNri",
+              "fact": "nriLink",
               "in": [
-                false
+                "none"
               ]
             },
             {
@@ -521,18 +534,23 @@
       {
         "id": "elig-nri",
         "sourcePages": [
+          14,
           19,
+          21,
           25,
           64,
           65
         ],
         "verified": false,
         "title": "NRI seats: sponsor documents needed",
-        "explanation": "As an NRI, NRI's child or ward, you can apply for NRI seats (15% of seats in KPCF, KRLMPCA, AMPCK and private university colleges). You need the Ward Certificate (Annexure 17), the sponsor's NRI/OCI status certificate from the Indian Consulate issued within the last 6 months (Annexure 17(A)), a family tree signed by a Tahsildar, and copies of the sponsor's bank passbook, passport and visa. Others (Q) seats aren't open to NRI, PIO, OCI or foreign national candidates: if you yourself are the NRI (not just your parents), don't count on Q seats. 'NRI' here means an individual resident outside India who is an Indian citizen or a PIO, including OCIs (Income Tax Act s.115C(e)).",
+        "explanation": "NRIs, children of NRIs and NRI wards can apply for NRI seats (15% of seats in KPCF, KRLMPCA, AMPCK and private university colleges). If you claim NRI Ward (as an NRI's child or ward), you need the Ward Certificate (Annexure 17), the sponsor's NRI/OCI status certificate from the Indian Consulate issued within the last 6 months (Annexure 17(A)), a family tree signed by a Tahsildar, and copies of the sponsor's bank passbook, passport and visa. Others (Q) seats aren't open to NRI, PIO, OCI or foreign national candidates: if you yourself are the NRI (not just your parents), don't count on Q seats. 'NRI' here means an individual resident outside India who is an Indian citizen or a PIO, including OCIs (Income Tax Act 1961, sections 115C(e) and 6).",
         "condition": {
-          "fact": "isNri",
+          "fact": "nriLink",
           "in": [
-            true
+            "self",
+            "parent",
+            "guardian",
+            "relative"
           ]
         },
         "effect": {
@@ -648,7 +666,7 @@
         ],
         "verified": false,
         "title": "SC candidates: SCA, SCB or SCC certificate",
-        "explanation": "Karnataka has internal reservation for Scheduled Castes (SCA, SCB and SCC). Get a caste certificate with your SCA, SCB or SCC group printed on it and enter its RD number when you apply. Otherwise you can't select seats reserved for Scheduled Castes.",
+        "explanation": "Karnataka has internal reservation for Scheduled Castes (SCA, SCB and SCC). Get a caste certificate with your SCA, SCB or SCC group printed on it and enter its RD number when you apply. Otherwise you can't select seats reserved for Scheduled Castes. The bulletin doesn't define a Karnataka SC candidate; we go by your domicile, so confirm with KEA if that differs from where your certificate was issued.",
         "condition": {
           "all": [
             {
@@ -742,14 +760,67 @@
         }
       },
       {
+        "id": "elig-parent-route",
+        "sourcePages": [
+          15,
+          16,
+          17,
+          18
+        ],
+        "verified": false,
+        "title": "Parent-service route (clauses d, e, f and g)",
+        "explanation": "You said a parent's service gives you a Karnataka route. Clauses d, e, f and g open Government seats, along with OPN, NRI and Others (Q) seats. GMP seats need clause b or c: only clause d lets you count the years you studied outside Karnataka during your parent's posting toward the 10 years, so under clause d GMP seats may open too. Check you meet every condition of your clause (see Other routes) and bring its certificates. Confirm with KEA.",
+        "condition": {
+          "all": [
+            {
+              "fact": "parentServiceRoute",
+              "in": [
+                true
+              ]
+            },
+            {
+              "fact": "studied10YearsInState",
+              "in": [
+                false
+              ]
+            },
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "home",
+                "other_state"
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "restrictQuotas",
+          "quotas": [
+            "Government",
+            "OPN",
+            "NRI",
+            "Others (Q)"
+          ]
+        }
+      },
+      {
         "id": "elig-special-clauses",
         "sourcePages": [
+          15,
           16,
-          17
+          17,
+          18,
+          23
         ],
         "verified": false,
         "title": "Other routes: clauses d, e, f and g",
-        "explanation": "Some candidates can count study outside Karnataka or don't need the 10 years. Clause d: children of All India Service officers of the Karnataka cadre who served outside Karnataka can count those years toward the 10 under clause b or c. Clause e: children of employees of the Union Government, or of a Union or Karnataka State Government undertaking or joint sector undertaking, who declared a Karnataka home town, studied 10 years in Karnataka themselves and are transferable across India; you can have passed the qualifying exam anywhere in India. Clause f: children of MPs elected from Karnataka, for years studied in New Delhi during the MP's tenure. Clause g: children of serving defence personnel or ex-servicemen who declared a Karnataka home town on joining; the qualifying exam can be from anywhere in India. These are routes to Government seats; the bulletin ties GMP seats only to clauses b and c. 'Children' means natural-born sons or daughters, not adopted children or grandchildren.",
+        "explanation": "Some candidates can count study outside Karnataka or don't need the 10 years. Clause d: children of a serving All India Service officer of the Karnataka cadre can count the years they studied outside Karnataka while the parent served outside Karnataka toward the 10 years under clause b or c. Clause e: children of an employee of the Union Government, or of a Union or Karnataka State Government undertaking or joint sector undertaking, if the parent declared a Karnataka home town on joining service, studied at least 10 years in Karnataka, and was or is liable to transfer anywhere in India. You can have passed the qualifying exam anywhere in India. The employer's certificate must show the parent is transferable, so if your parent has left service, confirm with KEA. Clause f: children of MPs elected from Karnataka, for years studied in New Delhi during the MP's tenure. Clause g: children of serving defence personnel or ex-servicemen who declared a Karnataka home town on joining; the qualifying exam can be from anywhere in India. These are routes to Government seats; the bulletin ties GMP seats only to clauses b and c. 'Children' means natural-born sons or daughters, not adopted children or grandchildren.",
         "condition": null,
         "effect": {
           "type": "note",
@@ -817,7 +888,7 @@
         ],
         "verified": false,
         "title": "St. John's Medical College, Bengaluru",
-        "explanation": "St. John's has four categories: (1) Roman Catholic religious nuns with SJMC-approved two-year rural service, (2) SJMC alumni with SJMC-approved two-year rural service, (3) Roman Catholic Christians, (4) general open merit. Each category needs its own certificates (Annexures 13 to 16).",
+        "explanation": "St. John's has four categories: (1) Roman Catholic religious nuns with SJMC-approved two-year rural service, (2) SJMC alumni with SJMC-approved two-year rural service, (3) Roman Catholic Christians, (4) general open merit. Categories 1 to 3 need their own certificates (Annexures 13 to 16). The bulletin lists no extra certificate for general open merit.",
         "condition": null,
         "effect": {
           "type": "note",
@@ -930,7 +1001,7 @@
         ],
         "verified": false,
         "title": "How category seats are searched",
-        "detail": "For every option, the computer first looks for a General Merit (GM) seat, then your category seat (e.g. SC: GM, then SCG). Hyderabad-Karnataka candidates go through more steps (e.g. SCH: GM, GMH, SCG, then SCH), and PwD candidates through longer chains that include PWD seats. This improves your allotment as per the roster.",
+        "detail": "For every option, the computer first looks for a General Merit (GM) seat, then your category seat (e.g. SC: GM, then SCG). Hyderabad-Karnataka candidates go through more steps (e.g. SCH: GM, GMH, SCG, then SCH), and PwD candidates through longer chains that include PWD seats. This improves your allotment as per the roster. The bulletin's text says GMH is checked after GM for every category, but its chart shows GMH only for Hyderabad-Karnataka candidates.",
         "severity": "info",
         "note": "The prose on p31 says GMH is searched for any category; the table on the same page shows GMH only for Hyderabad-Karnataka (H) categories. Follows the table."
       },
@@ -1027,7 +1098,7 @@
         ],
         "verified": false,
         "title": "SC/ST fee exemption (Karnataka candidates)",
-        "detail": "On Government seats (codes ending in G): annual income below ₹2.50 lakh, no fees; above ₹2.50 lakh and below ₹10 lakh, pay 50% of the tuition fee. On Private seats (codes ending in P), you pay the full fees.",
+        "detail": "On Government seats (codes ending in G): annual income below ₹2.50 lakh, no fees; above ₹2.50 lakh and below ₹10 lakh, pay 50% of the tuition fee. On Private seats (codes ending in P), you pay the full fees. The bulletin isn't clear about an income of exactly ₹2.50 lakh; confirm with the concerned department.",
         "severity": "info",
         "note": "The paragraph below the table says SC/ST candidates are exempt 'if their annual income is Rupees 2.50 lakhs'. The table says 'below'."
       },
@@ -1157,11 +1228,12 @@
     {
       "id": "choice-verify-slip",
       "sourcePages": [
-        28
+        28,
+        67
       ],
       "verified": false,
       "title": "Verification slip needed",
-      "detail": "Only candidates who complete online registration, payment and offline document verification at KEA, and get the documents verification slip, can enter options.",
+      "detail": "You can enter options only after online registration, payment and document verification at KEA, which gives you the documents verification slip. Clause a and clause y candidates are excused from attending verification, but the bulletin doesn't say how they get the slip. Confirm with KEA.",
       "severity": "info",
       "note": "p67 says clause a and clause y candidates need not attend verification (unless claiming NRI Ward or religious minority). The bulletin doesn't say how they get the slip."
     }
@@ -1402,7 +1474,7 @@
       ],
       "verified": false,
       "title": "Who can take part in the mop-up",
-      "detail": "Candidates with no seat after KEA Round 2, and those who joined a KEA-allotted college. Not eligible: those who didn't exercise a choice in Round 1, didn't pay or didn't report, and anyone who joined a college through All India (including deemed university) counselling or any other board.",
+      "detail": "Candidates with no seat after KEA Round 2, and those who joined a KEA-allotted college. Not eligible: those allotted a seat who didn't exercise a choice in Round 1, didn't pay or didn't report, and anyone who joined a college through All India (including deemed university) counselling or any other board. This All India rule follows the MCC bulletin and is subject to any conditions set by the Government of India.",
       "severity": "warning",
       "tag": "Round 3 (Mop-up)",
       "schedule": [
@@ -1595,6 +1667,7 @@
     {
       "id": "doc-degree-outside",
       "sourcePages": [
+        21,
         25
       ],
       "verified": false,
@@ -1614,10 +1687,17 @@
             "in": [
               false
             ]
+          },
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
           }
         ]
       },
-      "note": "p25 says a PDC/pass/completion certificate is accepted only for candidates who passed 'during 2021', probably a typo for 2026."
+      "note": "p25 says a PDC/pass/completion certificate is accepted only for candidates who passed 'during 2021', probably a typo for 2026.",
+      "detail": "For this clause the bulletin says a provisional, pass or completion certificate is accepted only if you passed in 2021; for other clauses it says 2026. Confirm the year with KEA before relying on a provisional certificate."
     },
     {
       "id": "doc-internship",
@@ -1646,13 +1726,14 @@
     {
       "id": "doc-registration",
       "sourcePages": [
-        20
+        20,
+        25
       ],
       "verified": false,
       "name": "State/Central Medical or Dental Council registration certificate",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "Provisional registration is accepted only if you passed in 2026. You must submit the permanent certificate at admission. If you passed before 2026, you must have and upload the original permanent registration."
+      "detail": "Provisional registration is accepted only if you passed in 2026. You must submit the permanent certificate at admission. If you passed before 2026, you must have and upload the original permanent registration. Foreign nationals are also asked for home-country registration and temporary MCI/DCI registration within one month of admission; confirm with KEA how this rule applies to you."
     },
     {
       "id": "doc-eligibility-other-univ",
@@ -1702,7 +1783,7 @@
       "name": "Compulsory rural service bond (Annexure 1) on ₹100 stamp paper, notarised, with the personal details sheet",
       "stage": "admission",
       "appliesWhen": null,
-      "detail": "Submitted when you collect the admission order at KEA.",
+      "detail": "Submitted when you collect the admission order at KEA. The form is written for non-in-service PG Medical candidates, so if you're in-service or taking MDS, confirm with KEA.",
       "note": "Annexure 1 is titled 'for non in-service Candidates' and written for PG Medical admissions, but section 8.5.1 lists it as mandatory for all candidates, and Choice 2/3 candidates deposit it before Round 2."
     },
     {
@@ -1734,6 +1815,7 @@
     {
       "id": "doc-three-year-undertaking",
       "sourcePages": [
+        8,
         21,
         49,
         50
@@ -1847,9 +1929,11 @@
       "name": "If you claim NRI Ward: Ward Certificate (Annexure 17) and sponsor's NRI/OCI status certificate (Annexure 17(A))",
       "stage": "registration",
       "appliesWhen": {
-        "fact": "isNri",
+        "fact": "nriLink",
         "in": [
-          true
+          "parent",
+          "guardian",
+          "relative"
         ]
       },
       "detail": "The sponsor must have stayed abroad for more than 182 days in the last financial year; the Consulate status certificate is valid for six months. Also bring a family tree signed by a Tahsildar (notary-signed or a relationship affidavit isn't accepted), a Consulate certificate issued within the last 6 months naming you and the sponsor (notary-signed isn't accepted), and copies of the sponsor's bank passbook, passport and visa. An e-copy may be accepted for verification if you submit the original at admission.",
@@ -1866,10 +1950,20 @@
       "name": "Parents' residence certificate from the embassy (or affidavit on ₹100 e-stamp paper), passport/visa, proof of citizenship and income tax documents",
       "stage": "registration",
       "appliesWhen": {
-        "fact": "nationality",
-        "in": [
-          "oci",
-          "foreign"
+        "any": [
+          {
+            "fact": "nationality",
+            "in": [
+              "oci",
+              "foreign"
+            ]
+          },
+          {
+            "fact": "nriLink",
+            "in": [
+              "self"
+            ]
+          }
         ]
       },
       "detail": "Also the sponsor's Embassy/Consulate certificate issued within the last 6 months, and a study certificate for studies outside India where applicable. NRI and PIO candidates under clause z need these too.",
@@ -1949,7 +2043,7 @@
       "name": "Parent's service or home-town certificates, if you claim clause d, e, f or g",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "d: your 10-year study certificate including the years outside Karnataka, and a DPAR certificate of All India Service (Karnataka cadre) and period outside Karnataka, or a Head of Department certificate if the parent is a state government employee. e: parent's 10-year study certificate and home-town declaration from the employer. f: Parliament Secretariat certificate and your study certificate including New Delhi. g: home-town declaration from the defence HQ/record office, or from Sainik Welfare for ex-servicemen."
+      "detail": "d: your 10-year study certificate (1st to 12th standard, including the years outside Karnataka), and a certificate from DPAR, Government of Karnataka (Principal, Deputy or Under Secretary) that the parent is in the All India Service, Karnataka cadre, with the period served outside Karnataka. If the parent is a State Government employee, get it from their Head of Department or Head of Office. e: the parent's 10-year Karnataka study certificate from the head of the institution, countersigned by the BEO/DDPI (Annexure 11), and the employer's certificate that the parent declared Karnataka as home town on joining and is transferable anywhere in India, countersigned by the employer's competent authority. f: Parliament Secretariat certificate that the parent is or was an MP elected from Karnataka, and your 10-year study certificate including the years in New Delhi. g: the parent's Karnataka home-town declaration made on joining. For serving defence personnel it comes from the respective branch or integrated HQ of MoD (officers) or the Record Office (JCOs/OR). For ex-servicemen it comes from the district Joint or Deputy Director, countersigned by the Director, Department of Sainik Welfare and Resettlement, Bengaluru."
     },
     {
       "id": "doc-extra",
@@ -2155,7 +2249,7 @@
         "stage": "Cancel or surrender after the mop-up round",
         "window": "After the mop-up round, in person at the Directorate of Medical Education",
         "sector": "all",
-        "fees": "Penalty of ₹18,00,000 for a medical clinical degree or diploma, or ₹6,00,000 for a dental degree or diploma, and the fees paid are forfeited. Pre-clinical seats (Anatomy, Physiology, Biochemistry, Forensic Medicine): ₹1,00,000 and fees forfeited. Para-clinical seats (Pharmacology, Pathology, Microbiology, Community Medicine): ₹2,00,000 for a degree or ₹75,000 for a diploma, and tuition forfeited.",
+        "fees": "Penalty of ₹18,00,000 for a medical clinical degree or diploma, or ₹6,00,000 for a dental degree or diploma, and the fees paid are forfeited. Pre-clinical seats (Anatomy, Physiology, Biochemistry, Forensic Medicine): ₹1,00,000 and fees forfeited. Para-clinical seats (Pharmacology, Pathology, Microbiology, Community Medicine): ₹2,00,000 for a degree or ₹75,000 for a diploma (written in words as seventy thousand; confirm with KEA), and tuition forfeited.",
         "otherConsequence": "You're ineligible for further rounds of admission, including names-list admission.",
         "note": "The ₹75,000 para-clinical diploma penalty is written in words as 'Rupees Seventy thousand only' on p43."
       },
@@ -2297,6 +2391,7 @@
     "id": "helpdesk",
     "sourcePages": [
       1,
+      5,
       9,
       11,
       28,

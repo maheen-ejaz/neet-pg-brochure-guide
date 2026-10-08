@@ -45,6 +45,8 @@ export const FACTS = [
   "studied10YearsInState",
   "bornInState",
   "isNri",
+  "nriLink",
+  "parentServiceRoute",
   "priorAdmissionInState",
 ] as const;
 export const Fact = z.enum(FACTS);

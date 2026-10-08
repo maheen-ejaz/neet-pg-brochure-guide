@@ -258,9 +258,30 @@ export function ProfilePage() {
             {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
           </select>
         </Field>
-        <Field label="Are you, or your parents, Non-Resident Indians (NRI)?">
-          <Choice name="NRI" value={p.nri} onChange={(v) => set("nri", v)}
-            options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
+        <Field
+          label="Is anyone a Non-Resident Indian (NRI) for your application?"
+          hint="States differ: Gujarat accepts your parents, or a legal guardian only if your parents are absent; Karnataka also accepts NRI wards sponsored by a relative."
+          htmlFor="nri"
+        >
+          <select id="nri" className={inputClass} value={p.nriLink ?? ""} onChange={(e) => set("nriLink", (e.target.value || null) as Profile["nriLink"])}>
+            <option value="">Select…</option>
+            <option value="none">No one</option>
+            <option value="self">I am an NRI</option>
+            <option value="parent">My parent(s)</option>
+            <option value="guardian">My legal guardian (my parents are absent)</option>
+            <option value="relative">Another relative who will sponsor me as an NRI ward</option>
+          </select>
+        </Field>
+        <Field
+          label="Does a parent's service give you a home-state route in some state?"
+          hint="For example Karnataka clauses d–g: a parent in the All India Service (state cadre), a central government/PSU or defence employee who declared a home town there, or an MP elected from there."
+          htmlFor="parentroute"
+        >
+          <select id="parentroute" className={inputClass} value={p.parentRouteState ?? ""} onChange={(e) => set("parentRouteState", e.target.value || null)}>
+            <option value="">Select…</option>
+            <option value={NONE}>No</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
+          </select>
         </Field>
         <Field label="Category" hint="OBC is called SEBC in Gujarat, and covers Category-1, 2A, 2B, 3A and 3B in Karnataka.">
           <Choice<Category> name="Category" value={p.category} onChange={(v) => set("category", v)}

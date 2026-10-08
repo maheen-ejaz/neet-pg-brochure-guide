@@ -147,7 +147,7 @@
       ],
       "verified": false,
       "title": "Register and upload documents",
-      "description": "Enter the PIN serial number, 14-digit PIN, email, mobile and NEET roll number. Fill in your details, set an alphanumeric password of 6–12 characters, and confirm with the OTP sent to your mobile. Then upload documents as PDF, JPG or PNG. By submitting, you declare your details are true, agree to pay the fees fixed by the Fee Regulatory Committee, accept that ragging is punishable and that the committee's decision is final, and acknowledge that hiding or distorting information makes your admission liable to cancellation. After you click Confirm, you can only change details at the help centre."
+      "description": "Enter the PIN serial number, 14-digit PIN, email, mobile and NEET roll number. Fill in your details, set an alphanumeric password of 6–12 characters, and confirm with the OTP sent to your mobile. Then upload documents as PDF, JPG, JPEG or PNG. By submitting, you declare your details are true, agree to pay the fees fixed by the Fee Regulatory Committee, accept that ragging is punishable and that the committee's decision is final, and acknowledge that hiding or distorting information makes your admission liable to cancellation. After you click Confirm, you can only change details at the help centre, before verification."
     },
     {
       "id": "process-appointment",
@@ -230,7 +230,7 @@
         21
       ],
       "verified": false,
-      "label": "Institutions in Gujarat not established under a Gujarat state law",
+      "label": "Institutions in Gujarat treated as not established under a Gujarat law (confirm with ACPPGMEC)",
       "names": [
         "AIIMS Rajkot"
       ],
@@ -333,7 +333,7 @@
         ],
         "verified": false,
         "title": "MBBS outside Gujarat (or not under a Gujarat law), with Gujarat roots",
-        "explanation": "If you did MBBS outside Gujarat, abroad, or at an institution not established under a Gujarat law, you're eligible if you passed 12th (B or AB group) from a school located in Gujarat, under the Gujarat Board, CBSE, CISCE, IB/Cambridge or NIOS, and were born in Gujarat or are domiciled there.",
+        "explanation": "If you did MBBS outside Gujarat, abroad, or at an institution not established under a Gujarat law, you're eligible if you passed 12th (B or AB group) from a school located in Gujarat, under the Gujarat Board, CBSE, CISCE, IB/Cambridge or NIOS, and were born in Gujarat or are domiciled there. The notice words this route for universities established under a Government of India law, so confirm with ACPPGMEC that yours qualifies.",
         "condition": {
           "all": [
             {
@@ -389,7 +389,7 @@
         ],
         "verified": false,
         "title": "MBBS outside Gujarat (or not under a Gujarat law), without Gujarat schooling and birth/domicile",
-        "explanation": "Candidates who did MBBS outside Gujarat, abroad, or at an institution not established under a Gujarat law don't meet the eligibility criteria unless they did 12th in Gujarat and were born in or are domiciled in Gujarat.",
+        "explanation": "Candidates who did MBBS outside Gujarat, abroad, or at an institution not established under a Gujarat law don't meet the eligibility criteria unless they did 12th in Gujarat and were born in or are domiciled in Gujarat. If you studied at AIIMS Rajkot, confirm with ACPPGMEC which route applies to you.",
         "condition": {
           "all": [
             {
@@ -429,9 +429,10 @@
               }
             },
             {
-              "fact": "isNri",
+              "fact": "nriLink",
               "in": [
-                false
+                "none",
+                "relative"
               ]
             }
           ]
@@ -493,9 +494,11 @@
               }
             },
             {
-              "fact": "isNri",
+              "fact": "nriLink",
               "in": [
-                true
+                "self",
+                "parent",
+                "guardian"
               ]
             }
           ]
@@ -522,11 +525,13 @@
         ],
         "verified": false,
         "title": "NRI quota applicants",
-        "explanation": "NRI follows the Income Tax Act / FEMA definition: a person resident outside India who is an Indian citizen or a Person of Indian Origin. Anyone who stayed in India for more than 182 days in the preceding financial year generally counts as resident. Citizens of Pakistan and Bangladesh can't be PIOs. You must be an NRI, or your parents must be; a legal guardian counts only if your parents are absent, and while your father is alive no one else is ordinarily accepted as guardian. Pay a ₹25,000 non-refundable processing fee by demand draft. Verification happens only at the ACPPGMEC office, GMERS Medical College, Gandhinagar. Hostel admission isn't guaranteed, hostel fees are set by the college, and other fees are the same as for all students.",
+        "explanation": "NRI follows the Income Tax Act / FEMA definition: a person resident outside India who is an Indian citizen or a Person of Indian Origin (PIO). A PIO is a foreign citizen, not of Pakistan or Bangladesh, who has held an Indian passport, whose parent or grandparent was an Indian citizen, or who is the spouse of an Indian citizen or such a PIO. A second definition in the instructions also counts great-grandparents and excludes other countries the Central Government names; confirm with ACPPGMEC. You count as resident in India if you stayed here more than 182 days in the preceding financial year. This doesn't include someone who left or stays outside India for a job, business or an indefinite stay, or someone who came to or stays in India for a reason other than a job, business or an indefinite stay. You must be an NRI, or your parents must be; a legal guardian counts only if your parents are absent, and while your father is alive no one else is ordinarily accepted as guardian. Pay a ₹25,000 non-refundable processing fee by demand draft. Verification happens only at the ACPPGMEC office, GMERS Medical College, Gandhinagar. Hostel admission isn't guaranteed, hostel fees are set by the college, and other fees are the same as for all students.",
         "condition": {
-          "fact": "isNri",
+          "fact": "nriLink",
           "in": [
-            true
+            "self",
+            "parent",
+            "guardian"
           ]
         },
         "effect": {
@@ -567,7 +572,7 @@
         ],
         "verified": false,
         "title": "Admitted through Gujarat counselling before",
-        "explanation": "Under Rule 4(4), a candidate who secured admission under Gujarat's PG admission rules in any year can't be admitted again until that course's duration would have been completed. The registration form asks \"Previously Admitted?\".",
+        "explanation": "Under Rule 4(4), a candidate who secured admission under Gujarat's PG admission rules in any year can't be admitted to any course until that course's duration would have been completed. The registration form asks \"Previously Admitted?\". The rule doesn't say whether a seat you resigned or never joined counts; confirm with ACPPGMEC.",
         "condition": {
           "fact": "priorAdmissionInState",
           "in": [
@@ -630,7 +635,9 @@
         "id": "elig-pwd",
         "sourcePages": [
           15,
+          21,
           32,
+          44,
           45,
           48,
           49,
@@ -641,7 +648,7 @@
         ],
         "verified": false,
         "title": "PwD: assessment by the ACPUGMEC medical board",
-        "explanation": "PwD applicants must be examined by an ACPUGMEC medical board at one of the listed civil hospitals. Certificates from any other authority or hospital aren't accepted. Under the NMC 2026 guidelines, you need a benchmark disability of at least 40%, a valid UDID card, and notarised Schedule-I affidavits: Appendix-A and Appendix-G for everyone, plus the appendix for your disability type. The certificate is an \"Eligibility Certificate\" that assesses functional competence, not just disability. Final eligibility is decided only after physical verification and functional assessment.",
+        "explanation": "PwD applicants must be examined by an ACPUGMEC medical board at one of the listed civil hospitals. Certificates from any other authority or hospital aren't accepted. Under the NMC 2026 guidelines, you need a benchmark disability of at least 40%, a valid UDID card, and notarised Schedule-I affidavits: Appendix-A and Appendix-G for everyone, plus the appendix for your disability type. The certificate is an \"Eligibility Certificate\" that assesses functional competence, not just disability. Final eligibility is decided only after physical verification and functional assessment. The NMC guidelines are written for MD/MS/DNB, so Diploma candidates should confirm the assessment with ACPPGMEC.",
         "condition": {
           "fact": "pwd",
           "in": [
@@ -744,11 +751,12 @@
           15,
           32,
           33,
-          34
+          34,
+          65
         ],
         "verified": false,
         "title": "PwD certificate only from ACPUGMEC boards",
-        "detail": "PwD seats need a certificate from an ACPUGMEC medical board. If the board finds you unfit, you can appeal to the medical appeal board, chaired by the Dean of B. J. Medical College, Ahmedabad, with two experts who weren't on the first board. Appeals about eye-related disabilities go to a board chaired by the Director, M. & J. Institute of Ophthalmology, Ahmedabad.",
+        "detail": "PwD seats need a certificate from an ACPUGMEC medical board. If the board finds you unfit, you can appeal to the medical appeal board, chaired by the Dean of B. J. Medical College, Ahmedabad, with two experts who weren't on the first board. Appeals about eye-related disabilities go to a board chaired by the Director, M. & J. Institute of Ophthalmology, Ahmedabad. The NMC 2026 guidelines also allow an appeal to a DGHS appellate authority, within the time MCC sets. Confirm which route applies with ACPPGMEC.",
         "severity": "warning"
       },
       {
@@ -757,16 +765,11 @@
           50,
           51,
           52,
-          53,
-          54,
-          55,
-          56,
-          57,
           63
         ],
         "verified": false,
-        "title": "Your disability may limit which subjects you can take",
-        "detail": "Under the NMC 2026 guidelines, eligibility is assessed per speciality: Eligible, Eligible with reasonable accommodation, or Ineligible. For surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Emergency Medicine, PMR and others), several disabilities are \"generally not suitable\" or \"not suitable\": upper-limb disability, speech and language disability, and multiple disabilities. Visual impairment must correct to below 40%. Hearing impairment may be suitable with aids or implants. Check the tables for your speciality.",
+        "title": "Surgical specialities: PwBD suitability",
+        "detail": "Under the NMC 2026 guidelines, the board rates you Eligible, Eligible with reasonable accommodation, or Ineligible for each speciality. For surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Traumatology, Emergency Medicine, PMR, Sports Medicine): Upper-limb disability and multiple disabilities are generally not suitable. Speech and language disability is not suitable. Lower-limb disability, and conditions such as cerebral palsy or muscular dystrophy, may be suitable if you show the needed functional competencies. Visual impairment is suitable only if corrective lenses alone bring it below 40%. Hearing impairment is suitable if you function with hearing aids or a cochlear implant and have acceptable, intelligible speech. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders are decided case by case. Chronic neurological conditions are suitable if stable, but not with uncontrolled seizures, frequent relapses, progressive neurodegeneration or severe impairment.",
         "severity": "warning"
       },
       {
@@ -774,13 +777,49 @@
         "sourcePages": [
           49,
           58,
+          62,
           64,
           65
         ],
         "verified": false,
         "title": "PwD assessment safeguards",
-        "detail": "A correctable defect in your UDID card alone isn't grounds for denial. You need an established diagnosis and a stable condition. If you're found ineligible, you must be given a written, reasoned order, and you can appeal.",
+        "detail": "A correctable defect in your UDID card alone isn't grounds for denial if your disability is otherwise established. You should have an established diagnosis and a stable condition. Before declaring you ineligible, the board must consider reasonable accommodation and assistive technology. It can't declare you ineligible only because of your diagnosis, disability category or percentage. If you're found ineligible, you must be given a written, reasoned order, and you can appeal.",
         "severity": "info"
+      },
+      {
+        "id": "res-pwd-subjects-other-clinical",
+        "sourcePages": [
+          52,
+          53,
+          54
+        ],
+        "verified": false,
+        "title": "Other clinical specialities: PwBD suitability",
+        "detail": "For other clinical specialities (such as General Medicine, Paediatrics, Dermatology, Psychiatry, Radio-diagnosis and Community Medicine), the NMC 2026 table says: Locomotor disability may be suitable if you show the needed competencies, including optimum use of both upper limbs. Visual impairment is suitable if adaptive devices bring it below 40% while keeping both hands free. Hearing impairment is suitable with hearing aids, an amplified stethoscope or a cochlear implant, if your speech is acceptable and intelligible. Speech and language disability is suitable if your speech is intelligible. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders are suitable. Chronic neurological conditions are suitable if stable, but not with uncontrolled seizures, frequent relapses, progressive neurodegeneration or severe impairment. Multiple disabilities are suitable with functional adequacy.",
+        "severity": "warning"
+      },
+      {
+        "id": "res-pwd-subjects-preclinical",
+        "sourcePages": [
+          54,
+          55,
+          56
+        ],
+        "verified": false,
+        "title": "Pre-clinical branches: PwBD suitability",
+        "detail": "For Anatomy, Physiology, Biochemistry and Biophysics, the NMC 2026 table says: Locomotor disability is suitable, with ramps and adjustable tables. Visual impairment is suitable if a low vision aid brings it below 40%. Hearing impairment is suitable with hearing aids or a cochlear implant, if your speech is acceptable and intelligible. Speech disability is not suitable. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders and chronic neurological conditions are suitable. Multiple disabilities are suitable if you're functional.",
+        "severity": "warning"
+      },
+      {
+        "id": "res-pwd-subjects-paraclinical",
+        "sourcePages": [
+          56,
+          57
+        ],
+        "verified": false,
+        "title": "Para-clinical branches: PwBD suitability",
+        "detail": "For Pharmacology, Pathology, Microbiology, and Forensic Medicine and Toxicology, the NMC 2026 table says: Locomotor disability is suitable, with modified labs and mobility aids. Visual impairment is suitable if digital aids bring it below 40%. Hearing impairment is suitable with hearing aids or a cochlear implant, if your speech is acceptable and intelligible. Speech disability is suitable. Mental illness, ASD, SLD and ID are suitable if stable. Blood disorders and chronic neurological conditions are suitable. Multiple disabilities are suitable with competence.",
+        "severity": "warning"
       }
     ]
   },
@@ -840,7 +879,7 @@
         ],
         "verified": false,
         "title": "NRI fees are in US$ and non-refundable",
-        "detail": "The NRI student and their parent or legal guardian sign a notarised undertaking to pay the college's NRI fee in US$ for the entire course. It isn't negotiable or refundable except as the admission rules allow, and extra fees apply each term if the course runs longer than normal. If dues aren't cleared, the student may not be sent up for exams.",
+        "detail": "The NRI student and their parent or legal guardian sign a notarised undertaking to pay the college's NRI fee in US$ for the entire course. It isn't negotiable or refundable except as the admission rules allow. Extra fees apply each term if study runs beyond the normal period plus one year of internship (as the form words it); confirm how this applies to PG with the college. If dues aren't cleared, the student may not be sent up for exams.",
         "severity": "critical",
         "seats": [
           "nri"
@@ -973,7 +1012,7 @@
         21
       ],
       "verified": false,
-      "name": "Provisional (fresh graduates) or permanent medical council registration",
+      "name": "Provisional State Medical Council registration (if you just completed internship) or permanent Medical Council / MCI registration (earlier pass-outs)",
       "stage": "registration",
       "appliesWhen": null
     },
@@ -986,7 +1025,7 @@
       "name": "School leaving or transfer certificate",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "Compulsory for everyone. Add a birth certificate or passport if your place of birth isn't on it."
+      "detail": "Proof of your date and place of birth and Indian citizenship. The school leaving or transfer certificate is compulsory for everyone. Add a birth certificate or passport if your place of birth isn't on it."
     },
     {
       "id": "doc-caste",
@@ -1077,9 +1116,13 @@
         68,
         69,
         70,
+        71,
+        72,
+        73,
         74,
         75,
-        76
+        76,
+        77
       ],
       "verified": false,
       "name": "Notarised PwBD affidavits",
@@ -1090,7 +1133,7 @@
           true
         ]
       },
-      "detail": "All PwBD applicants submit notarised Appendix-A (general self-certification) and Appendix-G. Depending on your disability, you also submit one of Appendix-B (hearing), C/D (locomotor), E (mental illness, speech disorders, specific learning disorder or autism) or F (visual). Other disabilities, such as blood disorders, need Appendix-A only (plus G)."
+      "detail": "All PwBD applicants submit notarised Appendix-A (general self-certification) and Appendix-G (mandatory; you declare you understand your chosen speciality's demands and will perform its tasks). Depending on your disability, also submit Appendix-B (hearing), C (upper limb), D (lower limb), E (mental illness, speech disorders, specific learning disorder or autism) or F (visual). For Appendix-F, your low vision aid must bring your visual disability below 40%, give a field of vision over 40 degrees, and be hands-free. Other disabilities, such as blood disorders or chronic neurological conditions, need Appendix-A only (plus G). In the affidavits you name the PG courses you intend to pursue. A false declaration may cost you your admission."
     },
     {
       "id": "doc-passport",
@@ -1206,12 +1249,14 @@
       "name": "NRI document set (notarised colour copies)",
       "stage": "registration",
       "appliesWhen": {
-        "fact": "isNri",
+        "fact": "nriLink",
         "in": [
-          true
+          "self",
+          "parent",
+          "guardian"
         ]
       },
-      "detail": "₹25,000 demand draft, printout of the online application, all MBBS marksheets, NEET-PG marksheet, school leaving certificate and 12th marksheet. Notarised colour copies of: passport (all pages, including blank ones) of you or your NRI parent; visa, residence permit or OCI/PIO card; NRI certificate from the Indian Embassy, High Commission or Consulate; Indian and foreign address proof; fee undertaking on ₹300 stamp paper (notarised); proof of origin. Also a record of days stayed in India in FY 01-04-2025–31-03-2026. Documents not in English must be translated by a competent authority.",
+      "detail": "₹25,000 demand draft, plus notarised copies of: printout of the online application, all MBBS marksheets, NEET-PG marksheet, school leaving certificate and 12th marksheet. Notarised colour copies of: passport (all pages, including blank ones) of you or your NRI parent; visa, residence permit or OCI/PIO card; NRI certificate from the Indian Embassy, High Commission or Consulate; Indian and foreign address proof; fee undertaking on ₹300 stamp paper (notarised); proof of origin. Bring the originals and notarised colour copies when you submit the application, and all documents to the interview. Also fill in the stay-in-India form for 01-04-2025 to 31-03-2026: each arrival and departure date with its passport page number, days per stay and total days, signed by you and your parent. Documents not in English must be translated by a competent authority.",
       "seats": [
         "nri"
       ]
@@ -1245,9 +1290,11 @@
       "name": "NRI certificate (original, at admission)",
       "stage": "admission",
       "appliesWhen": {
-        "fact": "isNri",
+        "fact": "nriLink",
         "in": [
-          true
+          "self",
+          "parent",
+          "guardian"
         ]
       },
       "seats": [
@@ -1691,11 +1738,14 @@
       "id": "annex-nmc-pwbd",
       "sourcePages": [
         43,
-        48
+        48,
+        64,
+        78,
+        80
       ],
       "verified": false,
       "title": "NMC PwBD guidelines 2026",
-      "description": "Discipline-wise functional assessment for PwBD candidates. The minimum benchmark disability is 40%."
+      "description": "Speciality-wise functional assessment for PwBD candidates. The minimum benchmark disability is 40%. The medical board issues an Eligibility Certificate: Eligible, Eligible with reasonable accommodation (naming it), or Ineligible (with reasons)."
     }
   ],
   "importantDates": [
@@ -1736,21 +1786,21 @@
       "sourcePages": [],
       "verified": false,
       "title": "Round schedule",
-      "detail": "Only the registration dates are out. Merit list, choice filling and allotment dates will come in later notices."
+      "detail": "As of 06-10-2026, only the registration dates are out. Check medadmgujarat.org for merit list, choice filling and allotment dates."
     },
     {
       "id": "gap-seats",
       "sourcePages": [],
       "verified": false,
       "title": "2026-27 seat matrix",
-      "detail": "This year's seat list hasn't been published yet. The site only has 2025-26."
+      "detail": "As of 06-10-2026, the 2026-27 seat list isn't out. The site only has 2025-26."
     },
     {
       "id": "gap-fees",
       "sourcePages": [],
       "verified": false,
       "title": "2026-27 tuition fees",
-      "detail": "This year's college-wise fees haven't been published yet. The site only has 2025-26."
+      "detail": "As of 06-10-2026, the 2026-27 college-wise fees aren't out. The site only has 2025-26."
     },
     {
       "id": "gap-reservation",
@@ -1785,7 +1835,7 @@
       "sourcePages": [],
       "verified": false,
       "title": "MDS admissions",
-      "detail": "No 2026-27 MDS notice yet."
+      "detail": "As of 06-10-2026, there's no 2026-27 MDS notice."
     }
   ]
 }

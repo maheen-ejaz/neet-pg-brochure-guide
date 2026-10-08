@@ -9,11 +9,22 @@ function read(): Profile | null {
   if (cache) return cache;
   try {
     const raw = localStorage.getItem(KEY);
-    cache = raw ? { ...EMPTY_PROFILE, ...JSON.parse(raw) } : null;
+    cache = raw ? migrate(JSON.parse(raw)) : null;
   } catch {
     cache = null;
   }
   return cache;
+}
+
+/**
+ * Older saved profiles had `nri: boolean` ("you or your parents"). "No" maps to none; "yes" can't
+ * tell you from a parent, so it's cleared and the profile asks again.
+ */
+function migrate(saved: Partial<Profile> & { nri?: boolean | null }): Profile {
+  const { nri, ...rest } = saved;
+  const p = { ...EMPTY_PROFILE, ...rest };
+  if (rest.nriLink === undefined && nri === false) p.nriLink = "none";
+  return p;
 }
 
 /** Profile lives only in this browser. Storage failures (private mode etc.) fall back to memory. */

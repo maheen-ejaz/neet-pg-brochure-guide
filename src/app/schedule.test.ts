@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import raw from "../../data/national/mcc-pg-2026.json";
 import { ScheduleSchema } from "../schema/nationalSchedule";
-import { nextDeadline, stageStatus, stageWhen } from "./schedule";
+import { minutesNow, nextDeadline, stageStatus, stageWhen, todayIso } from "./schedule";
 
 const mcc = ScheduleSchema.parse(raw);
 const r1 = mcc.rounds[0];
@@ -12,6 +12,8 @@ describe("MCC schedule helpers", () => {
     expect(stageWhen(stage("registration"))).toBe("12-10-2026 – 21-10-2026, until 12:00 noon");
     expect(stageWhen(stage("choiceLocking"))).toBe("21-10-2026 (from 4:00 PM) – 22-10-2026, until 10:00 AM");
     expect(stageWhen(stage("result"))).toBe("24-10-2026");
+    const strayLock = mcc.rounds[3].stages.find((s) => s.key === "choiceLocking")!;
+    expect(stageWhen(strayLock)).toBe("21-12-2026, 4:00 PM – 11:55 PM");
   });
 
   it("knows which stages are done, open or upcoming", () => {
@@ -31,5 +33,12 @@ describe("MCC schedule helpers", () => {
     expect(nextDeadline(mcc, "2026-10-22")?.label).toBe("Round 1: choice filling closes");
     expect(nextDeadline(mcc, "2026-12-30")?.label).toBe("Online stray vacancy round: reporting closes");
     expect(nextDeadline(mcc, "2027-01-01")).toBeNull();
+  });
+
+  it("uses Indian time for today and now, whatever the viewer's time zone", () => {
+    // 20:00 UTC on 21-10 is 01:30 IST on 22-10
+    const t = new Date("2026-10-21T20:00:00Z");
+    expect(todayIso(t)).toBe("2026-10-22");
+    expect(minutesNow(t)).toBe(90);
   });
 });

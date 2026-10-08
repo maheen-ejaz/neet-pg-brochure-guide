@@ -25,6 +25,8 @@ export interface Facts {
   studied10YearsInState: boolean | null;
   bornInState: boolean | null;
   isNri: boolean | null;
+  nriLink: Profile["nriLink"];
+  parentServiceRoute: boolean | null;
   priorAdmissionInState: boolean | null;
 }
 
@@ -57,7 +59,10 @@ export function deriveFacts(profile: Profile, brochure: Brochure): Facts {
     schooledInState: profile.schoolState ? profile.schoolState === state : null,
     studied10YearsInState: profile.tenYearStudyState ? profile.tenYearStudyState === state : null,
     bornInState: profile.birthState ? profile.birthState === state : null,
-    isNri: profile.nri,
+    // "You or your parents" — the narrowest NRI meaning; states that accept guardians or wards use nriLink.
+    isNri: profile.nriLink === null ? null : profile.nriLink === "self" || profile.nriLink === "parent",
+    nriLink: profile.nriLink,
+    parentServiceRoute: profile.parentRouteState ? profile.parentRouteState === state : null,
     priorAdmissionInState: profile.priorAdmissionState === null ? null : profile.priorAdmissionState === state,
   };
 }
@@ -177,12 +182,14 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
 
   let status: Verdict["status"];
   let headline: string;
-  if (ineligible) {
-    status = "ineligible";
-    headline = "Not eligible for this counselling";
-  } else if (notCovered) {
+  // A course the documents don't cover makes every other rule moot (their criteria were written
+  // for the courses that are covered), so it wins over "ineligible".
+  if (notCovered) {
     status = "notCovered";
     headline = "This year's documents don't cover your course yet";
+  } else if (ineligible) {
+    status = "ineligible";
+    headline = "Not eligible for this counselling";
   } else if (sectors.length === 0 || quotas?.length === 0) {
     status = "ineligible";
     headline = "No college sector is open to you";

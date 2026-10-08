@@ -8,8 +8,9 @@ export const scheduleDocs = (s: Schedule) => [{ title: "MCC schedule", startPage
 /** Stages that ask something of candidates (the rest are for colleges or MCC). */
 export const CANDIDATE_STAGES: StageKey[] = ["registration", "payment", "choiceFilling", "choiceLocking", "result", "reporting"];
 
-/** "12-10-2026 – 21-10-2026, until 12:00 noon" */
+/** "12-10-2026 – 21-10-2026, until 12:00 noon"; same day with both times: "21-12-2026, 4:00 PM – 11:55 PM". */
 export function stageWhen(s: ScheduleStage): string {
+  if ((!s.end || s.end === s.start) && s.startTime && s.endTime) return `${formatDate(s.start)}, ${s.startTime} – ${s.endTime}`;
   const start = formatDate(s.start) + (s.startTime && s.end && s.end !== s.start ? ` (from ${s.startTime})` : "");
   const end = s.end && s.end !== s.start ? ` – ${formatDate(s.end)}` : "";
   const time = s.endTime ? `, until ${s.endTime}` : s.startTime && (!s.end || s.end === s.start) ? `, from ${s.startTime}` : "";
@@ -78,11 +79,20 @@ function toMinutes(time?: string): number {
   return h * 60 + Number(m[2]);
 }
 
-/** Minutes since midnight, for comparing with deadline times. */
-export const minutesNow = (now = new Date()) => now.getHours() * 60 + now.getMinutes();
-
-/** Today's date as YYYY-MM-DD in the viewer's time zone. */
-export function todayIso(now = new Date()): string {
-  const p = (n: number) => String(n).padStart(2, "0");
-  return `${now.getFullYear()}-${p(now.getMonth() + 1)}-${p(now.getDate())}`;
+/**
+ * MCC times are "as per server time", i.e. Indian Standard Time. "Today" and "now" are therefore
+ * taken in Asia/Kolkata, whatever the viewer's own time zone.
+ */
+function istParts(now: Date) {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23",
+  }).formatToParts(now);
+  const get = (t: string) => parts.find((p) => p.type === t)?.value ?? "00";
+  return { date: `${get("year")}-${get("month")}-${get("day")}`, minutes: Number(get("hour")) * 60 + Number(get("minute")) };
 }
+
+/** Minutes since midnight IST, for comparing with deadline times. */
+export const minutesNow = (now = new Date()) => istParts(now).minutes;
+
+/** Today's date (YYYY-MM-DD) in IST. */
+export const todayIso = (now = new Date()) => istParts(now).date;

@@ -167,7 +167,7 @@
         },
         {
           "key": "dataVerification",
-          "label": "Joined-candidate data verified by colleges and shared with MCC",
+          "label": "Joined-candidate data verified by colleges and shared by MCC",
           "start": "2026-11-24"
         }
       ]
@@ -234,7 +234,7 @@
         },
         {
           "key": "dataVerification",
-          "label": "Joined-candidate data verified by colleges and shared with MCC",
+          "label": "Joined-candidate data verified by colleges and shared by MCC",
           "start": "2026-12-14"
         }
       ]
@@ -350,7 +350,7 @@
       ],
       "verified": false,
       "title": "Stray round: choices until 11:55 PM",
-      "detail": "In the stray vacancy round, choice filling and locking run until 11:55 PM on 21-12-2026, not 10:00 AM as in Rounds 1 to 3. The result and reporting both start on 24-12-2026."
+      "detail": "In the stray vacancy round, choice filling and locking close at 11:55 PM on 21-12-2026, not 10:00 AM as in Rounds 1 to 3. Choice locking opens at 4:00 PM the same day. The result and reporting both start on 24-12-2026."
     },
     {
       "id": "note-session-start",
@@ -368,7 +368,7 @@
         4
       ],
       "verified": false,
-      "title": "Weekends and holidays are working days",
+      "title": "Colleges are advised to work weekends and holidays",
       "detail": "Participating colleges are advised to treat all Saturdays, Sundays and gazetted holidays as working days, to keep to the schedule."
     }
   ],
@@ -399,7 +399,14 @@
       "sourcePages": [],
       "verified": false,
       "title": "State quota counselling",
-      "detail": "State-quota rounds run separately, on each state's own schedule."
+      "detail": "State-quota counselling dates aren't in this schedule."
+    },
+    {
+      "id": "gap-reporting-hours",
+      "sourcePages": [],
+      "verified": false,
+      "title": "Reporting hours",
+      "detail": "The schedule gives reporting dates but no daily hours or closing time. Check with your allotted college."
     }
   ]
 }

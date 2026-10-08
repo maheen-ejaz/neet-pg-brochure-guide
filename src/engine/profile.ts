@@ -18,8 +18,18 @@ export interface Profile {
    */
   tenYearStudyState: string | null;
   birthState: string | null;
-  /** Candidate or their parents are Non-Resident Indians. */
-  nri: boolean | null;
+  /**
+   * Who, if anyone, is a Non-Resident Indian: the candidate, a parent, a legal guardian (only when
+   * the parents are absent) or another relative who sponsors the candidate as a ward. States define
+   * NRI candidates differently (Gujarat: self/parent/guardian; Karnataka also NRI wards).
+   */
+  nriLink: NriLink | null;
+  /**
+   * State where a parent's service gives the candidate a home-state route without the usual
+   * schooling rule (e.g. Karnataka clauses d–g: All India Service cadre, central/PSU or defence
+   * employee with a declared home town, MP), or NONE.
+   */
+  parentRouteState: string | null;
   category: Category | null;
   pwd: boolean | null;
   /** State whose government health service employs the candidate, if any. */
@@ -41,6 +51,9 @@ export interface Profile {
   specialities: string[];
 }
 
+export const NRI_LINKS = ["none", "self", "parent", "guardian", "relative"] as const;
+export type NriLink = (typeof NRI_LINKS)[number];
+
 export const EMPTY_PROFILE: Profile = {
   air: null,
   courseType: null,
@@ -50,7 +63,8 @@ export const EMPTY_PROFILE: Profile = {
   schoolState: null,
   tenYearStudyState: null,
   birthState: null,
-  nri: null,
+  nriLink: null,
+  parentRouteState: null,
   category: null,
   pwd: null,
   inServiceState: null,
@@ -101,6 +115,8 @@ export const PROFILE_FIELD_LABELS: Record<string, string> = {
   studied10YearsInState: "where you studied 10 years of school (1st–12th standard)",
   bornInState: "your state of birth",
   isNri: "whether you or your parents are NRI",
+  nriLink: "who, if anyone, is an NRI (you, a parent, a guardian or a sponsoring relative)",
+  parentServiceRoute: "whether a parent's service gives you a home-state route",
   internshipCompletion: "your internship completion date",
 };
 
