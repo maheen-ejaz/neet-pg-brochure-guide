@@ -3,7 +3,8 @@
 Local-first GooCampus web app that turns state NEET PG counselling brochures into reviewed,
 structured data and shows candidates personalised, cited guidance.
 
-Current status, decisions already made, open questions and next steps: `docs/STATUS.md`.
+Current status, decisions already made, open questions and next steps: `docs/STATUS.md`. Handover guide (run,
+maintain, extend, rebuild elsewhere): `docs/HANDOVER.md`.
 
 ## Commands
 
@@ -20,7 +21,7 @@ Current status, decisions already made, open questions and next steps: `docs/STA
 - `src/schema/stateBrochure.ts`: Zod schema; single source of truth for state data.
 - `data/states/<slug>-<year>.json`: one file per brochure (committed). Every fact is a sourced item
   with `sourcePages` and `verified`.
-- `brochures/<slug>/<year>/`: source PDF + page renders. **Gitignored**, local only.
+- `brochures/<slug>/<year>/`: source PDF + page renders, committed so every citation can be checked.
 - `data/national/<name>-<year>.json`: national schedules (e.g. MCC's All India Quota timetable), schema
   `src/schema/nationalSchedule.ts`, same review/publish gate; shown at `/mcc/<file>`. State rules can link to MCC
   rounds via `schedule` (validated by `npm run validate`).
