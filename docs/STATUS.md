@@ -95,6 +95,17 @@ nav link. Four state rules link to MCC dates (Karnataka `round2-aiq`, `round3-el
 `stray-other-admission`); MDS profiles see a warning because the schedule doesn't mention MDS. When MCC revises the
 schedule, replace `brochures/mcc/2026/source.pdf`, update the JSON and re-verify.
 
+## Simplicity and accessibility pass (08-10-2026)
+
+- axe-core (WCAG 2.1 AA + best practice) reports 0 violations on every page, light and dark, with and without a
+  profile; no tap target under 24px; minimum text 13px (base `html { font-size: 106.25% }`).
+- State pages: "Your summary" card (verdict, next deadline, upfront cost, documents), reference sections collapse
+  (`Section collapsible`), round rules fold per round, long info cards show 2 bullets + "Show more" (warnings and
+  critical rules always in full), current section highlighted in the menu. Phone length: Gujarat ~25 → ~13 screens.
+- Verdict: plain meanings of seat codes (`eligibility.quotaTerms`, sourced), "General (UR)", reasons ordered by impact.
+- Profile: 4 steps with progress, "None of these apply to me", AIR/specialities optional.
+- Highlights only money, percentages, dates and consequential durations; long citations collapse to "Sources (n)".
+
 ## Seat-type views
 
 Each state page has a switch: **All seats | Government | Management & NRI** (`src/app/seats.tsx`). Items carry an

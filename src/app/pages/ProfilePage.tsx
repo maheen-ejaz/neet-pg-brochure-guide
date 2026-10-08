@@ -16,6 +16,7 @@ import { radioProps } from "../components/radio";
 import { useProfile } from "../useProfile";
 
 const MAX_SPECIALITIES = 5;
+const STEP_TITLES = ["Your course", "Where you studied", "About you", "Special situations"];
 
 function Field({ label, hint, children, htmlFor }: { label: string; hint?: string; children: ReactNode; htmlFor?: string }) {
   return (
@@ -122,6 +123,12 @@ export function ProfilePage() {
           : p.specialities,
     );
 
+  const [step, setStep] = useState(0);
+  const go = (i: number) => { setStep(i); window.scrollTo({ top: 0 }); };
+  // One tap for the common case: not in service, never admitted before, no parent-service route.
+  const noneApply = () =>
+    setP((prev) => ({ ...prev, inServiceState: NOT_IN_SERVICE, inServiceListed: null, priorAdmissionState: NONE, currentlyInPG: false, parentRouteState: NONE }));
+
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     save(p);
@@ -133,13 +140,29 @@ export function ProfilePage() {
       <div>
         <h1 className="text-3xl sm:text-4xl">Your profile</h1>
         <p className="mt-1 text-soft">
-          Used to personalise every state's guide. It stays in this browser and is never sent anywhere. Skip anything
-          you're unsure about and we'll tell you what's missing.
+          Four short steps. Your answers stay in this browser and are never sent anywhere. Skip anything you're unsure
+          about and we'll tell you what's missing.
         </p>
       </div>
 
-      <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
-        <h2 className="text-lg font-semibold">Exam & course</h2>
+      <ol className="flex gap-1.5" aria-label="Profile steps">
+        {STEP_TITLES.map((t, i) => (
+          <li key={t} className="flex-1">
+            <button
+              type="button"
+              onClick={() => go(i)}
+              aria-current={step === i ? "step" : undefined}
+              className={`block w-full border-t-4 pt-1.5 text-left text-xs ${i <= step ? "border-brand text-ink" : "border-line text-soft"} ${step === i ? "font-semibold" : ""}`}
+            >
+              <span className="block text-soft">Step {i + 1}</span>
+              {t}
+            </button>
+          </li>
+        ))}
+      </ol>
+      {step === 0 && (
+        <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
+          <h2 className="text-lg font-semibold">Your course</h2>
         <Field label="Which course are you applying for?">
           <Choice
             name="Course"
@@ -151,6 +174,158 @@ export function ProfilePage() {
             ]}
           />
         </Field>
+        <Field label="Internship completion date (DD-MM-YYYY)" hint="The date your one-year compulsory rotatory internship ends or ended." htmlFor="intern">
+          <DateInput id="intern" value={p.internshipCompletion} onChange={(v) => set("internshipCompletion", v)} />
+        </Field>
+        </div>
+      )}
+      {step === 1 && (
+        <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
+          <h2 className="text-lg font-semibold">Where you studied</h2>
+        <Field label="Where did you complete MBBS/BDS?" hint="Most state brochures decide eligibility on this." htmlFor="mbbs">
+          <select
+            id="mbbs"
+            className={inputClass}
+            value={p.mbbsState ?? ""}
+            onChange={(e) => setP((prev) => ({ ...prev, mbbsState: e.target.value || null, mbbsInstitution: null }))}
+          >
+            <option value="">Select…</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+            <option value={ABROAD}>Abroad (foreign medical graduate)</option>
+          </select>
+        </Field>
+        {listedInstitutions.length > 0 && (
+          <Field label={`Was it one of these institutions in ${p.mbbsState}?`} htmlFor="inst">
+            <select
+              id="inst"
+              className={inputClass}
+              value={p.mbbsInstitution ?? ""}
+              onChange={(e) => set("mbbsInstitution", e.target.value || null)}
+            >
+              <option value="">No, a state government or private college</option>
+              {listedInstitutions.map((n) => <option key={n} value={n}>{n}</option>)}
+            </select>
+          </Field>
+        )}
+        <Field label="Where was your 12th-standard school?" hint="Some states (e.g. Gujarat) check this if you did MBBS elsewhere." htmlFor="school">
+          <select id="school" className={inputClass} value={p.schoolState ?? ""} onChange={(e) => set("schoolState", e.target.value || null)}>
+            <option value="">Select…</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+            <option value={ABROAD}>Outside India</option>
+          </select>
+        </Field>
+        <Field
+          label="Did you study at least 10 academic years (1st to 12th standard) in one state, and pass your 10th or 12th exam there?"
+          hint="Count a class you took more than one year to pass as one year. Karnataka requires this for Government and GMP seats; if your parent was in the All India Service (Karnataka cadre) and posted outside the state, the years outside count too."
+          htmlFor="tenyear"
+        >
+          <select id="tenyear" className={inputClass} value={p.tenYearStudyState ?? ""} onChange={(e) => set("tenYearStudyState", e.target.value || null)}>
+            <option value="">Select…</option>
+            <option value={NONE}>No, not 10 years in any one state</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
+          </select>
+        </Field>
+        <Field label="State where you were born" htmlFor="birth">
+          <select id="birth" className={inputClass} value={p.birthState ?? ""} onChange={(e) => set("birthState", e.target.value || null)}>
+            <option value="">Select…</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+            <option value={ABROAD}>Outside India</option>
+          </select>
+        </Field>
+        <Field label="Domicile state" htmlFor="dom">
+          <select id="dom" className={inputClass} value={p.domicileState ?? ""} onChange={(e) => set("domicileState", e.target.value || null)}>
+            <option value="">Select…</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+          </select>
+        </Field>
+        </div>
+      )}
+      {step === 2 && (
+        <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
+          <h2 className="text-lg font-semibold">About you</h2>
+        <Field label="Category" hint="OBC is called SEBC in Gujarat, and covers Category-1, 2A, 2B, 3A and 3B in Karnataka.">
+          <Choice<Category> name="Category" value={p.category} onChange={(v) => set("category", v)}
+            options={CATEGORIES.map((c) => ({ value: c, label: c === "UR" ? "General (UR)" : c }))} />
+        </Field>
+        <Field label="Do you have a benchmark disability (PwD)?">
+          <Choice name="PwD" value={p.pwd} onChange={(v) => set("pwd", v)}
+            options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
+        </Field>
+        <Field label="Nationality">
+          <Choice name="Nationality" value={p.nationality} onChange={(v) => set("nationality", v)}
+            options={[
+              { value: "indian", label: "Indian" },
+              { value: "oci", label: "OCI" },
+              { value: "foreign", label: "Foreign national" },
+            ]} />
+        </Field>
+        <Field
+          label="Is anyone a Non-Resident Indian (NRI) for your application?"
+          hint="States differ: Gujarat accepts your parents, or a legal guardian only if your parents are absent; Karnataka also accepts NRI wards sponsored by a relative."
+          htmlFor="nri"
+        >
+          <select id="nri" className={inputClass} value={p.nriLink ?? ""} onChange={(e) => set("nriLink", (e.target.value || null) as Profile["nriLink"])}>
+            <option value="">Select…</option>
+            <option value="none">No one</option>
+            <option value="self">I am an NRI</option>
+            <option value="parent">My parent(s)</option>
+            <option value="guardian">My legal guardian (my parents are absent)</option>
+            <option value="relative">Another relative who will sponsor me as an NRI ward</option>
+          </select>
+        </Field>
+        </div>
+      )}
+      {step === 3 && (
+        <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
+          <h2 className="text-lg font-semibold">Special situations</h2>
+          <p className="text-sm text-soft">Most candidates answer "No" to all of these.</p>
+          <button type="button" onClick={noneApply} className="btn-secondary !py-1.5">None of these apply to me</button>
+        <Field label="Are you an in-service doctor in a state government health service?" hint="For example, UP's PMHS cadre." htmlFor="inservice">
+          <select id="inservice" className={inputClass} value={p.inServiceState ?? ""}
+            onChange={(e) => setP((prev) => ({ ...prev, inServiceState: e.target.value || null, inServiceListed: null }))}>
+            <option value="">Select…</option>
+            <option value={NOT_IN_SERVICE}>No</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
+          </select>
+        </Field>
+        {p.inServiceState && p.inServiceState !== NOT_IN_SERVICE && (
+          <Field
+            label={`Do you meet ${p.inServiceState}'s in-service criteria?`}
+            hint={inServiceCriteria ? `${p.inServiceState} requires: ${inServiceCriteria}.` : "Being employed isn't always enough: states usually require you to be on an official list or sponsored with an NOC."}
+          >
+            <Choice name="In-service criteria" value={p.inServiceListed} onChange={(v) => set("inServiceListed", v)}
+              options={[{ value: true, label: "Yes" }, { value: false, label: "No / not sure" }]} />
+          </Field>
+        )}
+        <Field label="Has a state's PG counselling admitted you before, to a course whose duration isn't over yet?" hint="Count it even if you left that seat. Some states (e.g. Gujarat) bar you from their counselling until that period ends." htmlFor="prior">
+          <select id="prior" className={inputClass} value={p.priorAdmissionState ?? ""} onChange={(e) => set("priorAdmissionState", e.target.value || null)}>
+            <option value="">Select…</option>
+            <option value={NONE}>No</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, through {s} counselling</option>)}
+          </select>
+        </Field>
+        <Field label="Are you presently admitted to a PG course on the basis of an earlier year's NEET-PG or NEET-MDS?" hint="Don't count a seat from this year's counselling, or one won through another exam such as INI-CET.">
+          <Choice name="Currently in PG" value={p.currentlyInPG} onChange={(v) => set("currentlyInPG", v)}
+            options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
+        </Field>
+        <Field
+          label="Does a parent's service give you a home-state route in some state?"
+          hint="For example Karnataka clauses d–g: a parent in the All India Service (state cadre), a central government/PSU or defence employee who declared a home town there, or an MP elected from there."
+          htmlFor="parentroute"
+        >
+          <select id="parentroute" className={inputClass} value={p.parentRouteState ?? ""} onChange={(e) => set("parentRouteState", e.target.value || null)}>
+            <option value="">Select…</option>
+            <option value={NONE}>No</option>
+            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
+          </select>
+        </Field>
+        </div>
+      )}
+      {step === 3 && (
+        <details className="rounded-xl border border-line bg-surface">
+          <summary className="cursor-pointer px-5 py-4 text-sm font-semibold text-ink sm:px-6">Optional: AIR and preferred specialities</summary>
+          <div className="space-y-6 px-5 pb-5 sm:px-6">
+            <p className="text-sm text-soft">Not used for your verdict yet. Brochures don't include cutoffs or seat lists by speciality.</p>
         <Field label="All India Rank (AIR)" hint="Saved for rank-based features. Brochures don't include cutoffs yet." htmlFor="air">
           <input
             id="air"
@@ -183,143 +358,9 @@ export function ProfilePage() {
             })}
           </div>
         </Field>
-      </div>
-
-      <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
-        <h2 className="text-lg font-semibold">Your MBBS / BDS</h2>
-        <Field label="Where did you complete MBBS/BDS?" hint="Most state brochures decide eligibility on this." htmlFor="mbbs">
-          <select
-            id="mbbs"
-            className={inputClass}
-            value={p.mbbsState ?? ""}
-            onChange={(e) => setP((prev) => ({ ...prev, mbbsState: e.target.value || null, mbbsInstitution: null }))}
-          >
-            <option value="">Select…</option>
-            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
-            <option value={ABROAD}>Abroad (foreign medical graduate)</option>
-          </select>
-        </Field>
-        {listedInstitutions.length > 0 && (
-          <Field label={`Was it one of these institutions in ${p.mbbsState}?`} htmlFor="inst">
-            <select
-              id="inst"
-              className={inputClass}
-              value={p.mbbsInstitution ?? ""}
-              onChange={(e) => set("mbbsInstitution", e.target.value || null)}
-            >
-              <option value="">No, a state government or private college</option>
-              {listedInstitutions.map((n) => <option key={n} value={n}>{n}</option>)}
-            </select>
-          </Field>
-        )}
-        <Field label="Internship completion date (DD-MM-YYYY)" hint="The date your one-year compulsory rotatory internship ends or ended." htmlFor="intern">
-          <DateInput id="intern" value={p.internshipCompletion} onChange={(v) => set("internshipCompletion", v)} />
-        </Field>
-        <Field label="Are you presently admitted to a PG course on the basis of an earlier year's NEET-PG or NEET-MDS?" hint="Don't count a seat from this year's counselling, or one won through another exam such as INI-CET.">
-          <Choice name="Currently in PG" value={p.currentlyInPG} onChange={(v) => set("currentlyInPG", v)}
-            options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
-        </Field>
-        <Field label="Has a state's PG counselling admitted you before, to a course whose duration isn't over yet?" hint="Count it even if you left that seat. Some states (e.g. Gujarat) bar you from their counselling until that period ends." htmlFor="prior">
-          <select id="prior" className={inputClass} value={p.priorAdmissionState ?? ""} onChange={(e) => set("priorAdmissionState", e.target.value || null)}>
-            <option value="">Select…</option>
-            <option value={NONE}>No</option>
-            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, through {s} counselling</option>)}
-          </select>
-        </Field>
-      </div>
-
-      <div className="space-y-6 rounded-xl border border-line bg-surface p-5 sm:p-6">
-        <h2 className="text-lg font-semibold">About you</h2>
-        <Field label="Domicile state" htmlFor="dom">
-          <select id="dom" className={inputClass} value={p.domicileState ?? ""} onChange={(e) => set("domicileState", e.target.value || null)}>
-            <option value="">Select…</option>
-            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
-          </select>
-        </Field>
-        <Field label="State where you were born" htmlFor="birth">
-          <select id="birth" className={inputClass} value={p.birthState ?? ""} onChange={(e) => set("birthState", e.target.value || null)}>
-            <option value="">Select…</option>
-            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
-            <option value={ABROAD}>Outside India</option>
-          </select>
-        </Field>
-        <Field label="Where was your 12th-standard school?" hint="Some states (e.g. Gujarat) check this if you did MBBS elsewhere." htmlFor="school">
-          <select id="school" className={inputClass} value={p.schoolState ?? ""} onChange={(e) => set("schoolState", e.target.value || null)}>
-            <option value="">Select…</option>
-            {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
-            <option value={ABROAD}>Outside India</option>
-          </select>
-        </Field>
-        <Field
-          label="Did you study at least 10 academic years (1st to 12th standard) in one state, and pass your 10th or 12th exam there?"
-          hint="Count a class you took more than one year to pass as one year. Karnataka requires this for Government and GMP seats; if your parent was in the All India Service (Karnataka cadre) and posted outside the state, the years outside count too."
-          htmlFor="tenyear"
-        >
-          <select id="tenyear" className={inputClass} value={p.tenYearStudyState ?? ""} onChange={(e) => set("tenYearStudyState", e.target.value || null)}>
-            <option value="">Select…</option>
-            <option value={NONE}>No, not 10 years in any one state</option>
-            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
-          </select>
-        </Field>
-        <Field
-          label="Is anyone a Non-Resident Indian (NRI) for your application?"
-          hint="States differ: Gujarat accepts your parents, or a legal guardian only if your parents are absent; Karnataka also accepts NRI wards sponsored by a relative."
-          htmlFor="nri"
-        >
-          <select id="nri" className={inputClass} value={p.nriLink ?? ""} onChange={(e) => set("nriLink", (e.target.value || null) as Profile["nriLink"])}>
-            <option value="">Select…</option>
-            <option value="none">No one</option>
-            <option value="self">I am an NRI</option>
-            <option value="parent">My parent(s)</option>
-            <option value="guardian">My legal guardian (my parents are absent)</option>
-            <option value="relative">Another relative who will sponsor me as an NRI ward</option>
-          </select>
-        </Field>
-        <Field
-          label="Does a parent's service give you a home-state route in some state?"
-          hint="For example Karnataka clauses d–g: a parent in the All India Service (state cadre), a central government/PSU or defence employee who declared a home town there, or an MP elected from there."
-          htmlFor="parentroute"
-        >
-          <select id="parentroute" className={inputClass} value={p.parentRouteState ?? ""} onChange={(e) => set("parentRouteState", e.target.value || null)}>
-            <option value="">Select…</option>
-            <option value={NONE}>No</option>
-            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
-          </select>
-        </Field>
-        <Field label="Category" hint="OBC is called SEBC in Gujarat, and covers Category-1, 2A, 2B, 3A and 3B in Karnataka.">
-          <Choice<Category> name="Category" value={p.category} onChange={(v) => set("category", v)}
-            options={CATEGORIES.map((c) => ({ value: c, label: c === "UR" ? "General (UR)" : c }))} />
-        </Field>
-        <Field label="Do you have a benchmark disability (PwD)?">
-          <Choice name="PwD" value={p.pwd} onChange={(v) => set("pwd", v)}
-            options={[{ value: false, label: "No" }, { value: true, label: "Yes" }]} />
-        </Field>
-        <Field label="Are you an in-service doctor in a state government health service?" hint="For example, UP's PMHS cadre." htmlFor="inservice">
-          <select id="inservice" className={inputClass} value={p.inServiceState ?? ""}
-            onChange={(e) => setP((prev) => ({ ...prev, inServiceState: e.target.value || null, inServiceListed: null }))}>
-            <option value="">Select…</option>
-            <option value={NOT_IN_SERVICE}>No</option>
-            {INDIAN_STATES.map((s) => <option key={s} value={s}>Yes, in {s}</option>)}
-          </select>
-        </Field>
-        {p.inServiceState && p.inServiceState !== NOT_IN_SERVICE && (
-          <Field
-            label={`Do you meet ${p.inServiceState}'s in-service criteria?`}
-            hint={inServiceCriteria ? `${p.inServiceState} requires: ${inServiceCriteria}.` : "Being employed isn't always enough: states usually require you to be on an official list or sponsored with an NOC."}
-          >
-            <Choice name="In-service criteria" value={p.inServiceListed} onChange={(v) => set("inServiceListed", v)}
-              options={[{ value: true, label: "Yes" }, { value: false, label: "No / not sure" }]} />
-          </Field>
-        )}
-        <Field label="Nationality">
-          <Choice name="Nationality" value={p.nationality} onChange={(v) => set("nationality", v)}
-            options={[
-              { value: "indian", label: "Indian" },
-              { value: "oci", label: "OCI" },
-              { value: "foreign", label: "Foreign national" },
-            ]} />
-        </Field>
-      </div>
+          </div>
+        </details>
+      )}
 
       <div className="sticky bottom-0 -mx-4 flex flex-wrap items-center justify-between gap-3 border-t border-line bg-surface/90 px-4 py-3 backdrop-blur">
         <button
@@ -329,9 +370,15 @@ export function ProfilePage() {
         >
           Clear profile
         </button>
-        <button type="submit" className="btn-primary">
-          Save & see my results
-        </button>
+        <span className="flex items-center gap-2">
+          {step > 0 && <button type="button" onClick={() => go(step - 1)} className="btn-secondary">Back</button>}
+          {step < STEP_TITLES.length - 1 ? (
+            // Distinct keys: if React reused this node, the click on "Next" would land on the submit button.
+            <button key="next" type="button" onClick={() => go(step + 1)} className="btn-primary">Next</button>
+          ) : (
+            <button key="save" type="submit" className="btn-primary">Save & see my results</button>
+          )}
+        </span>
       </div>
     </form>
   );
