@@ -694,7 +694,21 @@
           "tone": "warning"
         }
       }
-    ]
+    ],
+    "quotaTerms": {
+      "id": "eligibility-quota-terms",
+      "sourcePages": [
+        1,
+        26
+      ],
+      "verified": false,
+      "terms": [
+        {
+          "code": "NRI",
+          "meaning": "NRI quota (NQ) seats, allotted on inter-se merit among candidates who applied for NRI seats."
+        }
+      ]
+    }
   },
   "reservation": {
     "policy": null,

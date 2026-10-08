@@ -928,7 +928,38 @@
         },
         "note": "Wording on p44 is run-on; this restates both provisos. Check the original."
       }
-    ]
+    ],
+    "quotaTerms": {
+      "id": "eligibility-quota-terms",
+      "sourcePages": [
+        14,
+        18,
+        19
+      ],
+      "verified": false,
+      "terms": [
+        {
+          "code": "Government",
+          "meaning": "State-quota seats in government colleges, and the government's share of seats in private colleges."
+        },
+        {
+          "code": "GMP",
+          "meaning": "Private-college seats for candidates under clause b or c (10 years of school in Karnataka)."
+        },
+        {
+          "code": "OPN",
+          "meaning": "Open private-college seats, filled on NEET All India merit, for any Indian citizen."
+        },
+        {
+          "code": "NRI",
+          "meaning": "15% of seats in private colleges, for NRIs, their children or wards, PIOs, OCIs and foreign nationals."
+        },
+        {
+          "code": "Others (Q)",
+          "meaning": "10% of seats in private colleges (5% in private universities), open to all qualified candidates except NRI, PIO, OCI and foreign national candidates."
+        }
+      ]
+    }
   },
   "reservation": {
     "policy": null,

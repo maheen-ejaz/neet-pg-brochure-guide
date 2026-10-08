@@ -161,6 +161,10 @@ export const BrochureSchema = z.object({
     /** Home-state institutions whose graduates are treated differently (mbbsLocation = home_listed). */
     listedHomeInstitutions: z.object({ ...sourced, label: z.string(), names: z.array(z.string()) }),
     inServiceLabel: z.object({ ...sourced, label: z.string() }),
+    /** Plain meanings of the seat-quota codes used in verdicts (e.g. Karnataka "OPN"). */
+    quotaTerms: z
+      .object({ ...sourced, terms: z.array(z.object({ code: z.string(), meaning: z.string() })) })
+      .optional(),
     rules: z.array(EligibilityRule),
   }),
   reservation: z.object({

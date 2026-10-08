@@ -243,7 +243,8 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
   }
 
   const reasons = verdict.reasons.filter((r) => show(r.rule));
-  const applied = reasons.filter((r) => r.match === "applies");
+  // What limits you first, then warnings, then information.
+  const applied = reasons.filter((r) => r.match === "applies").sort((a, b) => reasonRank(a.rule.effect) - reasonRank(b.rule.effect));
   const maybe = reasons.filter((r) => r.match === "maybe");
   const manual = reasons.filter((r) => r.match === "manual");
   const icon = (r: (typeof applied)[number]) => {
@@ -271,8 +272,22 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
                 {verdict.sectors.map((s) => s[0].toUpperCase() + s.slice(1)).join(" + ")}
               </Fact>
             )}
-            <Fact label="You'll be counted as">{verdict.effectiveCategory ?? "—"}{profile.pwd ? " + PwD" : ""}</Fact>
+            <Fact label="You'll be counted as">{verdict.effectiveCategory ? CATEGORY_NAMES[verdict.effectiveCategory] : "—"}{profile.pwd ? " + PwD" : ""}</Fact>
             <Fact label="Not open to you">{verdict.excludedCourses.length ? `${verdict.excludedCourses.join(", ")} (state quota)` : "Nothing excluded"}</Fact>
+          </div>
+        )}
+        {verdict.quotas && b.eligibility.quotaTerms && (
+          <div className="border-t border-line p-4">
+            <p className="text-xs text-soft">What these seats are</p>
+            <dl className="mt-1.5 space-y-1.5 text-sm">
+              {b.eligibility.quotaTerms.terms.filter((t) => verdict.quotas?.includes(t.code)).map((t) => (
+                <div key={t.code} className="sm:flex sm:gap-2">
+                  <dt className="shrink-0 font-semibold text-ink sm:w-28">{t.code}</dt>
+                  <dd>{t.meaning}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-1 text-xs"><Cite pages={b.eligibility.quotaTerms.sourcePages} /></p>
           </div>
         )}
         {verdict.missingInfo.length > 0 && (
@@ -339,6 +354,19 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
       )}
     </Section>
   );
+}
+
+const CATEGORY_NAMES: Record<string, string> = { UR: "General (UR)", OBC: "OBC", SC: "SC", ST: "ST", EWS: "EWS" };
+
+/** Order for "the rules that apply to you": blockers, then limits, then warnings, then information. */
+function reasonRank(e: Brochure["eligibility"]["rules"][number]["effect"]): number {
+  if (e.type === "ineligible") return 0;
+  if (e.type === "notCovered") return 1;
+  if (e.type === "restrictQuotas" || e.type === "restrictSectors" || e.type === "excludeCourses") return 2;
+  if (e.type === "treatAsCategory") return 3;
+  if (e.type === "note" && e.tone === "warning") return 4;
+  if (e.type === "note" && e.tone === "positive") return 5;
+  return 6;
 }
 
 function Fact({ label, children }: { label: string; children: React.ReactNode }) {
