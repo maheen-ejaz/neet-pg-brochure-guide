@@ -8,12 +8,12 @@ const r1 = mcc.rounds[0];
 const stage = (key: string) => r1.stages.find((s) => s.key === key)!;
 
 describe("MCC schedule helpers", () => {
-  it("formats stage dates as DD-MM-YYYY with times", () => {
-    expect(stageWhen(stage("registration"))).toBe("12-10-2026 – 21-10-2026, until 12:00 noon");
-    expect(stageWhen(stage("choiceLocking"))).toBe("21-10-2026 (from 4:00 PM) – 22-10-2026, until 10:00 AM");
-    expect(stageWhen(stage("result"))).toBe("24-10-2026");
+  it("formats stage dates as '21st October 2026' with times", () => {
+    expect(stageWhen(stage("registration"))).toBe("12th October 2026 - 21st October 2026, until 12:00 noon");
+    expect(stageWhen(stage("choiceLocking"))).toBe("21st October 2026 (from 4:00 PM) - 22nd October 2026, until 10:00 AM");
+    expect(stageWhen(stage("result"))).toBe("24th October 2026");
     const strayLock = mcc.rounds[3].stages.find((s) => s.key === "choiceLocking")!;
-    expect(stageWhen(strayLock)).toBe("21-12-2026, 4:00 PM – 11:55 PM");
+    expect(stageWhen(strayLock)).toBe("21st December 2026, 4:00 PM - 11:55 PM");
   });
 
   it("knows which stages are done, open or upcoming", () => {

@@ -22,9 +22,9 @@
       "Diploma"
     ],
     "governmentOrders": [
-      "GR No. MCG/1004/650/J dated 10-01-2022 (10% in-service seats)",
-      "Letter No. HFWD/0133/07/2024 / Resolution No. HFWD/MSM/e-file/7/2024/2648/J dated 09-07-2024 (PwD medical boards)",
-      "NMC No. E-8365532/2026-PGMEB dated 16-09-2026 (PwBD assessment guidelines)"
+      "GR No. MCG/1004/650/J dated 10th January 2022 (10% in-service seats)",
+      "Letter No. HFWD/0133/07/2024 / Resolution No. HFWD/MSM/e-file/7/2024/2648/J dated 9th July 2024 (PwD medical boards)",
+      "NMC No. E-8365532/2026-PGMEB dated 16th September 2026 (PwBD assessment guidelines)"
     ],
     "seatTerms": {
       "government": "Government quota (GQ)",
@@ -43,11 +43,11 @@
     ],
     "documents": [
       {
-        "title": "Website notices (snapshot 06-10-2026)",
+        "title": "Website notices (snapshot 6th October 2026)",
         "url": "https://www.medadmgujarat.org/pg/home.aspx",
         "startPage": 1,
         "pageCount": 2,
-        "issued": "Notices dated 16-09-2026, 29-09-2026 and 01-10-2026"
+        "issued": "Notices dated 16th September 2026, 29th September 2026 and 1st October 2026"
       },
       {
         "title": "Registration advertisement",
@@ -106,7 +106,7 @@
         "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/PwD%20GR%20%20Gujarat%20%2009072024.pdf",
         "startPage": 33,
         "pageCount": 6,
-        "issued": "09-07-2024 (linked for 2026-27)"
+        "issued": "9th July 2024 (linked for 2026-27)"
       },
       {
         "title": "PwD proforma",
@@ -119,7 +119,7 @@
         "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/GUIDELINES%20ON%20ASSESSMENT%20OF%20PERSONS%20WITH%20BENCHMARK%20DISABILITIES.pdf",
         "startPage": 43,
         "pageCount": 39,
-        "issued": "16-09-2026"
+        "issued": "16th September 2026"
       }
     ]
   },
@@ -267,8 +267,8 @@
           21
         ],
         "verified": false,
-        "title": "Internship by 30-09-2026",
-        "explanation": "Your compulsory rotating internship must be completed on or before 30-09-2026.",
+        "title": "Internship by 30th September 2026",
+        "explanation": "Your compulsory rotating internship must be completed on or before 30th September 2026.",
         "condition": {
           "all": [
             {
@@ -454,7 +454,7 @@
         ],
         "verified": false,
         "title": "NRI quota is still open to you",
-        "explanation": "You don't meet the Government and Management quota criteria, but the NRI quota criteria (p26) don't appear to depend on where you studied. Confirm with ACPPGMEC. You must be an NRI yourself, or your parents must be NRIs. A legal guardian counts only if your parents are absent; while your father is alive, no one else is ordinarily accepted as guardian. Your internship must be completed by 30-09-2026.",
+        "explanation": "You don't meet the Government and Management quota criteria, but the NRI quota criteria (p26) don't appear to depend on where you studied. Confirm with ACPPGMEC. You must be an NRI yourself, or your parents must be NRIs. A legal guardian counts only if your parents are absent; while your father is alive, no one else is ordinarily accepted as guardian. Your internship must be completed by 30th September 2026.",
         "condition": {
           "all": [
             {
@@ -728,7 +728,7 @@
         ],
         "verified": false,
         "title": "Certificate issue dates",
-        "detail": "Non-creamy layer (Parishishta 4) and EWS certificates in Gujarati must be issued on or after 01-04-2024. English certificates must be issued on or after 01-04-2026. Both must be valid for 2026-27.",
+        "detail": "Non-creamy layer (Parishishta 4) and EWS certificates in Gujarati must be issued on or after 1st April 2024. English certificates must be issued on or after 1st April 2026. Both must be valid for 2026-27.",
         "severity": "critical"
       },
       {
@@ -1002,7 +1002,7 @@
         21
       ],
       "verified": false,
-      "name": "Internship completion certificate (on or before 30-09-2026)",
+      "name": "Internship completion certificate (on or before 30th September 2026)",
       "stage": "registration",
       "appliesWhen": null
     },
@@ -1058,7 +1058,7 @@
           "OBC"
         ]
       },
-      "detail": "Gujarati: issued on or after 01-04-2024. English: issued on or after 01-04-2026. Valid for 2026-27."
+      "detail": "Gujarati: issued on or after 1st April 2024. English: issued on or after 1st April 2026. Valid for 2026-27."
     },
     {
       "id": "doc-ews",
@@ -1074,7 +1074,7 @@
           "EWS"
         ]
       },
-      "detail": "Gujarati: issued on or after 01-04-2024. English: issued on or after 01-04-2026. Valid for 2026-27."
+      "detail": "Gujarati: issued on or after 1st April 2024. English: issued on or after 1st April 2026. Valid for 2026-27."
     },
     {
       "id": "doc-pwd",
@@ -1256,7 +1256,7 @@
           "guardian"
         ]
       },
-      "detail": "₹25,000 demand draft, plus notarised copies of: printout of the online application, all MBBS marksheets, NEET-PG marksheet, school leaving certificate and 12th marksheet. Notarised colour copies of: passport (all pages, including blank ones) of you or your NRI parent; visa, residence permit or OCI/PIO card; NRI certificate from the Indian Embassy, High Commission or Consulate; Indian and foreign address proof; fee undertaking on ₹300 stamp paper (notarised); proof of origin. Bring the originals and notarised colour copies when you submit the application, and all documents to the interview. Also fill in the stay-in-India form for 01-04-2025 to 31-03-2026: each arrival and departure date with its passport page number, days per stay and total days, signed by you and your parent. Documents not in English must be translated by a competent authority.",
+      "detail": "₹25,000 demand draft, plus notarised copies of: printout of the online application, all MBBS marksheets, NEET-PG marksheet, school leaving certificate and 12th marksheet. Notarised colour copies of: passport (all pages, including blank ones) of you or your NRI parent; visa, residence permit or OCI/PIO card; NRI certificate from the Indian Embassy, High Commission or Consulate; Indian and foreign address proof; fee undertaking on ₹300 stamp paper (notarised); proof of origin. Bring the originals and notarised colour copies when you submit the application, and all documents to the interview. Also fill in the stay-in-India form for 1st April 2025 to 31st March 2026: each arrival and departure date with its passport page number, days per stay and total days, signed by you and your parent. Documents not in English must be translated by a competent authority.",
       "seats": [
         "nri"
       ]
@@ -1775,9 +1775,10 @@
         4
       ],
       "verified": false,
-      "label": "Document verification at help centre, by prior appointment only (10 AM–4 PM; Sat 03-10-2026 10 AM–12 noon; closed Sun 04-10-2026)",
+      "label": "Document verification at help centre, by prior appointment only (10 AM–4 PM; Sat 3rd October 2026 10 AM–12 noon; closed Sun 4th October 2026)",
       "date": "2026-10-03",
-      "endDate": "2026-10-09"
+      "endDate": "2026-10-09",
+      "endTime": "4:00 PM"
     }
   ],
   "gaps": [
@@ -1786,21 +1787,21 @@
       "sourcePages": [],
       "verified": false,
       "title": "Round schedule",
-      "detail": "As of 06-10-2026, only the registration dates are out. Check medadmgujarat.org for merit list, choice filling and allotment dates."
+      "detail": "As of 6th October 2026, only the registration dates are out. Check medadmgujarat.org for merit list, choice filling and allotment dates."
     },
     {
       "id": "gap-seats",
       "sourcePages": [],
       "verified": false,
       "title": "2026-27 seat matrix",
-      "detail": "As of 06-10-2026, the 2026-27 seat list isn't out. The site only has 2025-26."
+      "detail": "As of 6th October 2026, the 2026-27 seat list isn't out. The site only has 2025-26."
     },
     {
       "id": "gap-fees",
       "sourcePages": [],
       "verified": false,
       "title": "2026-27 tuition fees",
-      "detail": "As of 06-10-2026, the 2026-27 college-wise fees aren't out. The site only has 2025-26."
+      "detail": "As of 6th October 2026, the 2026-27 college-wise fees aren't out. The site only has 2025-26."
     },
     {
       "id": "gap-reservation",
@@ -1835,7 +1836,7 @@
       "sourcePages": [],
       "verified": false,
       "title": "MDS admissions",
-      "detail": "As of 06-10-2026, there's no 2026-27 MDS notice."
+      "detail": "As of 6th October 2026, there's no 2026-27 MDS notice."
     }
   ]
 }

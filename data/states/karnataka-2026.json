@@ -27,13 +27,13 @@
     "governmentOrders": [
       "Karnataka Conduct of Entrance Test for Selection and Admission to PG Medical and Dental Degree and Diploma Courses Rules, 2006 (as amended)",
       "Karnataka Compulsory Service Training by Candidates Completed Medical Courses Act, 2012 (as amended)",
-      "SKE 08 SLP 2024 dated 25-08-2025 and DPAR 02 Sehima 2026 dated 27-04-2026 (SC internal reservation: SCA, SCB, SCC)",
-      "GO ಹಿಂವಕ 178 ಬಿಎಂಎಸ್ 2015 dated 06-08-2014 (SC/ST tuition fee exemption)",
-      "GO ಸಕಇ 357 ಬಿಎಂಎಸ್ 2012 dated 22-11-2012 (OBC fee reimbursement)",
-      "GO DPAR 20 SBC 82 dated 28-12-1983 (caste certificates of married women)",
-      "NMC letter N-P018(20)/5/2023-PGMEB dated 24-07-2023 (all rounds online, Annexure-20)"
+      "SKE 08 SLP 2024 dated 25th August 2025 and DPAR 02 Sehima 2026 dated 27th April 2026 (SC internal reservation: SCA, SCB, SCC)",
+      "GO ಹಿಂವಕ 178 ಬಿಎಂಎಸ್ 2015 dated 6th August 2014 (SC/ST tuition fee exemption)",
+      "GO ಸಕಇ 357 ಬಿಎಂಎಸ್ 2012 dated 22nd November 2012 (OBC fee reimbursement)",
+      "GO DPAR 20 SBC 82 dated 28th December 1983 (caste certificates of married women)",
+      "NMC letter N-P018(20)/5/2023-PGMEB dated 24th July 2023 (all rounds online, Annexure-20)"
     ],
-    "note": "Cover and section 3(b): information about PG Medical comes into effect only after MCC's announcement. The PDF's internal title is 'PGET MDS 2026 e-brochure', dated 14-08-2026.",
+    "note": "Cover and section 3(b): information about PG Medical comes into effect only after MCC's announcement. The PDF's internal title is 'PGET MDS 2026 e-brochure', dated 14th August 2026.",
     "seatTerms": {
       "government": "Government seats (G), including the Government share in private colleges",
       "management": "Private (GMP, OPN, minority) and Others (Q) seats",
@@ -237,8 +237,8 @@
           7
         ],
         "verified": false,
-        "title": "MDS: internship by 31-05-2026",
-        "explanation": "For NEET-MDS 2026, the NBEMS cut-off date for completing your internship is 31-05-2026.",
+        "title": "MDS: internship by 31st May 2026",
+        "explanation": "For NEET-MDS 2026, the NBEMS cut-off date for completing your internship is 31st May 2026.",
         "condition": {
           "all": [
             {
@@ -256,7 +256,7 @@
         "effect": {
           "type": "ineligible"
         },
-        "note": "p20 (item 9) accepts a provisional internship certificate for candidates 'completing their internship 31-03-2026 for MDS', which doesn't match the 31-05-2026 cut-off on p7. Confirm with KEA."
+        "note": "p20 (item 9) accepts a provisional internship certificate for candidates 'completing their internship 31st March 2026 for MDS', which doesn't match the 31st May 2026 cut-off on p7. Confirm with KEA."
       },
       {
         "id": "elig-internship-md",
@@ -300,7 +300,7 @@
         ],
         "verified": false,
         "title": "MBBS/BDS in Karnataka with 10 years of school in Karnataka (clause b)",
-        "explanation": "You fit clause b: as on 31-03-2026 you studied at least 10 academic years (1st to 12th standard) in government or government-recognised institutions in Karnataka, passed SSLC/10th or 2nd PUC/12th there, and passed MBBS/BDS in Karnataka. A class you took more than one year to pass counts as one year. You're eligible for Government, GMP, OPN and Others (Q) seats, and minority seats if you qualify.",
+        "explanation": "You fit clause b: as on 31st March 2026 you studied at least 10 academic years (1st to 12th standard) in government or government-recognised institutions in Karnataka, passed SSLC/10th or 2nd PUC/12th there, and passed MBBS/BDS in Karnataka. A class you took more than one year to pass counts as one year. You're eligible for Government, GMP, OPN and Others (Q) seats, and minority seats if you qualify.",
         "condition": {
           "all": [
             {
@@ -1258,7 +1258,7 @@
       ],
       "verified": false,
       "title": "Every round is online, run by KEA",
-      "detail": "As per the NMC letter dated 24-07-2023, all rounds, including the stray vacancy round, are conducted online by KEA only.",
+      "detail": "As per the NMC letter dated 24th July 2023, all rounds, including the stray vacancy round, are conducted online by KEA only.",
       "severity": "info",
       "tag": "Every round"
     },
@@ -1619,7 +1619,7 @@
       "name": "NEET-PG 2026 / NEET-MDS 2026 admit card and score card",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "NEET-MDS scorecards can be downloaded from natboard.edu.in for only 6 months from 10-06-2026."
+      "detail": "NEET-MDS scorecards can be downloaded from natboard.edu.in for only 6 months from 10th June 2026."
     },
     {
       "id": "doc-10th",
@@ -1710,8 +1710,8 @@
       "name": "Internship completion certificate (Annexure 5)",
       "stage": "registration",
       "appliesWhen": null,
-      "detail": "A provisional internship completion certificate (Annexure 6) is accepted for the first round only. For MDS the bulletin gives two dates (31-03-2026 here, 31-05-2026 as the cut-off), so confirm with KEA; for MD/MS it follows NBEMS.",
-      "note": "Annexures 5 and 6 are worded for MBBS (Karnataka Medical Council), but BDS candidates need them too. The 31-03-2026 MDS date doesn't match the 31-05-2026 cut-off on p7."
+      "detail": "A provisional internship completion certificate (Annexure 6) is accepted for the first round only. For MDS the bulletin gives two dates (31st March 2026 here, 31st May 2026 as the cut-off), so confirm with KEA; for MD/MS it follows NBEMS.",
+      "note": "Annexures 5 and 6 are worded for MBBS (Karnataka Medical Council), but BDS candidates need them too. The 31st March 2026 MDS date doesn't match the 31st May 2026 cut-off on p7."
     },
     {
       "id": "doc-recognition",
@@ -2695,7 +2695,7 @@
       ],
       "verified": false,
       "title": "Annexure 20",
-      "description": "NMC letter dated 24-07-2023: all counselling rounds online"
+      "description": "NMC letter dated 24th July 2023: all counselling rounds online"
     }
   ],
   "importantDates": [

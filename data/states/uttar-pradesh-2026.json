@@ -30,9 +30,9 @@
       "MDS"
     ],
     "governmentOrders": [
-      "Govt. Order No. I/1405837/2026 dated 23-07-2026 (reservation, security fee eligibility, resignation, PMHS weightage)",
-      "Govt. Order No. 950/71-2-82/2017 dated 07-03-2018 (service bond)",
-      "Govt. Order No. I/676928/2024 dated 26-06-2024 (debarment)"
+      "Govt. Order No. I/1405837/2026 dated 23rd July 2026 (reservation, security fee eligibility, resignation, PMHS weightage)",
+      "Govt. Order No. 950/71-2-82/2017 dated 7th March 2018 (service bond)",
+      "Govt. Order No. I/676928/2024 dated 26th June 2024 (debarment)"
     ],
     "seatTerms": {
       "government": "Government colleges (State Quota)",
@@ -179,7 +179,7 @@
         ],
         "verified": false,
         "title": "Internship deadline (MD/MS/Diploma/DNB)",
-        "explanation": "Your one-year compulsory rotatory internship must be completed on or before 30-09-2026.",
+        "explanation": "Your one-year compulsory rotatory internship must be completed on or before 30th September 2026.",
         "condition": {
           "all": [
             {
@@ -205,7 +205,7 @@
         ],
         "verified": false,
         "title": "Internship deadline (MDS)",
-        "explanation": "Your one-year compulsory rotatory internship must be completed on or before 31-05-2026.",
+        "explanation": "Your one-year compulsory rotatory internship must be completed on or before 31st May 2026.",
         "condition": {
           "all": [
             {
@@ -375,7 +375,7 @@
         ],
         "verified": false,
         "title": "Foreign medical graduates",
-        "explanation": "FMGs must meet NBE Information Bulletin 2026 point 4.10: qualified the FMGE screening test, registered with NMC/MCI or a State Medical Council, and internship completed by 30-09-2026.",
+        "explanation": "FMGs must meet NBE Information Bulletin 2026 point 4.10: qualified the FMGE screening test, registered with NMC/MCI or a State Medical Council, and internship completed by 30th September 2026.",
         "condition": {
           "all": [
             {
@@ -596,7 +596,7 @@
         ],
         "verified": false,
         "title": "Fresh EWS and OBC certificates",
-        "detail": "EWS and OBC certificates are valid only if issued on or after 01-04-2026.",
+        "detail": "EWS and OBC certificates are valid only if issued on or after 1st April 2026.",
         "severity": "critical"
       },
       {
@@ -695,7 +695,7 @@
         ],
         "verified": false,
         "title": "Deposit eligibility is set by a government order",
-        "detail": "Check which deposit tier you are eligible for under Govt. Order No. I/1405837/2026 dated 23-07-2026.",
+        "detail": "Check which deposit tier you are eligible for under Govt. Order No. I/1405837/2026 dated 23rd July 2026.",
         "severity": "warning"
       },
       {
@@ -1062,7 +1062,7 @@
           }
         ]
       },
-      "detail": "Issued by a competent UP authority. EWS and OBC certificates must be issued on or after 01-04-2026."
+      "detail": "Issued by a competent UP authority. EWS and OBC certificates must be issued on or after 1st April 2026."
     },
     {
       "id": "doc-ews-format",
@@ -1090,7 +1090,7 @@
           }
         ]
       },
-      "detail": "Family's total annual income below ₹8 lakh in the stated financial year. The family must not own any of: 5 acres or more of agricultural land; a flat of 1,000 sq ft or more; a residential plot of 100 sq yd or more in a notified municipality; or 200 sq yd or more outside one. You must be a permanent resident and not belong to a caste notified as SC, ST or OBC. Valid for the financial year stated on it. Uses the Prapatra-1 format (office memo dated 14-03-2019) with your attested passport-size photo and full address (village, post office, police station, tehsil, district, state, PIN). Issued by the District Magistrate, Additional District Magistrate, City Magistrate, Pargana Magistrate or Tehsildar.",
+      "detail": "Family's total annual income below ₹8 lakh in the stated financial year. The family must not own any of: 5 acres or more of agricultural land; a flat of 1,000 sq ft or more; a residential plot of 100 sq yd or more in a notified municipality; or 200 sq yd or more outside one. You must be a permanent resident and not belong to a caste notified as SC, ST or OBC. Valid for the financial year stated on it. Uses the Prapatra-1 format (office memo dated 14th March 2019) with your attested passport-size photo and full address (village, post office, police station, tehsil, district, state, PIN). Issued by the District Magistrate, Additional District Magistrate, City Magistrate, Pargana Magistrate or Tehsildar.",
       "note": "Translated from Hindi"
     },
     {
@@ -1225,7 +1225,7 @@
         ],
         "verified": false,
         "stage": "Admitted in Round 1",
-        "window": "Up to 2 days before Round 2 choice filling starts (e.g. by 11:00 AM on 22-07-2026 if choice filling opens 11:00 AM on 24-07-2026)",
+        "window": "Up to 2 days before Round 2 choice filling starts (e.g. by 11:00 AM on 22nd July 2026 if choice filling opens 11:00 AM on 24th July 2026)",
         "sector": "all",
         "securityDeposit": "refunded",
         "fees": "Free exit. Government colleges refund all fees except the admission fee. Private colleges refund tuition paid."

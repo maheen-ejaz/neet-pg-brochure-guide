@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { collectSourcedItems, locatePage, type SourcedItem } from "../schema/stateBrochure";
-import { formatDate, parseDate } from "../app/text";
+import { formatDateNumeric, parseDate } from "../app/text";
 import { docTitle, loadFile, pageUrl, saveFile, type Kind, type ReviewDoc } from "./api";
 
 type Item = SourcedItem & Record<string, unknown>;
@@ -306,7 +306,7 @@ function FieldEditor({ name, value, onChange }: { name: string; value: unknown; 
     // Stored as ISO for the engine; shown and typed as DD-MM-YYYY like everywhere else.
     return (
       <label className="block">{label} <span className="text-xs text-soft">(DD-MM-YYYY)</span>
-        <input defaultValue={formatDate(value)} onBlur={(e) => { const iso = parseDate(e.target.value); if (iso) onChange(iso); else e.target.value = formatDate(value); }} className={cls} />
+        <input defaultValue={formatDateNumeric(value)} onBlur={(e) => { const iso = parseDate(e.target.value); if (iso) onChange(iso); else e.target.value = formatDateNumeric(value); }} className={cls} />
       </label>
     );
   }

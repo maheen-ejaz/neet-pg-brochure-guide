@@ -7,7 +7,9 @@ import type { Brochure } from "../../schema/stateBrochure";
 import { Cite, DraftBanner, Marked, Prose, RuleCard, Section, SourceDocsContext, StatusChip, inr, inrShort } from "../components/ui";
 import { VerdictBadge } from "../components/VerdictBadge";
 import { SeatChip, SeatViewBanner, SeatViewContext, SeatViewSwitch, seatOrder, useSeatView, useStoredSeatView } from "../seats";
-import { formatDate } from "../text";
+import { DeadlineBadge } from "../components/DeadlineBadge";
+import { kindFromLabel, timeFromLabel } from "../deadline";
+import { formatRange } from "../text";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
 
@@ -387,7 +389,10 @@ function StepsSection({ b }: { b: Brochure }) {
         ) : (
           <ul className="mt-2 space-y-1 text-sm">
             {dates.map((d) => (
-              <li key={d.id}><SeatChip seats={d.seats} /> <strong>{d.label}:</strong> <Marked text={formatDate(d.date)} />{d.endDate && <> – <Marked text={formatDate(d.endDate)} /></>}<Cite pages={d.sourcePages} /></li>
+              <li key={d.id} className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span><SeatChip seats={d.seats} /> <strong>{d.label}:</strong> <Marked text={formatRange(d.date, d.endDate)} /><Cite pages={d.sourcePages} /></span>
+                <DeadlineBadge date={d.endDate ?? d.date} time={d.endTime ?? timeFromLabel(d.label)} kind={kindFromLabel(d.label)} />
+              </li>
             ))}
           </ul>
         )}

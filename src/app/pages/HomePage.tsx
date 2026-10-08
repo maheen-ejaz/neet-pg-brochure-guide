@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { schedules } from "../../data/schedules";
 import { comparisonEnabled, states } from "../../data/states";
 import { minutesNow, nextDeadline, todayIso } from "../schedule";
+import { DeadlineBadge } from "../components/DeadlineBadge";
 import { formatDate } from "../text";
 import { checkEligibility } from "../../engine/eligibility";
 import { useProfile } from "../useProfile";
@@ -48,6 +49,7 @@ export function HomePage() {
                   {schedule.meta.tentative && <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">Tentative</span>}
                   {schedule.status === "draft" && <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">Draft</span>}
                 </div>
+                {next && <div className="mt-2"><DeadlineBadge date={next.date} time={next.time} kind={next.stage.key === "result" ? "event" : "deadline"} /></div>}
                 <p className="mt-1 text-sm text-soft">
                   {next ? <>Next: {next.label}, <strong className="text-ink">{formatDate(next.date)}{next.time ? `, ${next.time}` : ""}</strong></> : "This schedule is over."}
                 </p>

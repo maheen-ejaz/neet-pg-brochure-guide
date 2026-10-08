@@ -55,8 +55,27 @@ export function markMetrics(text: string): Piece[] {
   return out;
 }
 
-/** "2026-09-30" → "30-09-2026". Every date the app shows is DD-MM-YYYY. */
+export const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+/** 1 → "1st", 2 → "2nd", 11 → "11th", 22 → "22nd". */
+export function ordinal(n: number): string {
+  const tens = n % 100;
+  const suffix = tens >= 11 && tens <= 13 ? "th" : ["th", "st", "nd", "rd"][n % 10] ?? "th";
+  return `${n}${suffix}`;
+}
+
+/** "2026-10-21" → "21st October 2026". Every date the app shows uses this form. */
 export function formatDate(iso: string): string {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
+  return m ? `${ordinal(Number(m[3]))} ${MONTH_NAMES[Number(m[2]) - 1]} ${m[1]}` : iso;
+}
+
+/** "21st October 2026 - 22nd October 2026" (or one date when start and end match). */
+export const formatRange = (start: string, end?: string) =>
+  end && end !== start ? `${formatDate(start)} - ${formatDate(end)}` : formatDate(start);
+
+/** "2026-09-30" → "30-09-2026": only for date inputs, which candidates type as DD-MM-YYYY. */
+export function formatDateNumeric(iso: string): string {
   const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
   return m ? `${m[3]}-${m[2]}-${m[1]}` : iso;
 }

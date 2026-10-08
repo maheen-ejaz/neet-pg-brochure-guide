@@ -24,7 +24,7 @@
     "officialWebsites": [
       "https://mcc.nic.in"
     ],
-    "note": "officialWebsites: mcc.nic.in isn't printed on this schedule; it's the MCC site named in the Karnataka bulletin (p11) for MCC updates. The PDF's own metadata says it was created on 30-09-2026; the page footer says generated 07-10-2026, 01:03 pm."
+    "note": "officialWebsites: mcc.nic.in isn't printed on this schedule; it's the MCC site named in the Karnataka bulletin (p11) for MCC updates. The PDF's own metadata says it was created on 30th September 2026; the page footer says generated 7th October 2026, 01:03 pm."
   },
   "status": "draft",
   "source": {
@@ -341,7 +341,7 @@
       ],
       "verified": false,
       "title": "Round 2 seat matrix closes at 1:00 PM",
-      "detail": "Colleges verify the Round 2 seat matrix on 06-11-2026 and up to 1:00 PM on 07-11-2026."
+      "detail": "Colleges verify the Round 2 seat matrix on 6th November 2026 and up to 1:00 PM on 7th November 2026."
     },
     {
       "id": "note-stray-time",
@@ -350,7 +350,7 @@
       ],
       "verified": false,
       "title": "Stray round: choices until 11:55 PM",
-      "detail": "In the stray vacancy round, choice filling and locking close at 11:55 PM on 21-12-2026, not 10:00 AM as in Rounds 1 to 3. Choice locking opens at 4:00 PM the same day. The result and reporting both start on 24-12-2026."
+      "detail": "In the stray vacancy round, choice filling and locking close at 11:55 PM on 21st December 2026, not 10:00 AM as in Rounds 1 to 3. Choice locking opens at 4:00 PM the same day. The result and reporting both start on 24th December 2026."
     },
     {
       "id": "note-session-start",
@@ -360,7 +360,7 @@
       ],
       "verified": false,
       "title": "The session starts during Round 2 reporting",
-      "detail": "The PG academic session begins on 20-11-2026, while Round 2 reporting runs until 23-11-2026. By these dates, Round 3 and stray-round candidates join after classes have begun."
+      "detail": "The PG academic session begins on 20th November 2026, while Round 2 reporting runs until 23rd November 2026. By these dates, Round 3 and stray-round candidates join after classes have begun."
     },
     {
       "id": "note-weekends",

@@ -1,16 +1,17 @@
 import { readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { formatDate, parseDate } from "./text";
+import { formatDate, formatRange, parseDate } from "./text";
 
-/** Every date shown in the app is DD-MM-YYYY. Machine fields (engine/ISO) are exempt. */
+/** Every date shown in the app reads "21st October 2026". Machine fields (engine/ISO) are exempt. */
 const MACHINE_KEYS = new Set(["id", "date", "endDate", "start", "end", "documentDate", "after", "onOrBefore", "url", "dir", "link"]);
 const MONTHS = "Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?";
 const BAD_DATES = [
-  /(?<![\d/.-])\d{1,2}[/.]\d{1,2}[/.]\d{4}(?![\d/-])/, // 30/09/2026, 30.09.2026
-  /(?<![\d/.-])\d-\d{1,2}-\d{4}\b|(?<![\d/.-])\d{1,2}-\d-\d{4}\b/, // unpadded 1-4-2026
+  /(?<![\d/.-])\d{1,2}[/.-]\d{1,2}[/.-]\d{4}(?![\d/-])/, // 30-09-2026, 30/09/2026, 30.09.2026
+  /\b(?:1[123]|\d*[04-9])(?:st|nd|rd)\b|\b\d*1th\b(?<!1[1]th)|\b\d*2th\b(?<!12th)|\b\d*3th\b(?<!13th)/, // wrong ordinal (11st, 4nd, 21th)
   /(?<![\d-])\d{4}-\d{2}-\d{2}(?![\d-])/, // ISO in text
-  new RegExp(`\\b\\d{1,2}(?:st|nd|rd|th)?[ -](?:${MONTHS})\\b`, "i"), // 30 September, 06-Oct
+  new RegExp(`\\b\\d{1,2}[ -](?:${MONTHS})\\b`, "i"), // 30 September, 06-Oct (no ordinal)
+  new RegExp(`\\b\\d{1,2}(?:st|nd|rd|th) (?:${MONTHS})\\b(?! \\d{4})`, "i"), // 21st October with no year
   new RegExp(`\\b(?:${MONTHS})\\.? \\d{1,2}(?:st|nd|rd|th)?,? \\d{4}\\b`, "i"), // September 30, 2026
 ];
 
@@ -22,7 +23,7 @@ function strings(o: unknown, at: string, out: { at: string; text: string }[]) {
   return out;
 }
 
-describe("dates are DD-MM-YYYY", () => {
+describe("dates read like '21st October 2026'", () => {
   const files = ["states", "national"].flatMap((d) => {
     const dir = path.join(process.cwd(), "data", d);
     try {
@@ -40,8 +41,12 @@ describe("dates are DD-MM-YYYY", () => {
     });
   }
 
-  it("formats ISO dates for display", () => {
-    expect(formatDate("2026-09-30")).toBe("30-09-2026");
+  it("formats ISO dates as '21st October 2026', with correct ordinals", () => {
+    expect(formatDate("2026-10-21")).toBe("21st October 2026");
+    const days = ["01", "02", "03", "04", "11", "12", "13", "21", "22", "23", "31"].map((d) => formatDate(`2026-01-${d}`).split(" ")[0]);
+    expect(days).toEqual(["1st", "2nd", "3rd", "4th", "11th", "12th", "13th", "21st", "22nd", "23rd", "31st"]);
+    expect(formatRange("2026-10-21", "2026-10-22")).toBe("21st October 2026 - 22nd October 2026");
+    expect(formatRange("2026-10-21")).toBe("21st October 2026");
   });
 
   it("parses typed dates and rejects impossible ones", () => {

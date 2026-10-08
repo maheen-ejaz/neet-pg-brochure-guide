@@ -10,9 +10,9 @@ export const CANDIDATE_STAGES: StageKey[] = ["registration", "payment", "choiceF
 
 /** "12-10-2026 – 21-10-2026, until 12:00 noon"; same day with both times: "21-12-2026, 4:00 PM – 11:55 PM". */
 export function stageWhen(s: ScheduleStage): string {
-  if ((!s.end || s.end === s.start) && s.startTime && s.endTime) return `${formatDate(s.start)}, ${s.startTime} – ${s.endTime}`;
+  if ((!s.end || s.end === s.start) && s.startTime && s.endTime) return `${formatDate(s.start)}, ${s.startTime} - ${s.endTime}`;
   const start = formatDate(s.start) + (s.startTime && s.end && s.end !== s.start ? ` (from ${s.startTime})` : "");
-  const end = s.end && s.end !== s.start ? ` – ${formatDate(s.end)}` : "";
+  const end = s.end && s.end !== s.start ? ` - ${formatDate(s.end)}` : "";
   const time = s.endTime ? `, until ${s.endTime}` : s.startTime && (!s.end || s.end === s.start) ? `, from ${s.startTime}` : "";
   return start + end + time;
 }
@@ -69,7 +69,7 @@ export function nextDeadline(schedule: Schedule, today: string, nowMinutes = 0):
 }
 
 /** "12:00 noon" → 720, "3:00 PM" → 900, "11:55 PM" → 1435; no time sorts to end of day. */
-function toMinutes(time?: string): number {
+export function toMinutes(time?: string): number {
   if (!time) return 24 * 60;
   const m = /^(\d{1,2}):(\d{2})\s*(AM|PM|noon)?/i.exec(time);
   if (!m) return 24 * 60;

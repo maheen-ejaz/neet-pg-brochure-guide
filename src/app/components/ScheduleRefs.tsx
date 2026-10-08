@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { findSchedule } from "../../data/schedules";
 import type { ScheduleRef } from "../../schema/stateBrochure";
 import { scheduleDocs, stageWhen } from "../schedule";
+import { DeadlineBadge } from "./DeadlineBadge";
 import { Cite, SourceDocsContext } from "./ui";
 
 /**
@@ -31,7 +32,7 @@ export function ScheduleRefs({ refs }: { refs?: ScheduleRef[] }) {
             <li key={round.id}>
               <span className="font-medium text-ink">{round.name}:</span>{" "}
               {stages.map((s, i) => (
-                <span key={s.key}>{i > 0 && " · "}{s.label} {stageWhen(s)}</span>
+                <span key={s.key}>{i > 0 && " · "}{s.label} {stageWhen(s)} <DeadlineBadge date={s.end ?? s.start} time={s.endTime} kind={s.key === "result" ? "event" : "deadline"} /></span>
               ))}
               <Cite pages={round.sourcePages} />
             </li>

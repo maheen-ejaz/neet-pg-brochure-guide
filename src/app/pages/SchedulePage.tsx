@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { findSchedule } from "../../data/schedules";
 import { Cite, DraftBanner, Prose, RuleCard, Section, SourceDocsContext, StatusChip } from "../components/ui";
 import { CANDIDATE_STAGES, minutesNow, nextDeadline, scheduleDocs, stageStatus, stageWhen, todayIso, type StageStatus } from "../schedule";
+import { DeadlineBadge } from "../components/DeadlineBadge";
 import { formatDate } from "../text";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
@@ -62,6 +63,7 @@ export function SchedulePage() {
                 {formatDate(next.date)}{next.time ? `, ${next.time}` : ""}
               </p>
               <p className="mt-1 text-sm">{next.label}</p>
+              <div className="mt-2"><DeadlineBadge date={next.date} time={next.time} kind={next.stage.key === "result" ? "event" : "deadline"} /></div>
               <p className="mt-3 text-xs opacity-80">Times are MCC server time. {s.meta.tentative ? "Dates are tentative." : ""}</p>
             </>
           ) : (
@@ -82,7 +84,12 @@ export function SchedulePage() {
                       {!forCandidates && <span className="ml-1.5 text-xs">(colleges/MCC)</span>}
                     </span>
                     <span className={`text-sm tabular-nums ${forCandidates ? "text-body" : "text-soft"}`}>{stageWhen(st)}</span>
-                    {forCandidates ? <StatusChip className={STATUS[status].cls}>{STATUS[status].label}</StatusChip> : <span />}
+                    {forCandidates ? (
+                      <span className="flex flex-wrap items-center gap-1.5 sm:justify-end">
+                        <DeadlineBadge date={st.end ?? st.start} time={st.endTime} kind={st.key === "result" ? "event" : "deadline"} />
+                        <StatusChip className={STATUS[status].cls}>{STATUS[status].label}</StatusChip>
+                      </span>
+                    ) : <span />}
                   </li>
                 );
               })}

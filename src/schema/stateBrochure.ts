@@ -257,7 +257,14 @@ export const BrochureSchema = z.object({
   ),
   annexures: z.array(z.object({ ...sourced, title: z.string(), description: z.string() })),
   importantDates: z.array(
-    z.object({ ...sourced, label: z.string(), date: isoDate, endDate: isoDate.optional() }),
+    z.object({
+      ...sourced,
+      label: z.string(),
+      date: isoDate,
+      endDate: isoDate.optional(),
+      /** Closing time on the last day, as printed (e.g. "4:00 PM"); drives the HH:MM countdown. */
+      endTime: z.string().optional(),
+    }),
   ),
   gaps: z.array(z.object({ ...sourced, title: z.string(), detail: z.string() })),
 });

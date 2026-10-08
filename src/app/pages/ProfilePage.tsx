@@ -11,7 +11,7 @@ import {
   type Profile,
 } from "../../engine/profile";
 import { CATEGORIES, type Category } from "../../schema/stateBrochure";
-import { formatDate, parseDate } from "../text";
+import { formatDate, formatDateNumeric, parseDate } from "../text";
 import { useProfile } from "../useProfile";
 
 const MAX_SPECIALITIES = 5;
@@ -62,7 +62,7 @@ function Choice<T extends string | boolean>({
 
 /** Date typed as DD-MM-YYYY (the app's only date format); stored as ISO for the engine. */
 function DateInput({ id, value, onChange }: { id: string; value: string | null; onChange: (iso: string | null) => void }) {
-  const [text, setText] = useState(value ? formatDate(value) : "");
+  const [text, setText] = useState(value ? formatDateNumeric(value) : "");
   const invalid = text.trim() !== "" && parseDate(text) === null;
   return (
     <>
@@ -81,6 +81,7 @@ function DateInput({ id, value, onChange }: { id: string; value: string | null; 
         }}
       />
       {invalid && <p className="mt-1 text-xs text-bad">Enter a real date as DD-MM-YYYY, e.g. 30-06-2026.</p>}
+      {!invalid && value && <p className="mt-1 text-xs text-soft">{formatDate(value)}</p>}
     </>
   );
 }

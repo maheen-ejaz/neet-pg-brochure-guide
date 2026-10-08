@@ -52,6 +52,11 @@
   --bad: #b91c1c;
   --bad-tint: #fef2f2;
   --shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  /* deadline urgency: 3 days → last day (text pairs ≥ 6:1) */
+  --urgent-3-bg: #fef3c7; --urgent-3-fg: #854d0e;
+  --urgent-2-bg: #ffedd5; --urgent-2-fg: #9a3412;
+  --urgent-1-bg: #fee2e2; --urgent-1-fg: #991b1b;
+  --urgent-0-bg: #b91c1c; --urgent-0-fg: #ffffff;
   /* highlighter marker on key figures */
   --mark: #fde047;
   --on-mark: #18181b;
@@ -81,6 +86,10 @@
     --bad: #f87171;
     --bad-tint: #2a1213;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --urgent-3-bg: #3a2c06; --urgent-3-fg: #fde68a;
+    --urgent-2-bg: #40200a; --urgent-2-fg: #fdba74;
+    --urgent-1-bg: #451414; --urgent-1-fg: #fca5a5;
+    --urgent-0-bg: #c81e1e; --urgent-0-fg: #ffffff;
     --mark: #6b5a12;
     --on-mark: #fefce8;
     color-scheme: dark;
@@ -176,6 +185,26 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }
+
+  /* Deadline urgency badge: colour steps up from 3 days left to the last day. */
+  .urgency {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    width: fit-content;
+    border-radius: 0.375rem;
+    padding: 0.125rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+  .urgency-3 { background: var(--urgent-3-bg); color: var(--urgent-3-fg); }
+  .urgency-2 { background: var(--urgent-2-bg); color: var(--urgent-2-fg); }
+  .urgency-1 { background: var(--urgent-1-bg); color: var(--urgent-1-fg); }
+  .urgency-0 { background: var(--urgent-0-bg); color: var(--urgent-0-fg); }
+  .urgency-0 .urgency-dot { animation: urgency-pulse 1.4s ease-in-out infinite; }
+  @keyframes urgency-pulse { 50% { opacity: 0.35; } }
 
   /* Scannable bullet list for multi-sentence brochure text. */
   .bullets > li {
