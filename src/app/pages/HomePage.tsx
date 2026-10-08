@@ -46,8 +46,8 @@ export function HomePage() {
               <div>
                 <div className="flex flex-wrap items-center gap-2">
                   <h2 className="text-lg font-semibold">{schedule.meta.shortTitle}</h2>
-                  {schedule.meta.tentative && <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">Tentative</span>}
-                  {schedule.status === "draft" && <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">Draft</span>}
+                  {schedule.meta.tentative && <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-xs font-semibold text-warn">Tentative</span>}
+                  {schedule.status === "draft" && <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-xs font-semibold text-warn">Draft</span>}
                 </div>
                 {next && <div className="mt-2"><DeadlineBadge date={next.date} time={next.time} kind={next.stage.key === "result" ? "event" : "deadline"} /></div>}
                 <p className="mt-1 text-sm text-soft">
@@ -100,7 +100,7 @@ export function HomePage() {
                         <p className="text-sm text-soft">NEET PG {brochure.meta.year}</p>
                       </div>
                       {brochure.status === "draft" && (
-                        <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">Draft</span>
+                        <span className="rounded-md bg-warn-tint px-1.5 py-0.5 text-xs font-semibold text-warn">Draft</span>
                       )}
                     </div>
                     <p className="mt-3 flex-1 text-sm">{brochure.meta.coursesCovered.join(" · ")}</p>

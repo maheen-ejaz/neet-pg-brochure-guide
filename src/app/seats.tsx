@@ -43,7 +43,7 @@ export function SeatChip({ seats }: { seats?: SeatType[] }) {
   const nriOnly = seats.length === 1 && seats[0] === "nri";
   return (
     <span
-      className={`inline-flex w-fit items-center rounded-md px-1.5 py-0.5 text-[11px] font-semibold ${
+      className={`inline-flex w-fit items-center rounded-md px-1.5 py-0.5 text-xs font-semibold ${
         nriOnly ? "bg-brand-tint text-brand-strong" : "border border-line-strong text-body"
       }`}
     >

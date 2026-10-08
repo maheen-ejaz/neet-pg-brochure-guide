@@ -539,7 +539,7 @@ function DocumentsSection({ entryKey, b, profile, verdict }: { entryKey: string;
               <input type="checkbox" checked={done.includes(doc.id)} onChange={() => toggle(doc.id)} className="h-6 w-6 shrink-0 accent-[var(--brand)]" />
               <span className="text-sm">
                 <span className={`font-medium text-ink ${done.includes(doc.id) ? "!text-soft line-through" : ""}`}>{doc.name}</span>
-                {!certain && <span className="ml-2 rounded-md bg-warn-tint px-1.5 py-0.5 text-[11px] font-semibold text-warn">If applicable</span>}
+                {!certain && <span className="ml-2 rounded-md bg-warn-tint px-1.5 py-0.5 text-xs font-semibold text-warn">If applicable</span>}
                 {doc.seats && <span className="ml-2"><SeatChip seats={doc.seats} /></span>}
                 <Cite pages={doc.sourcePages} />
                 {doc.detail && <span className="block text-soft"><Marked text={doc.detail} /></span>}

@@ -30,7 +30,9 @@ describe("markMetrics", () => {
     expect(marks("Bond for 2 years (₹40 lakh for a degree, ₹20 lakh for a diploma).")).toEqual(["2 years", "₹40 lakh", "₹20 lakh"]);
     expect(marks("50% of the tuition fee paid is forfeited.")).toEqual(["50%"]);
     expect(marks("Complete it on or before 30 September 2026 or 30/09/2026.")).toEqual(["30 September 2026", "30/09/2026"]);
-    expect(marks("Fresh registration with ₹3,000 is mandatory, 6–12 characters, 14-digit PIN.")).toEqual(["₹3,000", "6–12 characters", "14-digit"]);
+    // Counts and clock times aren't highlighted; money, percentages, dates and consequential durations are.
+    expect(marks("Fresh registration with ₹3,000 is mandatory, 6–12 characters, 14-digit PIN, by 3:00 PM.")).toEqual(["₹3,000"]);
+    expect(marks("Serve 2 years or pay; resign 2 days before; one term fee.")).toEqual(["2 years", "2 days"]);
   });
 
   it("marks ISO dates whole and ignores order numbers", () => {

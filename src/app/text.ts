@@ -29,12 +29,10 @@ const METRIC = new RegExp(
     String.raw`(?<![\d/-])\d{4}-\d{2}-\d{2}(?![\d/-])`,
     String.raw`(?<![\d/-])\d{1,2}[/.-]\d{1,2}[/.-]\d{2,4}(?![\d/-])`,
     String.raw`\d{1,2}(?:st|nd|rd|th)?\s(?:${MONTHS})(?:,?\s\d{4})?`,
-    // Times: 10:00 AM, 5 PM
-    String.raw`\d{1,2}(?::\d{2})?\s?(?:AM|PM|am|pm|a\.m\.|p\.m\.)`,
-    // Durations and counts with a unit: 2 years, 3 months, 6–12 characters, 14-digit
-    String.raw`(?<![\d/-])\d+(?:\s?[–-]\s?\d+)?[\s-](?:working\s)?(?:years?|months?|weeks?|days?|hours?|minutes?|terms?|characters|digits?)\b`,
-    // Spelled-out short durations: one year, two years
-    String.raw`\b(?:one|two|three|four|five|six|seven|ten)[\s-](?:years?|months?|weeks?|days?|terms?)\b`,
+    // Durations that carry consequences: 2 years (bond), 3 months, 2 days (resignation window).
+    // Clock times, character/digit counts and "one term" aren't highlighted: they're detail, not decisions.
+    String.raw`(?<![\d/-])\d+(?:\s?[–-]\s?\d+)?[\s-](?:working\s)?(?:years?|months?|weeks?|days?)\b`,
+    String.raw`\b(?:one|two|three|four|five|six|seven|ten)[\s-](?:years?|months?)\b`,
   ].join("|"),
   "g",
 );

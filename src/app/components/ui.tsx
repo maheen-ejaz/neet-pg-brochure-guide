@@ -31,13 +31,20 @@ export function citationLabel(pages: number[], documents: SourceDocument[]) {
 
 export function Cite({ pages }: { pages: number[] }) {
   const documents = useContext(SourceDocsContext);
+  const [open, setOpen] = useState(false);
   if (pages.length === 0) return null;
   const label = citationLabel(pages, documents);
+  const chip = "ml-1.5 inline rounded-[5px] bg-canvas px-1.5 py-0.5 align-middle text-xs font-medium text-soft [box-decoration-break:clone]";
+  // Long multi-document citations collapse to "Sources"; tapping shows the full list in place.
+  if (label.length > 28 && !open) {
+    return (
+      <button type="button" onClick={() => setOpen(true)} className={`${chip} !py-1 whitespace-nowrap underline decoration-dotted underline-offset-2`} title={`Official sources: ${label}`} aria-label={`Show sources: ${label}`}>
+        {label.includes(" · ") ? `Sources (${label.split(" · ").length})` : "Source"}
+      </button>
+    );
+  }
   return (
-    <span
-      className={`ml-1.5 inline rounded-[5px] bg-canvas px-1.5 py-0.5 align-middle text-[11px] font-medium text-soft [box-decoration-break:clone] ${label.length <= 28 ? "whitespace-nowrap" : ""}`}
-      title={`Official source: ${label}`}
-    >
+    <span className={`${chip} ${label.length <= 28 ? "whitespace-nowrap" : ""}`} title={`Official source: ${label}`}>
       {label}
     </span>
   );
@@ -165,7 +172,7 @@ export function RuleCard({
         <div className="mb-2 flex flex-wrap items-center gap-1.5">
           <SeatChip seats={seats} />
           {severityLabel[severity] && <StatusChip className={severityDot[severity]}>{severityLabel[severity]}</StatusChip>}
-          {tag && <span className="rounded-[5px] bg-canvas px-1.5 py-0.5 text-[11px] font-medium text-soft">{tag}</span>}
+          {tag && <span className="rounded-[5px] bg-canvas px-1.5 py-0.5 text-xs font-medium text-soft">{tag}</span>}
         </div>
       )}
       <h3 className="text-[15px] tracking-tight">{title}</h3>

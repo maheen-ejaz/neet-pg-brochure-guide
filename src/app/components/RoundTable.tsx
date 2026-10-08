@@ -46,7 +46,7 @@ function Row({ st, today, short, college }: { st: ScheduleStage; today: string; 
       <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
         <span aria-hidden className={`w-3 text-center text-xs ${now ? "text-good" : "text-soft"}`}>{done ? "✓" : now ? "●" : ""}</span>
         <span className={college ? "text-sm" : "font-medium text-ink"}>{st.label}</span>
-        {now && <span className="rounded-md bg-good-tint px-1.5 py-0.5 text-[11px] font-semibold text-good">Open now</span>}
+        {now && <span className="rounded-md bg-good-tint px-1.5 py-0.5 text-xs font-semibold text-good">Open now</span>}
         {!college && <DeadlineBadge date={st.end ?? st.start} time={st.endTime} kind={st.key === "result" ? "event" : "deadline"} />}
       </span>
       {"on" in s && s.on ? (

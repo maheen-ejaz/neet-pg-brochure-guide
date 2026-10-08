@@ -97,6 +97,9 @@
 }
 
 @layer base {
+  /* Slightly larger base type for readability: text-sm ≈ 15px, text-xs ≈ 13px. */
+  html { font-size: 106.25%; }
+
   body {
     background: var(--surface);
     color: var(--body);
