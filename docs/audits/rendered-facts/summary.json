@@ -1,0 +1,31 @@
+{
+  "snapshot": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "fieldCount": 2906,
+  "atomicFieldClaims": 6607,
+  "fieldVerdicts": {
+    "confirmed": 5815,
+    "unresolved": 168,
+    "not_factual": 621,
+    "contradicted": 3
+  },
+  "supplementalTemplateAndDerivedClaims": 182,
+  "supplementalVerdicts": {
+    "unresolved": 33,
+    "not_factual": 42,
+    "confirmed": 90,
+    "contradicted": 17
+  },
+  "claimsHaveExplicitStatus": true,
+  "sourceConfirmationIsNotHumanVerification": true,
+  "emailCases": {
+    "all97MappedToPlatformFields": true,
+    "byClassification": {
+      "conflicting_source_requires_authority": 36,
+      "source_requirement_confirmed_but_profile_manual": 15,
+      "missing_source_requires_new_current_document": 25,
+      "resolved_by_supplied_source": 17,
+      "not_a_factual_uncertainty": 2,
+      "unreadable_requires_clearer_source": 2
+    }
+  }
+}

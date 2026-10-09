@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { ScheduleRound, ScheduleStage } from "../../schema/nationalSchedule";
-import { CANDIDATE_STAGES, stageStatus } from "../schedule";
+import { CANDIDATE_STAGES, stageStatus, stageWhen } from "../schedule";
 import { formatDate, formatDateShort, sharedYear } from "../text";
 import { DeadlineBadge } from "./DeadlineBadge";
 import { Cite } from "./ui";
@@ -36,8 +36,8 @@ function slots(st: ScheduleStage) {
   return { on: { date: st.start, time: st.startTime } };
 }
 
-function Row({ st, today, short, college }: { st: ScheduleStage; today: string; short: boolean; college?: boolean }) {
-  const status = stageStatus(st, today);
+function Row({ st, today, nowMinutes, short, college }: { st: ScheduleStage; today: string; nowMinutes: number; short: boolean; college?: boolean }) {
+  const status = stageStatus(st, today, nowMinutes);
   const s = slots(st);
   const done = status === "done";
   const now = status === "now" && !college;
@@ -46,7 +46,7 @@ function Row({ st, today, short, college }: { st: ScheduleStage; today: string; 
       <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
         <span aria-hidden className={`w-3 text-center text-xs ${now ? "text-good" : "text-soft"}`}>{done ? "✓" : now ? "●" : ""}</span>
         <span className={college ? "text-sm" : "font-medium text-ink"}>{st.label}</span>
-        {now && <span className="rounded-md bg-good-tint px-1.5 py-0.5 text-xs font-semibold text-good">Open now</span>}
+        {now && st.key !== "result" && <span className="rounded-md bg-good-tint px-1.5 py-0.5 text-xs font-semibold text-good">Open now</span>}
         {!college && <DeadlineBadge date={st.end ?? st.start} time={st.endTime} kind={st.key === "result" ? "event" : "deadline"} />}
       </span>
       {"on" in s && s.on ? (
@@ -61,7 +61,7 @@ function Row({ st, today, short, college }: { st: ScheduleStage; today: string; 
   );
 }
 
-export function RoundTable({ round, today }: { round: ScheduleRound; today: string }) {
+export function RoundTable({ round, today, nowMinutes }: { round: ScheduleRound; today: string; nowMinutes: number }) {
   const [showCollege, setShowCollege] = useState(false);
   const candidate = round.stages.filter((s) => CANDIDATE_STAGES.includes(s.key));
   const college = round.stages.filter((s) => !CANDIDATE_STAGES.includes(s.key));
@@ -76,15 +76,15 @@ export function RoundTable({ round, today }: { round: ScheduleRound; today: stri
           <span>Closes</span>
         </div>
         <ol className="divide-y divide-line text-sm">
-          {candidate.map((st) => <Row key={st.key} st={st} today={today} short={short} />)}
-          {showCollege && college.map((st) => <Row key={st.key} st={st} today={today} short={short} college />)}
+          {candidate.map((st) => <Row key={st.key} st={st} today={today} nowMinutes={nowMinutes} short={short} />)}
+          {showCollege && college.map((st) => <Row key={st.key} st={st} today={today} nowMinutes={nowMinutes} short={short} college />)}
         </ol>
       </div>
       {college.length > 0 && (
         <p className="mt-2 text-xs text-soft">
           {!showCollege && (
             <>College &amp; MCC steps: {college.map((st, i) => (
-              <span key={st.key}>{i > 0 && " · "}{st.label.replace(/ by colleges.*$| verified by colleges.*$/i, "")} {st.end && st.end !== st.start ? `${formatDateShort(st.start)} - ${formatDateShort(st.end)}` : formatDateShort(st.start)}</span>
+              <span key={st.key}>{i > 0 && " · "}{st.label.replace(/ by colleges.*$| verified by colleges.*$/i, "")} {stageWhen(st, true)}</span>
             ))}{" "}</>
           )}
           <button type="button" onClick={() => setShowCollege(!showCollege)} className="font-medium link" aria-expanded={showCollege}>

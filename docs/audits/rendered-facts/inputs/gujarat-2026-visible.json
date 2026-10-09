@@ -1,0 +1,3988 @@
+{
+  "key": "gujarat-2026",
+  "kind": "states",
+  "snapshot": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "dataSha256": "0bf0fe320fe22107d4c18853a68effbb35e6cd78ee636693fb48549170941a62",
+  "source": {
+    "dir": "brochures/gujarat/2026",
+    "pageCount": 81,
+    "scanned": false,
+    "languages": [
+      "English",
+      "Gujarati"
+    ],
+    "documents": [
+      {
+        "title": "Website notices (snapshot 6th October 2026)",
+        "url": "https://www.medadmgujarat.org/pg/home.aspx",
+        "startPage": 1,
+        "pageCount": 2,
+        "issued": "Notices dated 16th September 2026, 29th September 2026 and 1st October 2026"
+      },
+      {
+        "title": "Registration advertisement",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Adv.%20-%20Online%20Reg.Round%2001.pdf",
+        "startPage": 3,
+        "pageCount": 2,
+        "issued": "Round 1, 2026-27"
+      },
+      {
+        "title": "Procedure for online registration",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Procedure%20for%20Online%20Registration%20-%20PG.pdf",
+        "startPage": 5,
+        "pageCount": 12
+      },
+      {
+        "title": "Process of online admission",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Process%20of%20Online%20Admission%20-%20PG.pdf",
+        "startPage": 17,
+        "pageCount": 4
+      },
+      {
+        "title": "Eligibility criteria & documents",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Eligibility%20Criteria%20%26%20List%20of%20Documents%20Required%20for%20Admission%20Process%20of%20ACPUGMEC%202026-27.pdf",
+        "startPage": 21,
+        "pageCount": 2,
+        "issued": "2026-27"
+      },
+      {
+        "title": "List of help centres",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/LIST%20OF%20HELP%20CENTER.pdf",
+        "startPage": 23,
+        "pageCount": 1
+      },
+      {
+        "title": "Instructions for NRI candidates",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Instructions%20for%20NRI%20Candidates%202026-27.pdf",
+        "startPage": 24,
+        "pageCount": 7,
+        "issued": "2026-27"
+      },
+      {
+        "title": "Authority letter",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Authority%20Letter.pdf",
+        "startPage": 31,
+        "pageCount": 1
+      },
+      {
+        "title": "PwD medical boards list",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/List%20of%20Civil%20Hospital%20for%20PwD%202026-27.pdf",
+        "startPage": 32,
+        "pageCount": 1,
+        "issued": "2026-27"
+      },
+      {
+        "title": "PwD resolution HFWD/0133/07/2024",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/PwD%20GR%20%20Gujarat%20%2009072024.pdf",
+        "startPage": 33,
+        "pageCount": 6,
+        "issued": "9th July 2024 (linked for 2026-27)"
+      },
+      {
+        "title": "PwD proforma",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/ProformaMedical%20%26%20Appeal%20%20Board_Case%20Paper.pdf",
+        "startPage": 39,
+        "pageCount": 4
+      },
+      {
+        "title": "NMC PwBD guidelines 2026",
+        "url": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/GUIDELINES%20ON%20ASSESSMENT%20OF%20PERSONS%20WITH%20BENCHMARK%20DISABILITIES.pdf",
+        "startPage": 43,
+        "pageCount": 39,
+        "issued": "16th September 2026"
+      }
+    ]
+  },
+  "records": [
+    {
+      "itemId": "meta",
+      "recordPath": "meta",
+      "sourcePages": [
+        1,
+        3,
+        4,
+        33
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00001",
+          "path": "meta.state",
+          "value": "Gujarat",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00002",
+          "path": "meta.year",
+          "value": 2026,
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00003",
+          "path": "meta.authority",
+          "value": "Admission Committee for Professional Post-Graduate Medical Educational Courses (ACPPGMEC), Government of Gujarat, Gandhinagar",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00004",
+          "path": "meta.officialWebsites[0]",
+          "value": "https://www.medadmgujarat.org",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00005",
+          "path": "meta.coursesCovered[0]",
+          "value": "MD",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00006",
+          "path": "meta.coursesCovered[1]",
+          "value": "MS",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00007",
+          "path": "meta.coursesCovered[2]",
+          "value": "Diploma",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00008",
+          "path": "meta.seatTerms.government",
+          "value": "Government quota (GQ)",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00009",
+          "path": "meta.seatTerms.management",
+          "value": "Management quota (MQ)",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "gujarat-2026:F00010",
+          "path": "meta.seatTerms.nri",
+          "value": "NRI quota (NQ)",
+          "surface": "header/home"
+        }
+      ]
+    },
+    {
+      "itemId": "eligibility-listed-institutions",
+      "recordPath": "eligibility.listedHomeInstitutions",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00011",
+          "path": "eligibility.listedHomeInstitutions.names[0]",
+          "value": "AIIMS Rajkot",
+          "surface": "profile institution options"
+        }
+      ]
+    },
+    {
+      "itemId": "eligibility-in-service-label",
+      "recordPath": "eligibility.inServiceLabel",
+      "sourcePages": [
+        10,
+        14,
+        22
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00012",
+          "path": "eligibility.inServiceLabel.label",
+          "value": "In-service doctor of the Government of Gujarat (needs NOC from a Gujarat competent authority)",
+          "surface": "profile service question"
+        }
+      ]
+    },
+    {
+      "itemId": "eligibility-quota-terms",
+      "recordPath": "eligibility.quotaTerms",
+      "sourcePages": [
+        1,
+        26
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00013",
+          "path": "eligibility.quotaTerms.terms[0].code",
+          "value": "NRI",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "gujarat-2026:F00014",
+          "path": "eligibility.quotaTerms.terms[0].meaning",
+          "value": "NRI quota (NQ) seats, allotted on inter-se merit among candidates who applied for NRI seats.",
+          "surface": "conditional quota explanation"
+        }
+      ]
+    },
+    {
+      "itemId": "process-pin",
+      "recordPath": "process[0]",
+      "sourcePages": [
+        4,
+        5,
+        7
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00015",
+          "path": "process[0].title",
+          "value": "Buy a PIN online",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00016",
+          "path": "process[0].description",
+          "value": "Buy the registration PIN on medadmgujarat.org for ₹28,000: ₹3,000 non-refundable registration fee plus a ₹25,000 refundable security deposit. The E-PIN is sent to your mobile by SMS. If your number is registered with DND, you may not receive it.",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00017",
+          "path": "process[0].link",
+          "value": "https://www.medadmgujarat.org",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-register",
+      "recordPath": "process[1]",
+      "sourcePages": [
+        8,
+        9,
+        10,
+        11,
+        17
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00018",
+          "path": "process[1].title",
+          "value": "Register and upload documents",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00019",
+          "path": "process[1].description",
+          "value": "Enter the PIN serial number, 14-digit PIN, email, mobile and NEET roll number. Fill in your details, set an alphanumeric password of 6–12 characters, and confirm with the OTP sent to your mobile. Then upload documents as PDF, JPG, JPEG or PNG. By submitting, you declare your details are true, agree to pay the fees fixed by the Fee Regulatory Committee, accept that ragging is punishable and that the committee's decision is final, and acknowledge that hiding or distorting information makes your admission liable to cancellation. After you click Confirm, you can only change details at the help centre, before verification.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-appointment",
+      "recordPath": "process[2]",
+      "sourcePages": [
+        4,
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00020",
+          "path": "process[2].title",
+          "value": "Book a help centre appointment (compulsory)",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00021",
+          "path": "process[2].description",
+          "value": "Booking an appointment in advance is compulsory. When you print your registration slip, pick the date, time and help centre for document verification.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-verification",
+      "recordPath": "process[3]",
+      "sourcePages": [
+        1,
+        13,
+        17
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00022",
+          "path": "process[3].title",
+          "value": "Verify documents at the help centre",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00023",
+          "path": "process[3].description",
+          "value": "Bring the printed registration details signed by you and a parent or guardian, all originals and one self-attested photocopy set. The officer stamps your registration slip. Without it you can't continue in the admission process.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-nri-verification",
+      "recordPath": "process[4]",
+      "sourcePages": [
+        4,
+        15,
+        24
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00024",
+          "path": "process[4].title",
+          "value": "NRI applicants: verify at the ACPPGMEC office",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00025",
+          "path": "process[4].description",
+          "value": "For NRI candidates, document verification and submission is done only at the office of ACPPGMEC, GMERS Medical College, Gandhinagar, where you also hand in the ₹25,000 processing-fee demand draft. The NRI instructions also mention booking a help-centre appointment, so confirm the arrangement with ACPPGMEC.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-merit",
+      "recordPath": "process[5]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00026",
+          "path": "process[5].title",
+          "value": "Merit list is published",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00027",
+          "path": "process[5].description",
+          "value": "ACPPGMEC publishes the merit list of eligible candidates. Check your merit number and category against your registration details.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-choice",
+      "recordPath": "process[6]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00028",
+          "path": "process[6].title",
+          "value": "Fill choices and get your allotment",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00029",
+          "path": "process[6].description",
+          "value": "Choice filling opens online for each round. After it closes, allotments are published and you can see yours by logging in.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-fees",
+      "recordPath": "process[7]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00030",
+          "path": "process[7].title",
+          "value": "Pay tuition fees",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00031",
+          "path": "process[7].description",
+          "value": "Pay the tuition fee in cash or by demand draft at a designated Axis Bank branch, or online, within the time limit.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-confirm",
+      "recordPath": "process[8]",
+      "sourcePages": [
+        19,
+        20
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00032",
+          "path": "process[8].title",
+          "value": "Submit originals to confirm admission",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "gujarat-2026:F00033",
+          "path": "process[8].description",
+          "value": "Take your allotment letter, fee receipt (one term, i.e. 6 months) and original documents to the help centre to confirm admission.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-qualified",
+      "recordPath": "eligibility.rules[0]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00034",
+          "path": "eligibility.rules[0].title",
+          "value": "Qualified in NEET-PG 2026",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00035",
+          "path": "eligibility.rules[0].explanation",
+          "value": "You must have qualified NEET-PG 2026 and be eligible under National Medical Commission rules and Gujarat's admission rules.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-internship",
+      "recordPath": "eligibility.rules[1]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "internshipCompletion",
+              "after": "2026-09-30"
+            }
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00036",
+          "path": "eligibility.rules[1].title",
+          "value": "Internship by 30th September 2026",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00037",
+          "path": "eligibility.rules[1].explanation",
+          "value": "Your compulsory rotating internship must be completed on or before 30th September 2026.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-mds-not-covered",
+      "recordPath": "eligibility.rules[2]",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "courseType",
+          "in": [
+            "dental"
+          ]
+        },
+        "effect": {
+          "type": "notCovered"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00038",
+          "path": "eligibility.rules[2].title",
+          "value": "MDS isn't part of this notice",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00039",
+          "path": "eligibility.rules[2].explanation",
+          "value": "The 2026-27 registration advertisement covers MD/MS/Diploma only. Watch medadmgujarat.org for an MDS notice.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-gujarat-university",
+      "recordPath": "eligibility.rules[3]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "home"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "positive"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00040",
+          "path": "eligibility.rules[3].title",
+          "value": "MBBS from a Gujarat university",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00041",
+          "path": "eligibility.rules[3].explanation",
+          "value": "Candidates who completed a recognised MBBS from a university established under a law of the Government of Gujarat, located in Gujarat, are eligible.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-outside-route",
+      "recordPath": "eligibility.rules[4]",
+      "sourcePages": [
+        14,
+        21
+      ],
+      "seats": [
+        "government",
+        "management"
+      ],
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "home_listed",
+                "other_state",
+                "abroad"
+              ]
+            },
+            {
+              "all": [
+                {
+                  "fact": "schooledInState",
+                  "in": [
+                    true
+                  ]
+                },
+                {
+                  "any": [
+                    {
+                      "fact": "bornInState",
+                      "in": [
+                        true
+                      ]
+                    },
+                    {
+                      "fact": "isDomicile",
+                      "in": [
+                        true
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "positive"
+        },
+        "seats": [
+          "government",
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00042",
+          "path": "eligibility.rules[4].title",
+          "value": "MBBS outside Gujarat (or not under a Gujarat law), with Gujarat roots",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00043",
+          "path": "eligibility.rules[4].explanation",
+          "value": "If you did MBBS outside Gujarat, abroad, or at an institution not established under a Gujarat law, you're eligible if you passed 12th (B or AB group) from a school located in Gujarat, under the Gujarat Board, CBSE, CISCE, IB/Cambridge or NIOS, and were born in Gujarat or are domiciled there. The notice words this route for universities established under a Government of India law, so confirm with ACPPGMEC that yours qualifies.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-outside-no-route",
+      "recordPath": "eligibility.rules[5]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government",
+        "management"
+      ],
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "home_listed",
+                "other_state",
+                "abroad"
+              ]
+            },
+            {
+              "not": {
+                "all": [
+                  {
+                    "fact": "schooledInState",
+                    "in": [
+                      true
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "fact": "bornInState",
+                        "in": [
+                          true
+                        ]
+                      },
+                      {
+                        "fact": "isDomicile",
+                        "in": [
+                          true
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "fact": "nriLink",
+              "in": [
+                "none",
+                "relative"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        },
+        "seats": [
+          "government",
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00044",
+          "path": "eligibility.rules[5].title",
+          "value": "MBBS outside Gujarat (or not under a Gujarat law), without Gujarat schooling and birth/domicile",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00045",
+          "path": "eligibility.rules[5].explanation",
+          "value": "Candidates who did MBBS outside Gujarat, abroad, or at an institution not established under a Gujarat law don't meet the eligibility criteria unless they did 12th in Gujarat and were born in or are domiciled in Gujarat. If you studied at AIIMS Rajkot, confirm with ACPPGMEC which route applies to you.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-outside-nri",
+      "recordPath": "eligibility.rules[6]",
+      "sourcePages": [
+        21,
+        26,
+        27
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "home_listed",
+                "other_state",
+                "abroad"
+              ]
+            },
+            {
+              "not": {
+                "all": [
+                  {
+                    "fact": "schooledInState",
+                    "in": [
+                      true
+                    ]
+                  },
+                  {
+                    "any": [
+                      {
+                        "fact": "bornInState",
+                        "in": [
+                          true
+                        ]
+                      },
+                      {
+                        "fact": "isDomicile",
+                        "in": [
+                          true
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "fact": "nriLink",
+              "in": [
+                "self",
+                "parent",
+                "guardian"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "restrictQuotas",
+          "quotas": [
+            "NRI"
+          ]
+        },
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00046",
+          "path": "eligibility.rules[6].title",
+          "value": "NRI quota is still open to you",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00047",
+          "path": "eligibility.rules[6].explanation",
+          "value": "You don't meet the Government and Management quota criteria, but the NRI quota criteria (p26) don't appear to depend on where you studied. Confirm with ACPPGMEC. You must be an NRI yourself, or your parents must be NRIs. A legal guardian counts only if your parents are absent; while your father is alive, no one else is ordinarily accepted as guardian. Your internship must be completed by 30th September 2026.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-nri",
+      "recordPath": "eligibility.rules[7]",
+      "sourcePages": [
+        4,
+        24,
+        25,
+        26,
+        27
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "condition": {
+          "fact": "nriLink",
+          "in": [
+            "self",
+            "parent",
+            "guardian"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        },
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00048",
+          "path": "eligibility.rules[7].title",
+          "value": "NRI quota applicants",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00049",
+          "path": "eligibility.rules[7].explanation",
+          "value": "NRI follows the Income Tax Act / FEMA definition: a person resident outside India who is an Indian citizen or a Person of Indian Origin (PIO). A PIO is a foreign citizen, not of Pakistan or Bangladesh, who has held an Indian passport, whose parent or grandparent was an Indian citizen, or who is the spouse of an Indian citizen or such a PIO. A second definition in the instructions also counts great-grandparents and excludes other countries the Central Government names; confirm with ACPPGMEC. You count as resident in India if you stayed here more than 182 days in the preceding financial year. This doesn't include someone who left or stays outside India for a job, business or an indefinite stay, or someone who came to or stays in India for a reason other than a job, business or an indefinite stay. You must be an NRI, or your parents must be; a legal guardian counts only if your parents are absent, and while your father is alive no one else is ordinarily accepted as guardian. Pay a ₹25,000 non-refundable processing fee by demand draft. Verification happens only at the ACPPGMEC office, GMERS Medical College, Gandhinagar. Hostel admission isn't guaranteed, hostel fees are set by the college, and other fees are the same as for all students.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-citizenship",
+      "recordPath": "eligibility.rules[8]",
+      "sourcePages": [
+        22,
+        25,
+        26
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "nationality",
+          "in": [
+            "oci",
+            "foreign"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00050",
+          "path": "eligibility.rules[8].title",
+          "value": "Proof of Indian citizenship",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00051",
+          "path": "eligibility.rules[8].explanation",
+          "value": "The document list asks for proof of Indian citizenship, plus a passport copy if your citizenship is dual or foreign. Foreign and OCI candidates should check whether they qualify under the NRI quota.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-already-pg",
+      "recordPath": "eligibility.rules[9]",
+      "sourcePages": [
+        2,
+        9
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "priorAdmissionInState",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00052",
+          "path": "eligibility.rules[9].title",
+          "value": "Admitted through Gujarat counselling before",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00053",
+          "path": "eligibility.rules[9].explanation",
+          "value": "Under Rule 4(4), a candidate who secured admission under Gujarat's PG admission rules in any year can't be admitted to any course until that course's duration would have been completed. The registration form asks \"Previously Admitted?\". The rule doesn't say whether a seat you resigned or never joined counts; confirm with ACPPGMEC.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-in-service",
+      "recordPath": "eligibility.rules[10]",
+      "sourcePages": [
+        14,
+        15,
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "condition": {
+          "fact": "inService",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "positive"
+        },
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00054",
+          "path": "eligibility.rules[10].title",
+          "value": "In-service doctors: 10% of seats in 10 subjects",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00055",
+          "path": "eligibility.rules[10].explanation",
+          "value": "10% of Government quota seats in MD/MS subjects (Diploma isn't mentioned) in Government and GMERS medical colleges, plus CPS courses in Government hospitals, are for Gujarat in-service doctors. The subjects are Paediatrics, TB & Chest, Obstetrics & Gynaecology, Preventive & Community Medicine, Orthopaedics, General Surgery, General Medicine, Anaesthesiology, Radiology and Pathology. You need an NOC from a Gujarat competent authority.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-reserved-certificates",
+      "recordPath": "eligibility.rules[11]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "category",
+          "in": [
+            "OBC",
+            "SC",
+            "ST",
+            "EWS"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00056",
+          "path": "eligibility.rules[11].title",
+          "value": "Reserved category: Gujarat certificates only",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00057",
+          "path": "eligibility.rules[11].explanation",
+          "value": "SC, ST, SEBC and EWS claims need certificates issued by competent authorities of Gujarat State only. Certificates from another state aren't listed as accepted.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-pwd",
+      "recordPath": "eligibility.rules[12]",
+      "sourcePages": [
+        15,
+        21,
+        32,
+        44,
+        45,
+        48,
+        49,
+        57,
+        58,
+        69,
+        76
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00058",
+          "path": "eligibility.rules[12].title",
+          "value": "PwD: assessment by the ACPUGMEC medical board",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00059",
+          "path": "eligibility.rules[12].explanation",
+          "value": "PwD applicants must be examined by an ACPUGMEC medical board at one of the listed civil hospitals. Certificates from any other authority or hospital aren't accepted. Under the NMC 2026 guidelines, you need a benchmark disability of at least 40%, a valid UDID card, and notarised Schedule-I affidavits: Appendix-A and Appendix-G for everyone, plus the appendix for your disability type. The certificate is an \"Eligibility Certificate\" that assesses functional competence, not just disability. Final eligibility is decided only after physical verification and functional assessment. The NMC guidelines are written for MD/MS/DNB, so Diploma candidates should confirm the assessment with ACPPGMEC.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-fmg",
+      "recordPath": "eligibility.rules[13]",
+      "sourcePages": [
+        14
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "abroad"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00060",
+          "path": "eligibility.rules[13].title",
+          "value": "Foreign medical graduates",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00061",
+          "path": "eligibility.rules[13].explanation",
+          "value": "Upload your NBE screening exam (FMGE) marksheet during registration, and verify the original at the help centre.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-tie-break",
+      "recordPath": "eligibility.rules[14]",
+      "sourcePages": [
+        1,
+        2
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00062",
+          "path": "eligibility.rules[14].title",
+          "value": "MBBS/FMGE aggregate is verified",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "gujarat-2026:F00063",
+          "path": "eligibility.rules[14].explanation",
+          "value": "Your MBBS or FMGE aggregate, as entered in your NEET-PG 2026 form, is verified against your originals at admission. If it was used to break a rank tie and turns out to be wrong, your NEET-PG 2026 candidature is cancelled.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "res-seat-types",
+      "recordPath": "reservation.rules[0]",
+      "sourcePages": [
+        1
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00064",
+          "path": "reservation.rules[0].title",
+          "value": "All quotas are filled by the committee",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00065",
+          "path": "reservation.rules[0].detail",
+          "value": "ACPPGMEC fills 100% of MD/MS/Diploma seats in Gujarat, across Government (GQ), Management (MQ) and NRI (NQ) quotas, online and on merit.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-gujarat-certs",
+      "recordPath": "reservation.rules[1]",
+      "sourcePages": [
+        11,
+        22
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00066",
+          "path": "reservation.rules[1].title",
+          "value": "Gujarat-issued category certificates only",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00067",
+          "path": "reservation.rules[1].detail",
+          "value": "SC, ST and SEBC caste certificates, the SEBC non-creamy layer certificate and the EWS certificate must be issued by competent authorities of Gujarat State. Your reservation claim is subject to verification of your caste certificate by the issuing authority.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-cert-dates",
+      "recordPath": "reservation.rules[2]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00068",
+          "path": "reservation.rules[2].title",
+          "value": "Certificate issue dates",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00069",
+          "path": "reservation.rules[2].detail",
+          "value": "Non-creamy layer (Parishishta 4) and EWS certificates in Gujarati must be issued on or after 1st April 2024. English certificates must be issued on or after 1st April 2026. Both must be valid for 2026-27.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-in-service",
+      "recordPath": "reservation.rules[3]",
+      "sourcePages": [
+        14,
+        15
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00070",
+          "path": "reservation.rules[3].title",
+          "value": "10% in-service seats",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00071",
+          "path": "reservation.rules[3].detail",
+          "value": "10% of Government quota seats in 10 MD/MS subjects at Government and GMERS colleges, and CPS courses in Government hospitals, are reserved for Gujarat in-service doctors.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-pwd",
+      "recordPath": "reservation.rules[4]",
+      "sourcePages": [
+        15,
+        32,
+        33,
+        34,
+        65
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00072",
+          "path": "reservation.rules[4].title",
+          "value": "PwD certificate only from ACPUGMEC boards",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00073",
+          "path": "reservation.rules[4].detail",
+          "value": "PwD seats need a certificate from an ACPUGMEC medical board. If the board finds you unfit, you can appeal to the medical appeal board, chaired by the Dean of B. J. Medical College, Ahmedabad, with two experts who weren't on the first board. Appeals about eye-related disabilities go to a board chaired by the Director, M. & J. Institute of Ophthalmology, Ahmedabad. The NMC 2026 guidelines also allow an appeal to a DGHS appellate authority, within the time MCC sets. Confirm which route applies with ACPPGMEC.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-pwd-subjects",
+      "recordPath": "reservation.rules[5]",
+      "sourcePages": [
+        50,
+        51,
+        52,
+        63
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00074",
+          "path": "reservation.rules[5].title",
+          "value": "Surgical specialities: PwBD suitability",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00075",
+          "path": "reservation.rules[5].detail",
+          "value": "Under the NMC 2026 guidelines, the board rates you Eligible, Eligible with reasonable accommodation, or Ineligible for each speciality. For surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Traumatology, Emergency Medicine, PMR, Sports Medicine): Upper-limb disability and multiple disabilities are generally not suitable. Speech and language disability is not suitable. Lower-limb disability, and conditions such as cerebral palsy or muscular dystrophy, may be suitable if you show the needed functional competencies. Visual impairment is suitable only if corrective lenses alone bring it below 40%. Hearing impairment is suitable if you function with hearing aids or a cochlear implant and have acceptable, intelligible speech. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders are decided case by case. Chronic neurological conditions are suitable if stable, but not with uncontrolled seizures, frequent relapses, progressive neurodegeneration or severe impairment.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-pwd-safeguards",
+      "recordPath": "reservation.rules[6]",
+      "sourcePages": [
+        49,
+        58,
+        62,
+        64,
+        65
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00076",
+          "path": "reservation.rules[6].title",
+          "value": "PwD assessment safeguards",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00077",
+          "path": "reservation.rules[6].detail",
+          "value": "A correctable defect in your UDID card alone isn't grounds for denial if your disability is otherwise established. You should have an established diagnosis and a stable condition. Before declaring you ineligible, the board must consider reasonable accommodation and assistive technology. It can't declare you ineligible only because of your diagnosis, disability category or percentage. If you're found ineligible, you must be given a written, reasoned order, and you can appeal.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-pwd-subjects-other-clinical",
+      "recordPath": "reservation.rules[7]",
+      "sourcePages": [
+        52,
+        53,
+        54
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00078",
+          "path": "reservation.rules[7].title",
+          "value": "Other clinical specialities: PwBD suitability",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00079",
+          "path": "reservation.rules[7].detail",
+          "value": "For other clinical specialities (such as General Medicine, Paediatrics, Dermatology, Psychiatry, Radio-diagnosis and Community Medicine), the NMC 2026 table says: Locomotor disability may be suitable if you show the needed competencies, including optimum use of both upper limbs. Visual impairment is suitable if adaptive devices bring it below 40% while keeping both hands free. Hearing impairment is suitable with hearing aids, an amplified stethoscope or a cochlear implant, if your speech is acceptable and intelligible. Speech and language disability is suitable if your speech is intelligible. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders are suitable. Chronic neurological conditions are suitable if stable, but not with uncontrolled seizures, frequent relapses, progressive neurodegeneration or severe impairment. Multiple disabilities are suitable with functional adequacy.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-pwd-subjects-preclinical",
+      "recordPath": "reservation.rules[8]",
+      "sourcePages": [
+        54,
+        55,
+        56
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00080",
+          "path": "reservation.rules[8].title",
+          "value": "Pre-clinical branches: PwBD suitability",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00081",
+          "path": "reservation.rules[8].detail",
+          "value": "For Anatomy, Physiology, Biochemistry and Biophysics, the NMC 2026 table says: Locomotor disability is suitable, with ramps and adjustable tables. Visual impairment is suitable if a low vision aid brings it below 40%. Hearing impairment is suitable with hearing aids or a cochlear implant, if your speech is acceptable and intelligible. Speech disability is not suitable. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders and chronic neurological conditions are suitable. Multiple disabilities are suitable if you're functional.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-pwd-subjects-paraclinical",
+      "recordPath": "reservation.rules[9]",
+      "sourcePages": [
+        56,
+        57
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00082",
+          "path": "reservation.rules[9].title",
+          "value": "Para-clinical branches: PwBD suitability",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00083",
+          "path": "reservation.rules[9].detail",
+          "value": "For Pharmacology, Pathology, Microbiology, and Forensic Medicine and Toxicology, the NMC 2026 table says: Locomotor disability is suitable, with modified labs and mobility aids. Visual impairment is suitable if digital aids bring it below 40%. Hearing impairment is suitable with hearing aids or a cochlear implant, if your speech is acceptable and intelligible. Speech disability is suitable. Mental illness, ASD, SLD and ID are suitable if stable. Blood disorders and chronic neurological conditions are suitable. Multiple disabilities are suitable with competence.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-registration",
+      "recordPath": "fees.registration",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00084",
+          "path": "fees.registration.amountInr",
+          "value": 3000,
+          "surface": "registration/upfront summary"
+        },
+        {
+          "fieldId": "gujarat-2026:F00085",
+          "path": "fees.registration.covers",
+          "value": "Paid with the PIN on medadmgujarat.org (₹28,000 total with the deposit). The 2026 documents don't say whether later rounds need fresh registration.",
+          "surface": "registration/upfront summary"
+        },
+        {
+          "fieldId": "gujarat-2026:F00086",
+          "path": "fees.registration.refundable",
+          "value": false,
+          "surface": "registration/upfront summary"
+        }
+      ]
+    },
+    {
+      "itemId": "deposit-all",
+      "recordPath": "fees.securityDeposits[0]",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "seats": null,
+      "context": {
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "medical"
+          },
+          {
+            "sector": "private",
+            "collegeType": "medical"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00087",
+          "path": "fees.securityDeposits[0].label",
+          "value": "Refundable security deposit (all colleges)",
+          "surface": "deposit rows/recommendation"
+        },
+        {
+          "fieldId": "gujarat-2026:F00088",
+          "path": "fees.securityDeposits[0].amountInr",
+          "value": 25000,
+          "surface": "deposit rows/recommendation"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-nri-processing",
+      "recordPath": "fees.rules[0]",
+      "sourcePages": [
+        4,
+        24
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00089",
+          "path": "fees.rules[0].title",
+          "value": "NRI processing fee",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00090",
+          "path": "fees.rules[0].detail",
+          "value": "NRI applicants also pay a ₹25,000 non-refundable processing fee by demand draft in favour of “ACPUGMEC”, payable at Gandhinagar, at the ACPPGMEC office.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-nri-undertaking",
+      "recordPath": "fees.rules[1]",
+      "sourcePages": [
+        30
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00091",
+          "path": "fees.rules[1].title",
+          "value": "NRI fees are in US$ and non-refundable",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00092",
+          "path": "fees.rules[1].detail",
+          "value": "The NRI student and their parent or legal guardian sign a notarised undertaking to pay the college's NRI fee in US$ for the entire course. It isn't negotiable or refundable except as the admission rules allow. Extra fees apply each term if study runs beyond the normal period plus one year of internship (as the form words it); confirm how this applies to PG with the college. If dues aren't cleared, the student may not be sent up for exams.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-pin-loss",
+      "recordPath": "fees.rules[2]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00093",
+          "path": "fees.rules[2].title",
+          "value": "Lost PIN costs ₹500",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00094",
+          "path": "fees.rules[2].detail",
+          "value": "Keep your PIN until admission and refunds are over. To regenerate a lost PIN, visit CCR, GMERS Medical College, Gandhinagar and pay ₹500.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-tuition",
+      "recordPath": "fees.rules[3]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00095",
+          "path": "fees.rules[3].title",
+          "value": "Pay tuition on time",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00096",
+          "path": "fees.rules[3].detail",
+          "value": "Pay tuition by cash or DD at a designated Axis Bank branch, or online, within the deadline. For admission you need a receipt for one term (6 months) of fees.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-each-round",
+      "recordPath": "choiceFilling[0]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00097",
+          "path": "choiceFilling[0].title",
+          "value": "Choice filling opens each round",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00098",
+          "path": "choiceFilling[0].detail",
+          "value": "After the merit list, choice filling opens online for each round. Allotments are published after the window closes.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-check-merit",
+      "recordPath": "choiceFilling[1]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00099",
+          "path": "choiceFilling[1].title",
+          "value": "Check your merit number and category",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00100",
+          "path": "choiceFilling[1].detail",
+          "value": "Make sure the merit number and category on the merit list match your registration details.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-keep-credentials",
+      "recordPath": "choiceFilling[2]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00101",
+          "path": "choiceFilling[2].title",
+          "value": "Guard your PIN and password",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00102",
+          "path": "choiceFilling[2].detail",
+          "value": "Don't share your PIN or password. Store your ID, password and PIN in several places, not only on your phone.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-nri-merit",
+      "recordPath": "choiceFilling[3]",
+      "sourcePages": [
+        26
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00103",
+          "path": "choiceFilling[3].title",
+          "value": "How NRI seats are ranked",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00104",
+          "path": "choiceFilling[3].detail",
+          "value": "NRI seats are allotted on inter-se merit by NEET-PG All India Overall Rank among the candidates who applied for NRI seats.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-allotment-status",
+      "recordPath": "rounds[0]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00105",
+          "path": "rounds[0].title",
+          "value": "See your allotment in your login",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00106",
+          "path": "rounds[0].detail",
+          "value": "Allotment status is shown on the website. Log in with your user ID to see yours.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00107",
+          "path": "rounds[0].tag",
+          "value": "Every round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-originals-only",
+      "recordPath": "admission[0]",
+      "sourcePages": [
+        1
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00108",
+          "path": "admission[0].title",
+          "value": "Originals only, no DigiLocker",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00109",
+          "path": "admission[0].detail",
+          "value": "From Round 1, help centres verify only original documents. DigiLocker documents and colour photocopies or printouts aren't accepted. Bring originals plus one self-attested photocopy set.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-help-centre",
+      "recordPath": "admission[1]",
+      "sourcePages": [
+        4,
+        13
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00110",
+          "path": "admission[1].title",
+          "value": "Registration isn't complete until verification",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00111",
+          "path": "admission[1].detail",
+          "value": "Online registration alone isn't enough. Without verification at a help centre and a stamped registration slip, you can't continue in the admission process.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-website-only",
+      "recordPath": "admission[2]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00112",
+          "path": "admission[2].title",
+          "value": "Official updates are on medadmgujarat.org",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00113",
+          "path": "admission[2].detail",
+          "value": "All admission information is published only on the admission committee website. Check it often.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-nri-notarised",
+      "recordPath": "admission[3]",
+      "sourcePages": [
+        24,
+        27
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00114",
+          "path": "admission[3].title",
+          "value": "NRI applications need notarised copies",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00115",
+          "path": "admission[3].detail",
+          "value": "NRI applications aren't considered without notarised copies of the certificates. Report any change to your documents or marks promptly to the ACPPGMEC office. If any discrepancy is found, the admission is liable to be cancelled, the candidate could be expelled, and criminal action would be initiated. The Chairman, ACPPGMEC can change these guidelines, and his interpretation is final.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-registration-slip",
+      "recordPath": "documents[0]",
+      "sourcePages": [
+        13
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00116",
+          "path": "documents[0].name",
+          "value": "Printed registration details, signed by you and a parent or guardian",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-mbbs-marksheets",
+      "recordPath": "documents[1]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00117",
+          "path": "documents[1].name",
+          "value": "All MBBS marksheets, year- and attempt-wise",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-neet-marksheet",
+      "recordPath": "documents[2]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00118",
+          "path": "documents[2].name",
+          "value": "NEET-PG 2026 marksheet",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-internship",
+      "recordPath": "documents[3]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00119",
+          "path": "documents[3].name",
+          "value": "Internship completion certificate (on or before 30th September 2026)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-council-registration",
+      "recordPath": "documents[4]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00120",
+          "path": "documents[4].name",
+          "value": "Provisional State Medical Council registration (if you just completed internship) or permanent Medical Council / MCI registration (earlier pass-outs)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-slc",
+      "recordPath": "documents[5]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00121",
+          "path": "documents[5].name",
+          "value": "School leaving or transfer certificate",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00122",
+          "path": "documents[5].detail",
+          "value": "Proof of your date and place of birth and Indian citizenship. The school leaving or transfer certificate is compulsory for everyone. Add a birth certificate or passport if your place of birth isn't on it.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-caste",
+      "recordPath": "documents[6]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "category",
+          "in": [
+            "OBC",
+            "SC",
+            "ST"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00123",
+          "path": "documents[6].name",
+          "value": "Caste certificate from a Gujarat competent authority",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-ncl",
+      "recordPath": "documents[7]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "category",
+          "in": [
+            "OBC"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00124",
+          "path": "documents[7].name",
+          "value": "Non-creamy layer certificate (Parishishta 4) from a Gujarat competent authority",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00125",
+          "path": "documents[7].detail",
+          "value": "Gujarati: issued on or after 1st April 2024. English: issued on or after 1st April 2026. Valid for 2026-27.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-ews",
+      "recordPath": "documents[8]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "category",
+          "in": [
+            "EWS"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00126",
+          "path": "documents[8].name",
+          "value": "EWS certificate from a Gujarat competent authority",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00127",
+          "path": "documents[8].detail",
+          "value": "Gujarati: issued on or after 1st April 2024. English: issued on or after 1st April 2026. Valid for 2026-27.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-pwd",
+      "recordPath": "documents[9]",
+      "sourcePages": [
+        15,
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00128",
+          "path": "documents[9].name",
+          "value": "Disability certificate from an ACPUGMEC medical board",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-udid",
+      "recordPath": "documents[10]",
+      "sourcePages": [
+        49,
+        58
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00129",
+          "path": "documents[10].name",
+          "value": "Valid UDID card",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00130",
+          "path": "documents[10].detail",
+          "value": "Issued through the UDID portal (Ministry of Social Justice and Empowerment). The medical board verifies it.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-pwbd-affidavits",
+      "recordPath": "documents[11]",
+      "sourcePages": [
+        58,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00131",
+          "path": "documents[11].name",
+          "value": "Notarised PwBD affidavits",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00132",
+          "path": "documents[11].detail",
+          "value": "All PwBD applicants submit notarised Appendix-A (general self-certification) and Appendix-G (mandatory; you declare you understand your chosen speciality's demands and will perform its tasks). Depending on your disability, also submit Appendix-B (hearing), C (upper limb), D (lower limb), E (mental illness, speech disorders, specific learning disorder or autism) or F (visual). For Appendix-F, your low vision aid must bring your visual disability below 40%, give a field of vision over 40 degrees, and be hands-free. Other disabilities, such as blood disorders or chronic neurological conditions, need Appendix-A only (plus G). In the affidavits you name the PG courses you intend to pursue. A false declaration may cost you your admission.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-passport",
+      "recordPath": "documents[12]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "nationality",
+          "in": [
+            "oci",
+            "foreign"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00133",
+          "path": "documents[12].name",
+          "value": "Passport copy (dual or foreign citizenship)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-12th",
+      "recordPath": "documents[13]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government",
+        "management"
+      ],
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "mbbsLocation",
+          "in": [
+            "home_listed",
+            "other_state",
+            "abroad"
+          ]
+        },
+        "seats": [
+          "government",
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00134",
+          "path": "documents[13].name",
+          "value": "12th standard marksheet",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00135",
+          "path": "documents[13].detail",
+          "value": "For candidates who did MBBS outside Gujarat.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-domicile",
+      "recordPath": "documents[14]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government",
+        "management"
+      ],
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "home_listed",
+                "other_state",
+                "abroad"
+              ]
+            },
+            {
+              "fact": "bornInState",
+              "in": [
+                false
+              ]
+            }
+          ]
+        },
+        "seats": [
+          "government",
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00136",
+          "path": "documents[14].name",
+          "value": "Gujarat domicile certificate",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00137",
+          "path": "documents[14].detail",
+          "value": "For candidates who did MBBS outside Gujarat and were born outside Gujarat.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-fmge",
+      "recordPath": "documents[15]",
+      "sourcePages": [
+        14
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "mbbsLocation",
+          "in": [
+            "abroad"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00138",
+          "path": "documents[15].name",
+          "value": "NBE screening exam (FMGE) marksheet",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-noc",
+      "recordPath": "documents[16]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "inService",
+          "in": [
+            true
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00139",
+          "path": "documents[16].name",
+          "value": "No Objection Certificate from a Gujarat competent authority",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-nri",
+      "recordPath": "documents[17]",
+      "sourcePages": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "nriLink",
+          "in": [
+            "self",
+            "parent",
+            "guardian"
+          ]
+        },
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00140",
+          "path": "documents[17].name",
+          "value": "NRI document set (notarised colour copies)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00141",
+          "path": "documents[17].detail",
+          "value": "₹25,000 demand draft, plus notarised copies of: printout of the online application, all MBBS marksheets, NEET-PG marksheet, school leaving certificate and 12th marksheet. Notarised colour copies of: passport (all pages, including blank ones) of you or your NRI parent; visa, residence permit or OCI/PIO card; NRI certificate from the Indian Embassy, High Commission or Consulate; Indian and foreign address proof; fee undertaking on ₹300 stamp paper (notarised); proof of origin. Bring the originals and notarised colour copies when you submit the application, and all documents to the interview. Also fill in the stay-in-India form for 1st April 2025 to 31st March 2026: each arrival and departure date with its passport page number, days per stay and total days, signed by you and your parent. Documents not in English must be translated by a competent authority.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-allotment",
+      "recordPath": "documents[18]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00142",
+          "path": "documents[18].name",
+          "value": "ACPPGMEC allotment letter",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-fee-receipt",
+      "recordPath": "documents[19]",
+      "sourcePages": [
+        19
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00143",
+          "path": "documents[19].name",
+          "value": "Tuition fee receipt (one term, 6 months)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-adm-nri-cert",
+      "recordPath": "documents[20]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "stage": "admission",
+        "appliesWhen": {
+          "fact": "nriLink",
+          "in": [
+            "self",
+            "parent",
+            "guardian"
+          ]
+        },
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00144",
+          "path": "documents[20].name",
+          "value": "NRI certificate (original, at admission)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-adm-pwd-copy",
+      "recordPath": "documents[21]",
+      "sourcePages": [
+        20
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00145",
+          "path": "documents[21].name",
+          "value": "Photocopy of your disability certificate (at admission)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-adm-other",
+      "recordPath": "documents[22]",
+      "sourcePages": [
+        20
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00146",
+          "path": "documents[22].name",
+          "value": "Any other relevant certificate",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-authority-letter",
+      "recordPath": "documents[23]",
+      "sourcePages": [
+        31
+      ],
+      "seats": null,
+      "context": {
+        "stage": "other",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00147",
+          "path": "documents[23].name",
+          "value": "Authority letter (only if a family member verifies on your behalf)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "gujarat-2026:F00148",
+          "path": "documents[23].detail",
+          "value": "Only a mother, father, grandparent, brother, sister or guardian can act for you. Attach recent passport photos of you and the authority holder. The letter is signed by you and a parent, and the holder brings original and photocopy ID (driving licence, PAN, passport, election card or Aadhaar).",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "helpdesk",
+      "recordPath": "helpdesk",
+      "sourcePages": [
+        4,
+        23,
+        24,
+        27,
+        39
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00149",
+          "path": "helpdesk.phones[0].label",
+          "value": "Admission committee",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00150",
+          "path": "helpdesk.phones[0].numbers[0]",
+          "value": "9099074536",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00151",
+          "path": "helpdesk.phones[0].numbers[1]",
+          "value": "9099058953",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00152",
+          "path": "helpdesk.phones[1].label",
+          "value": "NRI queries",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00153",
+          "path": "helpdesk.phones[1].numbers[0]",
+          "value": "9099074536",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00154",
+          "path": "helpdesk.phones[1].numbers[1]",
+          "value": "9099058953",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00155",
+          "path": "helpdesk.emails[0].label",
+          "value": "Admission committee",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00156",
+          "path": "helpdesk.emails[0].addresses[0]",
+          "value": "medadmgujarat@gmail.com",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00157",
+          "path": "helpdesk.emails[0].addresses[1]",
+          "value": "medadmgujarat2018@gmail.com",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00158",
+          "path": "helpdesk.emails[1].label",
+          "value": "NRI candidates only",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00159",
+          "path": "helpdesk.emails[1].addresses[0]",
+          "value": "medadmgujarat.nri@gmail.com",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00160",
+          "path": "helpdesk.hours",
+          "value": "Help centres: 10:00 AM–4:00 PM; Saturday 10:00 AM–12:00 noon; closed Sundays and government holidays",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00161",
+          "path": "helpdesk.instructions[0]",
+          "value": "For any guidance on registration or later steps, visit your nearest help centre.",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00162",
+          "path": "helpdesk.instructions[1]",
+          "value": "Office: Ground Floor, GMERS Medical College, Sector-12, Gandhinagar 382016.",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "gujarat-2026:F00163",
+          "path": "helpdesk.instructions[2]",
+          "value": "Disputes (NRI guidelines): jurisdiction is Ahmedabad.",
+          "surface": "help desk"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-1",
+      "recordPath": "helpCentres[0]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00164",
+          "path": "helpCentres[0].name",
+          "value": "B. J. Medical College, Ahmedabad",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00165",
+          "path": "helpCentres[0].address",
+          "value": "New Civil Hospital, Asarwa, Ahmedabad 380016",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-2",
+      "recordPath": "helpCentres[1]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00166",
+          "path": "helpCentres[1].name",
+          "value": "Govt. Medical College, Baroda",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00167",
+          "path": "helpCentres[1].address",
+          "value": "S.S.G. Hospital Campus, Anandpura, Vadodara 390001",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-3",
+      "recordPath": "helpCentres[2]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00168",
+          "path": "helpCentres[2].name",
+          "value": "Govt. Medical College, Bhavnagar",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00169",
+          "path": "helpCentres[2].address",
+          "value": "Old Court Hall, Maharaja Krishnakumarsinhji Bhavnagar University, Bhavnagar 364002",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-4",
+      "recordPath": "helpCentres[3]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00170",
+          "path": "helpCentres[3].name",
+          "value": "Govt. Medical College, Surat",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00171",
+          "path": "helpCentres[3].address",
+          "value": "Opp. Income Tax Department Office, Majura Gate, Surat 395001",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-5",
+      "recordPath": "helpCentres[4]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00172",
+          "path": "helpCentres[4].name",
+          "value": "M. P. Shah Govt. Medical College, Jamnagar",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00173",
+          "path": "helpCentres[4].address",
+          "value": "Nehru Road, Guru Gobind Singh Hospital Campus, Indradeep Society, Jamnagar 361008",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-6",
+      "recordPath": "helpCentres[5]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00174",
+          "path": "helpCentres[5].name",
+          "value": "P. D. U. Medical College, Rajkot",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00175",
+          "path": "helpCentres[5].address",
+          "value": "Civil Hospital Campus, Rajkot 360001",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-7",
+      "recordPath": "helpCentres[6]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00176",
+          "path": "helpCentres[6].name",
+          "value": "GMERS Medical College, Sola, Ahmedabad",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00177",
+          "path": "helpCentres[6].address",
+          "value": "Near Gujarat High Court, S.G. Highway, Ahmedabad",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-8",
+      "recordPath": "helpCentres[7]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00178",
+          "path": "helpCentres[7].name",
+          "value": "GMERS Medical College, Gandhinagar",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00179",
+          "path": "helpCentres[7].address",
+          "value": "Civil Hospital Campus, Sector-12, Gandhinagar 382016",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-9",
+      "recordPath": "helpCentres[8]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00180",
+          "path": "helpCentres[8].name",
+          "value": "GMERS Medical College, Patan",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00181",
+          "path": "helpCentres[8].address",
+          "value": "Patan-Unjha Highway, Dharpur, Patan 384265",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-10",
+      "recordPath": "helpCentres[9]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00182",
+          "path": "helpCentres[9].name",
+          "value": "GCS Medical College, Hospital & Research Centre, Ahmedabad",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00183",
+          "path": "helpCentres[9].address",
+          "value": "Opp. DRM Office, Naroda Road, Ahmedabad 380025",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-11",
+      "recordPath": "helpCentres[10]",
+      "sourcePages": [
+        16,
+        18,
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00184",
+          "path": "helpCentres[10].name",
+          "value": "Narendra Modi Medical College, Ahmedabad (also listed as AMC MET Medical College)",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00185",
+          "path": "helpCentres[10].address",
+          "value": "Sheth L.G. Hospital Campus, Maninagar, Ahmedabad 380008",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-12",
+      "recordPath": "helpCentres[11]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00186",
+          "path": "helpCentres[11].name",
+          "value": "Surat Municipal Institute of Medical Education and Research, Surat",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00187",
+          "path": "helpCentres[11].address",
+          "value": "Opp. Bombay Market, Umarwada, Surat 395010",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-13",
+      "recordPath": "helpCentres[12]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00188",
+          "path": "helpCentres[12].name",
+          "value": "Pramukh Swami Medical College, Karamsad",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00189",
+          "path": "helpCentres[12].address",
+          "value": "Gokal Nagar, Karamsad, Anand 388325",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-14",
+      "recordPath": "helpCentres[13]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00190",
+          "path": "helpCentres[13].name",
+          "value": "C.U. Shah Medical College, Surendranagar",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00191",
+          "path": "helpCentres[13].address",
+          "value": "Dudhrej Road, Surendranagar 363001",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-15",
+      "recordPath": "helpCentres[14]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00192",
+          "path": "helpCentres[14].name",
+          "value": "Gujarat Adani Institute of Medical Sciences, Bhuj",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00193",
+          "path": "helpCentres[14].address",
+          "value": "G. K. General Hospital Campus, Bhuj 370001, Kachchh",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-16",
+      "recordPath": "helpCentres[15]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00194",
+          "path": "helpCentres[15].name",
+          "value": "Smt. NHL Municipal Medical College, Ahmedabad",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00195",
+          "path": "helpCentres[15].address",
+          "value": "V.S. General Hospital, Ellis Bridge, Ahmedabad 380006",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "help-centre-17",
+      "recordPath": "helpCentres[16]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00196",
+          "path": "helpCentres[16].name",
+          "value": "Parul Institute of Medical Sciences & Research, Vadodara",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00197",
+          "path": "helpCentres[16].address",
+          "value": "C/O Parul University Extension Office, First Floor, Roshani Technology Park, Opp. Karelibaug Water Tank, Karelibaug, Vadodara 18",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-board-1",
+      "recordPath": "disabilityCentres[0]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00198",
+          "path": "disabilityCentres[0].name",
+          "value": "Civil Hospital, Ahmedabad",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00199",
+          "path": "disabilityCentres[0].location",
+          "value": "Ahmedabad",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00200",
+          "path": "disabilityCentres[0].remarks",
+          "value": "PwD Medical Board. Contact: Dr. Jagdish Solanki, 9825387497",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-board-2",
+      "recordPath": "disabilityCentres[1]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00201",
+          "path": "disabilityCentres[1].name",
+          "value": "SSG Civil Hospital, Baroda",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00202",
+          "path": "disabilityCentres[1].location",
+          "value": "Vadodara",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00203",
+          "path": "disabilityCentres[1].remarks",
+          "value": "PwD Medical Board. Contact: Shri Pravin Prajapati, 7777965947",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-board-3",
+      "recordPath": "disabilityCentres[2]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00204",
+          "path": "disabilityCentres[2].name",
+          "value": "Sir T Civil Hospital, Bhavnagar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00205",
+          "path": "disabilityCentres[2].location",
+          "value": "Bhavnagar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00206",
+          "path": "disabilityCentres[2].remarks",
+          "value": "PwD Medical Board. Contact: Dr. Mukesh Shah, 9428182642",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-board-4",
+      "recordPath": "disabilityCentres[3]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00207",
+          "path": "disabilityCentres[3].name",
+          "value": "Civil Hospital, Surat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00208",
+          "path": "disabilityCentres[3].location",
+          "value": "Surat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00209",
+          "path": "disabilityCentres[3].remarks",
+          "value": "PwD Medical Board. Contact: Dr. Ketan Naik, 9825327004",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-board-5",
+      "recordPath": "disabilityCentres[4]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00210",
+          "path": "disabilityCentres[4].name",
+          "value": "Guru Govindsinh Civil Hospital, Jamnagar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00211",
+          "path": "disabilityCentres[4].location",
+          "value": "Jamnagar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00212",
+          "path": "disabilityCentres[4].remarks",
+          "value": "PwD Medical Board. Contact: Dr. P. R. Saxena, 9227704551",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-board-6",
+      "recordPath": "disabilityCentres[5]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00213",
+          "path": "disabilityCentres[5].name",
+          "value": "Civil Hospital, Rajkot",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00214",
+          "path": "disabilityCentres[5].location",
+          "value": "Rajkot",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00215",
+          "path": "disabilityCentres[5].remarks",
+          "value": "PwD Medical Board. Contact: Dr. Harshad Dusara, 9426165422",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-board-7",
+      "recordPath": "disabilityCentres[6]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00216",
+          "path": "disabilityCentres[6].name",
+          "value": "B. J. Medical College, Ahmedabad",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00217",
+          "path": "disabilityCentres[6].location",
+          "value": "Ahmedabad",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00218",
+          "path": "disabilityCentres[6].remarks",
+          "value": "PwD Medical Appeal Board (if the board finds you unfit). Contact: Dr. Hetal Jani, 9409170792",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-appeal-eye",
+      "recordPath": "disabilityCentres[7]",
+      "sourcePages": [
+        34
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00219",
+          "path": "disabilityCentres[7].name",
+          "value": "M. & J. Institute of Ophthalmology, Ahmedabad",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00220",
+          "path": "disabilityCentres[7].location",
+          "value": "Ahmedabad",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00221",
+          "path": "disabilityCentres[7].remarks",
+          "value": "Appeal board for eye-related disabilities",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-authority",
+      "recordPath": "annexures[0]",
+      "sourcePages": [
+        31
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00222",
+          "path": "annexures[0].title",
+          "value": "Authority letter",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "gujarat-2026:F00223",
+          "path": "annexures[0].description",
+          "value": "Lets a parent or family member attend document verification for you.",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-nri",
+      "recordPath": "annexures[1]",
+      "sourcePages": [
+        28,
+        29,
+        30
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00224",
+          "path": "annexures[1].title",
+          "value": "NRI checklist and fee undertaking",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "gujarat-2026:F00225",
+          "path": "annexures[1].description",
+          "value": "Document checklist, stay-in-India record and notarised fee undertaking format.",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-pwd-proforma",
+      "recordPath": "annexures[2]",
+      "sourcePages": [
+        35,
+        39,
+        40,
+        41,
+        42
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00226",
+          "path": "annexures[2].title",
+          "value": "PwD medical board proforma",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "gujarat-2026:F00227",
+          "path": "annexures[2].description",
+          "value": "Case paper used by the medical board and appeal board. Possible outcomes: eligible for the course and PwD quota; eligible for the course but not the PwD quota; or not eligible for the course.",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-pwd-gr",
+      "recordPath": "annexures[3]",
+      "sourcePages": [
+        33,
+        34
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00228",
+          "path": "annexures[3].title",
+          "value": "PwD resolution HFWD/0133/07/2024",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "gujarat-2026:F00229",
+          "path": "annexures[3].description",
+          "value": "Sets up medical boards at 6 government medical colleges, plus appeal boards (in Gujarati).",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-nmc-pwbd",
+      "recordPath": "annexures[4]",
+      "sourcePages": [
+        43,
+        48,
+        64,
+        78,
+        80
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00230",
+          "path": "annexures[4].title",
+          "value": "NMC PwBD guidelines 2026",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "gujarat-2026:F00231",
+          "path": "annexures[4].description",
+          "value": "Speciality-wise functional assessment for PwBD candidates. The minimum benchmark disability is 40%. The medical board issues an Eligibility Certificate: Eligible, Eligible with reasonable accommodation (naming it), or Ineligible (with reasons).",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "date-pin",
+      "recordPath": "importantDates[0]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00232",
+          "path": "importantDates[0].label",
+          "value": "Buy PIN online",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00233",
+          "path": "importantDates[0].date",
+          "value": "2026-10-01",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00234",
+          "path": "importantDates[0].endDate",
+          "value": "2026-10-08",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00235",
+          "path": "importantDates[0].endTime",
+          "value": "3:00 PM",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "date-registration",
+      "recordPath": "importantDates[1]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00236",
+          "path": "importantDates[1].label",
+          "value": "Online registration & document upload",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00237",
+          "path": "importantDates[1].date",
+          "value": "2026-10-01",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00238",
+          "path": "importantDates[1].endDate",
+          "value": "2026-10-08",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00239",
+          "path": "importantDates[1].endTime",
+          "value": "5:00 PM",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "date-verification",
+      "recordPath": "importantDates[2]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00240",
+          "path": "importantDates[2].label",
+          "value": "Document verification at help centre",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00241",
+          "path": "importantDates[2].date",
+          "value": "2026-10-03",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00242",
+          "path": "importantDates[2].endDate",
+          "value": "2026-10-09",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00243",
+          "path": "importantDates[2].endTime",
+          "value": "4:00 PM",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "gujarat-2026:F00244",
+          "path": "importantDates[2].detail",
+          "value": "By prior appointment only. Open 10 AM–4 PM; Saturday 3rd October 2026 10 AM–12 noon; closed Sunday 4th October 2026.",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-schedule",
+      "recordPath": "gaps[0]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00245",
+          "path": "gaps[0].title",
+          "value": "Round schedule",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00246",
+          "path": "gaps[0].detail",
+          "value": "As of 6th October 2026, only the registration dates are out. Check medadmgujarat.org for merit list, choice filling and allotment dates.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-seats",
+      "recordPath": "gaps[1]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00247",
+          "path": "gaps[1].title",
+          "value": "2026-27 seat matrix",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00248",
+          "path": "gaps[1].detail",
+          "value": "As of 6th October 2026, the 2026-27 seat list isn't out. The site only has 2025-26.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-fees",
+      "recordPath": "gaps[2]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00249",
+          "path": "gaps[2].title",
+          "value": "2026-27 tuition fees",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00250",
+          "path": "gaps[2].detail",
+          "value": "As of 6th October 2026, the 2026-27 college-wise fees aren't out. The site only has 2025-26.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-reservation",
+      "recordPath": "gaps[3]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00251",
+          "path": "gaps[3].title",
+          "value": "Reservation percentages",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00252",
+          "path": "gaps[3].detail",
+          "value": "This year's documents name the reservation categories (SC, ST, SEBC, EWS, PwD) but don't give their percentages. The in-service quota (10% in 10 MD/MS subjects) is stated.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-resignation",
+      "recordPath": "gaps[4]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00253",
+          "path": "gaps[4].title",
+          "value": "Resignation and deposit forfeiture",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00254",
+          "path": "gaps[4].detail",
+          "value": "This year's documents don't say when the ₹25,000 deposit is forfeited or what resigning a seat costs.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-bond",
+      "recordPath": "gaps[5]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00255",
+          "path": "gaps[5].title",
+          "value": "Service bond",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00256",
+          "path": "gaps[5].detail",
+          "value": "This year's documents don't describe the service bond.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-cutoffs",
+      "recordPath": "gaps[6]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00257",
+          "path": "gaps[6].title",
+          "value": "Cutoff ranks",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00258",
+          "path": "gaps[6].detail",
+          "value": "Previous closing ranks aren't part of this year's documents.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-mds",
+      "recordPath": "gaps[7]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00259",
+          "path": "gaps[7].title",
+          "value": "MDS admissions",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "gujarat-2026:F00260",
+          "path": "gaps[7].detail",
+          "value": "As of 6th October 2026, there's no 2026-27 MDS notice.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-1",
+      "recordPath": "source.documents[0]",
+      "sourcePages": [
+        1
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00261",
+          "path": "source.documents[0].title",
+          "value": "Website notices (snapshot 6th October 2026)",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00262",
+          "path": "source.documents[0].url",
+          "value": "https://www.medadmgujarat.org/pg/home.aspx",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00263",
+          "path": "source.documents[0].issued",
+          "value": "Notices dated 16th September 2026, 29th September 2026 and 1st October 2026",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-2",
+      "recordPath": "source.documents[1]",
+      "sourcePages": [
+        3
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00264",
+          "path": "source.documents[1].title",
+          "value": "Registration advertisement",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00265",
+          "path": "source.documents[1].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Adv.%20-%20Online%20Reg.Round%2001.pdf",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00266",
+          "path": "source.documents[1].issued",
+          "value": "Round 1, 2026-27",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-3",
+      "recordPath": "source.documents[2]",
+      "sourcePages": [
+        5
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00267",
+          "path": "source.documents[2].title",
+          "value": "Procedure for online registration",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00268",
+          "path": "source.documents[2].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Procedure%20for%20Online%20Registration%20-%20PG.pdf",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-4",
+      "recordPath": "source.documents[3]",
+      "sourcePages": [
+        17
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00269",
+          "path": "source.documents[3].title",
+          "value": "Process of online admission",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00270",
+          "path": "source.documents[3].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Process%20of%20Online%20Admission%20-%20PG.pdf",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-5",
+      "recordPath": "source.documents[4]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00271",
+          "path": "source.documents[4].title",
+          "value": "Eligibility criteria & documents",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00272",
+          "path": "source.documents[4].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Eligibility%20Criteria%20%26%20List%20of%20Documents%20Required%20for%20Admission%20Process%20of%20ACPUGMEC%202026-27.pdf",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00273",
+          "path": "source.documents[4].issued",
+          "value": "2026-27",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-6",
+      "recordPath": "source.documents[5]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00274",
+          "path": "source.documents[5].title",
+          "value": "List of help centres",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00275",
+          "path": "source.documents[5].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/LIST%20OF%20HELP%20CENTER.pdf",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-7",
+      "recordPath": "source.documents[6]",
+      "sourcePages": [
+        24
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00276",
+          "path": "source.documents[6].title",
+          "value": "Instructions for NRI candidates",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00277",
+          "path": "source.documents[6].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Instructions%20for%20NRI%20Candidates%202026-27.pdf",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00278",
+          "path": "source.documents[6].issued",
+          "value": "2026-27",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-8",
+      "recordPath": "source.documents[7]",
+      "sourcePages": [
+        31
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00279",
+          "path": "source.documents[7].title",
+          "value": "Authority letter",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00280",
+          "path": "source.documents[7].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/Authority%20Letter.pdf",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-9",
+      "recordPath": "source.documents[8]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00281",
+          "path": "source.documents[8].title",
+          "value": "PwD medical boards list",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00282",
+          "path": "source.documents[8].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/List%20of%20Civil%20Hospital%20for%20PwD%202026-27.pdf",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00283",
+          "path": "source.documents[8].issued",
+          "value": "2026-27",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-10",
+      "recordPath": "source.documents[9]",
+      "sourcePages": [
+        33
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00284",
+          "path": "source.documents[9].title",
+          "value": "PwD resolution HFWD/0133/07/2024",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00285",
+          "path": "source.documents[9].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/PwD%20GR%20%20Gujarat%20%2009072024.pdf",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00286",
+          "path": "source.documents[9].issued",
+          "value": "9th July 2024 (linked for 2026-27)",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-11",
+      "recordPath": "source.documents[10]",
+      "sourcePages": [
+        39
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00287",
+          "path": "source.documents[10].title",
+          "value": "PwD proforma",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00288",
+          "path": "source.documents[10].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/ProformaMedical%20%26%20Appeal%20%20Board_Case%20Paper.pdf",
+          "surface": "source document list"
+        }
+      ]
+    },
+    {
+      "itemId": "provenance-document-12",
+      "recordPath": "source.documents[11]",
+      "sourcePages": [
+        43
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "gujarat-2026:F00289",
+          "path": "source.documents[11].title",
+          "value": "NMC PwBD guidelines 2026",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00290",
+          "path": "source.documents[11].url",
+          "value": "https://medadmgujarat.ncode.in/web/PG2026/MDMS/REG/GUIDELINES%20ON%20ASSESSMENT%20OF%20PERSONS%20WITH%20BENCHMARK%20DISABILITIES.pdf",
+          "surface": "source document list"
+        },
+        {
+          "fieldId": "gujarat-2026:F00291",
+          "path": "source.documents[11].issued",
+          "value": "16th September 2026",
+          "surface": "source document list"
+        }
+      ]
+    }
+  ],
+  "fieldCount": 291,
+  "derivedSurfaces": [
+    "eligibility headlines/reasons/categories/quota/sector/courses and document applicability",
+    "deposit recommendation and upfront total",
+    "reservation complement and horizontal/vertical labels",
+    "counts of checklist/centres/rows",
+    "next deadline, stage status and IST urgency/countdown"
+  ],
+  "uiTemplates": [
+    {
+      "id": "gap-section-intro",
+      "literal": "These are published separately, so check the official website for them.",
+      "condition": "state gaps section"
+    },
+    {
+      "id": "reservation-none",
+      "literal": "This year's documents don't state the reservation percentages. Check the official website before choice filling.",
+      "condition": "reservation.policy null"
+    },
+    {
+      "id": "reservation-classification",
+      "literal": "Vertical reservation. Horizontal: <policy horizontal categories/percentages>.",
+      "condition": "visible policy"
+    },
+    {
+      "id": "bond-penalty-caption",
+      "literal": "Penalty if you don't serve: <course> <bond amount>",
+      "condition": "visible serviceBond.bond"
+    },
+    {
+      "id": "bond-none",
+      "literal": "These documents don't describe a service bond. Check the official website for this year's bond rules.",
+      "condition": "serviceBond.bond null"
+    },
+    {
+      "id": "resignation-generalisation",
+      "literal": "The later you leave, the more you lose.",
+      "condition": "nonempty resignation ladder"
+    },
+    {
+      "id": "help-centre-operational-instruction",
+      "literal": "Book an appointment while printing your registration slip, then visit with originals and one self-attested photocopy set.",
+      "condition": "helpCentres.length>0"
+    },
+    {
+      "id": "nodal-centre-instruction",
+      "literal": "If you're allotted a private college, you take admission at its nodal centre.",
+      "condition": "nodalCentres.length>0"
+    },
+    {
+      "id": "eligibility-category-pwd",
+      "literal": "You'll be counted as <effective category> + PwD when profile.pwd is true.",
+      "condition": "eligible/restricted verdict"
+    },
+    {
+      "id": "eligibility-no-exclusion",
+      "literal": "Nothing excluded",
+      "condition": "eligible/restricted verdict and excludedCourses empty"
+    },
+    {
+      "id": "deposit-recommendation",
+      "literal": "Recommended for you: covers every college open to you",
+      "condition": "recommended deposit"
+    },
+    {
+      "id": "disability-centre-count",
+      "literal": "Designated disability certification centres (<array length>)",
+      "condition": "disabilityCentres.length>0"
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { badgeFor, type DateKind } from "../deadline";
 
 /** Re-renders every 30 seconds so the countdown stays current. */
-function useNow(intervalMs = 30_000) {
+export function useNow(intervalMs = 30_000) {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
     const t = setInterval(() => setNow(new Date()), intervalMs);

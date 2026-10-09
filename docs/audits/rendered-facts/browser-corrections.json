@@ -1,0 +1,76 @@
+{
+  "cases": [
+    {
+      "case": "Gujarat complete profile",
+      "manualEligibility": true,
+      "noDefinitiveQuotaCategory": true
+    },
+    {
+      "case": "Karnataka complete profile",
+      "manualEligibility": true,
+      "noDefinitiveQuotaCategory": true
+    },
+    {
+      "case": "Uttar Pradesh complete profile",
+      "manualEligibility": true,
+      "noDefinitiveQuotaCategory": true
+    },
+    {
+      "case": "Tamil Nadu complete profile",
+      "manualEligibility": true,
+      "noDefinitiveQuotaCategory": true
+    },
+    {
+      "case": "Kerala complete profile",
+      "manualEligibility": true,
+      "noDefinitiveQuotaCategory": true
+    },
+    {
+      "case": "TN board count all",
+      "label": "▸ Disability medical and appeal boards (10 entries)",
+      "rowCount": 10
+    },
+    {
+      "case": "TN board count government",
+      "label": "▸ Disability medical and appeal boards (10 entries)",
+      "rowCount": 10
+    },
+    {
+      "case": "TN board count mgmtNri",
+      "label": "▸ Disability medical and appeal boards (0 entries)",
+      "rowCount": 0
+    },
+    {
+      "case": "Gujarat NRI fee",
+      "partialUpfrontSuppressed": true,
+      "separateProcessingFeeVisible": true
+    },
+    {
+      "case": "MCC live minute boundary",
+      "noonCutoffClearsStatusWithoutReload": true,
+      "collegeCutoffVisibleWhenCollapsed": true
+    },
+    {
+      "case": "TN next-deadline summary",
+      "printedTimeVisible": true,
+      "closingMinuteRemovesDeadline": true,
+      "mobileNoOverflow": true
+    }
+  ],
+  "consoleErrors": [],
+  "method": "Headless Chrome on own Vite5196 with synthetic profiles and controlled clock. No external writes or candidate data.",
+  "finalNeutralLabels": [
+    {
+      "key": "gujarat",
+      "label": "▸ Disability assessment centres and boards (8 entries)"
+    },
+    {
+      "key": "karnataka",
+      "label": "▸ Disability assessment centres and boards (1 entries)"
+    },
+    {
+      "key": "uttar-pradesh",
+      "label": "▸ Disability assessment centres and boards (62 entries)"
+    }
+  ]
+}

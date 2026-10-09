@@ -1,0 +1,30 @@
+{
+  "tests": 108,
+  "typecheck": "pass",
+  "schemaPublishGate": "pass; all items draft and 0 human-verified",
+  "builds": [
+    {
+      "build": "normal",
+      "noReviewCode": true,
+      "noDraftStateData": true,
+      "noDraftMcc": true,
+      "markers": [
+        "tn-manual-review",
+        "eligibility-manual-review",
+        "uttar-pradesh-manual-eligibility",
+        "gujarat-manual-eligibility",
+        "karnataka-manual-eligibility"
+      ]
+    },
+    {
+      "build": "preview",
+      "noReviewCode": true,
+      "allFiveDraftGuides": true,
+      "draftMccPresent": true,
+      "noindex": true
+    }
+  ],
+  "requiredBlindReview": "clear",
+  "reactChecklist": "hooks unconditional, timer cleanup retained, existing Tailwind primitives/accessibility controls preserved, no network/persistence additions",
+  "elapsedLocalWorkMinutes": 82
+}

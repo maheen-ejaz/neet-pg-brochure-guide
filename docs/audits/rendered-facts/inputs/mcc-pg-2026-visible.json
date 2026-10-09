@@ -1,0 +1,1350 @@
+{
+  "key": "mcc-pg-2026",
+  "kind": "national",
+  "snapshot": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "dataSha256": "318e9875bb503d3ad8bbc2808861adbafad0dd1b4e09b72258e54e4f514c1eda",
+  "source": {
+    "dir": "brochures/mcc/2026",
+    "pageCount": 4,
+    "scanned": false,
+    "languages": [
+      "English"
+    ],
+    "documents": []
+  },
+  "records": [
+    {
+      "itemId": "meta",
+      "recordPath": "meta",
+      "sourcePages": [
+        1,
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00001",
+          "path": "meta.title",
+          "value": "Tentative schedule for online counselling (allotment process) for NEET 50% AIQ and 100% Deemed/Central Universities/AFMS (registration only) for PG courses, academic year 2026",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00002",
+          "path": "meta.shortTitle",
+          "value": "All India Quota counselling (MCC) 2026",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00003",
+          "path": "meta.authority",
+          "value": "Medical Counselling Committee (MCC), Directorate General of Health Services (DGHS)",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00004",
+          "path": "meta.scope[0]",
+          "value": "50% All India Quota (AIQ) seats",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00005",
+          "path": "meta.scope[1]",
+          "value": "100% seats in Deemed and Central Universities",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00006",
+          "path": "meta.scope[2]",
+          "value": "AFMS: registration only",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00007",
+          "path": "meta.courses[0]",
+          "value": "clinical",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00008",
+          "path": "meta.tentative",
+          "value": true,
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00009",
+          "path": "meta.documentDate",
+          "value": "2026-10-07",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00010",
+          "path": "meta.documentDateLabel",
+          "value": "Generated from eOffice",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00011",
+          "path": "meta.officialWebsites[0]",
+          "value": "https://mcc.nic.in",
+          "surface": "header/home"
+        }
+      ]
+    },
+    {
+      "itemId": "round-1",
+      "recordPath": "rounds[0]",
+      "sourcePages": [
+        1
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00012",
+          "path": "rounds[0].name",
+          "value": "Round 1",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00013",
+          "path": "rounds[0].stages[0].key",
+          "value": "seatMatrix",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00014",
+          "path": "rounds[0].stages[0].label",
+          "value": "Seat matrix verification by colleges",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00015",
+          "path": "rounds[0].stages[0].start",
+          "value": "2026-10-10",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00016",
+          "path": "rounds[0].stages[0].end",
+          "value": "2026-10-12",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00017",
+          "path": "rounds[0].stages[1].key",
+          "value": "registration",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00018",
+          "path": "rounds[0].stages[1].label",
+          "value": "Registration",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00019",
+          "path": "rounds[0].stages[1].start",
+          "value": "2026-10-12",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00020",
+          "path": "rounds[0].stages[1].end",
+          "value": "2026-10-21",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00021",
+          "path": "rounds[0].stages[1].endTime",
+          "value": "12:00 noon",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00022",
+          "path": "rounds[0].stages[2].key",
+          "value": "payment",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00023",
+          "path": "rounds[0].stages[2].label",
+          "value": "Payment closes",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00024",
+          "path": "rounds[0].stages[2].start",
+          "value": "2026-10-21",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00025",
+          "path": "rounds[0].stages[2].endTime",
+          "value": "3:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00026",
+          "path": "rounds[0].stages[3].key",
+          "value": "choiceFilling",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00027",
+          "path": "rounds[0].stages[3].label",
+          "value": "Choice filling",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00028",
+          "path": "rounds[0].stages[3].start",
+          "value": "2026-10-13",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00029",
+          "path": "rounds[0].stages[3].end",
+          "value": "2026-10-22",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00030",
+          "path": "rounds[0].stages[3].endTime",
+          "value": "10:00 AM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00031",
+          "path": "rounds[0].stages[4].key",
+          "value": "choiceLocking",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00032",
+          "path": "rounds[0].stages[4].label",
+          "value": "Choice locking",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00033",
+          "path": "rounds[0].stages[4].start",
+          "value": "2026-10-21",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00034",
+          "path": "rounds[0].stages[4].end",
+          "value": "2026-10-22",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00035",
+          "path": "rounds[0].stages[4].startTime",
+          "value": "4:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00036",
+          "path": "rounds[0].stages[4].endTime",
+          "value": "10:00 AM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00037",
+          "path": "rounds[0].stages[5].key",
+          "value": "processing",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00038",
+          "path": "rounds[0].stages[5].label",
+          "value": "Seat allotment processing",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00039",
+          "path": "rounds[0].stages[5].start",
+          "value": "2026-10-22",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00040",
+          "path": "rounds[0].stages[5].end",
+          "value": "2026-10-23",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00041",
+          "path": "rounds[0].stages[6].key",
+          "value": "result",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00042",
+          "path": "rounds[0].stages[6].label",
+          "value": "Result",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00043",
+          "path": "rounds[0].stages[6].start",
+          "value": "2026-10-24",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00044",
+          "path": "rounds[0].stages[7].key",
+          "value": "reporting",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00045",
+          "path": "rounds[0].stages[7].label",
+          "value": "Reporting / joining",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00046",
+          "path": "rounds[0].stages[7].start",
+          "value": "2026-10-26",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00047",
+          "path": "rounds[0].stages[7].end",
+          "value": "2026-11-02",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00048",
+          "path": "rounds[0].stages[8].key",
+          "value": "dataVerification",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00049",
+          "path": "rounds[0].stages[8].label",
+          "value": "Joined-candidate data verified by colleges and shared with MCC",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00050",
+          "path": "rounds[0].stages[8].start",
+          "value": "2026-11-03",
+          "surface": "round timeline (including expandable college stages)"
+        }
+      ]
+    },
+    {
+      "itemId": "round-2",
+      "recordPath": "rounds[1]",
+      "sourcePages": [
+        2
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00051",
+          "path": "rounds[1].name",
+          "value": "Round 2",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00052",
+          "path": "rounds[1].stages[0].key",
+          "value": "seatMatrix",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00053",
+          "path": "rounds[1].stages[0].label",
+          "value": "Seat matrix verification by colleges",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00054",
+          "path": "rounds[1].stages[0].start",
+          "value": "2026-11-06",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00055",
+          "path": "rounds[1].stages[0].end",
+          "value": "2026-11-07",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00056",
+          "path": "rounds[1].stages[0].endTime",
+          "value": "1:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00057",
+          "path": "rounds[1].stages[1].key",
+          "value": "registration",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00058",
+          "path": "rounds[1].stages[1].label",
+          "value": "Registration",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00059",
+          "path": "rounds[1].stages[1].start",
+          "value": "2026-11-06",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00060",
+          "path": "rounds[1].stages[1].end",
+          "value": "2026-11-11",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00061",
+          "path": "rounds[1].stages[1].endTime",
+          "value": "12:00 noon",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00062",
+          "path": "rounds[1].stages[2].key",
+          "value": "payment",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00063",
+          "path": "rounds[1].stages[2].label",
+          "value": "Payment closes",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00064",
+          "path": "rounds[1].stages[2].start",
+          "value": "2026-11-11",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00065",
+          "path": "rounds[1].stages[2].endTime",
+          "value": "3:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00066",
+          "path": "rounds[1].stages[3].key",
+          "value": "choiceFilling",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00067",
+          "path": "rounds[1].stages[3].label",
+          "value": "Choice filling",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00068",
+          "path": "rounds[1].stages[3].start",
+          "value": "2026-11-07",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00069",
+          "path": "rounds[1].stages[3].end",
+          "value": "2026-11-12",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00070",
+          "path": "rounds[1].stages[3].endTime",
+          "value": "10:00 AM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00071",
+          "path": "rounds[1].stages[4].key",
+          "value": "choiceLocking",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00072",
+          "path": "rounds[1].stages[4].label",
+          "value": "Choice locking",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00073",
+          "path": "rounds[1].stages[4].start",
+          "value": "2026-11-11",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00074",
+          "path": "rounds[1].stages[4].end",
+          "value": "2026-11-12",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00075",
+          "path": "rounds[1].stages[4].startTime",
+          "value": "4:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00076",
+          "path": "rounds[1].stages[4].endTime",
+          "value": "10:00 AM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00077",
+          "path": "rounds[1].stages[5].key",
+          "value": "processing",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00078",
+          "path": "rounds[1].stages[5].label",
+          "value": "Seat allotment processing",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00079",
+          "path": "rounds[1].stages[5].start",
+          "value": "2026-11-12",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00080",
+          "path": "rounds[1].stages[5].end",
+          "value": "2026-11-13",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00081",
+          "path": "rounds[1].stages[6].key",
+          "value": "result",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00082",
+          "path": "rounds[1].stages[6].label",
+          "value": "Result",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00083",
+          "path": "rounds[1].stages[6].start",
+          "value": "2026-11-14",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00084",
+          "path": "rounds[1].stages[7].key",
+          "value": "reporting",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00085",
+          "path": "rounds[1].stages[7].label",
+          "value": "Reporting / joining",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00086",
+          "path": "rounds[1].stages[7].start",
+          "value": "2026-11-16",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00087",
+          "path": "rounds[1].stages[7].end",
+          "value": "2026-11-23",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00088",
+          "path": "rounds[1].stages[8].key",
+          "value": "dataVerification",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00089",
+          "path": "rounds[1].stages[8].label",
+          "value": "Joined-candidate data verified by colleges and shared by MCC",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00090",
+          "path": "rounds[1].stages[8].start",
+          "value": "2026-11-24",
+          "surface": "round timeline (including expandable college stages)"
+        }
+      ]
+    },
+    {
+      "itemId": "round-3",
+      "recordPath": "rounds[2]",
+      "sourcePages": [
+        3
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00091",
+          "path": "rounds[2].name",
+          "value": "Round 3",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00092",
+          "path": "rounds[2].stages[0].key",
+          "value": "seatMatrix",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00093",
+          "path": "rounds[2].stages[0].label",
+          "value": "Seat matrix verification by colleges",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00094",
+          "path": "rounds[2].stages[0].start",
+          "value": "2026-11-25",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00095",
+          "path": "rounds[2].stages[0].end",
+          "value": "2026-11-26",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00096",
+          "path": "rounds[2].stages[1].key",
+          "value": "registration",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00097",
+          "path": "rounds[2].stages[1].label",
+          "value": "Registration",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00098",
+          "path": "rounds[2].stages[1].start",
+          "value": "2026-11-26",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00099",
+          "path": "rounds[2].stages[1].end",
+          "value": "2026-12-01",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00100",
+          "path": "rounds[2].stages[1].endTime",
+          "value": "12:00 noon",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00101",
+          "path": "rounds[2].stages[2].key",
+          "value": "payment",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00102",
+          "path": "rounds[2].stages[2].label",
+          "value": "Payment closes",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00103",
+          "path": "rounds[2].stages[2].start",
+          "value": "2026-12-01",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00104",
+          "path": "rounds[2].stages[2].endTime",
+          "value": "3:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00105",
+          "path": "rounds[2].stages[3].key",
+          "value": "choiceFilling",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00106",
+          "path": "rounds[2].stages[3].label",
+          "value": "Choice filling",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00107",
+          "path": "rounds[2].stages[3].start",
+          "value": "2026-11-27",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00108",
+          "path": "rounds[2].stages[3].end",
+          "value": "2026-12-02",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00109",
+          "path": "rounds[2].stages[3].endTime",
+          "value": "10:00 AM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00110",
+          "path": "rounds[2].stages[4].key",
+          "value": "choiceLocking",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00111",
+          "path": "rounds[2].stages[4].label",
+          "value": "Choice locking",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00112",
+          "path": "rounds[2].stages[4].start",
+          "value": "2026-12-01",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00113",
+          "path": "rounds[2].stages[4].end",
+          "value": "2026-12-02",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00114",
+          "path": "rounds[2].stages[4].startTime",
+          "value": "4:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00115",
+          "path": "rounds[2].stages[4].endTime",
+          "value": "10:00 AM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00116",
+          "path": "rounds[2].stages[5].key",
+          "value": "processing",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00117",
+          "path": "rounds[2].stages[5].label",
+          "value": "Seat allotment processing",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00118",
+          "path": "rounds[2].stages[5].start",
+          "value": "2026-12-02",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00119",
+          "path": "rounds[2].stages[5].end",
+          "value": "2026-12-03",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00120",
+          "path": "rounds[2].stages[6].key",
+          "value": "result",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00121",
+          "path": "rounds[2].stages[6].label",
+          "value": "Result",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00122",
+          "path": "rounds[2].stages[6].start",
+          "value": "2026-12-04",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00123",
+          "path": "rounds[2].stages[7].key",
+          "value": "reporting",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00124",
+          "path": "rounds[2].stages[7].label",
+          "value": "Reporting",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00125",
+          "path": "rounds[2].stages[7].start",
+          "value": "2026-12-05",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00126",
+          "path": "rounds[2].stages[7].end",
+          "value": "2026-12-12",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00127",
+          "path": "rounds[2].stages[8].key",
+          "value": "dataVerification",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00128",
+          "path": "rounds[2].stages[8].label",
+          "value": "Joined-candidate data verified by colleges and shared by MCC",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00129",
+          "path": "rounds[2].stages[8].start",
+          "value": "2026-12-14",
+          "surface": "round timeline (including expandable college stages)"
+        }
+      ]
+    },
+    {
+      "itemId": "round-stray",
+      "recordPath": "rounds[3]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00130",
+          "path": "rounds[3].name",
+          "value": "Online stray vacancy round",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00131",
+          "path": "rounds[3].stages[0].key",
+          "value": "seatMatrix",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00132",
+          "path": "rounds[3].stages[0].label",
+          "value": "Seat matrix verification by colleges",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00133",
+          "path": "rounds[3].stages[0].start",
+          "value": "2026-12-15",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00134",
+          "path": "rounds[3].stages[1].key",
+          "value": "registration",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00135",
+          "path": "rounds[3].stages[1].label",
+          "value": "Registration",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00136",
+          "path": "rounds[3].stages[1].start",
+          "value": "2026-12-16",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00137",
+          "path": "rounds[3].stages[1].end",
+          "value": "2026-12-21",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00138",
+          "path": "rounds[3].stages[1].endTime",
+          "value": "12:00 noon",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00139",
+          "path": "rounds[3].stages[2].key",
+          "value": "payment",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00140",
+          "path": "rounds[3].stages[2].label",
+          "value": "Payment closes",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00141",
+          "path": "rounds[3].stages[2].start",
+          "value": "2026-12-21",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00142",
+          "path": "rounds[3].stages[2].endTime",
+          "value": "3:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00143",
+          "path": "rounds[3].stages[3].key",
+          "value": "choiceFilling",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00144",
+          "path": "rounds[3].stages[3].label",
+          "value": "Choice filling",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00145",
+          "path": "rounds[3].stages[3].start",
+          "value": "2026-12-16",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00146",
+          "path": "rounds[3].stages[3].end",
+          "value": "2026-12-21",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00147",
+          "path": "rounds[3].stages[3].endTime",
+          "value": "11:55 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00148",
+          "path": "rounds[3].stages[4].key",
+          "value": "choiceLocking",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00149",
+          "path": "rounds[3].stages[4].label",
+          "value": "Choice locking",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00150",
+          "path": "rounds[3].stages[4].start",
+          "value": "2026-12-21",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00151",
+          "path": "rounds[3].stages[4].end",
+          "value": "2026-12-21",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00152",
+          "path": "rounds[3].stages[4].startTime",
+          "value": "4:00 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00153",
+          "path": "rounds[3].stages[4].endTime",
+          "value": "11:55 PM",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00154",
+          "path": "rounds[3].stages[5].key",
+          "value": "processing",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00155",
+          "path": "rounds[3].stages[5].label",
+          "value": "Seat allotment processing",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00156",
+          "path": "rounds[3].stages[5].start",
+          "value": "2026-12-22",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00157",
+          "path": "rounds[3].stages[5].end",
+          "value": "2026-12-23",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00158",
+          "path": "rounds[3].stages[6].key",
+          "value": "result",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00159",
+          "path": "rounds[3].stages[6].label",
+          "value": "Result",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00160",
+          "path": "rounds[3].stages[6].start",
+          "value": "2026-12-24",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00161",
+          "path": "rounds[3].stages[7].key",
+          "value": "reporting",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00162",
+          "path": "rounds[3].stages[7].label",
+          "value": "Reporting",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00163",
+          "path": "rounds[3].stages[7].start",
+          "value": "2026-12-24",
+          "surface": "round timeline (including expandable college stages)"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00164",
+          "path": "rounds[3].stages[7].end",
+          "value": "2026-12-31",
+          "surface": "round timeline (including expandable college stages)"
+        }
+      ]
+    },
+    {
+      "itemId": "ms-session",
+      "recordPath": "milestones[0]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00165",
+          "path": "milestones[0].label",
+          "value": "PG academic session 2026 begins",
+          "surface": "academic session"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00166",
+          "path": "milestones[0].date",
+          "value": "2026-11-20",
+          "surface": "academic session"
+        }
+      ]
+    },
+    {
+      "itemId": "note-tentative",
+      "recordPath": "notes[0]",
+      "sourcePages": [
+        1
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00167",
+          "path": "notes[0].title",
+          "value": "These dates are tentative",
+          "surface": "schedule notes"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00168",
+          "path": "notes[0].detail",
+          "value": "MCC calls this a tentative schedule, so the dates can change. Check MCC's website for the final dates before each round.",
+          "surface": "schedule notes"
+        }
+      ]
+    },
+    {
+      "itemId": "note-server-time",
+      "recordPath": "notes[1]",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00169",
+          "path": "notes[1].title",
+          "value": "All times are MCC server time",
+          "surface": "schedule notes"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00170",
+          "path": "notes[1].detail",
+          "value": "Registration closes at 12:00 noon, but payment stays open until 3:00 PM the same day. In Rounds 1 to 3, choice locking opens at 4:00 PM the day before choice filling ends.",
+          "surface": "schedule notes"
+        }
+      ]
+    },
+    {
+      "itemId": "note-round2-seat-matrix",
+      "recordPath": "notes[2]",
+      "sourcePages": [
+        2
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00171",
+          "path": "notes[2].title",
+          "value": "Round 2 seat matrix closes at 1:00 PM",
+          "surface": "schedule notes"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00172",
+          "path": "notes[2].detail",
+          "value": "Colleges verify the Round 2 seat matrix on 6th November 2026 and up to 1:00 PM on 7th November 2026.",
+          "surface": "schedule notes"
+        }
+      ]
+    },
+    {
+      "itemId": "note-stray-time",
+      "recordPath": "notes[3]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00173",
+          "path": "notes[3].title",
+          "value": "Stray round: choices until 11:55 PM",
+          "surface": "schedule notes"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00174",
+          "path": "notes[3].detail",
+          "value": "In the stray vacancy round, choice filling and locking close at 11:55 PM on 21st December 2026, not 10:00 AM as in Rounds 1 to 3. Choice locking opens at 4:00 PM the same day. The result and reporting both start on 24th December 2026.",
+          "surface": "schedule notes"
+        }
+      ]
+    },
+    {
+      "itemId": "note-session-start",
+      "recordPath": "notes[4]",
+      "sourcePages": [
+        2,
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00175",
+          "path": "notes[4].title",
+          "value": "The session starts during Round 2 reporting",
+          "surface": "schedule notes"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00176",
+          "path": "notes[4].detail",
+          "value": "The PG academic session begins on 20th November 2026, while Round 2 reporting runs until 23rd November 2026. By these dates, Round 3 and stray-round candidates join after classes have begun.",
+          "surface": "schedule notes"
+        }
+      ]
+    },
+    {
+      "itemId": "note-weekends",
+      "recordPath": "notes[5]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00177",
+          "path": "notes[5].title",
+          "value": "Colleges are advised to work weekends and holidays",
+          "surface": "schedule notes"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00178",
+          "path": "notes[5].detail",
+          "value": "Participating colleges are advised to treat all Saturdays, Sundays and gazetted holidays as working days, to keep to the schedule.",
+          "surface": "schedule notes"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-mds",
+      "recordPath": "gaps[0]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00179",
+          "path": "gaps[0].title",
+          "value": "MDS",
+          "surface": "schedule gaps"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00180",
+          "path": "gaps[0].detail",
+          "value": "This schedule doesn't mention MDS.",
+          "surface": "schedule gaps"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-rules",
+      "recordPath": "gaps[1]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00181",
+          "path": "gaps[1].title",
+          "value": "Eligibility, fees and round rules",
+          "surface": "schedule gaps"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00182",
+          "path": "gaps[1].detail",
+          "value": "Eligibility, registration fees, security deposits, upgrade and exit rules aren't in this schedule.",
+          "surface": "schedule gaps"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-seats",
+      "recordPath": "gaps[2]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00183",
+          "path": "gaps[2].title",
+          "value": "Seat matrix",
+          "surface": "schedule gaps"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00184",
+          "path": "gaps[2].detail",
+          "value": "The number of seats in each round isn't in this schedule.",
+          "surface": "schedule gaps"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-state",
+      "recordPath": "gaps[3]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00185",
+          "path": "gaps[3].title",
+          "value": "State quota counselling",
+          "surface": "schedule gaps"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00186",
+          "path": "gaps[3].detail",
+          "value": "State-quota counselling dates aren't in this schedule.",
+          "surface": "schedule gaps"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-reporting-hours",
+      "recordPath": "gaps[4]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "mcc-pg-2026:F00187",
+          "path": "gaps[4].title",
+          "value": "Reporting hours",
+          "surface": "schedule gaps"
+        },
+        {
+          "fieldId": "mcc-pg-2026:F00188",
+          "path": "gaps[4].detail",
+          "value": "The schedule gives reporting dates but no daily hours or closing time. Check with your allotted college.",
+          "surface": "schedule gaps"
+        }
+      ]
+    }
+  ],
+  "fieldCount": 188,
+  "derivedSurfaces": [
+    "next deadline and stage status",
+    "IST urgency/countdown",
+    "schedule course-warning and source date label"
+  ],
+  "uiTemplates": [
+    {
+      "id": "mcc-course-scope",
+      "literal": "For NEET-PG courses. This schedule doesn't mention MDS.",
+      "condition": "always"
+    },
+    {
+      "id": "mcc-time",
+      "literal": "Times are MCC server time. Dates are tentative.",
+      "condition": "next date and tentative meta"
+    },
+    {
+      "id": "mcc-official-link",
+      "literal": "MCC website: <officialWebsites>; link title says not printed on schedule.",
+      "condition": "website nav link"
+    }
+  ]
+}

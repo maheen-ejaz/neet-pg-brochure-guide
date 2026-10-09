@@ -34,9 +34,9 @@ guide per state:
 
 | State | File | Items | Status |
 |---|---|---|---|
-| Uttar Pradesh 2026 | `data/states/uttar-pradesh-2026.json` | 173 | Draft, 0 verified by a human. Passed 3 independent verification rounds + the Codex audit. |
-| Gujarat 2026-27 | `data/states/gujarat-2026.json` | 119 | Draft, 0 verified by a human. Built from 12 current-year documents merged into one 81-page source. Passed 3 verification rounds + the Codex audit. |
-| Karnataka 2026-27 | `data/states/karnataka-2026.json` | 190 | Draft, 0 verified by a human. KEA PGET 2026 Information Bulletin (68 pages, 14-08-2026), live for MDS; PG Medical takes effect after MCC's announcement. Passed 3 verification rounds + the Codex audit. |
+| Uttar Pradesh 2026 | `data/states/uttar-pradesh-2026.json` | 174 | Draft, 0 verified by a human. Passed 3 independent verification rounds + the Codex audit. |
+| Gujarat 2026-27 | `data/states/gujarat-2026.json` | 121 | Draft, 0 verified by a human. Built from 12 current-year documents merged into one 81-page source. Passed 3 verification rounds + the Codex audit. |
+| Karnataka 2026-27 | `data/states/karnataka-2026.json` | 192 | Draft, 0 verified by a human. KEA PGET 2026 Information Bulletin (68 pages, 14-08-2026), live for MDS; PG Medical takes effect after MCC's announcement. Passed 3 verification rounds + the Codex audit. |
 | Tamil Nadu 2026-27 | `data/states/tamil-nadu-2026.json` | 440 | Draft, 0 human-verified. Government-quota MD/MS/Diploma, Management/NRI and service-candidate DNB prospectuses, 149 merged pages. Repeated blind source audits and independent correction checks cleared major findings. |
 | Kerala 2026-27 | `data/states/kerala-2026.json` | 170 | Draft, 0 human-verified. Medical PG Degree prospectus including its Government Order and annexures, 87 PDF pages. Four blind source audits and independent correction checks cleared major findings. |
 | MCC All India Quota 2026 | `data/national/mcc-pg-2026.json` | 17 | Draft, 0 verified by a human. Tentative MCC schedule (4 pages, generated 07-10-2026): NEET-PG 50% AIQ + 100% deemed/central universities, AFMS registration only. Passed 1 independent check (all 35 stages confirmed). Review at `/review/national/mcc-pg-2026`. |
@@ -74,6 +74,30 @@ and the MCC timeline as drafts. The live preview still has the original three st
 Deploy the preview from a clean `main`: `npm run build:preview && netlify deploy --prod --dir dist --site fb03fe2b-69e5-497f-a789-fcfe1e8167e7`.
 Deploys: `6ac5f6e5567267092e0daaac` (0597da2, first), `6ac610cc33ebd82b413cc4dd` (9f8fa69, + Karnataka),
 `6ac61273d294c43882eb2ea3` (4639518, DD-MM-YYYY), **`6ac6faa756c7dc88da40997e` (9458efe, Codex fixes) = currently live**.
+
+
+## Platform fact audit (09-10-2026)
+
+- [Claim ledger](audits/rendered-facts/README.md) independently checks all five integrated guides and MCC:
+  2,906 frozen inventory fields, 6,607 atomic field claims and 182 supplemental UI/derived claims.
+  The three contradicted data claims are corrected; source ambiguities remain explicit.
+- [All 97 email questions](audits/rendered-facts/email-reconciliation.json) map to platform fields:
+  17 source-resolved, 15 manual candidate checks, 36 authority questions, 25 additional-current-source needs,
+  2 unreadable scans and 2 app-metadata points. The historical original register is preserved.
+- The profile does not establish every qualification/route/disqualifier. All five guides now retain a manual
+  eligibility gate; incomplete checks do not produce definitive category or deposit advice. Gujarat's NRI
+  processing charge and Karnataka's fee groups are visible without presenting an incomplete personal total.
+- Printed closing minutes control MCC stage status and next deadlines, including live periodic refresh.
+  Closing times remain visible in collapsed college steps; the app discloses its IST assumption for server time.
+  Board counts follow the selected seat view and describe entries, including repeated programme listings.
+- Validation: 108 tests, typecheck, schema/publish validation and both builds pass. Normal builds omit drafts;
+  preview stays noindexed; both exclude review code. Browser clock/profile/count checks pass. One isolated,
+  blind read-only implementation/source reviewer cleared the corrected scope. Human flags remain false.
+- **Current release hold:** the owner asked the presentation task to keep the new design on localhost.
+  Preserve its canonical server on port 5173. The integrated changes remain local/merged under that hold;
+  this audit does not authorize lifting it. The missing declared Netlify binding is still a separate access gap.
+- Source conflicts need authoritative answers, missing-current-source cases need the cited documents, and
+  scan questions need clearer originals before those claims can be independently confirmed or published.
 
 ## Where we left off (08-10-2026)
 

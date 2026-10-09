@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { schedules } from "../../data/schedules";
 import { comparisonEnabled, states } from "../../data/states";
 import { minutesNow, nextDeadline, scheduleDocs, todayIso } from "../schedule";
-import { DeadlineBadge } from "../components/DeadlineBadge";
+import { DeadlineBadge, useNow } from "../components/DeadlineBadge";
 import { Cite, SourceDocsContext, StatusChip } from "../components/ui";
 import { formatDate } from "../text";
 import { checkEligibility, type Verdict } from "../../engine/eligibility";
@@ -20,6 +20,7 @@ const verdictOrder: Record<Verdict["status"], number> = {
 };
 
 export function HomePage() {
+  const now = useNow();
   const { profile } = useProfile();
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState("all");
@@ -357,7 +358,7 @@ export function HomePage() {
         </h2>
         <div className="grid gap-4 lg:grid-cols-2">
           {schedules.map(({ key, schedule }) => {
-            const next = nextDeadline(schedule, todayIso(), minutesNow());
+            const next = nextDeadline(schedule, todayIso(now), minutesNow(now));
             const wrongCourse =
               profile?.courseType &&
               !schedule.meta.courses.includes(profile.courseType);
@@ -401,7 +402,7 @@ export function HomePage() {
                       </p>
                       <p className="mt-1 text-sm">
                         {formatDate(next.date)}
-                        {next.time ? `, ${next.time} IST` : ""}
+                        {next.time ? `, ${next.time}` : ""}
                         <Cite pages={next.round.sourcePages} />
                       </p>
                       <div className="mt-2">
@@ -413,6 +414,7 @@ export function HomePage() {
                           }
                         />
                       </div>
+                      <p className="mt-2 text-xs text-soft">App clock: IST. Confirm server time on MCC.</p>
                     </div>
                   ) : (
                     <p className="mt-4 text-sm text-soft">

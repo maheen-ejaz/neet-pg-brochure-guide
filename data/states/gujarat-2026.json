@@ -708,6 +708,19 @@
           "meaning": "NRI quota (NQ) seats, allotted on inter-se merit among candidates who applied for NRI seats."
         }
       ]
+    },
+    "manualReview": {
+      "id": "gujarat-manual-eligibility",
+      "sourcePages": [
+        4,
+        21,
+        22,
+        26
+      ],
+      "verified": false,
+      "title": "Confirm qualification and the exact Gujarat route",
+      "detail": "Your profile does not establish NEET qualification, the qualifying university route, the required 12th-standard board/group, or all NRI and disability conditions. Confirm these against the cited rules and your documents before relying on eligibility.",
+      "severity": "warning"
     }
   },
   "reservation": {
@@ -783,7 +796,7 @@
         ],
         "verified": false,
         "title": "Surgical specialities: PwBD suitability",
-        "detail": "Under the NMC 2026 guidelines, the board rates you Eligible, Eligible with reasonable accommodation, or Ineligible for each speciality. For surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Traumatology, Emergency Medicine, PMR, Sports Medicine): Upper-limb disability and multiple disabilities are generally not suitable. Speech and language disability is not suitable. Lower-limb disability, and conditions such as cerebral palsy or muscular dystrophy, may be suitable if you show the needed functional competencies. Visual impairment is suitable only if corrective lenses alone bring it below 40%. Hearing impairment is suitable if you function with hearing aids or a cochlear implant and have acceptable, intelligible speech. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders are decided case by case. Chronic neurological conditions are suitable if stable, but not with uncontrolled seizures, frequent relapses, progressive neurodegeneration or severe impairment.",
+        "detail": "Under the NMC 2026 guidelines, the board rates you Eligible, Eligible with reasonable accommodation, or Ineligible for each speciality. For surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Traumatology and Surgery, Emergency Medicine, PMR, Sports Medicine): Upper-limb disability and multiple disabilities are generally not suitable. Speech and language disability is not suitable. Lower-limb disability, and conditions such as cerebral palsy or muscular dystrophy, may be suitable if you show the needed functional competencies. Visual impairment is suitable only if corrective lenses alone bring it below 40%. Hearing impairment is suitable if you function with hearing aids or a cochlear implant and have acceptable, intelligible speech. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders are decided case by case. Chronic neurological conditions are suitable if stable, but not with uncontrolled seizures, frequent relapses, progressive neurodegeneration or severe impairment.",
         "severity": "warning"
       },
       {
@@ -919,7 +932,19 @@
         "detail": "Pay tuition by cash or DD at a designated Axis Bank branch, or online, within the deadline. For admission you need a receipt for one term (6 months) of fees.",
         "severity": "critical"
       }
-    ]
+    ],
+    "calculationNote": {
+      "id": "gujarat-fee-route-check",
+      "sourcePages": [
+        4,
+        5,
+        24
+      ],
+      "verified": false,
+      "title": "Check the fees for your route",
+      "detail": "The PIN payment includes a ₹3,000 non-refundable registration fee and a ₹25,000 refundable security deposit. NRI applicants also pay a separate ₹25,000 non-refundable processing fee by demand draft. Read the NRI payment and college tuition rules below before planning your total.",
+      "severity": "warning"
+    }
   },
   "choiceFilling": [
     {
@@ -1801,24 +1826,33 @@
   "gaps": [
     {
       "id": "gap-schedule",
-      "sourcePages": [],
+      "sourcePages": [
+        1,
+        4
+      ],
       "verified": false,
       "title": "Round schedule",
-      "detail": "As of 6th October 2026, only the registration dates are out. Check medadmgujarat.org for merit list, choice filling and allotment dates."
+      "detail": "The supplied 2026-27 documents give PIN purchase, registration/upload and verification dates. Merit-list, choice-filling and allotment dates are not included. Check medadmgujarat.org for current notices."
     },
     {
       "id": "gap-seats",
-      "sourcePages": [],
+      "sourcePages": [
+        1,
+        4
+      ],
       "verified": false,
       "title": "2026-27 seat matrix",
-      "detail": "As of 6th October 2026, the 2026-27 seat list isn't out. The site only has 2025-26."
+      "detail": "No 2026-27 seat matrix is included in these supplied documents. Get the current specialty, college and quota seat list from the official website."
     },
     {
       "id": "gap-fees",
-      "sourcePages": [],
+      "sourcePages": [
+        1,
+        4
+      ],
       "verified": false,
       "title": "2026-27 tuition fees",
-      "detail": "As of 6th October 2026, the 2026-27 college-wise fees aren't out. The site only has 2025-26."
+      "detail": "No 2026-27 college-wise tuition-fee schedule is included in these supplied documents. Check the official website for the current fee notice."
     },
     {
       "id": "gap-reservation",
@@ -1850,10 +1884,13 @@
     },
     {
       "id": "gap-mds",
-      "sourcePages": [],
+      "sourcePages": [
+        1,
+        4
+      ],
       "verified": false,
       "title": "MDS admissions",
-      "detail": "As of 6th October 2026, there's no 2026-27 MDS notice."
+      "detail": "The supplied registration notice is for MD/MS/Diploma and does not cover MDS. Get the current MDS notice from the official website."
     }
   ]
 }

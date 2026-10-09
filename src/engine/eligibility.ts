@@ -136,6 +136,7 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
   for (const rule of brochure.eligibility.rules) {
     if (rule.condition === null) {
       reasons.push({ rule, match: "manual", missing: [] });
+      if (rule.effect.type !== "note") blockingUnknown = true;
       continue;
     }
     const { value, missing: m } = evaluate(rule.condition, facts);
@@ -234,7 +235,7 @@ export function adviseDeposit(verdict: Verdict, brochure: Brochure): DepositAdvi
   // or identify a course-specific or concession-specific charge.
   if (brochure.fees.calculationNote) return { recommended: null, alternatives: [] };
   const type = verdict.collegeType;
-  if (!type || verdict.sectors.length === 0) return { recommended: null, alternatives: [] };
+  if (!type || verdict.status === "incomplete" || verdict.sectors.length === 0) return { recommended: null, alternatives: [] };
   const tiers = [...brochure.fees.securityDeposits].sort((a, b) => a.amountInr - b.amountInr);
   const coverage = (t: (typeof tiers)[number]) =>
     verdict.sectors.filter((s) => t.allows.some((a) => a.sector === s && a.collegeType === type));

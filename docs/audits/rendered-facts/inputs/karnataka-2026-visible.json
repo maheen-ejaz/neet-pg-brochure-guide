@@ -1,0 +1,5703 @@
+{
+  "key": "karnataka-2026",
+  "kind": "states",
+  "snapshot": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "dataSha256": "f69c764d71dd497d1fc3c76197a1778019cb028878b329b065c89eee0b660ce2",
+  "source": {
+    "dir": "brochures/karnataka/2026",
+    "pageCount": 68,
+    "scanned": false,
+    "languages": [
+      "English",
+      "Kannada"
+    ],
+    "documents": []
+  },
+  "records": [
+    {
+      "itemId": "meta",
+      "recordPath": "meta",
+      "sourcePages": [
+        1,
+        3,
+        7,
+        9,
+        14,
+        21,
+        42,
+        68
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00001",
+          "path": "meta.state",
+          "value": "Karnataka",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "karnataka-2026:F00002",
+          "path": "meta.year",
+          "value": 2026,
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "karnataka-2026:F00003",
+          "path": "meta.authority",
+          "value": "Karnataka Examinations Authority (KEA), Bengaluru, for the Government of Karnataka and the Directorate of Medical Education",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "karnataka-2026:F00004",
+          "path": "meta.officialWebsites[0]",
+          "value": "https://cetonline.karnataka.gov.in/kea/pget2026",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "karnataka-2026:F00005",
+          "path": "meta.coursesCovered[0]",
+          "value": "MDS",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "karnataka-2026:F00006",
+          "path": "meta.coursesCovered[1]",
+          "value": "MD/MS/Diploma (after MCC's announcement)",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "karnataka-2026:F00007",
+          "path": "meta.seatTerms.government",
+          "value": "Government seats (G), including the Government share in private colleges",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "karnataka-2026:F00008",
+          "path": "meta.seatTerms.management",
+          "value": "Private (GMP, OPN, minority) and Others (Q) seats",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "karnataka-2026:F00009",
+          "path": "meta.seatTerms.nri",
+          "value": "NRI seats (N)",
+          "surface": "header/home"
+        }
+      ]
+    },
+    {
+      "itemId": "eligibility-in-service-label",
+      "recordPath": "eligibility.inServiceLabel",
+      "sourcePages": [
+        27
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00010",
+          "path": "eligibility.inServiceLabel.label",
+          "value": "In-service candidate under the Government / DME of Karnataka (detailed in-service guidelines will be published later)",
+          "surface": "profile service question"
+        }
+      ]
+    },
+    {
+      "itemId": "eligibility-quota-terms",
+      "recordPath": "eligibility.quotaTerms",
+      "sourcePages": [
+        14,
+        18,
+        19
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00011",
+          "path": "eligibility.quotaTerms.terms[0].code",
+          "value": "Government",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00012",
+          "path": "eligibility.quotaTerms.terms[0].meaning",
+          "value": "State-quota seats in government colleges, and the government's share of seats in private colleges.",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00013",
+          "path": "eligibility.quotaTerms.terms[1].code",
+          "value": "GMP",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00014",
+          "path": "eligibility.quotaTerms.terms[1].meaning",
+          "value": "Private-college seats for candidates under clause b or c (10 years of school in Karnataka).",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00015",
+          "path": "eligibility.quotaTerms.terms[2].code",
+          "value": "OPN",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00016",
+          "path": "eligibility.quotaTerms.terms[2].meaning",
+          "value": "Open private-college seats, filled on NEET All India merit, for any Indian citizen.",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00017",
+          "path": "eligibility.quotaTerms.terms[3].code",
+          "value": "NRI",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00018",
+          "path": "eligibility.quotaTerms.terms[3].meaning",
+          "value": "15% of seats in private colleges, for NRIs, their children or wards, PIOs, OCIs and foreign nationals.",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00019",
+          "path": "eligibility.quotaTerms.terms[4].code",
+          "value": "Others (Q)",
+          "surface": "conditional quota explanation"
+        },
+        {
+          "fieldId": "karnataka-2026:F00020",
+          "path": "eligibility.quotaTerms.terms[4].meaning",
+          "value": "10% of seats in private colleges (5% in private universities), open to all qualified candidates except NRI, PIO, OCI and foreign national candidates.",
+          "surface": "conditional quota explanation"
+        }
+      ]
+    },
+    {
+      "itemId": "process-check-clause",
+      "recordPath": "process[0]",
+      "sourcePages": [
+        5,
+        12,
+        15
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00021",
+          "path": "process[0].title",
+          "value": "Check which eligibility clause you fit",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00022",
+          "path": "process[0].description",
+          "value": "Before you apply, confirm you meet one of the eligibility clauses (a, b, c, d, e, f, g, y or z) on the KEA website. You enter its clause code in the application. The fee isn't refunded for any reason.",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00023",
+          "path": "process[0].link",
+          "value": "https://cetonline.karnataka.gov.in/kea/pget2026",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-register",
+      "recordPath": "process[1]",
+      "sourcePages": [
+        5,
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00024",
+          "path": "process[1].title",
+          "value": "Create your profile online",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00025",
+          "path": "process[1].description",
+          "value": "Register on the KEA PGET 2026 portal with your NEET-PG 2026 or NEET-MDS 2026 roll number. Your name, parents' names, date of birth, NBE score and mobile number are fetched from NBE data. An OTP goes to the mobile number you registered with NBE. Don't share it.",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00026",
+          "path": "process[1].link",
+          "value": "https://cetonline.karnataka.gov.in/kea/pget2026",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-fill-form",
+      "recordPath": "process[2]",
+      "sourcePages": [
+        11,
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00027",
+          "path": "process[2].title",
+          "value": "Fill in the application",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00028",
+          "path": "process[2].description",
+          "value": "Applications are online only; offline or postal forms aren't accepted. Enter your eligibility clause code, reservation category, educational qualification and contact details. In-service candidates enter their in-service details. Upload your photograph, left thumb impression and signature.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-pay",
+      "recordPath": "process[3]",
+      "sourcePages": [
+        12,
+        13
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00029",
+          "path": "process[3].title",
+          "value": "Pay the registration fee",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00030",
+          "path": "process[3].description",
+          "value": "Pay online through the payment gateway: ₹750 for SC/ST/Category-1/PwD, ₹1,500 for General/2A/2B/3A/3B, ₹4,000 for non-Karnataka candidates and ₹7,000 for NRI/OCI/PIO/foreign national candidates.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-declare",
+      "recordPath": "process[4]",
+      "sourcePages": [
+        12,
+        13
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00031",
+          "path": "process[4].title",
+          "value": "Check, declare and print",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00032",
+          "path": "process[4].description",
+          "value": "Until you select the declaration, you can edit the form any number of times and take draft printouts. Once you declare, nothing can be changed. Take the final printout and keep your application ID and password private.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-verification",
+      "recordPath": "process[5]",
+      "sourcePages": [
+        28,
+        67
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00033",
+          "path": "process[5].title",
+          "value": "Get your documents verified at KEA",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00034",
+          "path": "process[5].description",
+          "value": "Clause a and clause y candidates don't need to attend, unless they claim NRI Ward or religious minority reservation. Everyone else books a slot on the KEA website and attends in person at KEA, 18th Cross, Sampige Road, Malleshwaram, Bengaluru, with originals and two sets of photocopies. You get a documents verification slip, which you need to enter options. KEA has published these steps for PG Dental (NEET MDS); confirm the PG Medical arrangements with KEA.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-options",
+      "recordPath": "process[6]",
+      "sourcePages": [
+        28,
+        29,
+        40
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00035",
+          "path": "process[6].title",
+          "value": "Enter your options, then check the mock allotment",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00036",
+          "path": "process[6].description",
+          "value": "Enter your college and course options in order of priority. The same list is used for Rounds 1 and 2; the mop-up round needs fresh options. A mock allotment shows an indicative result. You can then add, delete or reorder options until the last date for real allotment.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-round1",
+      "recordPath": "process[7]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00037",
+          "path": "process[7].title",
+          "value": "Round 1: see your allotment and pick a choice",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00038",
+          "path": "process[7].description",
+          "value": "Log in after the Round 1 result and select one of four choices. If you don't select one, your seat is cancelled automatically and you can't take part in later rounds.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-admission",
+      "recordPath": "process[8]",
+      "sourcePages": [
+        33,
+        43
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00039",
+          "path": "process[8].title",
+          "value": "Pay, submit originals and join",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00040",
+          "path": "process[8].description",
+          "value": "Pay the fees, submit your original documents to KEA, collect the admission order and report to the college by the last date on it. Then update your joining status on the KEA portal and ask the college to enter your reporting details on its portal.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-later-rounds",
+      "recordPath": "process[9]",
+      "sourcePages": [
+        30
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00041",
+          "path": "process[9].title",
+          "value": "Later rounds",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "karnataka-2026:F00042",
+          "path": "process[9].description",
+          "value": "After Round 1 come Round 2, Round 3 (mop-up) and the stray vacancy round. KEA publishes the rules, instructions and schedule for each round on its website.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-qualified",
+      "recordPath": "eligibility.rules[0]",
+      "sourcePages": [
+        3,
+        12
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00043",
+          "path": "eligibility.rules[0].title",
+          "value": "Qualified in NEET-PG 2026 or NEET-MDS 2026",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00044",
+          "path": "eligibility.rules[0].explanation",
+          "value": "Only candidates who scored at least the prescribed minimum in NEET-PG 2026 (MD/MS/Diploma) or NEET-MDS 2026 (MDS) can register. Qualifying alone doesn't give you a right to a seat. You must also meet the eligibility conditions and complete registration, including document verification.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-mds-cutoffs",
+      "recordPath": "eligibility.rules[1]",
+      "sourcePages": [
+        3,
+        51
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "courseType",
+          "in": [
+            "dental"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00045",
+          "path": "eligibility.rules[1].title",
+          "value": "NEET-MDS 2026 qualifying cut-offs",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00046",
+          "path": "eligibility.rules[1].explanation",
+          "value": "NBEMS cut-offs (out of 960): General/EWS 50th percentile, 308; General PwBD 45th percentile, 289; SC/ST/OBC (including their PwBD) 40th percentile, 271. Non-Karnataka candidates (including PwD) need the General (UR) 50th percentile: 308.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-medical-pending",
+      "recordPath": "eligibility.rules[2]",
+      "sourcePages": [
+        1,
+        7
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "courseType",
+          "in": [
+            "clinical"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00047",
+          "path": "eligibility.rules[2].title",
+          "value": "PG Medical rules take effect after MCC's announcement",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00048",
+          "path": "eligibility.rules[2].explanation",
+          "value": "This bulletin covers PG Medical and Dental, but its information about PG Medical comes into effect only after MCC announces it. Watch the KEA website for the PG Medical notice and schedule.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-internship-mds",
+      "recordPath": "eligibility.rules[3]",
+      "sourcePages": [
+        7
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "dental"
+              ]
+            },
+            {
+              "fact": "internshipCompletion",
+              "after": "2026-05-31"
+            }
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00049",
+          "path": "eligibility.rules[3].title",
+          "value": "MDS: internship by 31st May 2026",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00050",
+          "path": "eligibility.rules[3].explanation",
+          "value": "For NEET-MDS 2026, the NBEMS cut-off date for completing your internship is 31st May 2026.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-internship-md",
+      "recordPath": "eligibility.rules[4]",
+      "sourcePages": [
+        7,
+        20
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "courseType",
+          "in": [
+            "clinical"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00051",
+          "path": "eligibility.rules[4].title",
+          "value": "MD/MS/Diploma: internship cut-off as set by NMC/NBEMS",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00052",
+          "path": "eligibility.rules[4].explanation",
+          "value": "For NEET-PG 2026, the internship cut-off follows NMC/NBEMS. This bulletin doesn't state the date. A provisional internship completion certificate (Annexure 6) is accepted for the first round only.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-pg-degree",
+      "recordPath": "eligibility.rules[5]",
+      "sourcePages": [
+        8,
+        15
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00053",
+          "path": "eligibility.rules[5].title",
+          "value": "Already hold a clinical PG degree",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00054",
+          "path": "eligibility.rules[5].explanation",
+          "value": "If you already hold a PG degree in any clinical specialty, you are not eligible for admission to any PG degree or diploma course.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-clause-b",
+      "recordPath": "eligibility.rules[6]",
+      "sourcePages": [
+        15,
+        18
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "home"
+              ]
+            },
+            {
+              "fact": "studied10YearsInState",
+              "in": [
+                true
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "positive"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00055",
+          "path": "eligibility.rules[6].title",
+          "value": "MBBS/BDS in Karnataka with 10 years of school in Karnataka (clause b)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00056",
+          "path": "eligibility.rules[6].explanation",
+          "value": "You fit clause b: as on 31st March 2026 you studied at least 10 academic years (1st to 12th standard) in government or government-recognised institutions in Karnataka, passed SSLC/10th or 2nd PUC/12th there, and passed MBBS/BDS in Karnataka. A class you took more than one year to pass counts as one year. You're eligible for Government, GMP, OPN and Others (Q) seats, and minority seats if you qualify.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-clause-c",
+      "recordPath": "eligibility.rules[7]",
+      "sourcePages": [
+        15,
+        16,
+        18
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "other_state"
+              ]
+            },
+            {
+              "fact": "studied10YearsInState",
+              "in": [
+                true
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "positive"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00057",
+          "path": "eligibility.rules[7].title",
+          "value": "MBBS/BDS outside Karnataka with 10 years of school in Karnataka (clause c)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00058",
+          "path": "eligibility.rules[7].explanation",
+          "value": "You fit clause c: you studied at least 10 academic years (1st to 12th standard) in Karnataka, passed SSLC/10th or 2nd PUC/12th there, and passed MBBS/BDS from a recognised institution in India outside Karnataka. A class you took more than one year to pass counts as one year. You're eligible for Government, GMP, OPN and Others (Q) seats, and minority seats if you qualify.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-clause-a",
+      "recordPath": "eligibility.rules[8]",
+      "sourcePages": [
+        15,
+        18
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "home"
+              ]
+            },
+            {
+              "fact": "studied10YearsInState",
+              "in": [
+                false
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            },
+            {
+              "fact": "parentServiceRoute",
+              "in": [
+                false
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "restrictQuotas",
+          "quotas": [
+            "Government",
+            "OPN",
+            "NRI",
+            "Others (Q)"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00059",
+          "path": "eligibility.rules[8].title",
+          "value": "MBBS/BDS in Karnataka without 10 years of school there (clause a)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00060",
+          "path": "eligibility.rules[8].explanation",
+          "value": "You fit clause a: an Indian citizen who passed MBBS/BDS in Karnataka. That makes you eligible for Government seats, OPN seats and Others (Q) seats. GMP seats and the Karnataka religious and linguistic minority seats need 10 years of school in Karnataka (clause b/c), so they aren't open to you, though Christian or Muslim candidates may get religious-minority seats left after Karnataka candidates. If clause d (a parent in the All India Service, Karnataka cadre, posted outside the state) or clause f (years in New Delhi while your parent was an MP from Karnataka) lets you count years outside Karnataka, answer 'Yes, in Karnataka' to the 10-year question.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-clause-y",
+      "recordPath": "eligibility.rules[9]",
+      "sourcePages": [
+        17,
+        15,
+        18,
+        19
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "other_state"
+              ]
+            },
+            {
+              "fact": "studied10YearsInState",
+              "in": [
+                false
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            },
+            {
+              "fact": "parentServiceRoute",
+              "in": [
+                false
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "restrictQuotas",
+          "quotas": [
+            "OPN",
+            "NRI",
+            "Others (Q)"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00061",
+          "path": "eligibility.rules[9].title",
+          "value": "MBBS/BDS outside Karnataka without 10 years of school there (clause y)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00062",
+          "path": "eligibility.rules[9].explanation",
+          "value": "Government seats need MBBS/BDS in Karnataka (clause a) or 10 years of school in Karnataka (clause b/c), and GMP seats need clause b/c. As an Indian citizen who passed MBBS/BDS outside Karnataka, you can apply for OPN seats (open to all Indian citizens) and Others (Q) seats. If you're a Christian or Muslim candidate, religious-minority seats left after Karnataka candidates are offered may also come to you. If you qualify under clause d, e, f or g (see 'Other routes'), Government seats may be open to you too. Confirm with KEA.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-abroad",
+      "recordPath": "eligibility.rules[10]",
+      "sourcePages": [
+        8,
+        15,
+        18,
+        19,
+        20,
+        21
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "abroad"
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "restrictQuotas",
+          "quotas": [
+            "OPN",
+            "NRI"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00063",
+          "path": "eligibility.rules[10].title",
+          "value": "MBBS/BDS from outside India",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00064",
+          "path": "eligibility.rules[10].explanation",
+          "value": "You must have passed the FMGE screening test, be registered with MCI/DCI (or a State Medical Council) and complete your internship by the prescribed date. Government seats appear to need MBBS/BDS from India (clause a or c), and Others (Q) seats need a college affiliated to a university in India, so only OPN seats and, if you qualify, NRI seats appear to be open. If you studied 10 years in Karnataka, clause c's table row (which only says MBBS/BDS 'from outside the State of Karnataka') could open Government and GMP seats too. Confirm with KEA.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-not-nri",
+      "recordPath": "eligibility.rules[11]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "nriLink",
+              "in": [
+                "none"
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        },
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00065",
+          "path": "eligibility.rules[11].title",
+          "value": "NRI seats are for NRIs and their children or wards",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00066",
+          "path": "eligibility.rules[11].explanation",
+          "value": "NRI seats are for NRIs, children or wards of NRIs, PIOs, OCIs and foreign nationals. You told us no one is an NRI for your application, so NRI seats aren't open to you unless an NRI relative sponsors you as a ward (relationship as per the Supreme Court order in W.P.(c) No. 689/2017). Confirm with KEA.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-nri",
+      "recordPath": "eligibility.rules[12]",
+      "sourcePages": [
+        14,
+        19,
+        21,
+        25,
+        64,
+        65
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "condition": {
+          "fact": "nriLink",
+          "in": [
+            "self",
+            "parent",
+            "guardian",
+            "relative"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        },
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00067",
+          "path": "eligibility.rules[12].title",
+          "value": "NRI seats: sponsor documents needed",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00068",
+          "path": "eligibility.rules[12].explanation",
+          "value": "NRIs, children of NRIs and NRI wards can apply for NRI seats (15% of seats in KPCF, KRLMPCA, AMPCK and private university colleges). If you claim NRI Ward (as an NRI's child or ward), you need the Ward Certificate (Annexure 17), the sponsor's NRI/OCI status certificate from the Indian Consulate issued within the last 6 months (Annexure 17(A)), a family tree signed by a Tahsildar, and copies of the sponsor's bank passbook, passport and visa. Others (Q) seats aren't open to NRI, PIO, OCI or foreign national candidates: if you yourself are the NRI (not just your parents), don't count on Q seats. 'NRI' here means an individual resident outside India who is an Indian citizen or a PIO, including OCIs (Income Tax Act 1961, sections 115C(e) and 6).",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-foreign",
+      "recordPath": "eligibility.rules[13]",
+      "sourcePages": [
+        17,
+        19,
+        25
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "nationality",
+          "in": [
+            "oci",
+            "foreign"
+          ]
+        },
+        "effect": {
+          "type": "restrictQuotas",
+          "quotas": [
+            "NRI"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00069",
+          "path": "eligibility.rules[13].title",
+          "value": "OCI, PIO and foreign national candidates (clause z)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00070",
+          "path": "eligibility.rules[13].explanation",
+          "value": "OCI, PIO, NRI and foreign national candidates apply under clause z. Government, GMP and OPN seats need Indian citizenship, and Others (Q) seats exclude NRI, PIO, OCI and foreign nationals, so only NRI seats are open to OCI and foreign national candidates.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-foreign-registration",
+      "recordPath": "eligibility.rules[14]",
+      "sourcePages": [
+        9,
+        25
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "nationality",
+          "in": [
+            "foreign"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00071",
+          "path": "eligibility.rules[14].title",
+          "value": "Foreign nationals: registration",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00072",
+          "path": "eligibility.rules[14].explanation",
+          "value": "Your qualification must be registered with the registering authority of the country where you got your basic medical degree, and recognised by that country's medical council. Get a temporary registration certificate from MCI/DCI for the course, within one month of securing admission.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-reservation-karnataka-only",
+      "recordPath": "eligibility.rules[15]",
+      "sourcePages": [
+        3,
+        5,
+        12
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "category",
+              "in": [
+                "SC",
+                "ST",
+                "OBC"
+              ]
+            },
+            {
+              "fact": "isDomicile",
+              "in": [
+                false
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "treatAsCategory",
+          "category": "UR"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00073",
+          "path": "eligibility.rules[15].title",
+          "value": "Reservation is for Karnataka candidates only",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00074",
+          "path": "eligibility.rules[15].explanation",
+          "value": "SC/ST/OBC reservation applies only to Karnataka SC/ST/OBC candidates. Non-Karnataka candidates aren't eligible for reservation, and must score at least the General (UR) qualifying cut-off (50th percentile) to register. The bulletin doesn't define 'Karnataka candidate'; we've used your domicile. Confirm with KEA.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-ews",
+      "recordPath": "eligibility.rules[16]",
+      "sourcePages": [
+        3,
+        5
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "category",
+          "in": [
+            "EWS"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00075",
+          "path": "eligibility.rules[16].title",
+          "value": "EWS isn't mentioned in this bulletin",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00076",
+          "path": "eligibility.rules[16].explanation",
+          "value": "EWS appears only in the NBEMS qualifying cut-off table (General/EWS). The bulletin states no Karnataka EWS reservation or EWS registration fee. Confirm with KEA how EWS candidates are treated.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-sc-internal",
+      "recordPath": "eligibility.rules[17]",
+      "sourcePages": [
+        9
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "category",
+              "in": [
+                "SC"
+              ]
+            },
+            {
+              "fact": "isDomicile",
+              "in": [
+                true
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00077",
+          "path": "eligibility.rules[17].title",
+          "value": "SC candidates: SCA, SCB or SCC certificate",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00078",
+          "path": "eligibility.rules[17].explanation",
+          "value": "Karnataka has internal reservation for Scheduled Castes (SCA, SCB and SCC). Get a caste certificate with your SCA, SCB or SCC group printed on it and enter its RD number when you apply. Otherwise you can't select seats reserved for Scheduled Castes. The bulletin doesn't define a Karnataka SC candidate; we go by your domicile, so confirm with KEA if that differs from where your certificate was issued.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-pwd",
+      "recordPath": "eligibility.rules[18]",
+      "sourcePages": [
+        10,
+        26
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00079",
+          "path": "eligibility.rules[18].title",
+          "value": "PwD: medical examination at KEA",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00080",
+          "path": "eligibility.rules[18].explanation",
+          "value": "PwD reservation is for Karnataka candidates only. Eligibility for benchmark disabilities follows the Rights of Persons with Disabilities Act, 2016 (see the MCC PH notice on the KEA site). Every PwD candidate must attend a medical examination at KEA on the notified dates. If you're found not eligible under the Act, you'll be disqualified at any stage of admission.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-pwd-outside",
+      "recordPath": "eligibility.rules[19]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "pwd",
+              "in": [
+                true
+              ]
+            },
+            {
+              "fact": "isDomicile",
+              "in": [
+                false
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00081",
+          "path": "eligibility.rules[19].title",
+          "value": "PwD reservation is for Karnataka candidates only",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00082",
+          "path": "eligibility.rules[19].explanation",
+          "value": "PwD reservation applies to Karnataka candidates only, so you'd compete without PwD seats and need the General (UR) cut-off. The bulletin doesn't define 'Karnataka candidate'; we've used your domicile. Confirm with KEA.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-in-service",
+      "recordPath": "eligibility.rules[20]",
+      "sourcePages": [
+        27,
+        42,
+        45
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "inService",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00083",
+          "path": "eligibility.rules[20].title",
+          "value": "In-service candidates",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00084",
+          "path": "eligibility.rules[20].explanation",
+          "value": "Detailed in-service guidelines, eligibility conditions and procedures will be published later, after KEA receives them from the Government/DME. Rule 9 of the MCI PG Medical Education Regulations, 2000 and in-service subject restrictions will apply. You pay the full fees and claim reimbursement from your department, and at admission you sign a bond to serve the Government for at least 10 years.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-parent-route",
+      "recordPath": "eligibility.rules[21]",
+      "sourcePages": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "parentServiceRoute",
+              "in": [
+                true
+              ]
+            },
+            {
+              "fact": "studied10YearsInState",
+              "in": [
+                false
+              ]
+            },
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "home",
+                "other_state"
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "restrictQuotas",
+          "quotas": [
+            "Government",
+            "OPN",
+            "NRI",
+            "Others (Q)"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00085",
+          "path": "eligibility.rules[21].title",
+          "value": "Parent-service route (clauses d, e, f and g)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00086",
+          "path": "eligibility.rules[21].explanation",
+          "value": "You said a parent's service gives you a Karnataka route. Clauses d, e, f and g open Government seats, along with OPN, NRI and Others (Q) seats. GMP seats need clause b or c: only clause d lets you count the years you studied outside Karnataka during your parent's posting toward the 10 years, so under clause d GMP seats may open too. Check you meet every condition of your clause (see Other routes) and bring its certificates. Confirm with KEA.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-special-clauses",
+      "recordPath": "eligibility.rules[22]",
+      "sourcePages": [
+        15,
+        16,
+        17,
+        18,
+        23
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00087",
+          "path": "eligibility.rules[22].title",
+          "value": "Other routes: clauses d, e, f and g",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00088",
+          "path": "eligibility.rules[22].explanation",
+          "value": "Some candidates can count study outside Karnataka or don't need the 10 years. Clause d: children of a serving All India Service officer of the Karnataka cadre can count the years they studied outside Karnataka while the parent served outside Karnataka toward the 10 years under clause b or c. Clause e: children of an employee of the Union Government, or of a Union or Karnataka State Government undertaking or joint sector undertaking, if the parent declared a Karnataka home town on joining service, studied at least 10 years in Karnataka, and was or is liable to transfer anywhere in India. You can have passed the qualifying exam anywhere in India. The employer's certificate must show the parent is transferable, so if your parent has left service, confirm with KEA. Clause f: children of MPs elected from Karnataka, for years studied in New Delhi during the MP's tenure. Clause g: children of serving defence personnel or ex-servicemen who declared a Karnataka home town on joining; the qualifying exam can be from anywhere in India. These are routes to Government seats; the bulletin ties GMP seats only to clauses b and c. 'Children' means natural-born sons or daughters, not adopted children or grandchildren.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-hk",
+      "recordPath": "eligibility.rules[23]",
+      "sourcePages": [
+        20,
+        31,
+        56
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00089",
+          "path": "eligibility.rules[23].title",
+          "value": "Hyderabad-Karnataka (Kalyana Karnataka) reservation, Article 371(j)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00090",
+          "path": "eligibility.rules[23].explanation",
+          "value": "If you're a local person of the Hyderabad-Karnataka region, you can claim reservation under Article 371(j) with a certificate from the Assistant Commissioner (Annexure 8). Seats are first searched in General Merit (GM), then Hyderabad-Karnataka GM (GMH), then your category.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-religious-minority",
+      "recordPath": "eligibility.rules[24]",
+      "sourcePages": [
+        18,
+        26
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        },
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00091",
+          "path": "eligibility.rules[24].title",
+          "value": "Christian and Muslim minority seats",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00092",
+          "path": "eligibility.rules[24].explanation",
+          "value": "Christian and Muslim candidates of clause b/c count as Karnataka religious minority candidates. After the Karnataka list is exhausted, leftover seats go to other eligible religious-minority candidates, including non-Karnataka ones. You need a religious minority certificate from the Tahsildar (Annexure 12).",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-linguistic-minority",
+      "recordPath": "eligibility.rules[25]",
+      "sourcePages": [
+        18,
+        26
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        },
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00093",
+          "path": "eligibility.rules[25].title",
+          "value": "Linguistic minority seats (Tamil, Telugu, Kodava, Tulu)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00094",
+          "path": "eligibility.rules[25].explanation",
+          "value": "Linguistic minority seats are for Karnataka candidates whose mother tongue is Tamil, Telugu, Kodava or Tulu, and who studied at least 10 academic years (1st to 12th standard) in Karnataka, passing SSLC/10th or 2nd PUC/12th there. You need a linguistic minority certificate countersigned by the BEO or Deputy Director, PU (Annexure 9/10).",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-st-johns",
+      "recordPath": "eligibility.rules[26]",
+      "sourcePages": [
+        14,
+        18,
+        26
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        },
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00095",
+          "path": "eligibility.rules[26].title",
+          "value": "St. John's Medical College, Bengaluru",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00096",
+          "path": "eligibility.rules[26].explanation",
+          "value": "St. John's has four categories: (1) Roman Catholic religious nuns with SJMC-approved two-year rural service, (2) SJMC alumni with SJMC-approved two-year rural service, (3) Roman Catholic Christians, (4) general open merit. Categories 1 to 3 need their own certificates (Annexures 13 to 16). The bulletin lists no extra certificate for general open merit.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-affidavit",
+      "recordPath": "eligibility.rules[27]",
+      "sourcePages": [
+        20,
+        55
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00097",
+          "path": "eligibility.rules[27].title",
+          "value": "You must swear you hold no other PG admission",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00098",
+          "path": "eligibility.rules[27].explanation",
+          "value": "Every candidate signs the Annexure 7 affidavit, declaring they haven't taken PG admission in any college allotted by other exam-conducting bodies and haven't surrendered a seat in past NEET-PG/NEET-MDS or other state PG entrance counselling. The wording about which past exams count is unclear. If you can't truthfully declare this, check with KEA before applying. A false declaration means losing the seat and criminal proceedings.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-three-year-bar",
+      "recordPath": "eligibility.rules[28]",
+      "sourcePages": [
+        44
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00099",
+          "path": "eligibility.rules[28].title",
+          "value": "Cancelled a PG seat or didn't join? 3-year bar",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "karnataka-2026:F00100",
+          "path": "eligibility.rules[28].explanation",
+          "value": "If, as a regular (non-in-service) candidate, you cancelled or surrendered a PG Medical/Dental seat after the last date of admissions, you're not eligible for a management quota or any other PG seat for three years. If you fail to join after allotment, the same three-year bar and disciplinary action apply, and this proviso appears to cover in-service candidates too.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "res-seat-types",
+      "recordPath": "reservation.rules[0]",
+      "sourcePages": [
+        14
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00101",
+          "path": "reservation.rules[0].title",
+          "value": "Four types of seats",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00102",
+          "path": "reservation.rules[0].detail",
+          "value": "Seats are Government (G), Private (P), NRI (N) and Others (Q). Government seats are 50% of seats in government colleges (the other 50% go to All India Quota through MCC), 33% in private non-minority colleges, 20% in private minority colleges and 40% in private university colleges.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-private-seats",
+      "recordPath": "reservation.rules[1]",
+      "sourcePages": [
+        14
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00103",
+          "path": "reservation.rules[1].title",
+          "value": "Private seats: GMP and OPN",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00104",
+          "path": "reservation.rules[1].detail",
+          "value": "In KPCF colleges, 42% of seats are private quota: half are GMP seats (GMPH in Hyderabad-Karnataka colleges) and half are OPN seats, filled on NEET-PG All India merit and open only to Indian citizens. In KRLMPCA and AMPCK colleges, 55% are private quota: 66% go to religious or linguistic minority candidates and the other 34% are split equally between GMP and OPN. In private universities, 40% are private quota.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-nri-q",
+      "recordPath": "reservation.rules[2]",
+      "sourcePages": [
+        14
+      ],
+      "seats": [
+        "management",
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "management",
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00105",
+          "path": "reservation.rules[2].title",
+          "value": "NRI and Others (Q) seats",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00106",
+          "path": "reservation.rules[2].detail",
+          "value": "NRI seats are 15% of seats in KPCF, KRLMPCA, AMPCK and private university colleges. Others (Q) seats are 10% in KPCF, KRLMPCA and AMPCK colleges and 5% in private universities.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-karnataka-only",
+      "recordPath": "reservation.rules[3]",
+      "sourcePages": [
+        3,
+        5,
+        12,
+        18
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00107",
+          "path": "reservation.rules[3].title",
+          "value": "Reservation for Karnataka candidates only",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00108",
+          "path": "reservation.rules[3].detail",
+          "value": "SC/ST/OBC reservation applies only to Karnataka SC/ST/OBC candidates. Non-Karnataka candidates aren't eligible for reservations, though non-Karnataka Christian and Muslim candidates can get religious-minority seats left after Karnataka candidates.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-sc-internal",
+      "recordPath": "reservation.rules[4]",
+      "sourcePages": [
+        9
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00109",
+          "path": "reservation.rules[4].title",
+          "value": "SC internal reservation: SCA, SCB, SCC",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00110",
+          "path": "reservation.rules[4].detail",
+          "value": "Karnataka SC candidates need a caste certificate with SCA, SCB or SCC printed on it, and must enter its RD number when applying. Without it, you can't select seats reserved for Scheduled Castes.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-allotment-order",
+      "recordPath": "reservation.rules[5]",
+      "sourcePages": [
+        31
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00111",
+          "path": "reservation.rules[5].title",
+          "value": "How category seats are searched",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00112",
+          "path": "reservation.rules[5].detail",
+          "value": "For every option, the computer first looks for a General Merit (GM) seat, then your category seat (e.g. SC: GM, then SCG). Hyderabad-Karnataka candidates go through more steps (e.g. SCH: GM, GMH, SCG, then SCH), and PwD candidates through longer chains that include PWD seats. This improves your allotment as per the roster. The bulletin's text says GMH is checked after GM for every category, but its chart shows GMH only for Hyderabad-Karnataka candidates.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-category-frozen",
+      "recordPath": "reservation.rules[6]",
+      "sourcePages": [
+        5
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00113",
+          "path": "reservation.rules[6].title",
+          "value": "Your category can't be changed later",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00114",
+          "path": "reservation.rules[6].detail",
+          "value": "The caste/category, annual income and other reservation details you enter stay the same for verification and allotment. No change is allowed later for any reason.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-caste-certificate",
+      "recordPath": "reservation.rules[7]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00115",
+          "path": "reservation.rules[7].title",
+          "value": "Caste certificate forms",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00116",
+          "path": "reservation.rules[7].detail",
+          "value": "Caste or caste-income certificates come from the Tahsildar: Form-D for SC/ST, Form-E for Category-1, and Form-F for 2A, 2B, 3A and 3B. A married woman's certificate must be in her name with her husband's name and the spouse's income. Caste, income and 371(j) certificates must be in the name of the candidate and father.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "res-pwd",
+      "recordPath": "reservation.rules[8]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00117",
+          "path": "reservation.rules[8].title",
+          "value": "PwD reservation",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00118",
+          "path": "reservation.rules[8].detail",
+          "value": "PwD reservation is for Karnataka candidates only, as per the Rights of Persons with Disabilities Act, 2016. Every PwD candidate must attend the medical examination at KEA on the notified dates.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-registration",
+      "recordPath": "fees.registration",
+      "sourcePages": [
+        13
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00119",
+          "path": "fees.registration.amountInr",
+          "value": 1500,
+          "surface": "registration/upfront summary"
+        },
+        {
+          "fieldId": "karnataka-2026:F00120",
+          "path": "fees.registration.covers",
+          "value": "For General, 2A, 2B, 3A and 3B candidates. SC/ST/Category-1/PwD pay ₹750, non-Karnataka candidates ₹4,000, and NRI/OCI/PIO/foreign national candidates ₹7,000. Paid online through the payment gateway.",
+          "surface": "registration/upfront summary"
+        },
+        {
+          "fieldId": "karnataka-2026:F00121",
+          "path": "fees.registration.refundable",
+          "value": false,
+          "surface": "registration/upfront summary"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-tiers",
+      "recordPath": "fees.rules[0]",
+      "sourcePages": [
+        13
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00122",
+          "path": "fees.rules[0].title",
+          "value": "Registration fee depends on who you are",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00123",
+          "path": "fees.rules[0].detail",
+          "value": "₹750 for SC/ST/Category-1/PwD candidates, ₹1,500 for General/2A/2B/3A/3B, ₹4,000 for non-Karnataka candidates and ₹7,000 for NRI/OCI/PIO/foreign national candidates.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-no-refund",
+      "recordPath": "fees.rules[1]",
+      "sourcePages": [
+        5
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00124",
+          "path": "fees.rules[1].title",
+          "value": "Fees aren't refunded",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00125",
+          "path": "fees.rules[1].detail",
+          "value": "Confirm you meet an eligibility clause before applying. The fee you pay won't be refunded for any reason.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-late-options",
+      "recordPath": "fees.rules[2]",
+      "sourcePages": [
+        29
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00126",
+          "path": "fees.rules[2].title",
+          "value": "Missed option entry before the mock? ₹750 to enter options",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00127",
+          "path": "fees.rules[2].detail",
+          "value": "Eligible candidates who didn't enter options for the mock allotment can still enter options by registering and paying a non-refundable fee of ₹750.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-check-structure",
+      "recordPath": "fees.rules[3]",
+      "sourcePages": [
+        32,
+        41
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00128",
+          "path": "fees.rules[3].title",
+          "value": "Check the fee structure before choosing",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00129",
+          "path": "fees.rules[3].detail",
+          "value": "The Government's seat matrix and fee structure are put on the KEA website. Check the fees, seat type and college location of each course before entering options, and discuss them with your parents.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-sc-st",
+      "recordPath": "fees.rules[4]",
+      "sourcePages": [
+        42
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00130",
+          "path": "fees.rules[4].title",
+          "value": "SC/ST fee exemption (Karnataka candidates)",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00131",
+          "path": "fees.rules[4].detail",
+          "value": "On Government seats (codes ending in G): annual income below ₹2.50 lakh, no fees; above ₹2.50 lakh and below ₹10 lakh, pay 50% of the tuition fee. On Private seats (codes ending in P), you pay the full fees. The bulletin isn't clear about an income of exactly ₹2.50 lakh; confirm with the concerned department.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-cat1",
+      "recordPath": "fees.rules[5]",
+      "sourcePages": [
+        42
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00132",
+          "path": "fees.rules[5].title",
+          "value": "Category-1 fee exemption (Karnataka candidates)",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00133",
+          "path": "fees.rules[5].detail",
+          "value": "With annual income below ₹2.5 lakh: no fees for seats in government colleges. For Government-quota seats in private colleges, the government-college fee is deducted from what you pay. On Private seats (P), you pay the fees. Contact the concerned department about exemption and reimbursement criteria.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-obc",
+      "recordPath": "fees.rules[6]",
+      "sourcePages": [
+        42
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00134",
+          "path": "fees.rules[6].title",
+          "value": "OBC: pay first, claim reimbursement",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00135",
+          "path": "fees.rules[6].detail",
+          "value": "Other Backward Class candidates pay the fees to KEA and can apply to the Backward Classes Department for reimbursement after admission.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-in-service",
+      "recordPath": "fees.rules[7]",
+      "sourcePages": [
+        42
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00136",
+          "path": "fees.rules[7].title",
+          "value": "In-service candidates pay full fees",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00137",
+          "path": "fees.rules[7].detail",
+          "value": "All in-service candidates pay the full fees and get reimbursed by their department as per deputation rules.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-nri-sponsor",
+      "recordPath": "fees.rules[8]",
+      "sourcePages": [
+        33
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00138",
+          "path": "fees.rules[8].title",
+          "value": "NRI sponsor payments",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00139",
+          "path": "fees.rules[8].detail",
+          "value": "If an NRI sponsor pays your fees, follow the separate instructions on the KEA website for payment by an NRI sponsor.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-bank-guarantee",
+      "recordPath": "fees.rules[9]",
+      "sourcePages": [
+        42
+      ],
+      "seats": [
+        "management",
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "management",
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00140",
+          "path": "fees.rules[9].title",
+          "value": "NRI and Others (Q) seats: bank guarantee",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00141",
+          "path": "fees.rules[9].detail",
+          "value": "Students on NRI and Others (Q) seats must give the college a bank guarantee for the balance course period, at admission or within the time the college allows. Otherwise the admission is cancelled or classes are suspended until it's provided.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-once",
+      "recordPath": "choiceFilling[0]",
+      "sourcePages": [
+        28
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00142",
+          "path": "choiceFilling[0].title",
+          "value": "One option list for Rounds 1 and 2",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00143",
+          "path": "choiceFilling[0].detail",
+          "value": "You enter options once. The same priority list is used for the first and second rounds, and you can't enter options again. After a round you can only delete or reorder them. You must declare before you can start option entry.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-all-seats",
+      "recordPath": "choiceFilling[1]",
+      "sourcePages": [
+        28,
+        37
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00144",
+          "path": "choiceFilling[1].title",
+          "value": "Enter options even where no seats are shown",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00145",
+          "path": "choiceFilling[1].detail",
+          "value": "Seats can come back from All India Quota surrenders, new intake approvals and new courses, and consequential vacancies arise during allotment. Enter every option you want in priority order, whatever the number of seats shown.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-mock",
+      "recordPath": "choiceFilling[2]",
+      "sourcePages": [
+        28,
+        29
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00146",
+          "path": "choiceFilling[2].title",
+          "value": "The mock allotment is only indicative",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00147",
+          "path": "choiceFilling[2].detail",
+          "value": "After option entry, a mock allotment shows the seat you might get, with college-, course- and category-wise mock cut-off ranks. You don't report to a college. Use it to add, delete or reorder options before the last date. The real allotment can differ because others change their options too.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-not-allotted-mock",
+      "recordPath": "choiceFilling[3]",
+      "sourcePages": [
+        29
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00148",
+          "path": "choiceFilling[3].title",
+          "value": "No seat in the mock? Add more options",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00149",
+          "path": "choiceFilling[3].detail",
+          "value": "If you weren't allotted a seat in the mock allotment, check your options and add more you're interested in.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-deadline",
+      "recordPath": "choiceFilling[4]",
+      "sourcePages": [
+        29
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00150",
+          "path": "choiceFilling[4].title",
+          "value": "Options lock at the deadline",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00151",
+          "path": "choiceFilling[4].detail",
+          "value": "Enter your final options before the last date and time. You can't change them after that. Keep a printout of your final options.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-binding",
+      "recordPath": "choiceFilling[5]",
+      "sourcePages": [
+        40,
+        41
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00152",
+          "path": "choiceFilling[5].title",
+          "value": "You can't refuse a seat you opted for",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00153",
+          "path": "choiceFilling[5].detail",
+          "value": "Seats are allotted strictly by merit and your options. You can't claim ignorance or reject an allotted seat, so list only colleges and courses you'll actually join.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-verify-slip",
+      "recordPath": "choiceFilling[6]",
+      "sourcePages": [
+        28,
+        67
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00154",
+          "path": "choiceFilling[6].title",
+          "value": "Verification slip needed",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00155",
+          "path": "choiceFilling[6].detail",
+          "value": "You can enter options only after online registration, payment and document verification at KEA, which gives you the documents verification slip. Clause a and clause y candidates are excused from attending verification, but the bulletin doesn't say how they get the slip. Confirm with KEA.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-structure",
+      "recordPath": "rounds[0]",
+      "sourcePages": [
+        30
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00156",
+          "path": "rounds[0].title",
+          "value": "Two rounds, then mop-up and stray",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00157",
+          "path": "rounds[0].detail",
+          "value": "Counselling has Round 1, Round 2, Round 3 (mop-up) and a stray vacancy round. Allotment follows merit, your options and the Government roster. Eligibility for each round is subject to MCC's conditions.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00158",
+          "path": "rounds[0].tag",
+          "value": "Every round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-online",
+      "recordPath": "rounds[1]",
+      "sourcePages": [
+        3,
+        68
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00159",
+          "path": "rounds[1].title",
+          "value": "Every round is online, run by KEA",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00160",
+          "path": "rounds[1].detail",
+          "value": "As per the NMC letter dated 24th July 2023, all rounds, including the stray vacancy round, are conducted online by KEA only.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00161",
+          "path": "rounds[1].tag",
+          "value": "Every round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-must-report",
+      "recordPath": "rounds[2]",
+      "sourcePages": [
+        41
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00162",
+          "path": "rounds[2].title",
+          "value": "Not reporting counts as seat blocking",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00163",
+          "path": "rounds[2].detail",
+          "value": "If you're allotted a seat in any round, you must report to the college. Not reporting isn't treated as surrendering the seat: it's seat blocking, which attracts a penalty, and the Government may take legal action.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00164",
+          "path": "rounds[2].tag",
+          "value": "Every round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-originals-return",
+      "recordPath": "rounds[3]",
+      "sourcePages": [
+        41
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00165",
+          "path": "rounds[3].title",
+          "value": "Getting your originals back",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00166",
+          "path": "rounds[3].detail",
+          "value": "If you surrender a seat after results, originals are returned only after you pay the penalty. Candidates without a seat get originals back on request, collected in person with the original verification slip and ID card.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00167",
+          "path": "rounds[3].tag",
+          "value": "Every round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round1-choices",
+      "recordPath": "rounds[4]",
+      "sourcePages": [
+        32
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00168",
+          "path": "rounds[4].title",
+          "value": "Pick one of four choices",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00169",
+          "path": "rounds[4].detail",
+          "value": "After the Round 1 result, log in and select one of four choices. If you don't, or don't follow the prescribed procedure, your seat is cancelled automatically and you can't take part in further rounds.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00170",
+          "path": "rounds[4].tag",
+          "value": "Round 1",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round1-choice1",
+      "recordPath": "rounds[5]",
+      "sourcePages": [
+        32,
+        33
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00171",
+          "path": "rounds[5].title",
+          "value": "Choice 1: accept and quit counselling",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00172",
+          "path": "rounds[5].detail",
+          "value": "You're fully satisfied and won't take part in later rounds. Pay the fees, submit originals, collect the admission order, report to the college by the last date, and update your joining status on the KEA portal. If you don't report back to KEA that you joined, your seat is cancelled even if you physically joined.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00173",
+          "path": "rounds[5].tag",
+          "value": "Round 1",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round1-choice1-noshow",
+      "recordPath": "rounds[6]",
+      "sourcePages": [
+        33
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00174",
+          "path": "rounds[6].title",
+          "value": "Choice 1 but didn't join? Fees forfeited",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00175",
+          "path": "rounds[6].detail",
+          "value": "If you pay and get the admission order but don't report by the last date, no extension is given. The allotment is cancelled, you aren't considered in later rounds, and the fees you paid are forfeited. Failing to produce originals or pay the fees also cancels the seat.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00176",
+          "path": "rounds[6].tag",
+          "value": "Round 1",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round1-choice2",
+      "recordPath": "rounds[7]",
+      "sourcePages": [
+        34,
+        35
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00177",
+          "path": "rounds[7].title",
+          "value": "Choice 2: keep the seat, try to upgrade",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00178",
+          "path": "rounds[7].detail",
+          "value": "Pay the fees for your Round 1 seat and submit originals as scheduled. In Round 2 your current seat becomes your last option and only higher options are tried. If you get a higher one, your old seat is cancelled automatically. If not, you keep it. You can't choose between them, and you must take admission. No admission order is given at this stage.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00179",
+          "path": "rounds[7].tag",
+          "value": "Round 1",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round1-choice2-keep",
+      "recordPath": "rounds[8]",
+      "sourcePages": [
+        35
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00180",
+          "path": "rounds[8].title",
+          "value": "Choice 2: to keep your seat, delete higher options",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00181",
+          "path": "rounds[8].detail",
+          "value": "All your higher options appear on screen. To keep your Round 1 seat, delete them all. Only keep options better than your seat.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00182",
+          "path": "rounds[8].tag",
+          "value": "Round 1",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round1-choice3",
+      "recordPath": "rounds[9]",
+      "sourcePages": [
+        35,
+        36
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00183",
+          "path": "rounds[9].title",
+          "value": "Choice 3: give up the seat, try again",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00184",
+          "path": "rounds[9].detail",
+          "value": "Surrender your Round 1 seat and take part in Round 2 with your other options. You don't pay fees for the Round 1 seat, but you must submit originals or you can't take part. If Round 2 allots nothing, you have no seat.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00185",
+          "path": "rounds[9].tag",
+          "value": "Round 1",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round1-choice4",
+      "recordPath": "rounds[10]",
+      "sourcePages": [
+        36
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00186",
+          "path": "rounds[10].title",
+          "value": "Choice 4: quit",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00187",
+          "path": "rounds[10].detail",
+          "value": "You're not satisfied, have a seat elsewhere, and quit. Your seat is cancelled and you can't take part in later rounds.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00188",
+          "path": "rounds[10].tag",
+          "value": "Round 1",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round2-originals",
+      "recordPath": "rounds[11]",
+      "sourcePages": [
+        36,
+        37
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00189",
+          "path": "rounds[11].title",
+          "value": "Round 2: originals are mandatory",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00190",
+          "path": "rounds[11].detail",
+          "value": "To take part in Round 2, Choice 2 and Choice 3 candidates and those without a Round 1 seat must submit originals (verification slip, all originals including Annexures 1, 2 and 7, and one set of photocopies) as scheduled. Choice 2 candidates must also have paid the fees.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00191",
+          "path": "rounds[11].tag",
+          "value": "Round 2",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round2-aiq",
+      "recordPath": "rounds[12]",
+      "sourcePages": [
+        37
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00192",
+          "path": "rounds[12].title",
+          "value": "Exited AIQ Round 2? You can join Round 2",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00193",
+          "path": "rounds[12].detail",
+          "value": "If you were allotted a seat in All India Quota or Deemed University Round 2, didn't join and exited with the forfeiture clause, you can take part in Karnataka's Round 2 after depositing originals at KEA.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00194",
+          "path": "rounds[12].tag",
+          "value": "Round 2",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round2-not-eligible",
+      "recordPath": "rounds[13]",
+      "sourcePages": [
+        37
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00195",
+          "path": "rounds[13].title",
+          "value": "Who can't take part in Round 2",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00196",
+          "path": "rounds[13].detail",
+          "value": "Candidates who didn't enter options for Round 1, didn't exercise a choice, Choice 2 candidates who didn't pay or deposit originals, Choice 3 or unallotted candidates who didn't deposit originals, and Choice 1/2 candidates who cancelled or surrendered.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00197",
+          "path": "rounds[13].tag",
+          "value": "Round 2",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round2-options",
+      "recordPath": "rounds[14]",
+      "sourcePages": [
+        36,
+        37,
+        38
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00198",
+          "path": "rounds[14].title",
+          "value": "Round 2: reorder, but no new options",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00199",
+          "path": "rounds[14].detail",
+          "value": "You can reorder or delete options after confirming fees, but adding new options isn't permitted. Keep options even if no seats are shown, because vacancies arise during allotment. A vacancy that arises after your turn can't be claimed. Seats freed when Choice 2 candidates upgrade (virtual vacancies) go to the next candidate who kept that option.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00200",
+          "path": "rounds[14].tag",
+          "value": "Round 2",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round2-no-choice",
+      "recordPath": "rounds[15]",
+      "sourcePages": [
+        34,
+        38
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00201",
+          "path": "rounds[15].title",
+          "value": "Round 2: no choices, joining is compulsory",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00202",
+          "path": "rounds[15].detail",
+          "value": "There are no choices after Round 2. If you're allotted a seat, pay the fees (Choice 2 fees are adjusted) and report to the college by the last date. Taking admission is compulsory.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00203",
+          "path": "rounds[15].tag",
+          "value": "Round 2",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round2-legal",
+      "recordPath": "rounds[16]",
+      "sourcePages": [
+        38
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00204",
+          "path": "rounds[16].title",
+          "value": "Not joining a Round 2 seat means legal action",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00205",
+          "path": "rounds[16].detail",
+          "value": "If you don't report to the college after a Round 2 allotment, legal action will be initiated against you.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00206",
+          "path": "rounds[16].tag",
+          "value": "Round 2",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round2-surrender",
+      "recordPath": "rounds[17]",
+      "sourcePages": [
+        39
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00207",
+          "path": "rounds[17].title",
+          "value": "Got a better seat elsewhere? Surrender before Round 2",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00208",
+          "path": "rounds[17].detail",
+          "value": "If you joined (Choice 1) or paid (Choice 2) and may take a seat from another board, surrender your seat to KEA on or before the last date for Round 2 option entry, so it goes to another candidate.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00209",
+          "path": "rounds[17].tag",
+          "value": "Round 2",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round3-upgrade",
+      "recordPath": "rounds[18]",
+      "sourcePages": [
+        38,
+        39
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00210",
+          "path": "rounds[18].title",
+          "value": "Round 3: upgrade while admitted",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00211",
+          "path": "rounds[18].detail",
+          "value": "As per recent High Court orders, candidates admitted to a Round 2 seat (or any KEA seat they joined) can take part in Round 3 for an upgrade. If you get nothing, your earlier seat stays confirmed.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00212",
+          "path": "rounds[18].tag",
+          "value": "Round 3 (Mop-up)",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round3-eligibility",
+      "recordPath": "rounds[19]",
+      "sourcePages": [
+        39
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00213",
+          "path": "rounds[19].title",
+          "value": "Who can take part in the mop-up",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00214",
+          "path": "rounds[19].detail",
+          "value": "Candidates with no seat after KEA Round 2, and those who joined a KEA-allotted college. Not eligible: those allotted a seat who didn't exercise a choice in Round 1, didn't pay or didn't report, and anyone who joined a college through All India (including deemed university) counselling or any other board. This All India rule follows the MCC bulletin and is subject to any conditions set by the Government of India.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00215",
+          "path": "rounds[19].tag",
+          "value": "Round 3 (Mop-up)",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round3-fresh-options",
+      "recordPath": "rounds[20]",
+      "sourcePages": [
+        40
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00216",
+          "path": "rounds[20].title",
+          "value": "Mop-up: enter options afresh",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00217",
+          "path": "rounds[20].detail",
+          "value": "Only candidates holding the verification slip who deposit originals can enter options. Earlier options are ignored, so enter fresh ones, only for colleges and courses you'll join after checking fees.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00218",
+          "path": "rounds[20].tag",
+          "value": "Round 3 (Mop-up)",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round3-old-seat",
+      "recordPath": "rounds[21]",
+      "sourcePages": [
+        40
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00219",
+          "path": "rounds[21].title",
+          "value": "Mop-up: a new seat cancels the old one",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00220",
+          "path": "rounds[21].detail",
+          "value": "If you're allotted a seat in this round, your earlier seat is cancelled automatically and you can't get it back. You must report to the newly allotted college.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00221",
+          "path": "rounds[21].tag",
+          "value": "Round 3 (Mop-up)",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round3-join",
+      "recordPath": "rounds[22]",
+      "sourcePages": [
+        41
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00222",
+          "path": "rounds[22].title",
+          "value": "After mop-up: join and update KEA",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00223",
+          "path": "rounds[22].detail",
+          "value": "There are no choices. Pay the fees (if not paid), report to the college by the last date on the admission order and update your details through your KEA login, or you lose the seat. Not reporting means legal action.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00224",
+          "path": "rounds[22].tag",
+          "value": "Round 3 (Mop-up)",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-stray",
+      "recordPath": "rounds[23]",
+      "sourcePages": [
+        41
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00225",
+          "path": "rounds[23].title",
+          "value": "Stray vacancy round eligibility",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00226",
+          "path": "rounds[23].detail",
+          "value": "Only candidates who haven't been allotted any PG Medical/Dental seat by KEA in any round can take part. Those who reported to a college after MCC, deemed university or any other allotment in the three rounds, and those allotted a seat in MCC's stray vacancy round, aren't eligible.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00227",
+          "path": "rounds[23].tag",
+          "value": "Stray vacancy",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round3-criminal",
+      "recordPath": "rounds[24]",
+      "sourcePages": [
+        38
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00228",
+          "path": "rounds[24].title",
+          "value": "Missing or fake originals",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00229",
+          "path": "rounds[24].detail",
+          "value": "If any original certificate isn't produced during verification, or is false, concocted or a colour photocopy, you're disqualified from further allotment and liable for criminal prosecution.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00230",
+          "path": "rounds[24].tag",
+          "value": "Round 3 (Mop-up)",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-provisional",
+      "recordPath": "admission[0]",
+      "sourcePages": [
+        5,
+        43
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00231",
+          "path": "admission[0].title",
+          "value": "Admission is provisional",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00232",
+          "path": "admission[0].detail",
+          "value": "Join the college with the required undertakings by the due date on your admission order, or the seat is cancelled automatically. Admission stays subject to approval by the Government, apex bodies and the university.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-fake",
+      "recordPath": "admission[1]",
+      "sourcePages": [
+        5,
+        7,
+        26
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00233",
+          "path": "admission[1].title",
+          "value": "False documents: seat cancelled and prosecution",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00234",
+          "path": "admission[1].detail",
+          "value": "If any information or document is false, fake or tampered, your seat is cancelled at any point during the course, all fees are forfeited, and KEA will start criminal proceedings. You may be debarred from future exams and counselling, and blacklisting and cancellation of your council registration may be recommended.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-no-changes",
+      "recordPath": "admission[2]",
+      "sourcePages": [
+        5,
+        11,
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00235",
+          "path": "admission[2].title",
+          "value": "No changes after you apply",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00236",
+          "path": "admission[2].detail",
+          "value": "KEA won't edit any information you entered, including name, category, PwD status, qualification and date of birth, under any circumstances. Keep a hard copy of your application until counselling ends.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-verification",
+      "recordPath": "admission[3]",
+      "sourcePages": [
+        7,
+        27
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00237",
+          "path": "admission[3].title",
+          "value": "Certificates can be checked any time",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00238",
+          "path": "admission[3].detail",
+          "value": "KEA, DME, the Government and RGUHS can verify the authenticity of your certificates at any time, and KEA can withdraw any admission that doesn't meet the eligibility rules.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-in-person",
+      "recordPath": "admission[4]",
+      "sourcePages": [
+        67
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00239",
+          "path": "admission[4].title",
+          "value": "Attend verification yourself",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00240",
+          "path": "admission[4].detail",
+          "value": "You must attend document verification in person. No one can represent you. Verification takes time, and requests to be verified before your scheduled time won't be entertained, so plan your return journey. You can bring water, food and medicines.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-mobile",
+      "recordPath": "admission[5]",
+      "sourcePages": [
+        3,
+        13
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00241",
+          "path": "admission[5].title",
+          "value": "Use your own mobile number and email",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00242",
+          "path": "admission[5].detail",
+          "value": "KEA sends updates only to the mobile number and email you registered. It isn't responsible if you miss information because of a wrong number. Check the KEA website often.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-nda",
+      "recordPath": "admission[6]",
+      "sourcePages": [
+        11
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00243",
+          "path": "admission[6].title",
+          "value": "Don't share counselling content",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00244",
+          "path": "admission[6].detail",
+          "value": "Sharing any content of this counselling with others, including on WhatsApp, Facebook, Twitter or other social media, breaches the non-disclosure agreement and can lead to penal action and cancellation of your candidature.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-touts",
+      "recordPath": "admission[7]",
+      "sourcePages": [
+        9,
+        11
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00245",
+          "path": "admission[7].title",
+          "value": "Beware of touts",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00246",
+          "path": "admission[7].detail",
+          "value": "Nobody can guarantee a PG seat through KEA. Seats go by NEET merit and your options. Report anyone claiming otherwise to keauthority-ka@nic.in.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-bds-aggregate",
+      "recordPath": "admission[8]",
+      "sourcePages": [
+        52
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00247",
+          "path": "admission[8].title",
+          "value": "MDS: your BDS aggregate is checked",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00248",
+          "path": "admission[8].detail",
+          "value": "The aggregate BDS percentage you gave in your NEET-MDS 2026 form is verified against your originals at admission. If it was used to break a rank tie and turns out to be wrong, your NEET-MDS 2026 candidature is cancelled.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-rules-prevail",
+      "recordPath": "admission[9]",
+      "sourcePages": [
+        3,
+        45
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00249",
+          "path": "admission[9].title",
+          "value": "The Rules prevail",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00250",
+          "path": "admission[9].detail",
+          "value": "The bulletin is subject to the Karnataka PG entrance test Rules, 2006 and government orders. If they differ, the Rules prevail, and the decision of the Government or Entrance Test Committee is final.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "adm-appeal",
+      "recordPath": "admission[10]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00251",
+          "path": "admission[10].title",
+          "value": "Appeal within 15 days",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00252",
+          "path": "admission[10].detail",
+          "value": "If you're aggrieved by an order of KEA's Executive Director, you can appeal within 15 days to the Principal Secretary, Higher Education Department, Government of Karnataka, whose decision is final. Disputes fall under the High Court of Karnataka.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-three-year",
+      "recordPath": "resignation.rules[0]",
+      "sourcePages": [
+        44
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00253",
+          "path": "resignation.rules[0].title",
+          "value": "3-year bar on new PG seats",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00254",
+          "path": "resignation.rules[0].detail",
+          "value": "If you're a regular (non-in-service) candidate and cancel or surrender a PG seat after the last date of admissions, you can't take a management quota or any other PG seat for three years. If you fail to join after allotment, the same bar and disciplinary action apply, and this appears to cover in-service candidates too.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-no-rejoin",
+      "recordPath": "resignation.rules[1]",
+      "sourcePages": [
+        44
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00255",
+          "path": "resignation.rules[1].title",
+          "value": "You can't rejoin a seat you gave up",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00256",
+          "path": "resignation.rules[1].detail",
+          "value": "Whether you're a regular or in-service candidate, and whether you cancel before or after the last date, you aren't permitted to rejoin the cancelled or surrendered seat.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-where",
+      "recordPath": "resignation.rules[2]",
+      "sourcePages": [
+        45,
+        55
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00257",
+          "path": "resignation.rules[2].title",
+          "value": "Surrender only through KEA or DME",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00258",
+          "path": "resignation.rules[2].detail",
+          "value": "Don't surrender a seat at the college. Surrender only at KEA, and after the last date of admission, only at the Directorate of Medical Education.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-in-service",
+      "recordPath": "resignation.rules[3]",
+      "sourcePages": [
+        44
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00259",
+          "path": "resignation.rules[3].title",
+          "value": "In-service candidates: recovery from salary",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00260",
+          "path": "resignation.rules[3].detail",
+          "value": "If an in-service candidate leaves the course, doesn't progress, doesn't finish on time, or fails to resume duty after deputation or at any time within ten years of finishing, the Government can recover everything spent (pay, allowances, stipend, DA, tuition fee) with penalty and interest from salary.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-penalty-docs",
+      "recordPath": "resignation.rules[4]",
+      "sourcePages": [
+        41,
+        49
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00261",
+          "path": "resignation.rules[4].title",
+          "value": "Originals are released only after the penalty",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00262",
+          "path": "resignation.rules[4].detail",
+          "value": "If you surrender after results, your original documents are returned only after you pay the penalty.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-compulsory-service",
+      "recordPath": "serviceBond.rules[0]",
+      "sourcePages": [
+        8,
+        47
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00263",
+          "path": "serviceBond.rules[0].title",
+          "value": "One year of compulsory service after PG",
+          "surface": "serviceBond.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00264",
+          "path": "serviceBond.rules[0].detail",
+          "value": "Everyone admitted to a PG Medical degree or diploma in a government, private or deemed college, under any quota, must do one year of compulsory service in a Government hospital in an urban area after finishing, under the Karnataka Compulsory Service Act, 2012. You get only temporary registration until you complete it. Candidates who already did compulsory rural service after MBBS are exempt.",
+          "surface": "serviceBond.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-sureties",
+      "recordPath": "serviceBond.rules[1]",
+      "sourcePages": [
+        49,
+        50
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00265",
+          "path": "serviceBond.rules[1].title",
+          "value": "Two sureties and originals held",
+          "surface": "serviceBond.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00266",
+          "path": "serviceBond.rules[1].detail",
+          "value": "The three-year undertaking needs two sureties with self-attested PAN and Aadhaar copies, and you and they are jointly and severally bound to pay the ₹50 lakh / ₹25 lakh penalty. Your original documents stay with the institution and are returned only after you pay any penalty.",
+          "surface": "serviceBond.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-in-service",
+      "recordPath": "serviceBond.rules[2]",
+      "sourcePages": [
+        45
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00267",
+          "path": "serviceBond.rules[2].title",
+          "value": "In-service: 10 years of service",
+          "surface": "serviceBond.rules cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00268",
+          "path": "serviceBond.rules[2].detail",
+          "value": "In-service candidates sign a bond at admission to serve the Government for at least ten years.",
+          "surface": "serviceBond.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-application",
+      "recordPath": "documents[0]",
+      "sourcePages": [
+        20
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00269",
+          "path": "documents[0].name",
+          "value": "KEA PGET-2026 registration form (printout)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-id",
+      "recordPath": "documents[1]",
+      "sourcePages": [
+        20
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00270",
+          "path": "documents[1].name",
+          "value": "Photo identity and address proof",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00271",
+          "path": "documents[1].detail",
+          "value": "PAN card, driving licence, voter ID, passport, Aadhaar card or ration card.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-neet",
+      "recordPath": "documents[2]",
+      "sourcePages": [
+        20,
+        52
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00272",
+          "path": "documents[2].name",
+          "value": "NEET-PG 2026 / NEET-MDS 2026 admit card and score card",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00273",
+          "path": "documents[2].detail",
+          "value": "NEET-MDS scorecards can be downloaded from natboard.edu.in for only 6 months from 10th June 2026.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-10th",
+      "recordPath": "documents[3]",
+      "sourcePages": [
+        20
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00274",
+          "path": "documents[3].name",
+          "value": "SSLC / 10th standard marks card (for date of birth)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-12th",
+      "recordPath": "documents[4]",
+      "sourcePages": [
+        20
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00275",
+          "path": "documents[4].name",
+          "value": "2nd PUC / 12th standard marks card",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-mbbs-marks",
+      "recordPath": "documents[5]",
+      "sourcePages": [
+        20
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00276",
+          "path": "documents[5].name",
+          "value": "MBBS/BDS marks cards for all phases/years",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-degree",
+      "recordPath": "documents[6]",
+      "sourcePages": [
+        20,
+        21,
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00277",
+          "path": "documents[6].name",
+          "value": "Qualifying degree certificate",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00278",
+          "path": "documents[6].detail",
+          "value": "Clause a and b candidates: stating you studied MBBS/BDS in Karnataka. A provisional degree, pass or completion certificate is accepted only if you passed MBBS/BDS in 2026.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-degree-outside",
+      "recordPath": "documents[7]",
+      "sourcePages": [
+        21,
+        25
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "all": [
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "other_state",
+                "abroad"
+              ]
+            },
+            {
+              "fact": "studied10YearsInState",
+              "in": [
+                false
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00279",
+          "path": "documents[7].name",
+          "value": "Qualifying degree certificate stating you studied MBBS/BDS outside Karnataka (clause y)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00280",
+          "path": "documents[7].detail",
+          "value": "For this clause the bulletin says a provisional, pass or completion certificate is accepted only if you passed in 2021; for other clauses it says 2026. Confirm the year with KEA before relying on a provisional certificate.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-internship",
+      "recordPath": "documents[8]",
+      "sourcePages": [
+        20,
+        53,
+        54
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00281",
+          "path": "documents[8].name",
+          "value": "Internship completion certificate (Annexure 5)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00282",
+          "path": "documents[8].detail",
+          "value": "A provisional internship completion certificate (Annexure 6) is accepted for the first round only. For MDS the bulletin gives two dates (31st March 2026 here, 31st May 2026 as the cut-off), so confirm with KEA; for MD/MS it follows NBEMS.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-recognition",
+      "recordPath": "documents[9]",
+      "sourcePages": [
+        20
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00283",
+          "path": "documents[9].name",
+          "value": "Certificate from your college head that it's recognised by MCI/DCI",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-registration",
+      "recordPath": "documents[10]",
+      "sourcePages": [
+        20,
+        25
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00284",
+          "path": "documents[10].name",
+          "value": "State/Central Medical or Dental Council registration certificate",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00285",
+          "path": "documents[10].detail",
+          "value": "Provisional registration is accepted only if you passed in 2026. You must submit the permanent certificate at admission. If you passed before 2026, you must have and upload the original permanent registration. Foreign nationals are also asked for home-country registration and temporary MCI/DCI registration within one month of admission; confirm with KEA how this rule applies to you.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-eligibility-other-univ",
+      "recordPath": "documents[11]",
+      "sourcePages": [
+        20,
+        21
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00286",
+          "path": "documents[11].name",
+          "value": "Eligibility certificate from RGUHS (if your degree is from a university other than RGUHS)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00287",
+          "path": "documents[11].detail",
+          "value": "Submitted at the college you're admitted to.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-migration",
+      "recordPath": "documents[12]",
+      "sourcePages": [
+        21
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00288",
+          "path": "documents[12].name",
+          "value": "Migration certificate (if MBBS/BDS isn't from RGUHS)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00289",
+          "path": "documents[12].detail",
+          "value": "Submitted at the college you're admitted to.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-undertaking",
+      "recordPath": "documents[13]",
+      "sourcePages": [
+        20,
+        34,
+        55
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00290",
+          "path": "documents[13].name",
+          "value": "Affidavit (Annexure 7) on white paper, and on ₹100 e-stamp paper in your name",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00291",
+          "path": "documents[13].detail",
+          "value": "Needed at verification, and deposited again before Round 2. You swear you haven't taken PG admission elsewhere, haven't surrendered a seat, will notify KEA immediately if you get admission elsewhere, and will surrender only at KEA. You become eligible for admission and allotment only once you submit it.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-rural-bond",
+      "recordPath": "documents[14]",
+      "sourcePages": [
+        8,
+        21,
+        47,
+        48
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00292",
+          "path": "documents[14].name",
+          "value": "Compulsory rural service bond (Annexure 1) on ₹100 stamp paper, notarised, with the personal details sheet",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00293",
+          "path": "documents[14].detail",
+          "value": "Submitted when you collect the admission order at KEA. The form is written for non-in-service PG Medical candidates, so if you're in-service or taking MDS, confirm with KEA.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-leaving-bond",
+      "recordPath": "documents[15]",
+      "sourcePages": [
+        44
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00294",
+          "path": "documents[15].name",
+          "value": "Bond to pay ₹10,00,000 (degree) or ₹4,00,000 (diploma) if you leave the course",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00295",
+          "path": "documents[15].detail",
+          "value": "In the form specified by the Government. Lower amounts apply to pre-clinical and para-clinical seats.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-in-service-bond",
+      "recordPath": "documents[16]",
+      "sourcePages": [
+        45
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": {
+          "fact": "inService",
+          "in": [
+            true
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00296",
+          "path": "documents[16].name",
+          "value": "Bond to serve the Government for at least 10 years",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-three-year-undertaking",
+      "recordPath": "documents[17]",
+      "sourcePages": [
+        8,
+        21,
+        49,
+        50
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00297",
+          "path": "documents[17].name",
+          "value": "Three-year service undertaking (Annexure 2) on ₹200 stamp paper, notarised, with two sureties",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00298",
+          "path": "documents[17].detail",
+          "value": "For Government seats in PG medical courses. Attach self-attested PAN and Aadhaar copies of both sureties.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-fmge",
+      "recordPath": "documents[18]",
+      "sourcePages": [
+        8,
+        21,
+        25
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "mbbsLocation",
+          "in": [
+            "abroad"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00299",
+          "path": "documents[18].name",
+          "value": "FMGE screening test pass certificate",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-caste",
+      "recordPath": "documents[19]",
+      "sourcePages": [
+        9,
+        21,
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "all": [
+            {
+              "fact": "category",
+              "in": [
+                "SC",
+                "ST",
+                "OBC"
+              ]
+            },
+            {
+              "fact": "isDomicile",
+              "in": [
+                true
+              ]
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00300",
+          "path": "documents[19].name",
+          "value": "Caste / caste-income certificate from the Tahsildar (Form-D, E or F)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00301",
+          "path": "documents[19].detail",
+          "value": "Form-D for SC/ST, Form-E for Category-1, Form-F for 2A, 2B, 3A and 3B. SC candidates need SCA, SCB or SCC printed on it, with the RD number.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-371j",
+      "recordPath": "documents[20]",
+      "sourcePages": [
+        20,
+        56
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00302",
+          "path": "documents[20].name",
+          "value": "Article 371(j) Hyderabad-Karnataka certificate (Annexure 8), if you claim it",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-study-cert",
+      "recordPath": "documents[21]",
+      "sourcePages": [
+        22,
+        59
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "studied10YearsInState",
+          "in": [
+            true
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00303",
+          "path": "documents[21].name",
+          "value": "Study certificate for 10 years (1st to 12th standard) in Karnataka (Annexure 11)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00304",
+          "path": "documents[21].detail",
+          "value": "From the head of each institution, countersigned by the BEO/DDPI for 1st to 10th standard. 11th and 12th need only the principal's or a gazetted officer's seal and signature.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-ka-marks",
+      "recordPath": "documents[22]",
+      "sourcePages": [
+        22
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "studied10YearsInState",
+          "in": [
+            true
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00305",
+          "path": "documents[22].name",
+          "value": "SSLC/10th or 2nd PUC/12th marks card showing you studied and passed in Karnataka",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-nri-ward",
+      "recordPath": "documents[23]",
+      "sourcePages": [
+        21,
+        25,
+        64,
+        65
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "fact": "nriLink",
+          "in": [
+            "parent",
+            "guardian",
+            "relative"
+          ]
+        },
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00306",
+          "path": "documents[23].name",
+          "value": "If you claim NRI Ward: Ward Certificate (Annexure 17) and sponsor's NRI/OCI status certificate (Annexure 17(A))",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00307",
+          "path": "documents[23].detail",
+          "value": "The sponsor must have stayed abroad for more than 182 days in the last financial year; the Consulate status certificate is valid for six months. Also bring a family tree signed by a Tahsildar (notary-signed or a relationship affidavit isn't accepted), a Consulate certificate issued within the last 6 months naming you and the sponsor (notary-signed isn't accepted), and copies of the sponsor's bank passbook, passport and visa. An e-copy may be accepted for verification if you submit the original at admission.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-clause-z",
+      "recordPath": "documents[24]",
+      "sourcePages": [
+        25
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": {
+          "any": [
+            {
+              "fact": "nationality",
+              "in": [
+                "oci",
+                "foreign"
+              ]
+            },
+            {
+              "fact": "nriLink",
+              "in": [
+                "self"
+              ]
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00308",
+          "path": "documents[24].name",
+          "value": "Parents' residence certificate from the embassy (or affidavit on ₹100 e-stamp paper), passport/visa, proof of citizenship and income tax documents",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00309",
+          "path": "documents[24].detail",
+          "value": "Also the sponsor's Embassy/Consulate certificate issued within the last 6 months, and a study certificate for studies outside India where applicable. NRI and PIO candidates under clause z need these too.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-foreign-registration",
+      "recordPath": "documents[25]",
+      "sourcePages": [
+        25
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": {
+          "fact": "nationality",
+          "in": [
+            "foreign"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00310",
+          "path": "documents[25].name",
+          "value": "Registration certificate from your home country's medical council",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00311",
+          "path": "documents[25].detail",
+          "value": "Then get temporary registration from MCI/DCI within one month of admission.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-religious-minority",
+      "recordPath": "documents[26]",
+      "sourcePages": [
+        26,
+        60
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null,
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00312",
+          "path": "documents[26].name",
+          "value": "Religious minority certificate from the Tahsildar (Annexure 12), if you claim it",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00313",
+          "path": "documents[26].detail",
+          "value": "Karnataka minority candidates also need the 10-year study certificate.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-linguistic-minority",
+      "recordPath": "documents[27]",
+      "sourcePages": [
+        26,
+        57,
+        58
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null,
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00314",
+          "path": "documents[27].name",
+          "value": "Linguistic minority certificate (Annexure 9 or 10), if you claim it",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00315",
+          "path": "documents[27].detail",
+          "value": "Countersigned by the BEO (1st to 10th) or Deputy Director, PU (11th and 12th), with the 10-year study certificate.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-st-johns",
+      "recordPath": "documents[28]",
+      "sourcePages": [
+        26,
+        61,
+        62,
+        63
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null,
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00316",
+          "path": "documents[28].name",
+          "value": "St. John's category certificates (Annexures 13 to 16), if you apply under them",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00317",
+          "path": "documents[28].detail",
+          "value": "The baptism certificate must be in English, or come with an English transcript attested by the Bishop.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-special-clause",
+      "recordPath": "documents[29]",
+      "sourcePages": [
+        23,
+        24
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00318",
+          "path": "documents[29].name",
+          "value": "Parent's service or home-town certificates, if you claim clause d, e, f or g",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00319",
+          "path": "documents[29].detail",
+          "value": "d: your 10-year study certificate (1st to 12th standard, including the years outside Karnataka), and a certificate from DPAR, Government of Karnataka (Principal, Deputy or Under Secretary) that the parent is in the All India Service, Karnataka cadre, with the period served outside Karnataka. If the parent is a State Government employee, get it from their Head of Department or Head of Office. e: the parent's 10-year Karnataka study certificate from the head of the institution, countersigned by the BEO/DDPI (Annexure 11), and the employer's certificate that the parent declared Karnataka as home town on joining and is transferable anywhere in India, countersigned by the employer's competent authority. f: Parliament Secretariat certificate that the parent is or was an MP elected from Karnataka, and your 10-year study certificate including the years in New Delhi. g: the parent's Karnataka home-town declaration made on joining. For serving defence personnel it comes from the respective branch or integrated HQ of MoD (officers) or the Record Office (JCOs/OR). For ex-servicemen it comes from the district Joint or Deputy Director, countersigned by the Director, Department of Sainik Welfare and Resettlement, Bengaluru.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-extra",
+      "recordPath": "documents[30]",
+      "sourcePages": [
+        19,
+        26
+      ],
+      "seats": null,
+      "context": {
+        "stage": "other",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00320",
+          "path": "documents[30].name",
+          "value": "Any additional documents KEA notifies",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00321",
+          "path": "documents[30].detail",
+          "value": "KEA or the Entrance Test Committee can ask for more documents at any time through a notification on its website.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-photocopies",
+      "recordPath": "documents[31]",
+      "sourcePages": [
+        67
+      ],
+      "seats": null,
+      "context": {
+        "stage": "registration",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00322",
+          "path": "documents[31].name",
+          "value": "Two sets of photocopies of everything",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00323",
+          "path": "documents[31].detail",
+          "value": "Don't bring laminated marks cards or certificates: KEA won't verify them, and you can't continue to seat allotment.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-choice-printout",
+      "recordPath": "documents[32]",
+      "sourcePages": [
+        34,
+        35,
+        36
+      ],
+      "seats": null,
+      "context": {
+        "stage": "other",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00324",
+          "path": "documents[32].name",
+          "value": "Choice printout, fee receipt and verification slip (before Round 2)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "karnataka-2026:F00325",
+          "path": "documents[32].detail",
+          "value": "Choice 2 candidates bring the fee receipt. Everyone brings all originals including Annexures 1, 2 and 7, and one set of photocopies.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-r1",
+      "recordPath": "resignation.ladder[0]",
+      "sourcePages": [
+        43
+      ],
+      "seats": null,
+      "context": {
+        "stage": "Cancel a Round 1 seat after admission",
+        "sector": "all"
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00326",
+          "path": "resignation.ladder[0].stage",
+          "value": "Cancel a Round 1 seat after admission",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00327",
+          "path": "resignation.ladder[0].window",
+          "value": "Up to one day before Round 2 counselling (as notified)",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00328",
+          "path": "resignation.ladder[0].fees",
+          "value": "Pay a processing fee of ₹25,000.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-r2-nojoin",
+      "recordPath": "resignation.ladder[1]",
+      "sourcePages": [
+        43
+      ],
+      "seats": null,
+      "context": {
+        "stage": "Allotted a clinical seat in Round 2 but don't join",
+        "sector": "all"
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00329",
+          "path": "resignation.ladder[1].stage",
+          "value": "Allotted a clinical seat in Round 2 but don't join",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00330",
+          "path": "resignation.ladder[1].window",
+          "value": "By the last date of joining for Round 2",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00331",
+          "path": "resignation.ladder[1].fees",
+          "value": "Pay ₹1,50,000 for a medical or dental degree, or ₹60,000 for a diploma. This applies to every candidate, including in-service candidates.",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00332",
+          "path": "resignation.ladder[1].otherConsequence",
+          "value": "You can't take part in further rounds or admissions that academic year.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-r2",
+      "recordPath": "resignation.ladder[2]",
+      "sourcePages": [
+        43
+      ],
+      "seats": null,
+      "context": {
+        "stage": "Cancel after Round 2's last joining date",
+        "sector": "all"
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00333",
+          "path": "resignation.ladder[2].stage",
+          "value": "Cancel after Round 2's last joining date",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00334",
+          "path": "resignation.ladder[2].window",
+          "value": "Up to one day before the mop-up round",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00335",
+          "path": "resignation.ladder[2].fees",
+          "value": "Penalty of ₹7,00,000 for a medical or dental clinical degree, or ₹3,00,000 for a clinical diploma.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-mopup",
+      "recordPath": "resignation.ladder[3]",
+      "sourcePages": [
+        43,
+        45
+      ],
+      "seats": null,
+      "context": {
+        "stage": "Cancel or surrender after the mop-up round",
+        "sector": "all"
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00336",
+          "path": "resignation.ladder[3].stage",
+          "value": "Cancel or surrender after the mop-up round",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00337",
+          "path": "resignation.ladder[3].window",
+          "value": "After the mop-up round, in person at the Directorate of Medical Education",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00338",
+          "path": "resignation.ladder[3].fees",
+          "value": "Penalty of ₹18,00,000 for a medical clinical degree or diploma, or ₹6,00,000 for a dental degree or diploma, and the fees paid are forfeited. Pre-clinical seats (Anatomy, Physiology, Biochemistry, Forensic Medicine): ₹1,00,000 and fees forfeited. Para-clinical seats (Pharmacology, Pathology, Microbiology, Community Medicine): ₹2,00,000 for a degree or ₹75,000 for a diploma (written in words as seventy thousand; confirm with KEA), and tuition forfeited.",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00339",
+          "path": "resignation.ladder[3].otherConsequence",
+          "value": "You're ineligible for further rounds of admission, including names-list admission.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-leave-course",
+      "recordPath": "resignation.ladder[4]",
+      "sourcePages": [
+        44
+      ],
+      "seats": null,
+      "context": {
+        "stage": "Leave the course before completing it",
+        "sector": "all"
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00340",
+          "path": "resignation.ladder[4].stage",
+          "value": "Leave the course before completing it",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00341",
+          "path": "resignation.ladder[4].window",
+          "value": "After the last date of admission for the year",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00342",
+          "path": "resignation.ladder[4].fees",
+          "value": "Bond penalty of ₹10,00,000 for a degree or ₹4,00,000 for a diploma. Pre-clinical seats: ₹1,00,000 and fees forfeited. Para-clinical seats: ₹1,00,000 for a degree or ₹75,000 for a diploma, and tuition forfeited.",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "karnataka-2026:F00343",
+          "path": "resignation.ladder[4].otherConsequence",
+          "value": "You also pay the entire course fee and stipend to the college.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-govt",
+      "recordPath": "serviceBond.bond",
+      "sourcePages": [
+        8,
+        45,
+        49
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00344",
+          "path": "serviceBond.bond.appliesTo",
+          "value": "Candidates taking Government seats, including All India Quota, in PG medical courses",
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "karnataka-2026:F00345",
+          "path": "serviceBond.bond.durationYears",
+          "value": 3,
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "karnataka-2026:F00346",
+          "path": "serviceBond.bond.amounts[0].course",
+          "value": "PG Degree (MD/MS)",
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "karnataka-2026:F00347",
+          "path": "serviceBond.bond.amounts[0].amountInr",
+          "value": 5000000,
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "karnataka-2026:F00348",
+          "path": "serviceBond.bond.amounts[1].course",
+          "value": "PG Diploma",
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "karnataka-2026:F00349",
+          "path": "serviceBond.bond.amounts[1].amountInr",
+          "value": 2500000,
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "karnataka-2026:F00350",
+          "path": "serviceBond.bond.placeOfService",
+          "value": "Any location in Karnataka decided by the Government of Karnataka, if the Government wants you to serve",
+          "surface": "bond summary"
+        }
+      ]
+    },
+    {
+      "itemId": "helpdesk",
+      "recordPath": "helpdesk",
+      "sourcePages": [
+        1,
+        5,
+        9,
+        11,
+        28,
+        52,
+        67
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00351",
+          "path": "helpdesk.phones[0].label",
+          "value": "KEA helpline (10 lines)",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00352",
+          "path": "helpdesk.phones[0].numbers[0]",
+          "value": "08023460460",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00353",
+          "path": "helpdesk.emails[0].label",
+          "value": "KEA",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00354",
+          "path": "helpdesk.emails[0].addresses[0]",
+          "value": "keauthority-ka@nic.in",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00355",
+          "path": "helpdesk.hours",
+          "value": "Helpline: 8:00 AM to 8:00 PM",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00356",
+          "path": "helpdesk.instructions[0]",
+          "value": "KEA office and document verification venue: KEA, 18th Cross, Sampige Road, Malleshwaram, Bengaluru.",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00357",
+          "path": "helpdesk.instructions[1]",
+          "value": "KEA also has a chatbot (kea-bot.com), the KEA app, the KEA Vikasana YouTube channel and X (@KEA_KARNATAKA).",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00358",
+          "path": "helpdesk.instructions[2]",
+          "value": "For official updates, also see mcc.nic.in, mohfw.nic.in and nbe.edu.in.",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00359",
+          "path": "helpdesk.instructions[3]",
+          "value": "NEET-MDS result queries go to NBEMS: 011-45593000 or its communication portal.",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "karnataka-2026:F00360",
+          "path": "helpdesk.instructions[4]",
+          "value": "Report touts offering seats to keauthority-ka@nic.in.",
+          "surface": "help desk"
+        }
+      ]
+    },
+    {
+      "itemId": "hc-kea",
+      "recordPath": "helpCentres[0]",
+      "sourcePages": [
+        28,
+        67
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00361",
+          "path": "helpCentres[0].name",
+          "value": "Karnataka Examinations Authority (document verification)",
+          "surface": "help-centre list"
+        },
+        {
+          "fieldId": "karnataka-2026:F00362",
+          "path": "helpCentres[0].address",
+          "value": "18th Cross, Sampige Road, Malleshwaram, Bengaluru. Book a slot on the KEA website first.",
+          "surface": "help-centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "pwd-kea",
+      "recordPath": "disabilityCentres[0]",
+      "sourcePages": [
+        10,
+        67
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00363",
+          "path": "disabilityCentres[0].name",
+          "value": "KEA premises",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00364",
+          "path": "disabilityCentres[0].location",
+          "value": "Malleshwaram, Bengaluru",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00365",
+          "path": "disabilityCentres[0].remarks",
+          "value": "All PwD candidates must attend the medical examination here on the notified dates.",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-1",
+      "recordPath": "annexures[0]",
+      "sourcePages": [
+        27,
+        47,
+        48
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00366",
+          "path": "annexures[0].title",
+          "value": "Annexure 1",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00367",
+          "path": "annexures[0].description",
+          "value": "Compulsory rural service bond (₹100 stamp paper, notarised), with personal details sheet",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-2",
+      "recordPath": "annexures[1]",
+      "sourcePages": [
+        27,
+        49,
+        50
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00368",
+          "path": "annexures[1].title",
+          "value": "Annexure 2",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00369",
+          "path": "annexures[1].description",
+          "value": "Three-year service undertaking for Government seats (₹200 stamp paper, notarised, two sureties)",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-3",
+      "recordPath": "annexures[2]",
+      "sourcePages": [
+        27,
+        51,
+        52
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00370",
+          "path": "annexures[2].title",
+          "value": "Annexure 3",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00371",
+          "path": "annexures[2].description",
+          "value": "NBEMS notice: NEET-MDS 2026 result and cut-offs",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-4",
+      "recordPath": "annexures[3]",
+      "sourcePages": [
+        27,
+        51
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00372",
+          "path": "annexures[3].title",
+          "value": "Annexure 4",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00373",
+          "path": "annexures[3].description",
+          "value": "NBE notice for qualifying NEET-PG 2026 (heading only; the notice isn't reproduced)",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-5",
+      "recordPath": "annexures[4]",
+      "sourcePages": [
+        27,
+        53
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00374",
+          "path": "annexures[4].title",
+          "value": "Annexure 5",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00375",
+          "path": "annexures[4].description",
+          "value": "Internship completion certificate",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-6",
+      "recordPath": "annexures[5]",
+      "sourcePages": [
+        27,
+        54
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00376",
+          "path": "annexures[5].title",
+          "value": "Annexure 6",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00377",
+          "path": "annexures[5].description",
+          "value": "Provisional internship completion certificate",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-7",
+      "recordPath": "annexures[6]",
+      "sourcePages": [
+        27,
+        55
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00378",
+          "path": "annexures[6].title",
+          "value": "Annexure 7",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00379",
+          "path": "annexures[6].description",
+          "value": "Affidavit on ₹100 bond paper",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-8",
+      "recordPath": "annexures[7]",
+      "sourcePages": [
+        27,
+        56
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00380",
+          "path": "annexures[7].title",
+          "value": "Annexure 8",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00381",
+          "path": "annexures[7].description",
+          "value": "Article 371(j) Hyderabad-Karnataka local person certificate",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-9",
+      "recordPath": "annexures[8]",
+      "sourcePages": [
+        27,
+        57
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00382",
+          "path": "annexures[8].title",
+          "value": "Annexure 9",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00383",
+          "path": "annexures[8].description",
+          "value": "Linguistic minority certificate (1st to 10th, countersigned by BEO)",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-10",
+      "recordPath": "annexures[9]",
+      "sourcePages": [
+        27,
+        58
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00384",
+          "path": "annexures[9].title",
+          "value": "Annexure 10",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00385",
+          "path": "annexures[9].description",
+          "value": "Linguistic minority certificate (PUC / 11th–12th, countersigned by Deputy Director PU)",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-11",
+      "recordPath": "annexures[10]",
+      "sourcePages": [
+        27,
+        59
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00386",
+          "path": "annexures[10].title",
+          "value": "Annexure 11",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00387",
+          "path": "annexures[10].description",
+          "value": "Study certificate proforma",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-12",
+      "recordPath": "annexures[11]",
+      "sourcePages": [
+        27,
+        60
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00388",
+          "path": "annexures[11].title",
+          "value": "Annexure 12",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00389",
+          "path": "annexures[11].description",
+          "value": "Religious minority certificate (Tahsildar)",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-13",
+      "recordPath": "annexures[12]",
+      "sourcePages": [
+        27,
+        61
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00390",
+          "path": "annexures[12].title",
+          "value": "Annexure 13",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00391",
+          "path": "annexures[12].description",
+          "value": "St. John's PG Category 1 certificate (Superior General / Provincial)",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-14",
+      "recordPath": "annexures[13]",
+      "sourcePages": [
+        27,
+        62
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00392",
+          "path": "annexures[13].title",
+          "value": "Annexure 14",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00393",
+          "path": "annexures[13].description",
+          "value": "St. John's rural service certificate for Categories 1 and 2",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-15",
+      "recordPath": "annexures[14]",
+      "sourcePages": [
+        27,
+        63
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00394",
+          "path": "annexures[14].title",
+          "value": "Annexure 15",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00395",
+          "path": "annexures[14].description",
+          "value": "St. John's Category 3: baptism certificate",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-16",
+      "recordPath": "annexures[15]",
+      "sourcePages": [
+        27,
+        63
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00396",
+          "path": "annexures[15].title",
+          "value": "Annexure 16",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00397",
+          "path": "annexures[15].description",
+          "value": "St. John's Category 3: Roman Catholic eligibility certificate from the Bishop",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-17",
+      "recordPath": "annexures[16]",
+      "sourcePages": [
+        27,
+        64
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00398",
+          "path": "annexures[16].title",
+          "value": "Annexure 17",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00399",
+          "path": "annexures[16].description",
+          "value": "NRI Ward Certificate",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-17a",
+      "recordPath": "annexures[17]",
+      "sourcePages": [
+        27,
+        65
+      ],
+      "seats": [
+        "nri"
+      ],
+      "context": {
+        "seats": [
+          "nri"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00400",
+          "path": "annexures[17].title",
+          "value": "Annexure 17(A)",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00401",
+          "path": "annexures[17].description",
+          "value": "Certification of NRI/OCI status of sponsor (Indian Consulate, valid six months)",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-18",
+      "recordPath": "annexures[18]",
+      "sourcePages": [
+        27,
+        66
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00402",
+          "path": "annexures[18].title",
+          "value": "Annexure 18",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00403",
+          "path": "annexures[18].description",
+          "value": "Original document verification for PG Dental 2026 (in Kannada)",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-19",
+      "recordPath": "annexures[19]",
+      "sourcePages": [
+        27,
+        67
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00404",
+          "path": "annexures[19].title",
+          "value": "Annexure 19",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00405",
+          "path": "annexures[19].description",
+          "value": "Original document verification instructions for PG NEET MDS 2026",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-20",
+      "recordPath": "annexures[20]",
+      "sourcePages": [
+        27,
+        68
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00406",
+          "path": "annexures[20].title",
+          "value": "Annexure 20",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "karnataka-2026:F00407",
+          "path": "annexures[20].description",
+          "value": "NMC letter dated 24th July 2023: all counselling rounds online",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "date-mds-internship",
+      "recordPath": "importantDates[0]",
+      "sourcePages": [
+        7
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00408",
+          "path": "importantDates[0].label",
+          "value": "NEET-MDS 2026 internship completion cut-off",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "karnataka-2026:F00409",
+          "path": "importantDates[0].date",
+          "value": "2026-05-31",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "date-slot-booking",
+      "recordPath": "importantDates[1]",
+      "sourcePages": [
+        66,
+        67
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00410",
+          "path": "importantDates[1].label",
+          "value": "Document verification slot booking opens (PG Dental)",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "karnataka-2026:F00411",
+          "path": "importantDates[1].date",
+          "value": "2026-08-15",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "date-mds-scorecard",
+      "recordPath": "importantDates[2]",
+      "sourcePages": [
+        52
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00412",
+          "path": "importantDates[2].label",
+          "value": "NEET-MDS 2026 scorecard downloadable (for 6 months only)",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "karnataka-2026:F00413",
+          "path": "importantDates[2].date",
+          "value": "2026-06-10",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-schedule",
+      "recordPath": "gaps[0]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00414",
+          "path": "gaps[0].title",
+          "value": "Counselling schedule",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00415",
+          "path": "gaps[0].detail",
+          "value": "The bulletin has no calendar of events. Dates for verification, option entry and each round are published on the KEA website.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-medical",
+      "recordPath": "gaps[1]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00416",
+          "path": "gaps[1].title",
+          "value": "PG Medical (MD/MS/Diploma) start",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00417",
+          "path": "gaps[1].detail",
+          "value": "PG Medical details take effect only after MCC's announcement. Slot booking dates for PG Medical and the NEET-PG internship cut-off aren't given.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-seat-matrix",
+      "recordPath": "gaps[2]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00418",
+          "path": "gaps[2].title",
+          "value": "Seat matrix",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00419",
+          "path": "gaps[2].detail",
+          "value": "College-, course- and category-wise seats are issued by the Government and hosted on the KEA website.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-fees",
+      "recordPath": "gaps[3]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00420",
+          "path": "gaps[3].title",
+          "value": "College tuition fees",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00421",
+          "path": "gaps[3].detail",
+          "value": "The fee structure for each college and seat type is published separately on the KEA website.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-reservation",
+      "recordPath": "gaps[4]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00422",
+          "path": "gaps[4].title",
+          "value": "Reservation percentages",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00423",
+          "path": "gaps[4].detail",
+          "value": "The bulletin lists categories (SC, ST, Category-1, 2A, 2B, 3A, 3B, Hyderabad-Karnataka) but not their percentages.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-in-service",
+      "recordPath": "gaps[5]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00424",
+          "path": "gaps[5].title",
+          "value": "In-service guidelines",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00425",
+          "path": "gaps[5].detail",
+          "value": "Detailed in-service eligibility and procedures will be published later.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-ews",
+      "recordPath": "gaps[6]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00426",
+          "path": "gaps[6].title",
+          "value": "EWS reservation",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00427",
+          "path": "gaps[6].detail",
+          "value": "EWS appears only in the NBEMS cut-off table. No Karnataka EWS reservation is stated.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-pwd",
+      "recordPath": "gaps[7]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00428",
+          "path": "gaps[7].title",
+          "value": "PwD criteria",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00429",
+          "path": "gaps[7].detail",
+          "value": "PwD eligibility refers to the MCC PH notice on the KEA website, which isn't part of this bulletin.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-neet-pg-notice",
+      "recordPath": "gaps[8]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00430",
+          "path": "gaps[8].title",
+          "value": "NEET-PG 2026 qualifying notice",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00431",
+          "path": "gaps[8].detail",
+          "value": "Annexure 4 (NBE notice for NEET-PG 2026) is only a heading. The NEET-PG cut-offs aren't reproduced.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-cutoffs",
+      "recordPath": "gaps[9]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "karnataka-2026:F00432",
+          "path": "gaps[9].title",
+          "value": "Previous closing ranks",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "karnataka-2026:F00433",
+          "path": "gaps[9].detail",
+          "value": "Past cut-off ranks aren't included. Mock allotment cut-offs are shown during counselling.",
+          "surface": "gap cards"
+        }
+      ]
+    }
+  ],
+  "fieldCount": 433,
+  "derivedSurfaces": [
+    "eligibility headlines/reasons/categories/quota/sector/courses and document applicability",
+    "deposit recommendation and upfront total",
+    "reservation complement and horizontal/vertical labels",
+    "counts of checklist/centres/rows",
+    "next deadline, stage status and IST urgency/countdown"
+  ],
+  "uiTemplates": [
+    {
+      "id": "gap-section-intro",
+      "literal": "These are published separately, so check the official website for them.",
+      "condition": "state gaps section"
+    },
+    {
+      "id": "reservation-none",
+      "literal": "This year's documents don't state the reservation percentages. Check the official website before choice filling.",
+      "condition": "reservation.policy null"
+    },
+    {
+      "id": "reservation-classification",
+      "literal": "Vertical reservation. Horizontal: <policy horizontal categories/percentages>.",
+      "condition": "visible policy"
+    },
+    {
+      "id": "bond-penalty-caption",
+      "literal": "Penalty if you don't serve: <course> <bond amount>",
+      "condition": "visible serviceBond.bond"
+    },
+    {
+      "id": "bond-none",
+      "literal": "These documents don't describe a service bond. Check the official website for this year's bond rules.",
+      "condition": "serviceBond.bond null"
+    },
+    {
+      "id": "resignation-generalisation",
+      "literal": "The later you leave, the more you lose.",
+      "condition": "nonempty resignation ladder"
+    },
+    {
+      "id": "help-centre-operational-instruction",
+      "literal": "Book an appointment while printing your registration slip, then visit with originals and one self-attested photocopy set.",
+      "condition": "helpCentres.length>0"
+    },
+    {
+      "id": "nodal-centre-instruction",
+      "literal": "If you're allotted a private college, you take admission at its nodal centre.",
+      "condition": "nodalCentres.length>0"
+    },
+    {
+      "id": "eligibility-category-pwd",
+      "literal": "You'll be counted as <effective category> + PwD when profile.pwd is true.",
+      "condition": "eligible/restricted verdict"
+    },
+    {
+      "id": "eligibility-no-exclusion",
+      "literal": "Nothing excluded",
+      "condition": "eligible/restricted verdict and excludedCourses empty"
+    },
+    {
+      "id": "deposit-recommendation",
+      "literal": "Recommended for you: covers every college open to you",
+      "condition": "recommended deposit"
+    },
+    {
+      "id": "disability-centre-count",
+      "literal": "Designated disability certification centres (<array length>)",
+      "condition": "disabilityCentres.length>0"
+    }
+  ]
+}
