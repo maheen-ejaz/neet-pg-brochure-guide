@@ -170,6 +170,21 @@ schedule, replace `brochures/mcc/2026/source.pdf`, update the JSON and re-verify
   all profile steps, date-error associations, search/filter/display controls and fixture comparison empty states pass.
   Independent read-only review cleared implementation and integration findings. Live deployment remains on request.
 
+## Share images and repository presentation (09-10-2026)
+
+- A shared HTML cover (`docs/images/banner.html`) now matches the dashboard typography, neutral canvas,
+  panel treatment and GooCampus mark. It renders the README cover, GitHub social image (1280 × 640)
+  and website share image (`public/og-image.png`, 1200 × 630). Covers retain an explicit draft-preview notice.
+- README navigation, screenshots and product copy now reflect the candidate workspace. Candidate images
+  come from the built preview with fresh contexts and a synthetic demo profile; review-tool imagery is separate.
+  Manual regeneration instructions are in `docs/images/README.md`.
+- `index.html` now includes Open Graph and Twitter large-image metadata, image dimensions and descriptive
+  alt text. Build output includes the image and retains preview noindex and review-code exclusion.
+- GitHub social preview and repository description were updated and verified in the repository settings.
+- **Website activation remains pending:** the new metadata/image are ready in code but are not live. The
+  Netlify credential-runner/binding gap recorded above remains; no app deployment was launched in this task.
+  Release from the integrated clean default checkout once that declared access contract is supplied.
+
 ## Seat-type views
 
 Each state page has a switch: **All seats | Government | Management & NRI** (`src/app/seats.tsx`). Items carry an
