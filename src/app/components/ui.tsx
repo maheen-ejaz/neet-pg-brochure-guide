@@ -118,10 +118,10 @@ export function Section({
   }, [collapsible, id]);
   const bodyId = id ? `${id}-body` : undefined;
   return (
-    <section id={id} className="card scroll-mt-28">
+    <section id={id} className="card scroll-mt-56 lg:scroll-mt-40">
       <div className={`flex flex-wrap items-end justify-between gap-2 px-5 py-4 sm:px-6 ${open ? "border-b border-line" : ""}`}>
         <div className="min-w-0">
-          {kicker && <p className="text-xs text-soft">{kicker}</p>}
+          {kicker && <p className="eyebrow mb-1.5">{kicker}</p>}
           {collapsible ? (
             <h2 className="text-lg sm:text-xl">
               <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls={bodyId} className="flex items-center gap-2 text-left">
@@ -167,7 +167,7 @@ export function RuleCard({
   pages: number[];
 }) {
   return (
-    <div className="rounded-lg border border-line bg-surface p-4">
+    <div className="min-w-0 rounded-lg border border-line bg-surface p-4">
       {(tag || seats || severityLabel[severity]) && (
         <div className="mb-2 flex flex-wrap items-center gap-1.5">
           <SeatChip seats={seats} />
@@ -197,7 +197,7 @@ export function DraftBanner() {
   return (
     <div className="no-print rounded-lg border border-warn/30 bg-warn-tint px-4 py-2 text-sm text-warn">
       {import.meta.env.DEV ? (
-        <><strong>Draft preview:</strong> this state hasn't been reviewed yet and is only visible on your local dev server.</>
+        <><strong>Draft preview:</strong> this guide hasn't been reviewed yet and is only visible on your local dev server.</>
       ) : (
         <><strong>Draft:</strong> this guide is built from the official documents but hasn't been checked by our team yet. Confirm every detail on the official website before you act on it.</>
       )}
