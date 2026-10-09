@@ -20,11 +20,11 @@ export function stageWhen(s: ScheduleStage, short = false): string {
 
 export type StageStatus = "done" | "now" | "upcoming";
 
-/** By calendar day. A stage is "now" on every day from its start to its end, inclusive. */
-export function stageStatus(s: ScheduleStage, today: string): StageStatus {
+/** Uses the printed start/closing times when supplied; undated times span the calendar day. */
+export function stageStatus(s: ScheduleStage, today: string, nowMinutes = 0): StageStatus {
   const end = s.end ?? s.start;
-  if (today > end) return "done";
-  if (today >= s.start) return "now";
+  if (today > end || (today === end && nowMinutes >= toMinutes(s.endTime))) return "done";
+  if (today > s.start || (today === s.start && nowMinutes >= (s.startTime ? toMinutes(s.startTime) : 0))) return "now";
   return "upcoming";
 }
 
@@ -47,7 +47,7 @@ export interface Deadline {
 
 /**
  * The next candidate deadline after now, or null once the schedule is over. `nowMinutes` is the
- * time of day (MCC times are server time, i.e. IST); a deadline without a time lasts all day.
+ * time of day in the app’s IST clock; a deadline without a time lasts all day.
  */
 export function nextDeadline(schedule: Schedule, today: string, nowMinutes = 0): Deadline | null {
   const all: Deadline[] = schedule.rounds.flatMap((round) =>
@@ -81,7 +81,8 @@ export function toMinutes(time?: string): number {
 }
 
 /**
- * MCC times are "as per server time", i.e. Indian Standard Time. "Today" and "now" are therefore
+ * The app uses Indian Standard Time. The MCC source says "Server Time" without naming a
+ * time zone; the schedule page discloses that assumption. "Today" and "now" are
  * taken in Asia/Kolkata, whatever the viewer's own time zone.
  */
 function istParts(now: Date) {

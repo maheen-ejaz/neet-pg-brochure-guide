@@ -10,20 +10,21 @@ import {
   StatusChip,
 } from "../components/ui";
 import { minutesNow, nextDeadline, scheduleDocs, todayIso } from "../schedule";
-import { DeadlineBadge } from "../components/DeadlineBadge";
+import { DeadlineBadge, useNow } from "../components/DeadlineBadge";
 import { RoundTable } from "../components/RoundTable";
 import { formatDate } from "../text";
 import { useProfile } from "../useProfile";
 import { NotFound } from "./NotFound";
 
 export function SchedulePage() {
+  const now = useNow();
   const { key } = useParams();
   const entry = findSchedule(key);
   const { profile } = useProfile();
   if (!entry) return <NotFound />;
   const s = entry.schedule;
-  const today = todayIso();
-  const next = nextDeadline(s, today, minutesNow());
+  const today = todayIso(now);
+  const next = nextDeadline(s, today, minutesNow(now));
   const wrongCourse =
     profile?.courseType && !s.meta.courses.includes(profile.courseType);
 
@@ -110,7 +111,7 @@ export function SchedulePage() {
                 />
               </div>
               <p className="mt-3 text-xs text-soft">
-                Times are MCC server time.{" "}
+                The schedule prints “Server Time” without specifying a time zone. The app uses IST for its status and countdown; confirm the closing time on the MCC portal.{" "}
                 {s.meta.tentative ? "Dates are tentative." : ""}
               </p>
             </>
@@ -143,7 +144,7 @@ export function SchedulePage() {
             kicker="All India Quota"
             title={r.name}
           >
-            <RoundTable round={r} today={today} />
+            <RoundTable round={r} today={today} nowMinutes={minutesNow(now)} />
           </Section>
         ))}
 

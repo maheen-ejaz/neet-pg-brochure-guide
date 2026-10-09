@@ -23,6 +23,22 @@ describe("MCC schedule helpers", () => {
     expect(stageStatus(stage("registration"), "2026-10-22")).toBe("done");
   });
 
+  it("closes registration, payment and choices at the printed minute", () => {
+    expect(stageStatus(stage("registration"), "2026-10-21", 719)).toBe("now");
+    expect(stageStatus(stage("registration"), "2026-10-21", 720)).toBe("done");
+    expect(stageStatus(stage("payment"), "2026-10-21", 899)).toBe("now");
+    expect(stageStatus(stage("payment"), "2026-10-21", 900)).toBe("done");
+    expect(stageStatus(stage("choiceFilling"), "2026-10-22", 599)).toBe("now");
+    expect(stageStatus(stage("choiceFilling"), "2026-10-22", 600)).toBe("done");
+  });
+
+  it("waits for the printed locking opening time and includes the college cutoff in prose", () => {
+    expect(stageStatus(stage("choiceLocking"), "2026-10-21", 959)).toBe("upcoming");
+    expect(stageStatus(stage("choiceLocking"), "2026-10-21", 960)).toBe("now");
+    const matrix = mcc.rounds[1].stages.find((s) => s.key === "seatMatrix")!;
+    expect(stageWhen(matrix, true)).toContain("until 1:00 PM");
+  });
+
   it("finds the next candidate deadline, ordering same-day times", () => {
     expect(nextDeadline(mcc, "2026-10-07")?.label).toBe("Round 1: registration closes");
     // 21-10: registration (12 noon) closes before payment (3 PM)

@@ -1,0 +1,4498 @@
+{
+  "key": "mcc-pg-2026",
+  "snapshot": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "sourceInputProof": {
+    "visibleInput": "tmp/audit-input/mcc-pg-2026-visible.json",
+    "visibleInputSha256": "2bb6b103022bbf3096acec6c91987295a6e168fa7cb07b2225f0dd29348c0671",
+    "declaredFieldCount": 188,
+    "countedFieldCount": 188,
+    "dataSha256FromVisibleInput": "318e9875bb503d3ad8bbc2808861adbafad0dd1b4e09b72258e54e4f514c1eda",
+    "sourcePdf": "brochures/mcc/2026/source.pdf",
+    "sourcePdfSha256": "cab6d84cb045e18c6b885000766422313c1948b9294901cd7fbecf9147f500b5",
+    "sourcePdfPageCount": 4
+  },
+  "fieldAudits": [
+    {
+      "fieldId": "mcc-pg-2026:F00001",
+      "path": "meta.title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00001:C01",
+          "claim": "meta.title stores the source document title, but the current schedule and home pages do not render this field.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Unrendered metadata in the app surface under audit; SchedulePage and HomePage render meta.shortTitle and contain no meta.title reference.",
+          "codeEvidence": [
+            "src/app/pages/SchedulePage.tsx: h1 renders s.meta.shortTitle",
+            "src/app/pages/HomePage.tsx: schedule card renders schedule.meta.shortTitle"
+          ]
+        }
+      ],
+      "value": "Tentative schedule for online counselling (allotment process) for NEET 50% AIQ and 100% Deemed/Central Universities/AFMS (registration only) for PG courses, academic year 2026",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00002",
+      "path": "meta.shortTitle",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00002:C01",
+          "claim": "“All India Quota counselling (MCC) 2026” is a concise app display caption, not source wording.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Editorial short title that identifies the schedule for navigation; it is not a separate schedule rule or date claim."
+        }
+      ],
+      "value": "All India Quota counselling (MCC) 2026",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00003",
+      "path": "meta.authority",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00003:C01",
+          "claim": "The schedule is associated with DGHS and MCC.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "ADG(ME) - DGHS; Sharing of data to MCC",
+          "verdict": "confirmed",
+          "reason": "The PDF names DGHS in its file footer and MCC in the joined-candidate data-sharing column; official MCC page verifies the expanded authority names.",
+          "externalEvidence": {
+            "url": "https://mcc.nic.in/",
+            "retrieved": "2026-10-09",
+            "sourceQuote": "चिकित्सा परामर्श समिति Medical Counselling Committee (MCC) Admission and eCounselling Services for Session 2026; Directorate General of health Services, Ministry of Health & Family Welfare",
+            "note": "Official MCC site header and introduction identify MCC and DGHS."
+          }
+        },
+        {
+          "claimId": "mcc-pg-2026:F00003:C02",
+          "claim": "MCC expands to Medical Counselling Committee.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "ADG(ME) - DGHS",
+          "verdict": "confirmed",
+          "externalEvidence": {
+            "url": "https://mcc.nic.in/",
+            "retrieved": "2026-10-09",
+            "sourceQuote": "चिकित्सा परामर्श समिति Medical Counselling Committee (MCC) Admission and eCounselling Services for Session 2026"
+          }
+        },
+        {
+          "claimId": "mcc-pg-2026:F00003:C03",
+          "claim": "DGHS expands to Directorate General of Health Services.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "ADG(ME) - DGHS",
+          "verdict": "confirmed",
+          "externalEvidence": {
+            "url": "https://mcc.nic.in/",
+            "retrieved": "2026-10-09",
+            "sourceQuote": "Directorate General of health Services, Ministry of Health & Family Welfare"
+          }
+        }
+      ],
+      "value": "Medical Counselling Committee (MCC), Directorate General of Health Services (DGHS)",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00004",
+      "path": "meta.scope[0]",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00004:C01",
+          "claim": "The schedule covers 50% All India Quota seats.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "NEET 50% AIQ",
+          "verdict": "confirmed",
+          "reason": "The title states “50% AIQ”; MCC’s official description confirms this refers to 50% AIQ seats for PG courses.",
+          "externalEvidence": {
+            "url": "https://mcc.nic.in/",
+            "retrieved": "2026-10-09",
+            "sourceQuote": "50% AIQ seats for PG courses"
+          }
+        }
+      ],
+      "value": "50% All India Quota (AIQ) seats",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00005",
+      "path": "meta.scope[1]",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00005:C01",
+          "claim": "The schedule covers 100% seats in Deemed and Central Universities.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "100% DEEMED/CENTRAL UNIVERSITIES",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "100% seats in Deemed and Central Universities",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00006",
+      "path": "meta.scope[2]",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00006:C01",
+          "claim": "AFMS participation is registration only.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "AFMS-ONLY REGISTRATION",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "AFMS: registration only",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00007",
+      "path": "meta.courses[0]",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00007:C01",
+          "claim": "“clinical” is an internal course enum used to match the MD / MS / Diploma / DNB profile option; it is not a candidate-facing statement that only particular clinical specialties are included.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "The field is consumed by the course-mismatch warning and is not rendered as prose. ProfilePage maps clinical to “MD / MS / Diploma / DNB” and dental to “MDS”; speciality selection is a separate profile field.",
+          "codeEvidence": [
+            "src/app/pages/ProfilePage.tsx: courseType options map clinical → MD / MS / Diploma / DNB and dental → MDS",
+            "src/engine/profile.ts: courseType is clinical | dental; specialities is a separate string array",
+            "src/app/pages/SchedulePage.tsx: compares profile.courseType to s.meta.courses"
+          ]
+        }
+      ],
+      "value": "clinical",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00008",
+      "path": "meta.tentative",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00008:C01",
+          "claim": "The schedule is tentative.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "TENTATIVE SCHEDULE",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": true,
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00009",
+      "path": "meta.documentDate",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00009:C01",
+          "claim": "The document generation date is 7 October 2026.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Generated from eOffice by SOMVIR, Sr. Statistical Officer-(S), SSO, DGHS DEPARTMENT on 07/10/2026 01:03 pm",
+          "verdict": "confirmed",
+          "reason": "The printed DD/MM/YYYY date is normalized to ISO 2026-10-07."
+        }
+      ],
+      "value": "2026-10-07",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00010",
+      "path": "meta.documentDateLabel",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00010:C01",
+          "claim": "The date label says the document was generated from eOffice.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Generated from eOffice by SOMVIR, Sr. Statistical Officer-(S), SSO, DGHS DEPARTMENT on 07/10/2026 01:03 pm",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "Generated from eOffice",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00011",
+      "path": "meta.officialWebsites[0]",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00011:C01",
+          "claim": "https://mcc.nic.in is the official MCC website.",
+          "sourcePages": [],
+          "sourceQuote": "Medical Counselling Committee (MCC) Admission and eCounselling Services for Session 2026",
+          "verdict": "confirmed",
+          "externalEvidence": {
+            "url": "https://mcc.nic.in/",
+            "retrieved": "2026-10-09",
+            "sourceQuote": "चिकित्सा परामर्श समिति Medical Counselling Committee (MCC) Admission and eCounselling Services for Session 2026",
+            "note": "The URL is not printed in the four-page schedule; the official primary site at this URL identifies itself as MCC."
+          }
+        }
+      ],
+      "value": "https://mcc.nic.in",
+      "recordId": "meta",
+      "recordSourcePages": [
+        1,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00012",
+      "path": "rounds[0].name",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00012:C01",
+          "claim": "Round 1 is a named counselling round.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Round-1",
+          "verdict": "confirmed",
+          "reason": "Round number/capitalization is normalized in the app label."
+        }
+      ],
+      "value": "Round 1",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00013",
+      "path": "rounds[0].stages[0].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00013:C01",
+          "claim": "“seatMatrix” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "seatMatrix",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00014",
+      "path": "rounds[0].stages[0].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00014:C01",
+          "claim": "Round 1 includes the stage “Seat matrix verification by colleges”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Verification of Tentative Seat Matrix by the participating Institutes",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Seat matrix verification by colleges",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00015",
+      "path": "rounds[0].stages[0].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00015:C01",
+          "claim": "Round 1 seat matrix verification starts on 2026-10-10.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "10th Oct., 2026 to 12th Oct., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-10",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00016",
+      "path": "rounds[0].stages[0].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00016:C01",
+          "claim": "Round 1 seat matrix verification ends on 2026-10-12.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "10th Oct., 2026 to 12th Oct., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-12",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00017",
+      "path": "rounds[0].stages[1].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00017:C01",
+          "claim": "“registration” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "registration",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00018",
+      "path": "rounds[0].stages[1].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00018:C01",
+          "claim": "Round 1 includes the stage “Registration”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Registration/Payment",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Registration",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00019",
+      "path": "rounds[0].stages[1].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00019:C01",
+          "claim": "Round 1 registration starts on 2026-10-12.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "12th Oct. to 21st Oct., 2026 up to 12:00 NOON of 21st Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-12",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00020",
+      "path": "rounds[0].stages[1].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00020:C01",
+          "claim": "Round 1 registration ends on 2026-10-21.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "12th Oct. to 21st Oct., 2026 up to 12:00 NOON of 21st Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-21",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00021",
+      "path": "rounds[0].stages[1].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00021:C01",
+          "claim": "Round 1 registration closes/ends at 12:00 noon.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "12th Oct. to 21st Oct., 2026 up to 12:00 NOON of 21st Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "12:00 noon",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00022",
+      "path": "rounds[0].stages[2].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00022:C01",
+          "claim": "“payment” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "payment",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00023",
+      "path": "rounds[0].stages[2].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00023:C01",
+          "claim": "Round 1 includes the stage “Payment closes”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "* Payment facility will be available up to 03:00 PM of 21st Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Payment closes",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00024",
+      "path": "rounds[0].stages[2].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00024:C01",
+          "claim": "Round 1 payment closes on 2026-10-21.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "* Payment facility will be available up to 03:00 PM of 21st Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-21",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00025",
+      "path": "rounds[0].stages[2].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00025:C01",
+          "claim": "Round 1 payment closes/ends at 3:00 PM.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "* Payment facility will be available up to 03:00 PM of 21st Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "3:00 PM",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00026",
+      "path": "rounds[0].stages[3].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00026:C01",
+          "claim": "“choiceFilling” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "choiceFilling",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00027",
+      "path": "rounds[0].stages[3].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00027:C01",
+          "claim": "Round 1 includes the stage “Choice filling”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Choice Filling/ Locking",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Choice filling",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00028",
+      "path": "rounds[0].stages[3].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00028:C01",
+          "claim": "Round 1 choice filling starts on 2026-10-13.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "13th Oct. to 22nd Oct., 2026 Choice Filling will be available upto 10:00 A.M of 22nd Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-13",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00029",
+      "path": "rounds[0].stages[3].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00029:C01",
+          "claim": "Round 1 choice filling ends on 2026-10-22.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "13th Oct. to 22nd Oct., 2026 Choice Filling will be available upto 10:00 A.M of 22nd Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-22",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00030",
+      "path": "rounds[0].stages[3].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00030:C01",
+          "claim": "Round 1 choice filling closes/ends at 10:00 AM.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "13th Oct. to 22nd Oct., 2026 Choice Filling will be available upto 10:00 A.M of 22nd Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "10:00 AM",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00031",
+      "path": "rounds[0].stages[4].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00031:C01",
+          "claim": "“choiceLocking” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "choiceLocking",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00032",
+      "path": "rounds[0].stages[4].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00032:C01",
+          "claim": "Round 1 includes the stage “Choice locking”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Oct., 2026 upto 10:00 A.M of 22nd Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Choice locking",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00033",
+      "path": "rounds[0].stages[4].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00033:C01",
+          "claim": "Round 1 choice locking starts on 2026-10-21.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Oct., 2026 upto 10:00 A.M of 22nd Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-21",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00034",
+      "path": "rounds[0].stages[4].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00034:C01",
+          "claim": "Round 1 choice locking ends on 2026-10-22.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Oct., 2026 upto 10:00 A.M of 22nd Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-22",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00035",
+      "path": "rounds[0].stages[4].startTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00035:C01",
+          "claim": "Round 1 choice locking opens/starts at 4:00 PM.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Oct., 2026 upto 10:00 A.M of 22nd Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "4:00 PM",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00036",
+      "path": "rounds[0].stages[4].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00036:C01",
+          "claim": "Round 1 choice locking closes/ends at 10:00 AM.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Oct., 2026 upto 10:00 A.M of 22nd Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "10:00 AM",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00037",
+      "path": "rounds[0].stages[5].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00037:C01",
+          "claim": "“processing” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "processing",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00038",
+      "path": "rounds[0].stages[5].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00038:C01",
+          "claim": "Round 1 includes the stage “Seat allotment processing”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Processing of Seat Allotment",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Seat allotment processing",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00039",
+      "path": "rounds[0].stages[5].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00039:C01",
+          "claim": "Round 1 seat allotment processing starts on 2026-10-22.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "22nd Oct., 2026 to 23rd Oct., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-22",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00040",
+      "path": "rounds[0].stages[5].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00040:C01",
+          "claim": "Round 1 seat allotment processing ends on 2026-10-23.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "22nd Oct., 2026 to 23rd Oct., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-23",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00041",
+      "path": "rounds[0].stages[6].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00041:C01",
+          "claim": "“result” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "result",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00042",
+      "path": "rounds[0].stages[6].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00042:C01",
+          "claim": "Round 1 includes the stage “Result”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Result",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Result",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00043",
+      "path": "rounds[0].stages[6].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00043:C01",
+          "claim": "Round 1 result is on 2026-10-24.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "24th Oct., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-24",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00044",
+      "path": "rounds[0].stages[7].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00044:C01",
+          "claim": "“reporting” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "reporting",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00045",
+      "path": "rounds[0].stages[7].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00045:C01",
+          "claim": "Round 1 includes the stage “Reporting / joining”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Reporting/Joining",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Reporting / joining",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00046",
+      "path": "rounds[0].stages[7].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00046:C01",
+          "claim": "Round 1 reporting starts on 2026-10-26.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "26th Oct., 2026 to 2nd Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-10-26",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00047",
+      "path": "rounds[0].stages[7].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00047:C01",
+          "claim": "Round 1 reporting ends on 2026-11-02.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "26th Oct., 2026 to 2nd Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-02",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00048",
+      "path": "rounds[0].stages[8].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00048:C01",
+          "claim": "“dataVerification” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "dataVerification",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00049",
+      "path": "rounds[0].stages[8].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00049:C01",
+          "claim": "Round 1 includes the stage “Joined-candidate data verified by colleges and shared with MCC”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "Verification of Joined candidates Data by institutes Sharing of data to MCC",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Joined-candidate data verified by colleges and shared with MCC",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00050",
+      "path": "rounds[0].stages[8].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00050:C01",
+          "claim": "Round 1 joined-candidate data verification/sharing is on 2026-11-03.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "3rd Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-03",
+      "recordId": "round-1",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00051",
+      "path": "rounds[1].name",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00051:C01",
+          "claim": "Round 2 is a named counselling round.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Round-2",
+          "verdict": "confirmed",
+          "reason": "Round number/capitalization is normalized in the app label."
+        }
+      ],
+      "value": "Round 2",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00052",
+      "path": "rounds[1].stages[0].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00052:C01",
+          "claim": "“seatMatrix” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "seatMatrix",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00053",
+      "path": "rounds[1].stages[0].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00053:C01",
+          "claim": "Round 2 includes the stage “Seat matrix verification by colleges”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Verification of Tentative Seat Matrix by the participating Institutes",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Seat matrix verification by colleges",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00054",
+      "path": "rounds[1].stages[0].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00054:C01",
+          "claim": "Round 2 seat matrix verification starts on 2026-11-06.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "6th Nov., 2026 to 7th Nov., 2026 (upto 01:00 P.M of 07.11.2026)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-06",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00055",
+      "path": "rounds[1].stages[0].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00055:C01",
+          "claim": "Round 2 seat matrix verification ends on 2026-11-07.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "6th Nov., 2026 to 7th Nov., 2026 (upto 01:00 P.M of 07.11.2026)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-07",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00056",
+      "path": "rounds[1].stages[0].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00056:C01",
+          "claim": "Round 2 seat matrix verification closes/ends at 1:00 PM.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "6th Nov., 2026 to 7th Nov., 2026 (upto 01:00 P.M of 07.11.2026)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "1:00 PM",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00057",
+      "path": "rounds[1].stages[1].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00057:C01",
+          "claim": "“registration” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "registration",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00058",
+      "path": "rounds[1].stages[1].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00058:C01",
+          "claim": "Round 2 includes the stage “Registration”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Registration/Payment",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Registration",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00059",
+      "path": "rounds[1].stages[1].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00059:C01",
+          "claim": "Round 2 registration starts on 2026-11-06.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "6th Nov., 2026 to 11th Nov., 2026 Upto 12:00 Noon as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-06",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00060",
+      "path": "rounds[1].stages[1].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00060:C01",
+          "claim": "Round 2 registration ends on 2026-11-11.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "6th Nov., 2026 to 11th Nov., 2026 Upto 12:00 Noon as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-11",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00061",
+      "path": "rounds[1].stages[1].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00061:C01",
+          "claim": "Round 2 registration closes/ends at 12:00 noon.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "6th Nov., 2026 to 11th Nov., 2026 Upto 12:00 Noon as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "12:00 noon",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00062",
+      "path": "rounds[1].stages[2].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00062:C01",
+          "claim": "“payment” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "payment",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00063",
+      "path": "rounds[1].stages[2].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00063:C01",
+          "claim": "Round 2 includes the stage “Payment closes”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "* Payment facility will be available up to 03:00 PM of 11th Nov., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Payment closes",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00064",
+      "path": "rounds[1].stages[2].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00064:C01",
+          "claim": "Round 2 payment closes on 2026-11-11.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "* Payment facility will be available up to 03:00 PM of 11th Nov., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-11",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00065",
+      "path": "rounds[1].stages[2].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00065:C01",
+          "claim": "Round 2 payment closes/ends at 3:00 PM.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "* Payment facility will be available up to 03:00 PM of 11th Nov., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "3:00 PM",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00066",
+      "path": "rounds[1].stages[3].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00066:C01",
+          "claim": "“choiceFilling” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "choiceFilling",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00067",
+      "path": "rounds[1].stages[3].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00067:C01",
+          "claim": "Round 2 includes the stage “Choice filling”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Choice Filling/ Locking",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Choice filling",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00068",
+      "path": "rounds[1].stages[3].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00068:C01",
+          "claim": "Round 2 choice filling starts on 2026-11-07.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "7th Nov 2026 to 12th Nov., 2026 (Choice Filling will be available upto 10:00 A.M of 12th Nov., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-07",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00069",
+      "path": "rounds[1].stages[3].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00069:C01",
+          "claim": "Round 2 choice filling ends on 2026-11-12.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "7th Nov 2026 to 12th Nov., 2026 (Choice Filling will be available upto 10:00 A.M of 12th Nov., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-12",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00070",
+      "path": "rounds[1].stages[3].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00070:C01",
+          "claim": "Round 2 choice filling closes/ends at 10:00 AM.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "7th Nov 2026 to 12th Nov., 2026 (Choice Filling will be available upto 10:00 A.M of 12th Nov., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "10:00 AM",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00071",
+      "path": "rounds[1].stages[4].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00071:C01",
+          "claim": "“choiceLocking” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "choiceLocking",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00072",
+      "path": "rounds[1].stages[4].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00072:C01",
+          "claim": "Round 2 includes the stage “Choice locking”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 11th Nov., 2026 upto 10:00 A.M of 12th Nov., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Choice locking",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00073",
+      "path": "rounds[1].stages[4].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00073:C01",
+          "claim": "Round 2 choice locking starts on 2026-11-11.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 11th Nov., 2026 upto 10:00 A.M of 12th Nov., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-11",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00074",
+      "path": "rounds[1].stages[4].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00074:C01",
+          "claim": "Round 2 choice locking ends on 2026-11-12.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 11th Nov., 2026 upto 10:00 A.M of 12th Nov., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-12",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00075",
+      "path": "rounds[1].stages[4].startTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00075:C01",
+          "claim": "Round 2 choice locking opens/starts at 4:00 PM.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 11th Nov., 2026 upto 10:00 A.M of 12th Nov., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "4:00 PM",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00076",
+      "path": "rounds[1].stages[4].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00076:C01",
+          "claim": "Round 2 choice locking closes/ends at 10:00 AM.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 11th Nov., 2026 upto 10:00 A.M of 12th Nov., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "10:00 AM",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00077",
+      "path": "rounds[1].stages[5].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00077:C01",
+          "claim": "“processing” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "processing",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00078",
+      "path": "rounds[1].stages[5].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00078:C01",
+          "claim": "Round 2 includes the stage “Seat allotment processing”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Processing of Seat Allotment",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Seat allotment processing",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00079",
+      "path": "rounds[1].stages[5].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00079:C01",
+          "claim": "Round 2 seat allotment processing starts on 2026-11-12.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "12th Nov., 2026 to 13th Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-12",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00080",
+      "path": "rounds[1].stages[5].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00080:C01",
+          "claim": "Round 2 seat allotment processing ends on 2026-11-13.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "12th Nov., 2026 to 13th Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-13",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00081",
+      "path": "rounds[1].stages[6].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00081:C01",
+          "claim": "“result” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "result",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00082",
+      "path": "rounds[1].stages[6].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00082:C01",
+          "claim": "Round 2 includes the stage “Result”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Result",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Result",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00083",
+      "path": "rounds[1].stages[6].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00083:C01",
+          "claim": "Round 2 result is on 2026-11-14.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "14th Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-14",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00084",
+      "path": "rounds[1].stages[7].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00084:C01",
+          "claim": "“reporting” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "reporting",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00085",
+      "path": "rounds[1].stages[7].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00085:C01",
+          "claim": "Round 2 includes the stage “Reporting / joining”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Reporting/Joining",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Reporting / joining",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00086",
+      "path": "rounds[1].stages[7].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00086:C01",
+          "claim": "Round 2 reporting starts on 2026-11-16.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "16th Nov., 2026 to 23rd Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-16",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00087",
+      "path": "rounds[1].stages[7].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00087:C01",
+          "claim": "Round 2 reporting ends on 2026-11-23.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "16th Nov., 2026 to 23rd Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-23",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00088",
+      "path": "rounds[1].stages[8].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00088:C01",
+          "claim": "“dataVerification” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "dataVerification",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00089",
+      "path": "rounds[1].stages[8].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00089:C01",
+          "claim": "Round 2 includes the stage “Joined-candidate data verified by colleges and shared by MCC”.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "Verification of Joined candidates Data by institutes Sharing of data by MCC",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Joined-candidate data verified by colleges and shared by MCC",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00090",
+      "path": "rounds[1].stages[8].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00090:C01",
+          "claim": "Round 2 joined-candidate data verification/sharing is on 2026-11-24.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "24th Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-24",
+      "recordId": "round-2",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00091",
+      "path": "rounds[2].name",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00091:C01",
+          "claim": "Round 3 is a named counselling round.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "ROUND-3",
+          "verdict": "confirmed",
+          "reason": "Round number/capitalization is normalized in the app label."
+        }
+      ],
+      "value": "Round 3",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00092",
+      "path": "rounds[2].stages[0].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00092:C01",
+          "claim": "“seatMatrix” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "seatMatrix",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00093",
+      "path": "rounds[2].stages[0].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00093:C01",
+          "claim": "Round 3 includes the stage “Seat matrix verification by colleges”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Verification of Tentative Seat Matrix by the participating Institutes",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Seat matrix verification by colleges",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00094",
+      "path": "rounds[2].stages[0].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00094:C01",
+          "claim": "Round 3 seat matrix verification starts on 2026-11-25.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "25th Nov., 2026 to 26th Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-25",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00095",
+      "path": "rounds[2].stages[0].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00095:C01",
+          "claim": "Round 3 seat matrix verification ends on 2026-11-26.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "25th Nov., 2026 to 26th Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-26",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00096",
+      "path": "rounds[2].stages[1].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00096:C01",
+          "claim": "“registration” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "registration",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00097",
+      "path": "rounds[2].stages[1].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00097:C01",
+          "claim": "Round 3 includes the stage “Registration”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Registration/Payment",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Registration",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00098",
+      "path": "rounds[2].stages[1].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00098:C01",
+          "claim": "Round 3 registration starts on 2026-11-26.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "26th Nov., 2026 to 1st Dec., 2026 (12:00 NOON as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-26",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00099",
+      "path": "rounds[2].stages[1].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00099:C01",
+          "claim": "Round 3 registration ends on 2026-12-01.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "26th Nov., 2026 to 1st Dec., 2026 (12:00 NOON as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-01",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00100",
+      "path": "rounds[2].stages[1].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00100:C01",
+          "claim": "Round 3 registration closes/ends at 12:00 noon.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "26th Nov., 2026 to 1st Dec., 2026 (12:00 NOON as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "12:00 noon",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00101",
+      "path": "rounds[2].stages[2].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00101:C01",
+          "claim": "“payment” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "payment",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00102",
+      "path": "rounds[2].stages[2].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00102:C01",
+          "claim": "Round 3 includes the stage “Payment closes”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "* Payment facility will be available till 03:00 P.M of 1st Dec., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Payment closes",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00103",
+      "path": "rounds[2].stages[2].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00103:C01",
+          "claim": "Round 3 payment closes on 2026-12-01.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "* Payment facility will be available till 03:00 P.M of 1st Dec., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-01",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00104",
+      "path": "rounds[2].stages[2].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00104:C01",
+          "claim": "Round 3 payment closes/ends at 3:00 PM.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "* Payment facility will be available till 03:00 P.M of 1st Dec., 2026 (as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "3:00 PM",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00105",
+      "path": "rounds[2].stages[3].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00105:C01",
+          "claim": "“choiceFilling” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "choiceFilling",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00106",
+      "path": "rounds[2].stages[3].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00106:C01",
+          "claim": "Round 3 includes the stage “Choice filling”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Choice Filling/ Locking",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Choice filling",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00107",
+      "path": "rounds[2].stages[3].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00107:C01",
+          "claim": "Round 3 choice filling starts on 2026-11-27.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "27th Nov., 2026 to 2nd Dec., 2026 (Choice Filling will be upto 10:00 A.M of 2nd Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-27",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00108",
+      "path": "rounds[2].stages[3].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00108:C01",
+          "claim": "Round 3 choice filling ends on 2026-12-02.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "27th Nov., 2026 to 2nd Dec., 2026 (Choice Filling will be upto 10:00 A.M of 2nd Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-02",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00109",
+      "path": "rounds[2].stages[3].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00109:C01",
+          "claim": "Round 3 choice filling closes/ends at 10:00 AM.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "27th Nov., 2026 to 2nd Dec., 2026 (Choice Filling will be upto 10:00 A.M of 2nd Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "10:00 AM",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00110",
+      "path": "rounds[2].stages[4].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00110:C01",
+          "claim": "“choiceLocking” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "choiceLocking",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00111",
+      "path": "rounds[2].stages[4].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00111:C01",
+          "claim": "Round 3 includes the stage “Choice locking”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Choice Locking from 04:00 P.M of 1st Dec., 2026 upto 10:00 A.M of 2nd Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Choice locking",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00112",
+      "path": "rounds[2].stages[4].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00112:C01",
+          "claim": "Round 3 choice locking starts on 2026-12-01.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Choice Locking from 04:00 P.M of 1st Dec., 2026 upto 10:00 A.M of 2nd Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-01",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00113",
+      "path": "rounds[2].stages[4].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00113:C01",
+          "claim": "Round 3 choice locking ends on 2026-12-02.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Choice Locking from 04:00 P.M of 1st Dec., 2026 upto 10:00 A.M of 2nd Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-02",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00114",
+      "path": "rounds[2].stages[4].startTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00114:C01",
+          "claim": "Round 3 choice locking opens/starts at 4:00 PM.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Choice Locking from 04:00 P.M of 1st Dec., 2026 upto 10:00 A.M of 2nd Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "4:00 PM",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00115",
+      "path": "rounds[2].stages[4].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00115:C01",
+          "claim": "Round 3 choice locking closes/ends at 10:00 AM.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Choice Locking from 04:00 P.M of 1st Dec., 2026 upto 10:00 A.M of 2nd Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "10:00 AM",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00116",
+      "path": "rounds[2].stages[5].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00116:C01",
+          "claim": "“processing” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "processing",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00117",
+      "path": "rounds[2].stages[5].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00117:C01",
+          "claim": "Round 3 includes the stage “Seat allotment processing”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Processing of Seat Allotment",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Seat allotment processing",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00118",
+      "path": "rounds[2].stages[5].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00118:C01",
+          "claim": "Round 3 seat allotment processing starts on 2026-12-02.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "2nd Dec., 2026 to 3rd Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-02",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00119",
+      "path": "rounds[2].stages[5].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00119:C01",
+          "claim": "Round 3 seat allotment processing ends on 2026-12-03.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "2nd Dec., 2026 to 3rd Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-03",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00120",
+      "path": "rounds[2].stages[6].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00120:C01",
+          "claim": "“result” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "result",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00121",
+      "path": "rounds[2].stages[6].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00121:C01",
+          "claim": "Round 3 includes the stage “Result”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Result",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Result",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00122",
+      "path": "rounds[2].stages[6].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00122:C01",
+          "claim": "Round 3 result is on 2026-12-04.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "4th Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-04",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00123",
+      "path": "rounds[2].stages[7].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00123:C01",
+          "claim": "“reporting” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "reporting",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00124",
+      "path": "rounds[2].stages[7].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00124:C01",
+          "claim": "Round 3 includes the stage “Reporting”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Reporting",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Reporting",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00125",
+      "path": "rounds[2].stages[7].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00125:C01",
+          "claim": "Round 3 reporting starts on 2026-12-05.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "5th Dec., 2026 to 12th Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-05",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00126",
+      "path": "rounds[2].stages[7].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00126:C01",
+          "claim": "Round 3 reporting ends on 2026-12-12.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "5th Dec., 2026 to 12th Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-12",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00127",
+      "path": "rounds[2].stages[8].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00127:C01",
+          "claim": "“dataVerification” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "dataVerification",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00128",
+      "path": "rounds[2].stages[8].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00128:C01",
+          "claim": "Round 3 includes the stage “Joined-candidate data verified by colleges and shared by MCC”.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "Verification of Joined candidates Data by institutes Sharing of data by MCC",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Joined-candidate data verified by colleges and shared by MCC",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00129",
+      "path": "rounds[2].stages[8].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00129:C01",
+          "claim": "Round 3 joined-candidate data verification/sharing is on 2026-12-14.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "14th Dec.,2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-14",
+      "recordId": "round-3",
+      "recordSourcePages": [
+        3
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00130",
+      "path": "rounds[3].name",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00130:C01",
+          "claim": "Online stray vacancy round is a named counselling round.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "ONLINE STRAY VACANCY ROUND",
+          "verdict": "confirmed",
+          "reason": "Round number/capitalization is normalized in the app label."
+        }
+      ],
+      "value": "Online stray vacancy round",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00131",
+      "path": "rounds[3].stages[0].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00131:C01",
+          "claim": "“seatMatrix” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "seatMatrix",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00132",
+      "path": "rounds[3].stages[0].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00132:C01",
+          "claim": "Online stray vacancy round includes the stage “Seat matrix verification by colleges”.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Verification of Tentative Seat Matrix by the participating Institutes",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Seat matrix verification by colleges",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00133",
+      "path": "rounds[3].stages[0].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00133:C01",
+          "claim": "Online stray vacancy round seat matrix verification starts on 2026-12-15.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "15th Dec.,2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-15",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00134",
+      "path": "rounds[3].stages[1].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00134:C01",
+          "claim": "“registration” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "registration",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00135",
+      "path": "rounds[3].stages[1].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00135:C01",
+          "claim": "Online stray vacancy round includes the stage “Registration”.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Registration/Payment",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Registration",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00136",
+      "path": "rounds[3].stages[1].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00136:C01",
+          "claim": "Online stray vacancy round registration starts on 2026-12-16.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "16th Dec., 2026 to 21st Dec., 2026 (upto 12:00 Noon of 21st Dec., 2026 as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-16",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00137",
+      "path": "rounds[3].stages[1].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00137:C01",
+          "claim": "Online stray vacancy round registration ends on 2026-12-21.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "16th Dec., 2026 to 21st Dec., 2026 (upto 12:00 Noon of 21st Dec., 2026 as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-21",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00138",
+      "path": "rounds[3].stages[1].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00138:C01",
+          "claim": "Online stray vacancy round registration closes/ends at 12:00 noon.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "16th Dec., 2026 to 21st Dec., 2026 (upto 12:00 Noon of 21st Dec., 2026 as per Server Time)",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "12:00 noon",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00139",
+      "path": "rounds[3].stages[2].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00139:C01",
+          "claim": "“payment” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "payment",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00140",
+      "path": "rounds[3].stages[2].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00140:C01",
+          "claim": "Online stray vacancy round includes the stage “Payment closes”.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "* Payment facility will be available upto 03:00 PM of 21st Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Payment closes",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00141",
+      "path": "rounds[3].stages[2].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00141:C01",
+          "claim": "Online stray vacancy round payment closes on 2026-12-21.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "* Payment facility will be available upto 03:00 PM of 21st Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-21",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00142",
+      "path": "rounds[3].stages[2].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00142:C01",
+          "claim": "Online stray vacancy round payment closes/ends at 3:00 PM.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "* Payment facility will be available upto 03:00 PM of 21st Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "3:00 PM",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00143",
+      "path": "rounds[3].stages[3].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00143:C01",
+          "claim": "“choiceFilling” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "choiceFilling",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00144",
+      "path": "rounds[3].stages[3].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00144:C01",
+          "claim": "Online stray vacancy round includes the stage “Choice filling”.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Filling/ Locking",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Choice filling",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00145",
+      "path": "rounds[3].stages[3].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00145:C01",
+          "claim": "Online stray vacancy round choice filling starts on 2026-12-16.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "16th Dec., 2026 to 21st Dec., 2026 (Choice Filling will be available upto 11:55 P.M of 21st Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-16",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00146",
+      "path": "rounds[3].stages[3].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00146:C01",
+          "claim": "Online stray vacancy round choice filling ends on 2026-12-21.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "16th Dec., 2026 to 21st Dec., 2026 (Choice Filling will be available upto 11:55 P.M of 21st Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-21",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00147",
+      "path": "rounds[3].stages[3].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00147:C01",
+          "claim": "Online stray vacancy round choice filling closes/ends at 11:55 PM.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "16th Dec., 2026 to 21st Dec., 2026 (Choice Filling will be available upto 11:55 P.M of 21st Dec., 2026) as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "11:55 PM",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00148",
+      "path": "rounds[3].stages[4].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00148:C01",
+          "claim": "“choiceLocking” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "choiceLocking",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00149",
+      "path": "rounds[3].stages[4].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00149:C01",
+          "claim": "Online stray vacancy round includes the stage “Choice locking”.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Dec., 2026 upto 11:55 P.M of 21st Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Choice locking",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00150",
+      "path": "rounds[3].stages[4].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00150:C01",
+          "claim": "Online stray vacancy round choice locking starts on 2026-12-21.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Dec., 2026 upto 11:55 P.M of 21st Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-21",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00151",
+      "path": "rounds[3].stages[4].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00151:C01",
+          "claim": "Online stray vacancy round choice locking ends on 2026-12-21.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Dec., 2026 upto 11:55 P.M of 21st Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-21",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00152",
+      "path": "rounds[3].stages[4].startTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00152:C01",
+          "claim": "Online stray vacancy round choice locking opens/starts at 4:00 PM.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Dec., 2026 upto 11:55 P.M of 21st Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "4:00 PM",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00153",
+      "path": "rounds[3].stages[4].endTime",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00153:C01",
+          "claim": "Online stray vacancy round choice locking closes/ends at 11:55 PM.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Dec., 2026 upto 11:55 P.M of 21st Dec., 2026 as per Server Time",
+          "verdict": "confirmed",
+          "reason": "The source prints the clock time; punctuation/case is normalized."
+        }
+      ],
+      "value": "11:55 PM",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00154",
+      "path": "rounds[3].stages[5].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00154:C01",
+          "claim": "“processing” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "processing",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00155",
+      "path": "rounds[3].stages[5].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00155:C01",
+          "claim": "Online stray vacancy round includes the stage “Seat allotment processing”.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Processing of Seat Allotment",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Seat allotment processing",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00156",
+      "path": "rounds[3].stages[5].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00156:C01",
+          "claim": "Online stray vacancy round seat allotment processing starts on 2026-12-22.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "22nd Dec., 2026 to 23rd Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-22",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00157",
+      "path": "rounds[3].stages[5].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00157:C01",
+          "claim": "Online stray vacancy round seat allotment processing ends on 2026-12-23.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "22nd Dec., 2026 to 23rd Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-23",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00158",
+      "path": "rounds[3].stages[6].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00158:C01",
+          "claim": "“result” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "result",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00159",
+      "path": "rounds[3].stages[6].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00159:C01",
+          "claim": "Online stray vacancy round includes the stage “Result”.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Result",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Result",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00160",
+      "path": "rounds[3].stages[6].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00160:C01",
+          "claim": "Online stray vacancy round result is on 2026-12-24.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "24th Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-24",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00161",
+      "path": "rounds[3].stages[7].key",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00161:C01",
+          "claim": "“reporting” is an internal stage key.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Schema identifier used by the app; it is not a candidate-facing factual statement."
+        }
+      ],
+      "value": "reporting",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00162",
+      "path": "rounds[3].stages[7].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00162:C01",
+          "claim": "Online stray vacancy round includes the stage “Reporting”.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Reporting",
+          "verdict": "confirmed",
+          "reason": "The app shortens the source table heading; the quoted source heading/cell names the same stage."
+        }
+      ],
+      "value": "Reporting",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00163",
+      "path": "rounds[3].stages[7].start",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00163:C01",
+          "claim": "Online stray vacancy round reporting starts on 2026-12-24.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "24th Dec., 2026 to 31st Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-24",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00164",
+      "path": "rounds[3].stages[7].end",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00164:C01",
+          "claim": "Online stray vacancy round reporting ends on 2026-12-31.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "24th Dec., 2026 to 31st Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-12-31",
+      "recordId": "round-stray",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00165",
+      "path": "milestones[0].label",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00165:C01",
+          "claim": "The notice identifies commencement of the PG academic session in 2026.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "COMMENCEMENT OF PG ACADEMIC SESSION 2026",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "PG academic session 2026 begins",
+      "recordId": "ms-session",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00166",
+      "path": "milestones[0].date",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00166:C01",
+          "claim": "The PG academic session begins on 20 November 2026.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "20th Nov., 2026",
+          "verdict": "confirmed",
+          "reason": "Printed date is normalized to ISO YYYY-MM-DD."
+        }
+      ],
+      "value": "2026-11-20",
+      "recordId": "ms-session",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00167",
+      "path": "notes[0].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00167:C01",
+          "claim": "The schedule dates are marked tentative.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "TENTATIVE SCHEDULE",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "These dates are tentative",
+      "recordId": "note-tentative",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00168",
+      "path": "notes[0].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00168:C01",
+          "claim": "The source labels its schedule tentative.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "TENTATIVE SCHEDULE",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00168:C02",
+          "claim": "The dates may change.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "TENTATIVE SCHEDULE",
+          "verdict": "confirmed",
+          "reason": "Normal paraphrase of the source’s “TENTATIVE SCHEDULE” label: tentative dates are provisional and may change; this does not assert a specific revised date."
+        },
+        {
+          "claimId": "mcc-pg-2026:F00168:C03",
+          "claim": "Candidates should check MCC’s website for final dates before each round.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "This is an editorial recommendation. The PDF does not direct candidates to check a website before each round."
+        }
+      ],
+      "value": "MCC calls this a tentative schedule, so the dates can change. Check MCC's website for the final dates before each round.",
+      "recordId": "note-tentative",
+      "recordSourcePages": [
+        1
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00169",
+      "path": "notes[1].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00169:C01",
+          "claim": "The schedule prints some time cutoffs as “as per Server Time”.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "12th Oct. to 21st Oct., 2026 up to 12:00 NOON of 21st Oct., 2026 (as per Server Time)",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00169:C02",
+          "claim": "The stated server time is specifically MCC-operated server time.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "(as per Server Time)",
+          "verdict": "unresolved",
+          "reason": "The source says “Server Time” but does not identify the server operator in that phrase.",
+          "suggestedCorrection": "Say “server time” unless a primary source defines it as MCC server time."
+        }
+      ],
+      "value": "All times are MCC server time",
+      "recordId": "note-server-time",
+      "recordSourcePages": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00170",
+      "path": "notes[1].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00170:C01",
+          "claim": "Registration cutoffs are at 12:00 noon in Rounds 1, 2, 3 and the stray round.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "up to 12:00 NOON of 21st Oct., 2026; Upto 12:00 Noon; 12:00 NOON; upto 12:00 Noon",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00170:C02",
+          "claim": "Payment remains available until 3:00 PM on the same date as each registration cutoff.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "Payment facility will be available up to 03:00 PM of 21st Oct., 2026; up to 03:00 PM of 11th Nov., 2026; till 03:00 P.M of 1st Dec., 2026; upto 03:00 PM of 21st Dec., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00170:C03",
+          "claim": "In Rounds 1 to 3, choice locking opens at 4:00 PM on the day before choice filling closes.",
+          "sourcePages": [
+            1,
+            2,
+            3
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Oct., 2026; 04:00 P.M of 11th Nov., 2026; 04:00 P.M of 1st Dec., 2026",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "Registration closes at 12:00 noon, but payment stays open until 3:00 PM the same day. In Rounds 1 to 3, choice locking opens at 4:00 PM the day before choice filling ends.",
+      "recordId": "note-server-time",
+      "recordSourcePages": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00171",
+      "path": "notes[2].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00171:C01",
+          "claim": "Round 2 seat-matrix verification closes by 1:00 PM on 7 November 2026.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "6th Nov., 2026 to 7th Nov., 2026 (upto 01:00 P.M of 07.11.2026)",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "Round 2 seat matrix closes at 1:00 PM",
+      "recordId": "note-round2-seat-matrix",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00172",
+      "path": "notes[2].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00172:C01",
+          "claim": "Round 2 seat-matrix verification begins on 6 November 2026.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "6th Nov., 2026 to 7th Nov., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00172:C02",
+          "claim": "It continues through 7 November, up to 1:00 PM.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "upto 01:00 P.M of 07.11.2026",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "Colleges verify the Round 2 seat matrix on 6th November 2026 and up to 1:00 PM on 7th November 2026.",
+      "recordId": "note-round2-seat-matrix",
+      "recordSourcePages": [
+        2
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00173",
+      "path": "notes[3].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00173:C01",
+          "claim": "Stray-round choice cutoffs are 11:55 PM.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Filling will be available upto 11:55 P.M of 21st Dec., 2026; Choice Locking will start from 04:00 P.M of 21st Dec., 2026 upto 11:55 P.M of 21st Dec., 2026",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "Stray round: choices until 11:55 PM",
+      "recordId": "note-stray-time",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00174",
+      "path": "notes[3].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00174:C01",
+          "claim": "Stray-round choice filling closes at 11:55 PM on 21 December 2026.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Filling will be available upto 11:55 P.M of 21st Dec., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00174:C02",
+          "claim": "Stray-round choice locking closes at 11:55 PM on 21 December 2026.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Dec., 2026 upto 11:55 P.M of 21st Dec., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00174:C03",
+          "claim": "This cutoff differs from the 10:00 AM choice-filling/locking cutoff in Rounds 1 to 3.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "Choice Filling will be available upto 10:00 A.M of 22nd Oct., 2026; upto 10:00 A.M of 12th Nov., 2026; upto 10:00 A.M of 2nd Dec., 2026; upto 11:55 P.M of 21st Dec., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00174:C04",
+          "claim": "Stray-round choice locking opens at 4:00 PM on 21 December 2026.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Dec., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00174:C05",
+          "claim": "The stray-round result and reporting both begin on 24 December 2026.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "24th Dec., 2026",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "In the stray vacancy round, choice filling and locking close at 11:55 PM on 21st December 2026, not 10:00 AM as in Rounds 1 to 3. Choice locking opens at 4:00 PM the same day. The result and reporting both start on 24th December 2026.",
+      "recordId": "note-stray-time",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00175",
+      "path": "notes[4].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00175:C01",
+          "claim": "The PG academic session begins during the Round 2 reporting period.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "20th Nov., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00175:C02",
+          "claim": "Round 2 reporting runs through 23 November 2026.",
+          "sourcePages": [
+            2
+          ],
+          "sourceQuote": "16th Nov., 2026 to 23rd Nov., 2026",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "The session starts during Round 2 reporting",
+      "recordId": "note-session-start",
+      "recordSourcePages": [
+        2,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00176",
+      "path": "notes[4].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00176:C01",
+          "claim": "The academic session starts on 20 November, while Round 2 reporting continues through 23 November.",
+          "sourcePages": [
+            2,
+            4
+          ],
+          "sourceQuote": "20th Nov., 2026; 16th Nov., 2026 to 23rd Nov., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00176:C02",
+          "claim": "Round 3 reporting occurs after the session start date.",
+          "sourcePages": [
+            3
+          ],
+          "sourceQuote": "5th Dec., 2026 to 12th Dec., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00176:C03",
+          "claim": "Stray-round reporting occurs after the session start date.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "24th Dec., 2026 to 31st Dec., 2026",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00176:C04",
+          "claim": "Round 3 and stray-round candidates necessarily join after classes have begun.",
+          "sourcePages": [
+            3,
+            4
+          ],
+          "sourceQuote": "5th Dec., 2026 to 12th Dec., 2026; 24th Dec., 2026 to 31st Dec., 2026",
+          "verdict": "unresolved",
+          "reason": "The dates place those reporting windows after 20 November, but the schedule does not state that every candidate joins then or describe class attendance.",
+          "suggestedCorrection": "State only that the listed reporting periods occur after the academic-session start date."
+        }
+      ],
+      "value": "The PG academic session begins on 20th November 2026, while Round 2 reporting runs until 23rd November 2026. By these dates, Round 3 and stray-round candidates join after classes have begun.",
+      "recordId": "note-session-start",
+      "recordSourcePages": [
+        2,
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00177",
+      "path": "notes[5].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00177:C01",
+          "claim": "Participating institutes/colleges are advised to treat Saturdays and Sundays as working days.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "all participating institutes/colleges are advised to treat all Saturdays/ Sundays and Gazetted4Holidays as working days",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00177:C02",
+          "claim": "They are also advised to treat gazetted holidays as working days.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "all participating institutes/colleges are advised to treat all Saturdays/ Sundays and Gazetted4Holidays as working days",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "Colleges are advised to work weekends and holidays",
+      "recordId": "note-weekends",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00178",
+      "path": "notes[5].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00178:C01",
+          "claim": "The advice is given to help ensure faithful adherence to the schedule.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "For ensuring faithful obedience of time schedule",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-pg-2026:F00178:C02",
+          "claim": "The notice cites the limited time available for conducting counselling as a reason.",
+          "sourcePages": [
+            4
+          ],
+          "sourceQuote": "keeping in view the limited time available for conducting counseling",
+          "verdict": "confirmed"
+        }
+      ],
+      "value": "Participating colleges are advised to treat all Saturdays, Sundays and gazetted holidays as working days, to keep to the schedule.",
+      "recordId": "note-weekends",
+      "recordSourcePages": [
+        4
+      ]
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00179",
+      "path": "gaps[0].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00179:C01",
+          "claim": "“MDS” is a gap-card heading.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Section label only; the associated detail is audited separately."
+        }
+      ],
+      "value": "MDS",
+      "recordId": "gap-mds",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00180",
+      "path": "gaps[0].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00180:C01",
+          "claim": "MDS is not mentioned in the four-page schedule.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "“Round-1” (p. 1); “Round-2” (p. 2); “ROUND-3” (p. 3); “ONLINE STRAY VACANCY ROUND” (p. 4)",
+          "verdict": "confirmed",
+          "reason": "Negative claim checked by reading all four page texts and viewing all four complete page images; no MDS reference appears."
+        }
+      ],
+      "value": "This schedule doesn't mention MDS.",
+      "recordId": "gap-mds",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00181",
+      "path": "gaps[1].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00181:C01",
+          "claim": "“Eligibility, fees and round rules” is a gap-card heading.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Section label only; the associated detail is audited separately."
+        }
+      ],
+      "value": "Eligibility, fees and round rules",
+      "recordId": "gap-rules",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00182",
+      "path": "gaps[1].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00182:C01",
+          "claim": "Eligibility rules are absent from this schedule.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "Registration/Payment",
+          "verdict": "confirmed",
+          "reason": "Full four-page source review found only schedule-stage dates and a calendar note; no eligibility rule is stated."
+        },
+        {
+          "claimId": "mcc-pg-2026:F00182:C02",
+          "claim": "Registration fees are absent from this schedule.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "Registration/Payment",
+          "verdict": "confirmed",
+          "reason": "The table names registration/payment periods but gives no fee amount; full four-page source review found no fee amount."
+        },
+        {
+          "claimId": "mcc-pg-2026:F00182:C03",
+          "claim": "Security deposits are absent from this schedule.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "Registration/Payment",
+          "verdict": "confirmed",
+          "reason": "Full four-page source review found no security-deposit amount or rule."
+        },
+        {
+          "claimId": "mcc-pg-2026:F00182:C04",
+          "claim": "Upgrade rules are absent from this schedule.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "Round-1; Round-2; ROUND-3; ONLINE STRAY VACANCY ROUND",
+          "verdict": "confirmed",
+          "reason": "Full four-page source review found dates for the listed rounds but no upgrade rule."
+        },
+        {
+          "claimId": "mcc-pg-2026:F00182:C05",
+          "claim": "Exit rules are absent from this schedule.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "Round-1; Round-2; ROUND-3; ONLINE STRAY VACANCY ROUND",
+          "verdict": "confirmed",
+          "reason": "Full four-page source review found dates for the listed rounds but no exit rule."
+        }
+      ],
+      "value": "Eligibility, registration fees, security deposits, upgrade and exit rules aren't in this schedule.",
+      "recordId": "gap-rules",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00183",
+      "path": "gaps[2].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00183:C01",
+          "claim": "“Seat matrix” is a gap-card heading.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Section label only; the associated detail is audited separately."
+        }
+      ],
+      "value": "Seat matrix",
+      "recordId": "gap-seats",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00184",
+      "path": "gaps[2].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00184:C01",
+          "claim": "The schedule gives no number of seats for any round.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "Verification of Tentative Seat Matrix by the participating Institutes",
+          "verdict": "confirmed",
+          "reason": "The source lists when institutes verify a tentative seat matrix; complete review found no seat counts."
+        }
+      ],
+      "value": "The number of seats in each round isn't in this schedule.",
+      "recordId": "gap-seats",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00185",
+      "path": "gaps[3].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00185:C01",
+          "claim": "“State quota counselling” is a gap-card heading.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Section label only; the associated detail is audited separately."
+        }
+      ],
+      "value": "State quota counselling",
+      "recordId": "gap-state",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00186",
+      "path": "gaps[3].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00186:C01",
+          "claim": "State-quota counselling dates are absent from this schedule.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "NEET 50% AIQ AND 100% DEEMED/CENTRAL UNIVERSITIES/AFMS-ONLY REGISTRATION",
+          "verdict": "confirmed",
+          "reason": "The title describes AIQ, Deemed/Central Universities and AFMS registration; complete review of all four pages found no state-quota dates."
+        }
+      ],
+      "value": "State-quota counselling dates aren't in this schedule.",
+      "recordId": "gap-state",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00187",
+      "path": "gaps[4].title",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00187:C01",
+          "claim": "“Reporting hours” is a gap-card heading.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "Section label only; the associated detail is audited separately."
+        }
+      ],
+      "value": "Reporting hours",
+      "recordId": "gap-reporting-hours",
+      "recordSourcePages": []
+    },
+    {
+      "fieldId": "mcc-pg-2026:F00188",
+      "path": "gaps[4].detail",
+      "claims": [
+        {
+          "claimId": "mcc-pg-2026:F00188:C01",
+          "claim": "The source gives reporting date ranges but no daily reporting hours.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "26th Oct., 2026 to 2nd Nov., 2026; 16th Nov., 2026 to 23rd Nov., 2026; 5th Dec., 2026 to 12th Dec., 2026; 24th Dec., 2026 to 31st Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "All four reporting entries were inspected; the schedule prints dates without daily attendance hours."
+        },
+        {
+          "claimId": "mcc-pg-2026:F00188:C02",
+          "claim": "The source gives no reporting close time.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "26th Oct., 2026 to 2nd Nov., 2026; 16th Nov., 2026 to 23rd Nov., 2026; 5th Dec., 2026 to 12th Dec., 2026; 24th Dec., 2026 to 31st Dec., 2026",
+          "verdict": "confirmed",
+          "reason": "All four reporting entries were inspected; no reporting cutoff time is printed."
+        },
+        {
+          "claimId": "mcc-pg-2026:F00188:C03",
+          "claim": "Candidates are advised to check daily reporting hours with their allotted college.",
+          "sourcePages": [],
+          "sourceQuote": null,
+          "verdict": "not_factual",
+          "reason": "This is practical advice added by the app; the schedule does not state this instruction."
+        }
+      ],
+      "value": "The schedule gives reporting dates but no daily hours or closing time. Check with your allotted college.",
+      "recordId": "gap-reporting-hours",
+      "recordSourcePages": []
+    }
+  ],
+  "uiTemplateAudits": [
+    {
+      "id": "mcc-course-scope",
+      "literal": "For NEET-PG courses. This schedule doesn't mention MDS.",
+      "claims": [
+        {
+          "claimId": "mcc-course-scope:C01",
+          "claim": "The source describes the notice as a schedule for NEET PG courses.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "FOR NEET 50% AIQ AND 100% DEEMED/CENTRAL UNIVERSITIES/AFMS-ONLY REGISTRATION FOR PG COURSES",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-course-scope:C02",
+          "claim": "MDS is not mentioned anywhere in this schedule.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "“Round-1” (p. 1); “Round-2” (p. 2); “ROUND-3” (p. 3); “ONLINE STRAY VACANCY ROUND” (p. 4)",
+          "verdict": "confirmed",
+          "reason": "All four pages were inspected; the acronym and MDS course are absent."
+        }
+      ]
+    },
+    {
+      "id": "mcc-time",
+      "literal": "Times are MCC server time. Dates are tentative.",
+      "claims": [
+        {
+          "claimId": "mcc-time:C01",
+          "claim": "The PDF marks some schedule cutoff times “as per Server Time”.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "(as per Server Time)",
+          "verdict": "confirmed"
+        },
+        {
+          "claimId": "mcc-time:C02",
+          "claim": "The PDF identifies that server time as MCC’s server time.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "(as per Server Time)",
+          "verdict": "unresolved",
+          "reason": "The PDF does not name the server operator; it only says “Server Time”.",
+          "suggestedCorrection": "Use “server time” unless an official primary source defines it as MCC’s server time."
+        },
+        {
+          "claimId": "mcc-time:C03",
+          "claim": "The dates are tentative.",
+          "sourcePages": [
+            1
+          ],
+          "sourceQuote": "TENTATIVE SCHEDULE",
+          "verdict": "confirmed"
+        }
+      ]
+    },
+    {
+      "id": "mcc-official-link",
+      "literal": "MCC website: https://mcc.nic.in; link title says not printed on schedule.",
+      "renderedLinkTitle": "MCC's official website (not printed on this schedule)",
+      "claims": [
+        {
+          "claimId": "mcc-official-link:C01",
+          "claim": "The displayed URL is MCC’s official website.",
+          "sourcePages": [],
+          "sourceQuote": "Medical Counselling Committee (MCC) Admission and eCounselling Services for Session 2026",
+          "verdict": "confirmed",
+          "externalEvidence": {
+            "url": "https://mcc.nic.in/",
+            "retrieved": "2026-10-09",
+            "sourceQuote": "चिकित्सा परामर्श समिति Medical Counselling Committee (MCC) Admission and eCounselling Services for Session 2026"
+          }
+        },
+        {
+          "claimId": "mcc-official-link:C02",
+          "claim": "The schedule PDF does not print this website URL.",
+          "sourcePages": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "sourceQuote": "“Round-1” (p. 1); “Round-2” (p. 2); “ROUND-3” (p. 3); “ONLINE STRAY VACANCY ROUND” (p. 4)",
+          "verdict": "confirmed",
+          "reason": "Full-page visual and text inspection found no website URL in the four-page PDF."
+        }
+      ]
+    }
+  ],
+  "derivedAudits": [
+    {
+      "claim": "At 2026-10-09 IST, the next displayed candidate cutoff is Round 1 registration close on 21 October 2026 at 12:00 noon.",
+      "profileContext": {
+        "today": "2026-10-09",
+        "time": "any time on that date",
+        "courseType": "not used for next-date selection"
+      },
+      "verdict": "confirmed",
+      "evidence": "SchedulePage calls nextDeadline(s, todayIso(), minutesNow()). nextDeadline filters to candidate stages, selects the stage end date/time and sorts by date then parsed minutes. The next timed candidate cutoff after 9 October is registration end 2026-10-21 12:00 noon (720 minutes). Existing src/app/schedule.test.ts expects the Round 1 registration close at 2026-10-07.",
+      "sourcePages": [
+        1
+      ],
+      "sourceQuote": "12th Oct. to 21st Oct., 2026 up to 12:00 NOON of 21st Oct., 2026 (as per Server Time)"
+    },
+    {
+      "claim": "Same-day deadline ordering advances from registration at noon, to payment at 3:00 PM, then to choice filling/locking at 10:00 AM the next day.",
+      "profileContext": {
+        "round": "Round 1",
+        "date": "2026-10-21",
+        "times": "before noon; after noon and before 3 PM; after 3 PM"
+      },
+      "verdict": "confirmed",
+      "evidence": "toMinutes maps 12:00 noon to 720 and 3:00 PM to 900; nextDeadline excludes an item whose cutoff is <= nowMinutes. At 13:00, payment is next; at 16:00, choice filling is next on 22 October. Existing src/app/schedule.test.ts checks both cases. Choice filling and locking share the 22 October 10:00 AM cutoff; equal sort keys retain the original stage order, so choice filling is returned first.",
+      "sourcePages": [
+        1
+      ],
+      "sourceQuote": "up to 12:00 NOON of 21st Oct., 2026; Payment facility will be available up to 03:00 PM of 21st Oct., 2026; Choice Filling will be available upto 10:00 A.M of 22nd Oct., 2026; Choice Locking will start from 04:00 P.M of 21st Oct., 2026 upto 10:00 A.M of 22nd Oct., 2026"
+    },
+    {
+      "claim": "Stage status is date-only and marks a stage open for every calendar day from start through end inclusive, even after a printed closing time that day.",
+      "profileContext": {
+        "example": "Round 1 registration on 2026-10-21 at 12:01 PM IST; choice filling on 2026-10-22 at 10:01 AM IST; payment on 2026-10-21 at 3:01 PM IST"
+      },
+      "verdict": "contradicted",
+      "evidence": "src/app/schedule.ts stageStatus compares only today against start/end. src/app/components/RoundTable.tsx renders “Open now” whenever that result is now. Therefore after registration’s noon cutoff (12:00 = 720), payment’s 3:00 PM cutoff (900), or choice cutoff (10:00 = 600), the UI still shows “Open now” until midnight. The existing test only checks day-level states, including registration on 21 October as now; it does not test after-cutoff time-of-day behavior.",
+      "sourcePages": [
+        1
+      ],
+      "sourceQuote": "up to 12:00 NOON of 21st Oct., 2026; Payment facility will be available up to 03:00 PM of 21st Oct., 2026; Choice Filling will be available upto 10:00 A.M of 22nd Oct., 2026",
+      "suggestedCorrection": "Make stageStatus time-aware for stages with a printed endTime, and clear “Open now” at or after that cutoff."
+    },
+    {
+      "claim": "Urgency badges use Asia/Kolkata calendar dates, show 3/2/1 days remaining, then a last-day countdown to the printed deadline or to 11:59 PM when no time is printed.",
+      "profileContext": {
+        "example1": "2026-10-21 09:15 IST to registration noon = 02:45",
+        "example2": "2026-10-21 14:59 IST to payment 3:00 PM = 00:01",
+        "example3": "2026-11-02 20:30 IST with no printed time = 03:29 to 23:59"
+      },
+      "verdict": "confirmed",
+      "evidence": "src/app/deadline.ts computes whole calendar days, uses todayIso/minutesNow in Asia/Kolkata, subtracts parsed cutoff minutes, uses 23:59 if time is absent, and removes a badge at or after the cutoff. Existing src/app/deadline.test.ts asserts each listed calculation and checks UTC-to-IST date rollover. Tests were inspected, not run.",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "sourceQuote": "(as per Server Time)"
+    },
+    {
+      "claim": "The code equates MCC Server Time with Asia/Kolkata (IST), but the PDF only says “Server Time” and does not identify its timezone.",
+      "profileContext": {
+        "timezoneUsedByCode": "Asia/Kolkata",
+        "sourceWording": "as per Server Time"
+      },
+      "verdict": "unresolved",
+      "evidence": "src/app/schedule.ts and src/app/deadline.ts explicitly use Asia/Kolkata. The schedule’s time labels say “as per Server Time”; no explicit IST/UTC-offset statement appears in the four-page source. Existing tests verify code behavior, not the source server’s timezone.",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "sourceQuote": "as per Server Time",
+      "suggestedCorrection": "Keep the UI label at “server time” until a primary schedule source states the timezone."
+    },
+    {
+      "claim": "Result dates are treated as events (“Next event” and “Today” without countdown); other candidate stages are treated as deadlines.",
+      "profileContext": {
+        "round1Result": "2026-10-24",
+        "noTimePrinted": true
+      },
+      "verdict": "confirmed",
+      "evidence": "SchedulePage and RoundTable pass kind=\"event\" only when stage.key === \"result\"; other candidate stages use deadline. badgeFor returns “Today” without a countdown for events. Existing deadline.test.ts checks that event behavior.",
+      "sourcePages": [
+        1
+      ],
+      "sourceQuote": "Result 24th Oct., 2026"
+    },
+    {
+      "claim": "RoundTable shows open/close columns for ranges and same-day windows, and puts a single-date close time under Closes; the Round 1 locking and stray locking windows therefore render as actual windows.",
+      "profileContext": {
+        "round1Lock": "21 October 4:00 PM – 22 October 10:00 AM",
+        "strayLock": "21 December 4:00 PM – 11:55 PM",
+        "payment": "single date with endTime only"
+      },
+      "verdict": "confirmed",
+      "evidence": "src/app/components/RoundTable.tsx slots() assigns ranges or two-time windows to Opens and Closes, and assigns a one-date stage with only endTime to Closes. formatDateShort omits the year when all dates in a round share 2026, while the table heading shows 2026. Dates are normalized with formatDate/formatDateShort. Existing src/app/schedule.test.ts checks stageWhen outputs for both locking windows.",
+      "sourcePages": [
+        1,
+        4
+      ],
+      "sourceQuote": "Choice Locking will start from 04:00 P.M of 21st Oct., 2026 upto 10:00 A.M of 22nd Oct., 2026; Choice Locking will start from 04:00 P.M of 21st Dec., 2026 upto 11:55 P.M of 21st Dec., 2026"
+    },
+    {
+      "claim": "The collapsed College & MCC summary omits times, including the Round 2 seat-matrix 1:00 PM closing time; the cutoff is visible only after expanding college steps.",
+      "profileContext": {
+        "stage": "Round 2 seat matrix verification",
+        "date": "7 November 2026",
+        "time": "1:00 PM"
+      },
+      "verdict": "contradicted",
+      "evidence": "The collapsed summary in RoundTable maps college steps to label and start/end dates only; it does not render startTime or endTime. This stage is filtered out of candidate stages, so its 1:00 PM cutoff is omitted until the user selects Show.",
+      "sourcePages": [
+        2
+      ],
+      "sourceQuote": "6th Nov., 2026 to 7th Nov., 2026 (upto 01:00 P.M of 07.11.2026)",
+      "suggestedCorrection": "Include any printed opening/closing times in the collapsed college/MCC summary."
+    },
+    {
+      "claim": "The source date label is generated-from-eOffice metadata rather than a stated issue/publishing date, and the UI formats the printed date as 7th October 2026.",
+      "profileContext": {
+        "documentDate": "2026-10-07",
+        "documentDateLabel": "Generated from eOffice"
+      },
+      "verdict": "confirmed",
+      "evidence": "SchedulePage renders meta.documentDateLabel followed by formatDate(meta.documentDate); formatDate applies ordinal day and month name. The PDF footer explicitly says it was generated from eOffice at 01:03 pm on 07/10/2026.",
+      "sourcePages": [
+        1
+      ],
+      "sourceQuote": "Generated from eOffice by SOMVIR, Sr. Statistical Officer-(S), SSO, DGHS DEPARTMENT on 07/10/2026 01:03 pm"
+    },
+    {
+      "claim": "The scope note always states this is a NEET-PG schedule that does not mention MDS; with the profile set to MDS, the conditional warning is shown because the schedule course enum is clinical and the MDS profile option is dental.",
+      "profileContext": {
+        "scheduleCourseEnum": [
+          "clinical"
+        ],
+        "profilePageMapping": {
+          "clinical": "MD / MS / Diploma / DNB",
+          "dental": "MDS"
+        },
+        "warningCondition": "profile.courseType exists and is not included in schedule.meta.courses"
+      },
+      "verdict": "confirmed",
+      "evidence": "SchedulePage always renders the scope sentence and sets wrongCourse when a non-empty profile courseType is absent from schedule.meta.courses. ProfilePage maps clinical to “MD / MS / Diploma / DNB” and dental to “MDS”. In this schedule, a dental/MDS profile therefore receives the warning. The PDF title says the schedule is for NEET PG courses, and a full four-page review found no MDS mention. This enum does not assert which clinical specialties are included.",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "sourceQuote": "FOR NEET 50% AIQ AND 100% DEEMED/CENTRAL UNIVERSITIES/AFMS-ONLY REGISTRATION FOR PG COURSES; “Round-1” (p. 1); “Round-2” (p. 2); “ROUND-3” (p. 3); “ONLINE STRAY VACANCY ROUND” (p. 4)",
+      "codeEvidence": [
+        "src/app/pages/SchedulePage.tsx: static NEET-PG/MDS scope sentence and wrongCourse condition",
+        "src/app/pages/ProfilePage.tsx: clinical → MD / MS / Diploma / DNB; dental → MDS"
+      ]
+    },
+    {
+      "claim": "The MCC external link is omitted from PDF citations and is marked in its title as not printed on this schedule; its destination’s MCC identity was checked on the official site.",
+      "profileContext": {
+        "url": "https://mcc.nic.in/",
+        "linkTitle": "MCC's official website (not printed on this schedule)"
+      },
+      "verdict": "confirmed",
+      "evidence": "The link title is supplied in SchedulePage. Full four-page visual/text review found no URL in the PDF. Opening the exact URL on 2026-10-09 returned the official MCC page with its name and the Session 2026 eCounselling service.",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "sourceQuote": "Medical Counselling Committee (MCC) Admission and eCounselling Services for Session 2026",
+      "externalEvidenceUrl": "https://mcc.nic.in/"
+    },
+    {
+      "claim": "The internal “clinical” course enum maps to the profile option MD / MS / Diploma / DNB, while “dental” maps to MDS; specialty selections are stored separately.",
+      "profileContext": {
+        "courseTypeEnum": [
+          "clinical",
+          "dental"
+        ],
+        "specialities": "separate profile field"
+      },
+      "verdict": "confirmed",
+      "evidence": "ProfilePage course choices map clinical to “MD / MS / Diploma / DNB” and dental to “MDS”; src/engine/profile.ts defines specialities as a separate string array. The course enum is a broad profile category used by the schedule mismatch warning, not a list of clinical specialties.",
+      "sourcePages": [],
+      "sourceQuote": null,
+      "codeEvidence": [
+        "src/app/pages/ProfilePage.tsx: courseType Choice options",
+        "src/engine/profile.ts: Profile.courseType and Profile.specialities"
+      ]
+    }
+  ],
+  "sourcePagesInspected": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "summary": {
+    "fieldsReviewed": 188,
+    "uniqueFieldIds": 188,
+    "claimsReviewed": 212,
+    "claimVerdictCounts": {
+      "confirmed": 165,
+      "not_factual": 45,
+      "unresolved": 2
+    },
+    "fieldOutcomeCounts": {
+      "confirmed": 143,
+      "not_factual": 43,
+      "unresolved": 2
+    },
+    "unreviewedFields": [],
+    "keyFindings": [
+      "All 188 visible fields have an individual fieldId/path entry and one or more claim-level outcomes.",
+      "The schedule marks dates tentative; “dates may change” is a normal paraphrase of that notice.",
+      "The internal “clinical” course enum maps to MD / MS / Diploma / DNB; the separate MDS warning is supported by the PDF’s NEET-PG scope and absence of an MDS mention.",
+      "The schedule states “Server Time” but does not specify the timezone; code assumes Asia/Kolkata.",
+      "Stage status remains “Open now” after a printed cutoff on the end date.",
+      "The collapsed college/MCC summary omits the Round 2 seat-matrix 1:00 PM cutoff.",
+      "meta.title is not rendered on the current schedule/home pages; the visible heading uses shortTitle.",
+      "The official MCC link was verified on https://mcc.nic.in/; the URL is not printed in the schedule."
+    ],
+    "testContext": "Read-only inspection of existing src/app/schedule.test.ts and src/app/deadline.test.ts; no tests were run. Existing tests cover representative next-date ordering and countdown arithmetic, but do not cover time-aware stageStatus after same-day closing cutoffs or time visibility in the collapsed college/MCC summary.",
+    "uiTemplateClaimVerdictCounts": {
+      "confirmed": 6,
+      "unresolved": 1
+    },
+    "derivedClaimVerdictCounts": {
+      "confirmed": 9,
+      "contradicted": 2,
+      "unresolved": 1
+    },
+    "totalAuditClaims": 231,
+    "uiTemplatesReviewed": 3,
+    "derivedClaimsReviewed": 12,
+    "unreviewedUiTemplates": [],
+    "unreviewedDerivedClaims": []
+  }
+}

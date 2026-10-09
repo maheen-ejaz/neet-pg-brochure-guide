@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import raw from "../../data/states/uttar-pradesh-2026.json";
+import gujarat from "../../data/states/gujarat-2026.json";
+import karnataka from "../../data/states/karnataka-2026.json";
 import { BrochureSchema } from "../schema/stateBrochure";
 import { adviseDeposit, checkEligibility, documentsFor } from "./eligibility";
 import { EMPTY_PROFILE, type Profile } from "./profile";
@@ -22,6 +24,23 @@ const manual = {
 };
 
 describe("brochure requirements outside the collected profile", () => {
+  it.each([raw, gujarat, karnataka])("withholds eligibility and deposit advice until the guide's manual requirements are confirmed", (data) => {
+    const brochure = BrochureSchema.parse(data);
+    const home: Profile = { ...profile, courseType: "dental" as const, mbbsState: brochure.meta.state, domicileState: brochure.meta.state, schoolState: brochure.meta.state, tenYearStudyState: brochure.meta.state, birthState: brochure.meta.state, category: "UR" as const, nriLink: "none" as const, parentRouteState: "none", priorAdmissionState: "none", pwd: false, internshipCompletion: "2026-03-31" };
+    if (brochure.meta.state === "Gujarat") home.courseType = "clinical";
+    const verdict = checkEligibility(home, brochure);
+    expect(verdict.status).toBe("incomplete");
+    expect(adviseDeposit(verdict, brochure).recommended).toBeNull();
+  });
+
+  it("an unevaluable disqualifier cannot be bypassed even without a guide-wide manual summary", () => {
+    const brochure = BrochureSchema.parse(karnataka);
+    delete brochure.eligibility.manualReview;
+    const verdict = checkEligibility({ ...profile, courseType: "dental", mbbsState: "Karnataka", domicileState: "Karnataka", tenYearStudyState: "Karnataka", nriLink: "none", parentRouteState: "none", pwd: false, internshipCompletion: "2026-03-31" }, brochure);
+    expect(verdict.status).toBe("incomplete");
+    expect(verdict.reasons.some(({ rule, match }) => rule.id === "elig-pg-degree" && match === "manual")).toBe(true);
+  });
+
   it("does not declare eligibility when a brochure requires a manual route check", () => {
     const brochure = BrochureSchema.parse({ ...raw, eligibility: { ...raw.eligibility, manualReview: manual } });
     const verdict = checkEligibility(profile, brochure);

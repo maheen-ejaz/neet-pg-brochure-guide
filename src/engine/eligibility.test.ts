@@ -31,15 +31,15 @@ const base: Profile = {
 const check = (p: Partial<Profile>) => checkEligibility({ ...base, ...p }, up);
 
 describe("UP 2026 eligibility", () => {
-  it("UP graduate is eligible for government and private", () => {
+  it("UP graduate needs manual qualification and route confirmation", () => {
     const v = check({});
-    expect(v.status).toBe("eligible");
+    expect(v.status).toBe("incomplete");
     expect(v.sectors).toEqual(["government", "private"]);
   });
 
-  it.each(up.eligibility.listedHomeInstitutions.names)("%s graduate is private-only", (name) => {
+  it.each(up.eligibility.listedHomeInstitutions.names)("%s graduate has a private-only route pending manual confirmation", (name) => {
     const v = check({ mbbsInstitution: name });
-    expect(v.status).toBe("restricted");
+    expect(v.status).toBe("incomplete");
     expect(v.sectors).toEqual(["private"]);
   });
 
@@ -53,12 +53,12 @@ describe("UP 2026 eligibility", () => {
 
   it("MD/MS internship completing after 30 Sep 2026 is ineligible", () => {
     expect(check({ internshipCompletion: "2026-10-01" }).status).toBe("ineligible");
-    expect(check({ internshipCompletion: "2026-09-30" }).status).toBe("eligible");
+    expect(check({ internshipCompletion: "2026-09-30" }).status).toBe("incomplete");
   });
 
   it("MDS internship completing after 31 May 2026 is ineligible", () => {
     expect(check({ courseType: "dental", internshipCompletion: "2026-06-01" }).status).toBe("ineligible");
-    expect(check({ courseType: "dental", internshipCompletion: "2026-05-31" }).status).toBe("eligible");
+    expect(check({ courseType: "dental", internshipCompletion: "2026-05-31" }).status).toBe("incomplete");
   });
 
   it("candidate already in a PG course is ineligible", () => {
@@ -98,7 +98,11 @@ describe("UP 2026 eligibility", () => {
 });
 
 describe("UP 2026 security deposit", () => {
-  const deposit = (p: Partial<Profile>) => adviseDeposit(check(p), up);
+  // Coverage algorithm fixture: route requirements are assumed independently confirmed here.
+  const deposit = (p: Partial<Profile>) => {
+    const v = check(p);
+    return adviseDeposit(v.status === "incomplete" ? { ...v, status: "eligible" } : v, up);
+  };
 
   it("UP MD/MS candidate needs ₹2L for govt + private, ₹30k for govt only", () => {
     const d = deposit({});

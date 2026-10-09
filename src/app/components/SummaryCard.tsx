@@ -8,9 +8,9 @@ import {
 import type { Profile } from "../../engine/profile";
 import type { Brochure } from "../../schema/stateBrochure";
 import { kindFromLabel, timeFromLabel } from "../deadline";
-import { todayIso } from "../schedule";
+import { todayIso, minutesNow, toMinutes } from "../schedule";
 import { formatDate } from "../text";
-import { DeadlineBadge } from "./DeadlineBadge";
+import { DeadlineBadge, useNow } from "./DeadlineBadge";
 import { Cite, inr } from "./ui";
 import { VerdictBadge } from "./VerdictBadge";
 import { Icon } from "./Icon";
@@ -55,13 +55,14 @@ export function SummaryCard({
   verdict: Verdict | null;
   profile: Profile | null;
 }) {
-  const today = todayIso();
+  const now = useNow();
+  const today = todayIso(now);
   const { show } = useSeatView();
   const next = [...b.importantDates]
     .filter(
       (d) =>
         show(d) &&
-        (d.endDate ?? d.date) >= today &&
+        ((d.endDate ?? d.date) > today || ((d.endDate ?? d.date) === today && toMinutes(d.endTime ?? timeFromLabel(d.label)) > minutesNow(now))) &&
         kindFromLabel(d.label) === "deadline",
     )
     .sort((x, y) =>
@@ -120,6 +121,7 @@ export function SummaryCard({
               </span>
               <span className="text-base">
                 {formatDate(next.endDate ?? next.date)}
+                {(next.endTime ?? timeFromLabel(next.label)) && <span className="block text-xs text-soft">{next.endTime ?? timeFromLabel(next.label)}</span>}
               </span>
               <DeadlineBadge
                 date={next.endDate ?? next.date}

@@ -642,12 +642,13 @@
       {
         "id": "elig-ews",
         "sourcePages": [
-          3,
-          5
+          5,
+          13,
+          51
         ],
         "verified": false,
-        "title": "EWS isn't mentioned in this bulletin",
-        "explanation": "EWS appears only in the NBEMS qualifying cut-off table (General/EWS). The bulletin states no Karnataka EWS reservation or EWS registration fee. Confirm with KEA how EWS candidates are treated.",
+        "title": "EWS: confirm reservation and registration fee",
+        "explanation": "The NBEMS qualifying cut-off table includes General/EWS. No separate EWS registration rate or Karnataka EWS reservation rule is listed in this bulletin. Confirm the applicable fee group and reservation treatment with KEA.",
         "condition": {
           "fact": "category",
           "in": [
@@ -836,7 +837,7 @@
         ],
         "verified": false,
         "title": "Hyderabad-Karnataka (Kalyana Karnataka) reservation, Article 371(j)",
-        "explanation": "If you're a local person of the Hyderabad-Karnataka region, you can claim reservation under Article 371(j) with a certificate from the Assistant Commissioner (Annexure 8). Seats are first searched in General Merit (GM), then Hyderabad-Karnataka GM (GMH), then your category.",
+        "explanation": "If you're a local person of the Hyderabad-Karnataka region, you can claim reservation under Article 371(j) with a certificate from the Assistant Commissioner (Annexure 8). Seat searches follow the category-specific order in the brochure’s chart. They start with General Merit (GM), then Hyderabad-Karnataka GM (GMH); some categories then search the non-HK category before the HK category. For SCH, the chart gives GM → GMH → SCG → SCH.",
         "condition": null,
         "effect": {
           "type": "note",
@@ -959,6 +960,23 @@
           "meaning": "10% of seats in private colleges (5% in private universities), open to all qualified candidates except NRI, PIO, OCI and foreign national candidates."
         }
       ]
+    },
+    "manualReview": {
+      "id": "karnataka-manual-eligibility",
+      "sourcePages": [
+        3,
+        7,
+        8,
+        10,
+        15,
+        19,
+        44,
+        55
+      ],
+      "verified": false,
+      "title": "Confirm the full Karnataka eligibility requirements",
+      "detail": "Your profile does not establish NEET qualification, a previously completed clinical PG degree, the cancellation/non-joining bar or every affidavit and quota condition. The bulletin does not define Karnataka candidacy as domicile, and its PG Medical rules take effect after MCC's announcement. Confirm these requirements and any NRI route with KEA.",
+      "severity": "warning"
     }
   },
   "reservation": {
@@ -1190,7 +1208,18 @@
           "nri"
         ]
       }
-    ]
+    ],
+    "calculationNote": {
+      "id": "karnataka-fee-route-check",
+      "sourcePages": [
+        5,
+        13
+      ],
+      "verified": false,
+      "title": "Confirm your registration-fee group",
+      "detail": "The bulletin lists ₹750 for SC/ST/Category-1/PwD, ₹1,500 for General/2A/2B/3A/3B, ₹4,000 for non-Karnataka candidates and ₹7,000 for NRI/OCI/PIO/foreign nationals. Registration fees are non-refundable. Confirm the applicable group with KEA where these descriptions overlap; the profile does not establish every category or Karnataka-candidate criterion.",
+      "severity": "warning"
+    }
   },
   "choiceFilling": [
     {
@@ -2110,7 +2139,7 @@
       "name": "Choice printout, fee receipt and verification slip (before Round 2)",
       "stage": "other",
       "appliesWhen": null,
-      "detail": "Choice 2 candidates bring the fee receipt. Everyone brings all originals including Annexures 1, 2 and 7, and one set of photocopies."
+      "detail": "Choice 2 candidates bring the fee receipt. All eligible Round 2 participants bring all originals including Annexures 1, 2 and 7, and one set of photocopies."
     }
   ],
   "admission": [

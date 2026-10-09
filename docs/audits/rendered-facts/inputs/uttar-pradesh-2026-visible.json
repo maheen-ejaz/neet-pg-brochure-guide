@@ -1,0 +1,6078 @@
+{
+  "key": "uttar-pradesh-2026",
+  "kind": "states",
+  "snapshot": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "dataSha256": "c50b3012706b6263c634f0a8b4de48d6dac8bd7b656e3314bb158415bce955b4",
+  "source": {
+    "dir": "brochures/uttar-pradesh/2026",
+    "pageCount": 25,
+    "scanned": true,
+    "languages": [
+      "English",
+      "Hindi"
+    ]
+  },
+  "records": [
+    {
+      "itemId": "meta",
+      "recordPath": "meta",
+      "sourcePages": [
+        1,
+        3,
+        4,
+        6,
+        8,
+        9,
+        13,
+        15,
+        16
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00001",
+          "path": "meta.state",
+          "value": "Uttar Pradesh",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00002",
+          "path": "meta.year",
+          "value": 2026,
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00003",
+          "path": "meta.authority",
+          "value": "Directorate of Medical Education and Training, Uttar Pradesh, Lucknow",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00004",
+          "path": "meta.officialWebsites[0]",
+          "value": "https://upneet.gov.in",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00005",
+          "path": "meta.officialWebsites[1]",
+          "value": "https://www.dgme.up.gov.in",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00006",
+          "path": "meta.coursesCovered[0]",
+          "value": "MD",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00007",
+          "path": "meta.coursesCovered[1]",
+          "value": "MS",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00008",
+          "path": "meta.coursesCovered[2]",
+          "value": "PG Diploma",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00009",
+          "path": "meta.coursesCovered[3]",
+          "value": "DNB",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00010",
+          "path": "meta.coursesCovered[4]",
+          "value": "MDS",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00011",
+          "path": "meta.seatTerms.government",
+          "value": "Government colleges (State Quota)",
+          "surface": "header/home"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00012",
+          "path": "meta.seatTerms.management",
+          "value": "Private colleges",
+          "surface": "header/home"
+        }
+      ]
+    },
+    {
+      "itemId": "eligibility-listed-institutions",
+      "recordPath": "eligibility.listedHomeInstitutions",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00013",
+          "path": "eligibility.listedHomeInstitutions.names[0]",
+          "value": "Aligarh Muslim University (AMU), Aligarh",
+          "surface": "profile institution options"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00014",
+          "path": "eligibility.listedHomeInstitutions.names[1]",
+          "value": "Banaras Hindu University (BHU), Varanasi",
+          "surface": "profile institution options"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00015",
+          "path": "eligibility.listedHomeInstitutions.names[2]",
+          "value": "AIIMS Raebareli",
+          "surface": "profile institution options"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00016",
+          "path": "eligibility.listedHomeInstitutions.names[3]",
+          "value": "AIIMS Gorakhpur",
+          "surface": "profile institution options"
+        }
+      ]
+    },
+    {
+      "itemId": "eligibility-in-service-label",
+      "recordPath": "eligibility.inServiceLabel",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00017",
+          "path": "eligibility.inServiceLabel.label",
+          "value": "On the list of in-service (PMHS) candidates provided by the Director General Health Services, Uttar Pradesh",
+          "surface": "profile service question"
+        }
+      ]
+    },
+    {
+      "itemId": "process-registration",
+      "recordPath": "process[0]",
+      "sourcePages": [
+        3,
+        7
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00018",
+          "path": "process[0].title",
+          "value": "Register online",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00019",
+          "path": "process[0].description",
+          "value": "Registration is online only, on upneet.gov.in. Log in with your NEET roll number and the same email ID you used on the NBE portal. Your name, parents' names and date of birth come from NBE and can't be changed. You add your domicile, category, sub-category, in-service (PMHS) status, where you passed MBBS, and your address. Fill the form yourself, not through any agent or third party.",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00020",
+          "path": "process[0].link",
+          "value": "https://upneet.gov.in",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-registration-fee",
+      "recordPath": "process[1]",
+      "sourcePages": [
+        3,
+        7
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00021",
+          "path": "process[1].title",
+          "value": "Pay the registration fee",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00022",
+          "path": "process[1].description",
+          "value": "Pay ₹3,000 once. It covers rounds 1, 2 and 3 and is non-refundable.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-security-deposit",
+      "recordPath": "process[2]",
+      "sourcePages": [
+        3,
+        8
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00023",
+          "path": "process[2].title",
+          "value": "Pay the security deposit",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00024",
+          "path": "process[2].description",
+          "value": "Pay the deposit tier that matches the colleges you want to choose (₹30,000 / ₹1,00,000 / ₹2,00,000). Without it you cannot fill choices.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-merit-list",
+      "recordPath": "process[3]",
+      "sourcePages": [
+        3,
+        9
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00025",
+          "path": "process[3].title",
+          "value": "Merit list is declared",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00026",
+          "path": "process[3].description",
+          "value": "MD/MS/Diploma merit includes in-service (PMHS) weightage. DNB and MDS merit uses All-India NEET rank.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-choice-filling",
+      "recordPath": "process[4]",
+      "sourcePages": [
+        3,
+        9
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00027",
+          "path": "process[4].title",
+          "value": "Fill and lock choices",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00028",
+          "path": "process[4].description",
+          "value": "Fill as many college + course choices as you want, then lock them. Unlocked choices are not considered for allotment.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-result",
+      "recordPath": "process[5]",
+      "sourcePages": [
+        3,
+        9,
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00029",
+          "path": "process[5].title",
+          "value": "Seat allotment result",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00030",
+          "path": "process[5].description",
+          "value": "Seats are allotted on merit and your locked choices. Results appear on upneet.gov.in.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-allotment-letter",
+      "recordPath": "process[6]",
+      "sourcePages": [
+        3,
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00031",
+          "path": "process[6].title",
+          "value": "Download allotment letter",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00032",
+          "path": "process[6].description",
+          "value": "Download your allotment letter before reporting to the allotted college or nodal centre.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "process-admission",
+      "recordPath": "process[7]",
+      "sourcePages": [
+        3,
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00033",
+          "path": "process[7].title",
+          "value": "Take admission",
+          "surface": "steps"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00034",
+          "path": "process[7].description",
+          "value": "Report with original documents and pay fees at the allotted government college or the designated nodal centre (for private colleges) by the due date.",
+          "surface": "steps"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-qualified",
+      "recordPath": "eligibility.rules[0]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00035",
+          "path": "eligibility.rules[0].title",
+          "value": "Qualified NEET-PG / NEET-MDS 2026",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00036",
+          "path": "eligibility.rules[0].explanation",
+          "value": "You must have qualified NEET-PG 2026 (for MD/MS/Diploma/DNB) or NEET-MDS 2026 (for MDS).",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-internship-clinical",
+      "recordPath": "eligibility.rules[1]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "internshipCompletion",
+              "after": "2026-09-30"
+            }
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00037",
+          "path": "eligibility.rules[1].title",
+          "value": "Internship deadline (MD/MS/Diploma/DNB)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00038",
+          "path": "eligibility.rules[1].explanation",
+          "value": "Your one-year compulsory rotatory internship must be completed on or before 30th September 2026.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-internship-dental",
+      "recordPath": "eligibility.rules[2]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "dental"
+              ]
+            },
+            {
+              "fact": "internshipCompletion",
+              "after": "2026-05-31"
+            }
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00039",
+          "path": "eligibility.rules[2].title",
+          "value": "Internship deadline (MDS)",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00040",
+          "path": "eligibility.rules[2].explanation",
+          "value": "Your one-year compulsory rotatory internship must be completed on or before 31st May 2026.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-home-graduate",
+      "recordPath": "eligibility.rules[3]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "home"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "positive"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00041",
+          "path": "eligibility.rules[3].title",
+          "value": "MBBS/BDS from a UP college",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00042",
+          "path": "eligibility.rules[3].explanation",
+          "value": "Graduates of UP government or private medical/dental colleges are eligible for Government State Quota seats and private college seats.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-listed-institutions",
+      "recordPath": "eligibility.rules[4]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "home_listed"
+          ]
+        },
+        "effect": {
+          "type": "restrictSectors",
+          "sectors": [
+            "private"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00043",
+          "path": "eligibility.rules[4].title",
+          "value": "MBBS/BDS from AMU, BHU, AIIMS Raebareli or AIIMS Gorakhpur",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00044",
+          "path": "eligibility.rules[4].explanation",
+          "value": "Graduates of these institutions are not eligible for Government State Quota seats. They can only apply to private medical and dental colleges.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-outside-state",
+      "recordPath": "eligibility.rules[5]",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "mbbsLocation",
+          "in": [
+            "other_state",
+            "abroad"
+          ]
+        },
+        "effect": {
+          "type": "restrictSectors",
+          "sectors": [
+            "private"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00045",
+          "path": "eligibility.rules[5].title",
+          "value": "MBBS/BDS from outside Uttar Pradesh",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00046",
+          "path": "eligibility.rules[5].explanation",
+          "value": "Candidates who passed MBBS/BDS outside Uttar Pradesh can only apply to private medical and dental colleges. The brochure doesn't say whether this covers degrees from abroad, so FMGs should confirm with DGME UP.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-already-in-pg",
+      "recordPath": "eligibility.rules[6]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "currentlyInPG",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00047",
+          "path": "eligibility.rules[6].title",
+          "value": "Currently admitted through an earlier NEET-PG/MDS",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00048",
+          "path": "eligibility.rules[6].explanation",
+          "value": "If you're presently admitted to a course on the basis of an earlier NEET-PG or NEET-MDS, you can't take part until you complete and pass that course.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-pmhs-weightage",
+      "recordPath": "eligibility.rules[7]",
+      "sourcePages": [
+        4,
+        9
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "inService",
+              "in": [
+                true
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00049",
+          "path": "eligibility.rules[7].title",
+          "value": "In-service (PMHS) weightage",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00050",
+          "path": "eligibility.rules[7].explanation",
+          "value": "NEET-qualified in-service PMHS doctors on the DG Health Services list get weightage in the MD/MS/Diploma merit list (not DNB). DNB and MDS merit uses All-India NEET rank, with no weightage.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-dnb-in-service-only",
+      "recordPath": "eligibility.rules[8]",
+      "sourcePages": [
+        5
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "inService",
+              "in": [
+                false
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "excludeCourses",
+          "courses": [
+            "DNB"
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00051",
+          "path": "eligibility.rules[8].title",
+          "value": "State quota DNB seats are for in-service only",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00052",
+          "path": "eligibility.rules[8].explanation",
+          "value": "Only in-service (PMHS) candidates are eligible for state quota DNB seats.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-fmg",
+      "recordPath": "eligibility.rules[9]",
+      "sourcePages": [
+        5
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "courseType",
+              "in": [
+                "clinical"
+              ]
+            },
+            {
+              "fact": "mbbsLocation",
+              "in": [
+                "abroad"
+              ]
+            },
+            {
+              "fact": "nationality",
+              "in": [
+                "indian",
+                "oci"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00053",
+          "path": "eligibility.rules[9].title",
+          "value": "Foreign medical graduates",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00054",
+          "path": "eligibility.rules[9].explanation",
+          "value": "FMGs must meet NBE Information Bulletin 2026 point 4.10: qualified the FMGE screening test, registered with NMC/MCI or a State Medical Council, and internship completed by 30th September 2026.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-foreign-national",
+      "recordPath": "eligibility.rules[10]",
+      "sourcePages": [
+        5
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "fact": "nationality",
+          "in": [
+            "foreign"
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00055",
+          "path": "eligibility.rules[10].title",
+          "value": "Foreign nationals",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00056",
+          "path": "eligibility.rules[10].explanation",
+          "value": "Foreign nationals must meet NBE Information Bulletin 2026 point 4.11. Your basic medical qualification (equivalent to MBBS) must be recognised by the NMC. If you need MHA security clearance, get it before applying for NEET-PG and submit it with your application. The NMC may grant temporary registration for the course, limited to the college you join, on payment of a fee. For this you must be registered in the country where you got your basic qualification and have an NOC from its medical council to do PG in India. These rules are written for NEET-PG; MDS candidates should confirm with DGME UP.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-other-state-reserved",
+      "recordPath": "eligibility.rules[11]",
+      "sourcePages": [
+        6
+      ],
+      "seats": null,
+      "context": {
+        "condition": {
+          "all": [
+            {
+              "fact": "isDomicile",
+              "in": [
+                false
+              ]
+            },
+            {
+              "fact": "category",
+              "in": [
+                "OBC",
+                "SC",
+                "ST",
+                "EWS"
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "treatAsCategory",
+          "category": "UR"
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00057",
+          "path": "eligibility.rules[11].title",
+          "value": "Reserved category from another state",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00058",
+          "path": "eligibility.rules[11].explanation",
+          "value": "Reserved category candidates from other states are treated as Unreserved (UR) in UP NEET PG/MDS counselling. The brochure doesn't define \"other states\"; we go by domicile, so confirm with DGME UP if your domicile and certificate state differ.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "elig-pwd-certificate",
+      "recordPath": "eligibility.rules[12]",
+      "sourcePages": [
+        6,
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "condition": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        },
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00059",
+          "path": "eligibility.rules[12].title",
+          "value": "PwD certificate from a designated centre",
+          "surface": "eligibility"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00060",
+          "path": "eligibility.rules[12].explanation",
+          "value": "The 5% PwD reservation applies to Government State Quota seats in government medical institutions. To claim it, get a disability certificate (21 benchmark disabilities, RPwD Act 2016, NMC norms) from one of the designated centres in Annexure-2. Certificates from any other hospital or board are not accepted.",
+          "surface": "eligibility"
+        }
+      ]
+    },
+    {
+      "itemId": "reservation-policy",
+      "recordPath": "reservation.policy",
+      "sourcePages": [
+        6
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00061",
+          "path": "reservation.policy.appliesTo",
+          "value": "Government State Quota seats",
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00062",
+          "path": "reservation.policy.vertical[0].category",
+          "value": "SC",
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00063",
+          "path": "reservation.policy.vertical[0].percent",
+          "value": 21,
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00064",
+          "path": "reservation.policy.vertical[1].category",
+          "value": "ST",
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00065",
+          "path": "reservation.policy.vertical[1].percent",
+          "value": 2,
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00066",
+          "path": "reservation.policy.vertical[2].category",
+          "value": "OBC",
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00067",
+          "path": "reservation.policy.vertical[2].percent",
+          "value": 27,
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00068",
+          "path": "reservation.policy.vertical[3].category",
+          "value": "EWS",
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00069",
+          "path": "reservation.policy.vertical[3].percent",
+          "value": 10,
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00070",
+          "path": "reservation.policy.horizontal[0].category",
+          "value": "PwD",
+          "surface": "reservation table/bar"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00071",
+          "path": "reservation.policy.horizontal[0].percent",
+          "value": 5,
+          "surface": "reservation table/bar"
+        }
+      ]
+    },
+    {
+      "itemId": "reservation-conversion",
+      "recordPath": "reservation.conversion",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00072",
+          "path": "reservation.conversion.when",
+          "value": "During the 3rd round of state quota counselling, and only after candidates of the original category are exhausted.",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00073",
+          "path": "reservation.conversion.steps[0].from",
+          "value": "ST (PwD)",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00074",
+          "path": "reservation.conversion.steps[0].to",
+          "value": "ST",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00075",
+          "path": "reservation.conversion.steps[1].from",
+          "value": "SC (PwD)",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00076",
+          "path": "reservation.conversion.steps[1].to",
+          "value": "SC",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00077",
+          "path": "reservation.conversion.steps[2].from",
+          "value": "UR (PwD)",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00078",
+          "path": "reservation.conversion.steps[2].to",
+          "value": "UR",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00079",
+          "path": "reservation.conversion.steps[3].from",
+          "value": "OBC (PwD)",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00080",
+          "path": "reservation.conversion.steps[3].to",
+          "value": "OBC",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00081",
+          "path": "reservation.conversion.steps[4].from",
+          "value": "EWS (PwD)",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00082",
+          "path": "reservation.conversion.steps[4].to",
+          "value": "EWS",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00083",
+          "path": "reservation.conversion.steps[5].from",
+          "value": "ST",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00084",
+          "path": "reservation.conversion.steps[5].to",
+          "value": "SC",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00085",
+          "path": "reservation.conversion.steps[6].from",
+          "value": "SC",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00086",
+          "path": "reservation.conversion.steps[6].to",
+          "value": "UR",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00087",
+          "path": "reservation.conversion.steps[7].from",
+          "value": "OBC",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00088",
+          "path": "reservation.conversion.steps[7].to",
+          "value": "UR",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00089",
+          "path": "reservation.conversion.steps[8].from",
+          "value": "EWS",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00090",
+          "path": "reservation.conversion.steps[8].to",
+          "value": "UR",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00091",
+          "path": "reservation.conversion.steps[9].from",
+          "value": "Minority",
+          "surface": "conversion list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00092",
+          "path": "reservation.conversion.steps[9].to",
+          "value": "UR",
+          "surface": "conversion list"
+        }
+      ]
+    },
+    {
+      "itemId": "reservation-category-list",
+      "recordPath": "reservation.rules[0]",
+      "sourcePages": [
+        6
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00093",
+          "path": "reservation.rules[0].title",
+          "value": "Category lists",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00094",
+          "path": "reservation.rules[0].detail",
+          "value": "SC/ST/OBC lists are as notified by the Government of Uttar Pradesh at the time of counselling.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "reservation-up-format",
+      "recordPath": "reservation.rules[1]",
+      "sourcePages": [
+        6
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00095",
+          "path": "reservation.rules[1].title",
+          "value": "UP-format certificates only",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00096",
+          "path": "reservation.rules[1].detail",
+          "value": "Reservation certificates are valid only in the format prescribed by the Government of Uttar Pradesh and issued by a competent UP authority.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "reservation-cert-date",
+      "recordPath": "reservation.rules[2]",
+      "sourcePages": [
+        6
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00097",
+          "path": "reservation.rules[2].title",
+          "value": "Fresh EWS and OBC certificates",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00098",
+          "path": "reservation.rules[2].detail",
+          "value": "EWS and OBC certificates are valid only if issued on or after 1st April 2026.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "reservation-pwd-centres",
+      "recordPath": "reservation.rules[3]",
+      "sourcePages": [
+        6
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00099",
+          "path": "reservation.rules[3].title",
+          "value": "PwD certificates from designated centres only",
+          "surface": "reservation cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00100",
+          "path": "reservation.rules[3].detail",
+          "value": "PwD certificates from any other hospital or board are not accepted. See the list of designated disability centres.",
+          "surface": "reservation cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-registration",
+      "recordPath": "fees.registration",
+      "sourcePages": [
+        7
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00101",
+          "path": "fees.registration.amountInr",
+          "value": 3000,
+          "surface": "registration/upfront summary"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00102",
+          "path": "fees.registration.covers",
+          "value": "Rounds 1, 2 and 3. The stray vacancy round needs a fresh registration and another ₹3,000. No chargeback of the registration fee is entertained.",
+          "surface": "registration/upfront summary"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00103",
+          "path": "fees.registration.refundable",
+          "value": false,
+          "surface": "registration/upfront summary"
+        }
+      ]
+    },
+    {
+      "itemId": "deposit-govt",
+      "recordPath": "fees.securityDeposits[0]",
+      "sourcePages": [
+        8
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "medical"
+          },
+          {
+            "sector": "government",
+            "collegeType": "dental"
+          }
+        ],
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00104",
+          "path": "fees.securityDeposits[0].label",
+          "value": "Government colleges only",
+          "surface": "deposit rows/recommendation"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00105",
+          "path": "fees.securityDeposits[0].amountInr",
+          "value": 30000,
+          "surface": "deposit rows/recommendation"
+        }
+      ]
+    },
+    {
+      "itemId": "deposit-private-medical",
+      "recordPath": "fees.securityDeposits[1]",
+      "sourcePages": [
+        8
+      ],
+      "seats": null,
+      "context": {
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "medical"
+          },
+          {
+            "sector": "private",
+            "collegeType": "medical"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00106",
+          "path": "fees.securityDeposits[1].label",
+          "value": "Government + private medical colleges",
+          "surface": "deposit rows/recommendation"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00107",
+          "path": "fees.securityDeposits[1].amountInr",
+          "value": 200000,
+          "surface": "deposit rows/recommendation"
+        }
+      ]
+    },
+    {
+      "itemId": "deposit-private-dental",
+      "recordPath": "fees.securityDeposits[2]",
+      "sourcePages": [
+        8
+      ],
+      "seats": null,
+      "context": {
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "dental"
+          },
+          {
+            "sector": "private",
+            "collegeType": "dental"
+          }
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00108",
+          "path": "fees.securityDeposits[2].label",
+          "value": "Government + private dental colleges",
+          "surface": "deposit rows/recommendation"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00109",
+          "path": "fees.securityDeposits[2].amountInr",
+          "value": 100000,
+          "surface": "deposit rows/recommendation"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-deposit-go",
+      "recordPath": "fees.rules[0]",
+      "sourcePages": [
+        8
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00110",
+          "path": "fees.rules[0].title",
+          "value": "Deposit eligibility is set by a government order",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00111",
+          "path": "fees.rules[0].detail",
+          "value": "Check which deposit tier you are eligible for under Govt. Order No. I/1405837/2026 dated 23rd July 2026.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-own-account",
+      "recordPath": "fees.rules[1]",
+      "sourcePages": [
+        8
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00112",
+          "path": "fees.rules[1].title",
+          "value": "Pay from your own or a family account",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00113",
+          "path": "fees.rules[1].detail",
+          "value": "Use your own or a family member's bank account for the security fee. Any refund goes back to the same account.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-deposit-required",
+      "recordPath": "fees.rules[2]",
+      "sourcePages": [
+        8
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00114",
+          "path": "fees.rules[2].title",
+          "value": "No deposit, no choice filling",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00115",
+          "path": "fees.rules[2].detail",
+          "value": "If you don't pay the security fee you cannot fill choices.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-refund-timing",
+      "recordPath": "fees.rules[3]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00116",
+          "path": "fees.rules[3].title",
+          "value": "Refunds come after all rounds",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00117",
+          "path": "fees.rules[3].detail",
+          "value": "Security money refunds for eligible candidates start only after all counselling rounds are complete.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-tuition-private",
+      "recordPath": "fees.rules[4]",
+      "sourcePages": [
+        12
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00118",
+          "path": "fees.rules[4].title",
+          "value": "Private college tuition at admission",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00119",
+          "path": "fees.rules[4].detail",
+          "value": "At admission to a private college, you pay the government-fixed tuition fee. Minority institutions charge the tuition fee prescribed by the college.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "fees-receipts",
+      "recordPath": "fees.rules[5]",
+      "sourcePages": [
+        8
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00120",
+          "path": "fees.rules[5].title",
+          "value": "Keep your receipts",
+          "surface": "fees.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00121",
+          "path": "fees.rules[5].detail",
+          "value": "Download your registration form, registration fee slip and security money receipt after paying.",
+          "surface": "fees.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-login",
+      "recordPath": "choiceFilling[0]",
+      "sourcePages": [
+        9
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00122",
+          "path": "choiceFilling[0].title",
+          "value": "Log in with your roll number",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00123",
+          "path": "choiceFilling[0].detail",
+          "value": "Fill choices on upneet.gov.in with your NEET roll number and the password you created at registration. Don't share the password.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-unlimited",
+      "recordPath": "choiceFilling[1]",
+      "sourcePages": [
+        9
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00124",
+          "path": "choiceFilling[1].title",
+          "value": "No limit on choices",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00125",
+          "path": "choiceFilling[1].detail",
+          "value": "You can fill as many choices as you want and change them until you lock.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-lock-compulsory",
+      "recordPath": "choiceFilling[2]",
+      "sourcePages": [
+        9
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00126",
+          "path": "choiceFilling[2].title",
+          "value": "Locking is compulsory",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00127",
+          "path": "choiceFilling[2].detail",
+          "value": "If you don't lock your choices within the scheduled time, you will not be considered for allotment.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-locked-final",
+      "recordPath": "choiceFilling[3]",
+      "sourcePages": [
+        9
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00128",
+          "path": "choiceFilling[3].title",
+          "value": "Locked means final",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00129",
+          "path": "choiceFilling[3].detail",
+          "value": "Once locked, choices cannot be altered.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-research-private",
+      "recordPath": "choiceFilling[4]",
+      "sourcePages": [
+        9
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00130",
+          "path": "choiceFilling[4].title",
+          "value": "Research private colleges first",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00131",
+          "path": "choiceFilling[4].detail",
+          "value": "Get detailed information about any private college before adding it to your choices.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "choice-merit-basis",
+      "recordPath": "choiceFilling[5]",
+      "sourcePages": [
+        9
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00132",
+          "path": "choiceFilling[5].title",
+          "value": "How merit is calculated",
+          "surface": "choiceFilling cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00133",
+          "path": "choiceFilling[5].detail",
+          "value": "MD/MS/Diploma merit includes in-service (PMHS) weightage. DNB and MDS merit is based on All-India NEET rank.",
+          "surface": "choiceFilling cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-1-free-exit",
+      "recordPath": "rounds[0]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00134",
+          "path": "rounds[0].title",
+          "value": "Free exit if you don't join",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00135",
+          "path": "rounds[0].detail",
+          "value": "If you are allotted a seat in Round 1 and do not take admission, you can exit with no penalty.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00136",
+          "path": "rounds[0].tag",
+          "value": "Round 1",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-upgrade",
+      "recordPath": "rounds[1]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00137",
+          "path": "rounds[1].title",
+          "value": "Upgrade up to Round 3",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00138",
+          "path": "rounds[1].detail",
+          "value": "If you took admission after Round 1, you can still participate for an upgrade up to Round 3.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00139",
+          "path": "rounds[1].tag",
+          "value": "Rounds 2–3",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-same-seat",
+      "recordPath": "rounds[2]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00140",
+          "path": "rounds[2].title",
+          "value": "Don't re-list your current seat",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00141",
+          "path": "rounds[2].detail",
+          "value": "When trying to upgrade, don't fill the seat you already hold. If you are allotted the same seat again, your previous allotment is cancelled.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00142",
+          "path": "rounds[2].tag",
+          "value": "Rounds 2–3",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-must-join-upgrade",
+      "recordPath": "rounds[3]",
+      "sourcePages": [
+        10
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00143",
+          "path": "rounds[3].title",
+          "value": "Join your upgraded seat",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00144",
+          "path": "rounds[3].detail",
+          "value": "If you are upgraded and don't take admission in the new seat, the new allotment is cancelled.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00145",
+          "path": "rounds[3].tag",
+          "value": "Rounds 2–3",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "round-3-conversion",
+      "recordPath": "rounds[4]",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00146",
+          "path": "rounds[4].title",
+          "value": "Category seat conversion",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00147",
+          "path": "rounds[4].detail",
+          "value": "Unfilled reserved seats are converted in Round 3, as per the conversion order.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00148",
+          "path": "rounds[4].tag",
+          "value": "Round 3",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "stray-not-joined",
+      "recordPath": "rounds[5]",
+      "sourcePages": [
+        11
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00149",
+          "path": "rounds[5].title",
+          "value": "Stray round: who is excluded",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00150",
+          "path": "rounds[5].detail",
+          "value": "Candidates allotted a seat in UP counselling who did not join or who resigned cannot take part in the stray vacancy round.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00151",
+          "path": "rounds[5].tag",
+          "value": "Stray round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "stray-other-admission",
+      "recordPath": "rounds[6]",
+      "sourcePages": [
+        11
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00152",
+          "path": "rounds[6].title",
+          "value": "Stray round: already admitted elsewhere",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00153",
+          "path": "rounds[6].detail",
+          "value": "Anyone admitted to a PG course anywhere in India through AIQ or another state's quota cannot take part in the UP stray vacancy round.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00154",
+          "path": "rounds[6].tag",
+          "value": "Stray round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "stray-fresh-registration",
+      "recordPath": "rounds[7]",
+      "sourcePages": [
+        11
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00155",
+          "path": "rounds[7].title",
+          "value": "Stray round: register again",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00156",
+          "path": "rounds[7].detail",
+          "value": "Fresh registration with ₹3,000 is mandatory. Only these candidates are on the stray vacancy merit list.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00157",
+          "path": "rounds[7].tag",
+          "value": "Stray round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "stray-must-join",
+      "recordPath": "rounds[8]",
+      "sourcePages": [
+        11
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00158",
+          "path": "rounds[8].title",
+          "value": "Stray round: you must join",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00159",
+          "path": "rounds[8].detail",
+          "value": "If you are allotted a seat in the stray round and don't report and join, you lose your security deposit and are debarred from UP NEET PG/MDS counselling 2027.",
+          "surface": "rounds cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00160",
+          "path": "rounds[8].tag",
+          "value": "Stray round",
+          "surface": "rounds cards"
+        }
+      ]
+    },
+    {
+      "itemId": "admission-where",
+      "recordPath": "admission[0]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00161",
+          "path": "admission[0].title",
+          "value": "Where to take admission",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00162",
+          "path": "admission[0].detail",
+          "value": "Complete admission and pay fees at the allotted government college, or at the nodal centre named in your allotment letter for private colleges.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "admission-deadline",
+      "recordPath": "admission[1]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00163",
+          "path": "admission[1].title",
+          "value": "Miss the deadline, lose the seat",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00164",
+          "path": "admission[1].detail",
+          "value": "If you don't take admission by the due date, you forfeit the seat.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "admission-originals",
+      "recordPath": "admission[2]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00165",
+          "path": "admission[2].title",
+          "value": "Originals are mandatory",
+          "surface": "admission cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00166",
+          "path": "admission[2].detail",
+          "value": "If you fail to produce originals, or if concealment or falsification is found at admission or later during the course, you lose your candidature and will face legal action.",
+          "surface": "admission cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-in-person",
+      "recordPath": "resignation.rules[0]",
+      "sourcePages": [
+        13
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00167",
+          "path": "resignation.rules[0].title",
+          "value": "Resign in person only",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00168",
+          "path": "resignation.rules[0].detail",
+          "value": "Only admitted candidates can resign, in person, at the college or nodal centre where they took admission. Resignations sent any other way are not valid.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-portal",
+      "recordPath": "resignation.rules[1]",
+      "sourcePages": [
+        13
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00169",
+          "path": "resignation.rules[1].title",
+          "value": "Must be updated on the portal",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00170",
+          "path": "resignation.rules[1].detail",
+          "value": "The college or nodal centre updates your resignation on the NIC portal within the scheduled time. Only portal-updated resignations count.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-late-next-tier",
+      "recordPath": "resignation.rules[2]",
+      "sourcePages": [
+        13,
+        14
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00171",
+          "path": "resignation.rules[2].title",
+          "value": "Miss a deadline and the next tier's penalty applies",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00172",
+          "path": "resignation.rules[2].detail",
+          "value": "Each resignation window closes 2 days before the next round's choice filling. If you resign after it closes, the next stage's rules apply. For example, a Round 1 admittee who resigns late loses the full security deposit.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-debarment",
+      "recordPath": "resignation.rules[3]",
+      "sourcePages": [
+        15
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00173",
+          "path": "resignation.rules[3].title",
+          "value": "Debarment for leaving government seats",
+          "surface": "resignation.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00174",
+          "path": "resignation.rules[3].detail",
+          "value": "If you leave a government medical or dental college seat after the final round and before completing the course, you are debarred from the next academic session's admission process.",
+          "surface": "resignation.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-certificates-held",
+      "recordPath": "serviceBond.rules[0]",
+      "sourcePages": [
+        24,
+        25
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00175",
+          "path": "serviceBond.rules[0].title",
+          "value": "Your certificates are held until the bond is served",
+          "surface": "serviceBond.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00176",
+          "path": "serviceBond.rules[0].detail",
+          "value": "Your course certificates stay with the institution until you complete 2 years of government service or pay the bond amount. The government also has a first lien on the certificates you submitted at admission, and the institution may keep them until the lien is cleared.",
+          "surface": "serviceBond.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-release",
+      "recordPath": "serviceBond.rules[1]",
+      "sourcePages": [
+        24
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00177",
+          "path": "serviceBond.rules[1].title",
+          "value": "Bond is released if no posting comes",
+          "surface": "serviceBond.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00178",
+          "path": "serviceBond.rules[1].detail",
+          "value": "If the government does not offer you a posting within 3 months of finishing the course, the bond is released.",
+          "surface": "serviceBond.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-interest",
+      "recordPath": "serviceBond.rules[2]",
+      "sourcePages": [
+        25
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00179",
+          "path": "serviceBond.rules[2].title",
+          "value": "Late payment attracts interest",
+          "surface": "serviceBond.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00180",
+          "path": "serviceBond.rules[2].detail",
+          "value": "If you don't pay the bond amount in time, interest applies and it can be recovered as arrears of land revenue. You also bear the stamp duty on the bond.",
+          "surface": "serviceBond.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-stipend",
+      "recordPath": "serviceBond.rules[3]",
+      "sourcePages": [
+        24,
+        25
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00181",
+          "path": "serviceBond.rules[3].title",
+          "value": "Stipend repayment for employed candidates on study leave",
+          "surface": "serviceBond.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00182",
+          "path": "serviceBond.rules[3].detail",
+          "value": "If you're employed and the government grants you stipend for 24 months to study, but you work less than 24 months during the course, the proportionate amount is treated as stipend. You then pay back the balance stipend to the government, on top of the security amount. The bond form leaves the amounts blank, so confirm with DGME UP whether this applies to you.",
+          "surface": "serviceBond.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-payment",
+      "recordPath": "serviceBond.rules[4]",
+      "sourcePages": [
+        24,
+        25
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00183",
+          "path": "serviceBond.rules[4].title",
+          "value": "If you don't serve, pay immediately",
+          "surface": "serviceBond.rules cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00184",
+          "path": "serviceBond.rules[4].detail",
+          "value": "If you don't serve 2 years, you must pay the bond amount immediately into the specified Government Treasury. During the 2 years of service you are paid a stipend. The bond is governed by the Laws of India.",
+          "surface": "serviceBond.rules cards"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-allotment-letter",
+      "recordPath": "documents[0]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00185",
+          "path": "documents[0].name",
+          "value": "Allotment letter",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-admit-card",
+      "recordPath": "documents[1]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00186",
+          "path": "documents[1].name",
+          "value": "NEET PG-2026 / NEET MDS-2026 admit card",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-score-card",
+      "recordPath": "documents[2]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00187",
+          "path": "documents[2].name",
+          "value": "NEET PG-2026 / NEET MDS-2026 score card or rank letter",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-high-school",
+      "recordPath": "documents[3]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00188",
+          "path": "documents[3].name",
+          "value": "High school marksheet or certificate",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00189",
+          "path": "documents[3].detail",
+          "value": "Proof of date of birth.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-professional-marksheets",
+      "recordPath": "documents[4]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00190",
+          "path": "documents[4].name",
+          "value": "Marksheets of all MBBS/BDS professional exams",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-degree",
+      "recordPath": "documents[5]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00191",
+          "path": "documents[5].name",
+          "value": "MBBS/BDS pass certificate or degree",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-internship",
+      "recordPath": "documents[6]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00192",
+          "path": "documents[6].name",
+          "value": "Compulsory rotatory internship completion certificate",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-registration",
+      "recordPath": "documents[7]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00193",
+          "path": "documents[7].name",
+          "value": "Permanent or provisional registration certificate (State Medical Council / MCI / DCI)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-reservation",
+      "recordPath": "documents[8]",
+      "sourcePages": [
+        6,
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": {
+          "all": [
+            {
+              "fact": "category",
+              "in": [
+                "OBC",
+                "SC",
+                "ST",
+                "EWS"
+              ]
+            },
+            {
+              "not": {
+                "fact": "isDomicile",
+                "in": [
+                  false
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00194",
+          "path": "documents[8].name",
+          "value": "Category certificate (SC/ST/OBC/EWS) in UP format",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00195",
+          "path": "documents[8].detail",
+          "value": "Issued by a competent UP authority. EWS and OBC certificates must be issued on or after 1st April 2026.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-ews-format",
+      "recordPath": "documents[9]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": {
+          "all": [
+            {
+              "fact": "category",
+              "in": [
+                "EWS"
+              ]
+            },
+            {
+              "not": {
+                "fact": "isDomicile",
+                "in": [
+                  false
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00196",
+          "path": "documents[9].name",
+          "value": "EWS income & asset certificate (Annexure-3 format)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00197",
+          "path": "documents[9].detail",
+          "value": "Family's total annual income below ₹8 lakh in the stated financial year. The family must not own any of: 5 acres or more of agricultural land; a flat of 1,000 sq ft or more; a residential plot of 100 sq yd or more in a notified municipality; or 200 sq yd or more outside one. You must be a permanent resident and not belong to a caste notified as SC, ST or OBC. Valid for the financial year stated on it. Uses the Prapatra-1 format (office memo dated 14th March 2019) with your attested passport-size photo and full address (village, post office, police station, tehsil, district, state, PIN). Issued by the District Magistrate, Additional District Magistrate, City Magistrate, Pargana Magistrate or Tehsildar.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-pwd",
+      "recordPath": "documents[10]",
+      "sourcePages": [
+        6,
+        12
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "stage": "admission",
+        "appliesWhen": {
+          "fact": "pwd",
+          "in": [
+            true
+          ]
+        },
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00198",
+          "path": "documents[10].name",
+          "value": "Disability certificate from a designated centre (Annexure-2)",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-service-bond",
+      "recordPath": "documents[11]",
+      "sourcePages": [
+        15,
+        24,
+        25
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00199",
+          "path": "documents[11].name",
+          "value": "Signed service bond agreement (Annexure-4)",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00200",
+          "path": "documents[11].detail",
+          "value": "Required if you take admission in a government medical or dental college. The brochure also says everyone admitted to PG courses signs a bond, so confirm with DGME if you're joining a private college. You bear the stamp duty. The bond form asks for your Aadhaar number, mobile, email, and permanent and temporary addresses.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "doc-originals",
+      "recordPath": "documents[12]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {
+        "stage": "admission",
+        "appliesWhen": null
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00201",
+          "path": "documents[12].name",
+          "value": "One set of self-attested photocopies of everything",
+          "surface": "conditional checklist"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00202",
+          "path": "documents[12].detail",
+          "value": "Bring originals plus one self-attested photocopy set.",
+          "surface": "conditional checklist"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-r1",
+      "recordPath": "resignation.ladder[0]",
+      "sourcePages": [
+        13
+      ],
+      "seats": null,
+      "context": {
+        "stage": "Admitted in Round 1",
+        "sector": "all"
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00203",
+          "path": "resignation.ladder[0].stage",
+          "value": "Admitted in Round 1",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00204",
+          "path": "resignation.ladder[0].window",
+          "value": "Up to 2 days before Round 2 choice filling starts (e.g. by 11:00 AM on 22nd July 2026 if choice filling opens 11:00 AM on 24th July 2026)",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00205",
+          "path": "resignation.ladder[0].securityDeposit",
+          "value": "refunded",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00206",
+          "path": "resignation.ladder[0].fees",
+          "value": "Free exit. Government colleges refund all fees except the admission fee. Private colleges refund tuition paid.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-r2",
+      "recordPath": "resignation.ladder[1]",
+      "sourcePages": [
+        13,
+        14
+      ],
+      "seats": null,
+      "context": {
+        "stage": "After Round 2 (or a Round 1 admittee who missed the Round 1 deadline)",
+        "sector": "all"
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00207",
+          "path": "resignation.ladder[1].stage",
+          "value": "After Round 2 (or a Round 1 admittee who missed the Round 1 deadline)",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00208",
+          "path": "resignation.ladder[1].window",
+          "value": "Up to 2 days before Round 3 choice filling starts",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00209",
+          "path": "resignation.ladder[1].securityDeposit",
+          "value": "forfeited",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00210",
+          "path": "resignation.ladder[1].fees",
+          "value": "Government colleges refund all fees except the admission fee. Private colleges refund tuition paid.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-r3-govt",
+      "recordPath": "resignation.ladder[2]",
+      "sourcePages": [
+        14
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "stage": "After Round 3 — government college",
+        "sector": "government",
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00211",
+          "path": "resignation.ladder[2].stage",
+          "value": "After Round 3 — government college",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00212",
+          "path": "resignation.ladder[2].window",
+          "value": "Up to 2 days before stray round choice filling starts",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00213",
+          "path": "resignation.ladder[2].securityDeposit",
+          "value": "forfeited",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00214",
+          "path": "resignation.ladder[2].fees",
+          "value": "All fees paid are forfeited.",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00215",
+          "path": "resignation.ladder[2].otherConsequence",
+          "value": "No candidate is permitted to vacate a seat after Round 3. These penalties apply if you still resign.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-r3-private",
+      "recordPath": "resignation.ladder[3]",
+      "sourcePages": [
+        14
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "stage": "After Round 3 — private college",
+        "sector": "private",
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00216",
+          "path": "resignation.ladder[3].stage",
+          "value": "After Round 3 — private college",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00217",
+          "path": "resignation.ladder[3].window",
+          "value": "Up to 2 days before stray round choice filling starts",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00218",
+          "path": "resignation.ladder[3].securityDeposit",
+          "value": "forfeited",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00219",
+          "path": "resignation.ladder[3].fees",
+          "value": "50% of the tuition fee paid is forfeited.",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00220",
+          "path": "resignation.ladder[3].otherConsequence",
+          "value": "No candidate is permitted to vacate a seat after Round 3. These penalties apply if you still resign.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "resign-stray",
+      "recordPath": "resignation.ladder[4]",
+      "sourcePages": [
+        14
+      ],
+      "seats": null,
+      "context": {
+        "stage": "After the stray round, or before finishing the course",
+        "sector": "all"
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00221",
+          "path": "resignation.ladder[4].stage",
+          "value": "After the stray round, or before finishing the course",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00222",
+          "path": "resignation.ladder[4].window",
+          "value": "Any time after the stray vacancy round",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00223",
+          "path": "resignation.ladder[4].securityDeposit",
+          "value": "forfeited",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00224",
+          "path": "resignation.ladder[4].fees",
+          "value": "All fees paid are forfeited.",
+          "surface": "resignation ladder"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00225",
+          "path": "resignation.ladder[4].otherConsequence",
+          "value": "If your deposit was already refunded you must pay it back, by demand draft in favour of the DG, Medical Education & Training, UP, Lucknow.",
+          "surface": "resignation ladder"
+        }
+      ]
+    },
+    {
+      "itemId": "bond-pg",
+      "recordPath": "serviceBond.bond",
+      "sourcePages": [
+        15,
+        24,
+        25
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00226",
+          "path": "serviceBond.bond.appliesTo",
+          "value": "Candidates in government medical or dental colleges must serve it; the brochure also says everyone admitted to PG courses signs a bond, so private-college candidates should confirm with DGME",
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00227",
+          "path": "serviceBond.bond.durationYears",
+          "value": 2,
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00228",
+          "path": "serviceBond.bond.amounts[0].course",
+          "value": "PG Degree (MD/MS)",
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00229",
+          "path": "serviceBond.bond.amounts[0].amountInr",
+          "value": 4000000,
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00230",
+          "path": "serviceBond.bond.amounts[1].course",
+          "value": "PG Diploma / MDS",
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00231",
+          "path": "serviceBond.bond.amounts[1].amountInr",
+          "value": 2000000,
+          "surface": "bond summary"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00232",
+          "path": "serviceBond.bond.placeOfService",
+          "value": "Service must be in Uttar Pradesh, as far as possible / as required outside metros: as a Senior Resident or contractual lecturer in a government medical college, or as a contractual specialist at a district hospital or community health centre run under the Medical & Health Department.",
+          "surface": "bond summary"
+        }
+      ]
+    },
+    {
+      "itemId": "helpdesk",
+      "recordPath": "helpdesk",
+      "sourcePages": [
+        16
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00233",
+          "path": "helpdesk.phones[0].label",
+          "value": "Counselling helpline",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00234",
+          "path": "helpdesk.phones[0].numbers[0]",
+          "value": "8189011696",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00235",
+          "path": "helpdesk.phones[0].numbers[1]",
+          "value": "8189011697",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00236",
+          "path": "helpdesk.phones[0].numbers[2]",
+          "value": "8189011698",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00237",
+          "path": "helpdesk.phones[0].numbers[3]",
+          "value": "8189011699",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00238",
+          "path": "helpdesk.phones[0].numbers[4]",
+          "value": "8189011700",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00239",
+          "path": "helpdesk.phones[1].label",
+          "value": "SBI banking helpline",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00240",
+          "path": "helpdesk.phones[1].numbers[0]",
+          "value": "7007322364",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00241",
+          "path": "helpdesk.phones[1].numbers[1]",
+          "value": "9919443034",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00242",
+          "path": "helpdesk.phones[2].label",
+          "value": "ICICI banking helpline",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00243",
+          "path": "helpdesk.phones[2].numbers[0]",
+          "value": "9712942974",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00244",
+          "path": "helpdesk.phones[2].numbers[1]",
+          "value": "8853002213",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00245",
+          "path": "helpdesk.phones[2].numbers[2]",
+          "value": "9935012172",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00246",
+          "path": "helpdesk.phones[2].numbers[3]",
+          "value": "9454850549",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00247",
+          "path": "helpdesk.emails[0].label",
+          "value": "Counselling",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00248",
+          "path": "helpdesk.emails[0].addresses[0]",
+          "value": "upneetcounseling2026@gmail.com",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00249",
+          "path": "helpdesk.emails[1].label",
+          "value": "SBI",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00250",
+          "path": "helpdesk.emails[1].addresses[0]",
+          "value": "sbi.06144@sbi.co.in",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00251",
+          "path": "helpdesk.emails[2].label",
+          "value": "ICICI",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00252",
+          "path": "helpdesk.emails[2].addresses[0]",
+          "value": "shweta.vaish@icici.bank.in",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00253",
+          "path": "helpdesk.emails[2].addresses[1]",
+          "value": "abhinay.patel@icici.bank.in",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00254",
+          "path": "helpdesk.emails[2].addresses[2]",
+          "value": "avikal.srivastava@icici.bank.in",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00255",
+          "path": "helpdesk.hours",
+          "value": "11:00 AM to 5:00 PM (office hours)",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00256",
+          "path": "helpdesk.instructions[0]",
+          "value": "Email only the official address, with your name, registration no., roll no., All India Rank, contact no. and email ID. Emails without these may not be answered.",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00257",
+          "path": "helpdesk.instructions[1]",
+          "value": "Queries already answered in the information bulletin will not be answered.",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00258",
+          "path": "helpdesk.instructions[2]",
+          "value": "Court cases about counselling fall under Lucknow jurisdiction only.",
+          "surface": "help desk"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00259",
+          "path": "helpdesk.instructions[3]",
+          "value": "Check dgme.up.gov.in and upneet.gov.in for the latest updates.",
+          "surface": "help desk"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-kgmu",
+      "recordPath": "nodalCentres[0]",
+      "sourcePages": [
+        17
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00260",
+          "path": "nodalCentres[0].centre",
+          "value": "King George's Medical University, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00261",
+          "path": "nodalCentres[0].privateMedical[0]",
+          "value": "Era's Lucknow Medical College, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00262",
+          "path": "nodalCentres[0].privateMedical[1]",
+          "value": "Career Medical College, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00263",
+          "path": "nodalCentres[0].privateMedical[2]",
+          "value": "TS Mishra Medical College, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00264",
+          "path": "nodalCentres[0].privateMedical[3]",
+          "value": "Integral Institute of Medical Sciences, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00265",
+          "path": "nodalCentres[0].privateMedical[4]",
+          "value": "Prasad Medical College, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00266",
+          "path": "nodalCentres[0].privateDental[0]",
+          "value": "Saraswati Dental College, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00267",
+          "path": "nodalCentres[0].privateDental[1]",
+          "value": "Sardar Patel Post Graduate Institute of Dental Sciences, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00268",
+          "path": "nodalCentres[0].privateDental[2]",
+          "value": "Career Institute of Dental Sciences and Hospital, Lucknow",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-llrm",
+      "recordPath": "nodalCentres[1]",
+      "sourcePages": [
+        17
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00269",
+          "path": "nodalCentres[1].centre",
+          "value": "L.L.R.M. Medical College, Meerut",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00270",
+          "path": "nodalCentres[1].privateMedical[0]",
+          "value": "Muzaffarnagar Medical College, Muzaffarnagar",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00271",
+          "path": "nodalCentres[1].privateMedical[1]",
+          "value": "Subharti Medical College, Meerut",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00272",
+          "path": "nodalCentres[1].privateMedical[2]",
+          "value": "Saraswati Institute of Medical Sciences, Hapur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00273",
+          "path": "nodalCentres[1].privateMedical[3]",
+          "value": "Rama Medical College Hospital & Research Centre, Hapur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00274",
+          "path": "nodalCentres[1].privateMedical[4]",
+          "value": "National Capital Region Institute of Medical Sciences, Meerut",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00275",
+          "path": "nodalCentres[1].privateDental[0]",
+          "value": "Subharti Dental College, Meerut",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00276",
+          "path": "nodalCentres[1].privateDental[1]",
+          "value": "Kalka Dental College, Meerut",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00277",
+          "path": "nodalCentres[1].privateDental[2]",
+          "value": "Kothiwal Dental College, Moradabad",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-gsvm",
+      "recordPath": "nodalCentres[2]",
+      "sourcePages": [
+        17
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00278",
+          "path": "nodalCentres[2].centre",
+          "value": "GSVM Medical College, Kanpur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00279",
+          "path": "nodalCentres[2].privateMedical[0]",
+          "value": "Rama Medical College Hospital and Research Center, Kanpur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00280",
+          "path": "nodalCentres[2].privateMedical[1]",
+          "value": "Naraina Medical College & Research Centre, Kanpur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00281",
+          "path": "nodalCentres[2].privateMedical[2]",
+          "value": "Saraswati Medical College, Unnao",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00282",
+          "path": "nodalCentres[2].privateDental[0]",
+          "value": "Rama Dental College, Kanpur",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-sn-agra",
+      "recordPath": "nodalCentres[3]",
+      "sourcePages": [
+        17
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00283",
+          "path": "nodalCentres[3].centre",
+          "value": "S.N. Medical College, Agra",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00284",
+          "path": "nodalCentres[3].privateMedical[0]",
+          "value": "F.H. Medical College, Agra",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00285",
+          "path": "nodalCentres[3].privateMedical[1]",
+          "value": "K.D. Medical College, Mathura",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00286",
+          "path": "nodalCentres[3].privateMedical[2]",
+          "value": "Krishna Mohan Medical College, Mathura",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00287",
+          "path": "nodalCentres[3].privateMedical[3]",
+          "value": "SKS Hospital Medical College & Research Center, Mathura",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00288",
+          "path": "nodalCentres[3].privateDental[0]",
+          "value": "K.D. Dental College, Mathura",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-rmlims",
+      "recordPath": "nodalCentres[4]",
+      "sourcePages": [
+        17
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00289",
+          "path": "nodalCentres[4].centre",
+          "value": "Dr. Ram Manohar Lohia Institute of Medical Sciences, Lucknow",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00290",
+          "path": "nodalCentres[4].privateMedical[0]",
+          "value": "Hind Institute of Medical Sciences, Barabanki",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00291",
+          "path": "nodalCentres[4].privateMedical[1]",
+          "value": "Hind Institute of Medical Sciences, Sitapur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00292",
+          "path": "nodalCentres[4].privateMedical[2]",
+          "value": "Mayo Institute of Medical Sciences, Barabanki",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00293",
+          "path": "nodalCentres[4].privateDental[0]",
+          "value": "Chandra Dental College, Barabanki",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00294",
+          "path": "nodalCentres[4].privateDental[1]",
+          "value": "B.B.D. College of Dental Sciences, Lucknow",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-brd",
+      "recordPath": "nodalCentres[5]",
+      "sourcePages": [
+        18
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00295",
+          "path": "nodalCentres[5].centre",
+          "value": "BRD Medical College, Gorakhpur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00296",
+          "path": "nodalCentres[5].privateDental[0]",
+          "value": "Dental College, Azamgarh",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-mln",
+      "recordPath": "nodalCentres[6]",
+      "sourcePages": [
+        18
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00297",
+          "path": "nodalCentres[6].centre",
+          "value": "M.L.N. Medical College, Prayagraj",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00298",
+          "path": "nodalCentres[6].privateMedical[0]",
+          "value": "Heritage Institute of Medical Sciences, Varanasi",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00299",
+          "path": "nodalCentres[6].privateMedical[1]",
+          "value": "United Institute of Medical Sciences, Prayagraj",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-gims",
+      "recordPath": "nodalCentres[7]",
+      "sourcePages": [
+        18
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00300",
+          "path": "nodalCentres[7].centre",
+          "value": "Government Institute of Medical Sciences, Greater Noida",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00301",
+          "path": "nodalCentres[7].privateMedical[0]",
+          "value": "G.S. Medical College, Hapur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00302",
+          "path": "nodalCentres[7].privateMedical[1]",
+          "value": "School of Medical Sciences, Sharda University, Greater Noida",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00303",
+          "path": "nodalCentres[7].privateMedical[2]",
+          "value": "Noida International Institute of Medical Sciences, Greater Noida",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00304",
+          "path": "nodalCentres[7].privateDental[0]",
+          "value": "ITS Dental College, Greater Noida",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00305",
+          "path": "nodalCentres[7].privateDental[1]",
+          "value": "School of Dental (Sharda University), Greater Noida",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00306",
+          "path": "nodalCentres[7].privateDental[2]",
+          "value": "Shri Banke Bihari Dental College, Ghaziabad",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00307",
+          "path": "nodalCentres[7].privateDental[3]",
+          "value": "DJ College Modinagar, Ghaziabad",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00308",
+          "path": "nodalCentres[7].privateDental[4]",
+          "value": "IDST Modinagar, Ghaziabad",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00309",
+          "path": "nodalCentres[7].privateDental[5]",
+          "value": "ITS Dental College, Muradnagar, Ghaziabad",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00310",
+          "path": "nodalCentres[7].privateDental[6]",
+          "value": "Indraprastha Dental College, Ghaziabad",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-tmmc",
+      "recordPath": "nodalCentres[8]",
+      "sourcePages": [
+        18
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00311",
+          "path": "nodalCentres[8].centre",
+          "value": "Teerthankar Mahaveer Medical College & Research Center, Moradabad",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00312",
+          "path": "nodalCentres[8].privateMedical[0]",
+          "value": "Teerthankar Mahaveer Medical College & Research Center, Moradabad",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00313",
+          "path": "nodalCentres[8].privateMedical[1]",
+          "value": "Venkateshwara Institute of Medical Sciences, Amroha",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00314",
+          "path": "nodalCentres[8].privateDental[0]",
+          "value": "Teerthankar Mahaveer Dental College, Moradabad",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "nodal-biu",
+      "recordPath": "nodalCentres[9]",
+      "sourcePages": [
+        18
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00315",
+          "path": "nodalCentres[9].centre",
+          "value": "Bareilly International University, Bareilly",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00316",
+          "path": "nodalCentres[9].privateMedical[0]",
+          "value": "Rohilkhand Medical College, Bareilly",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00317",
+          "path": "nodalCentres[9].privateMedical[1]",
+          "value": "Shri Ramamurthy Medical College, Bareilly",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00318",
+          "path": "nodalCentres[9].privateMedical[2]",
+          "value": "Rajshree Medical, Bareilly",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00319",
+          "path": "nodalCentres[9].privateMedical[3]",
+          "value": "Varunarjun Medical College, Shahjahanpur",
+          "surface": "college/centre list"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00320",
+          "path": "nodalCentres[9].privateDental[0]",
+          "value": "Institute of Dental Sciences, Bareilly",
+          "surface": "college/centre list"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-1",
+      "recordPath": "disabilityCentres[0]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00321",
+          "path": "disabilityCentres[0].name",
+          "value": "VMMC & Safdarjang Hospital",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00322",
+          "path": "disabilityCentres[0].location",
+          "value": "New Delhi",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00323",
+          "path": "disabilityCentres[0].remarks",
+          "value": "All disabilities except visual; intellectual & behavioural disabilities",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-2",
+      "recordPath": "disabilityCentres[1]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00324",
+          "path": "disabilityCentres[1].name",
+          "value": "All India Institute of Physical Medicine and Rehabilitation (AIIPMR)",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00325",
+          "path": "disabilityCentres[1].location",
+          "value": "Mumbai",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00326",
+          "path": "disabilityCentres[1].remarks",
+          "value": "Locomotor disability only",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-3",
+      "recordPath": "disabilityCentres[2]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00327",
+          "path": "disabilityCentres[2].name",
+          "value": "Institute of Post Graduate Medical Education & Research (IPGMER)",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00328",
+          "path": "disabilityCentres[2].location",
+          "value": "Kolkata",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00329",
+          "path": "disabilityCentres[2].remarks",
+          "value": "All disabilities",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-4",
+      "recordPath": "disabilityCentres[3]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00330",
+          "path": "disabilityCentres[3].name",
+          "value": "Madras Medical College (MMC)",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00331",
+          "path": "disabilityCentres[3].location",
+          "value": "Chennai",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00332",
+          "path": "disabilityCentres[3].remarks",
+          "value": "All disabilities",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-5",
+      "recordPath": "disabilityCentres[4]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00333",
+          "path": "disabilityCentres[4].name",
+          "value": "Grant Government Medical College, J.J. Hospital Compound",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00334",
+          "path": "disabilityCentres[4].location",
+          "value": "Mumbai, Maharashtra",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00335",
+          "path": "disabilityCentres[4].remarks",
+          "value": "All disabilities",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-6",
+      "recordPath": "disabilityCentres[5]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00336",
+          "path": "disabilityCentres[5].name",
+          "value": "Goa Medical College",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00337",
+          "path": "disabilityCentres[5].location",
+          "value": "Goa",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00338",
+          "path": "disabilityCentres[5].remarks",
+          "value": "All disabilities except speech disability",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-7",
+      "recordPath": "disabilityCentres[6]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00339",
+          "path": "disabilityCentres[6].name",
+          "value": "Government Medical College, Thiruvananthapuram",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00340",
+          "path": "disabilityCentres[6].location",
+          "value": "Thiruvananthapuram, Kerala",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00341",
+          "path": "disabilityCentres[6].remarks",
+          "value": "All disabilities; ophthalmology at Regional Institute of Ophthalmology",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-8",
+      "recordPath": "disabilityCentres[7]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00342",
+          "path": "disabilityCentres[7].name",
+          "value": "SMS Medical College",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00343",
+          "path": "disabilityCentres[7].location",
+          "value": "Jaipur, Rajasthan",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00344",
+          "path": "disabilityCentres[7].remarks",
+          "value": "As printed: \"All disabilities as mentioned in disability certificate except 1. Neurology – Genetic Testing 2. ENT – Speech & language Disability Testing Orthopaedics/PMR- Gonitometer Adult. Plumb Line, Hand Dynomometer, Laser\"",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-9",
+      "recordPath": "disabilityCentres[8]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00345",
+          "path": "disabilityCentres[8].name",
+          "value": "Govt. Medical College and Hospital, Sector 32",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00346",
+          "path": "disabilityCentres[8].location",
+          "value": "Chandigarh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00347",
+          "path": "disabilityCentres[8].remarks",
+          "value": "All disabilities as mentioned in disability certificate",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-10",
+      "recordPath": "disabilityCentres[9]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00348",
+          "path": "disabilityCentres[9].name",
+          "value": "Govt. Medical College, Agartala, State Disability Board",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00349",
+          "path": "disabilityCentres[9].location",
+          "value": "Agartala, Tripura",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00350",
+          "path": "disabilityCentres[9].remarks",
+          "value": "All disabilities as mentioned in disability certificate",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-11",
+      "recordPath": "disabilityCentres[10]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00351",
+          "path": "disabilityCentres[10].name",
+          "value": "Institute of Medical Sciences, Banaras Hindu University",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00352",
+          "path": "disabilityCentres[10].location",
+          "value": "Varanasi, Uttar Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00353",
+          "path": "disabilityCentres[10].remarks",
+          "value": "All disabilities except intellectual disability",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-12",
+      "recordPath": "disabilityCentres[11]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00354",
+          "path": "disabilityCentres[11].name",
+          "value": "Ali Yavar Jung National Institute of Speech and Hearing Disabilities, Bandra",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00355",
+          "path": "disabilityCentres[11].location",
+          "value": "Mumbai, Maharashtra",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00356",
+          "path": "disabilityCentres[11].remarks",
+          "value": "Hearing disabilities only",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-13",
+      "recordPath": "disabilityCentres[12]",
+      "sourcePages": [
+        19
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00357",
+          "path": "disabilityCentres[12].name",
+          "value": "AIIMS Nagpur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00358",
+          "path": "disabilityCentres[12].location",
+          "value": "Nagpur, Maharashtra",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00359",
+          "path": "disabilityCentres[12].remarks",
+          "value": "All disabilities as mentioned in disability certificate",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-14",
+      "recordPath": "disabilityCentres[13]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00360",
+          "path": "disabilityCentres[13].name",
+          "value": "Atal Bihari Vajpayee Institute of Medical Sciences & RML Hospital (ABVIMS & RMLH)",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00361",
+          "path": "disabilityCentres[13].location",
+          "value": "New Delhi",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00362",
+          "path": "disabilityCentres[13].remarks",
+          "value": "As printed: \"All disabilities as mentioned in disability certificate except ENT for visual disability: Candidates who use LVAs may bring their own LVAs which can be checked.\"",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-15",
+      "recordPath": "disabilityCentres[14]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00363",
+          "path": "disabilityCentres[14].name",
+          "value": "Lady Hardinge Medical College & Associated Hospitals (LHMC)",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00364",
+          "path": "disabilityCentres[14].location",
+          "value": "New Delhi",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00365",
+          "path": "disabilityCentres[14].remarks",
+          "value": "All disabilities as mentioned in disability certificate",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-16",
+      "recordPath": "disabilityCentres[15]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00366",
+          "path": "disabilityCentres[15].name",
+          "value": "All India Institute of Speech and Hearing (AIISH)",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00367",
+          "path": "disabilityCentres[15].location",
+          "value": "Mysuru, Karnataka",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00368",
+          "path": "disabilityCentres[15].remarks",
+          "value": "Speech & hearing disabilities only",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-17",
+      "recordPath": "disabilityCentres[16]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00369",
+          "path": "disabilityCentres[16].name",
+          "value": "Uttar Pradesh University of Medical Sciences, Saifai, Etawah",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00370",
+          "path": "disabilityCentres[16].location",
+          "value": "Uttar Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00371",
+          "path": "disabilityCentres[16].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-18",
+      "recordPath": "disabilityCentres[17]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00372",
+          "path": "disabilityCentres[17].name",
+          "value": "King George Medical University, Lucknow",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00373",
+          "path": "disabilityCentres[17].location",
+          "value": "Uttar Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00374",
+          "path": "disabilityCentres[17].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-19",
+      "recordPath": "disabilityCentres[18]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00375",
+          "path": "disabilityCentres[18].name",
+          "value": "Civil Hospital, Ahmedabad",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00376",
+          "path": "disabilityCentres[18].location",
+          "value": "Gujarat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00377",
+          "path": "disabilityCentres[18].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-20",
+      "recordPath": "disabilityCentres[19]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00378",
+          "path": "disabilityCentres[19].name",
+          "value": "New Civil Hospital, Surat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00379",
+          "path": "disabilityCentres[19].location",
+          "value": "Gujarat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00380",
+          "path": "disabilityCentres[19].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-21",
+      "recordPath": "disabilityCentres[20]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00381",
+          "path": "disabilityCentres[20].name",
+          "value": "PDU Hospital, Rajkot",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00382",
+          "path": "disabilityCentres[20].location",
+          "value": "Gujarat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00383",
+          "path": "disabilityCentres[20].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-22",
+      "recordPath": "disabilityCentres[21]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00384",
+          "path": "disabilityCentres[21].name",
+          "value": "Assam Medical College, Dibrugarh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00385",
+          "path": "disabilityCentres[21].location",
+          "value": "Assam",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00386",
+          "path": "disabilityCentres[21].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-23",
+      "recordPath": "disabilityCentres[22]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00387",
+          "path": "disabilityCentres[22].name",
+          "value": "Gauhati Medical College, Guwahati",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00388",
+          "path": "disabilityCentres[22].location",
+          "value": "Assam",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00389",
+          "path": "disabilityCentres[22].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-24",
+      "recordPath": "disabilityCentres[23]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00390",
+          "path": "disabilityCentres[23].name",
+          "value": "Silchar Medical College, Silchar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00391",
+          "path": "disabilityCentres[23].location",
+          "value": "Assam",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00392",
+          "path": "disabilityCentres[23].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-25",
+      "recordPath": "disabilityCentres[24]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00393",
+          "path": "disabilityCentres[24].name",
+          "value": "Madurai Medical College & Govt. Rajaji Hospital, Madurai",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00394",
+          "path": "disabilityCentres[24].location",
+          "value": "Tamil Nadu",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00395",
+          "path": "disabilityCentres[24].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-26",
+      "recordPath": "disabilityCentres[25]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00396",
+          "path": "disabilityCentres[25].name",
+          "value": "Coimbatore Medical College Hospital",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00397",
+          "path": "disabilityCentres[25].location",
+          "value": "Tamil Nadu",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00398",
+          "path": "disabilityCentres[25].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-27",
+      "recordPath": "disabilityCentres[26]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00399",
+          "path": "disabilityCentres[26].name",
+          "value": "Thanjavur Medical College",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00400",
+          "path": "disabilityCentres[26].location",
+          "value": "Tamil Nadu",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00401",
+          "path": "disabilityCentres[26].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-28",
+      "recordPath": "disabilityCentres[27]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00402",
+          "path": "disabilityCentres[27].name",
+          "value": "Zoram Medical College & Hospital, Falkawn",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00403",
+          "path": "disabilityCentres[27].location",
+          "value": "Mizoram",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00404",
+          "path": "disabilityCentres[27].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-29",
+      "recordPath": "disabilityCentres[28]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00405",
+          "path": "disabilityCentres[28].name",
+          "value": "Dr Sushila Tiwari Memorial Government Hospital (Government Medical College, Haldwani)",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00406",
+          "path": "disabilityCentres[28].location",
+          "value": "Uttarakhand",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00407",
+          "path": "disabilityCentres[28].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-30",
+      "recordPath": "disabilityCentres[29]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00408",
+          "path": "disabilityCentres[29].name",
+          "value": "Indira Gandhi Medical College & Hospital, Shimla",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00409",
+          "path": "disabilityCentres[29].location",
+          "value": "Himachal Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00410",
+          "path": "disabilityCentres[29].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-31",
+      "recordPath": "disabilityCentres[30]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00411",
+          "path": "disabilityCentres[30].name",
+          "value": "Dr. Rajendra Prasad Govt. Medical College & Hospital, Kangra at Tanda",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00412",
+          "path": "disabilityCentres[30].location",
+          "value": "Himachal Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00413",
+          "path": "disabilityCentres[30].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-32",
+      "recordPath": "disabilityCentres[31]",
+      "sourcePages": [
+        20
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00414",
+          "path": "disabilityCentres[31].name",
+          "value": "Government Doon Medical College, Dehradun",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00415",
+          "path": "disabilityCentres[31].location",
+          "value": "Uttarakhand",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00416",
+          "path": "disabilityCentres[31].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-33",
+      "recordPath": "disabilityCentres[32]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00417",
+          "path": "disabilityCentres[32].name",
+          "value": "Pt. BD Sharma Post Graduate Institute of Medical Sciences, Rohtak",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00418",
+          "path": "disabilityCentres[32].location",
+          "value": "Haryana",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00419",
+          "path": "disabilityCentres[32].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-34",
+      "recordPath": "disabilityCentres[33]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00420",
+          "path": "disabilityCentres[33].name",
+          "value": "AIIMS Bilaspur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00421",
+          "path": "disabilityCentres[33].location",
+          "value": "Himachal Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00422",
+          "path": "disabilityCentres[33].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-35",
+      "recordPath": "disabilityCentres[34]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00423",
+          "path": "disabilityCentres[34].name",
+          "value": "All India Institute of Medical Sciences, Raipur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00424",
+          "path": "disabilityCentres[34].location",
+          "value": "Chhattisgarh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00425",
+          "path": "disabilityCentres[34].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-36",
+      "recordPath": "disabilityCentres[35]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00426",
+          "path": "disabilityCentres[35].name",
+          "value": "Pt. Jawahar Lal Nehru Memorial Medical College, Raipur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00427",
+          "path": "disabilityCentres[35].location",
+          "value": "Chhattisgarh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00428",
+          "path": "disabilityCentres[35].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-37",
+      "recordPath": "disabilityCentres[36]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00429",
+          "path": "disabilityCentres[36].name",
+          "value": "Chhattisgarh Institute of Medical Sciences, Bilaspur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00430",
+          "path": "disabilityCentres[36].location",
+          "value": "Chhattisgarh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00431",
+          "path": "disabilityCentres[36].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-38",
+      "recordPath": "disabilityCentres[37]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00432",
+          "path": "disabilityCentres[37].name",
+          "value": "Late Shri Baliram Kashyap Memorial Medical College, Jagdalpur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00433",
+          "path": "disabilityCentres[37].location",
+          "value": "Chhattisgarh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00434",
+          "path": "disabilityCentres[37].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-39",
+      "recordPath": "disabilityCentres[38]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00435",
+          "path": "disabilityCentres[38].name",
+          "value": "Bangalore Medical College and Research Institute (BMCRI), Bengaluru",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00436",
+          "path": "disabilityCentres[38].location",
+          "value": "Karnataka",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00437",
+          "path": "disabilityCentres[38].remarks",
+          "value": "State capital centre",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-40",
+      "recordPath": "disabilityCentres[39]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00438",
+          "path": "disabilityCentres[39].name",
+          "value": "Mysore Medical College and Research Institute (MMCRI), Mysuru",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00439",
+          "path": "disabilityCentres[39].location",
+          "value": "Karnataka",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00440",
+          "path": "disabilityCentres[39].remarks",
+          "value": "Regional centre (South zone)",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-41",
+      "recordPath": "disabilityCentres[40]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00441",
+          "path": "disabilityCentres[40].name",
+          "value": "Karnataka Institute of Medical Sciences (KIMS), Hubballi",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00442",
+          "path": "disabilityCentres[40].location",
+          "value": "Karnataka",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00443",
+          "path": "disabilityCentres[40].remarks",
+          "value": "Regional centre (Central zone)",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-42",
+      "recordPath": "disabilityCentres[41]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00444",
+          "path": "disabilityCentres[41].name",
+          "value": "Belagavi Institute of Medical Sciences (BIMS), Belagavi",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00445",
+          "path": "disabilityCentres[41].location",
+          "value": "Karnataka",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00446",
+          "path": "disabilityCentres[41].remarks",
+          "value": "Regional centre (West zone)",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-43",
+      "recordPath": "disabilityCentres[42]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00447",
+          "path": "disabilityCentres[42].name",
+          "value": "Gulbarga Institute of Medical Sciences (GIMS), Kalaburagi",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00448",
+          "path": "disabilityCentres[42].location",
+          "value": "Karnataka",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00449",
+          "path": "disabilityCentres[42].remarks",
+          "value": "Regional centre (North-East zone)",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-44",
+      "recordPath": "disabilityCentres[43]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00450",
+          "path": "disabilityCentres[43].name",
+          "value": "Rajendra Institute of Medical Sciences (RIMS), Ranchi",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00451",
+          "path": "disabilityCentres[43].location",
+          "value": "Jharkhand",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00452",
+          "path": "disabilityCentres[43].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-45",
+      "recordPath": "disabilityCentres[44]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00453",
+          "path": "disabilityCentres[44].name",
+          "value": "Mahatma Gandhi Memorial Medical College, Jamshedpur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00454",
+          "path": "disabilityCentres[44].location",
+          "value": "Jharkhand",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00455",
+          "path": "disabilityCentres[44].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-46",
+      "recordPath": "disabilityCentres[45]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00456",
+          "path": "disabilityCentres[45].name",
+          "value": "SSG Hospital, Vadodara",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00457",
+          "path": "disabilityCentres[45].location",
+          "value": "Gujarat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00458",
+          "path": "disabilityCentres[45].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-47",
+      "recordPath": "disabilityCentres[46]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00459",
+          "path": "disabilityCentres[46].name",
+          "value": "G.G. Hospital, Jamnagar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00460",
+          "path": "disabilityCentres[46].location",
+          "value": "Gujarat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00461",
+          "path": "disabilityCentres[46].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-48",
+      "recordPath": "disabilityCentres[47]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00462",
+          "path": "disabilityCentres[47].name",
+          "value": "Sir T. Hospital, Bhavnagar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00463",
+          "path": "disabilityCentres[47].location",
+          "value": "Gujarat",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00464",
+          "path": "disabilityCentres[47].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-49",
+      "recordPath": "disabilityCentres[48]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00465",
+          "path": "disabilityCentres[48].name",
+          "value": "PMCH, Patna",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00466",
+          "path": "disabilityCentres[48].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00467",
+          "path": "disabilityCentres[48].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-50",
+      "recordPath": "disabilityCentres[49]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00468",
+          "path": "disabilityCentres[49].name",
+          "value": "NMCH, Patna",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00469",
+          "path": "disabilityCentres[49].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00470",
+          "path": "disabilityCentres[49].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-51",
+      "recordPath": "disabilityCentres[50]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00471",
+          "path": "disabilityCentres[50].name",
+          "value": "IGIMS, Patna",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00472",
+          "path": "disabilityCentres[50].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00473",
+          "path": "disabilityCentres[50].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-52",
+      "recordPath": "disabilityCentres[51]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00474",
+          "path": "disabilityCentres[51].name",
+          "value": "DMCH, Darbhanga",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00475",
+          "path": "disabilityCentres[51].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00476",
+          "path": "disabilityCentres[51].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-53",
+      "recordPath": "disabilityCentres[52]",
+      "sourcePages": [
+        21
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00477",
+          "path": "disabilityCentres[52].name",
+          "value": "JLNMCH, Bhagalpur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00478",
+          "path": "disabilityCentres[52].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00479",
+          "path": "disabilityCentres[52].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-54",
+      "recordPath": "disabilityCentres[53]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00480",
+          "path": "disabilityCentres[53].name",
+          "value": "ANMMCH, Gaya Ji",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00481",
+          "path": "disabilityCentres[53].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00482",
+          "path": "disabilityCentres[53].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-55",
+      "recordPath": "disabilityCentres[54]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00483",
+          "path": "disabilityCentres[54].name",
+          "value": "SKMCH, Muzaffarpur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00484",
+          "path": "disabilityCentres[54].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00485",
+          "path": "disabilityCentres[54].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-56",
+      "recordPath": "disabilityCentres[55]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00486",
+          "path": "disabilityCentres[55].name",
+          "value": "GMC, Bettiah",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00487",
+          "path": "disabilityCentres[55].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00488",
+          "path": "disabilityCentres[55].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-57",
+      "recordPath": "disabilityCentres[56]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00489",
+          "path": "disabilityCentres[56].name",
+          "value": "BMIMS, Pawapuri, Nalanda",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00490",
+          "path": "disabilityCentres[56].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00491",
+          "path": "disabilityCentres[56].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-58",
+      "recordPath": "disabilityCentres[57]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00492",
+          "path": "disabilityCentres[57].name",
+          "value": "JKTMC&H, Madhepura",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00493",
+          "path": "disabilityCentres[57].location",
+          "value": "Bihar",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00494",
+          "path": "disabilityCentres[57].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-59",
+      "recordPath": "disabilityCentres[58]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00495",
+          "path": "disabilityCentres[58].name",
+          "value": "Andhra Medical College / King George Hospital, Visakhapatnam",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00496",
+          "path": "disabilityCentres[58].location",
+          "value": "Andhra Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00497",
+          "path": "disabilityCentres[58].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-60",
+      "recordPath": "disabilityCentres[59]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00498",
+          "path": "disabilityCentres[59].name",
+          "value": "Guntur Medical College / Govt. General Hospital, Guntur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00499",
+          "path": "disabilityCentres[59].location",
+          "value": "Andhra Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00500",
+          "path": "disabilityCentres[59].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-61",
+      "recordPath": "disabilityCentres[60]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00501",
+          "path": "disabilityCentres[60].name",
+          "value": "Kurnool Medical College / Govt. General Hospital, Kurnool",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00502",
+          "path": "disabilityCentres[60].location",
+          "value": "Andhra Pradesh",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00503",
+          "path": "disabilityCentres[60].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "dis-62",
+      "recordPath": "disabilityCentres[61]",
+      "sourcePages": [
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00504",
+          "path": "disabilityCentres[61].name",
+          "value": "RIMS, Imphal",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00505",
+          "path": "disabilityCentres[61].location",
+          "value": "Manipur",
+          "surface": "disability boards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00506",
+          "path": "disabilityCentres[61].remarks",
+          "value": "—",
+          "surface": "disability boards"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-1",
+      "recordPath": "annexures[0]",
+      "sourcePages": [
+        17,
+        18
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00507",
+          "path": "annexures[0].title",
+          "value": "Annexure-1: Nodal centres for private college admission",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00508",
+          "path": "annexures[0].description",
+          "value": "Which government college acts as the admission centre for each private medical and dental college.",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-2",
+      "recordPath": "annexures[1]",
+      "sourcePages": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00509",
+          "path": "annexures[1].title",
+          "value": "Annexure-2: Disability certification centres",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00510",
+          "path": "annexures[1].description",
+          "value": "62 centres whose PwD certificates (NMC norms) are accepted.",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-3",
+      "recordPath": "annexures[2]",
+      "sourcePages": [
+        23
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00511",
+          "path": "annexures[2].title",
+          "value": "Annexure-3: EWS certificate format",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00512",
+          "path": "annexures[2].description",
+          "value": "UP Government income & asset certificate format (in Hindi) for EWS candidates.",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "annex-4",
+      "recordPath": "annexures[3]",
+      "sourcePages": [
+        24,
+        25
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00513",
+          "path": "annexures[3].title",
+          "value": "Annexure-4: Service bond",
+          "surface": "forms/annexures expandable"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00514",
+          "path": "annexures[3].description",
+          "value": "Agreement bond for 2 years of government service after PG (₹40 lakh for a degree, ₹20 lakh for a diploma or MDS).",
+          "surface": "forms/annexures expandable"
+        }
+      ]
+    },
+    {
+      "itemId": "date-cert-ews-obc",
+      "recordPath": "importantDates[0]",
+      "sourcePages": [
+        6
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00515",
+          "path": "importantDates[0].label",
+          "value": "EWS and OBC certificates: issued on or after",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00516",
+          "path": "importantDates[0].date",
+          "value": "2026-04-01",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "date-internship-mds",
+      "recordPath": "importantDates[1]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00517",
+          "path": "importantDates[1].label",
+          "value": "Internship completion deadline (MDS)",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00518",
+          "path": "importantDates[1].date",
+          "value": "2026-05-31",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "date-internship-clinical",
+      "recordPath": "importantDates[2]",
+      "sourcePages": [
+        4
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00519",
+          "path": "importantDates[2].label",
+          "value": "Internship completion deadline (MD/MS/Diploma/DNB)",
+          "surface": "important dates/summary/deadline"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00520",
+          "path": "importantDates[2].date",
+          "value": "2026-09-30",
+          "surface": "important dates/summary/deadline"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-schedule",
+      "recordPath": "gaps[0]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00521",
+          "path": "gaps[0].title",
+          "value": "Counselling schedule",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00522",
+          "path": "gaps[0].detail",
+          "value": "The brochure has no dates for registration, choice filling, results or reporting. Check upneet.gov.in for the schedule notice.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-seat-matrix",
+      "recordPath": "gaps[1]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00523",
+          "path": "gaps[1].title",
+          "value": "Seat matrix by speciality",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00524",
+          "path": "gaps[1].detail",
+          "value": "The number of seats per college and speciality isn't in the brochure. It's published separately.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-cutoffs",
+      "recordPath": "gaps[2]",
+      "sourcePages": [],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00525",
+          "path": "gaps[2].title",
+          "value": "Cutoff ranks",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00526",
+          "path": "gaps[2].detail",
+          "value": "Previous-year closing ranks aren't in the brochure, so we can't predict college or speciality chances from your rank yet.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-tuition",
+      "recordPath": "gaps[3]",
+      "sourcePages": [
+        12
+      ],
+      "seats": [
+        "management"
+      ],
+      "context": {
+        "seats": [
+          "management"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00527",
+          "path": "gaps[3].title",
+          "value": "Private college tuition fees",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00528",
+          "path": "gaps[3].detail",
+          "value": "The brochure says private colleges charge the government-fixed tuition fee (minority colleges charge their own prescribed fee) but doesn't list the amounts.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-govt-college-list",
+      "recordPath": "gaps[4]",
+      "sourcePages": [],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00529",
+          "path": "gaps[4].title",
+          "value": "List of government colleges and seats",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00530",
+          "path": "gaps[4].detail",
+          "value": "Only private colleges (via nodal centres) are listed. Government colleges and their PG seats aren't.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-refund-eligibility",
+      "recordPath": "gaps[5]",
+      "sourcePages": [
+        12
+      ],
+      "seats": null,
+      "context": {},
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00531",
+          "path": "gaps[5].title",
+          "value": "Who gets the deposit back",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00532",
+          "path": "gaps[5].detail",
+          "value": "The brochure says security money is refunded to \"eligible candidates\" after all rounds, but doesn't define who is eligible beyond the resignation rules.",
+          "surface": "gap cards"
+        }
+      ]
+    },
+    {
+      "itemId": "gap-government-fees",
+      "recordPath": "gaps[6]",
+      "sourcePages": [
+        12
+      ],
+      "seats": [
+        "government"
+      ],
+      "context": {
+        "seats": [
+          "government"
+        ]
+      },
+      "fields": [
+        {
+          "fieldId": "uttar-pradesh-2026:F00533",
+          "path": "gaps[6].title",
+          "value": "Government college fees",
+          "surface": "gap cards"
+        },
+        {
+          "fieldId": "uttar-pradesh-2026:F00534",
+          "path": "gaps[6].detail",
+          "value": "You pay fees at the government college at admission, but the brochure doesn't give the amounts. Check with your allotted college.",
+          "surface": "gap cards"
+        }
+      ]
+    }
+  ],
+  "fieldCount": 534,
+  "derivedSurfaces": [
+    "eligibility headlines/reasons/categories/quota/sector/courses and document applicability",
+    "deposit recommendation and upfront total",
+    "reservation complement and horizontal/vertical labels",
+    "counts of checklist/centres/rows",
+    "next deadline, stage status and IST urgency/countdown"
+  ],
+  "uiTemplates": [
+    {
+      "id": "gap-section-intro",
+      "literal": "These are published separately, so check the official website for them.",
+      "condition": "state gaps section"
+    },
+    {
+      "id": "reservation-none",
+      "literal": "This year's documents don't state the reservation percentages. Check the official website before choice filling.",
+      "condition": "reservation.policy null"
+    },
+    {
+      "id": "reservation-classification",
+      "literal": "Vertical reservation. Horizontal: <policy horizontal categories/percentages>.",
+      "condition": "visible policy"
+    },
+    {
+      "id": "bond-penalty-caption",
+      "literal": "Penalty if you don't serve: <course> <bond amount>",
+      "condition": "visible serviceBond.bond"
+    },
+    {
+      "id": "bond-none",
+      "literal": "These documents don't describe a service bond. Check the official website for this year's bond rules.",
+      "condition": "serviceBond.bond null"
+    },
+    {
+      "id": "resignation-generalisation",
+      "literal": "The later you leave, the more you lose.",
+      "condition": "nonempty resignation ladder"
+    },
+    {
+      "id": "help-centre-operational-instruction",
+      "literal": "Book an appointment while printing your registration slip, then visit with originals and one self-attested photocopy set.",
+      "condition": "helpCentres.length>0"
+    },
+    {
+      "id": "nodal-centre-instruction",
+      "literal": "If you're allotted a private college, you take admission at its nodal centre.",
+      "condition": "nodalCentres.length>0"
+    },
+    {
+      "id": "eligibility-category-pwd",
+      "literal": "You'll be counted as <effective category> + PwD when profile.pwd is true.",
+      "condition": "eligible/restricted verdict"
+    },
+    {
+      "id": "eligibility-no-exclusion",
+      "literal": "Nothing excluded",
+      "condition": "eligible/restricted verdict and excludedCourses empty"
+    },
+    {
+      "id": "deposit-recommendation",
+      "literal": "Recommended for you: covers every college open to you",
+      "condition": "recommended deposit"
+    },
+    {
+      "id": "disability-centre-count",
+      "literal": "Designated disability certification centres (<array length>)",
+      "condition": "disabilityCentres.length>0"
+    }
+  ]
+}

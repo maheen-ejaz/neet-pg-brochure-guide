@@ -1,0 +1,19 @@
+{
+  "owner": "01a11ffa-4cd5-76d2-aebe-171d114e9a1f",
+  "canonicalRepo": "/Users/maheenejaz/Developer/neet-pg-brochure",
+  "ownedWorktree": "/Users/maheenejaz/Developer/neet-pg-fact-audit",
+  "branch": "codex/audit-rendered-facts",
+  "HEAD": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "fetchedDefault": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "fetchedAtUTC": "2026-10-09T12:30:53Z",
+  "scope": "All five integrated state guides +MCC, only factual content exposed in app; separately reconcile97 email uncertainties.",
+  "integrationBase": "120baf771d000994f3313da22dad4c64250e0b3e",
+  "integrationRefreshedAtUTC": "2026-10-09T13:32:20Z",
+  "acceptanceCriteria": [
+    "2,906 frozen inventory fields have unique per-claim audit coverage",
+    "All97 email questions have individually assessed evidence and a stated remaining authority/document need",
+    "Corrected references match source pages; UI counts follow seat-view filtering",
+    "Printed opening/closing times control deadline status; incomplete profiles cannot receive definitive eligibility or deposit advice",
+    "Source PDFs, human verified flags, draft gates, localhost-only hold and other tasks’ services are preserved"
+  ]
+}

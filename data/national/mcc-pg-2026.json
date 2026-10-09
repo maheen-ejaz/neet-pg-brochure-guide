@@ -331,7 +331,7 @@
         4
       ],
       "verified": false,
-      "title": "All times are MCC server time",
+      "title": "Times are printed as Server Time",
       "detail": "Registration closes at 12:00 noon, but payment stays open until 3:00 PM the same day. In Rounds 1 to 3, choice locking opens at 4:00 PM the day before choice filling ends."
     },
     {
@@ -356,11 +356,12 @@
       "id": "note-session-start",
       "sourcePages": [
         2,
+        3,
         4
       ],
       "verified": false,
       "title": "The session starts during Round 2 reporting",
-      "detail": "The PG academic session begins on 20th November 2026, while Round 2 reporting runs until 23rd November 2026. By these dates, Round 3 and stray-round candidates join after classes have begun."
+      "detail": "The PG academic session begins on 20th November 2026, while Round 2 reporting runs until 23rd November 2026. The Round 3 and stray-round reporting windows fall after this printed session-start date."
     },
     {
       "id": "note-weekends",

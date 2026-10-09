@@ -479,7 +479,19 @@
           "government"
         ]
       }
-    ]
+    ],
+    "manualReview": {
+      "id": "uttar-pradesh-manual-eligibility",
+      "sourcePages": [
+        4,
+        5,
+        6
+      ],
+      "verified": false,
+      "title": "Confirm qualification, college and category requirements",
+      "detail": "Your profile does not establish NEET qualification, the exact qualifying-college route, foreign-graduate requirements or the reservation certificate rules. The phrase 'candidates of other states' is not defined as domicile in the brochure. Confirm your route and documents with the counselling authority.",
+      "severity": "warning"
+    }
   },
   "reservation": {
     "policy": {

@@ -165,7 +165,7 @@ export function StatePage() {
       <CollegesSection b={b} profile={profile} />
       <HelpSection b={b} />
       <Section id="gaps" kicker="Be aware" title="Not covered in this brochure" collapsible summary={`${b.gaps.length} things to check on the official website, plus forms and source documents`}>
-        <p className="mb-4 text-sm text-soft">These are published separately, so check the official website for them.</p>
+        <p className="mb-4 text-sm text-soft">Check the official website or contact the counselling authority about the points below.</p>
         <div className="grid gap-3 sm:grid-cols-2">
           {seatOrder(seatView, b.gaps).map((g) => (
             <div key={g.id} className="rounded-lg border border-dashed border-line-strong p-4">
@@ -308,7 +308,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
               </Fact>
             )}
             <Fact label="You'll be counted as">{verdict.effectiveCategory ? CATEGORY_NAMES[verdict.effectiveCategory] : "—"}{profile.pwd ? " + PwD" : ""}</Fact>
-            <Fact label="Not open to you">{verdict.excludedCourses.length ? `${verdict.excludedCourses.join(", ")} (state quota)` : "Nothing excluded"}</Fact>
+            <Fact label="Not open to you">{verdict.excludedCourses.length ? `${verdict.excludedCourses.join(", ")} (state quota)` : "No course exclusions found in the automated checks"}</Fact>
           </div>
         )}
         {verdict.quotas && b.eligibility.quotaTerms && (
@@ -467,7 +467,7 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
                   <div>
                     <p className="font-semibold text-ink">{t.label} <SeatChip seats={t.seats} /></p>
                     <p className={`text-xs ${rec ? "text-body" : "text-soft"}`}>
-                      {rec ? "Recommended for you: covers every college open to you" : alt ? `Cheaper option: ${alt.covers.join(" ")} colleges only` : irrelevant ? "Doesn't cover the colleges open to you" : " "}
+                      {rec ? "Covers the college sectors checked for this profile" : alt ? `Cheaper option: ${alt.covers.join(" ")} colleges only` : irrelevant ? "Doesn't cover the colleges open to you" : " "}
                     </p>
                   </div>
                   <span className={`text-lg font-semibold tabular-nums ${rec ? "text-brand-strong" : "text-ink"}`}>{inrShort(t.amountInr)}</span>
@@ -519,7 +519,10 @@ function StepsSection({ b }: { b: Brochure }) {
         {dates.length === 0 ? (
           <p className="text-sm">This brochure doesn't publish dates. Check the schedule notice on {b.meta.officialWebsites[0]?.replace(/^https?:\/\//, "")}.</p>
         ) : (
-          <ImportantDates dates={dates} />
+          <>
+            <p className="mb-2 text-xs text-soft">App clock: IST. Confirm server-time deadlines on the official portal.</p>
+            <ImportantDates dates={dates} />
+          </>
         )}
       </div>
     </Section>
@@ -627,14 +630,15 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
   const policy = b.reservation.policy && show(b.reservation.policy) ? b.reservation.policy : null;
   const conversion = b.reservation.conversion && show(b.reservation.conversion) ? b.reservation.conversion : null;
   const policyHidden = !!b.reservation.policy && !policy;
+  const category = verdict && (verdict.status === "eligible" || verdict.status === "restricted") ? verdict.effectiveCategory : null;
   const explicitOpenShare = policy?.vertical.some((v) => /\b(open competition|general merit|unreserved|UR)\b/i.test(v.category));
   const bars = policy
-    ? [...policy.vertical, ...(!explicitOpenShare ? [{ category: "UR (open)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }] : [])]
+    ? [...policy.vertical, ...(!explicitOpenShare ? [{ category: "UR (calculated remainder)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }] : [])]
     : [];
   return (
-    <Section id="reservation" kicker="Reservation" title="How seats are reserved" collapsible summary={verdict?.effectiveCategory ? `You're counted as ${verdict.effectiveCategory}. Category shares, certificates and seat conversion.` : "Category shares, certificates and seat conversion."}>
-      {verdict?.effectiveCategory && (
-        <p className="mb-2 text-sm">You are counted as <strong>{verdict.effectiveCategory}</strong> in this state.</p>
+    <Section id="reservation" kicker="Reservation" title="How seats are reserved" collapsible summary={category ? `You're counted as ${category}. Category shares, certificates and seat conversion.` : "Category shares, certificates and seat conversion."}>
+      {category && (
+        <p className="mb-2 text-sm">You are counted as <strong>{category}</strong> in this state.</p>
       )}
       {policyHidden ? (
         <p className="rounded-lg border border-dashed border-line p-3 text-sm">
@@ -651,7 +655,7 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
           </div>
           <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
             {bars.map((v, i) => {
-              const mine = !!verdict?.effectiveCategory && v.category.startsWith(verdict.effectiveCategory);
+              const mine = !!category && v.category.startsWith(category);
               return (
                 <li key={v.category} className={`flex items-center gap-1.5 ${mine ? "font-semibold text-ink" : ""}`}>
                   <span aria-hidden className="h-2.5 w-2.5 shrink-0 rounded-sm" style={{ background: BAR_COLOURS[i % BAR_COLOURS.length] }} />
@@ -664,7 +668,7 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
         </>
       ) : (
         <p className="rounded-lg border border-dashed border-line p-3 text-sm">
-          This year's documents don't state the reservation percentages. Check the official website before choice filling.
+          This guide does not provide a percentage breakdown for these seats. Check any cited reservation rules and official notices before choice filling.
         </p>
       )}
       <div className="mt-5 grid gap-4 md:grid-cols-2">
@@ -697,9 +701,9 @@ function ResignationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
   return (
     <Section id="resignation" kicker="Exit costs" title="What resigning a seat costs you">
       {ladder.length === 0 ? (
-        <p className="mb-4 rounded-lg border border-dashed border-line p-3 text-sm">This year's documents don't set out resignation penalties. Check the official website before you resign a seat.</p>
+        <p className="mb-4 rounded-lg border border-dashed border-line p-3 text-sm">No resignation ladder is included for this view. Check the official notices or contact the counselling authority before resigning a seat.</p>
       ) : (
-        <p className="mb-4 text-sm text-soft">The later you leave, the more you lose.{verdict ? " Showing the stages for the colleges open to you." : ""}</p>
+        <p className="mb-4 text-sm text-soft">Check the consequences for your round and seat type before resigning.</p>
       )}
       <ol className="space-y-2">
         {ladder.map((l, i) => {
@@ -744,7 +748,7 @@ function BondSection({ b }: { b: Brochure }) {
             </div>
             {bond.amounts.map((a) => (
               <div key={a.course} className="rounded-lg border border-line p-4">
-                <p className="text-xs text-soft">Penalty if you don't serve: {a.course}</p>
+                <p className="text-xs text-soft">Bond amount: {a.course}</p>
                 <p className="font-heading text-3xl font-semibold tracking-tight text-ink tabular-nums">{inrShort(a.amountInr)}</p>
               </div>
             ))}
@@ -752,7 +756,7 @@ function BondSection({ b }: { b: Brochure }) {
           <p className="mt-3 text-sm"><strong>Where you'd serve:</strong> <Marked text={bond.placeOfService} /></p>
         </>
       ) : (
-        <p className="rounded-lg border border-dashed border-line p-3 text-sm">These documents don't describe a service bond. Check the official website for this year's bond rules.</p>
+        <p className="rounded-lg border border-dashed border-line p-3 text-sm">{b.serviceBond.rules.length ? "Read the programme-specific bond rules below." : "No bond summary is included in this guide. Check the official bond rules before accepting a seat."}</p>
       )}
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {order(b.serviceBond.rules).map((r) => <RuleCard key={r.id} {...r} pages={r.sourcePages} />)}
@@ -771,10 +775,11 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
     .filter(show)
     .map((n) => ({ n, colleges: (dental ? n.privateDental : n.privateMedical).filter((c) => c.toLowerCase().includes(needle) || n.centre.toLowerCase().includes(needle)) }))
     .filter((r) => r.colleges.length > 0);
-  const total = b.nodalCentres.reduce((s, n) => s + (dental ? n.privateDental : n.privateMedical).length, 0);
+  const visibleBoards = b.disabilityCentres.filter(show);
+  const total = b.nodalCentres.filter(show).reduce((s, n) => s + (dental ? n.privateDental : n.privateMedical).length, 0);
   if (b.nodalCentres.length === 0 && b.disabilityCentres.length === 0) return null;
   return (
-    <Section collapsible summary={b.nodalCentres.length ? "Which centre to report to for each private college" : "Where PwD candidates get certified"} id={b.helpCentres.length ? "pwd-centres" : "colleges"} kicker={b.nodalCentres.length ? "Where to report" : "PwD candidates"} title={b.nodalCentres.length ? `Private ${dental ? "dental" : "medical"} colleges & their admission centres` : "Disability medical boards"}>
+    <Section collapsible summary={b.nodalCentres.length ? "Which centre to report to for each private college" : "Disability board details"} id={b.helpCentres.length ? "pwd-centres" : "colleges"} kicker={b.nodalCentres.length ? "Where to report" : "PwD candidates"} title={b.nodalCentres.length ? `Private ${dental ? "dental" : "medical"} colleges & their admission centres` : "Disability medical boards"}>
       {b.nodalCentres.length > 0 && <>
       <p className="mb-3 text-sm text-soft">
         If you're allotted a private college, you take admission at its nodal centre. {total} colleges are listed.
@@ -796,14 +801,14 @@ function CollegesSection({ b, profile }: { b: Brochure; profile: Profile | null 
       {b.disabilityCentres.length > 0 && (
         <div className={b.nodalCentres.length ? "mt-6" : ""}>
           <button type="button" onClick={() => setShowPwd(!showPwd)} className="text-sm link" aria-expanded={showPwd || !!profile?.pwd}>
-            {showPwd || profile?.pwd ? "▾" : "▸"} Designated disability certification centres ({b.disabilityCentres.length})
+            {showPwd || profile?.pwd ? "▾" : "▸"} Disability assessment centres and boards ({visibleBoards.length} {visibleBoards.length === 1 ? "entry" : "entries"})
           </button>
           {(showPwd || profile?.pwd) && (
             <div className="mt-3 overflow-x-auto">
               <table className="w-full min-w-[520px] text-left text-sm">
                 <thead className="text-xs text-soft"><tr><th className="py-1 pr-3">Centre</th><th className="pr-3">Location</th><th>Remarks</th></tr></thead>
                 <tbody>
-                  {b.disabilityCentres.filter(show).map((d) => (
+                  {visibleBoards.map((d) => (
                     <tr key={d.id} className="border-t border-line align-top">
                       <td className="py-1.5 pr-3 font-medium text-ink">{d.name}</td><td className="pr-3">{d.location}</td><td>{d.remarks}<Cite pages={d.sourcePages} /></td>
                     </tr>
@@ -824,8 +829,8 @@ function HelpCentresSection({ b }: { b: Brochure }) {
   const { show } = useSeatView();
   const rows = b.helpCentres.filter((c) => show(c) && (c.name + " " + c.address).toLowerCase().includes(needle));
   return (
-    <Section id="colleges" kicker="Where to go" title="Help centres for document verification" collapsible summary={`${b.helpCentres.length} centres; search by city`}>
-      <p className="mb-3 text-sm text-soft">Book an appointment while printing your registration slip, then visit with originals and one self-attested photocopy set.</p>
+    <Section id="colleges" kicker="Where to go" title="Help centres for document verification" collapsible summary={`${b.helpCentres.filter(show).length} centres in this seat view; search by city`}>
+      <p className="mb-3 text-sm text-soft">Check the cited verification instructions for appointments, originals and required copies.</p>
       <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search a city…" aria-label="Search help centres"
         className="mb-4 w-full rounded-lg border border-line-strong bg-surface px-3 py-2 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
       <ul className="grid gap-3 sm:grid-cols-2">

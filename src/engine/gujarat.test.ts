@@ -31,20 +31,20 @@ const check = (p: Partial<Profile>) => checkEligibility({ ...base, ...p }, gj);
 const outside = { mbbsState: "Karnataka" };
 
 describe("Gujarat 2026 eligibility", () => {
-  it("Gujarat-university graduate is eligible", () => {
-    expect(check({}).status).toBe("eligible");
+  it("Gujarat profile still needs university and qualification confirmation", () => {
+    expect(check({}).status).toBe("incomplete");
   });
 
-  it("outside-Gujarat MBBS with Gujarat 12th and birth is eligible", () => {
-    expect(check({ ...outside, domicileState: "Karnataka" }).status).toBe("eligible");
+  it("outside-Gujarat MBBS with Gujarat 12th and birth needs exact-route confirmation", () => {
+    expect(check({ ...outside, domicileState: "Karnataka" }).status).toBe("incomplete");
   });
 
-  it("outside-Gujarat MBBS with Gujarat 12th and domicile (born elsewhere) is eligible", () => {
-    expect(check({ ...outside, birthState: "Rajasthan" }).status).toBe("eligible");
+  it("outside-Gujarat MBBS with Gujarat 12th and domicile (born elsewhere) needs exact-route confirmation", () => {
+    expect(check({ ...outside, birthState: "Rajasthan" }).status).toBe("incomplete");
   });
 
-  it("foreign MBBS with Gujarat roots is eligible", () => {
-    expect(check({ mbbsState: ABROAD }).status).toBe("eligible");
+  it("foreign MBBS with Gujarat roots needs manual document confirmation", () => {
+    expect(check({ mbbsState: ABROAD }).status).toBe("incomplete");
   });
 
   it("outside-Gujarat MBBS with 12th outside Gujarat is ineligible", () => {
@@ -57,7 +57,7 @@ describe("Gujarat 2026 eligibility", () => {
 
   it("NRI without the Gujarat route is limited to NRI quota", () => {
     const v = check({ ...outside, schoolState: "Karnataka", nriLink: "parent" });
-    expect(v.status).toBe("restricted");
+    expect(v.status).toBe("incomplete");
     expect(v.quotas).toEqual(["NRI"]);
   });
 
@@ -84,7 +84,7 @@ describe("Gujarat 2026 eligibility", () => {
   it("Rule 4(4): only a prior admission through Gujarat counselling bars you", () => {
     expect(check({ priorAdmissionState: "Gujarat" }).status).toBe("ineligible");
     // Currently in a PG seat from another state's counselling isn't covered by Rule 4(4).
-    expect(check({ currentlyInPG: true, priorAdmissionState: "Maharashtra" }).status).toBe("eligible");
+    expect(check({ currentlyInPG: true, priorAdmissionState: "Maharashtra" }).status).toBe("incomplete");
   });
 
   it("in-service needs Gujarat's criteria (NOC), not just employment", () => {
@@ -98,8 +98,9 @@ describe("Gujarat 2026 eligibility", () => {
     expect(ids).toEqual(expect.arrayContaining(["doc-pwd", "doc-udid", "doc-pwbd-affidavits"]));
   });
 
-  it("everyone eligible pays the single ₹25,000 deposit", () => {
-    expect(adviseDeposit(check({}), gj).recommended?.amountInr).toBe(25000);
+  it("keeps the sourced deposit but suppresses advice when route-specific charges are unresolved", () => {
+    expect(gj.fees.securityDeposits[0].amountInr).toBe(25000);
+    expect(adviseDeposit(check({}), gj).recommended).toBeNull();
   });
 
   it("documents follow the profile", () => {

@@ -31,15 +31,15 @@ const check = (p: Partial<Profile>) => checkEligibility({ ...base, ...p }, ka);
 const ids = (p: Partial<Profile>) => check(p).reasons.filter((r) => r.match === "applies").map((r) => r.rule.id);
 
 describe("Karnataka 2026 eligibility", () => {
-  it("clause b (Karnataka BDS, 10 years of school in Karnataka) is fully eligible", () => {
+  it("clause b (Karnataka BDS, 10 years of school in Karnataka) matches a route but still needs manual confirmation", () => {
     const v = check({});
-    expect(v.status).toBe("eligible");
+    expect(v.status).toBe("incomplete");
     expect(v.quotas).toBeNull();
     expect(ids({})).toContain("elig-clause-b");
   });
 
-  it("clause c (BDS outside Karnataka, 10 years of school in Karnataka) is fully eligible", () => {
-    expect(check({ mbbsState: "Kerala" }).status).toBe("eligible");
+  it("clause c (BDS outside Karnataka, 10 years of school in Karnataka) matches a route but still needs manual confirmation", () => {
+    expect(check({ mbbsState: "Kerala" }).status).toBe("incomplete");
     expect(ids({ mbbsState: "Kerala" })).toContain("elig-clause-c");
   });
 

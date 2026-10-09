@@ -1,0 +1,78 @@
+{
+  "reviewer": "review_rendered_corrections",
+  "model": "gpt-6-luna",
+  "reasoning": "max",
+  "scope": "one isolated blind read-only review of changed data/source claims and app implementation after checks; no prior report/author-note access",
+  "result": "clear after corrections",
+  "reviewedDataSha256": {
+    "data/states/tamil-nadu-2026.json": "81a366fa6da2af46672a5c67353c63afb49c9f3d72647e671c4ef9ad1d8a7118",
+    "data/states/uttar-pradesh-2026.json": "d8f3830cf26a6fc2318f43a73a93f929ad5706f4b5ce02ae7039305c848562bb",
+    "data/states/gujarat-2026.json": "75ff19f4c6754cf5cd5d6ed53898f03c04d2d8b9aa63dfb6acac224153fc0e31",
+    "data/states/karnataka-2026.json": "db11f79ee8f02e87b4b13cb37c1768ce49912a9dce01ceb7dfa3ee53bb4aea44",
+    "data/national/mcc-pg-2026.json": "0344b5ef106139602305120ba9ec74b08afcc23e474359731838abd8291bb738"
+  },
+  "resolvedFindings": [
+    "Neutral disability label accommodates boards, appeal boards, assessment centres and the KEA examination location.",
+    "Karnataka EWS description cites fee list p13 and General/EWS table p51, with applicability left for KEA.",
+    "MCC session-start comparison cites Round2 p2,Round3 p3,stray/sessionstart p4.",
+    "Empty resignation view does not promise non-existent rules."
+  ],
+  "independentSourceChecks": [
+    {
+      "state": "MCC",
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "findings": "Server Time without time-zone definition; session20November; R2reportingends23November,R3reporting5–12December,stray24–31December."
+    },
+    {
+      "state": "Gujarat",
+      "pages": [
+        4,
+        21,
+        22,
+        26,
+        50
+      ],
+      "findings": "₹3,000non-refundable PINregistration,₹25,000refundabledeposit,additional₹25,000NRIprocessing; university/school/NRI/disabilitycriteria; TraumatologyandSurgery; gapslimitedtosuppliedsources."
+    },
+    {
+      "state": "Karnataka",
+      "pages": [
+        5,
+        13,
+        31,
+        34,
+        35,
+        36,
+        51
+      ],
+      "findings": "Registrationfeegroupsandnon-refundability; General/EWScutofftable; SCHorderGM→GMH→SCG→SCHvisuallyconfirmed; R2receipts/copies."
+    },
+    {
+      "state": "Tamil Nadu",
+      "pages": [
+        101,
+        118
+      ],
+      "findings": "Clause12minimum5years; Clause33(d)morethan5yearsandserviceuntilsuperannuation."
+    },
+    {
+      "state": "Uttar Pradesh",
+      "pages": [
+        4,
+        5,
+        6
+      ],
+      "findings": "Qualification/college/foreign-graduate/reservationchecksnotfullyrepresentedbyprofile."
+    }
+  ],
+  "limitations": [
+    "Source ambiguities and missingcurrentdocuments remain unresolved; reviewdoesnotgrantauthoritativeinterpretations orhumanverification.",
+    "Sources and implementation checkedread-only; parent ran requiredchecks."
+  ],
+  "reviewerMadeChanges": false
+}

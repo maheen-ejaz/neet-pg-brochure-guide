@@ -1,0 +1,56 @@
+[
+  {
+    "key": "gujarat-2026",
+    "kind": "states",
+    "records": 131,
+    "displayFields": 291,
+    "sourcePages": 81,
+    "sourceDir": "brochures/gujarat/2026",
+    "inventory": "inputs/gujarat-2026-visible.json"
+  },
+  {
+    "key": "karnataka-2026",
+    "kind": "states",
+    "records": 189,
+    "displayFields": 433,
+    "sourcePages": 68,
+    "sourceDir": "brochures/karnataka/2026",
+    "inventory": "inputs/karnataka-2026-visible.json"
+  },
+  {
+    "key": "kerala-2026",
+    "kind": "states",
+    "records": 169,
+    "displayFields": 464,
+    "sourcePages": 87,
+    "sourceDir": "brochures/kerala/2026",
+    "inventory": "inputs/kerala-2026-visible.json"
+  },
+  {
+    "key": "tamil-nadu-2026",
+    "kind": "states",
+    "records": 441,
+    "displayFields": 996,
+    "sourcePages": 149,
+    "sourceDir": "brochures/tamil-nadu/2026",
+    "inventory": "inputs/tamil-nadu-2026-visible.json"
+  },
+  {
+    "key": "uttar-pradesh-2026",
+    "kind": "states",
+    "records": 173,
+    "displayFields": 534,
+    "sourcePages": 25,
+    "sourceDir": "brochures/uttar-pradesh/2026",
+    "inventory": "inputs/uttar-pradesh-2026-visible.json"
+  },
+  {
+    "key": "mcc-pg-2026",
+    "kind": "national",
+    "records": 17,
+    "displayFields": 188,
+    "sourcePages": 4,
+    "sourceDir": "brochures/mcc/2026",
+    "inventory": "inputs/mcc-pg-2026-visible.json"
+  }
+]

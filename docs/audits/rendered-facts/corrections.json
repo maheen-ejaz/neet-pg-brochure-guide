@@ -1,0 +1,241 @@
+{
+  "base": "120baf771d000994f3313da22dad4c64250e0b3e",
+  "sourceDataChanges": {
+    "data/states/tamil-nadu-2026.json": {
+      "sha256": "81a366fa6da2af46672a5c67353c63afb49c9f3d72647e671c4ef9ad1d8a7118",
+      "changes": [
+        {
+          "path": "eligibility.rules[46].explanation",
+          "before": "Clause 12 requires at least five years of left-over service on course completion. Clause 26(d) says Tamil Nadu service candidates should have more than five years of service after course completion and must serve the Government until superannuation.",
+          "after": "Clause 12 requires at least five years of left-over service on course completion. Clause 33(d) says Tamil Nadu service candidates should have more than five years of service after course completion and must serve the Government until superannuation."
+        }
+      ]
+    },
+    "data/states/uttar-pradesh-2026.json": {
+      "sha256": "d8f3830cf26a6fc2318f43a73a93f929ad5706f4b5ce02ae7039305c848562bb",
+      "changes": [
+        {
+          "path": ".eligibility.manualReview",
+          "before": null,
+          "after": {
+            "id": "uttar-pradesh-manual-eligibility",
+            "sourcePages": [
+              4,
+              5,
+              6
+            ],
+            "verified": false,
+            "title": "Confirm qualification, college and category requirements",
+            "detail": "Your profile does not establish NEET qualification, the exact qualifying-college route, foreign-graduate requirements or the reservation certificate rules. The phrase 'candidates of other states' is not defined as domicile in the brochure. Confirm your route and documents with the counselling authority.",
+            "severity": "warning"
+          }
+        }
+      ]
+    },
+    "data/states/gujarat-2026.json": {
+      "sha256": "75ff19f4c6754cf5cd5d6ed53898f03c04d2d8b9aa63dfb6acac224153fc0e31",
+      "changes": [
+        {
+          "path": ".eligibility.manualReview",
+          "before": null,
+          "after": {
+            "id": "gujarat-manual-eligibility",
+            "sourcePages": [
+              4,
+              21,
+              22,
+              26
+            ],
+            "verified": false,
+            "title": "Confirm qualification and the exact Gujarat route",
+            "detail": "Your profile does not establish NEET qualification, the qualifying university route, the required 12th-standard board/group, or all NRI and disability conditions. Confirm these against the cited rules and your documents before relying on eligibility.",
+            "severity": "warning"
+          }
+        },
+        {
+          "path": "reservation.rules[5].detail",
+          "before": "Under the NMC 2026 guidelines, the board rates you Eligible, Eligible with reasonable accommodation, or Ineligible for each speciality. For surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Traumatology, Emergency Medicine, PMR, Sports Medicine): Upper-limb disability and multiple disabilities are generally not suitable. Speech and language disability is not suitable. Lower-limb disability, and conditions such as cerebral palsy or muscular dystrophy, may be suitable if you show the needed functional competencies. Visual impairment is suitable only if corrective lenses alone bring it below 40%. Hearing impairment is suitable if you function with hearing aids or a cochlear implant and have acceptable, intelligible speech. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders are decided case by case. Chronic neurological conditions are suitable if stable, but not with uncontrolled seizures, frequent relapses, progressive neurodegeneration or severe impairment.",
+          "after": "Under the NMC 2026 guidelines, the board rates you Eligible, Eligible with reasonable accommodation, or Ineligible for each speciality. For surgical specialities (Anaesthesiology, General Surgery, OBG, Ophthalmology, Orthopaedics, ENT, Traumatology and Surgery, Emergency Medicine, PMR, Sports Medicine): Upper-limb disability and multiple disabilities are generally not suitable. Speech and language disability is not suitable. Lower-limb disability, and conditions such as cerebral palsy or muscular dystrophy, may be suitable if you show the needed functional competencies. Visual impairment is suitable only if corrective lenses alone bring it below 40%. Hearing impairment is suitable if you function with hearing aids or a cochlear implant and have acceptable, intelligible speech. Mental illness, ASD, SLD and ID are suitable if functional competency is present. Blood disorders are decided case by case. Chronic neurological conditions are suitable if stable, but not with uncontrolled seizures, frequent relapses, progressive neurodegeneration or severe impairment."
+        },
+        {
+          "path": ".fees.calculationNote",
+          "before": null,
+          "after": {
+            "id": "gujarat-fee-route-check",
+            "sourcePages": [
+              4,
+              5,
+              24
+            ],
+            "verified": false,
+            "title": "Check the fees for your route",
+            "detail": "The PIN payment includes a ₹3,000 non-refundable registration fee and a ₹25,000 refundable security deposit. NRI applicants also pay a separate ₹25,000 non-refundable processing fee by demand draft. Read the NRI payment and college tuition rules below before planning your total.",
+            "severity": "warning"
+          }
+        },
+        {
+          "path": "gaps[0].sourcePages",
+          "before": [],
+          "after": [
+            1,
+            4
+          ]
+        },
+        {
+          "path": "gaps[0].detail",
+          "before": "As of 6th October 2026, only the registration dates are out. Check medadmgujarat.org for merit list, choice filling and allotment dates.",
+          "after": "The supplied 2026-27 documents give PIN purchase, registration/upload and verification dates. Merit-list, choice-filling and allotment dates are not included. Check medadmgujarat.org for current notices."
+        },
+        {
+          "path": "gaps[1].sourcePages",
+          "before": [],
+          "after": [
+            1,
+            4
+          ]
+        },
+        {
+          "path": "gaps[1].detail",
+          "before": "As of 6th October 2026, the 2026-27 seat list isn't out. The site only has 2025-26.",
+          "after": "No 2026-27 seat matrix is included in these supplied documents. Get the current specialty, college and quota seat list from the official website."
+        },
+        {
+          "path": "gaps[2].sourcePages",
+          "before": [],
+          "after": [
+            1,
+            4
+          ]
+        },
+        {
+          "path": "gaps[2].detail",
+          "before": "As of 6th October 2026, the 2026-27 college-wise fees aren't out. The site only has 2025-26.",
+          "after": "No 2026-27 college-wise tuition-fee schedule is included in these supplied documents. Check the official website for the current fee notice."
+        },
+        {
+          "path": "gaps[7].sourcePages",
+          "before": [],
+          "after": [
+            1,
+            4
+          ]
+        },
+        {
+          "path": "gaps[7].detail",
+          "before": "As of 6th October 2026, there's no 2026-27 MDS notice.",
+          "after": "The supplied registration notice is for MD/MS/Diploma and does not cover MDS. Get the current MDS notice from the official website."
+        }
+      ]
+    },
+    "data/states/karnataka-2026.json": {
+      "sha256": "db11f79ee8f02e87b4b13cb37c1768ce49912a9dce01ceb7dfa3ee53bb4aea44",
+      "changes": [
+        {
+          "path": "eligibility.rules[16].sourcePages",
+          "before": [
+            3,
+            5
+          ],
+          "after": [
+            5,
+            13,
+            51
+          ]
+        },
+        {
+          "path": "eligibility.rules[16].title",
+          "before": "EWS isn't mentioned in this bulletin",
+          "after": "EWS: confirm reservation and registration fee"
+        },
+        {
+          "path": "eligibility.rules[16].explanation",
+          "before": "EWS appears only in the NBEMS qualifying cut-off table (General/EWS). The bulletin states no Karnataka EWS reservation or EWS registration fee. Confirm with KEA how EWS candidates are treated.",
+          "after": "The NBEMS qualifying cut-off table includes General/EWS. No separate EWS registration rate or Karnataka EWS reservation rule is listed in this bulletin. Confirm the applicable fee group and reservation treatment with KEA."
+        },
+        {
+          "path": "eligibility.rules[23].explanation",
+          "before": "If you're a local person of the Hyderabad-Karnataka region, you can claim reservation under Article 371(j) with a certificate from the Assistant Commissioner (Annexure 8). Seats are first searched in General Merit (GM), then Hyderabad-Karnataka GM (GMH), then your category.",
+          "after": "If you're a local person of the Hyderabad-Karnataka region, you can claim reservation under Article 371(j) with a certificate from the Assistant Commissioner (Annexure 8). Seat searches follow the category-specific order in the brochure’s chart. They start with General Merit (GM), then Hyderabad-Karnataka GM (GMH); some categories then search the non-HK category before the HK category. For SCH, the chart gives GM → GMH → SCG → SCH."
+        },
+        {
+          "path": ".eligibility.manualReview",
+          "before": null,
+          "after": {
+            "id": "karnataka-manual-eligibility",
+            "sourcePages": [
+              3,
+              7,
+              8,
+              10,
+              15,
+              19,
+              44,
+              55
+            ],
+            "verified": false,
+            "title": "Confirm the full Karnataka eligibility requirements",
+            "detail": "Your profile does not establish NEET qualification, a previously completed clinical PG degree, the cancellation/non-joining bar or every affidavit and quota condition. The bulletin does not define Karnataka candidacy as domicile, and its PG Medical rules take effect after MCC's announcement. Confirm these requirements and any NRI route with KEA.",
+            "severity": "warning"
+          }
+        },
+        {
+          "path": ".fees.calculationNote",
+          "before": null,
+          "after": {
+            "id": "karnataka-fee-route-check",
+            "sourcePages": [
+              5,
+              13
+            ],
+            "verified": false,
+            "title": "Confirm your registration-fee group",
+            "detail": "The bulletin lists ₹750 for SC/ST/Category-1/PwD, ₹1,500 for General/2A/2B/3A/3B, ₹4,000 for non-Karnataka candidates and ₹7,000 for NRI/OCI/PIO/foreign nationals. Registration fees are non-refundable. Confirm the applicable group with KEA where these descriptions overlap; the profile does not establish every category or Karnataka-candidate criterion.",
+            "severity": "warning"
+          }
+        },
+        {
+          "path": "documents[32].detail",
+          "before": "Choice 2 candidates bring the fee receipt. Everyone brings all originals including Annexures 1, 2 and 7, and one set of photocopies.",
+          "after": "Choice 2 candidates bring the fee receipt. All eligible Round 2 participants bring all originals including Annexures 1, 2 and 7, and one set of photocopies."
+        }
+      ]
+    },
+    "data/national/mcc-pg-2026.json": {
+      "sha256": "0344b5ef106139602305120ba9ec74b08afcc23e474359731838abd8291bb738",
+      "changes": [
+        {
+          "path": "notes[1].title",
+          "before": "All times are MCC server time",
+          "after": "Times are printed as Server Time"
+        },
+        {
+          "path": "notes[4].sourcePages",
+          "before": [
+            2,
+            4
+          ],
+          "after": [
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "path": "notes[4].detail",
+          "before": "The PG academic session begins on 20th November 2026, while Round 2 reporting runs until 23rd November 2026. By these dates, Round 3 and stray-round candidates join after classes have begun.",
+          "after": "The PG academic session begins on 20th November 2026, while Round 2 reporting runs until 23rd November 2026. The Round 3 and stray-round reporting windows fall after this printed session-start date."
+        }
+      ]
+    }
+  },
+  "uiChanges": [
+    "source-limited gap/bond/resignation wording",
+    "seat-filtered board and college counts with entry labels",
+    "source-informed fee-route summaries; no definitive totals or deposit recommendations for incomplete profiles",
+    "manual eligibility gate for uncollected prerequisites and disqualifiers; no definitive category label before eligibility confirmation",
+    "minute-aware opening/closing statuses and next deadlines, periodic refresh, visible college cutoffs and timezone assumption disclosure"
+  ],
+  "humanVerificationFlags": "unchanged, all false",
+  "sourcePdfAndImages": "unchanged",
+  "independentReview": "clear;seeindependent-review.json"
+}

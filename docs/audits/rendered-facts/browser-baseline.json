@@ -1,0 +1,169 @@
+{
+  "snapshot": "b824b5d5b444ec870e173f37aba8b1c53a6b179b",
+  "surface": "local Vite integration on127.0.0.1:5196; no candidate profile",
+  "method": "headless Chrome, expand sections/round groups/prose/source labels and collect main text; no external form submission",
+  "views": [
+    {
+      "key": "gujarat-2026",
+      "view": "all",
+      "head": "Gujarat",
+      "length": 33405,
+      "sections": 14,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (8)"
+      ]
+    },
+    {
+      "key": "gujarat-2026",
+      "view": "government",
+      "head": "Gujarat",
+      "length": 28602,
+      "sections": 14,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (8)"
+      ]
+    },
+    {
+      "key": "gujarat-2026",
+      "view": "mgmtNri",
+      "head": "Gujarat",
+      "length": 33557,
+      "sections": 15,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (8)"
+      ]
+    },
+    {
+      "key": "karnataka-2026",
+      "view": "all",
+      "head": "Karnataka",
+      "length": 53553,
+      "sections": 14,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (1)"
+      ]
+    },
+    {
+      "key": "karnataka-2026",
+      "view": "government",
+      "head": "Karnataka",
+      "length": 47840,
+      "sections": 14,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (1)"
+      ]
+    },
+    {
+      "key": "karnataka-2026",
+      "view": "mgmtNri",
+      "head": "Karnataka",
+      "length": 54066,
+      "sections": 15,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (1)"
+      ]
+    },
+    {
+      "key": "kerala-2026",
+      "view": "all",
+      "head": "Kerala",
+      "length": 106638,
+      "sections": 12,
+      "closed": 0,
+      "centreLabel": []
+    },
+    {
+      "key": "kerala-2026",
+      "view": "government",
+      "head": "Kerala",
+      "length": 103030,
+      "sections": 12,
+      "closed": 0,
+      "centreLabel": []
+    },
+    {
+      "key": "kerala-2026",
+      "view": "mgmtNri",
+      "head": "Kerala",
+      "length": 107218,
+      "sections": 13,
+      "closed": 0,
+      "centreLabel": []
+    },
+    {
+      "key": "tamil-nadu-2026",
+      "view": "all",
+      "head": "Tamil Nadu",
+      "length": 262083,
+      "sections": 13,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (10)"
+      ]
+    },
+    {
+      "key": "tamil-nadu-2026",
+      "view": "government",
+      "head": "Tamil Nadu",
+      "length": 212701,
+      "sections": 13,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (10)"
+      ]
+    },
+    {
+      "key": "tamil-nadu-2026",
+      "view": "mgmtNri",
+      "head": "Tamil Nadu",
+      "length": 63925,
+      "sections": 14,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (10)"
+      ]
+    },
+    {
+      "key": "uttar-pradesh-2026",
+      "view": "all",
+      "head": "Uttar Pradesh",
+      "length": 29450,
+      "sections": 13,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (62)"
+      ]
+    },
+    {
+      "key": "uttar-pradesh-2026",
+      "view": "government",
+      "head": "Uttar Pradesh",
+      "length": 26542,
+      "sections": 13,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (62)"
+      ]
+    },
+    {
+      "key": "uttar-pradesh-2026",
+      "view": "mgmtNri",
+      "head": "Uttar Pradesh",
+      "length": 22609,
+      "sections": 14,
+      "closed": 0,
+      "centreLabel": [
+        "\u25be Designated disability certification centres (62)"
+      ]
+    }
+  ],
+  "mccMainTextCharacters": 4783,
+  "allStateExpandableSectionsOpen": true,
+  "interpretation": "Raw text length and entry counts establish render reachability, not factual truth. Internal-only fields remain classified not_factual in source audits."
+}
