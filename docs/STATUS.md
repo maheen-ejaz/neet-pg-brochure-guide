@@ -41,8 +41,34 @@ guide per state:
 | Kerala 2026-27 | `data/states/kerala-2026.json` | 170 | Draft, 0 human-verified. Medical PG Degree prospectus including its Government Order and annexures, 87 PDF pages. Four blind source audits and independent correction checks cleared major findings. |
 | MCC All India Quota 2026 | `data/national/mcc-pg-2026.json` | 17 | Draft, 0 verified by a human. Tentative MCC schedule (4 pages, generated 07-10-2026): NEET-PG 50% AIQ + 100% deemed/central universities, AFMS registration only. Passed 1 independent check (all 35 stages confirmed). Review at `/review/national/mcc-pg-2026`. |
 
-Nothing is published yet. `npm run build` contains no states; `build:preview` now contains all five states
-and the MCC timeline as drafts. The live preview still has the original three states until the release below.
+All brochure data remains draft and unverified by a human. `npm run build` contains no states;
+`build:preview` contains all five states and the MCC timeline. The public Netlify deployment now serves
+that integrated draft preview, including the dashboard design and the fact-audit corrections.
+
+## Production deployment (09-10-2026)
+
+- **Live URL:** https://neetpg.goocampusglobal.com. GooCampus Team / `goocampus-neetpg`, site ID
+  `fb03fe2b-69e5-497f-a789-fcfe1e8167e7`.
+- **Published deployment:** [`6ac920eb2760ebe175a6887d`](https://app.netlify.com/projects/goocampus-neetpg/deploys/6ac920eb2760ebe175a6887d),
+  published through Netlify Drop at 10:44 PM IST. App source commit:
+  `7c12c3d49f19db705f9a5ad16e460fb41c29f0fe`.
+- The owner explicitly lifted the localhost-only hold and authorised a **one-time** signed-in browser
+  deployment exception. It was used for this exact build; it does not grant a standing credential/CLI
+  exception. The missing repository-declared Infisical/Netlify contract remains a prerequisite for future
+  credential-backed CLI releases. No credentials were retrieved, created or exported.
+- Released the reviewed ZIP (SHA-256 `095867e7694bdbb30caf707a0e6812d540f614f10c9f27e003250afafcc8eff0`)
+  with the five built app files plus `_headers`, which mirrors the existing `netlify.toml` noindex rule.
+  Netlify confirmed a published production deploy, one successful redirect rule and one successful header rule.
+- Pre-release checks: 108 tests, typecheck/schema validation, preview build, exact clean default commit and
+  one isolated read-only release reviewer, including the manual-upload packaging check.
+- Canonical URL proof: HTTP 200 for the dashboard, every state route and MCC; served HTML, JS, CSS and OG
+  image match the reviewed package byte-for-byte. `X-Robots-Tag: noindex, nofollow` is present, and HTML also
+  has the robots noindex meta tag. Browser checks show five state cards, working Tamil Nadu/Kerala routes,
+  draft/manual-check notices and no console errors.
+- Draft flags, human verification gates and browser-only candidate storage are unchanged. No database
+  migration applies. The user-facing localhost server on port 5173 remains running.
+- Release ownership was held by chat `01a11ffa-4cd5-76d2-aebe-171d114e9a1f`; the presentation task confirmed
+  no competing release. The release is finished; no automatic deployment or background task was created.
 
 ## Tamil Nadu and Kerala addition (09-10-2026)
 
@@ -63,17 +89,18 @@ and the MCC timeline as drafts. The live preview still has the original three st
   mobile and light/dark with zero WCAG 2.1 AA axe violations. One independent implementation review is clear.
 - **Release scope:** owner selected the public draft preview on 09-10-2026, retaining Draft labels and the
   human gate. This is explicit release authorization for this addition; do not ask for it again.
-- **Release pending access contract:** this repo has no tracked `infisical-profiles.json`, `TOOLCHAIN.md`
-  credential procedure or declared runner/bound Netlify command. No credential-backed deploy was launched.
-  The public URL was read-only checked: HTTP 200/noindex, still Gujarat, Karnataka and Uttar Pradesh.
+- **CLI access contract remains missing:** this repo has no tracked `infisical-profiles.json`, `TOOLCHAIN.md`
+  credential procedure or declared runner/bound Netlify command. Before the production release above,
+  the public URL still served Gujarat, Karnataka and Uttar Pradesh. No credential-backed CLI deploy was launched.
   The administrator must supply the declared binding for GooCampus Team / `goocampus-neetpg`
-  (`fb03fe2b-69e5-497f-a789-fcfe1e8167e7`). Then deploy the integrated clean `main`, require successful provider
-  state and verify the canonical public five-state dashboard. Candidate data/schema migrations are inapplicable.
+  (`fb03fe2b-69e5-497f-a789-fcfe1e8167e7`) before a future CLI release. The current five-state release used the
+  explicit one-time browser exception. Candidate data/schema migrations are inapplicable.
 - Human review: `/review/tamil-nadu-2026` and `/review/kerala-2026` on the local dev server.
 
 Deploy the preview from a clean `main`: `npm run build:preview && netlify deploy --prod --dir dist --site fb03fe2b-69e5-497f-a789-fcfe1e8167e7`.
 Deploys: `6ac5f6e5567267092e0daaac` (0597da2, first), `6ac610cc33ebd82b413cc4dd` (9f8fa69, + Karnataka),
-`6ac61273d294c43882eb2ea3` (4639518, DD-MM-YYYY), **`6ac6faa756c7dc88da40997e` (9458efe, Codex fixes) = currently live**.
+`6ac61273d294c43882eb2ea3` (4639518, DD-MM-YYYY), `6ac6faa756c7dc88da40997e` (9458efe, Codex fixes),
+**`6ac920eb2760ebe175a6887d` (7c12c3d, integrated five-state draft preview) = currently live**.
 
 
 ## Platform fact audit (09-10-2026)
@@ -93,9 +120,9 @@ Deploys: `6ac5f6e5567267092e0daaac` (0597da2, first), `6ac610cc33ebd82b413cc4dd`
 - Validation: 108 tests, typecheck, schema/publish validation and both builds pass. Normal builds omit drafts;
   preview stays noindexed; both exclude review code. Browser clock/profile/count checks pass. One isolated,
   blind read-only implementation/source reviewer cleared the corrected scope. Human flags remain false.
-- **Current release hold:** the owner asked the presentation task to keep the new design on localhost.
-  Preserve its canonical server on port 5173. The integrated changes remain local/merged under that hold;
-  this audit does not authorize lifting it. The missing declared Netlify binding is still a separate access gap.
+- **Prior release hold superseded:** the owner later explicitly requested the production release and
+  authorised the one-time browser exception documented above. Preserve the canonical localhost server on
+  port 5173. The missing declared Netlify binding remains a separate access gap for future CLI releases.
 - Source conflicts need authoritative answers, missing-current-source cases need the cited documents, and
   scan questions need clearer originals before those claims can be independently confirmed or published.
 
