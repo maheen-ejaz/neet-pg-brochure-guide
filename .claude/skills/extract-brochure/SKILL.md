@@ -131,6 +131,16 @@ These mistakes were all found by independent checks. Avoid them on the first pas
     allotment table). Encode the reading each seat type actually references and note the conflict.
 17. **Read annexure tables and NBE notices for numbers** (Karnataka 2026). Qualifying cut-offs (percentile and
     score per category) sat only in an annexure image and were missed on the first pass.
+18. **Keep adjacent clauses' triggers separate** (Tamil Nadu 2026). A declaration may cover suppression
+    or misinterpretation while the next clause's two-year bar covers suppression alone. Do not copy a
+    consequence to the broader group. Likewise, Government Medical College bond terms do not establish
+    the same terms for Government Quota seats in self-financing colleges.
+19. **Separate applicability from submission-stage uncertainty.** A mandatory undertaking stays mandatory
+    even when its submission stage needs confirmation. Mark a document conditional only when its
+    applicant group or route cannot be established, and say in the visible detail when it is required.
+20. **Check every quota view in both directions after merging documents.** Tag programme-specific gaps,
+    annexures, documents and summaries as well as rules. Shared notes should not display another route's
+    fee concessions; checklist counts should follow the current view.
 
 ## 4. Check
 

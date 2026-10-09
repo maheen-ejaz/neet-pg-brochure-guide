@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-09",
+  "scope": "Four owner-supplied 2026-27 prospectuses; every page, sourced record, list, form, amount, date, criterion and source citation reviewed in independent passes. Faithfully flagged source conflicts remain for authority/human confirmation.",
+  "acceptanceCriteria": [
+    "Preserve candidate rules and full annexure lists/form criteria from all 236 pages",
+    "Use exactPDF/merged-page citations and current supplied documents only",
+    "Keep unresolved text/conflicts visible; use manual checks where profile facts are missing",
+    "Preserve draft/human-review publish gate and browser-only candidate profiles",
+    "Pass schema/type/tests/build boundaries, browser accessibility and independent implementation review"
+  ],
+  "deliveryScope": {
+    "target": "Existing public draft preview",
+    "alternativeNotSelected": "Local review only",
+    "constraints": [
+      "Draft labels",
+      "Human review before publication",
+      "Noindex public preview",
+      "Clean main and declared credential runner before deployment"
+    ]
+  },
+  "sources": [
+    {
+      "document": "Government-quota MD/MS/Diploma prospectus",
+      "originalFilename": "TN GOVERNMENT SEATS IN SELF-FINANCING MEDICAL COLLEGES BROCHURE.pdf",
+      "pages": 60,
+      "mergedStartPage": 1,
+      "sha256": "1df689a9c740a77488f712a7eec4c6671943e44120cbcd4b9cf61d4fb85b9682",
+      "strictBlindFullSourceAudits": 5,
+      "finalCorrectableMajorFindings": 0
+    },
+    {
+      "document": "Management and NRI MD/MS/Diploma prospectus",
+      "originalFilename": "TN MANAGEMENT QUOTA INCLUDING NRI OF SELF-FINANCING MEDICAL COLLEGES BROCHURE.pdf",
+      "pages": 31,
+      "mergedStartPage": 61,
+      "sha256": "d4f9a59b1ae315b7966db0ab80287b87962b05b4df7c32b81ee8372942b76103",
+      "strictBlindFullSourceAudits": 4,
+      "finalCorrectableMajorFindings": 0
+    },
+    {
+      "document": "Service-candidate DNB and post-MBBS Diploma prospectus",
+      "originalFilename": "TN PROSPECTUS FOR ADMISSION TO DNB BROAD SPECIALITY BROCHURE.pdf",
+      "pages": 58,
+      "mergedStartPage": 92,
+      "sha256": "dd67318754ceafcb7cf403f26c686835b0395c8002f73343b7fd664aa0bfb50b",
+      "strictBlindFullSourceAudits": 4,
+      "finalCorrectableMajorFindings": 0
+    },
+    {
+      "document": "Kerala Medical PG Degree prospectus",
+      "originalFilename": "Kerala PGM_Prospectus_2026.pdf",
+      "pages": 87,
+      "mergedStartPage": 1,
+      "sha256": "e037e1d90b12ab6d42839f650cba70d9fb794afd3a32f0d447d84a5845cca5dd",
+      "strictBlindFullSourceAudits": 4,
+      "finalCorrectableMajorFindings": 0
+    }
+  ],
+  "states": [
+    {
+      "file": "data/states/tamil-nadu-2026.json",
+      "items": 440,
+      "humanVerified": 0,
+      "status": "draft",
+      "sourcePages": 149,
+      "sha256": "9a443332e61840eb7b435e15fffa8be4530583861abcbf03a4b6efc6e4a3c1a1"
+    },
+    {
+      "file": "data/states/kerala-2026.json",
+      "items": 170,
+      "humanVerified": 0,
+      "status": "draft",
+      "sourcePages": 87,
+      "sha256": "f82f9eb8750423c40f6c814ceb0d1d9d6f3a91ed7f627bcce4a6ecb640b623a1"
+    }
+  ],
+  "sourceAuditOutcome": "No major-or-worse correctable findings remain after source-checked fixes and independent correction verification.",
+  "implementationReview": "One isolated blind read-only implementation/release reviewer: clear; final data-only corrections reconfirmed.",
+  "checks": {
+    "npmRunCheck": "102 tests, typecheck and validation passed",
+    "publishedBuild": "Passed; no new draft identifiers or __review marker",
+    "previewBuild": "Passed; both new draft states present, no __review marker, noindex",
+    "browser": "8 state combinations across desktop/mobile and light/dark: zero runtime errors, overflow and WCAG2.1AA axe violations; homepage cards and both review page images loaded",
+    "sourceIntegrity": "Original copies byte-identical; merged149/87 pagecounts andall 236 images/citations checked",
+    "durations": "Final Vitest run: 286 ms; static Vite build: approximately 150 ms each after validation/typecheck. Source extraction and repeated independent audits were substantial, covering all 236 pages."
+  },
+  "auditLimitations": [
+    "The first Management/NRI content checker overwrote an intermediate extracted-text file; source PDFs/data were unchanged. That pass was not counted as strictly read-only, and four later fresh blind read-only passes covered its full scope.",
+    "One DNB source pass saw a prior review through an agent-status response after recording findings. It was not counted as strictly blind; later fresh blindpasses covered all DNB records.",
+    "Poppler emitted a recoverable missing-xref warning for the combined Tamil Nadu PDF. All 149 pages rendered and were reviewed; originalPDF copies remained byte-identical.",
+    "Unreadable sourceglyphs/institution spellings and conflicting legal/course rules remain explicitly flagged; AI audits do not constitute human verification."
+  ],
+  "uncertaintyRegister": "tamil-nadu-kerala-2026-uncertainties.json",
+  "uncertaintyEntries": 97,
+  "release": {
+    "requested": true,
+    "site": "https://neetpg.goocampusglobal.com",
+    "netlifyProject": "goocampus-neetpg",
+    "team": "GooCampus Team",
+    "siteId": "fb03fe2b-69e5-497f-a789-fcfe1e8167e7",
+    "state": "Pending declared Netlify credential binding/runner",
+    "liveCheck": "Public HTTP200 with noindex; still Gujarat/Karnataka/UttarPradesh only",
+    "missingContract": [
+      "infisical-profiles.json",
+      "TOOLCHAIN.md credential procedure",
+      "Declared npm credential runner/bound Netlify command"
+    ],
+    "applicationSchemaOrDataMigration": "Not applicable: static local-first application, candidate profiles remain in browser"
+  }
+}

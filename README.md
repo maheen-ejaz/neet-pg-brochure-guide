@@ -9,7 +9,7 @@ penalties, service bond, help desks and MCC (All India Quota) deadlines. **Every
 page it came from.**
 
 - **Live preview:** https://neetpg.goocampusglobal.com (all data is labelled *Draft*)
-- **Status:** Uttar Pradesh, Gujarat and Karnataka 2026, plus the MCC 2026 schedule, have been extracted and
+- **Status:** Uttar Pradesh, Gujarat, Karnataka, Tamil Nadu and Kerala 2026, plus the MCC 2026 schedule, have been extracted and
   checked by independent AI verification. **No item has been verified by a person yet**, so nothing is published.
 - **Taking this project over?** Read [`docs/HANDOVER.md`](docs/HANDOVER.md) first, then
   [`docs/STATUS.md`](docs/STATUS.md).
@@ -63,7 +63,8 @@ official PDFs ──► Claude Code extracts ──► data/states/*.json ──
 | `vite-plugin-review.ts` | Dev-only file API for the review tool + the `virtual:brochures` data module |
 | `scripts/validate.ts` | Schema + publish-gate check for all data files |
 | `data/` | The extracted data (one JSON per state-year, one per national schedule) |
-| `brochures/` | Official source documents and page images (58 MB) |
+| `brochures/` | Official source documents and page images |
+| `docs/audits/` | Source audit coverage and unresolved brochure questions |
 | `.claude/skills/extract-brochure/` | Extraction procedure, accuracy rules and verification prompt |
 | `docs/HANDOVER.md` | How to rebuild, maintain and extend the project |
 | `docs/STATUS.md` | Current state, decisions made, open questions, next steps |

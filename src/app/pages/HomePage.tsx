@@ -94,7 +94,7 @@ export function HomePage() {
                   <span><strong className="text-bad">Not eligible</strong> in any state covered so far</span>
                 )}
                 {needDetails.length > 0 && (
-                  <span className="text-soft">{listFormat.format(needDetails)} {needDetails.length === 1 ? "needs" : "need"} a few more details</span>
+                  <span className="text-soft">{listFormat.format(needDetails)} {needDetails.length === 1 ? "needs" : "need"} more details or a manual check</span>
                 )}
               </p>
             )}

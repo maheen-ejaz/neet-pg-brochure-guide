@@ -114,6 +114,13 @@ export const RuleItem = z.object({
   schedule: z.array(ScheduleRef).min(1).optional(),
 });
 
+const RegistrationFee = z.object({
+  ...sourced,
+  amountInr: z.number(),
+  covers: z.string(),
+  refundable: z.boolean(),
+});
+
 export const BrochureSchema = z.object({
   meta: z.object({
     ...sourced,
@@ -166,6 +173,8 @@ export const BrochureSchema = z.object({
       .object({ ...sourced, terms: z.array(z.object({ code: z.string(), meaning: z.string() })) })
       .optional(),
     rules: z.array(EligibilityRule),
+    /** The collected profile cannot establish all of this state's eligibility routes. */
+    manualReview: RuleItem.optional(),
   }),
   reservation: z.object({
     policy: z.object({
@@ -182,12 +191,11 @@ export const BrochureSchema = z.object({
     rules: z.array(RuleItem),
   }),
   fees: z.object({
-    registration: z.object({
-      ...sourced,
-      amountInr: z.number(),
-      covers: z.string(),
-      refundable: z.boolean(),
-    }),
+    registration: RegistrationFee,
+    /** Separate application/registration charges and concessions; never add alternatives together. */
+    registrationOptions: z.array(RegistrationFee).min(1).optional(),
+    /** Suppresses a personalised total when quota, course or concession details are not collected. */
+    calculationNote: RuleItem.optional(),
     securityDeposits: z.array(
       z.object({
         ...sourced,
@@ -206,6 +214,8 @@ export const BrochureSchema = z.object({
       name: z.string(),
       stage: z.enum(["registration", "admission", "other"]),
       appliesWhen: Condition.nullable(),
+      /** Conditional requirement whose exact criterion is not collected by the profile. */
+      requiresManualCheck: z.boolean().optional(),
       detail: z.string().optional(),
     }),
   ),
