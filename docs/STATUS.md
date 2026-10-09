@@ -152,6 +152,24 @@ schedule, replace `brochures/mcc/2026/source.pdf`, update the JSON and re-verify
 - Profile: 4 steps with progress, "None of these apply to me", AIR/specialities optional.
 - Highlights only money, percentages, dates and consequential durations; long citations collapse to "Sources (n)".
 
+## Dashboard and candidate journey (09-10-2026)
+
+- Shared workspace: desktop sidebar with direct state links; all four main destinations visible in mobile navigation;
+  active navigation, skip-to-content link and a quiet canvas with consistent panels, headings and badges.
+- Home: compact introduction, browser-only profile panel, searchable state guides, eligibility filter, aligned card
+  verdicts and a table view. MCC and comparison have their own tools area; draft warnings remain explicit.
+- State guides: clear state/year header, sourced summary tiles, linked fees/documents/deadlines and sticky section
+  navigation. Profile: consistent panels, four-step progress, keyboard step navigation and explicit save copy.
+  MCC: sourced next-date panel and round navigation. Comparison stays locked until two guides are published,
+  with a clear explanation, selection count and empty state for the eventual comparison table.
+- Preserves the five-state integration, seat-filtered summaries and the manual eligibility/fee calculation safeguards.
+  No brochure data, eligibility rules, storage or publishing gates changed in this UI task.
+- Validation: `npm run check` (102 tests), both builds, draft/review exclusion and preview noindex checks pass.
+  Browser checks cover all five state pages, dashboard, profile, MCC and comparison in both themes; detected
+  contrast and narrow-phone overflow issues were corrected. Navigation/anchor checks pass at 320/768/1024/1440px;
+  all profile steps, date-error associations, search/filter/display controls and fixture comparison empty states pass.
+  Independent read-only review cleared implementation and integration findings. Live deployment remains on request.
+
 ## Seat-type views
 
 Each state page has a switch: **All seats | Government | Management & NRI** (`src/app/seats.tsx`). Items carry an

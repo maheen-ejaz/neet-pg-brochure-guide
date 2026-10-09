@@ -70,7 +70,7 @@ function VerdictIcon({ status }: { status: Verdict["status"] }) {
 export function VerdictBand({ verdict }: { verdict: Verdict | null }) {
   if (!verdict) {
     return (
-      <div className="border-b border-line bg-canvas px-5 py-3 text-sm text-soft">
+      <div className="border-t border-line bg-canvas px-5 py-3 text-sm text-soft">
         Add your profile to check your eligibility
       </div>
     );
@@ -78,7 +78,7 @@ export function VerdictBand({ verdict }: { verdict: Verdict | null }) {
   const { bg, word } = band[verdict.status];
   const strong = verdict.status === "eligible" || verdict.status === "restricted";
   return (
-    <div className={`border-b border-line px-5 py-3 ${bg}`}>
+    <div className={`border-t border-line px-5 py-3 ${bg}`}>
       <p className={`flex items-center gap-2 font-semibold ${word} ${strong ? "text-base" : "text-sm"}`}>
         <VerdictIcon status={verdict.status} />
         {short[verdict.status]}

@@ -1,6 +1,14 @@
 import { Link, useParams } from "react-router-dom";
 import { findSchedule } from "../../data/schedules";
-import { Cite, DraftBanner, Prose, RuleCard, Section, SourceDocsContext, StatusChip } from "../components/ui";
+import {
+  Cite,
+  DraftBanner,
+  Prose,
+  RuleCard,
+  Section,
+  SourceDocsContext,
+  StatusChip,
+} from "../components/ui";
 import { minutesNow, nextDeadline, scheduleDocs, todayIso } from "../schedule";
 import { DeadlineBadge } from "../components/DeadlineBadge";
 import { RoundTable } from "../components/RoundTable";
@@ -16,58 +24,125 @@ export function SchedulePage() {
   const s = entry.schedule;
   const today = todayIso();
   const next = nextDeadline(s, today, minutesNow());
-  const wrongCourse = profile?.courseType && !s.meta.courses.includes(profile.courseType);
+  const wrongCourse =
+    profile?.courseType && !s.meta.courses.includes(profile.courseType);
 
   return (
     <SourceDocsContext.Provider value={scheduleDocs(s)}>
       <div className="space-y-6">
         {s.status === "draft" && <DraftBanner />}
-        <header>
-          <p className="text-sm text-soft"><Link to="/" className="link">All states</Link> / All India Quota</p>
-          <h1 className="mt-3 text-3xl sm:text-[40px]">{s.meta.shortTitle}</h1>
+        <header className="card p-5 sm:p-6">
+          <p className="text-sm text-soft">
+            <Link to="/" className="link">
+              All states
+            </Link>{" "}
+            / All India Quota
+          </p>
+          <div className="page-heading mt-4">
+            <div>
+              <p className="eyebrow">National counselling timeline</p>
+              <h1>{s.meta.shortTitle}</h1>
+            </div>
+          </div>
           <p className="mt-1 text-soft">
             {s.meta.authority}
             <Cite pages={s.meta.sourcePages} />
           </p>
           <div className="mt-3 flex flex-wrap items-center gap-2">
-            {s.meta.tentative && <StatusChip className="bg-warn-tint text-warn">Tentative schedule</StatusChip>}
-            <span className="text-sm text-soft">{s.meta.documentDateLabel} {formatDate(s.meta.documentDate)}</span>
+            {s.meta.tentative && (
+              <StatusChip className="bg-warn-tint text-warn">
+                Tentative schedule
+              </StatusChip>
+            )}
+            <span className="text-sm text-soft">
+              {s.meta.documentDateLabel} {formatDate(s.meta.documentDate)}
+            </span>
             {s.meta.officialWebsites.map((w) => (
-              <a key={w} href={w} target="_blank" rel="noreferrer" className="btn-secondary !py-1.5 !text-[13px]" title="MCC's official website (not printed on this schedule)">
+              <a
+                key={w}
+                href={w}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-secondary !py-1.5 !text-[13px]"
+                title="MCC's official website (not printed on this schedule)"
+              >
                 MCC website: {w.replace(/^https?:\/\/(www\.)?/, "")} ↗
               </a>
             ))}
           </div>
           <ul className="bullets mt-4 space-y-1 text-sm">
-            {s.meta.scope.map((x) => <li key={x}>{x}</li>)}
+            {s.meta.scope.map((x) => (
+              <li key={x}>{x}</li>
+            ))}
             <li>For NEET-PG courses. This schedule doesn't mention MDS.</li>
           </ul>
         </header>
 
         {wrongCourse && (
           <p className="rounded-lg border border-warn/30 bg-warn-tint px-4 py-2 text-sm text-warn">
-            <strong>Your profile says MDS.</strong> This schedule is for NEET-PG and doesn't mention MDS, so these may not be your dates.
+            <strong>Your profile says MDS.</strong> This schedule is for NEET-PG
+            and doesn't mention MDS, so these may not be your dates.
           </p>
         )}
 
-        <div className="panel-accent rounded-lg p-5">
+        <section
+          aria-label="Next MCC date"
+          className="card border-l-4 border-l-brand p-5 sm:p-6"
+        >
           {next ? (
             <>
-              <p className="text-sm opacity-80">Next deadline</p>
-              <p className="font-heading mt-1 text-3xl font-semibold tracking-tight tabular-nums sm:text-4xl">
-                {formatDate(next.date)}{next.time ? `, ${next.time}` : ""}
+              <p className="eyebrow">
+                {next.stage.key === "result" ? "Next event" : "Next deadline"}
               </p>
-              <p className="mt-1 text-sm">{next.label}</p>
-              <div className="mt-2"><DeadlineBadge date={next.date} time={next.time} kind={next.stage.key === "result" ? "event" : "deadline"} /></div>
-              <p className="mt-3 text-xs opacity-80">Times are MCC server time. {s.meta.tentative ? "Dates are tentative." : ""}</p>
+              <p className="font-heading mt-2 text-ink text-3xl font-semibold tracking-tight tabular-nums sm:text-3xl">
+                {formatDate(next.date)}
+                {next.time ? `, ${next.time}` : ""}
+              </p>
+              <p className="mt-2 text-sm">
+                {next.label}
+                <Cite pages={next.round.sourcePages} />
+              </p>
+              <div className="mt-2">
+                <DeadlineBadge
+                  date={next.date}
+                  time={next.time}
+                  kind={next.stage.key === "result" ? "event" : "deadline"}
+                />
+              </div>
+              <p className="mt-3 text-xs text-soft">
+                Times are MCC server time.{" "}
+                {s.meta.tentative ? "Dates are tentative." : ""}
+              </p>
             </>
           ) : (
-            <p className="text-sm">This schedule is over. Check the MCC website for later notices.</p>
+            <p className="text-sm">
+              This schedule is over. Check the MCC website for later notices.
+            </p>
           )}
-        </div>
+        </section>
+
+        <nav aria-label="MCC rounds" className="section-navigation no-print">
+          <p className="px-2.5 pb-1 text-xs text-soft">Jump to a round</p>
+          <div className="flex gap-1 whitespace-nowrap">
+            {s.rounds.map((r) => (
+              <a
+                key={r.id}
+                href={`#${r.round}`}
+                className="rounded-md px-3 py-2 text-sm text-body hover:bg-canvas"
+              >
+                {r.name}
+              </a>
+            ))}
+          </div>
+        </nav>
 
         {s.rounds.map((r) => (
-          <Section key={r.id} id={r.round} kicker="All India Quota" title={r.name}>
+          <Section
+            key={r.id}
+            id={r.round}
+            kicker="All India Quota"
+            title={r.name}
+          >
             <RoundTable round={r} today={today} />
           </Section>
         ))}
@@ -75,21 +150,34 @@ export function SchedulePage() {
         <Section id="milestones" kicker="Key dates" title="Academic session">
           <ul className="space-y-1 text-sm">
             {s.milestones.map((m) => (
-              <li key={m.id}><strong>{m.label}:</strong> {formatDate(m.date)}<Cite pages={m.sourcePages} /></li>
+              <li key={m.id}>
+                <strong>{m.label}:</strong> {formatDate(m.date)}
+                <Cite pages={m.sourcePages} />
+              </li>
             ))}
           </ul>
         </Section>
 
         <Section id="notes" kicker="Read this" title="Things to know">
           <div className="grid gap-3 sm:grid-cols-2">
-            {s.notes.map((n) => <RuleCard key={n.id} title={n.title} detail={n.detail} pages={n.sourcePages} />)}
+            {s.notes.map((n) => (
+              <RuleCard
+                key={n.id}
+                title={n.title}
+                detail={n.detail}
+                pages={n.sourcePages}
+              />
+            ))}
           </div>
         </Section>
 
         <Section id="gaps" kicker="Be aware" title="Not in this schedule">
           <div className="grid gap-3 sm:grid-cols-2">
             {s.gaps.map((g) => (
-              <div key={g.id} className="rounded-lg border border-dashed border-line-strong p-4">
+              <div
+                key={g.id}
+                className="rounded-lg border border-dashed border-line-strong p-4"
+              >
                 <h3 className="font-semibold">{g.title}</h3>
                 <Prose text={g.detail} pages={g.sourcePages} className="mt-1" />
               </div>

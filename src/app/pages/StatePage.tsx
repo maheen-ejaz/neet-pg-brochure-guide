@@ -38,7 +38,9 @@ function useActiveSection(ids: string[]) {
       // Right after a menu click, follow the link: sections near the page end can't scroll to the top.
       const target = window.location.hash.slice(1);
       if (Date.now() - jumpedAt < 1000 && ids.includes(target)) return setActive(target);
-      const line = 130; // just below the sticky header and section menu
+      const header = document.querySelector(".workspace-header");
+      const menu = document.querySelector(".section-navigation");
+      const line = (header?.getBoundingClientRect().bottom ?? 0) + (menu?.clientHeight ?? 0) + 24;
       let current: string | null = null;
       for (const id of ids) {
         const el = document.getElementById(id);
@@ -75,30 +77,62 @@ export function StatePage() {
     <SeatViewContext.Provider value={seatView}>
     <div className="space-y-6">
       {b.status === "draft" && <DraftBanner />}
-      <header>
-        <p className="text-sm text-soft"><Link to="/" className="link">All states</Link> / {b.meta.state}</p>
-        <h1 className="mt-3 text-3xl sm:text-[40px]">{b.meta.state} <span className="text-faint">NEET PG {b.meta.year}</span></h1>
-        <p className="mt-1 text-soft">
-          {b.meta.authority}
-          <Cite pages={b.meta.sourcePages} />
-        </p>
-        <div className="mt-3 flex flex-wrap gap-2">
-          {b.meta.officialWebsites.map((w) => (
-            <a key={w} href={w} target="_blank" rel="noreferrer" className="btn-secondary !py-1.5 !text-[13px]">
-              {w.replace(/^https?:\/\/(www\.)?/, "")} ↗
-            </a>
-          ))}
-        </div>
-        <div className="mt-5 space-y-2">
-          <SeatViewSwitch view={seatView} onChange={setSeatView} terms={b.meta.seatTerms} />
-          <SeatViewBanner view={seatView} terms={b.meta.seatTerms} />
-        </div>
-      </header>
+      <header className="card p-5 sm:p-6">
+          <p className="text-sm text-soft">
+            <Link to="/" className="link">
+              All states
+            </Link>{" "}
+            / {b.meta.state}
+          </p>
+          <div className="page-heading mt-4">
+            <div>
+              <p className="eyebrow">
+                State counselling · NEET PG {b.meta.year}
+              </p>
+              <h1>{b.meta.state}</h1>
+            </div>
+            <StatusChip
+              className={
+                b.status === "draft"
+                  ? "bg-warn-tint text-warn"
+                  : "bg-good-tint text-good"
+              }
+            >
+              {b.status === "draft" ? "Draft guide" : "Reviewed guide"}
+            </StatusChip>
+          </div>
+          <p className="mt-1 text-soft">
+            {b.meta.authority}
+            <Cite pages={b.meta.sourcePages} />
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {b.meta.officialWebsites.map((w) => (
+              <a
+                key={w}
+                href={w}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-secondary !py-1.5 !text-[13px]"
+              >
+                {w.replace(/^https?:\/\/(www\.)?/, "")} ↗
+              </a>
+            ))}
+          </div>
+          <div className="mt-5 space-y-2">
+            <SeatViewSwitch
+              view={seatView}
+              onChange={setSeatView}
+              terms={b.meta.seatTerms}
+            />
+            <SeatViewBanner view={seatView} terms={b.meta.seatTerms} />
+          </div>
+        </header>
 
       <SummaryCard b={b} verdict={verdict} profile={profile} />
       {seatView === "mgmtNri" && <SeatSummary b={b} />}
 
-      <nav aria-label="Sections" className="no-print sticky top-[53px] z-10 -mx-4 overflow-x-auto border-b border-line bg-surface/90 px-4 py-2 backdrop-blur">
+      <nav aria-label="Sections" className="section-navigation no-print">
+        <p className="px-2.5 pb-1 text-xs text-soft">Jump to a section</p>
         <ul className="flex gap-1 whitespace-nowrap">
           {NAV.map(([id, label]) => (
             <li key={id}>
