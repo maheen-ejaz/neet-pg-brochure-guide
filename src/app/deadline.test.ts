@@ -48,6 +48,11 @@ describe("deadline badges", () => {
 });
 
 describe("date kinds", () => {
+  it("brochure notification and service measurement dates are events, not submission deadlines", () => {
+    expect(kindFromLabel("Notification date")).toBe("event");
+    expect(kindFromLabel("Service eligibility measurement date")).toBe("event");
+    expect(kindFromLabel("Last date to submit the online application")).toBe("deadline");
+  });
   it("'issued on or after' starts something, so it's an event", () => {
     expect(kindFromLabel("EWS and OBC certificates: issued on or after")).toBe("event");
     expect(kindFromLabel("Internship completion deadline (MDS)")).toBe("deadline");

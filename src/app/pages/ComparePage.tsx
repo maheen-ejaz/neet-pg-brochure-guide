@@ -35,12 +35,17 @@ export function ComparePage() {
     },
     {
       label: "Sectors open to you",
-      cell: (b) => (profile ? checkEligibility(profile, b).sectors.join(" + ") || "None" : "—"),
+      cell: (b) => {
+        if (!profile) return "—";
+        const verdict = checkEligibility(profile, b);
+        return verdict.status === "incomplete" ? "Confirm eligibility requirements" : verdict.sectors.join(" + ") || "None";
+      },
     },
-    { label: "Registration fee", cell: (b) => inrShort(b.fees.registration.amountInr) },
+    { label: "Registration fee", cell: (b) => b.fees.calculationNote ? "See application and registration fee rules" : inrShort(b.fees.registration.amountInr) },
     {
       label: "Your security deposit",
       cell: (b) => {
+        if (b.fees.calculationNote) return "See quota-specific deposit rules";
         if (!profile) return b.fees.securityDeposits.map((d) => inrShort(d.amountInr)).join(" / ");
         const rec = adviseDeposit(checkEligibility(profile, b), b).recommended;
         return rec ? `${inrShort(rec.amountInr)} (${rec.label})` : "—";
@@ -49,7 +54,9 @@ export function ComparePage() {
     {
       label: "Service bond",
       cell: (b) =>
-        b.serviceBond.bond
+        b.eligibility.manualReview
+          ? "See programme-specific bond rules"
+          : b.serviceBond.bond
           ? `${b.serviceBond.bond.durationYears} yrs · ${b.serviceBond.bond.amounts.map((a) => inrShort(a.amountInr)).join(" / ")}`
           : "None stated",
     },

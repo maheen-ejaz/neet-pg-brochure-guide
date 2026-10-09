@@ -1,0 +1,2619 @@
+{
+  "meta": {
+    "id": "meta",
+    "sourcePages": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      14,
+      15,
+      43,
+      47
+    ],
+    "verified": false,
+    "note": "The Government Order abstract on PDF page 1 says Government of Keralam; the cover and prospectus say Kerala. The data label uses Kerala, matching the application-state name and profile conventions. Page 4 gives seat totals for the previous academic year only; they are not treated as 2026-27 figures. The PDF is searchable overall, with scanned annexure pages.",
+    "state": "Kerala",
+    "stateSlug": "kerala",
+    "year": 2026,
+    "title": "Kerala Medical Postgraduate Degree Courses Prospectus 2026-2027",
+    "authority": "Directorate of Medical Education, Government of Kerala; Commissioner for Entrance Examinations, Kerala for the rank list and centralized allotment",
+    "officialWebsites": [
+      "https://www.cee.kerala.gov.in",
+      "https://rcctvm.gov.in"
+    ],
+    "coursesCovered": [
+      "MD",
+      "MS"
+    ],
+    "governmentOrders": [
+      "G.O.(Ms) No.313/2026/H&FWD, dated 4th October 2026 (prospectus approval)",
+      "G.O.(Ms) No.92/2023/H&FWD, dated 19th April 2023 (Government Medical College fees)",
+      "G.O.(Ms) No.195/2021/H&FWD, dated 30th October 2021 (SEBC reservation and service quota)",
+      "G.O.(Ms) No.02/2026/BCDD, dated 3rd March 2026 (SEBC list additions)",
+      "G.O.(Rt) No.191/2026/H&FWD, dated 13th January 2026 (NRI document rules)",
+      "G.O.(P) No.106/2017/Fin, dated 14th August 2017 (Health Service deputation scheme in Annexure XIII)"
+    ],
+    "seatTerms": {
+      "government": "State Quota / Government Medical College seats",
+      "management": "Non-Government / Self-Financing seats, including Minority quota",
+      "nri": "NRI quota"
+    }
+  },
+  "status": "draft",
+  "source": {
+    "dir": "brochures/kerala/2026",
+    "pageCount": 87,
+    "scanned": true,
+    "languages": [
+      "English"
+    ],
+    "documents": [
+      {
+        "title": "Kerala Medical Postgraduate Degree Courses Prospectus 2026-2027",
+        "issued": "4th October 2026",
+        "startPage": 1,
+        "pageCount": 87
+      }
+    ]
+  },
+  "process": [
+    {
+      "id": "process-scope",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "verified": false,
+      "title": "What this prospectus covers",
+      "description": "This prospectus is for Medical Postgraduate Degree courses. The State rank list and allotment use NEET-PG 2026. The prospectus also governs admission procedures for candidates joining self-financing medical colleges. Its full conditions apply to candidates joining Government Medical Colleges, including All India Quota candidates. It does not provide a current college and speciality seat list."
+    },
+    {
+      "id": "process-apply-online",
+      "sourcePages": [
+        19,
+        20,
+        21
+      ],
+      "verified": false,
+      "title": "Apply online through CEE Kerala",
+      "description": "A NEET-PG 2026 qualified candidate applies at cee.kerala.gov.in. The five mandatory steps are registration, filling and finalizing the application, online-only fee payment, uploading the signature and documents, and printing the application acknowledgement. After Save & Finalize, the application cannot be modified. Keep the acknowledgement. The application and documents do not need to be sent to CEE. The hard-copy application and prospectus are not available from CEE or medical colleges.",
+      "link": "https://www.cee.kerala.gov.in"
+    },
+    {
+      "id": "process-registration-account",
+      "sourcePages": [
+        20
+      ],
+      "verified": false,
+      "title": "Create and keep your candidate login",
+      "description": "Registration uses the NEET application number and date of birth from the NEET-PG 2026 registration. Enter a mobile number and create a unique password of at least 8 characters with a letter, number and symbol. Note the generated application number. The application number and password are needed through admission. Do not share the password. The printed permitted special-character set for the password is [!@#$%^&*]."
+    },
+    {
+      "id": "process-upload",
+      "sourcePages": [
+        21,
+        22
+      ],
+      "verified": false,
+      "title": "Upload clear original-document scans",
+      "description": "Upload certificates as readable PDF files no larger than 300 KB. Use colour when the original is in colour. The signature must be a cropped JPG image, 150 by 100 pixels and below 30 KB, signed in black or blue ink on a plain white sheet. Originals must be produced when requested. False or bogus documents may disqualify the candidature."
+    },
+    {
+      "id": "process-payment-failure",
+      "sourcePages": [
+        20,
+        21
+      ],
+      "verified": false,
+      "title": "Check the payment tab after a failed or uncertain transaction",
+      "description": "Online payment is through internet banking, credit card or debit card. Check whether the payment tab is green to confirm success. If an unsuccessful transaction debits your account, the prospectus says the amount will return within five working days."
+    },
+    {
+      "id": "process-service-application",
+      "sourcePages": [
+        17,
+        25
+      ],
+      "verified": false,
+      "title": "Service candidates also submit a department copy",
+      "description": "Choose the service quota type in the online application. A service candidate applying for General seats pays an additional application fee. Send the application acknowledgement printout and uploaded-document printouts with the required original service documents to the controlling officer of the department, not directly to CEE."
+    },
+    {
+      "id": "process-rank-list",
+      "sourcePages": [
+        17,
+        26
+      ],
+      "verified": false,
+      "title": "CEE publishes merit and category lists",
+      "description": "CEE prepares the rank list and category lists from NEET-PG 2026 for candidates who qualify and satisfy the prospectus eligibility conditions. Service quota rank lists are prepared through the relevant departments and published by CEE when received."
+    },
+    {
+      "id": "process-aiq-private",
+      "sourcePages": [
+        4,
+        8,
+        26
+      ],
+      "verified": false,
+      "title": "All India and non-Government seats use separate counselling routes",
+      "description": "MCC under DGHS conducts All India Quota allotment. CEE runs common counselling for seats in non-Government medical colleges/institutions, including Minority and NRI quota seats, from its NEET-PG-based rank list. Check NMC and KUHS for the recognized/permitted status of a seat before admission."
+    },
+    {
+      "id": "process-counselling",
+      "sourcePages": [
+        26,
+        27,
+        31,
+        42
+      ],
+      "verified": false,
+      "title": "Register college and speciality options online",
+      "description": "CEE runs a single-window online Centralized Allotment Process. Allotment follows NEET rank, eligible category and the candidate's saved option order. The State counselling for each phase is to follow completion of the corresponding MCC All India phase. CEE will notify dates separately."
+    },
+    {
+      "id": "process-admission",
+      "sourcePages": [
+        5,
+        25,
+        30,
+        33
+      ],
+      "verified": false,
+      "title": "Report with original documents and fees",
+      "description": "Report to the allotted institution within the notified schedule, pay the tuition and University fees due at admission, and produce originals. An allotment through the single-window system does not replace the admitting institution's eligibility verification."
+    },
+    {
+      "id": "process-updates",
+      "sourcePages": [
+        42
+      ],
+      "verified": false,
+      "title": "Check CEE updates yourself",
+      "description": "The prospectus says CEE will not send communications directly to candidates. Check the CEE Kerala website regularly for updates and notices.",
+      "link": "https://www.cee.kerala.gov.in"
+    }
+  ],
+  "eligibility": {
+    "listedHomeInstitutions": {
+      "id": "eligibility-listed-institutions",
+      "sourcePages": [
+        7
+      ],
+      "verified": false,
+      "label": "No separately listed MBBS institution is given a special home-state classification in this prospectus",
+      "names": []
+    },
+    "inServiceLabel": {
+      "id": "eligibility-in-service-label",
+      "sourcePages": [
+        15,
+        16
+      ],
+      "verified": false,
+      "label": "A regular Medical Education, Health Services or Insurance Medical Services employee who meets that department's service-quota rules and appears on its sponsored list"
+    },
+    "quotaTerms": {
+      "id": "eligibility-quota-terms",
+      "sourcePages": [
+        8,
+        9,
+        15,
+        34
+      ],
+      "verified": false,
+      "terms": [
+        {
+          "code": "General Merit",
+          "meaning": "General Merit quota"
+        },
+        {
+          "code": "SM",
+          "meaning": "State Merit, used as a conversion destination; the prospectus does not separately define it"
+        },
+        {
+          "code": "SC",
+          "meaning": "Scheduled Castes"
+        },
+        {
+          "code": "ST",
+          "meaning": "Scheduled Tribes"
+        },
+        {
+          "code": "EZ",
+          "meaning": "Ezhavas"
+        },
+        {
+          "code": "BH",
+          "meaning": "Other Backward Hindus"
+        },
+        {
+          "code": "MU",
+          "meaning": "Muslims"
+        },
+        {
+          "code": "LA",
+          "meaning": "Latin Catholic and Anglo Indians"
+        },
+        {
+          "code": "BX",
+          "meaning": "Other Backward Christians"
+        },
+        {
+          "code": "KU",
+          "meaning": "Kudumbi"
+        },
+        {
+          "code": "EW",
+          "meaning": "Economically Weaker Sections in the General category"
+        },
+        {
+          "code": "PD",
+          "meaning": "Persons with benchmark disabilities; the prospectus also uses PwD"
+        },
+        {
+          "code": "XS",
+          "meaning": "Ex-Service"
+        },
+        {
+          "code": "MESQ",
+          "meaning": "Medical Education Service Quota"
+        },
+        {
+          "code": "HSQ",
+          "meaning": "Health Service Quota"
+        },
+        {
+          "code": "IMSQ",
+          "meaning": "Insurance Medical Service Quota"
+        },
+        {
+          "code": "NRI Open",
+          "meaning": "NRI open quota"
+        },
+        {
+          "code": "NRI Minority",
+          "meaning": "NRI Minority quota"
+        },
+        {
+          "code": "MM",
+          "meaning": "Muslim Minority"
+        },
+        {
+          "code": "AC",
+          "meaning": "Christian Minority"
+        }
+      ]
+    },
+    "manualReview": {
+      "id": "eligibility-manual-review",
+      "sourcePages": [
+        6,
+        7,
+        8,
+        11,
+        15,
+        16,
+        23,
+        24,
+        48,
+        49,
+        50,
+        80,
+        81
+      ],
+      "verified": false,
+      "title": "Confirm Kerala's route and category requirements",
+      "detail": "The profile cannot determine Kerala origin through a parent, whether parents are non-Keralite, the detailed NRI sponsor relationship, service department/cadre/probation/seniority, service years and age, Kerala community subcategory or OEC status, EWS income/assets, or the course-specific disability assessment. It also has no NEET-PG percentile or marks input. Check the cited rules and certificates with CEE before treating any profile result as final. The prospectus requires Indian citizenship except for the stated OCI treatment and gives a separate route to non-Keralite service doctors by a court judgment.",
+      "severity": "warning"
+    },
+    "rules": [
+      {
+        "id": "elig-mds-not-covered",
+        "sourcePages": [
+          3,
+          4,
+          6
+        ],
+        "verified": false,
+        "title": "MDS is not covered by this prospectus",
+        "explanation": "The supplied Kerala prospectus covers Medical Postgraduate Degree courses, not MDS admission. Consult the course-specific prospectus for dental counselling.",
+        "condition": {
+          "fact": "courseType",
+          "in": [
+            "dental"
+          ]
+        },
+        "effect": {
+          "type": "notCovered"
+        }
+      },
+      {
+        "id": "elig-neet-pg",
+        "sourcePages": [
+          6,
+          8,
+          26
+        ],
+        "verified": false,
+        "title": "Qualify NEET-PG 2026",
+        "explanation": "You must qualify NEET-PG 2026 and satisfy the prospectus conditions. The printed minimum is the 50th percentile for General and EWS candidates; 40th percentile for SC, ST, SEBC, SC-PwD, ST-PwD and SEBC-PwD candidates and service candidates in those categories; and 45th percentile for General-PwD and EWS-PwD candidates. The profile does not collect NEET percentile or all Kerala community subcategories, so confirm this manually.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-internship-deadline",
+        "sourcePages": [
+          6,
+          7
+        ],
+        "verified": false,
+        "title": "Complete the one-year internship by 30th September 2026",
+        "explanation": "For the Medical PG Degree course covered by this prospectus, you must have completed or be likely to complete one year of internship on or before 30th September 2026. Admission is only after Kerala State Medical Council or erstwhile Travancore-Cochin Medical Council registration. The profile's broad clinical course option also includes courses this prospectus does not cover, so this rule is shown for manual confirmation.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        },
+        "note": "The date is encoded in importantDates. The course-specific condition is manual because the profile cannot distinguish MD/MS from other clinical courses."
+      },
+      {
+        "id": "elig-academic-qualification",
+        "sourcePages": [
+          6,
+          7
+        ],
+        "verified": false,
+        "title": "MBBS qualification and medical registration",
+        "explanation": "Applicants must hold an MBBS degree or provisional MBBS pass certificate recognized by NMC (MCI), have permanent or provisional NMC (MCI) or State Medical Council registration, and obtain Kerala State Medical Council or erstwhile T.C. Medical Council registration before admission.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-kerala-origin",
+        "sourcePages": [
+          7,
+          22
+        ],
+        "verified": false,
+        "title": "Indian citizens of Kerala origin",
+        "explanation": "One admission route is for Indian citizens of Kerala origin. The prospectus accepts proof that you or your father or mother was born in Kerala, including a qualifying school-leaving certificate, Indian passport or birth certificate, or a Village Officer Kerala-origin nativity certificate. If you use a parent's birth record, upload proof of your relationship. The profile does not ask whether a parent was born in Kerala, so confirm this route manually.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-nonkeralite-kerala-mbbs",
+        "sourcePages": [
+          7,
+          22
+        ],
+        "verified": false,
+        "title": "Non-Keralite parents and MBBS from Kerala",
+        "explanation": "A son or daughter of non-Keralite parents who obtained an MBBS degree from a medical college in Kerala may apply under the stated nativity route. This route does not provide Communal, Special or PwD reservation benefits, and the candidate must execute the one-year Senior Resident bond. The profile does not identify the parents' nativity, so confirm the route and its seat scope manually.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-nonkeralite-service",
+        "sourcePages": [
+          7
+        ],
+        "verified": false,
+        "title": "Non-Keralite in-service doctors",
+        "explanation": "A Kerala High Court judgment dated 7th March 2024 says the nativity clause cannot disqualify the petitioner or other Medical Officers from applying under the service quota. The prospectus therefore says non-Keralite in-service doctors may apply under service quota. The judgment-based route still depends on the applicable service-quota conditions and department sponsorship; confirm it with the department.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-oci",
+        "sourcePages": [
+          7
+        ],
+        "verified": false,
+        "title": "OCI cardholders",
+        "explanation": "The prospectus treats OCI cardholders at par with Indian citizens for counselling. It says they may be considered for UR (General) seats and NRI seats, but not any reservation category. It also says PIO/OCI candidates cannot claim any kind of reservation.",
+        "condition": {
+          "fact": "nationality",
+          "in": [
+            "oci"
+          ]
+        },
+        "effect": {
+          "type": "treatAsCategory",
+          "category": "UR"
+        },
+        "note": "The UR treatment follows the prospectus's explicit eligibility for UR seats and exclusion from every reservation. The profile cannot check the separate NRI sponsor requirements."
+      },
+      {
+        "id": "elig-foreign-national",
+        "sourcePages": [
+          7
+        ],
+        "verified": false,
+        "title": "Indian citizenship rule",
+        "explanation": "The prospectus says only Indian citizens may apply to professional courses unless otherwise notified. It gives the stated OCI exception but no admission route for other foreign nationals in this Medical PG Degree counselling.",
+        "condition": {
+          "fact": "nationality",
+          "in": [
+            "foreign"
+          ]
+        },
+        "effect": {
+          "type": "ineligible"
+        }
+      },
+      {
+        "id": "elig-nri-sponsor",
+        "sourcePages": [
+          23,
+          24,
+          25
+        ],
+        "verified": false,
+        "title": "NRI quota sponsor route",
+        "explanation": "The prospectus permits an NRI quota application when the candidate depends on a sponsor working abroad from its listed family relationships: father, mother, brother or sister (the text says inclusive of first cousins), husband or wife, a brother or sister (inclusive of first cousins) of either parent, half-brother or half-sister, or adopted father or mother. The relationship and employment must be documented. The profile does not capture these relationships exactly, so eligibility and NRI-only seat access require manual review.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        },
+        "seats": [
+          "nri"
+        ],
+        "note": "The relationship wording repeats siblings and first cousins and is grammatically ambiguous; the source wording is preserved in the explanation and the ambiguity is logged."
+      },
+      {
+        "id": "elig-pwd-assessment",
+        "sourcePages": [
+          10,
+          11,
+          23,
+          48,
+          49,
+          50
+        ],
+        "verified": false,
+        "title": "PwD eligibility needs disability and course assessment",
+        "explanation": "The prospectus describes 5% horizontal reservation for candidates with benchmark disabilities, generally at least 40%, across State-available seats for all courses in Government/Aided Colleges, excluding All India and Service Quota seats. The State Level Committee decides eligibility and suitability for each course. Annexure V lists locomotor disabilities (leprosy cured, cerebral palsy, dwarfism, muscular dystrophy, acid-attack survivors and others such as amputation or poliomyelitis): below 40% is not eligible for PwD quota, 40-80% is eligible for Medical course and PwD quota, and above 80% is not eligible for the Medical course. It warns about hand sensation/strength/range and, for cerebral palsy, vision, hearing and cognition. For blindness/low vision, the table lists under-40% categories 0, I and II (10%, 20%, 30%) as eligible for Medical course but not PwD quota, and category III or above (at least 40%) as not eligible; a footnote says over-40% may be made eligible if advanced low-vision aids reduce disability below 40%. For deaf/hard-of-hearing cases, the table lists below 40% as Medical-course eligible but not PwD quota and at least 40% as not eligible; a footnote says over-40% may be considered if assistive devices reduce it below 40% and speech discrimination exceeds 60%. Organic/neurological speech-language disability below 40% is listed as Medical-course eligible but not PwD quota and at least 40% as not eligible; MBBS-only footnotes cite Speech Intelligibility Affected score at most 3 and Aphasia Quotient at most 40%. Specific learning disability is below 40% not eligible for PwD quota; at least 40% may be considered after an expert-panel learning-competency assessment with remediation/assistive technology/aids/infrastructure; above 80%, severe nature or significant cognitive/intellectual disability is not eligible. Autism with absent/mild disability or Asperger syndrome at 40-60% is considered only if an expert panel finds the person fit; the table says no objective assessment method currently supports reservation and at least 60%, cognitive/intellectual disability or an unfit decision is not eligible. Mental illness is listed as absence/mild disability below 40% under IDEAS; the table says assessment is currently not recommended due to lack of objective method and at least 40% or unfitness is not eligible. Multiple sclerosis/Parkinsonism and haemophilia/thalassemia/sickle cell list below 40% as not eligible for PwD quota, 40-80% eligible and above 80% not eligible. Multiple disability uses the printed combination formula a+b(90-a)/90 and requires individual review. The Committee uses NEET merit and physical suitability, not disability percentage alone. Check Annexure V and current PG committee rules. CEE prepares and publishes the PwD-eligible list from State Level Committee recommendations. The prospectus incorporates interim NMC guidance U-12021/11/2025-MEC dated 17th October 2025 for the earlier academic year; confirm the operative guidance for this counselling.",
+        "condition": {
+          "all": [
+            {
+              "fact": "nationality",
+              "in": [
+                "indian"
+              ]
+            },
+            {
+              "fact": "pwd",
+              "in": [
+                true
+              ]
+            }
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        },
+        "note": "Annexure V is a Medical-course guideline table; it includes MBBS references. The prospectus also invokes an NMC PG guideline and a State Level Committee, so the annexure alone does not resolve every PG course-specific case."
+      },
+      {
+        "id": "elig-service-quota",
+        "sourcePages": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "verified": false,
+        "title": "Service quota is department- and cadre-specific",
+        "explanation": "Service seats are sponsored under MESQ, HSQ and IMSQ in a 45:45:10 ratio. MESQ is for regular lecturers in Kerala Government Medical Colleges and also names IIMS Palakkad subject to a final Supreme Court decision. HSQ is for regular Medical Officers in Government Health Services institutions or hospitals. IMSQ is for regular Medical Officers in Government Insurance Medical Services institutions or hospitals. Candidates must complete probation in the relevant cadre by CEE's application notification; provisional service before regular appointment does not count. The profile does not collect department, cadre, probation or sponsorship evidence.",
+        "condition": {
+          "fact": "inService",
+          "in": [
+            true
+          ]
+        },
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-service-age",
+        "sourcePages": [
+          7,
+          16
+        ],
+        "verified": false,
+        "title": "Service quota age and remaining-service limits",
+        "explanation": "There is no general upper age limit. MESQ candidates must be at most 49 on the last day of December in the year the CEE notification is issued and assure at least 10 years of service after the course. HSQ and IMSQ candidates must be at most 47 on that date and assure at least 10 years after the course. The notice year and candidate age/service remaining are not collected by the profile.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-service-rank-weightage",
+        "sourcePages": [
+          16,
+          17
+        ],
+        "verified": false,
+        "title": "Service quota ranking and weightage",
+        "explanation": "The department controlling officer prepares a seniority list, with service reckoned on the CEE application-notification date. CEE sends the applicant list to the department; the controlling officer scrutinizes records and publishes a provisional rank list, accepts complaints within the prescribed period (email objections are also considered), then forwards the final list through DME and the PG Selection Committee to CEE. Service weightage is 1% of NEET marks for each service year; Rural Service is 2% per year; Difficult Rural Service is 5% per year. The combined weightage from all service areas is capped at 30% of marks. Doctors in approved Government Hospital Casualty Units may claim Rural Service weightage. Unauthorized absence, Leave Without Allowance (including medical leave) and most deputation periods do not count toward minimum service or seniority; deputation to autonomous institutions, projects, societies or agencies under the parent department's administrative control does count. If physical service ties, PSC seniority decides. The profile cannot calculate these records. Regular rural stations are defined by the Standardized list of Government Allopathic Medical Institutions-2013, approved by the cited Government Order. That list is not reproduced here; confirm whether the exact institution and service period qualify.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-service-repeat",
+        "sourcePages": [
+          17,
+          18
+        ],
+        "verified": false,
+        "title": "Service quota may be used once, with a same-specialty diploma exception",
+        "explanation": "A candidate previously selected for or having undergone a PG Degree under Service Quota cannot receive the PG Degree service-quota benefit a second time. A candidate who obtained a PG Diploma under Service Quota may apply for a PG Degree in the same specialty and use the service-quota benefit for that degree only. A lecturer with a PG Degree or Dip.N.B in the specialty corresponding to their current branch is not eligible in that specialty. Lecturers who already completed a PG course through the Tutor/Lecturer trainee scheme cannot use the quota a second time. Service quota candidates must join the selected course; the prospectus says a candidate who does not join or discontinues after the third allotment will not be considered for a future PG service-quota selection.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-mesq-specialty-exceptions",
+        "sourcePages": [
+          18
+        ],
+        "verified": false,
+        "title": "MESQ lecturer specialty exceptions",
+        "explanation": "The prospectus lists these lecturer-to-degree exceptions: Neurology, Gastroenterology, Cardiology, Nephrology, Infectious Diseases, Endocrinology and Haematology lecturers may apply for MD General Medicine; Neurosurgery, Paediatric Surgery, Plastic Surgery, Genito Urinary Surgery, Thoracic Surgery, Traumatic Surgery and Surgical Gastroenterology lecturers may apply for MS General Surgery; Nuclear Medicine lecturers may apply for MD Radiotherapy. Other lecturers may apply only in their own subject/specialty.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-service-disciplinary",
+        "sourcePages": [
+          17
+        ],
+        "verified": false,
+        "title": "Service applications may be screened for disciplinary action",
+        "explanation": "The PG Selection Committee may deny admission to a service candidate facing disciplinary action. A candidate facing disciplinary action involving a major penalty must not be recommended by the Head of Department. Any declaration may be attached to the application and is subject to Government review and approval.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-exservice",
+        "sourcePages": [
+          9,
+          11
+        ],
+        "verified": false,
+        "title": "Ex-Service and dependent special categories",
+        "explanation": "The prospectus reserves an Ex-Service seat for a candidate of Kerala origin and a dependent seat with a Jawan killed in action first and a dependent of an Ex-serviceman next. It requires merit and the stated military-service or dependent certificate. The description of how many dependent seats are reserved differs between clauses; see the Ex-Service reservation rule and confirm the operative roster with CEE.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-prior-admission-service",
+        "sourcePages": [
+          17,
+          18
+        ],
+        "verified": false,
+        "title": "Service quota cannot be claimed twice for a PG Degree",
+        "explanation": "Service quota candidates must declare that they have not previously been selected for or undergone a PG Degree under Service Quota. A prior PG Diploma in the same specialty has the limited exception described in the prospectus.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "warning"
+        }
+      },
+      {
+        "id": "elig-course-scope",
+        "sourcePages": [
+          3,
+          4,
+          6,
+          26
+        ],
+        "verified": false,
+        "title": "Only Medical PG Degree courses are covered",
+        "explanation": "This prospectus is for Medical Postgraduate Degree courses. It does not provide a separate admission route for MDS, PG Diploma or DNB courses. The profile groups clinical courses together and cannot distinguish those courses from MD/MS, so confirm the course-specific prospectus before applying.",
+        "condition": null,
+        "effect": {
+          "type": "notCovered"
+        },
+        "note": "This is a manual scope warning, not a courseType-based automatic exclusion, because the profile has no MD/MS/Diploma/DNB distinction."
+      },
+      {
+        "id": "elig-aiq-conditions",
+        "sourcePages": [
+          4
+        ],
+        "verified": false,
+        "title": "Government college conditions also apply to All India Quota candidates",
+        "explanation": "All India Quota selection is conducted by MCC. The prospectus says all its conditions apply to All India Quota candidates and that its full conditions apply to all candidates taking admission in Government Medical Colleges, including AIQ candidates.",
+        "condition": null,
+        "effect": {
+          "type": "note",
+          "tone": "info"
+        }
+      }
+    ]
+  },
+  "reservation": {
+    "policy": {
+      "id": "reservation-policy",
+      "sourcePages": [
+        8,
+        9,
+        10,
+        14,
+        15
+      ],
+      "verified": false,
+      "appliesTo": "The prospectus lists these shares for State Quota counselling. It says 10% of State Quota seats in Government Medical Colleges are for Service candidates; the remaining categories are listed at the printed percentages. The separate 5% PwD horizontal reservation is for State-available seats in Government/Aided Colleges, leaving All India and Service Quota seats aside. A later service-quota sentence on page 15 is unclear; see notes.",
+      "vertical": [
+        {
+          "category": "Service Quota",
+          "percent": 10
+        },
+        {
+          "category": "SC",
+          "percent": 8
+        },
+        {
+          "category": "ST",
+          "percent": 2
+        },
+        {
+          "category": "Ezhava (EZ)",
+          "percent": 8
+        },
+        {
+          "category": "Other Backward Hindu (BH)",
+          "percent": 7
+        },
+        {
+          "category": "Muslim (MU)",
+          "percent": 7
+        },
+        {
+          "category": "Latin Catholic and Anglo Indian (LA)",
+          "percent": 3
+        },
+        {
+          "category": "Other Backward Christian (BX)",
+          "percent": 1
+        },
+        {
+          "category": "Kudumbi (KU)",
+          "percent": 1
+        },
+        {
+          "category": "EWS in General Category (EW)",
+          "percent": 10
+        }
+      ],
+      "horizontal": [
+        {
+          "category": "Persons with benchmark disabilities (PD/PwD)",
+          "percent": 5
+        }
+      ],
+      "note": "The remaining seats are General Merit. The prospectus says SEBC is 27% in total and divides it among EZ, BH, MU, LA, BX and KU. The printed category shares and special/service seat wording are preserved without calculating a final seat count."
+    },
+    "conversion": {
+      "id": "reservation-conversion",
+      "sourcePages": [
+        13,
+        14,
+        15,
+        34
+      ],
+      "verified": false,
+      "when": "During third-round option processing when seats remain unfilled after fresh options; the prospectus says the same conversion rules also apply in stray vacancy filling. Conversion can occur even if candidates in the original category are on the rank list but did not option that category seat.",
+      "steps": [
+        {
+          "from": "SC",
+          "to": "ST"
+        },
+        {
+          "from": "ST",
+          "to": "SC"
+        },
+        {
+          "from": "Categories included in SEBC",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "EWS",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "General PwD",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "SC PwD",
+          "to": "SC"
+        },
+        {
+          "from": "ST PwD",
+          "to": "ST"
+        },
+        {
+          "from": "Categories included in SEBC PwD",
+          "to": "SEBC"
+        },
+        {
+          "from": "EWS PwD",
+          "to": "EWS"
+        },
+        {
+          "from": "XS (Ex-Service)",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "Dependent of Jawan killed in action",
+          "to": "Dependent of Ex-serviceman"
+        },
+        {
+          "from": "Dependent of Ex-serviceman",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "NRI Minority",
+          "to": "NRI Open"
+        },
+        {
+          "from": "NRI Open",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "Service Quota",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "MM (Muslim Minority)",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "AC (Christian Minority)",
+          "to": "SM (State Merit)"
+        },
+        {
+          "from": "Unfilled SC/ST after reciprocal conversion",
+          "to": "OEC; if still unfilled, State Merit"
+        }
+      ],
+      "note": "The prospectus does not define SM separately. It separately says the Jawan-killed-in-action dependent seat has priority over the dependent-of-Ex-serviceman seat and otherwise goes to State Merit."
+    },
+    "rules": [
+      {
+        "id": "reservation-sebc-shares",
+        "sourcePages": [
+          8,
+          9,
+          14,
+          15
+        ],
+        "verified": false,
+        "title": "SEBC is six community groups, not one profile category",
+        "detail": "The prospectus sets 27% SEBC reservation under State Quota: Ezhava (EZ) 8%, Muslim (MU) 7%, Other Backward Hindu (BH) 7%, Latin Catholic and Anglo Indian (LA) 3%, Other Backward Christian (BX) 1%, and Kudumbi (KU) 1%. EZ, BH, MU, LA, BX and KU reservation is limited to candidates outside the Creamy Layer. The profile's generic OBC field cannot select these Kerala groups.",
+        "severity": "warning"
+      },
+      {
+        "id": "reservation-sebc-lists",
+        "sourcePages": [
+          14,
+          15,
+          53,
+          54,
+          55
+        ],
+        "verified": false,
+        "title": "Only listed Kerala communities can claim SEBC reservation",
+        "detail": "Only communities in Annexure VIII and its 2026 continuation are considered. The prospectus says claims for communities outside those lists are rejected even if a Revenue Officer certificate was uploaded. Claimants upload the Village Officer Non-Creamy Layer certificate in the Kerala State Educational Purpose format. The full lists, aliases and district limits are recorded in Annexure VIII below.",
+        "severity": "critical"
+      },
+      {
+        "id": "reservation-sebc-intercaste",
+        "sourcePages": [
+          14,
+          15,
+          23
+        ],
+        "verified": false,
+        "title": "SEBC claim for children of inter-caste married couples",
+        "detail": "A child may claim SEBC if either or both parents belong to a listed SEBC community. Upload the candidate-specific Non-Creamy Layer certificate. If both parents belong to different listed SEBC communities, choose one community in the application; the claim is final and cannot later be changed. If one parent is SC/ST, the prospectus also describes educational and monetary benefits and requires the Annexure X inter-caste marriage certificate for the stated benefit.",
+        "severity": "warning"
+      },
+      {
+        "id": "reservation-scst-certificates",
+        "sourcePages": [
+          12,
+          13,
+          22,
+          51,
+          52,
+          53
+        ],
+        "verified": false,
+        "title": "SC/ST status and certificates are verified against Kerala rules",
+        "detail": "Upload the candidate's own Community Certificate from a Revenue Officer not below Tahsildar in the prescribed format. It must say the candidate, not a parent, belongs to the community; certificates issued earlier for other purposes are not accepted. A Christian convert who embraced Hinduism must use the prescribed certificate and record the required Government Circular wording. A reconverted Hindu of SC origin must also upload the Gazette notification. Claims are subject to the Screening Committee. Migrant claims are restricted: the prospectus says only children of people who migrated to Kerala before the 1950 SC/ST Presidential Orders and ordinarily reside in Kerala may claim Kerala SC/ST benefits, and proof may be required. There is no separate reservation quota for children of an inter-caste couple where one parent is SC/ST.",
+        "severity": "critical"
+      },
+      {
+        "id": "reservation-false-scst",
+        "sourcePages": [
+          13
+        ],
+        "verified": false,
+        "title": "False SC/ST certificates can cancel admission and qualifications",
+        "detail": "A false SC/ST certificate can lead to prosecution, cancellation of admission, withdrawal or recovery of financial benefits, and cancellation of a degree or other qualification obtained through the false certificate under the cited Act.",
+        "severity": "critical"
+      },
+      {
+        "id": "reservation-unavailed-scst",
+        "sourcePages": [
+          13,
+          34
+        ],
+        "verified": false,
+        "title": "Unfilled SC/ST seats transfer in a stated order",
+        "detail": "Unavailed SC seats go to ST and vice versa. If neither has eligible candidates, the seat goes to OEC candidates with a Village Officer Non-Creamy Layer certificate; any seat still unavailed goes to General Merit / State Merit.",
+        "severity": "warning"
+      },
+      {
+        "id": "reservation-ews",
+        "sourcePages": [
+          11,
+          12,
+          23,
+          44,
+          80,
+          81
+        ],
+        "verified": false,
+        "title": "EWS reservation needs the prescribed income-and-assets certificate",
+        "detail": "The prospectus lists 10% EWS reservation in the General category for institutions other than minority institutions where reservation for other backward classes is provided. The income-and-assets certificate must show family income within the limit and assets below the limit in the referenced Government Order, and that the candidate does not belong to SC, ST or SEBC. The scanned Annexure XVIII gives no numeric income or asset thresholds. Its second format is for a Kerala resident whose name appears on a ration card issued under Antyodaya Anna Yojana (AAY) or Priority Household (PHH); it also excludes SC/ST/SEBC and says eligible OEC communities are excluded from General Category. The form's footnote defines General Category as classes other than SC, ST, SEBC and Other Backward Class. Confirm the current format and limits with the issuing Village Officer.",
+        "severity": "warning",
+        "note": "The order number/type/date differ between the body and Annexure XVIII; see notes."
+      },
+      {
+        "id": "reservation-pwd",
+        "sourcePages": [
+          10,
+          11,
+          23,
+          48,
+          49,
+          50
+        ],
+        "verified": false,
+        "title": "PwD reservation is horizontal and requires committee clearance",
+        "detail": "Five percent horizontal reservation is described for State-available seats in Government/Aided Colleges after leaving out All India Quota and Service Quota seats. The prospectus says candidates generally need at least 40% disability, must meet NMC course criteria, and are evaluated by a State Level Committee for both eligibility and suitability for each chosen course. Merit and physical suitability are considered; percentage alone does not decide selection. The body says no certificate is uploaded with the online application, while the cited MCC guidance says an eligible candidate submits a valid UDID card and self-attested Schedule 1 affidavit and a certifying-authority certificate for at least 40%; confirm where and when these are required.",
+        "severity": "warning"
+      },
+      {
+        "id": "reservation-exservice",
+        "sourcePages": [
+          9,
+          10,
+          11,
+          34
+        ],
+        "verified": false,
+        "title": "Ex-Service and dependent seats have a special priority",
+        "detail": "The prospectus places the special Ex-Service and dependent categories outside the roster. It describes an Ex-Service Kerala-origin seat and a dependent seat with a dependent of a Jawan killed in action first, then a dependent of an Ex-serviceman; if no qualified candidate is available, the seat goes to merit. It also says the dependent certificate must be issued by the Zilla Sainik Welfare Officer not earlier than six months before the final application date. The pages differ in their count description; confirm the current roster.",
+        "severity": "warning"
+      },
+      {
+        "id": "reservation-service-shares",
+        "sourcePages": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "verified": false,
+        "title": "Service quota uses department lists and separate ranking",
+        "detail": "The prospectus states 10% of State Quota seats in Government Medical Colleges are earmarked for Service Quota and gives a 45:45:10 split among MESQ, HSQ and IMSQ. It also contains the sentence: All State Quota seats other than those mentioned in Clause 6 (1 to 10) are earmarked for Service Quota candidates. If no eligible candidate is available in the DME service quota, the text sends 20% of its vacant seats to IMS and 80% to DHS; if four or fewer DME vacancies are handled this way, one seat goes to IMS and the rest to DHS. Any unavailed Service Quota seats then go to General Merit. The relationship between that sentence and the 10% share is unclear. Department lists, eligibility, rural weightage and conversion are described in the cited clauses; confirm the operative seat matrix with CEE.",
+        "severity": "warning"
+      },
+      {
+        "id": "reservation-unavailed-sebc",
+        "sourcePages": [
+          15
+        ],
+        "verified": false,
+        "title": "Unavailed SEBC seats go to General Merit",
+        "detail": "The prospectus says unavailed seats of SEBC category candidates transfer to General Merit.",
+        "severity": "info"
+      },
+      {
+        "id": "reservation-seat-matrix-method",
+        "sourcePages": [
+          9,
+          10
+        ],
+        "verified": false,
+        "title": "Category and specialty seats follow an extended roster",
+        "detail": "The current roster and seat matrix are prepared as extensions of the previous year's roster and matrix. Category points are mapped hierarchically across reserved and unreserved groups, SC/ST, SEBC subcategories and EWS, then across degree/diploma, clinical/non-clinical, speciality and institution groupings. Fractional deficits or surpluses carry to later matrix extensions in the current or next year. New seats before the next round are added using the same method; withdrawn or derecognized seats are removed without changing the remaining matrix, with lost roster points compensated in a later extension.",
+        "severity": "info"
+      }
+    ]
+  },
+  "fees": {
+    "registration": {
+      "id": "fee-application-base",
+      "sourcePages": [
+        19,
+        20
+      ],
+      "verified": false,
+      "amountInr": 1000,
+      "covers": "Standard online application fee for General and Service Quota candidates. SC/ST candidates and candidates eligible for SC/ST benefits pay ₹500; a Service Quota candidate applying for General seats pays an additional ₹1,000. See the separate fee options.",
+      "refundable": false
+    },
+    "registrationOptions": [
+      {
+        "id": "fee-application-standard",
+        "sourcePages": [
+          19,
+          20
+        ],
+        "verified": false,
+        "amountInr": 1000,
+        "covers": "Online application fee for General and Service Quota candidates.",
+        "refundable": false
+      },
+      {
+        "id": "fee-application-concession",
+        "sourcePages": [
+          19
+        ],
+        "verified": false,
+        "amountInr": 500,
+        "covers": "Online application fee for SC/ST candidates and candidates eligible for SC/ST benefits.",
+        "refundable": false
+      },
+      {
+        "id": "fee-service-general-application",
+        "sourcePages": [
+          19
+        ],
+        "verified": false,
+        "amountInr": 1000,
+        "covers": "Additional application fee when a Service Quota candidate also applies for General seats.",
+        "refundable": false
+      },
+      {
+        "id": "fee-phase3-government",
+        "sourcePages": [
+          5,
+          32
+        ],
+        "verified": false,
+        "amountInr": 57890,
+        "covers": "Third-phase fresh option-registration fee if the candidate opts only for a Government Medical College seat: the annual Government Medical College tuition fee shown in the prospectus. The fee is adjusted against course fees if allotted, or refunded after counselling if not allotted. This figure is not established for an RCC seat; RCC tuition is delegated to its website, and the final-round fee follows the tuition of the seat opted.",
+        "refundable": true,
+        "note": "The prospectus says the final-round fee equals the annual tuition fee. ₹57,890 is the Government Medical College amount listed on page 5 and may change by Government Order."
+      },
+      {
+        "id": "fee-phase3-government-concession",
+        "sourcePages": [
+          5,
+          32
+        ],
+        "verified": false,
+        "amountInr": 28945,
+        "covers": "Third-phase fresh option-registration fee for a fee-concession candidate who opts only for a Government Medical College seat; the prospectus says half the Government-seat amount. This figure is not established for an RCC seat; RCC tuition is delegated to its website, and the final-round fee follows the tuition of the seat opted.",
+        "refundable": true,
+        "note": "Calculated as half of the ₹57,890 tuition fee printed on page 5; confirm if the Government fee changes."
+      },
+      {
+        "id": "fee-phase3-private",
+        "sourcePages": [
+          32
+        ],
+        "verified": false,
+        "amountInr": 100000,
+        "covers": "Third-phase fresh option-registration fee if the candidate opts also for a seat in a Private Self-Financing Medical College. The fee is adjusted against course fees if allotted, or refunded after counselling if not allotted.",
+        "refundable": true
+      },
+      {
+        "id": "fee-phase3-private-concession",
+        "sourcePages": [
+          32
+        ],
+        "verified": false,
+        "amountInr": 50000,
+        "covers": "Third-phase fresh option-registration fee for a fee-concession candidate who opts also for a Private Self-Financing Medical College; the prospectus says half of ₹1,00,000. ₹50,000 is calculated from that printed half-rate instruction; refund and forfeiture depend on the stated conditions.",
+        "refundable": true,
+        "note": "₹50,000 is calculated as half of the printed ₹1,00,000 fee, not printed as a separate numerical amount."
+      }
+    ],
+    "calculationNote": {
+      "id": "fee-calculation-note",
+      "sourcePages": [
+        5,
+        19,
+        31,
+        32
+      ],
+      "verified": false,
+      "title": "Fees depend on your category, options and college",
+      "detail": "The application fee and final-phase option-registration fee vary by concession and whether you select a Government or Private Self-Financing seat. The first-phase security deposit also has a concession rate, and the private-college and RCC tuition schedules are not in this prospectus. See the fee options and rules; a single personalized total or deposit recommendation cannot be calculated from the profile.",
+      "severity": "warning"
+    },
+    "securityDeposits": [
+      {
+        "id": "deposit-standard",
+        "sourcePages": [
+          31
+        ],
+        "verified": false,
+        "amountInr": 10000,
+        "label": "First-phase option-registration security deposit",
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "medical"
+          },
+          {
+            "sector": "private",
+            "collegeType": "medical"
+          }
+        ]
+      },
+      {
+        "id": "deposit-fee-concession",
+        "sourcePages": [
+          31
+        ],
+        "verified": false,
+        "amountInr": 5000,
+        "label": "Reduced first-phase security deposit for SC/ST/OE and other candidates eligible for fee concession",
+        "allows": [
+          {
+            "sector": "government",
+            "collegeType": "medical"
+          },
+          {
+            "sector": "private",
+            "collegeType": "medical"
+          }
+        ],
+        "note": "The prospectus prints the abbreviation OE without defining it here; it may refer to OEC. The full reduction wording is preserved."
+      }
+    ],
+    "rules": [
+      {
+        "id": "fees-government-college",
+        "sourcePages": [
+          5
+        ],
+        "verified": false,
+        "title": "Government Medical College fee schedule",
+        "detail": "For Government Medical Colleges, the prospectus lists annual tuition ₹57,890, annual miscellaneous fee ₹11,580, refundable caution deposit ₹11,580 for loss or breakage of laboratory equipment or books, and University fees as applicable. Its listed total is ₹81,050 including the annual miscellaneous fee and caution deposit; University fees are listed separately. Government fees may change by Government Order.",
+        "severity": "warning"
+      },
+      {
+        "id": "fees-private-rcc",
+        "sourcePages": [
+          5
+        ],
+        "verified": false,
+        "title": "Private and RCC fees are listed elsewhere",
+        "detail": "Private Self-Financing Medical College fees will be issued separately before the Centralized Allotment Process. The prospectus directs candidates to the RCC website for RCC fees. Do not infer these amounts from the Government Medical College schedule.",
+        "severity": "warning"
+      },
+      {
+        "id": "fees-timing",
+        "sourcePages": [
+          5,
+          30,
+          33
+        ],
+        "verified": false,
+        "title": "Pay tuition and University fees at admission",
+        "detail": "The tuition amount shown in the allotment memo is paid at the allotted college at admission. University fees are also paid at the college at admission. The admission schedule and exact University fee are not printed here.",
+        "severity": "info"
+      },
+      {
+        "id": "fees-refund-transfer",
+        "sourcePages": [
+          5
+        ],
+        "verified": false,
+        "title": "College fees may be refunded, forfeited or transferred",
+        "detail": "Fees paid at one college may be refunded, forfeited or transferred to the last station where a higher option is allotted, depending on the phase, exit conditions and whether the exit is automatic upgradation or for another reason. The prospectus does not give a complete phase-by-phase refund table. Application fees are not refundable.",
+        "severity": "warning"
+      },
+      {
+        "id": "fees-concessions-scst-oec",
+        "sourcePages": [
+          5,
+          6,
+          22
+        ],
+        "verified": false,
+        "title": "SC/ST and OEC fee concessions",
+        "detail": "SC/ST candidates admitted to merit or their reserved seats are exempt from fees. OEC candidates admitted to merit or Government seats through SEBC/OEC reservation are exempt. An OEC candidate who uploads a Community Certificate instead of a Non-Creamy Layer certificate can receive the fee concession but cannot claim SEBC/OEC reservation.",
+        "severity": "info"
+      },
+      {
+        "id": "fees-concession-annexure-ii",
+        "sourcePages": [
+          6,
+          22,
+          45
+        ],
+        "verified": false,
+        "title": "Educational concession for Annexure II communities",
+        "detail": "A candidate from an Annexure II community whose annual family income for academic year 2026-27 is at most ₹6,00,000 may claim the stated educational fee concession. Upload the Village Officer community and income certificates in the prescribed format. If an SEBC candidate has uploaded the Kerala State Education Purpose Non-Creamy Layer certificate, a separate community certificate is not required; the income certificate is still required for this concession. For parents employed on salary, Basic Pay and Dearness Allowance count toward annual family income; interim relief follows Revenue Department orders; HRA, Special Pay, Deputation Pay, TA, PTA and Honorarium are excluded.",
+        "severity": "warning"
+      },
+      {
+        "id": "fees-concession-fishermen",
+        "sourcePages": [
+          6
+        ],
+        "verified": false,
+        "title": "Fee exemption for children of registered fishermen",
+        "detail": "A child of a Registered Fisherman allotted a merit or other reserved seat may be exempt from fees after uploading a certificate from the concerned Fisheries Officer of the Kerala Fishermen Welfare Fund Board. The exemption does not apply to Minority or NRI quota seats.",
+        "severity": "info"
+      },
+      {
+        "id": "fees-concession-home-inmates",
+        "sourcePages": [
+          6
+        ],
+        "verified": false,
+        "title": "Fee exemption for specified Government-home inmates",
+        "detail": "An inmate of Sree Chitra Home, Nirbhaya Home, a Juvenile Home or another Government-run institution allotted a merit or other reserved seat may be exempt after uploading a certificate from the relevant authority. The exemption does not apply to Minority or NRI quota seats.",
+        "severity": "info"
+      },
+      {
+        "id": "fees-concession-exclusions",
+        "sourcePages": [
+          6
+        ],
+        "verified": false,
+        "title": "Fee concessions do not cover application or option-registration fees",
+        "detail": "The prospectus says the listed fee exemptions do not apply to Minority or NRI quota admissions, the application fee or the option-registration fee. The separate reduced rates explicitly stated for SC/ST and other eligible candidates are recorded above.",
+        "severity": "warning"
+      },
+      {
+        "id": "fees-first-phase-deposit",
+        "sourcePages": [
+          31
+        ],
+        "verified": false,
+        "title": "Pay the security deposit when registering Phase 1 options",
+        "detail": "The standard deposit is ₹10,000. The prospectus sets ₹5,000 for SC/ST/OE and other candidates eligible for fee concession. It says the deposit is refunded to eligible candidates after the entire counselling process but does not define every eligibility condition for refund.",
+        "severity": "warning"
+      },
+      {
+        "id": "fees-final-round-registration",
+        "sourcePages": [
+          32
+        ],
+        "verified": false,
+        "title": "Final-phase option registration fee",
+        "detail": "Every candidate registering fresh options in the final phase pays a registration fee equal to the annual tuition fee if opting only for a Government seat, or ₹1,00,000 if also opting for a Private Self-Financing Medical College seat. SC/ST/OE and other candidates eligible for fee concession pay half. The payment is adjusted against course fees when allotted; otherwise it is refunded after counselling. It is not refunded if the candidate gets an allotment and does not join.",
+        "severity": "critical"
+      }
+    ]
+  },
+  "choiceFilling": [
+    {
+      "id": "choice-online-only",
+      "sourcePages": [
+        27,
+        28
+      ],
+      "verified": false,
+      "title": "Register options only through the candidate portal",
+      "detail": "Only qualified candidates on the CEE Kerala rank and category lists may register options at cee.kerala.gov.in within the notified window. Fax, email, post and hand-delivered options are not considered. Log in with the candidate application number and password.",
+      "severity": "critical",
+      "link": "https://www.cee.kerala.gov.in"
+    },
+    {
+      "id": "choice-order-and-acceptance",
+      "sourcePages": [
+        27,
+        28,
+        31
+      ],
+      "verified": false,
+      "title": "Order options only for seats you are willing to join",
+      "detail": "Choose eligible course-college-fee combinations in preference order. Allotment follows the saved order and rank. If you receive a seat based on an option, the prospectus says you are bound to accept it; if you fail to accept or join, you can lose the allotment and all existing options and may not be allowed into the next phase.",
+      "severity": "critical"
+    },
+    {
+      "id": "choice-save-and-logoff",
+      "sourcePages": [
+        28,
+        29
+      ],
+      "verified": false,
+      "title": "Save all option changes and log off",
+      "detail": "Selections, additions, deletions and rearrangements take effect only after saving. Unsaved changes are lost; even deletions must be saved. Print the saved list if useful and log off to complete option registration. The prospectus warns against refreshing with the browser refresh/back buttons or opening the option page in multiple tabs.",
+      "severity": "warning"
+    },
+    {
+      "id": "choice-confirmation",
+      "sourcePages": [
+        27,
+        29,
+        30,
+        31
+      ],
+      "verified": false,
+      "title": "Confirm retained options for Phase 2",
+      "detail": "Option confirmation is mandatory for Phase 2 if you want saved options to carry forward. After confirmation you may delete options or change their priority. Options below the Phase 1 allotted option are automatically removed. If you do not confirm after joining Phase 1, the joined seat is retained but you are not considered for Phase 2 upgradation. If a later phase allots a new seat from retained options, the earlier admission stands cancelled whether or not you accept the new allotment.",
+      "severity": "warning"
+    },
+    {
+      "id": "choice-window",
+      "sourcePages": [
+        27
+      ],
+      "verified": false,
+      "title": "The option window closes at the notified time",
+      "detail": "CEE withdraws the option facility after the notified period and says it will not extend the time for registering options. A candidate who misses the window is not considered for the then-available seats.",
+      "severity": "critical"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "round-cap-basis",
+      "sourcePages": [
+        26,
+        27
+      ],
+      "verified": false,
+      "title": "CEE allots by rank, reservation and saved option order",
+      "detail": "The online Single Window System covers State counselling seats. CEE processes saved options against rank and eligible reservations. The schedule and number of allotments will be notified separately and can follow MCC or Government directions.",
+      "severity": "info"
+    },
+    {
+      "id": "round-phase-1",
+      "sourcePages": [
+        30,
+        31
+      ],
+      "verified": false,
+      "title": "Phase 1: fresh options and security deposit",
+      "detail": "Eligible candidates on the State Merit or Service Quota list may register fresh options and pay the applicable first-phase security deposit. If the candidate fails to remit required fees and join within the deadline, the allotment and options are cancelled. A Phase 1 candidate who joins may retain only higher options; lower options are removed.",
+      "severity": "warning"
+    },
+    {
+      "id": "round-phase-2",
+      "sourcePages": [
+        29,
+        30,
+        31
+      ],
+      "verified": false,
+      "title": "Phase 2: confirm or rearrange saved options",
+      "detail": "No general fresh option registration is allowed in Phase 2, except for newly added courses. Option confirmation is compulsory to participate. A joined Phase 1 candidate who does not confirm keeps that seat but is not considered for upgradation. When a later phase allots a new seat based on valid retained options, the prior admission stands cancelled whether or not the candidate accepts the new allotment.",
+      "severity": "warning"
+    },
+    {
+      "id": "round-phase-3",
+      "sourcePages": [
+        31,
+        32,
+        33
+      ],
+      "verified": false,
+      "title": "Phase 3: fresh options, final-round fee and restrictions",
+      "detail": "After Phase 2, vacancies are filled through Phase 3 with fresh options. Candidates may option seats regardless of the current vacancy list because vacancies can arise and category conversion can occur. A candidate allotted a seat in State Phase 3 is ineligible for further All India or State counselling; CEE forwards the admitted-candidate list to MCC. The final-round option-registration fee is credited to course fees if allotted, refunded if not allotted, and forfeited if allotted but not joined. Candidates who vacate a Phase 1, 2 or 3 seat after the last date for Phase 3 joining cannot take part in further counselling and may face the prospectus penalties.",
+      "severity": "critical"
+    },
+    {
+      "id": "round-stray",
+      "sourcePages": [
+        32,
+        33
+      ],
+      "verified": false,
+      "title": "Stray vacancy filling follows Phase 3",
+      "detail": "CEE publishes net vacancies from unallotted or non-joined Phase 3 seats and opens fresh option registration. If vacancies remain and there is enough time before the NMC admission cut-off, CEE may conduct additional stray allotments using the stray-round options.",
+      "severity": "warning"
+    },
+    {
+      "id": "round-stray-liquidated-damages",
+      "sourcePages": [
+        33
+      ],
+      "verified": false,
+      "title": "Vacating after the stray process can cost ₹50,00,000",
+      "detail": "A candidate who vacates a seat joined through stray vacancy allotment, or vacates any previously joined seat after the stray process, is liable to pay ₹50,00,000 to CEE. The prospectus permits revenue recovery. A candidate who does not pay may be barred from PG Medical allotment/admission for up to two consecutive years.",
+      "severity": "critical"
+    },
+    {
+      "id": "round-service",
+      "sourcePages": [
+        19,
+        33
+      ],
+      "verified": false,
+      "title": "Service candidates follow the same CAP conditions",
+      "detail": "All CAP conditions also apply to Service candidates. Page 19 says no transfers are allowed under any circumstances after occupying a Service Quota seat and finalizing options, then says transfers are considered only through scheduled CEE allotment before admission closes. The relationship between these clauses is unclear; confirm the permitted transfer situation with CEE. No transfer between General Merit and Service Quota is allowed even through scheduled allotment.",
+      "severity": "warning"
+    },
+    {
+      "id": "round-no-transfer-after-cap",
+      "sourcePages": [
+        19,
+        38,
+        41
+      ],
+      "verified": false,
+      "title": "No transfer after the centralized allotment closes",
+      "detail": "Re-allotment is only through centralized counselling before allotment closes. No college-to-college or mutual transfer is allowed after CAP. Transfers after admission closes follow the University's rules. No allotment, admission or transfer is allowed after the applicable NMC/Supreme Court cut-off; seats arising afterward lapse.",
+      "severity": "critical"
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc-nativity-proof",
+      "sourcePages": [
+        7,
+        22
+      ],
+      "verified": false,
+      "name": "Nativity proof",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "Mandatory for all applicants. For an Indian citizen of Kerala origin, upload the relevant SSLC, Indian passport or birth-certificate page showing that the candidate or a parent was born in Kerala, with relationship proof when using a parent's document; alternatively upload the Village Officer Kerala-origin nativity certificate. A Non-Keralite with MBBS from a Kerala medical college uploads a certificate from that college's Principal."
+    },
+    {
+      "id": "doc-community-scst",
+      "sourcePages": [
+        12,
+        13,
+        22,
+        86
+      ],
+      "verified": false,
+      "name": "Candidate's SC/ST Community Certificate",
+      "stage": "registration",
+      "appliesWhen": {
+        "all": [
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
+          },
+          {
+            "fact": "category",
+            "in": [
+              "SC",
+              "ST"
+            ]
+          }
+        ]
+      },
+      "detail": "Upload the prescribed-format certificate from a Revenue Officer not below Tahsildar. It must state that the candidate personally belongs to the SC/ST community; an older certificate issued for another purpose is not accepted. The candidate's claim is subject to Screening Committee verification."
+    },
+    {
+      "id": "doc-reconversion-gazette",
+      "sourcePages": [
+        12,
+        13
+      ],
+      "verified": false,
+      "name": "Gazette notification of reconversion to Hinduism",
+      "stage": "registration",
+      "appliesWhen": {
+        "all": [
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
+          },
+          {
+            "fact": "category",
+            "in": [
+              "SC"
+            ]
+          }
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "A candidate of Scheduled Caste origin reconverted from Christianity to Hinduism must upload the Tahsildar's Community Certificate and a copy of the Gazette Notification regarding reconversion. The profile does not ask about reconversion."
+    },
+    {
+      "id": "doc-scst-convert-format",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "SC/ST Community Certificate with required Government Circular record",
+      "stage": "registration",
+      "appliesWhen": {
+        "all": [
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
+          },
+          {
+            "fact": "category",
+            "in": [
+              "SC",
+              "ST"
+            ]
+          }
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "The prospectus says Christian converts who subsequently embraced Hinduism should upload the prescribed certificate. The Revenue Official must record below the certificate: The Certificate is issued after observing the guidelines issued in Government Circular No.18421/E2/SCSTDD dated 15th December 1987. Confirm whether this applies to your case."
+    },
+    {
+      "id": "doc-scst-migration-proof",
+      "sourcePages": [
+        12
+      ],
+      "verified": false,
+      "name": "Proof for migrated SC/ST claim, if required",
+      "stage": "registration",
+      "appliesWhen": {
+        "all": [
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
+          },
+          {
+            "fact": "category",
+            "in": [
+              "SC",
+              "ST"
+            ]
+          }
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "For a candidate whose family migrated between States, the prospectus says Kerala SC/ST benefit is limited to children of people who migrated to Kerala before the 1950 Presidential Orders and ordinarily reside in Kerala. Be ready to prove the relevant facts if requested; the profile does not collect migration history."
+    },
+    {
+      "id": "doc-sebc-oec-ncl",
+      "sourcePages": [
+        5,
+        6,
+        14,
+        15,
+        22,
+        56
+      ],
+      "verified": false,
+      "name": "Kerala State Educational Purpose Non-Creamy Layer certificate",
+      "stage": "registration",
+      "appliesWhen": {
+        "fact": "nationality",
+        "in": [
+          "indian"
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "Claimants for SEBC/OEC reservation or the relevant fee concession upload the prescribed Non-Creamy Layer certificate from the Village Officer. The certificate must be for Kerala State Educational Purpose. The profile does not collect the six SEBC subcategories or OEC status. For OEC fee concession alone, PDF page 5 permits a Community Certificate or Non-Creamy Layer certificate from the Village Officer; page 6 says a Community Certificate gives fee concession but not SEBC/OEC reservation. The later page 22 checklist asks SEBC/OEC candidates for NCL. Preserve these different wordings and confirm the certificate for the exact reservation/fee claim."
+    },
+    {
+      "id": "doc-annexure-ii-community-income",
+      "sourcePages": [
+        6,
+        22,
+        45
+      ],
+      "verified": false,
+      "name": "Community and income certificates for Annexure II fee concession",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "Candidates in an Annexure II community claiming educational concession upload the Village Officer community and income certificates in the prescribed format. Annual family income for academic year 2026-27 must not exceed ₹6,00,000. Salary income counts Basic Pay and Dearness Allowance; interim relief follows Revenue orders; HRA, Special Pay, Deputation Pay, TA, PTA and Honorarium need not be counted. An eligible SEBC applicant with the State Educational Purpose NCL certificate does not need a separate community certificate, but still uploads the income certificate."
+    },
+    {
+      "id": "doc-ews-certificate",
+      "sourcePages": [
+        11,
+        23,
+        44,
+        80,
+        81
+      ],
+      "verified": false,
+      "name": "EWS certificate in the prescribed Village Officer format",
+      "stage": "registration",
+      "appliesWhen": {
+        "all": [
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
+          },
+          {
+            "fact": "category",
+            "in": [
+              "EWS"
+            ]
+          }
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "The body says to upload the prescribed EWS certificate from the Village Officer. Annexure XVIII has a family-income-and-assets format and a separate AAY/PHH ration-card format. The prospectus does not print the numerical income or asset thresholds and cites inconsistent order details; confirm the correct format and current limits with the Village Officer."
+    },
+    {
+      "id": "doc-intercaste-certificate",
+      "sourcePages": [
+        15,
+        23,
+        57
+      ],
+      "verified": false,
+      "name": "Inter-caste marriage certificate from Tahsildar",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "Upload the Annexure X certificate when claiming the stated benefit for a child of an inter-caste married couple, including the specific benefit for a couple where one parent is SC/ST. The certificate records each parent's community. The profile does not collect the parents' communities."
+    },
+    {
+      "id": "doc-pwd-online-entry",
+      "sourcePages": [
+        10,
+        11,
+        23
+      ],
+      "verified": false,
+      "name": "PwD claim in the online application",
+      "stage": "registration",
+      "appliesWhen": {
+        "all": [
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
+          },
+          {
+            "fact": "pwd",
+            "in": [
+              true
+            ]
+          }
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "Indicate the PwD claim in the online application. Clause 8-4 says no document or certificate is uploaded with the application."
+    },
+    {
+      "id": "doc-pwd-udid-affidavit",
+      "sourcePages": [
+        11
+      ],
+      "verified": false,
+      "name": "Valid UDID card and self-attested Schedule 1 affidavit",
+      "stage": "other",
+      "appliesWhen": {
+        "all": [
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
+          },
+          {
+            "fact": "pwd",
+            "in": [
+              true
+            ]
+          }
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "The prospectus quotes MCC guidance requiring an otherwise-eligible PwD applicant with a UDID card to submit a valid card and self-attested Schedule 1 affidavit. The Medical Board verifies the affidavit. The prospectus does not clearly say where this conflicts with its statement that no document is uploaded online; verify the submission stage."
+    },
+    {
+      "id": "doc-pwd-medical-certificate",
+      "sourcePages": [
+        11,
+        48,
+        49,
+        50
+      ],
+      "verified": false,
+      "name": "Certifying-authority disability certificate",
+      "stage": "admission",
+      "appliesWhen": {
+        "all": [
+          {
+            "fact": "nationality",
+            "in": [
+              "indian"
+            ]
+          },
+          {
+            "fact": "pwd",
+            "in": [
+              true
+            ]
+          }
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "The prospectus says selected candidates submit a certificate from a certifying authority under the Rights of Persons with Disabilities Act 2016 verifying at least 40% disability and must be found physically suitable by the State Level Committee. Annexure V describes disability-specific medical-course criteria."
+    },
+    {
+      "id": "doc-exservice-discharge",
+      "sourcePages": [
+        11,
+        23
+      ],
+      "verified": false,
+      "name": "Certificate of discharge from military service",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "A Kerala-origin Ex-Service candidate claiming the quota must upload a discharge certificate from the competent authority. Originals must be produced when requested."
+    },
+    {
+      "id": "doc-exservice-dependent-certificate",
+      "sourcePages": [
+        11
+      ],
+      "verified": false,
+      "name": "Dependent certificate from Zilla Sainik Welfare Officer",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "A dependent of a Jawan killed in action or a dependent of an Ex-serviceman must obtain the certificate from the concerned Zilla Sainik Welfare Officer. It must be issued not earlier than six months before the final application-submission date; that date is not yet printed."
+    },
+    {
+      "id": "doc-nri-sponsor-passport-status",
+      "sourcePages": [
+        23,
+        24
+      ],
+      "verified": false,
+      "name": "NRI sponsor identity, residence and employment proof",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "For the listed sponsor, upload a passport copy and visa, Green Card, Norka Roots ID or OCI document; the sponsor's job should appear in one of those documents. Where a traditional visa is unavailable, the prospectus accepts equivalent official visa-validity proof including Civil ID, Resident Permit, Resident ID, IQAMA, Electronic Visa, Employment Pass or Entry Visa. A valid Indian Embassy/Consulate-attested visa-validity document is accepted. Under the 2026 order, a Resident Identity Card can replace an unstamped visa, including in the UAE, without embassy attestation; a Resident Identity Card or Golden Visa may prove employment. The prospectus accepts the properly attested employment certificate when a visa lists Housewife or Student. Embassy-attested documents have a maximum six-month validity under the cited 2026 order.",
+      "seats": [
+        "nri"
+      ]
+    },
+    {
+      "id": "doc-nri-employment-certificate",
+      "sourcePages": [
+        23,
+        24
+      ],
+      "verified": false,
+      "name": "Sponsor employment certificate, if employment is not shown",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "If sponsor employment is not stated in the uploaded passport/visa/accepted residence document, upload an Employment Certificate attested by Embassy or Consulate authorities, subject to the 2025 and 2026 relaxations for specified residence documents. If the employer name on the sponsorship certificate differs from the Resident Identity Card, CEE or the relevant authority must seek an explanation and decide from information gathered from the relevant institutions rather than rejecting it outright.",
+      "seats": [
+        "nri"
+      ]
+    },
+    {
+      "id": "doc-nri-relationship-certificate",
+      "sourcePages": [
+        24
+      ],
+      "verified": false,
+      "name": "Revenue-authority certificate proving sponsor relationship",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "Obtain the relationship certificate from Revenue authorities. The link must be clear: if it says niece, cousin, uncle or aunt, the Village Officer must explain the exact relationship in the certificate. A certificate naming only one of those relationship labels without establishing the link is rejected. The candidate's relationship with their father or mother as recorded in ordinary educational certificates is accepted.",
+      "seats": [
+        "nri"
+      ]
+    },
+    {
+      "id": "doc-nri-sponsor-affidavits",
+      "sourcePages": [
+        23,
+        25
+      ],
+      "verified": false,
+      "name": "Sponsor affidavits for NRI quota",
+      "stage": "registration",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "The sponsor must swear that valid visa-renewal proof or acknowledgement will be produced by the CEE-stipulated allotment time. The sponsor must also execute a notarized affidavit on ₹200 stamp paper stating that the candidate depends on the sponsor and that the sponsor will pay the full tuition and special fees for the entire course. Produce originals when asked.",
+      "seats": [
+        "nri"
+      ]
+    },
+    {
+      "id": "doc-inservice-application-bundle",
+      "sourcePages": [
+        17,
+        25,
+        82
+      ],
+      "verified": false,
+      "name": "Service-quota application and service records",
+      "stage": "other",
+      "appliesWhen": {
+        "fact": "inService",
+        "in": [
+          true
+        ]
+      },
+      "requiresManualCheck": true,
+      "detail": "Send the acknowledgement and uploaded-document printouts to the department head with: the original declaration that you have not previously undergone a PG Degree under Service Quota; original service details from the Accountant General, Kerala; original service details from the Head of Department in the prescribed format; date-of-birth proof; and service documents including the probation declaration order. Do not send this application printout directly to CEE."
+    },
+    {
+      "id": "doc-admission-originals",
+      "sourcePages": [
+        25,
+        33
+      ],
+      "verified": false,
+      "name": "Original documents for admission",
+      "stage": "admission",
+      "appliesWhen": null,
+      "detail": "Produce the CEE data sheet, date-of-birth proof (SSLC, Senior Secondary certificate, Indian passport or birth certificate), MBBS Degree/Pass Certificate, House Surgency (CRRI) Certificate, NEET-PG 2026 score sheet, original Transfer Certificate from the last institution, and originals of uploaded documents. A Government-service candidate also brings the relieving order from the last institution worked. The prospectus additionally requires the NBE admit card, CEE allotment memo, Kerala State Medical Council/erstwhile T.C. Medical Council permanent registration certificate, qualifying documents and any further documents in the allotment notification."
+    },
+    {
+      "id": "doc-kuhs-equivalence",
+      "sourcePages": [
+        33
+      ],
+      "verified": false,
+      "name": "KUHS Eligibility/Equivalency certificate",
+      "stage": "admission",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "Candidates whose MBBS degree is from a University outside Kerala must produce a Certificate of Eligibility/Equivalency from Kerala University of Health Sciences. The profile does not record the awarding University."
+    },
+    {
+      "id": "doc-kerala-registration",
+      "sourcePages": [
+        7,
+        33
+      ],
+      "verified": false,
+      "name": "Kerala State Medical Council registration",
+      "stage": "admission",
+      "appliesWhen": null,
+      "detail": "Admission is only after registration with the Kerala State Medical Council or erstwhile Travancore-Cochin Medical Council. Page 33 separately lists a T.C. Medical Council document after the registration certificate; the source does not clarify whether this is a duplicate or a separate record."
+    },
+    {
+      "id": "doc-bond-forms",
+      "sourcePages": [
+        35,
+        36,
+        37,
+        38,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "verified": false,
+      "name": "Required Kerala stamp-paper bonds and sureties",
+      "stage": "admission",
+      "appliesWhen": null,
+      "requiresManualCheck": true,
+      "detail": "Execute the required bond form(s) on Kerala stamp paper of total value ₹200, with candidate and surety signatures. The prospectus says bonds must be executed at joining or within 7 days at the Principal's discretion; otherwise admission may be cancelled. General candidates use parents/guardians as sureties; Service candidates use a parent, guardian, husband or wife. The prescribed witness must meet clause 11 and sign with the required official/residential address; a State Gazetted Officer attests candidate/surety signatures, subject to the listed exclusions for the admitting authority, Central Government and elected local/state representatives. Forms XIV-XVI differ by obligation and service status; use the form supplied by the college and confirm which applies. Stipend/salary is withheld until bonds are executed and annual course fees are paid. The college or department holds original certificates until the bond obligation is met or damages are paid."
+    },
+    {
+      "id": "doc-antiragging-undertaking",
+      "sourcePages": [
+        41,
+        64
+      ],
+      "verified": false,
+      "name": "Student and parent/guardian anti-ragging undertaking",
+      "stage": "admission",
+      "appliesWhen": null,
+      "detail": "The student undertakes that they read the Supreme Court anti-ragging directives, understand ragging is punishable and prohibited, have not previously been found or charged for ragging, and will not rag. The student signs; mother, father or guardian endorses it; a witness signs. It is mandatory for registration/admission."
+    },
+    {
+      "id": "doc-dowry-declaration",
+      "sourcePages": [
+        40,
+        84
+      ],
+      "verified": false,
+      "name": "Dowry declaration/undertaking",
+      "stage": "admission",
+      "appliesWhen": null,
+      "detail": "Submit the Annexure XX undertaking not to give, take, abet giving or taking, or demand dowry. The form includes student name, course, institution, registration/temporary ID, Aadhaar number, residential address, place, date and signature. The prospectus warns that violation may lead to action including cancellation of admission or degree."
+    }
+  ],
+  "admission": [
+    {
+      "id": "admit-original-check",
+      "sourcePages": [
+        25,
+        27,
+        30,
+        33
+      ],
+      "verified": false,
+      "title": "The institution checks eligibility against originals",
+      "detail": "The Principal/Head of Institution is personally responsible for checking eligibility at reporting. Admission is only for candidates found qualified, even if the CEE single-window system allotted a seat. Bring the originals listed in the documents section and any additional records named in the allotment notice.",
+      "severity": "critical"
+    },
+    {
+      "id": "admit-course-duration",
+      "sourcePages": [
+        4,
+        38
+      ],
+      "verified": false,
+      "title": "Course duration is three years, with one stated diploma reduction",
+      "detail": "The Medical PG Degree course is three years including University examination. A one-year reduction is available to a candidate who completed a two-year PG Diploma in the same subject and had the diploma pass certificate on or before 30th April 2026. No other reduction is allowed. The date of commencement and final admission date follow the Government of India, NMC or Supreme Court schedule.",
+      "severity": "warning"
+    },
+    {
+      "id": "admit-attendance",
+      "sourcePages": [
+        38,
+        39
+      ],
+      "verified": false,
+      "title": "Maintain at least 80% attendance each year",
+      "detail": "A resident needs 80% attendance separately in each year, without a cumulative calculation, to appear for the University examination. Leave beyond the eligible limit extends the course; the full duration must be completed before a course certificate is issued.",
+      "severity": "warning"
+    },
+    {
+      "id": "admit-residency-leave",
+      "sourcePages": [
+        38,
+        39,
+        40
+      ],
+      "verified": false,
+      "title": "Residency, leave and conduct conditions",
+      "detail": "All 365 days are working days. The prospectus permits 20 casual-leave days, no more than 7 days including holidays at a stretch, and one weekly off that cannot be accumulated. Other leave can extend the course. More than 10 days of unauthorized absence can lead to termination and liquidated damages. Special casual leave for recognized CME/workshops may be permitted up to 15 days a year with prior approval and attendance proof. Other leave not exceeding 30 days is granted by DME; leave under clause 16.2 and maternity leave are granted by the Head of Institution. Female PG students may receive stipend during maternity leave and its extension only once in the course. Students may not leave India without prior DME sanction and may not engage in private practice. On receipt of a police complaint or FIR concerning a student’s criminal offence, an institutional team of senior faculty must inquire; legal opinion may be obtained from the district Government Pleader, and the action-taken report must reach Government and DME at the earliest. Course duration is reckoned from the first candidate’s actual academic-programme joining date certified by the Principal and entered in the University PG register."
+    },
+    {
+      "id": "admit-bonded-service",
+      "sourcePages": [
+        35,
+        36,
+        37,
+        38
+      ],
+      "verified": false,
+      "title": "Bonded Government service follows the candidate's seat route",
+      "detail": "General Merit candidates, including AIQ candidates admitted to Medical PG courses, must serve as Senior Resident in Kerala Government Medical Education Services for at least one continuous year immediately after the course. The prospectus permits the obligation to be fulfilled as Lecturer, Assistant Professor, Assistant Surgeon, Junior Consultant or Senior Resident. Ex-Service quota candidates also sign a one-year Senior Resident service bond. Service Quota candidates have a separate 10-year service obligation with two years in difficult/remote rural areas; see the service bond rules. The source's form language and private-college scope have unresolved inconsistencies recorded in the notes.",
+      "severity": "critical"
+    },
+    {
+      "id": "admit-bond-time-and-damages",
+      "sourcePages": [
+        36,
+        37,
+        38,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "verified": false,
+      "title": "Execute the required bond within seven days",
+      "detail": "The bond must be signed at joining or within 7 days if the Principal allows. After 7 days admission may be cancelled. Failure to meet bonded service can be treated as professional misconduct and reported to the Medical Council. The prospectus and bond form refer to ₹50,00,000 liquidated damages, stipend/salary drawn during study, Government study expenses and interest; Service Quota damages are described by a future-salary formula. Confirm the correct bond form and amount for your route.",
+      "severity": "critical"
+    },
+    {
+      "id": "admit-bond-exceptions",
+      "sourcePages": [
+        35,
+        36,
+        37
+      ],
+      "verified": false,
+      "title": "Bonded-service release and extension conditions",
+      "detail": "For a general candidate selected to a Super Specialty degree, the prospectus permits release to join it with a combined bonded-service obligation not exceeding two years; it does not extend this facility to observer-ships, fellowships or other courses. A general candidate receiving a regular State, Central, Union Territory or PSU appointment may be released from compulsory bonded service if the appointing authority says no joining-time extension is available and the candidate submits the joining order to Kerala Government/DME within one month. A Senior Resident must request an extension to complete residency, or apply to the Principal to be relieved if the employer refuses. If Government cannot offer a suitable Government job within one year after course completion, the candidate is absolved of the bonded obligation. The source states a maximum 18-month stipend period during Senior Residency when maternity leave is used, inclusive of up to 6 months maternity leave."
+    },
+    {
+      "id": "admit-stipend-and-certificates",
+      "sourcePages": [
+        36,
+        37,
+        38,
+        72
+      ],
+      "verified": false,
+      "title": "Stipend and original-certificate conditions",
+      "detail": "Students are not eligible for stipend/salary until bonds are properly executed. Fees for each later course year must be paid within one week of the start of year II and year III for stipend eligibility. Principals or the relevant department retain original certificates until bonded service is completed or liquidated damages are paid. A written request may be used for official certificate verification by another authority, at the candidate's expense. The General bond form says Government may, at its discretion, withhold further stipend if the candidate fails a qualifying examination."
+    },
+    {
+      "id": "admit-antiragging",
+      "sourcePages": [
+        40,
+        41,
+        64
+      ],
+      "verified": false,
+      "title": "Anti-ragging undertaking and conduct",
+      "detail": "The student and parent/guardian undertaking in Annexure XII is mandatory at registration/admission. If a candidate is found to have previously engaged in ragging, admission may be refused or the student expelled. Institutions are to maintain anti-ragging committees and squads."
+    },
+    {
+      "id": "admit-dowry",
+      "sourcePages": [
+        40,
+        84
+      ],
+      "verified": false,
+      "title": "Submit the Dowry Declaration",
+      "detail": "PG students must submit the KUHS Dowry Declaration/Undertaking in Annexure XX. It promises not to give, take, abet or demand dowry. The form states a breach may lead to cancellation of admission or a degree-related action."
+    },
+    {
+      "id": "admit-rank-list-validity",
+      "sourcePages": [
+        38
+      ],
+      "verified": false,
+      "title": "Rank-list validity and record retention",
+      "detail": "The rank list remains valid until the final admission date announced by NMC/NBE, the Supreme Court or Government of India, whichever is later. Entrance-exam records are kept only until 31st December 2026 or the day after the final admission date, whichever is later.",
+      "severity": "info"
+    },
+    {
+      "id": "admit-government-updates",
+      "sourcePages": [
+        41,
+        42
+      ],
+      "verified": false,
+      "title": "The prospectus can be updated by later Government or court directions",
+      "detail": "Vacancies after the admission cut-off lapse, and no transfer, surrender or exchange is allowed afterward. Changes to the national admission schedule or process apply to State Self-Financing Colleges. Government may revise this prospectus by later executive order or notification, and it says future amendments will align with MCC procedures."
+    },
+    {
+      "id": "admit-scst-scholarship-criteria",
+      "sourcePages": [
+        41
+      ],
+      "verified": false,
+      "title": "SC/ST post-matric scholarship criteria",
+      "detail": "The prospectus refers SC/ST candidates to the revised post-matric scholarship criteria under G.O.(P) No.2/23/SCSTD dated 5th January 2023. Check the cited criteria with the institution; the complete scheme is not reproduced here.",
+      "severity": "info"
+    }
+  ],
+  "resignation": {
+    "rules": [
+      {
+        "id": "resign-phase1",
+        "sourcePages": [
+          30,
+          31
+        ],
+        "verified": false,
+        "title": "Missing a Phase 1 joining deadline can cancel the allotment",
+        "detail": "If you do not remit the required fee and join in the allotted phase, the allotment and registered options are cancelled. A candidate who fails to accept a Phase 1 seat or quits after joining loses the admission and all options and may not be allowed in Phase 2. The prospectus does not give a complete financial-refund result for this early exit.",
+        "severity": "critical"
+      },
+      {
+        "id": "resign-phase2",
+        "sourcePages": [
+          29,
+          30,
+          31
+        ],
+        "verified": false,
+        "title": "A new allotment can cancel the previous admission",
+        "detail": "When a seat is allotted in a later phase based on valid options, the previous admission stands cancelled even if the candidate does not accept the new seat. Confirm retained options and the choice to participate before each phase.",
+        "severity": "critical"
+      },
+      {
+        "id": "resign-phase3",
+        "sourcePages": [
+          32,
+          33
+        ],
+        "verified": false,
+        "title": "Phase 3 allotment restricts further counselling",
+        "detail": "A State Phase 3 allottee is ineligible for further counselling, and CEE forwards the admitted list to MCC. The final-phase registration fee is forfeited when the candidate is allotted but does not join. A candidate vacating a Phase 1, 2 or 3 seat after the Phase 3 joining deadline cannot take part in further counselling and may face prospectus penalties.",
+        "severity": "critical"
+      },
+      {
+        "id": "resign-stray",
+        "sourcePages": [
+          33
+        ],
+        "verified": false,
+        "title": "Vacating after stray vacancy filling triggers liquidated damages",
+        "detail": "After the stray vacancy process, vacating a joined stray seat or any seat joined in an earlier round makes the candidate liable for ₹50,00,000 liquidated damages payable to CEE. Unpaid damages may be recovered as public revenue and may bar the candidate from PG Medical allotment/admission for up to two consecutive years.",
+        "severity": "critical"
+      }
+    ],
+    "ladder": [
+      {
+        "id": "resign-stage1",
+        "sourcePages": [
+          30,
+          31
+        ],
+        "verified": false,
+        "stage": "Phase 1",
+        "window": "By the notified date and time for fee payment and joining",
+        "sector": "all",
+        "fees": "The allotment and all options are cancelled if the candidate does not join; if the candidate joins and later quits, they lose the admission and all options and may not be allowed into Phase 2. The specific fee refund or forfeiture is not stated.",
+        "otherConsequence": "May be barred from Phase 2."
+      },
+      {
+        "id": "resign-stage2",
+        "sourcePages": [
+          29,
+          30,
+          31
+        ],
+        "verified": false,
+        "stage": "Phase 2",
+        "window": "During the notified Phase 2 confirmation and joining window",
+        "sector": "all",
+        "fees": "The previous admission stands cancelled when a new seat is allotted, even if the candidate does not accept the new allotment. The detailed fee refund or forfeiture is not stated."
+      },
+      {
+        "id": "resign-stage3",
+        "sourcePages": [
+          32,
+          33
+        ],
+        "verified": false,
+        "stage": "Phase 3",
+        "window": "After the last date of joining in Phase 3",
+        "sector": "all",
+        "fees": "The final-phase registration fee is forfeited when an allotted candidate does not join. Vacating a seat after the Phase 3 joining deadline ends further counselling eligibility; the separate amount for this exit is not specified in this clause.",
+        "otherConsequence": "May trigger the applicable bond or later stray-process penalty."
+      },
+      {
+        "id": "resign-stage-stray",
+        "sourcePages": [
+          33
+        ],
+        "verified": false,
+        "stage": "After the stray vacancy process",
+        "window": "After a stray vacancy allotment or after the stray process, including when the joined seat came from an earlier round",
+        "sector": "all",
+        "fees": "₹50,00,000 liquidated damages payable to CEE; recovery as public revenue if unpaid.",
+        "otherConsequence": "Non-payment may lead to debarment from PG Medical allotment/admission for up to two consecutive years."
+      },
+      {
+        "id": "resign-course-discontinuation-bond",
+        "sourcePages": [
+          35,
+          36,
+          37,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76
+        ],
+        "verified": false,
+        "stage": "After final centralized allotment / during the course",
+        "window": "If the candidate discontinues after final CAP or breaches bonded course conditions",
+        "sector": "all",
+        "fees": "The prospectus bond form states ₹50,00,000 liquidated damages for the general course bond plus study expenses/stipend-salary provisions; the service candidate bond uses the future-salary formula. Use the route-specific form and confirm the overlapping bond terms.",
+        "otherConsequence": "Possible revenue recovery, professional-misconduct report and Medical Council action."
+      }
+    ]
+  },
+  "serviceBond": {
+    "bond": {
+      "id": "bond-general-service",
+      "sourcePages": [
+        7,
+        11,
+        35,
+        36,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "verified": false,
+      "appliesTo": "The main clause states all General Merit candidates, including AIQ candidates admitted to Medical PG courses in Kerala, must complete the one-year Senior Resident obligation. Ex-Service quota candidates also have a one-year Senior Resident obligation. Page 4 says the full prospectus conditions apply to Government Medical College admission, while only admission-related procedures apply to self-financing colleges; whether this bond extends to the latter is not clear.",
+      "durationYears": 1,
+      "amounts": [
+        {
+          "course": "Medical PG Degree course (MD/MS)",
+          "amountInr": 5000000
+        }
+      ],
+      "placeOfService": "Government of Kerala Medical Education Services; the prospectus says the obligation may be served as Lecturer, Assistant Professor, Assistant Surgeon, Junior Consultant or Senior Resident."
+    },
+    "rules": [
+      {
+        "id": "bond-general-duty",
+        "sourcePages": [
+          35,
+          36,
+          37
+        ],
+        "verified": false,
+        "title": "General Merit and AIQ bonded duty",
+        "detail": "General Merit candidates, including AIQ candidates, must serve as Senior Resident for at least one continuous year immediately after course completion. The period counts from publication of the result after successful course completion. Government decides terms, remuneration and postings. A candidate appointed to a Super Specialty degree may be relieved to join it and serve a combined total of no more than two years; this does not cover an observership, fellowship or other course.",
+        "severity": "critical"
+      },
+      {
+        "id": "bond-exservice-duty",
+        "sourcePages": [
+          11
+        ],
+        "verified": false,
+        "title": "Ex-Service quota bond",
+        "detail": "An Ex-Service quota candidate must serve the Government of Kerala for at least one year as Senior Resident.",
+        "severity": "warning"
+      },
+      {
+        "id": "bond-service-quota-duty",
+        "sourcePages": [
+          7,
+          18,
+          19,
+          37,
+          38,
+          74,
+          76,
+          78,
+          79
+        ],
+        "verified": false,
+        "title": "Service Quota candidates have a 10-year service obligation",
+        "detail": "Service candidates must serve the Government for 10 years or until superannuation, whichever the applicable prospectus bond requires; two years must be in difficult and remote/rural areas as defined by Government, immediately after course completion. The Health Service candidate serves in Kerala Health Services; MESQ and IMSQ candidates serve their corresponding Government departments. The service destination and terms are set by Government. For IMSQ, the selected candidate declares that they will serve the Insurance Medical Services Department in a specialist post immediately or as and when Government requires after course completion and on posting orders from DIMS; the stated prescribed service duration applies.",
+        "severity": "critical",
+        "note": "The main text says 10 years or up to superannuation; bond forms also print alternative period wording. The exact interaction is unresolved."
+      },
+      {
+        "id": "bond-service-damages",
+        "sourcePages": [
+          37,
+          38,
+          69,
+          70,
+          77,
+          78,
+          79
+        ],
+        "verified": false,
+        "title": "Service Quota breach damages use a salary-based calculation",
+        "detail": "Under the 2026 prospectus clause 12, discontinuation of the PG course or violation of the Service Quota bond after final CAP makes the candidate liable for the total salary admissible over the full obligatory service period; course salary/stipend is also recovered with 8% interest, and future salary uses a 25% increase at pay revisions during that period. Separately, Annexure XIII clause 14 of the incorporated 2017 deputation order covers course discontinuation for any reason, failure to opt for the specialty within one month after completing the course, and resignation, voluntary retirement or leaving service for another appointment/any reason before mandatory service is completed. Its damages equal salary admissible over the entire applicable 5-, 7-, 10- or 12-year obligatory period plus salary/stipend drawn during study with 8% interest; future salary uses a 25% increase at quinquennial pay revisions. The form also prints ₹50,00,000. These are route-specific provisions with conflicting forms; confirm the executed bond and avoid calculating a single total.",
+        "severity": "critical",
+        "note": "Clause 12's future-salary formula and the Annexure XV/XVI form amounts are not consistent enough to calculate a service-candidate total here."
+      },
+      {
+        "id": "bond-service-leave",
+        "sourcePages": [
+          37,
+          38
+        ],
+        "verified": false,
+        "title": "Service Quota bond limits leave and outside work",
+        "detail": "A Service Quota candidate is not eligible for Leave Without Allowance to take other employment or non-Governmental training during the bonded period. Certificates are retained by the Principal, DHS or Director of Insurance Medical Services until bond completion. The candidate may not receive stipend/salary until the bond is executed."
+      },
+      {
+        "id": "bond-general-release",
+        "sourcePages": [
+          35,
+          36,
+          37
+        ],
+        "verified": false,
+        "title": "Possible release from General Merit bonded service",
+        "detail": "A general candidate with a regular appointment in a State, another State, Central Government, Union Territory or PSU may be released if the appointing authority confirms no joining-time extension is available and the candidate submits the joining order to Kerala Government/DME within one month. Government may absolve a candidate if it cannot offer an appropriate job within one year after course completion."
+      },
+      {
+        "id": "bond-prospectus-form-conflicts",
+        "sourcePages": [
+          35,
+          36,
+          37,
+          38,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        "verified": false,
+        "title": "Use the route-specific bond form supplied by the college",
+        "detail": "The main clause says candidates execute two bonds, while another clause describes one separate bond for Service candidates and one for non-Service/AIQ candidates. Forms XIV-XVI vary: XIV includes ₹50,00,000; XV refers to the 2025-26 prospectus and a ₹50,00,000 amount plus study costs and service years; XVI refers to the 2017 Finance Order and a calculated amount. The service and non-service bond amounts and exact form assignment should be confirmed with the admitting institution."
+      },
+      {
+        "id": "bond-annexure-xiii-deputation",
+        "sourcePages": [
+          33,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70
+        ],
+        "verified": false,
+        "title": "Health Services deputation benefits have a separate scheme",
+        "detail": "Annexure XIII says the scheme is limited to service candidates who completed probation; medical officers studying other than under Service Quota must do so at their own cost after obtaining eligible leave/LWA. Deputation benefits are limited to approved courses and institutions, with lists approved by Government; applications follow strict seniority and specialty vacancies. A two-year PG Diploma requires 10 years prospective service and a PG course 12 years under this 2017 order. A candidate must serve in the specialty after training. The order describes salary-based liquidated damages for discontinuation, leaving within one month after course completion without opting for the specialty, or leaving before mandatory service. Its service lengths (5, 7, 10 or 12 years depending on case) differ from the 2026 prospectus's 10-year Service Quota clause; confirm which applies. Clause 14 attaches its own salary formula to all three triggers: discontinuing the course, not opting for the specialty within one month of completion, or leaving service before mandatory service. It recovers salary admissible during the full applicable 5/7/10/12 years plus study salary/stipend at 8% interest and projects salary with 25% increases at quinquennial revisions. Violations are reported to the Medical Council and service termination follows the cited Kerala Civil Services procedure."
+      }
+    ]
+  },
+  "helpdesk": {
+    "id": "helpdesk",
+    "sourcePages": [
+      5,
+      19,
+      26,
+      27,
+      29,
+      42
+    ],
+    "verified": false,
+    "phones": [],
+    "emails": [],
+    "hours": "Not stated in this prospectus.",
+    "websites": [
+      "https://www.cee.kerala.gov.in",
+      "https://rcctvm.gov.in"
+    ],
+    "instructions": [
+      "The prospectus prints no helpdesk telephone number, email address or working hours.",
+      "CEE will publish the counselling schedule and notices separately.",
+      "The prospectus says candidates will not receive direct communications; check the CEE Kerala website regularly.",
+      "The fee section directs candidates to the RCC website for RCC fees.",
+      "The rank-list passage prints www.cee-kerala.gov.in, while several other passages print www.cee.kerala.gov.in. The guide uses the repeatedly printed dot-domain; confirm the operative portal from the official CEE notice."
+    ]
+  },
+  "helpCentres": [],
+  "nodalCentres": [],
+  "disabilityCentres": [],
+  "annexures": [
+    {
+      "id": "annex-i-oec",
+      "sourcePages": [
+        44
+      ],
+      "verified": false,
+      "title": "Annexure I: Other Eligible Communities (OEC)",
+      "description": "OEC (ST) list: Allar (Alan); Chingathan; Irivavan; Kalanadi; Malayan, Konga-Malayan (Kasaragod, Kannur, Wayanad and Kozhikode districts); Kundu-Vadiyan; Kunnuvarmannadi; Malamuthan; Malavettuvar (except Kasaragod and Kannur districts); Malayalar; Panimalayan; Pathiyan (other than Dhobies); Hindu Malayali. OEC (SC) list: Chakkamar; Madiga; Chemman/Chemmar; Kudumbi; Dheevara/Dheevaran (Arayan, Valan, Nulayan, Mukkuvan, Arayavathi, Valanchiyar, Paniyakal, Mokaya, Bovi, Mogayar, Mogaveerar); Scheduled Caste converted to Christianity; Kusavan, Kulalan, Kumbharan, Velaan, Velaar, Odan, Andhra Nair, Andhuru Nair,; PulayaVettuvan (except Kochi State). Entry punctuation and community spellings follow the printed list."
+    },
+    {
+      "id": "annex-ii-educational-concession",
+      "sourcePages": [
+        45
+      ],
+      "verified": false,
+      "title": "Annexure II: communities eligible for educational concession as given to OEC",
+      "description": "The 30 listed entries are: 1 Vaniya (Vanika, Vanika Vaisya, Vanibha Chetty, Vaniya Chetty, Ayiravar, Nagarathar and Vaniyan); 2 Veluthedathu Nair (Veluthedan and Vannathan); 3 Chetty/Chetties (Kottar Chetties, Parakka Chetties, Elur Chetties, Attingal Chetties, Pudukkada Chetties, Iraniel Chetties, Sri Pandara Chetties, Telugu Chetties, Udiyankulangara Chetties, Peroorkada Chetties, Sadhu Chetties, 24 Mana Chetties, Wayanadan Chetties, Kalavara Chetties and 24 Mana Telugu Chetties); 4 Ezhavathi (Vathy); 5 Ganika; 6 Kanisu or Kaniyar Panicker, Kani or Kaniyan (Ganaka) or Kanisan or Kamnan, Kalari Kurup/Kalari Panicker; 7 Vilkurup, Perumkollan; 8 Yadavas (Kolaya, Ayar, Mayar, Maniyani and Iruman), Erumakkar; 9 Devanga; 10 Pattariyas; 11 Saliyas (Chaliya, Chaliyan); 12 Pandithar; 13 Vaniar; 14 Ezhuthachan; 15 Chakkala/Chakkala Nair; 16 Reddiars (throughout the State except in Malabar Area); 17 Kavuthiya; 18 Veerasaiva (Yogi, Yogeeswara, Poopandram, Malapandaram, Jangam, Matapathi, Pandaram, Pandaran, Vairavi, Vairagi); 19 Vilakkithala Nair–Vilakkithalavan; 20 Vaduka–Vadukan, Vadugar, Vaduka, Vaduvan; 21 Chavalakkaran; 22 Agasa; 23 Kaikolan; 24 Kannadiyans; 25 Kerala Mudalis; 26 Madivala; 27 Naikkans; 28 Tholkolans; 29 Thottian; 30 Mooppar or KallanMoopan or KallanMoopar."
+    },
+    {
+      "id": "annex-iii-seat-distribution",
+      "sourcePages": [
+        43,
+        47
+      ],
+      "verified": false,
+      "title": "Annexure III: All India and State quota seats for Government Medical Colleges and RCC",
+      "description": "The annexure title says distribution for PG Degree Courses-2025 and the page says the distribution will be notified separately. Page 8 refers to the 2026-27 distribution and says it will be notified later. No college or course rows or current seat counts are supplied."
+    },
+    {
+      "id": "annex-iv-category-distribution",
+      "sourcePages": [
+        43,
+        47
+      ],
+      "verified": false,
+      "title": "Annexure IV(a): category-wise distribution",
+      "description": "The consolidated list calls this Category Wise distribution 2024-25; the annexure page calls it Category Wise DISTRIBUTION-2025-2026 and says it will be notified separately. Page 8 refers to 2026-27 subject-wise, college-wise category distribution as to be notified later. No 2026-27 category seat rows are supplied."
+    },
+    {
+      "id": "annex-v-pwd-guidelines",
+      "sourcePages": [
+        48,
+        49,
+        50
+      ],
+      "verified": false,
+      "title": "Annexure V: disability guidelines for admission to Medical courses",
+      "description": "The table distinguishes Physical, Intellectual, Mental Behaviour, disability caused by Chronic Neurological Conditions or Blood Disorders, and Multiple Disabilities. Physical categories include locomotor (leprosy cured, cerebral palsy, dwarfism, muscular dystrophy, acid-attack survivors and other cases such as amputation or poliomyelitis), visual (blindness or low vision), hearing (deaf or hard of hearing), and speech/language disability from organic or neurological causes. For locomotor disability, below 40% is not eligible for PwD quota, 40-80% is eligible for Medical course and PwD quota, and above 80% is not eligible for the Medical course; the table also calls out intact hand sensations, strength and range of motion, and loss of sensations, eyes, hearing or cognition for named cases. Visual impairment lists blindness/low vision below 40% (categories 0, I and II: 10%, 20%, 30%) as Medical-course eligible but not PwD quota, and category III and above as not eligible; a footnote says advanced aids may reduce over-40% visual disability below the benchmark. Hearing impairment lists below 40% as course-eligible without PwD quota and at least 40% as not eligible; a footnote permits consideration if aids reduce it below 40% and speech discrimination is over 60%. Speech/language disability below 40% is course-eligible without PwD quota and at least 40% is not eligible; MBBS-only notes give Speech Intelligibility Affected score at most 3 and Aphasia Quotient at most 40%. Specific learning disability at 40% or above requires expert-panel competency assessment with remediation/assistive technology/aids/infrastructure; above 80%, severe nature or significant cognitive/intellectual disability is not eligible. Autism absent/mild or Asperger syndrome at 40-60% requires expert-panel fitness; reservation is currently not recommended because no objective method exists; at least 60%, cognitive/intellectual disability or unfitness is not eligible. Mental illness below 40% under IDEAS is listed as mild/absent; the table says current assessment is not recommended for lack of an objective method and at least 40% or unfitness is not eligible. Multiple sclerosis, Parkinsonism, haemophilia, thalassemia and sickle-cell disease use below-40%, 40-80% and above-80% bands. Multiple disability uses a+b(90-a)/90, where a is the higher and b the lower disability percentage. These are the annexure's Medical-course criteria; it also contains MBBS-only notes, and the prospectus separately invokes a PG committee process. For specific learning disability, the source states that no quantification scale is available, the 40% cutoff is arbitrary, and further evidence is needed."
+    },
+    {
+      "id": "annex-vi-sc-list",
+      "sourcePages": [
+        51,
+        52
+      ],
+      "verified": false,
+      "title": "Annexure VI: Scheduled Castes list",
+      "description": "The printed list includes: Adi Andhra; AdiDravida; Adi Karnataka; Ajila; Arunthathiyar; Ayyanavar; Baira; Bakuda; xxx; Bathada; xxx; Bharathar (other than Parathar), Paravan; xxx; Chakkiliyan; Chamar, Muchi; Chandala; Cheruman; Domban; xxx; xxx; xxx; Gosangi; Hasla; Holeya; Kadaiyan; Kakkalan, Kakkan; Kalladi; Kanakkan, Padanna, Padannan; xxx; Kavara (other than Telugu-speaking or Tamil-speaking BalijaKavarai, Gavara, Gavarai, Gavarai Naidu, Balija Naidu, GajaluBalija or ValaiChetty); Koosa; Kootan, Koodan; Kudumban; Kuravan, Sidhanar, Kuravar, Kurava, Sidhana; Maila; Malayan (in Malabar District as specified by the State Re-Organization Act 1956); Mannan [the following parenthetical glyphs are unreadable in the source text], Pathiyan, Perumannan, Peruvannan, Vannan, Velan; xxx; Moger (other than Mogeyar); Mundala; Nalakeyava; Nalkadaya; Nayadi; xxx; Pallan; Palluvan, Pulluvan; Pambada; Panan; xxx; Paraiyan, Parayan, Sambavar, Sambavan, Sambava, Paraya, Paraiya, Parayar; xxx; xxx; xxx; Pulayan, Cheramar, Pulaya, Pulayar, Cherama, Cheraman, WayanadPulayan, WayanadanPulayan, Matha, MathaPulayan; xxx; PuthiraiVannan; Raneyar; Samagara; Samban; Semman, Chemman, Chemmar; Thandan (excluding Ezhuvas and Thiyyas known as Thandan in erstwhile Cochin and Malabar) and Thachar (excluding carpenters; carpenters known as Thachan in erstwhile Cochin and Travancore); Thoti; Vallon; Valluvan; xxx; xxx; Vetan; Vettuvan, PulayaVettuvan (in erstwhile Cochin State only); Nerian. The source prints literal xxx placeholders and the name Mannan has unreadable parenthetical glyphs."
+    },
+    {
+      "id": "annex-vii-st-list",
+      "sourcePages": [
+        52,
+        53
+      ],
+      "verified": false,
+      "title": "Annexure VII: Scheduled Tribes list",
+      "description": "The printed list includes: Adiyan; Arandan [Arandanan]; Eravallan; Hill Pulaya, Mala Pulayan, KurumbaPulayan, KuravazhiPulayan, PambaPulayan; Irular, Irulan; Kadar [Wayanad Kadar]; xxx; Kanikkaran, Kanikkar; Kattunayakan; [Kochuvelan]; xxx; xxx; Koraga; xxx; Kudiya, Melakudi; Kurichchan [Kurichiyan]; Kurumans, MulluKuruman, MullaKuruman, Mala Kuruman; Kurumbas, [Kurumbar, Kurumban]; MahaMalasar; MalaiArayan [Mala Arayan]; MalaiPandaram; MalaiVedan [Malavedan]; Malakkuravan; Malasar; [Malayan, Nattu Malayan, Konga Malayan, excluding Kasaragod, Kannur, Wayanad and Kozhikode districts]; Malayarayar; Mannan; xxx; Muthuvan, Mudugar, Muduvan; Palleyan, Palliyan, Palliyar, Paliyan; xxx; xxx; Paniyan; Ulladan, [Ullatan]; Uraly; Mala Vettuvan (in Kasaragod and Kannur districts); Ten Kurumban, JenuKurumban; Thachanadan, ThachanadanMoopan; Cholanaickan; Mavilan; Karimpalan; VettaKuruman; Mala Panikkar; Maratis of Kasargod and Hosdurg Taluk. The source prints literal xxx placeholders."
+    },
+    {
+      "id": "annex-viii-sebc-list",
+      "sourcePages": [
+        53,
+        54,
+        55
+      ],
+      "verified": false,
+      "title": "Annexure VIII: Socially and Educationally Backward Classes list and 2026 continuation",
+      "description": "The principal list begins with: Ezhavas including Ezhavas, Thiyyas, Ishuvan, Izhuvan, Illuvan and Billava; Muslims (all sections following Islam); Latin Catholics and Anglo Indians; Other Backward Christians, including SIUC, converts from Scheduled Castes to Christianity, and Nadar in Christian denominations other than SIUC; Kudumbi; Other Backward Hindus. Its named communities and aliases are: Viswakarmas including Viswakarma, Asari, Chaptegra, Kallassari, Kalthachan, Kammala, Kamsala, Kannan, Karuvan, Kitaran, Kollan, MalayalaKammala, Moosari, Pandikammala, Pandithattan, Perumkollan, Thachan, Thattan, Vilkurup, Villasan, Viswabrahmanan/Viswabrahmanar, Viswakarmala and PalisaPerumkollan; Kusavan including Kulalan, Kulala Nair, Kumbharan, Velaan/Velaans, Velaar, Odan, Kulala, Andhra Nair and Anthuru Nair; Dheevara including Dheevaran, Araya/Arayas, Arayan, Valan, Nulayan, Mukkuvan, Arayavathi, Valinjiar, Paniakkal/Paniakel, Mukaya, Bovis-Mukayar, Mukaveeran, Mogaveera, Mogavirar, Mogayan; Agasa; Kharvi; Aremahrati; Arya, Atagara, Devanga, Kaikolan (Sengunthar), Pattarya/Pattariyas, Saliyas including Padmasali, Pattusali, Thogatta, Karanibhakatula, Senapathula, Sali, Sale, Karikalabhakulu, Chaliya/Chaliyan, Sourashtra, Khatri, Patnukaran, IllathuPillai, IllaVellalar and Illathar; Bestha; Bhandari or Bhondari; Boya; Boyan; Chavalakkaran; Chakkala (Chakkala Nair); Devadiga; Ezhavathi (Vathi); Ezhuthachan, Kadupattan; Gudigara; Galada Konkani; GanjamReddies; Gatti; Gowda; Ganika including Nagavamsom; Hegde; Hindu Nadar; Idiga including Settibalija; Jangam; Jogi; Jhetty; Kanisu or Kaniyar-Panicker, Kaniyan, Kanisan, Kamnan, Kannian or Kani, Ganaka; Kalarikurup or KalariPanicker; Kerala Muthali/Kerala Mudalis; Oudan (Donga), Odda (Vodde/Vadde/Veddai); Kalavanthula; Kallan including IsanattuKallar; Kabera; Korachas; Mooppar or KallanMoopan or KallanMoopar, Kannadiyans; Kavuthiyan/Kavuthiya; Kavudiyaru; Kelasi or KalasiPanicker; Koppala Velamas; Krishnanvaka; Kuruba; Kurumba; Maravan (Maravar); Madivala; Maruthuvar; Mahratta (Non-Brahman); Melakudi (Kudiyan); Reddiars throughout the State except Malabar; Moili; Mukhari; Modibanda; Moovari; Moniagar; Naicken including TholuvaNaicker and VettilakkaraNaicker/Naikkans; Padyachi (Villayankuppam); Palli; Panniyar/Pannayar; Parkavakulam (Surithiman, Malayaman, Nathaman, Moopanar and Nainar); Rajapuri; Sakravar (Kavathi), Chakravar; Senaithalaivar, Elavania, Senaikudayam; Chetty/Chetties including KottarChetties, ParakkaChetties, ElurChetties, AttingalChetties, PudukkadaChetties, IranielChetties, Sri PandaraChetties, Telugu Chetties, UdiyankulangaraChetties, PeroorkadaChetties, Sadhu Chetties, 24 ManaChetties, WayanadanChetties, KalavaraChetties and 24 Mana Telugu Chetties; Tholkolan; Thottiyan/Thottian; Uppara (Sagara); Ural Goundan; Valaiyan; Vada Balija; Vakkaliga; Vaduvan (Vadugan), Vaduka, Vadukan, Vadugar; Veera Saivas (Pandaram, Vairavi, Vairagi, Yogeeswar/Yogeeswara, Poopandaram, Malapandaram, Pandaran, Matapathi and Yogi); Veluthedathu Nair including Vannathan, Veluthedan and Rajaka; Vilakkithala Nair including Vilakkathalavan, Ambattan, Pranopakari, Pandithar and Nusuvan; Vaniya including Vanika, Vanika Vaisya, Vaisya Chetty, Vanibha Chetty, Ayiravar, Nagarathar, Vaniyan/Vaniya Chetty/Vaniar; Yadava including Kolaya, Ayar, Mayar, Maniyani, Eruman, Iruman, Erumakkar, Golla and Kolaries; Chakkamar; and Mogers of Kasaragod Taluk. The 2026 continuation adds: throughout Kerala—Ambalakkaran; Anchunadu Vellalars; Moundadan Chetty, Edanadan Chetty; Dasa; Izhavan, Ishavan, Ezhavan, Ezhuva, Izhuva, Ishuva, Izhava, Illuva, Irava, Iruva; Ezhuthassan; Kammara; Kadachi Kollan; Kaniyar; Kongu Navithan, Vettuva Navithan and Aduthon; Kongu Vellala Gounder including Vellala Gounder, Nattu Gounder, Pala Gounder, Poosari Gounder and Pala Vellala Gounder; Koteyar; Kumara Kshatriya; Kunnuvar Mannadi; Nadars included in SIUC; Naidu; Kodangi Naicken in Ernakulam, Alappuzha, Kollam and Pathanamthitta districts of South Kerala; Pooluva Gounder, Vettuva Gounder, Padayachi Gounder, Kavaliya Gounder; Senai Thalavar, Elavaniar, Elavaniya; Thachar who are carpenters; Tholkollans; Vaduga, Vaduva, Vadukar, Vaduvans, Vadugans, Vadukars, Vadukas, Vadukans; Vanians; Yogis, Kurukkal/Gurukkal, Chettiar, Hindu Chetty, Pappada Chetty; Mahendra Medara. It then adds Vishavan in Malabar District; Malayekandi throughout Kerala except Malabar District; and Saiva Vellala (Cherakula Vellala, Karkartha Vellala, Chozhiya Vellala, Pillai) in Palakkad District. The list title, spellings, aliases and geographic restrictions follow the printed text. The source has blank entries numbered 30 and 51; no community name is inferred for either blank."
+    },
+    {
+      "id": "annex-ix-ncl-format",
+      "sourcePages": [
+        56
+      ],
+      "verified": false,
+      "title": "Annexure IX: Kerala State Educational Purpose Non-Creamy Layer certificate",
+      "description": "Village Officer format certifying that the named person belongs to a designated SEBC community in Kerala and does not belong to the Creamy Layer under G.O.(P) No.1/2015/BCDD and its schedule. Fields include candidate name, gender, father's name, address, post office/PIN, local body, village, taluk, district, religion, caste, issue date and issuing officer. The form gives no numeric creamy-layer income/assets threshold."
+    },
+    {
+      "id": "annex-x-intercaste-format",
+      "sourcePages": [
+        57
+      ],
+      "verified": false,
+      "title": "Annexure X: inter-caste marriage certificate for son/daughter",
+      "description": "The Tahsildar's form certifies that the named PG Medical 2026 applicant is the child of an inter-caste married couple and records the father's and mother's names and communities, Tahsildar signature/name, Taluk, district, place and date."
+    },
+    {
+      "id": "annex-xi-difficult-rural-list",
+      "sourcePages": [
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "verified": false,
+      "title": "Annexure XI: Difficult Rural Areas for service-quota weightage",
+      "description": "The scanned annexure is the list under G.O.(Ms) No.55/2014/H&FWD dated 15th February 2014. Entries by district: Thiruvananthapuram—Tribal Mobile Medical Unit-I; Mobile Medical Unit-II (Kuttichal), NRHM (Tribal). Kollam—PHC Achenkovil; PHC Aryankavu. Pathanamthitta—PHC Angamoozhy; PHC Seethathode. Alappuzha—PHC Perumpalam; PHC Cheruthana. Kottayam—PHC Moonilavu. Idukki—PHC Kanthalloor; Mobile Medical Unit, Adimali (Munnar); PHC Senapathy; PHC Mankulam; PHC Vattavada; PHC Marayoor; PHC Chinnakanal; PHC Rajakumari; PHC Bison Valley; Mobile Medical Unit, Karikkode. Ernakulam—PHC Pizhala; PHC Valanthacadu; PHC Kuttampuzha. Thrissur—PHC Thonoor...kara (printed name is low-resolution); PHC Mundathikode; PHC Elanad; PHC Vettulappara; PHC Varandrapally. Palakkad—PHC Anakatti, Attappadi; Mobile Medical Unit I (Tribal); Mobile Medical Unit II (Tribal); PHC Agali, Attappadi; PHC Pudur; PHC Sholayar; PHC Parambikulam; PHC Siruvani; Tribal Specialty Hospital, Kottathara, Attappadi; PHC Nelliampathy. Malappuram—Mobile Dispensary, Nilambur; PHC Chokkad; PHC Moothadam (Tribal Colony); PHC Chathalloor; CHC Urangattiri; PHC Amarambalam. Kozhikode—PHC Pannikottur (S); PHC Thiruvallur; PHC Velam; PHC Kunduthode (TSP; low-resolution spelling). Wayanad—Tribal Mobile Unit attached to District Hospital, Mananthavady; Tribal Mobile Unit attached to Taluk Head Quarters, Vythiri; Tribal Mobile Unit attached to Taluk Hospital, Sulthan Bathery; Tribal Mobile Unit attached to Government Hospital, Kalpetta; CHC Meppady; Government Tribal Hospital, Nallurnad; PHC Padinjarathara; PHC Sugandhagiri; PHC Pakkam; PHC Noolpuzha; Tribal Mobile Unit attached to Ambalavayal; R.M.C.H. Chern... (printed institution name is unclear); PHC Mullankolly; PHC Appappara; PHC Thondernad (SCP); PHC Cheeral. Kannur—PHC Angadikadavu; PHC Peruva; GRD Malappattam; PHC Karikottakari (SCP); PHC Kudiyanmala; PHC Alakkode-Manakadavu; PHC Peravur (Tribal Mobile Unit); Tribal Mobile Unit, Aralam; PHC Pulingome; PHC Kanichar; PHC Kelakam; PHC Kottiyoor; PHC Eruvessy; PHC Oorathoor; PHC Chandannakkampara; PHC Udayagiri; PHC Valithodu; PHC Ulikkal. Kasaragode—PHC Vaninagar; Mobile Medical Unit-Tribal; PHC Puthige; PHC Medinja [source spelling uncertain; earlier reading Medinjar]; PHC Valiyaparamba; PHC Adoor; PHC Bellur (TSP); PHC Beyar (STP); PHC Angadimogru; PHC Maikode; PHC Bandadka; PHC Narkilanadu; PHC Perla; PHC Kumbadje; PHC Konnakkad; PHC Vorkady; PHC Chittarickal; PHC Ennappara. The exact low-resolution spellings marked above must be checked against a higher-quality source before publication. The annexed order dated 15th February 2014 makes newly added institutions eligible for weightage from the order issuance date and deleted institutions eligible only up to that date. Confirm institution status and service dates; the listed names alone do not establish all qualifying service."
+    },
+    {
+      "id": "annex-xii-antiragging-form",
+      "sourcePages": [
+        64
+      ],
+      "verified": false,
+      "title": "Annexure XII: student anti-ragging undertaking",
+      "description": "The form asks the student to affirm they read and understand the Supreme Court directives, know ragging is punishable and banned, have not been found or charged for ragging in the past, and will not rag. The student signs; a parent or guardian endorses; a witness signs."
+    },
+    {
+      "id": "annex-xiii-health-deputation",
+      "sourcePages": [
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "verified": false,
+      "title": "Annexure XIII: 2017 Government Order on Health Service deputation",
+      "description": "G.O.(P) No.106/2017/Fin dated 14th August 2017 governs deputation for higher studies under Health Services. It requires completed probation, restricts deputation to Government-approved courses/institutions and specialty vacancies, uses strict seniority and vacancy forecasts, and does not allow deputation in specialties where more than 10% of sanctioned posts are awaiting posting. Government approves the yearly specialty/institution lists. The officer must work in the specialty after training; a prior deputation recipient who has not opted for the specialty must do so within one month of the 2017 order issuance or the deputation period will not count for service/pension. The order limits benefits to the stipulated study period, treats extra time as eligible leave/LWA, suspends Rural/Difficult Rural, Non-Practising, Risk and other duty-linked allowances during deputation, requires a ₹200 stamp-paper bond, and describes salary-based damages and periodic District Medical Officer inspections, quarterly reports to DHS and DHS reports to Government every six months. It includes prospective service periods of 10 years for a two-year diploma and 12 years for a PG course; clause 14 gives case-dependent 5, 7, 10 or 12 years. See the service-bond rule and notes for the conflict with the 2026 prospectus. Clause 5 grants super-specialty deputation to a candidate who already used MD/MS deputation only after three years of service in the specialty and requires at least seven years of prospective service after DM/MCh. If super-specialty admission is obtained after ten years of service in the specialty, five prospective service years are required. Confirm how the incorporated 2017 order and the main 2026 service clause apply to the candidate route. The one-month transition for prior deputation recipients runs from the order issue date; it is distinct from clause 14’s one-month period after course completion."
+    },
+    {
+      "id": "annex-xiv-general-bond-form",
+      "sourcePages": [
+        71,
+        72,
+        73
+      ],
+      "verified": false,
+      "title": "Annexure XIV: course conduct/discontinuation bond",
+      "description": "Form for candidates admitted to State Medical Colleges. It uses ₹200 Kerala stamp paper, candidate plus two sureties, and provides for a Government demand including probable study stipend/salary costs and ₹50,00,000 liquidated damages. Breach examples include discontinuing after final CAP, interrupting studies, strike, indiscipline or misconduct; Government may recover through the Revenue Recovery Act. Witness eligibility is tied to clause 11. Government may withhold payment of further stipend if the candidate is unsuccessful in a qualifying examination."
+    },
+    {
+      "id": "annex-xv-service-bond-form",
+      "sourcePages": [
+        74,
+        75,
+        76
+      ],
+      "verified": false,
+      "title": "Annexure XV: bonded-service agreement",
+      "description": "Form printed with a reference to the PG Medical Prospectus 2025-26/2025 despite being in the 2026-27 prospectus. It has two sureties, a Government claim for salary/stipend and Government study costs with interest, and says the bond amount for all candidates is ₹50,00,000. It prints one year of service for General candidates or 10 years for Service candidates, including two years in difficult/remote areas or until superannuation. The crossed-out fields make route applicability dependent on the executed form."
+    },
+    {
+      "id": "annex-xvi-deputation-bond-form",
+      "sourcePages": [
+        66,
+        77,
+        78,
+        79
+      ],
+      "verified": false,
+      "title": "Annexure XVI: Health Services deputation bond",
+      "description": "Form for violations of G.O.(P) No.016/2017/Fin dated 14th August 2017 and the 2026-27 prospectus. The damages amount is calculated under clause 14 of that order. It includes service obligations, a service-period option of 10 or 12 years until superannuation/one year depending on the crossed-out text, revenue recovery and certificate retention. The form also refers to the PG Medical Prospectus 2025 in its damages clause. The bond form prints Order No.016/2017/Fin, while the reproduced order heading says No.106/2017/Fin. Confirm the correct reference and issued bond form with the institution."
+    },
+    {
+      "id": "annex-xviii-ews-formats",
+      "sourcePages": [
+        80,
+        81
+      ],
+      "verified": false,
+      "title": "Annexure XVIII: EWS income/assets and AAY/PHH certificates",
+      "description": "The first form is an income-and-assets certificate for a citizen in the General Category seeking reservation in institutions other than minority institutions. It asks for family income in a financial year and states that family assets must not exceed a limit in G.O.(Ms) No.2/2020/P&ARD dated 12th February 2020; it certifies the candidate is not SC, ST or SEBC. The form does not print a numeric income or asset limit. The second form is for a Kerala resident in an Antyodaya Anna Yojana (AAY) or Priority Household (PHH) whose name appears on the corresponding ration card, who is not SC/ST/SEBC and therefore belongs to EWS in the General Category. The form's note says OEC communities eligible for reservation are excluded from General Category; the first form's footnote defines General Category as classes other than SC, ST, SEBC and Other Backward Class."
+    },
+    {
+      "id": "annex-xix-service-declaration",
+      "sourcePages": [
+        82
+      ],
+      "verified": false,
+      "title": "Annexure XIX: Service Quota declaration",
+      "description": "The candidate declares either that they have not previously availed Service-category reservation for a PG Medical course in any specialty, or that they have not availed it in the specified specialty. The candidate signs and the controlling officer (DME/DHS/DIMS) countersigns. The form title and declaration say Service category; clause 6.6.14 specifically bars a second PG Degree benefit and gives a same-specialty PG Diploma exception."
+    },
+    {
+      "id": "annex-xx-dowry-form",
+      "sourcePages": [
+        84
+      ],
+      "verified": false,
+      "title": "Annexure XX: Dowry Declaration/Undertaking",
+      "description": "The student undertakes not to give, take or abet dowry, and not to demand it directly or indirectly from either family. It uses the meaning of dowry in the Dowry Prohibition Act 1961 and warns that breach may lead to admission or degree action. The form asks for student name, course, institution, registration/temporary ID, Aadhaar number and residential address."
+    },
+    {
+      "id": "annex-xxi-community-certificate",
+      "sourcePages": [
+        86,
+        87
+      ],
+      "verified": false,
+      "title": "Annexure XXI: SC/ST and OEC community certificate formats",
+      "description": "Page 86 has a Taluk Office Community Certificate stating the person belongs to SC/ST under the cited Constitution Orders and amendments, with name, gender, age, father's name, address, local body, village, Taluk, District, caste, religion, issue date and issuing officer fields. Page 87 has a Village Officer Community Certificate stating the person belongs to a community included in Kerala's OEC list, with Village, Taluk, date and officer signature/seal."
+    }
+  ],
+  "importantDates": [
+    {
+      "id": "date-pg-diploma-cutoff",
+      "sourcePages": [
+        4
+      ],
+      "verified": false,
+      "label": "Same-subject PG Diploma pass certificate deadline for one-year course reduction",
+      "date": "2026-04-30"
+    },
+    {
+      "id": "date-internship-deadline",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "verified": false,
+      "label": "One-year internship completion deadline for the covered Medical PG Degree course",
+      "date": "2026-09-30"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "gap-counselling-schedule",
+      "sourcePages": [
+        5,
+        26,
+        27,
+        31,
+        42
+      ],
+      "verified": false,
+      "title": "CEE application and counselling schedule",
+      "detail": "The prospectus gives no dates for application, option registration, allotment, fee payment or joining. It says CEE will notify the schedule separately and candidates must check the CEE website."
+    },
+    {
+      "id": "gap-2026-seat-matrices",
+      "sourcePages": [
+        1,
+        8,
+        43,
+        47
+      ],
+      "verified": false,
+      "title": "2026-27 college, speciality and category seat matrix",
+      "detail": "The 2026-27 seat distribution for Government Medical Colleges and RCC, and the college-wise/category-wise speciality distribution, are deferred for later notification. Annexures III and IV carry prior-year headings and no seat rows. No current full college/course/seat list can be extracted from this prospectus."
+    },
+    {
+      "id": "gap-private-rcc-fees",
+      "sourcePages": [
+        5
+      ],
+      "verified": false,
+      "title": "Private Self-Financing and RCC tuition fee schedule",
+      "detail": "Private Self-Financing Medical College fees will be issued separately before CAP. RCC fees are on the RCC website. This prospectus contains no current amounts for these routes."
+    },
+    {
+      "id": "gap-regular-rural-stations",
+      "sourcePages": [
+        16
+      ],
+      "verified": false,
+      "title": "Referenced regular-rural station list is absent",
+      "detail": "The prospectus references the Standardized list of Government Allopathic Medical Institutions-2013 for rural-service weightage, approved by G.O.(Ms) No.443/2013/H&FWD dated 16th November 2013. Annexure XI is a separate Difficult Rural list. Confirm the regular-rural institution and effective service period with the department."
+    },
+    {
+      "id": "gap-minority-seat-criteria",
+      "sourcePages": [
+        26,
+        34
+      ],
+      "verified": false,
+      "seats": [
+        "management"
+      ],
+      "title": "Minority-quota eligibility and proof requirements are not specified",
+      "detail": "The prospectus and conversion table refer to Muslim Minority (MM) and All Christian Minority (AC) quotas, but do not set out the full candidate eligibility, priority or required proof. Confirm the criteria with CEE and the relevant institution before seeking these seats."
+    }
+  ]
+}

@@ -229,6 +229,7 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
           <p className="mt-1 text-sm">Add your profile and we'll check every rule below against it.</p>
           <Link to="/profile" className="btn-primary mt-3">Add my profile</Link>
         </div>
+        {b.eligibility.manualReview && <RuleCard {...b.eligibility.manualReview} pages={b.eligibility.manualReview.sourcePages} />}
         <ul className="space-y-3">
           {order(b.eligibility.rules).map((r) => (
             <li key={r.id} className="rounded-lg border border-line p-4">
@@ -298,6 +299,9 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
         )}
       </div>
 
+      {b.eligibility.manualReview && (
+        <div className="mt-4"><RuleCard {...b.eligibility.manualReview} pages={b.eligibility.manualReview.sourcePages} /></div>
+      )}
       {applied.length > 0 && (
         <>
           <h3 className="mt-6 mb-3 text-[15px]">Why: the rules that apply to you</h3>
@@ -348,8 +352,8 @@ function VerdictSection({ b, verdict, profile }: { b: Brochure; verdict: Verdict
       )}
       {profile.specialities.length > 0 && (
         <p className="mt-6 rounded-lg bg-canvas p-3 text-sm">
-          <strong>Your specialities:</strong> {profile.specialities.join(", ")}. This brochure has no seat matrix or cutoffs, so we
-          can't yet show your chances by speciality.
+          <strong>Your specialities:</strong> {profile.specialities.join(", ")}. This guide does not predict admission chances
+          by speciality. Check the cited course information and the official allotment notices.
         </p>
       )}
     </Section>
@@ -384,10 +388,19 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
   const reg = b.fees.registration;
   const total = advice?.recommended ? reg.amountInr + advice.recommended.amountInr : null;
   const hasDeposits = b.fees.securityDeposits.length > 0;
+  const calculationNote = b.fees.calculationNote;
+  const registrations = b.fees.registrationOptions ?? [reg];
   return (
     <Section id="money" kicker="Your money" title={hasDeposits ? "Fees & security deposit" : "Fees"}>
       <div className={`grid gap-4 ${hasDeposits ? "md:grid-cols-[1fr_1.4fr]" : "md:grid-cols-2"}`}>
-        <div className="panel-accent rounded-lg p-5">
+        <div className={calculationNote ? "rounded-lg border border-line bg-canvas p-5" : "panel-accent rounded-lg p-5"}>
+          {calculationNote ? (
+            <>
+              <h3 className="font-heading text-xl font-semibold">{calculationNote.title}</h3>
+              <Prose text={calculationNote.detail} pages={calculationNote.sourcePages} className="mt-3" />
+            </>
+          ) : (
+          <>
           <p className="text-sm opacity-80">{advice?.recommended ? "You'll need to pay upfront" : "Registration fee"}</p>
           <p className="font-heading mt-1 text-4xl font-semibold tracking-tight tabular-nums">{inr(total ?? reg.amountInr)}</p>
           <ul className="mt-4 space-y-2 text-sm">
@@ -403,10 +416,13 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
             )}
           </ul>
           <p className="mt-3 text-xs opacity-80">{reg.covers}</p>
+          <Cite pages={reg.sourcePages} />
           {!verdict && hasDeposits && <p className="mt-3 text-xs opacity-90">Add your profile to see which deposit applies to you.</p>}
+          </>
+          )}
         </div>
         {hasDeposits && <div>
-          <p className="mb-2 text-sm font-semibold text-ink">Deposit tiers: your deposit decides which colleges you can choose<Cite pages={b.fees.securityDeposits.flatMap((d) => d.sourcePages).filter((v, i, a) => a.indexOf(v) === i)} /></p>
+          <p className="mb-2 text-sm font-semibold text-ink">{calculationNote ? "Security deposits by route" : "Deposit tiers: your deposit decides which colleges you can choose"}<Cite pages={b.fees.securityDeposits.flatMap((d) => d.sourcePages).filter((v, i, a) => a.indexOf(v) === i)} /></p>
           <ul className="space-y-2">
             {order([...b.fees.securityDeposits].sort((x, y) => x.amountInr - y.amountInr)).map((t) => {
               const rec = advice?.recommended?.id === t.id;
@@ -427,6 +443,20 @@ function MoneySection({ b, verdict }: { b: Brochure; verdict: Verdict | null }) 
           </ul>
         </div>}
       </div>
+      {b.fees.registrationOptions && (
+        <div className="mt-4">
+          <h3 className="mb-2 font-semibold">Application and registration fees</h3>
+          <ul className="space-y-2">
+            {order(registrations).map((fee) => (
+              <li key={fee.id} className="rounded-lg border border-line p-3 text-sm">
+                <strong className="text-ink">{inr(fee.amountInr)}</strong> · {fee.covers} <SeatChip seats={fee.seats} />
+                <span className="ml-1 text-soft">({fee.refundable ? "refund subject to the stated conditions" : "non-refundable"})</span>
+                <Cite pages={fee.sourcePages} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="mt-4 grid gap-3 sm:grid-cols-2">
         <SeatList items={b.fees.rules} />
       </div>
@@ -512,7 +542,7 @@ function DocumentsSection({ entryKey, b, profile, verdict }: { entryKey: string;
     try { localStorage.setItem(storeKey, JSON.stringify(next)); } catch { /* memory only */ }
   };
   const { show, order } = useSeatView();
-  const allDocs = profile ? documentsFor(profile, b) : b.documents.map((doc) => ({ doc, certain: doc.appliesWhen === null }));
+  const allDocs = profile ? documentsFor(profile, b) : b.documents.map((doc) => ({ doc, certain: doc.appliesWhen === null && !doc.requiresManualCheck }));
   const docs = [...allDocs.filter((d) => show(d.doc) && d.doc.seats), ...allDocs.filter((d) => show(d.doc) && !d.doc.seats)];
   const count = docs.filter((d) => done.includes(d.doc.id)).length;
 
@@ -529,7 +559,7 @@ function DocumentsSection({ entryKey, b, profile, verdict }: { entryKey: string;
         </p>
       )}
       <p className="mb-3 text-sm text-soft">
-        {profile ? "Filtered to your profile." : "Showing every document. Add your profile to filter it."} Bring originals and one self-attested photocopy set. {count}/{docs.length} ready.
+        {profile ? "Filtered where your profile establishes the requirement." : "Showing every document. Add your profile to filter it."} Check each item's stage, copy requirements and conditions. {count}/{docs.length} ready.
       </p>
       <div className="mb-4 h-1.5 overflow-hidden rounded-full bg-canvas"><div className="panel-accent h-full transition-all" style={{ width: `${docs.length ? (count / docs.length) * 100 : 0}%` }} /></div>
       <ul className="space-y-2">
@@ -563,8 +593,9 @@ function ReservationSection({ b, verdict }: { b: Brochure; verdict: Verdict | nu
   const policy = b.reservation.policy && show(b.reservation.policy) ? b.reservation.policy : null;
   const conversion = b.reservation.conversion && show(b.reservation.conversion) ? b.reservation.conversion : null;
   const policyHidden = !!b.reservation.policy && !policy;
+  const explicitOpenShare = policy?.vertical.some((v) => /\b(open competition|general merit|unreserved|UR)\b/i.test(v.category));
   const bars = policy
-    ? [...policy.vertical, { category: "UR (open)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }]
+    ? [...policy.vertical, ...(!explicitOpenShare ? [{ category: "UR (open)", percent: 100 - policy.vertical.reduce((s, v) => s + v.percent, 0) }] : [])]
     : [];
   return (
     <Section id="reservation" kicker="Reservation" title="How seats are reserved" collapsible summary={verdict?.effectiveCategory ? `You're counted as ${verdict.effectiveCategory}. Category shares, certificates and seat conversion.` : "Category shares, certificates and seat conversion."}>

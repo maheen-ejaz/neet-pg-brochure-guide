@@ -1,6 +1,6 @@
 # Project status and handoff
 
-Last updated: 2026-10-08. Read this first in a new session, together with `AGENTS.md`.
+Last updated: 2026-10-09. Read this first in a new session, together with `AGENTS.md`.
 New to the project? Start with [`HANDOVER.md`](HANDOVER.md) (how to run, maintain, extend and rebuild it).
 
 ## What this is
@@ -37,10 +37,39 @@ guide per state:
 | Uttar Pradesh 2026 | `data/states/uttar-pradesh-2026.json` | 173 | Draft, 0 verified by a human. Passed 3 independent verification rounds + the Codex audit. |
 | Gujarat 2026-27 | `data/states/gujarat-2026.json` | 119 | Draft, 0 verified by a human. Built from 12 current-year documents merged into one 81-page source. Passed 3 verification rounds + the Codex audit. |
 | Karnataka 2026-27 | `data/states/karnataka-2026.json` | 190 | Draft, 0 verified by a human. KEA PGET 2026 Information Bulletin (68 pages, 14-08-2026), live for MDS; PG Medical takes effect after MCC's announcement. Passed 3 verification rounds + the Codex audit. |
+| Tamil Nadu 2026-27 | `data/states/tamil-nadu-2026.json` | 440 | Draft, 0 human-verified. Government-quota MD/MS/Diploma, Management/NRI and service-candidate DNB prospectuses, 149 merged pages. Repeated blind source audits and independent correction checks cleared major findings. |
+| Kerala 2026-27 | `data/states/kerala-2026.json` | 170 | Draft, 0 human-verified. Medical PG Degree prospectus including its Government Order and annexures, 87 PDF pages. Four blind source audits and independent correction checks cleared major findings. |
 | MCC All India Quota 2026 | `data/national/mcc-pg-2026.json` | 17 | Draft, 0 verified by a human. Tentative MCC schedule (4 pages, generated 07-10-2026): NEET-PG 50% AIQ + 100% deemed/central universities, AFMS registration only. Passed 1 independent check (all 35 stages confirmed). Review at `/review/national/mcc-pg-2026`. |
 
-Nothing is published yet. `npm run build` contains no states; the public preview (`build:preview`) shows all three
-states and the MCC timeline as drafts.
+Nothing is published yet. `npm run build` contains no states; `build:preview` now contains all five states
+and the MCC timeline as drafts. The live preview still has the original three states until the release below.
+
+## Tamil Nadu and Kerala addition (09-10-2026)
+
+- All four supplied brochures are archived with byte-identical originals and 236 rendered pages. Tamil Nadu
+  citations use a fixed 60 + 31 + 58 page merge; Kerala citations count its Government Order cover.
+- 610 new sourced records preserve the rules, fees, penalties, documents, full community/disability lists,
+  bond forms and other annexures. Every record remains unverified for the human review gate.
+- [Audit coverage](audits/tamil-nadu-kerala-2026-audit.json) and the
+  [97-entry uncertainty/manual-check register](audits/tamil-nadu-kerala-2026-uncertainties.json) are retained.
+  Source conflicts and unreadable text are visible in the relevant data. Resolve applicable questions with
+  the authority before publishing; do not replace them with assumptions or older external documents.
+- Exact nativity, programme, service, NRI sponsor and concession facts are not all collected. The new
+  `eligibility.manualReview` keeps the verdict incomplete, while `fees.calculationNote` suppresses unreliable
+  totals/deposit advice. Separate fee options remain cited. Conditional documents stay manual; mandatory
+  undertakings remain required. DNB/GQ items are hidden in Management & NRI, and MQ items in Government.
+- `npm run check`: 102 tests, typecheck and validation pass. Both builds pass; normal builds exclude drafts,
+  both exclude review code, and the preview is noindexed. Browser checks pass for both states on desktop/
+  mobile and light/dark with zero WCAG 2.1 AA axe violations. One independent implementation review is clear.
+- **Release scope:** owner selected the public draft preview on 09-10-2026, retaining Draft labels and the
+  human gate. This is explicit release authorization for this addition; do not ask for it again.
+- **Release pending access contract:** this repo has no tracked `infisical-profiles.json`, `TOOLCHAIN.md`
+  credential procedure or declared runner/bound Netlify command. No credential-backed deploy was launched.
+  The public URL was read-only checked: HTTP 200/noindex, still Gujarat, Karnataka and Uttar Pradesh.
+  The administrator must supply the declared binding for GooCampus Team / `goocampus-neetpg`
+  (`fb03fe2b-69e5-497f-a789-fcfe1e8167e7`). Then deploy the integrated clean `main`, require successful provider
+  state and verify the canonical public five-state dashboard. Candidate data/schema migrations are inapplicable.
+- Human review: `/review/tamil-nadu-2026` and `/review/kerala-2026` on the local dev server.
 
 Deploy the preview from a clean `main`: `npm run build:preview && netlify deploy --prod --dir dist --site fb03fe2b-69e5-497f-a789-fcfe1e8167e7`.
 Deploys: `6ac5f6e5567267092e0daaac` (0597da2, first), `6ac610cc33ebd82b413cc4dd` (9f8fa69, + Karnataka),

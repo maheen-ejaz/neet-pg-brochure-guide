@@ -41,7 +41,7 @@ export function badgeFor(date: string, time: string | undefined, kind: DateKind,
 
 /** Dates whose label says something opens or becomes available are events, not deadlines. */
 export const kindFromLabel = (label: string): DateKind =>
-  /\b(opens?|begins?|starts?|downloadable|available|result)\b|on or after/i.test(label) ? "event" : "deadline";
+  /\b(opens?|begins?|starts?|downloadable|available|result|notification|published|measurement)\b|on or after/i.test(label) ? "event" : "deadline";
 
 /** "until 3:00 PM", "(until 12:00 noon)" in a label → the printed closing time. */
 export function timeFromLabel(label: string): string | undefined {

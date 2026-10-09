@@ -129,7 +129,7 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
   let ineligible = false;
   let notCovered = false;
   let quotas: string[] | null = null;
-  let blockingUnknown = false;
+  let blockingUnknown = !!brochure.eligibility.manualReview;
   const reasons: Reason[] = [];
   const missing = new Set<string>();
 
@@ -195,7 +195,9 @@ export function checkEligibility(profile: Profile, brochure: Brochure): Verdict 
     headline = "No college sector is open to you";
   } else if (blockingUnknown || !facts.courseType || !facts.mbbsLocation) {
     status = "incomplete";
-    headline = "Add a few details to check your eligibility";
+    headline = brochure.eligibility.manualReview
+      ? "Check the brochure requirements below to confirm eligibility"
+      : "Add a few details to check your eligibility";
   } else if (quotas) {
     status = "restricted";
     headline = `Eligible for ${quotas.join(" / ")} quota seats only`;
@@ -228,6 +230,9 @@ export interface DepositAdvice {
 
 /** Cheapest deposit tier that unlocks every sector open to the candidate, for their college type. */
 export function adviseDeposit(verdict: Verdict, brochure: Brochure): DepositAdvice {
+  // Sector alone cannot distinguish government-quota seats in a private college from MQ/NRI,
+  // or identify a course-specific or concession-specific charge.
+  if (brochure.fees.calculationNote) return { recommended: null, alternatives: [] };
   const type = verdict.collegeType;
   if (!type || verdict.sectors.length === 0) return { recommended: null, alternatives: [] };
   const tiers = [...brochure.fees.securityDeposits].sort((a, b) => a.amountInr - b.amountInr);
@@ -245,9 +250,9 @@ export function documentsFor(profile: Profile, brochure: Brochure) {
   const facts = deriveFacts(profile, brochure);
   return brochure.documents
     .map((doc) => {
-      if (doc.appliesWhen === null) return { doc, certain: true };
+      if (doc.appliesWhen === null) return { doc, certain: !doc.requiresManualCheck };
       const { value } = evaluate(doc.appliesWhen, facts);
-      return value === false ? null : { doc, certain: value === true };
+      return value === false ? null : { doc, certain: value === true && !doc.requiresManualCheck };
     })
     .filter((d): d is { doc: Brochure["documents"][number]; certain: boolean } => d !== null);
 }
