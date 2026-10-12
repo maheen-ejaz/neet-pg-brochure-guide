@@ -16,8 +16,9 @@ cited to its source page.
 
 **Local preview:** five state guides—Uttar Pradesh, Gujarat, Karnataka, Tamil Nadu and Kerala—plus
 the MCC schedule are available as drafts. None has passed human verification, so the production build
-does not publish them. **Public preview:** the last recorded deployment contains Uttar Pradesh,
-Gujarat and Karnataka; check the [preview](https://neetpg.goocampusglobal.com) for its current contents.
+does not publish them. **Public preview:** the latest recorded deployment contains all five state guides
+and the MCC schedule as drafts, with noindex enabled. Check the [preview](https://neetpg.goocampusglobal.com)
+for its current contents.
 
 Your profile stays in your browser. The app has no login, backend or database, and does not send candidate details anywhere.
 
