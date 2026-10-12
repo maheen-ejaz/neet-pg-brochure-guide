@@ -10,13 +10,13 @@ must keep.
 | Asset | Where | Notes |
 |---|---|---|
 | App code | `src/`, `vite-plugin-review.ts`, `scripts/` | React 19 + Vite 8 + Tailwind 4 + Zod 4, TypeScript. Static site, no backend. |
-| Data | `data/states/` (UP, Gujarat, Karnataka, Tamil Nadu, Kerala 2026), `data/national/` (MCC 2026) | All **draft**, with 0 items verified by a person. Exact current counts are in STATUS.md. |
+| Data | `data/states/` (five 2026 / 2026-27 state guides), `data/national/` (MCC 2026) | All **draft**, with 0 items verified by a person. Exact state names and current counts are in STATUS.md. |
 | Source documents | `brochures/<slug>/<year>/` | `source.pdf` + `pages/p-NN.jpg` per document. Gujarat also has its 12 originals in `docs/`. |
 | Extraction procedure | `.claude/skills/extract-brochure/` | Claude Code follows `SKILL.md` to extract a new state. `references/verify-prompt.md` is the blind check. |
 | Design system | `docs/design-system/`, implemented in `src/index.css` | "Attio Mono": monochrome with a navy→blue gradient on the primary action. |
 | Owner preferences | `docs/claude-memory/` | How the previous owner wanted work done and checked. |
 | Live preview | https://neetpg.goocampusglobal.com | Netlify project `goocampus-neetpg` (GooCampus Team). Ask GooCampus for access. |
-| Tests | `src/**/*.test.ts` | 84 Vitest tests: engine per state, date format, deadlines, seat views, MCC helpers. |
+| Tests | `src/**/*.test.ts` | State scenarios cover Uttar Pradesh, Gujarat, Karnataka, Tamil Nadu and Kerala. Shared suites cover manual-review safeguards, date formatting, deadlines, seat views, text handling and MCC helpers. Run `npm test` for the current result. |
 
 Not included: the external Codex audit package mentioned in `STATUS.md` (81 findings, 07-10-2026). Its
 outcome is already applied to the data and code, and STATUS.md summarises the changes it led to, but the
@@ -72,8 +72,9 @@ Pure functions, with no React and no I/O:
    eligible, `incomplete` = needs details, `notCovered`, `ineligible`), the reasons ordered by impact, and the allowed sectors and quotas.
    `documentsFor()` builds the checklist.
 
-Each state has its own test file (`eligibility.test.ts` for UP, `gujarat.test.ts`, `karnataka.test.ts`)
-with real candidate scenarios. Add one whenever a rule's logic changes.
+State eligibility scenarios are grouped in `eligibility.test.ts` (Uttar Pradesh), `gujarat.test.ts`,
+`karnataka.test.ts` and `new-states.test.ts` (Tamil Nadu and Kerala). Cross-state manual-review
+safeguards are in `manual-review.test.ts`. Add or extend candidate scenarios whenever a rule's logic changes.
 
 Tamil Nadu and Kerala retain `eligibility.manualReview` when the profile cannot establish the exact
 nativity, programme, service or sponsor criteria. This blocks a definitive eligible verdict. Their
